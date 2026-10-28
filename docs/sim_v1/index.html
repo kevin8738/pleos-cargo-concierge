@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>VIP 조수석 — 3D 주행 시뮬레이션</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- 좌상단: 모드·분류·버튼 -->
+  <section id="panel-top" class="panel">
+    <h1>VIP 조수석 <span>주행 시뮬레이션</span></h1>
+    <div class="modes">
+      <button data-mode="A"><b>A · 자동</b><small>사람 기준</small></button>
+      <button data-mode="B"><b>B · 자동</b><small id="mode-b-sub">케이크 기준 · 한계의 75 % 이내</small></button>
+      <button data-mode="C"><b>C · 직접</b><small>운전</small></button>
+    </div>
+    <div class="row"><label for="category">VIP 분류</label><select id="category"></select></div>
+    <div class="row"><button id="btn-compare" class="accent">비교 시작 (A → B)</button><button id="btn-reset">리셋 (R)</button></div>
+    <div class="row small"><span class="lbl">카메라</span><button data-cam="1">1 체이스</button><button data-cam="2">2 캐빈</button><button data-cam="3">3 지도</button></div>
+    <div class="row small"><span class="lbl">배속</span><button data-speed="1">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button></div>
+    <p id="hint"></p>
+  </section>
+
+  <!-- 좌하단: 계기 -->
+  <section id="panel-tele" class="panel">
+    <div class="tele-head"><span id="t-mode"></span><span id="t-gear" class="gear">D</span></div>
+    <div class="speed"><span id="t-speed">0</span><small>km/h</small></div>
+    <dl>
+      <dt>핸들</dt><dd id="t-steer">0°</dd><dt>횡 G</dt><dd id="t-lat">0.00</dd>
+      <dt>종 G</dt><dd id="t-lon">0.00</dd><dt>총 G</dt><dd id="t-total">0.00</dd>
+    </dl>
+    <div class="gbar-top"><span class="at80">80 %</span></div>
+    <div class="gbar"><div id="t-gfill"></div><i class="tick80" title="한계의 80 %"></i><i class="tick100" title="한계"></i></div>
+    <div class="gbar-legend"><span class="at0">0</span><span id="t-limit" class="at100">한계 0.15 G</span><span class="atEnd">×2</span></div>
+    <dl>
+      <dt>최대 G</dt><dd id="t-max">0.00</dd><dt>손상도</dt><dd id="t-damage">0 %</dd>
+      <dt>코칭</dt><dd id="t-coach">0/3</dd><dt>랩타임</dt><dd id="t-lap">0:00.0</dd>
+    </dl>
+  </section>
+
+  <!-- 우하단: 센터 디스플레이 (앱 화면) -->
+  <section id="display" class="panel">
+    <div class="disp-head"><span class="disp-title">VIP 조수석</span><span id="d-cat"></span></div>
+    <div id="d-badge" class="badge ok">OK · 여유</div>
+    <div id="d-bubble" class="bubble">조용히 지켜보는 중</div>
+    <ol id="d-log"></ol>
+  </section>
+
+  <!-- 터치 기기용 운전 버튼 (직접 운전) -->
+  <div id="touch" class="hidden">
+    <button data-key="left">◀</button><button data-key="right">▶</button>
+    <button data-key="space">급제동</button><button data-key="down">제동</button><button data-key="up">가속</button>
+  </div>
+
+  <!-- 결과·안내 카드 -->
+  <div id="card" class="hidden">
+    <div class="card-inner">
+      <h2 id="card-title"></h2>
+      <div id="card-body"></div>
+      <div class="card-actions"><button id="card-action" class="accent"></button><button id="card-close">닫기</button></div>
+    </div>
+  </div>
+
+  <footer id="foot">시뮬레이션 — 앱의 추정식(자전거 모델, 조향비 15:1, 축거 2.9 m)을 그대로 사용. 케이크 손상 모델은 한계 초과분 누적의 단순화.</footer>
+  <div id="fps" class="hidden">— fps</div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

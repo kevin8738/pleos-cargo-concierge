@@ -1,0 +1,47 @@
+# Poly Haven assets (CC0 1.0) — https://polyhaven.com/license
+
+- model `street_lamp_01` — Street Lamp 01 by Josh Dean · 30610 tris · [0.7, 0.39, 3.87] m
+- model `street_lamp_02` — Street Lamp 02 by Josh Dean · 20338 tris · [0.39, 0.81, 1.68] m
+- model `modular_urban_apartments_facade` — Modular Urban Apartments Facade by James Ray Cock · 118215 tris · [51.53, 6.66, 17.0] m
+- model `modular_factory_facade` — Modular Factory Facade by James Ray Cock · 175014 tris · [53.33, 5.36, 29.0] m
+- model `concrete_road_barrier` — Concrete Road Barrier by Amal Kumar · 80776 tris · [1.55, 0.64, 0.84] m
+- model `fire_hydrant` — Fire Hydrant by Gonçalo Felício · 86316 tris · [0.87, 0.32, 0.8] m
+- model `utility_box_01` — Utility Box 01 by James Ray Cock · 4404 tris · [0.52, 0.43, 1.12] m
+- model `modular_street_seating` — Modular Street Seating by Stuart Attenborrow · 25156 tris · [4.34, 0.77, 0.95] m
+- model `jacaranda_tree` — Jacaranda Tree by Rob Tuytel, Rico Cilliers · 312356 tris · [24.17, 18.03, 19.83] m
+- model `island_tree_01` — Island Tree 01 by Rob Tuytel, Rico Cilliers · 3729692 tris · [12.46, 4.82, 5.03] m
+- model `korean_public_payphone_01` — Korean Public Payphone 01 by UM JOORIN · 48132 tris · [0.4, 0.3, 0.74] m
+- model `water_manhole_cover` — Water Manhole Cover by Raunox · 6301 tris · [0.69, 0.69, 0.07] m
+- model `cardboard_box_01` — Cardboard Box 01 by Rahul Chaudhary · 16952 tris · [0.39, 0.52, 0.34] m
+- model `strawberry_chocolate_cake` — Strawberry Chocolate Cake by Kuutti Siitonen · 27054 tris · [0.24, 0.24, 0.08] m
+- model `carrot_cake` — Carrot Cake by Greg Zaal, James Ray Cock · 13790 tris · [0.23, 0.23, 0.1] m
+- model `croissant` — Croissant by Greg Zaal, Dario Barresi · 1990 tris · [0.2, 0.08, 0.06] m
+- model `ceramic_vase_01` — Ceramic Vase 01 by James Ray Cock · 2548 tris · [0.2, 0.21, 0.4] m
+- model `classic_laptop` — Classic Laptop by Arrangemonk · 14450 tris · [0.65, 0.49, 0.54] m
+- model `potted_plant_01` — Potted Plant 01 by Rico Cilliers · 96030 tris · [0.59, 0.64, 1.35] m
+- model `wicker_basket_01` — Wicker Basket 01 by Kuutti Siitonen · 22276 tris · [0.38, 0.3, 0.12] m
+- model `food_apple_01` — Food Apple 01 by Oliver Harries · 7012 tris · [0.1, 0.1, 0.09] m
+- model `bananas` — Bananas by Alexander Shulha · 46868 tris · [0.6, 0.24, 0.18] m
+- model `wine_bottles_01` — Wine Bottles 01 by Rico Cilliers, Jurita Burger · 28848 tris · [0.68, 0.08, 0.33] m
+- model `vintage_suitcase` — Vintage Suitcase by Maximilian Schuster · 16474 tris · [1.61, 0.24, 0.57] m
+- model `modular_electricity_poles` — Modular Electricity Poles by James Ray Cock · 200610 tris · [13.12, 1.96, 7.0] m
+- model `standing_chalkboard_01` — Standing Chalkboard 01 by ParzivalCG · 2372 tris · [0.92, 0.76, 1.51] m
+- model `outdoor_table_chair_set_01` — Outdoor Table Chair Set 01 by James Ray Cock · 9828 tris · [0.78, 1.83, 0.86] m
+- model `trashbag` — Trashbag by Benny Weimer · 4482 tris · [0.53, 0.46, 0.57] m
+- model `hamburger_buns` — Hamburger Buns by Alexander Shulha · 11588 tris · [0.4, 0.11, 0.06] m
+- hdri `dresden_station_night` (2k) — Dresden Station Night by Greg Zaal
+- hdri `cobblestone_street_night` (2k) — Cobblestone Street Night by Greg Zaal, Jenelle van Heerden
+- hdri `hansaplatz` (2k) — Hansaplatz by Greg Zaal
+- hdri `blaubeuren_night` (2k) — Blaubeuren Night by Andreas Mischok
+- texture `asphalt_02` (2k, 6 maps) — Asphalt 02 by Rob Tuytel
+- texture `asphalt_04` (1k, 6 maps) — Asphalt 04 by Jenelle van Heerden, Sergej Majboroda
+- texture `road_damaged_clean` (2k, 6 maps) — Road Damaged Clean by Dimitrios Savva
+- texture `brushed_concrete` (1k, 6 maps) — Brushed Concrete  by Dario Barresi, Dimitrios Savva
+- texture `concrete_floor_02` (1k, 6 maps) — Concrete Floor 02 by Rob Tuytel
+- texture `leather_white` (1k, 6 maps) — Leather White by Rob Tuytel
+- texture `brown_leather` (1k, 6 maps) — Brown Leather by Rob Tuytel
+- texture `fabric_leather_01` (1k, 6 maps) — Fabric Leather 01 by Rob Tuytel
+- texture `painted_metal_shutter` (1k, 6 maps) — Painted Metal Shutter by Dario Barresi, Rico Cilliers, Charlotte Baglioni
+- texture `brick_4` (1k, 6 maps) — Brick 4 by Rob Tuytel
+- texture `rectangular_paving` (1k, 6 maps) — Rectangular Paving by Dimitrios Savva
+- texture `square_brick_paving` (1k, 6 maps) — Square Brick Paving by Dimitrios Savva

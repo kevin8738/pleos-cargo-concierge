@@ -83,3 +83,76 @@ export const DRIVER = {
 /** 앱 컬러 */
 export const COLORS = { bg: '#0B0F14', mint: '#4FD1C5', champ: '#F2D18B', red: '#F56565', text: '#E6EDF3', dim: '#8B98A5' };
 export const FONT = '"Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// v2 "실사형 에셋" — 렌더링·에셋 상수. (위의 운전·한계 상수는 v1.1 과 한 글자도 다르지 않다)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** 에셋 경로 (index.html 기준 상대 경로). 저장소에서는 docs/sim/assets/ 로 함께 복사된다 */
+export const ASSET_ROOT = 'assets/';
+export const DRACO_PATH = 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/draco/gltf/';
+export const HDRI_PATH = 'polyhaven/hdris/dresden_station_night_2k.hdr';
+/** 디렉터리 목록(python http.server 등)이 없는 정적 호스트에서, manifest 에 없는 생성 GLB 를 HEAD 로 찾아볼지.
+ *  true = GLB 를 넣기만 하면 보인다(대신 없는 파일마다 콘솔에 404 1줄). build_manifest.py 를 다시 돌리면 탐색이 필요 없다 */
+export const PROBE_GENERATED = false;
+
+/** 이미지→3D 로 만들 예정인 생성 에셋 id (assets/glb/<id>.glb). 없으면 각자 대체물로 폴백 */
+export const GENERATED_IDS = [
+  'sedan', 'sedan_body', 'car_seat', 'steering_wheel', 'dashboard',
+  'cake_box', 'tteokbokki_bag', 'bouquet', 'grocery_bag', 'coffee_carrier', 'pet_carrier',
+  'watermelon_net', 'laptop_box', 'pottery_vase', 'cake_slice_box',
+];
+
+/** 실제 크기 표 (m). 생성 GLB 는 보통 단위 정규화돼 나오므로, manifest 에 실측 치수(real_size_m)가 없거나
+ *  size_m 이 이 값과 2배 이상 다르면 이 표로 자동 스케일한다. axis: 'len' 수평 최장 변, 'h' 높이, 'max' 3축 최장 */
+export const REAL_SIZE = {
+  sedan: { axis: 'len', m: 4.99 },          // 4.99 × 1.88 × 1.46 m 대형 세단
+  sedan_body: { axis: 'len', m: 4.99 },     // 바퀴 제거 차체(파트 노드), 실측 저장
+  car_seat: { axis: 'h', m: 0.98 },        // 바닥(0.33)부터 헤드레스트 꼭대기까지 — 지붕 안쪽(1.40) 아래
+  steering_wheel: { axis: 'max', m: 0.38 },
+  dashboard: { axis: 'len', m: 1.46 },      // A필러 사이 실내 폭에 맞춤 (생성 차체 실측 1.46 m)
+  cake_box: { axis: 'len', m: 0.25 },       // 스펙: 케이크 상자 한 변 0.25 m
+  cake_slice_box: { axis: 'len', m: 0.14 },
+  tteokbokki_bag: { axis: 'h', m: 0.32 },
+  bouquet: { axis: 'max', m: 0.55 },
+  grocery_bag: { axis: 'h', m: 0.40 },
+  coffee_carrier: { axis: 'len', m: 0.25 },
+  pet_carrier: { axis: 'len', m: 0.48 },
+  watermelon_net: { axis: 'max', m: 0.30 },
+  laptop_box: { axis: 'len', m: 0.42 },
+  pottery_vase: { axis: 'h', m: 0.34 },
+  // Poly Haven 소품을 VIP 로 쓸 때 시트 위 크기 (원본이 실측이라도 소품 성격상 축소가 필요한 것만)
+  potted_plant_01: { axis: 'h', m: 0.48 },
+};
+
+/** VIP 분류 → 후보 목록 (앞에서부터 있는 것을 쓴다). g: 생성 GLB, ph: Poly Haven, proc: 절제된 프로시저럴 */
+export const VIP_ASSETS = {
+  cake: ['g:cake_box', 'g:cake_slice_box', 'proc:cake_box'],
+  hot: ['g:tteokbokki_bag', 'proc:paper_bag'],
+  flower: ['g:bouquet', 'ph:potted_plant_01'],
+  fresh: ['g:grocery_bag', 'g:watermelon_net', 'ph:wicker_basket_01'],
+  soup: ['g:coffee_carrier', 'proc:coffee_carrier'],
+  fragile: ['g:pottery_vase', 'ph:ceramic_vase_01'],
+  device: ['g:laptop_box', 'ph:classic_laptop'],
+  pet: ['g:pet_carrier', 'proc:pet_carrier'],
+  luggage: ['ph:cardboard_box_01'],
+};
+
+/** 세단 치수 (차 로컬 +X = 앞, +Z = 조수석). 축거 2.9 m 는 물리와 같다 */
+export const SEDAN = { L: 4.99, W: 1.88, H: 1.46, nose: 2.45, tail: -2.54, axle: 1.45, track: 0.81 };
+
+/** 도로 단면 (주행선 기준 좌우 오프셋, m). 7 m 2차로 + 0.25 m 측구, 연석 0.15 m, 보도 2.5 m */
+export const ROAD = {
+  y: 0.02, edgeR: -1.75, edgeL: 5.25, curbH: 0.15, curbW: 0.2, walk: 2.5,
+  lampGap: 30, treeGap: 15,  // 가로등 30 m(양쪽 엇갈림), 가로수 15 m
+};
+
+/** 렌더링 품질 (스펙 6) */
+export const RENDER = {
+  exposure: 0.9, fog: 0.004, shadowMap: 2048,
+  bloom: { threshold: 0.9, strength: 0.35, radius: 0.4 },
+  lampSpots: 6, lampShadows: 2,  // 실제 SpotLight 는 카메라 근처 6개, 그중 가까운 2개만 그림자
+  nearTrees: 14, nearTreeDist: 75, // 3D 가로수 (나머지는 같은 모델로 구운 임포스터)
+  chunk: 60, chunkCull: 320,    // 건물·가로 시설 청크 길이 (m), 이보다 먼 청크는 숨김 (안개 + 원경 실루엣이 대신)
+  targetFps: 55,                // 이보다 낮게 3초 지속되면 품질 단계를 하나 내린다 (블룸 → 유리 투과 → 해상도)
+};

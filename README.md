@@ -19,7 +19,7 @@
 | 테스트 환경 | 공식 Pleos 에뮬레이터 **`Pleos_Connect_v2.1`**(Android 14 / API 34, arm64, 2560×1440) · macOS arm64 + Android Emulator 37.2.12 · JDK 17 · Gradle 8.9 / AGP 8.6.1 / Kotlin 2.0.21 · minSdk 28 / targetSdk 34 · Pleos SDK Vehicle 2.3.2 · NaviHelper 3.0.5 · FusedLocation 1.1.3 · TextToSpeech/SpeechToText 3.3.1 (Gradle 8.0+ · API 28+ 요건 충족) |
 | 필요한 설정 | ① Pleos 에뮬레이터: SDK Manager에 Pleos 추가 저장소를 등록해 `system-images;android-34;pleos_car_emulator;arm64-v8a`를 설치하고 AVD 생성(§10 절차, 공식 가이드 `document.pleos.ai … setup-connect-sdk-emulator`) ② 설치 시 `adb install -g`(런타임 권한 선부여) ③ 에뮬레이터는 조수석 착좌를 기본 ‘있음’으로 보고하므로 적재 프롬프트를 보려면 `demo/demo_broadcast.sh occupied false` 후 30 초 대기 ④ 차량 신호(도어·속도·조향·내비)는 `demo/demo_broadcast.sh`로 주입(접수용 release 빌드에서도 동작, `BuildConfig.DEMO_BRIDGE`) — 공조·시트 제어와 TTS/STT는 실제 Pleos SDK 호출 |
 | 시연 영상 | 에뮬레이터 시연(2 분 51 초, 화면 녹화 + 주입 신호·G 추정값 HUD): [`vip-seat_emulator-demo_2m51s.mp4`](https://github.com/kevin8738/pleos-cargo-concierge/releases/download/v1.0.0/vip-seat_emulator-demo_2m51s.mp4) · 컨셉 영상(61 초, 생성형 AI 연출, 디스플레이는 에뮬레이터 실제 캡처 합성): [`vip-seat_concept-ad_61s_1080p.mp4`](https://github.com/kevin8738/pleos-cargo-concierge/releases/download/v1.0.0/vip-seat_concept-ad_61s_1080p.mp4) |
-| 문서 | 기획서(접수양식 02 심사자료 본문) `docs/기획서_VIP조수석.md` · 수치 근거표 `docs/근거_EVIDENCE.md` · 실제 실행 화면 `docs/screens/` · PT 대본 `demo/PT_SCRIPT.md` · **3D 주행 시뮬레이션** `docs/sim/`(§15, 브라우저에서 사람 기준 vs 케이크 기준 비교) |
+| 문서 | 기획서(접수양식 02 심사자료 본문) `docs/기획서_VIP조수석.md` · 수치 근거표 `docs/근거_EVIDENCE.md` · 실제 실행 화면 `docs/screens/` · PT 대본 `demo/PT_SCRIPT.md` · **3D 주행 시뮬레이션** `docs/sim/`(§15, 실사형 에셋 v2 · 브라우저에서 사람 기준 vs 케이크 기준 비교, v1.1은 `docs/sim_v1/`) |
 
 **빠른 실행** (Pleos_Connect_v2.1 AVD가 부팅된 상태):
 ```bash
@@ -323,10 +323,11 @@ VIP는 고정 5종이 아니라 **사용자가 이름 붙인 임의 품목**이�
 | 데모 | `demo_broadcast.sh occupied true REAR_RIGHT`, `spot TRUNK`, `door REAR_LEFT open`; 3분 시나리오 T+0에 뒷좌석 오른쪽 탑승 표시, T+0.5에 자리 선택 장면. 실제 화면 캡처는 `demo/capture_screens.sh <apk> ../submission/mockups/real`(에뮬레이터 기본 착좌 해제 후 30 s 억제가 끝나길 기다렸다가 도어 사이클) | `demo/` |
 | 테스트 | `CargoSpotTest` 8건(문별 제안, 좌석별 억제, 들고 타기, 사람 우선, 자리 이동, 도착 문구, 음성 자리 구문, 목 어댑터 매핑) → 총 73건 | `core/src/test` |
 
-## 15. 3D 주행 시뮬레이션 (2026-10-28, `docs/sim/`)
+## 15. 3D 주행 시뮬레이션 (2026-10-28, `docs/sim/` v2 실사형 에셋 · v1.1은 `docs/sim_v1/`)
 "사람 기준 0.40 G vs 케이크 기준 0.15 G"를 같은 야간 코스(R30·R60·R120 커브, 1.4 km)를 두 번 달려 비교하는 브라우저 3D(Three.js 0.160, 빌드 없음). 앱의 추정식(자전거 모델, 조향비 15:1, 축거 2.9 m, EMA 0.5)과 배지·코칭 규칙(80 % NEAR 진입 시 효과음 1회, 초과 시 음성 코칭 주행당 3회, 0.6 G 긴급·15 km/h 미만 선회 억제, R30 100 m 전 사전 안내, P 정차 시 챙김 안내)을 그대로 옮겼다. 케이크 손상은 "한계 초과분 누적"의 단순 모델이며 화면에 그렇게 표기한다. 물리는 고정 스텝(1/60 s)이라 배속과 무관하게 같은 결과가 나온다.
 
-- 실행: `cd docs/sim && python3 -m http.server 8787` → `http://127.0.0.1:8787/` (Three.js를 CDN에서 받으므로 인터넷 필요, Chrome 권장).
-- 조작: 비교 시작(A → B 자동 주행 후 비교 카드) · 카메라 1 체이스 / 2 캐빈(상자가 밀리는 모습) / 3 지도(G 벡터) · C 직접 운전(방향키, Space 급제동) · R 리셋 · H 조작 패널 숨김(녹화용) · F FPS · VIP 분류 9종 선택(한계 G·권장 속도 연동).
-- 결과(케이크·디저트 0.15 G): A 사람 기준 — 최대 0.417 G, 손상 100 %(R60 커브 안에서), 코칭 3/3, 1:35.5 · B 케이크 기준 — 최대 0.117 G, 손상 0 %, NEAR 0회, 2:13.5(+38.1 s) · 급커브 R30 통과 속도 39.5 vs 20.8 km/h.
-- 제작 방식: 스펙(`docs/sim/SPEC.md`)을 먼저 쓰고 코딩 에이전트(Antigravity CLI: Claude Opus 5.5와 Gemini 4 Argon 두 워커)에 구현을 맡긴 뒤 Chrome에서 검수(콘솔 에러 0, 121 fps)하고 수정 라운드 1회를 거쳤다. 채택본은 Claude Opus 5.5 결과물이며 변경 이력은 `docs/sim/CHANGES.md`.
+- 실행: `cd docs/sim && python3 -m http.server 8787` → `http://127.0.0.1:8787/` (Three.js·Draco 디코더를 CDN에서 받으므로 인터넷 필요, Chrome 권장. 에셋 약 80 MB, 처음에 로딩 화면).
+- 조작: 비교 시작(A → B 자동 주행 후 비교 카드) · 카메라 1 체이스 / 2 캐빈(조수석 품목·와이드 디스플레이) / 3 지도(G 벡터) · C 직접 운전(방향키, Space 급제동) · R 리셋 · H 조작 패널 숨김(녹화용) · F FPS · VIP 분류 9종 선택(한계 G·권장 속도·조수석 위 실제 품목 연동).
+- 결과(케이크·디저트 0.15 G, v1.1과 동일한 물리): A 사람 기준 — 최대 0.417 G, 손상 100 %(R60 커브 안에서), 코칭 3/3, 1:35.5 · B 케이크 기준 — 최대 0.117 G, 손상 0 %, NEAR 0회, 2:13.5(+38.1 s) · 급커브 R30 통과 속도 39.5 vs 20.8 km/h.
+- **v2 "실사형 에셋"(`docs/sim/`)**: 에셋을 먼저 모으고 실측 치수에 맞춰 장면을 조립했다. 환경은 Poly Haven CC0 실측 모델·PBR 텍스처·야간 HDRI(가로등, 벽돌 파사드, 가로수, 전신주, 벤치, 공중전화, 소화전, 베이커리 테이블·칠판·빵·케이크), 차는 자체 참조 이미지로 image-to-3D(Hunyuan3D-2mv)한 세단 차체를 도장/유리/등화 파트로 나눠 클리어코트·틴팅 유리·발광 재질을 입혔고, 실내 시트·대시보드·핸들과 조수석의 VIP 품목(케이크 상자, 꽃다발, 떡볶이 봉투, 장바구니, 커피 캐리어, 반려동물 이동장 등 분류별)도 생성 GLB를 쓴다(없는 2종은 Poly Haven 대체). 에셋 목록·대체물·검수 기록은 `docs/sim/README.md`·`docs/sim/CHANGES.md`, 출처는 `docs/sim/assets/LICENSES_polyhaven.md`.
+- 제작 방식: 스펙(`docs/sim/SPEC.md`)을 먼저 쓰고 코딩 에이전트(Antigravity CLI)에 에셋 로더·월드 구현을 맡긴 뒤, 차·실내·QA 수정은 직접 했다. 검수는 헤드리스 Chromium(SwiftShader)으로 차 로컬 고정 카메라 진단 뷰(측면·후상방·전방 ¾·탑뷰·캐빈)를 찍어 가며 9차례 수정(차체 법선·지상고·실내 치수·도장 반사·실내 조도·디스플레이 위치·접지 그림자·표면 스무딩·미러/내부 웨빙 제거). v1.1(프로시저럴 차·건물, Antigravity 두 워커 중 Claude Opus 5.5 채택본)은 `docs/sim_v1/`에 그대로 둔다.

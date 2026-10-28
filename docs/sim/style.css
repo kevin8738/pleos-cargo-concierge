@@ -83,3 +83,12 @@ dd.warn { color: var(--champ); } dd.bad { color: var(--red); font-weight: 700; }
 .card-inner th, .card-inner td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; }
 .card-inner th { color: var(--dim); font-weight: 400; } .card-inner table.cmp td:last-child { color: var(--mint); }
 .card-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+
+/* v2: 로딩 오버레이 */
+#loading { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; background: #04060b; }
+#loading .box { width: min(520px, 90vw); padding: 28px 30px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+#loading h2 { margin: 0 0 8px; font-size: 18px; color: var(--champ); }
+#loading p { margin: 6px 0; color: var(--dim); }
+#loading .bar { height: 8px; background: #18212c; border-radius: 4px; overflow: hidden; margin: 12px 0; }
+#loading #load-bar { height: 100%; width: 0; background: var(--mint); transition: width 0.15s linear; }
+#loading .err { color: var(--red); white-space: pre-wrap; }
