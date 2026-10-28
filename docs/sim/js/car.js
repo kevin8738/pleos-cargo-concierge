@@ -5,9 +5,9 @@
  * 차는 로컬 +X 방향을 보고, 왼쪽이 -Z(운전석), 오른쪽이 +Z(조수석)이다.
  */
 import * as THREE from 'three';
-import { DEG, STEER_RATIO, CAR, CARGO, COLORS, FONT, ROAD, SEDAN, VIP_ASSETS } from './config.js';
+import { DEG, STEER_RATIO, CAR, CARGO, COLORS, FONT, ROAD, SEDAN, VIP_ASSETS, BODIES, BODY_ORDER } from './config.js';
 
-const NAVY = 0x1f3566;
+const NAVY = 0x1f3566;   // 프로시저럴 폴백 색
 const AXLE_X = SEDAN.axle, TRACK_HALF = SEDAN.track, SIDE_Z = 0.906;
 const BRAKE_LIGHT_ACCEL = -0.5;
 const ROAD_Y = ROAD.y;
@@ -77,15 +77,30 @@ export class CarModel {
       carpet: new THREE.MeshStandardMaterial({ color: 0x15171b, roughness: 0.96, envMapIntensity: 0.12 }),
       chrome: new THREE.MeshStandardMaterial({ color: 0xd7dce3, metalness: 0.8, roughness: 0.2, envMap: env, envMapIntensity: 1.2 }),
       tire: new THREE.MeshStandardMaterial({ color: 0x0c0c0d, roughness: 0.92 }),
-      rim: new THREE.MeshStandardMaterial({ color: 0xb8bec6, metalness: 0.85, roughness: 0.25, envMap: env, envMapIntensity: 1.2 }),
+      rim: new THREE.MeshStandardMaterial({ color: 0xb9bec4, metalness: 0.85, roughness: 0.25, envMap: env, envMapIntensity: 1.2 }),
+      rimDark: new THREE.MeshStandardMaterial({ color: 0x17191b, metalness: 0.6, roughness: 0.45, envMap: env, envMapIntensity: 0.6 }),
+      band: new THREE.MeshStandardMaterial({ color: 0x0a0b0d, roughness: 0.6, metalness: 0.1 }),
+      light_rear_dim: new THREE.MeshStandardMaterial({ color: 0x5a0a10, emissive: 0xff2a2a, emissiveIntensity: 0.4, roughness: 0.3, toneMapped: false }),
       trim: new THREE.MeshStandardMaterial({ color: 0x1b1e24, roughness: 0.8, envMapIntensity: 0.2 }),
     };
     // 가죽 PBR 이 있으면 시트·트림에 적용
     const leather = lib?.pbrSets?.get('fabric_leather_01') ? lib.pbr('fabric_leather_01', { color: 0x2a2d35, roughness: 0.75 }) : null;
     if (leather) M.seat = leather;
-    this.wheelMeta = lib?.items?.get('sedan_body')?.car_meta?.wheels ?? null;
+    this.wheelMeta = null; this.body = null; this.roofY = null;
     if (!this._bodyGltf(M)) this._bodyProc(M);
-    this._mirrors(M);
+    this.body ??= { id: 'proc', ...BODIES.sedan_body };
+    this.roofY ??= this.body.H;
+    // 실내 색: 차체별 (아이오닉 5 는 밝은 회색 투톤)
+    if (this.body.trim) M.trim.color.set(this.body.trim);
+    if (this.body.carpet) M.carpet.color.set(this.body.carpet);
+    if (!this.body.nativeMirrors) this._mirrors(M);
+    if (this.body.textured) {
+      M.glass.color.set(0x6a787d); M.glass.metalness = 0; M.glass.roughness = 0.10;
+      M.glass.opacity = 0.38; M.glass.envMapIntensity = 0.35;
+      M.light_front.emissive.set(0xeef4ff); M.light_front.emissiveIntensity = 2.0;
+      M.light_rear.emissiveIntensity = 1.3;
+    }
+    this._pixelLights(M);
     this._lights(M);
     this._interior(M);
     this._wheels(M);
@@ -101,7 +116,12 @@ export class CarModel {
 
   /** 생성 차체: 파트별 실제 재질. 성공하면 true */
   _bodyGltf(M) {
-    const body = this.lib?.instance?.('sedan_body', { forward: '+z' });
+    const id = BODY_ORDER.find((k) => this.lib?.models?.has(k));
+    if (!id) return false;
+    const B = this.body = { id, ...BODIES[id] }, item = this.lib.items?.get(id);
+    this.wheelMeta = item?.car_meta?.wheels ?? null;
+    M.paint.color.set(B.paint);
+    const body = this.lib.instance(id, { forward: '+z' });
     if (!body) return false;
     this.bodyMeshes = [];
     body.traverse((o) => {
@@ -109,17 +129,32 @@ export class CarModel {
       const part = partName(o);
       this.bodyMeshes.push(o);
       if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals();   // 분할 GLB 에 법선이 없으면 계산 (없으면 검게 보인다)
-      o.material = M[part] ?? M.paint;
+      const keepVC = B.photoPaint && (part === 'paint' || part === 'dark') && !!o.geometry.attributes.color;
+      if (B.textured && part !== 'glass' && o.material?.map) { // 창면은 별도 투명 재질, 외장은 원본 PBR 유지
+        const src = o.material;
+        const material = new THREE.MeshPhysicalMaterial();
+        THREE.MeshStandardMaterial.prototype.copy.call(material, src);
+        material.defines = { ...material.defines, PHYSICAL: '' };
+        material.metalness *= B.pbr?.metalnessScale ?? 1;
+        material.clearcoat = B.pbr?.clearcoat ?? 0.7;
+        material.clearcoatRoughness = 0.20;
+        material.envMap = this.lib?.envMap ?? null;
+        material.envMapIntensity = B.pbr?.envIntensity ?? 0.6;
+        material.side = THREE.FrontSide;
+        o.material = material;
+        this._texturedBody = true;
+      } else if (keepVC) { this._paintVC ??= Object.assign(M.paint.clone(), { vertexColors: true }); this._paintVC.color.set(0xffffff); o.material = part === 'paint' ? this._paintVC : Object.assign(M.dark.clone(), { vertexColors: true, color: new THREE.Color(0xffffff) }); }
+      else { o.material = M[part] ?? M.paint; if (o.geometry.attributes.color) o.geometry.deleteAttribute('color'); }   // 팔레트색은 재질로 대체
       o.castShadow = part !== 'glass'; o.receiveShadow = false;
-      if (o.geometry.attributes.color) o.geometry.deleteAttribute('color');   // 팔레트색은 재질로 대체
       o.renderOrder = part === 'glass' ? 2 : 0;
     });
-    // instance() 는 바닥을 y=0 에 맞추지만, 바퀴를 뺀 차체의 최저점은 타이어 바닥보다 높다 → 원래 전고(1.46)만큼 올려 지상고 복원
-    const fullH = this.lib?.items?.get('sedan_body')?.car_meta?.size_m?.[1] ?? SEDAN.H;
+    // instance() 는 바닥을 y=0 에 맞추지만, 바퀴를 뺀 차체의 최저점은 타이어 바닥보다 높다 → 원래 전고만큼 올려 지상고 복원
+    const fullH = item?.car_meta?.size_m?.[1] ?? B.H;
     body.position.y = Math.max(0, fullH - (body.userData?.size?.y ?? fullH));
     this.bodyLift = body.position.y;
     this.group.add(body);
-    this.used.body = 'sedan_body.glb (Hunyuan3D-2mv 형상 + 규칙 팔레트 → 파트 재질)';
+    this.roofY = this._surfaceY(-0.06 * B.L, 0) ?? B.H;          // 지붕 실측 (헤드라이너·실내등·눈높이 기준)
+    this.used.body = `${id}.glb — ${B.label}, ${B.paintName} (${B.textured ? 'TRELLIS.2 텍스처 차체' : '이미지→3D 형상 + 규칙 팔레트 → 파트 재질'})`;
     return true;
   }
 
@@ -137,39 +172,124 @@ export class CarModel {
     const h = rc.intersectObjects(this.bodyMeshes, false)[0];
     return h ? h.point.z : null;
   }
+  /** 옆면 반폭(절대값), 실측이 안 되면 fb */
+  _half(x, y, fb) { const z = this._sideZ(x, y); return z != null ? Math.abs(z) : fb; }
   /** A·B 필러: 유리 외피를 레이캐스트로 더듬어 그 4 cm 안쪽에 지주를 놓는다 (차체 형상이 바뀌어도 밖으로 삐져나오지 않게) */
   _pillars(M) {
     if (!this.bodyMeshes) return;
     const g = this.group;
+    const B = this.body, F = B.floor;
     for (const sgn of [-1, 1]) {
-      // A 필러: 카울(x 1.05) → 지붕 앞(x 0.3), 폭은 벨트라인 쪽 0.68 → 지붕 0.54
+      // A 필러: 카울 → 지붕 앞. 각 x 에서 앞유리 가운데 높이보다 10 cm 아래의 옆면 반폭 − 5 cm 를 따라간다
       const pts = [];
-      for (const [x, z] of [[1.05, 0.68], [0.8, 0.64], [0.55, 0.59], [0.3, 0.54]]) {
-        const y = this._surfaceY(x, sgn * z);
+      for (const dx of [0.05, 0.3, 0.55, 0.8]) {
+        const x = B.cowlX - dx, yc = this._surfaceY(x, 0);
+        if (yc == null) continue;
+        const z = this._half(x, yc - 0.1, 0.7) - 0.05, y = this._surfaceY(x, sgn * z);
         if (y != null) pts.push([x, y - 0.045, sgn * z]);
       }
       for (let i = 0; i + 1 < pts.length; i++) strut(pts[i], pts[i + 1], 0.05, M.trim, g).name = 'pillar';
-      // B 필러: 벨트라인(y 0.8) → 지붕(y 1.38), 옆면 반폭 안쪽
-      const bp = [];
-      for (const y of [0.8, 1.0, 1.2, 1.38]) {
-        const z = this._sideZ(-0.5, y);
-        if (z != null) bp.push([-0.5, y, sgn * (z - 0.04)]);
+      // B 필러: 벨트라인 → 지붕, 옆면 반폭 안쪽
+      const bp = [], bx = B.seatX - 0.38;
+      for (const y of [F + 0.47, F + 0.67, F + 0.87, this.roofY - 0.08]) {
+        const z = this._sideZ(bx, y);
+        if (z != null) bp.push([bx, y, sgn * (Math.abs(z) - 0.04)]);
       }
       for (let i = 0; i + 1 < bp.length; i++) strut(bp[i], bp[i + 1], 0.05, M.trim, g).name = 'pillar';
     }
   }
 
+  /** 파라메트릭 픽셀 등화 (아이오닉 5): 차체 앞/뒷면을 레이캐스트해 표면 1.2 cm 밖에 작은 발광 사각형을 격자로 붙인다 */
+  _pixelLights(M) {
+    const P = this.body?.pixels;
+    if (!P || !this.bodyMeshes) return;
+    const g = this.group; this.group.updateMatrixWorld(true);
+    const step = P.pitch ?? P.size * 1.45, planes = new Map();
+    const hitAt = (dir, y, z) => {
+      const rc = new THREE.Raycaster(new THREE.Vector3(dir * 4, y, z), new THREE.Vector3(-dir, 0, 0), 0, 8);
+      return rc.intersectObjects(this.bodyMeshes, false)[0];
+    };
+    // A common fitted plane per frame/cluster keeps the grid intact and follows
+    // the curved fascia without copying each noisy triangle's normal.
+    const planeAt = (dir, z0) => {
+      const key = `${dir}:${z0.toFixed(3)}`;
+      if (planes.has(key)) return planes.get(key);
+      const y0 = (dir > 0 ? P.frontY : P.rearY) - step * 0.5;
+      const span = dir > 0 ? 0.09 : z0 === 0 ? Math.max(0.1, P.rearZ - 3 * step) : 0.17;
+      const points = [];
+      for (const dy of [-0.05, 0, 0.05]) for (const dz of [-span, 0, span]) {
+        const hit = hitAt(dir, y0 + dy, z0 + dz);
+        if (hit) points.push({ x: hit.point.x, dy, dz });
+      }
+      if (!points.length) { planes.set(key, null); return null; }
+      const mean = k => points.reduce((s, p) => s + p[k], 0) / points.length;
+      const mx = mean('x'), my = mean('dy'), mz = mean('dz');
+      let yy = 0, zz = 0, yz = 0, xy = 0, xz = 0;
+      for (const p of points) {
+        const y = p.dy - my, z = p.dz - mz, x = p.x - mx;
+        yy += y * y; zz += z * z; yz += y * z; xy += x * y; xz += x * z;
+      }
+      const det = yy * zz - yz * yz;
+      const sy = det > 1e-10 ? (xy * zz - xz * yz) / det : 0;
+      const sz = det > 1e-10 ? (xz * yy - xy * yz) / det : 0;
+      const intercepts = points.map(p => p.x - sz * p.dz - sy * p.dy);
+      const x0 = (dir > 0 ? Math.max(...intercepts) : Math.min(...intercepts)) + dir * 0.008;
+      const plane = { x0, y0, z0, sy, sz }; planes.set(key, plane); return plane;
+    };
+    const place = (dir, y, z, mat, w = P.size, h = P.size, anchorZ = null) => {
+      const z0 = anchorZ ?? (Math.abs(z) < P.rearZ - 3 * step ? 0 : Math.sign(z) * P.rearZ);
+      const plane = P.flat ? planeAt(dir, z0) : null;
+      const hit = plane ? null : hitAt(dir, y, z);
+      if (!hit && !plane) return;
+      const q = new THREE.Mesh(new THREE.PlaneGeometry(w, h), mat);
+      if (plane) {
+        const pos = q.geometry.attributes.position;
+        for (let i = 0; i < pos.count; i++) {
+          const dz = -dir * pos.getX(i), dy = pos.getY(i);
+          pos.setXYZ(i, plane.sz * dz + plane.sy * dy, dy, dz);
+        }
+        q.geometry.computeVertexNormals();
+        q.position.set(plane.x0 + plane.sz * (z - plane.z0) + plane.sy * (y - plane.y0) + (mat === M.band ? -dir * 0.004 : 0), y, z);
+      } else {
+        const n = hit.face.normal.clone().transformDirection(hit.object.matrixWorld);
+        q.position.copy(hit.point).addScaledVector(n, mat === M.band ? 0.006 : 0.012);
+        q.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), n);
+      }
+      q.name = 'pixel'; g.add(q);
+    };
+    if (P.bands) {                                                                       // 램프 하우징 검정 밴드 (앞 1.74×0.16, 뒤 1.74×0.14) — 표면 6 mm 밖
+      for (let z = -0.85; z <= 0.85 + 1e-6; z += 0.1) { place(1, P.frontY - step * 0.5, z, M.band, 0.1, 0.16); place(-1, P.rearY - step * 0.5, z, M.band, 0.1, 0.14); }
+    }
+    for (const sgn of [-1, 1]) {
+      if (P.flat) {
+        place(-1, P.rearY - step * 0.5, sgn * P.rearZ, M.band, 0.37, 0.13);
+      }
+      if (P.frames) {                                                                    // 앞: 프레임형 DRL 2개/측 (0.18×0.12, 테두리 0.015, 간격 0.06)
+        for (const dz of [-0.12, 0.12]) {
+          const zc = sgn * (P.frontZ + dz), yc = P.frontY - step * 0.5, w = 0.18, h = 0.12, t = 0.015;
+          if (P.flat) place(1, yc, zc, M.band, w + 0.015, h + 0.015, zc);
+          place(1, yc + h / 2 - t / 2, zc, M.light_front, w, t, zc); place(1, yc - h / 2 + t / 2, zc, M.light_front, w, t, zc);
+          place(1, yc, zc - sgn * (w / 2 - t / 2), M.light_front, t, h, zc); place(1, yc, zc + sgn * (w / 2 - t / 2), M.light_front, t, h, zc);
+        }
+      } else for (let r = 0; r < 2; r++) for (let c = 0; c < 4; c++) place(1, P.frontY - r * step, sgn * (P.frontZ + (c - 1.5) * step), M.light_front);   // 앞 DRL 2×4
+      const cols = P.rearCols ?? 6;
+      for (let r = 0; r < 2; r++) for (let c = 0; c < cols; c++) place(-1, P.rearY - r * step, sgn * (P.rearZ + (c - (cols - 1) / 2) * step), M.light_rear);
+    }
+    for (let z = -(P.rearZ - 3 * step); z <= P.rearZ - 3 * step + 1e-6; z += 0.1) place(-1, P.rearY - step * 0.5, z, M.light_rear_dim, 0.1, 0.01, 0);   // 뒤 연결 바 (얇고 어둡게)
+  }
+
   /** 사이드미러 하우징 (생성 차체에서는 미러를 잘라냈다 — 안팎 모두 매끈한 닫힌 형상으로 대체) */
   _mirrors(M) {
     const g = this.group;
+    const B = this.body ?? BODIES.sedan_body, mx = B.cowlX - 0.2;
     for (const sgn of [-1, 1]) {
-      const y = this.bodyMeshes ? (this._surfaceY(0.9, sgn * 0.82) ?? 0.98) + 0.06 : 1.0;
-      const door = this.bodyMeshes ? Math.abs(this._sideZ(0.9, y - 0.03) ?? 0.8) : 0.86;        // 도어 표면 반폭 → 받침대가 도어에 닿게
+      const y = this.bodyMeshes ? (this._surfaceY(mx, sgn * 0.436 * B.W) ?? (B.floor + 0.65)) + 0.06 : B.floor + 0.67;
+      const door = this.bodyMeshes ? this._half(mx, y - 0.03, 0.43 * B.W) : 0.46 * B.W;        // 도어 표면 반폭 → 받침대가 도어에 닿게
       const z = sgn * (door + 0.17), zStalk = sgn * (door - 0.02);
       const h = new THREE.Mesh(new THREE.CapsuleGeometry(0.055, 0.11, 4, 12).rotateX(Math.PI / 2), M.paint);
-      h.scale.set(1, 0.8, 1); h.position.set(0.9, y, z); h.castShadow = true; g.add(h);
-      const face = box(0.012, 0.085, 0.15, M.chrome, 0.9 - 0.075, y, z, g); face.rotation.y = 0;          // 거울면(뒤쪽)
-      box(0.05, 0.03, Math.abs(z - zStalk) + 0.02, M.dark, 0.9, y - 0.03, (z + zStalk) / 2, g);           // 받침대
+      h.scale.set(1, 0.8, 1); h.position.set(mx, y, z); h.castShadow = true; g.add(h);
+      box(0.012, 0.085, 0.15, M.chrome, mx - 0.075, y, z, g);                                     // 거울면(뒤쪽)
+      box(0.05, 0.03, Math.abs(z - zStalk) + 0.02, M.dark, mx, y - 0.03, (z + zStalk) / 2, g);    // 받침대
     }
   }
 
@@ -192,80 +312,102 @@ export class CarModel {
 
   /** 전조등 SpotLight 2개(노면 콘), 실내등, 바닥 접지 그림자 */
   _lights(M) {
-    const g = this.group;
-    for (const z of [-0.6, 0.6]) {
+    const g = this.group, B = this.body;
+    for (const z of [-0.32 * B.W, 0.32 * B.W]) {
       const spot = new THREE.SpotLight(0xfff1d0, 260, 70, 0.42, 0.55, 2);
-      spot.position.set(2.2, 0.72, z);
+      spot.position.set(0.44 * B.L, 0.49 * B.H, z);
       spot.target.position.set(22, 0, z * 1.5);
       spot.castShadow = false;
       g.add(spot, spot.target);
     }
     const dome = new THREE.SpotLight(0xffe2b0, 0.12, 2.2, 1.1, 0.8, 2);   // 은은한 실내등 (cd 단위: 0.1 대여야 흰 상자가 타지 않는다)
-    dome.position.set(0, 1.36, 0.1); dome.target.position.set(0.3, 0.6, 0.2);
+    dome.position.set(0, this.roofY - 0.1, 0.1); dome.target.position.set(0.3, B.floor + 0.27, 0.2);
     g.add(dome, dome.target);
     const sc = document.createElement('canvas'); sc.width = 256; sc.height = 128;          // 부드러운 접지 그림자 (타원 그라데이션)
     const sx = sc.getContext('2d'), grad = sx.createRadialGradient(128, 64, 10, 128, 64, 64);
     grad.addColorStop(0, 'rgba(0,0,0,0.85)'); grad.addColorStop(0.55, 'rgba(0,0,0,0.55)'); grad.addColorStop(1, 'rgba(0,0,0,0)');
     sx.save(); sx.scale(1, 1); sx.fillStyle = grad; sx.fillRect(0, 0, 256, 128); sx.restore();
-    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(6.2, 3.0).rotateX(-Math.PI / 2),
+    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(B.L + 1.2, B.W + 1.1).rotateX(-Math.PI / 2),
       new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(sc), transparent: true, depthWrite: false }));
     shadow.position.set(-0.05, 0.012, 0);
     g.add(shadow);
   }
 
   /** 실내: 생성 시트 2개·대시보드·핸들 (없으면 간단 모델), 바닥·천장 트림.
-   *  치수는 생성 차체를 레이캐스트로 실측한 실내 외피(벨트라인 반폭 0.80, 창 높이 반폭 0.65, 지붕 안쪽 1.40) 안에 들어가게 잡았다 */
+   *  치수는 차체를 레이캐스트로 실측한 실내 외피(벨트라인·창턱 반폭, 지붕 높이)에 BODIES 의 바닥 높이·카울 위치·시트 위치를 더해 정한다 */
   _interior(M) {
-    const g = this.group, lib = this.lib;
-    box(2.8, 0.04, 1.56, M.carpet, -0.3, 0.33, 0, g);                    // 바닥 카펫
-    box(1.4, 0.02, 1.1, M.trim, -0.4, 1.40, 0, g);                       // 천장(헤드라이너) — 지붕(1.46) 바로 아래
-    for (const z of [-0.77, 0.77]) {
-      box(2.3, 0.42, 0.05, M.trim, -0.25, 0.57, z, g);                                     // 도어 트림 (벨트라인 아래, 차체 안쪽)
-      const up = box(2.2, 0.21, 0.02, M.trim, -0.25, 0.88, Math.sign(z) * 0.75, g);         // 벨트라인~창턱: 안쪽으로 기운 윗 패널 (도어 외피 0.80→0.73 반폭 안쪽)
-      up.rotation.x = -Math.sign(z) * 0.33;
+    const g = this.group, lib = this.lib, B = this.body, L = B.L, F = B.floor;
+    const roof = this.roofY, headY = roof - 0.06;
+    const trimXs = B.textured ? [-0.28 * L, -0.14 * L, 0, 0.18 * L] : [-0.05 * L];
+    const beltZ = Math.min(...trimXs.map(x => this._half(x, F + 0.30, 0.43 * B.W))) - (B.textured ? 0.025 : 0);
+    const sillZ = Math.min(...trimXs.map(x => this._half(x, F + 0.62, 0.39 * B.W))) - (B.textured ? 0.025 : 0);
+    if (B.textured) {
+      const rear = -0.34 * L, front = B.cowlX - 0.08;
+      box(front - rear, 0.04, 2 * beltZ, M.carpet, (front + rear) / 2, F, 0, g);
+      const footZ = Math.min(beltZ, this._half(front, F + 0.25, beltZ) - 0.04);
+      box(0.04, 0.50, 2 * footZ, M.carpet, front, F + 0.23, 0, g); // 대시보드 아래 격벽
+      for (const sgn of [-1, 1]) {
+        const rearKick = 0.17 * L;
+        box(front - rearKick, 0.45, 0.04, M.trim, (front + rearKick) / 2, F + 0.205, sgn * (footZ - 0.02), g);
+      }
+    } else box(0.56 * L, 0.04, 2 * beltZ - 0.06, M.carpet, -0.06 * L, F, 0, g);
+    box(0.28 * L, 0.02, 2 * (this._half(-0.08 * L, roof - 0.12, 0.3 * B.W) - 0.03), M.trim, -0.08 * L, headY, 0, g);   // 천장(헤드라이너)
+    for (const sgn of [-1, 1]) {
+      box(0.46 * L, 0.42, 0.05, M.trim, -0.05 * L, F + 0.24, sgn * (beltZ - 0.035), g);                  // 도어 트림 (벨트라인 아래)
+      const up = box(0.44 * L, 0.21, 0.02, M.trim, -0.05 * L, F + 0.55, sgn * ((beltZ + sillZ) / 2 - 0.02), g);   // 벨트라인~창턱 윗 패널 (안쪽으로 기움)
+      up.rotation.x = -sgn * Math.atan2(Math.max(0, beltZ - sillZ), 0.21);
     }
     this._pillars(M);
-    box(0.5, 0.05, 1.4, M.trim, -1.55, 1.0, 0, g);                       // 뒤 선반
-    box(0.06, 0.6, 1.5, M.trim, -1.95, 0.65, 0, g);                      // 트렁크 격벽
-    const leatherDark = lib?.pbrSets?.get('fabric_leather_01') ? lib.pbr('fabric_leather_01', { color: 0x1b1d23, roughness: 0.72, envMapIntensity: 0.4 }) : M.seat;
+    const shelfW = 2 * (this._half(-0.31 * L, F + 0.67, 0.37 * B.W) - 0.05), wallW = 2 * (this._half(-0.39 * L, F + 0.32, 0.42 * B.W) - 0.05);
+    box(0.1 * L, 0.05, shelfW, M.trim, -0.31 * L, F + 0.67, 0, g);                                         // 뒤 선반 (해치백이면 러기지 커버)
+    box(0.06, 0.6, wallW, M.trim, -0.39 * L, F + 0.32, 0, g);                                              // 트렁크 격벽
+    const seatSet = B.seatPbr && lib?.pbrSets?.get(B.seatPbr) ? B.seatPbr : 'fabric_leather_01';
+    const leatherDark = lib?.pbrSets?.get(seatSet) ? lib.pbr(seatSet, { color: B.seat ?? 0x1b1d23, roughness: 0.72, envMapIntensity: 0.4 }) : M.seat;
     const skin = (obj, mat) => obj?.traverse((o) => { if (o.isMesh) { o.material = mat; if (o.geometry.attributes.color) o.geometry.deleteAttribute('color'); o.castShadow = true; o.receiveShadow = true; } });
     const seat = lib?.instance?.('car_seat', { forward: '+z' });
-    const FLOOR = 0.33;
+    CARGO_BASE.set(B.seatX + 0.07, F + 0.33, B.seatZ);
     if (seat) { skin(seat, leatherDark);
       let pass = null;
-      for (const z of [-0.42, 0.42]) { const s = z < 0 ? seat : seat.clone(true); s.position.set(-0.12, FLOOR, z); g.add(s); if (z > 0) pass = s; }
+      for (const sgn of [-1, 1]) { const s = sgn < 0 ? seat : seat.clone(true); s.position.set(B.seatX, F, sgn * B.seatZ); g.add(s); if (sgn > 0) pass = s; }
       this.used.seat = 'car_seat.glb';
       // 조수석 방석 윗면을 실측: 위에서 아래로 레이캐스트 (시트 모델이 바뀌어도 품목이 공중에 뜨거나 파묻히지 않게)
       g.updateMatrixWorld(true);
-      const rc = new THREE.Raycaster(new THREE.Vector3(CARGO_BASE.x, 1.3, 0.42), new THREE.Vector3(0, -1, 0), 0, 2);
+      const rc = new THREE.Raycaster(new THREE.Vector3(CARGO_BASE.x, F + 1.0, B.seatZ), new THREE.Vector3(0, -1, 0), 0, 2);
       const hit = rc.intersectObject(pass, true)[0];
-      CARGO_BASE.y = hit ? hit.point.y + 0.005 : FLOOR + 0.33;
+      if (hit) CARGO_BASE.y = hit.point.y + 0.005;
     } else {
-      for (const z of [-0.42, 0.42]) {
-        box(0.52, 0.12, 0.5, M.seat, 0.05, 0.62, z, g);
-        box(0.1, 0.5, 0.5, M.seat, -0.26, 0.905, z, g).rotation.z = 0.12;
-        box(0.09, 0.17, 0.28, M.seat, -0.31, 1.25, z, g);
+      for (const sgn of [-1, 1]) {
+        const z = sgn * B.seatZ;
+        box(0.52, 0.12, 0.5, M.seat, B.seatX + 0.17, F + 0.29, z, g);
+        box(0.1, 0.5, 0.5, M.seat, B.seatX - 0.14, F + 0.575, z, g).rotation.z = 0.12;
+        box(0.09, 0.17, 0.28, M.seat, B.seatX - 0.19, F + 0.92, z, g);
       }
       this.used.seat = '프로시저럴 시트';
-      CARGO_BASE.y = 0.68;
+      CARGO_BASE.y = F + 0.35;
     }
-    box(0.5, 0.12, 1.26, M.seat, -0.85, 0.62, 0, g);                     // 뒷좌석 (간단)
-    box(0.1, 0.5, 1.26, M.seat, -1.17, 0.9, 0, g).rotation.z = 0.12;
-    // 대시보드: 생성 모델은 -Z 가 앞유리 쪽(윗단), +Z 로 센터콘솔이 길게 이어진다 → forward '-z'. 깊이만 절반으로 줄여 카울(x≈1.1)과 핸들 사이에 둔다
-    const dash = lib?.instance?.('dashboard', { forward: '-z' });
-    if (dash) { skin(dash, new THREE.MeshStandardMaterial({ color: 0x1a1c21, roughness: 0.6, metalness: 0.05 })); dash.scale.set(0.5, 1, 1); dash.position.set(0.84, 0.5, 0); g.add(dash); this.used.dashboard = 'dashboard.glb'; }
-    else { box(0.32, 0.24, 1.46, M.dark, 0.90, 0.86, 0, g); this.used.dashboard = '프로시저럴 대시보드'; }
+    const rearSeatW = 2 * (this._half(-0.235 * L, F + 0.8, 0.345 * B.W) - 0.05);
+    box(0.5, 0.12, rearSeatW, M.seat, -0.17 * L, F + 0.29, 0, g);                                           // 뒷좌석 (간단)
+    box(0.1, 0.5, rearSeatW, M.seat, -0.235 * L, F + 0.57, 0, g).rotation.z = 0.12;
+    // 대시보드: 생성 모델은 -Z 가 앞유리 쪽(윗단), +Z 로 센터콘솔이 길게 이어진다 → forward '-z'. 깊이 절반, 폭은 카울 안쪽 실측
+    const dashSpec = B.dashboard && lib?.models?.has(B.dashboard.id) ? B.dashboard : { id: 'dashboard', forward: '-z' };
+    const dash = lib?.instance?.(dashSpec.id, { forward: dashSpec.forward });
+    const dashW = 2 * (this._half(B.cowlX - 0.25, F + 0.6, 0.4 * B.W) - 0.05);
+    if (dash) { skin(dash, new THREE.MeshStandardMaterial({ color: B.dash ?? 0x1a1c21, roughness: 0.6, metalness: 0.05 })); dash.scale.set(0.5, 1, dashW / 1.46); dash.position.set(B.cowlX - 0.26, F + 0.17, 0); g.add(dash); this.used.dashboard = `${dashSpec.id}.glb`; }
+    else { box(0.32, 0.24, dashW, M.dark, B.cowlX - 0.2, F + 0.53, 0, g); this.used.dashboard = '프로시저럴 대시보드'; }
     const pivot = new THREE.Group();
-    pivot.position.set(0.45, 1.0, -0.42); pivot.rotation.z = 0.35;
+    pivot.position.set(B.cowlX - 0.65, F + 0.67, -B.seatZ); pivot.rotation.z = 0.35;
     this.wheelSpinner = new THREE.Group();
-    const sw = lib?.instance?.('steering_wheel', { forward: '+z' });
-    if (sw) { skin(sw, new THREE.MeshStandardMaterial({ color: 0x15171c, roughness: 0.55, metalness: 0.15 })); sw.rotation.y += Math.PI; sw.position.y = -0.19; this.wheelSpinner.add(sw); this.used.steering = 'steering_wheel.glb'; }
+    const swSpec = B.steering && lib?.models?.has(B.steering.id) ? B.steering : { id: 'steering_wheel', forward: '+z' };
+    const sw = lib?.instance?.(swSpec.id, { forward: swSpec.forward });
+    if (sw) { skin(sw, new THREE.MeshStandardMaterial({ color: 0x15171c, roughness: 0.55, metalness: 0.15 })); sw.rotation.y += Math.PI; sw.position.y = -0.19; this.wheelSpinner.add(sw); this.used.steering = `${swSpec.id}.glb`; }
     else {
       this.wheelSpinner.add(new THREE.Mesh(new THREE.TorusGeometry(0.18, 0.022, 8, 24).rotateY(Math.PI / 2), M.dark));
       box(0.03, 0.3, 0.035, M.rim, 0, 0, 0, this.wheelSpinner); this.used.steering = '프로시저럴 핸들';
     }
     pivot.add(this.wheelSpinner);
     g.add(pivot);
+    /** 캐빈 캠: 운전석 머리 위치(헤드라이너 15 cm 아래)에서 오른쪽 앞(디스플레이·조수석 품목·조수석 창) */
+    this.cabinView = { pos: new THREE.Vector3(B.seatX - 0.08, headY - 0.15, -B.seatZ + 0.02), look: new THREE.Vector3(B.cowlX - 0.55, F + 0.49, 0.2), fov: 80 };
   }
 
   /** 바퀴 4개: 타이어(원통) + 림(디스크·스포크). 위치는 생성 차체의 바퀴 중심 메타가 있으면 그것을 쓴다 */
@@ -274,19 +416,25 @@ export class CarModel {
     let specs = [];
     if (this.wheelMeta && this.wheelMeta.length === 4) {
       // 메타는 GLB 좌표(+z 앞) → 차 로컬(+x 앞): (x, y, z) → (z, y, -x)
-      specs = this.wheelMeta.map((w) => ({ x: w.center[2], y: w.center[1], z: -w.center[0], r: w.radius, w: Math.min(0.26, w.width) }));
+      const halfW = (this.body?.W ?? SEDAN.W) / 2;
+      specs = this.wheelMeta.map((w) => { const wd = Math.min(0.26, w.width), zc = Math.sign(-w.center[0]) * Math.min(Math.abs(w.center[0]), halfW - wd / 2 - 0.012);   // 타이어 바깥면이 차체 밖으로 안 나오게
+        return { x: w.center[2], y: w.center[1], z: zc, r: w.radius, w: wd }; });
     } else {
       for (const x of [AXLE_X, -AXLE_X]) for (const z of [-TRACK_HALF, TRACK_HALF]) specs.push({ x, y: CAR.wheelRadius, z, r: CAR.wheelRadius, w: 0.24 });
     }
     for (const s of specs) {
       const pivot = new THREE.Group(), spin = new THREE.Group();
       const tire = new THREE.Mesh(new THREE.CylinderGeometry(s.r, s.r, s.w, 28).rotateX(Math.PI / 2), M.tire);
-      const rim = new THREE.Mesh(new THREE.CylinderGeometry(s.r * 0.64, s.r * 0.64, s.w * 1.02, 24).rotateX(Math.PI / 2), M.rim);
+      const rr = Math.min(this.body.rimRadius ?? s.r * 0.66, s.r * 0.8), spokes = this.body.spokes ?? 5;
+      const rim = new THREE.Mesh(new THREE.CylinderGeometry(rr, rr, s.w * 1.02, 40).rotateX(Math.PI / 2), M.rimDark);
       spin.add(tire, rim);
-      for (let k = 0; k < 5; k++) {
-        const sp = new THREE.Mesh(new THREE.BoxGeometry(s.r * 0.56, 0.05, s.w * 1.04), M.rim);
-        sp.position.x = s.r * 0.3; sp.rotation.z = (k / 5) * Math.PI * 2;
-        const h = new THREE.Group(); h.rotation.z = (k / 5) * Math.PI * 2; sp.position.set(s.r * 0.3, 0, 0); sp.rotation.z = 0; h.add(sp); spin.add(h);
+      for (let k = 0; k < spokes; k++) {
+        const sp = new THREE.Mesh(new THREE.BoxGeometry(rr * 0.67, spokes > 5 ? 0.018 : 0.05, s.w * 1.04), M.rim);
+        const h = new THREE.Group(); h.rotation.z = (k / spokes) * Math.PI * 2; sp.position.set(rr * 0.62, 0, 0); h.add(sp); spin.add(h);
+      }
+      if (this.body.rimRadius) for (const side of [-1, 1]) {
+        const lip = new THREE.Mesh(new THREE.TorusGeometry(rr, 0.006, 6, 40), M.rim);
+        lip.position.z = side * s.w * 0.525; spin.add(lip);
       }
       tire.castShadow = true;
       pivot.position.set(s.x, s.y, s.z);
@@ -357,10 +505,11 @@ export class CarModel {
     this.dispTex = new THREE.CanvasTexture(this.dispCanvas);
     this.dispTex.colorSpace = THREE.SRGBColorSpace;
     const panel = new THREE.Mesh(new THREE.PlaneGeometry(0.56, 0.175), new THREE.MeshBasicMaterial({ map: this.dispTex, toneMapped: false }));
-    panel.position.set(0.90, 0.88, 0.1);                               // 대시보드 윗단 뒷면(x≈0.915)에 붙은 와이드 디스플레이
+    const B = this.body, px = B.cowlX - 0.2, py = B.floor + 0.55;
+    panel.position.set(px, py, 0.1);                                   // 대시보드 윗단 뒷면에 붙은 와이드 디스플레이
     panel.rotation.y = -Math.PI / 2;
     this.group.add(panel);
-    const bezel = box(0.015, 0.21, 0.62, this.mats.dark, 0.908, 0.88, 0.1, this.group);
+    const bezel = box(0.015, 0.21, 0.62, this.mats.dark, px + 0.008, py, 0.1, this.group);
     bezel.renderOrder = -1;
   }
 

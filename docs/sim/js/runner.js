@@ -78,7 +78,8 @@ export class Runner {
     this.car.group.updateMatrixWorld();
     const m = this.car.group.matrixWorld;
     if (dbgView) { this.chaseCam.position.fromArray(dbgView.pos).applyMatrix4(m); this.chaseCam.lookAt(new THREE.Vector3().fromArray(dbgView.look).applyMatrix4(m)); }
-    this.cabinCam.position.copy(CABIN_VIEW.pos).applyMatrix4(m);
-    this.cabinCam.lookAt(CABIN_VIEW.look.clone().applyMatrix4(m));
+    const cv = this.car.cabinView ?? CABIN_VIEW;                 // 차체마다 실측한 운전자 눈 위치
+    this.cabinCam.position.copy(cv.pos).applyMatrix4(m);
+    this.cabinCam.lookAt(cv.look.clone().applyMatrix4(m));
   }
 }

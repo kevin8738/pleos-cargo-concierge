@@ -98,7 +98,7 @@ export const PROBE_GENERATED = false;
 
 /** 이미지→3D 로 만들 예정인 생성 에셋 id (assets/glb/<id>.glb). 없으면 각자 대체물로 폴백 */
 export const GENERATED_IDS = [
-  'sedan', 'sedan_body', 'car_seat', 'steering_wheel', 'dashboard',
+  'ioniq5_t2', 'ioniq5_body', 'ioniq5_dashboard', 'ioniq5_steering', 'sedan_body', 'car_seat', 'steering_wheel', 'dashboard',
   'cake_box', 'tteokbokki_bag', 'bouquet', 'grocery_bag', 'coffee_carrier', 'pet_carrier',
   'watermelon_net', 'laptop_box', 'pottery_vase', 'cake_slice_box',
 ];
@@ -106,11 +106,15 @@ export const GENERATED_IDS = [
 /** 실제 크기 표 (m). 생성 GLB 는 보통 단위 정규화돼 나오므로, manifest 에 실측 치수(real_size_m)가 없거나
  *  size_m 이 이 값과 2배 이상 다르면 이 표로 자동 스케일한다. axis: 'len' 수평 최장 변, 'h' 높이, 'max' 3축 최장 */
 export const REAL_SIZE = {
+  ioniq5_t2: { axis: 'len', m: 4.635 },     // 현대 아이오닉 5 — TRELLIS.2 텍스처 차체 (바퀴 제거, 실측 저장)
+  ioniq5_body: { axis: 'len', m: 4.635 },   // 현대 아이오닉 5: 4.635 × 1.89 × 1.605 m, 축거 3.0 (바퀴 제거 차체, 실측 저장)
   sedan: { axis: 'len', m: 4.99 },          // 4.99 × 1.88 × 1.46 m 대형 세단
   sedan_body: { axis: 'len', m: 4.99 },     // 바퀴 제거 차체(파트 노드), 실측 저장
   car_seat: { axis: 'h', m: 0.98 },        // 바닥(0.33)부터 헤드레스트 꼭대기까지 — 지붕 안쪽(1.40) 아래
   steering_wheel: { axis: 'max', m: 0.38 },
   dashboard: { axis: 'len', m: 1.46 },      // A필러 사이 실내 폭에 맞춤 (생성 차체 실측 1.46 m)
+  ioniq5_dashboard: { axis: 'len', m: 1.46 }, // 아이오닉 5 대시보드(듀얼 12.3인치) — 폭은 카울 안쪽 실측으로 다시 맞춘다
+  ioniq5_steering: { axis: 'max', m: 0.38 },
   cake_box: { axis: 'len', m: 0.25 },       // 스펙: 케이크 상자 한 변 0.25 m
   cake_slice_box: { axis: 'len', m: 0.14 },
   tteokbokki_bag: { axis: 'h', m: 0.32 },
@@ -138,7 +142,25 @@ export const VIP_ASSETS = {
   luggage: ['ph:cardboard_box_01'],
 };
 
-/** 세단 치수 (차 로컬 +X = 앞, +Z = 조수석). 축거 2.9 m 는 물리와 같다 */
+/** 차체 에셋 후보 (앞에서부터 있는 것을 쓴다)와, 레이캐스트로 실측할 수 없는 실내 기준값.
+ *  L/W/H 실측(m), floor 실내 바닥 높이, cowlX 앞유리 아랫선(카울) x, seatX/seatZ 앞좌석 위치, paint 도장색 */
+export const BODIES = {
+  ioniq5_t2: { label: '현대 아이오닉 5 (TRELLIS.2 텍스처)', L: 4.635, W: 1.89, H: 1.605, floor: 0.47, cowlX: 1.25, seatX: 0.0, seatZ: 0.40, paint: 0xffffff, paintName: 'PBR 텍스처(Cyber Gray)',
+    seat: 0x8c8e93, trim: 0x3b3e44, carpet: 0x2a2c31, dash: 0x9a9ca1, seatPbr: 'leather_white', textured: true, nativeMirrors: true,
+    pbr: { clearcoat: 0.2, envIntensity: 0.35, metalnessScale: 0.6 }, rimRadius: 0.254, spokes: 20,
+    dashboard: { id: 'ioniq5_dashboard', forward: '-z' }, steering: { id: 'ioniq5_steering', forward: '+z' },
+    pixels: { size: 0.040, pitch: 0.050, frontY: 0.80, frontZ: 0.60, rearY: 1.02, rearZ: 0.56, frames: true, bands: false, flat: true, rearCols: 7 } }, // Astra max QA + 외피 레이 검증: 램프군 정렬, 생성 미러 유지
+  ioniq5_body: { label: '현대 아이오닉 5', L: 4.635, W: 1.89, H: 1.605, floor: 0.47, cowlX: 1.25, seatX: 0.0, seatZ: 0.40, paint: 0x8e9194, paintName: 'Cyber Gray Metallic',
+    seat: 0x8c8e93, trim: 0x3b3e44, carpet: 0x2a2c31, dash: 0x9a9ca1,         // 밝은 회색 투톤 실내
+    dashboard: { id: 'ioniq5_dashboard', forward: '-z' }, steering: { id: 'ioniq5_steering', forward: '+z' },      // 전용 생성 모델(없으면 공용으로 폴백)
+    seatPbr: 'leather_white',                                                                                   // 밝은 가죽 시트
+    pixels: { size: 0.055, frontY: 0.80, frontZ: 0.62, rearY: 0.93, rearZ: 0.66, frames: true, bands: true } },   // 파라메트릭 픽셀 등화 — Astra QA: 앞은 프레임형 DRL 2개/측 + 검정 밴드, 뒤 2×6 + 얇고 어두운 연결 바
+  sedan_body: { label: '일반형 대형 세단', L: 4.99, W: 1.88, H: 1.46, floor: 0.33, cowlX: 1.1, seatX: -0.12, seatZ: 0.42, paint: 0x1f3566, paintName: 'Navy',
+    seat: 0x1b1d23, trim: 0x1b1e24, carpet: 0x15171b, dash: 0x1a1c21 },
+};
+export const BODY_ORDER = ['ioniq5_t2', 'ioniq5_body', 'sedan_body'];
+
+/** 세단 치수 (차 로컬 +X = 앞, +Z = 조수석). 축거 2.9 m 는 물리와 같다 (프로시저럴 폴백용) */
 export const SEDAN = { L: 4.99, W: 1.88, H: 1.46, nose: 2.45, tail: -2.54, axle: 1.45, track: 0.81 };
 
 /** 도로 단면 (주행선 기준 좌우 오프셋, m). 7 m 2차로 + 0.25 m 측구, 연석 0.15 m, 보도 2.5 m */

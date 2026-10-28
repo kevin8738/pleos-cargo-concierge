@@ -21,7 +21,7 @@ const KEYMAP = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight
 /** 렌더 레이어: 1 = A(단독 주행도 이 차), 2 = B(비교 전용), 3 = 지도 오버레이 */
 const LAYER = { A: 1, B: 2, MAP: 3 };
 /** world.js 가 쓰는 PBR 세트·Poly Haven 모델 */
-const PBR_SETS = ['asphalt_02', 'asphalt_04', 'road_damaged_clean', 'brushed_concrete', 'concrete_floor_02', 'rectangular_paving', 'brick_4', 'painted_metal_shutter', 'fabric_leather_01'];
+const PBR_SETS = ['asphalt_02', 'asphalt_04', 'road_damaged_clean', 'brushed_concrete', 'concrete_floor_02', 'rectangular_paving', 'brick_4', 'painted_metal_shutter', 'fabric_leather_01', 'leather_white'];
 const WORLD_MODELS = ['street_lamp_01', 'street_lamp_02', 'modular_urban_apartments_facade', 'modular_factory_facade', 'modular_electricity_poles',
   'modular_street_seating', 'korean_public_payphone_01', 'fire_hydrant', 'utility_box_01', 'concrete_road_barrier', 'water_manhole_cover', 'trashbag',
   'standing_chalkboard_01', 'outdoor_table_chair_set_01', 'croissant', 'hamburger_buns', 'strawberry_chocolate_cake', 'carrot_cake', 'potted_plant_01',
