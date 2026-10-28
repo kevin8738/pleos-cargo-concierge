@@ -92,3 +92,37 @@ dd.warn { color: var(--champ); } dd.bad { color: var(--red); font-weight: 700; }
 #loading .bar { height: 8px; background: #18212c; border-radius: 4px; overflow: hidden; margin: 12px 0; }
 #loading #load-bar { height: 100%; width: 0; background: var(--mint); transition: width 0.15s linear; }
 #loading .err { color: var(--red); white-space: pre-wrap; }
+
+/* v2.1: 좌우 동시 비교 */
+#split { position: fixed; inset: 0; pointer-events: none; display: none; }
+body.split #split { display: block; }
+body.split #panel-tele, body.split #display, body.split #foot { display: none !important; }
+#split-divider { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: rgba(230, 237, 243, 0.4); box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+body.map #split-divider { display: none; }
+#split-gap { position: absolute; left: 50%; top: 14px; transform: translateX(-50%); padding: 5px 14px; border-radius: 999px; background: var(--panel);
+  border: 1px solid var(--line); color: var(--text); font-size: 12.5px; white-space: nowrap; font-variant-numeric: tabular-nums; backdrop-filter: blur(6px); }
+.side-tag { position: absolute; top: 52px; padding: 5px 12px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); color: var(--dim); font-size: 12.5px; white-space: nowrap; }
+.side-tag b { color: var(--champ); font-size: 14px; margin-right: 4px; }
+.side-tag.side-L { right: calc(50% + 10px); } .side-tag.side-R { left: calc(50% + 10px); }
+.side-tag { display: none; }                                   /* 이름표는 패널 머리글에 합침 */
+.side { position: absolute; top: 54px; width: min(272px, calc(50vw - 20px)); padding: 9px 11px; }   /* 위쪽(하늘·건물 윗부분)에 두어 아래 차·도로를 가리지 않는다 */
+.side.side-L { right: calc(50% + 8px); } .side.side-R { left: calc(50% + 8px); }
+.side .s-label b { color: var(--champ); font-size: 13px; margin-right: 4px; }
+.side .s-head { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 2px; }
+.side .s-label { color: var(--dim); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.side .badge { padding: 3px 10px; font-size: 11.5px; flex-shrink: 0; }
+.side .s-main { display: flex; align-items: center; gap: 10px; }
+.side .speed { font-size: 30px; margin: 0; min-width: 96px; }
+.side .s-g { flex: 1; }
+.side .s-gfill { height: 100%; width: 0; background: var(--mint); transition: width 0.06s linear; }
+.side .s-gfill.near { background: var(--champ); } .side .s-gfill.over { background: var(--red); }
+.side dl.s-stats { margin: 4px 0 2px; }
+.side .bubble { margin: 5px 0; padding: 6px 10px; min-height: 34px; font-size: 13.5px; }
+.side .s-log { list-style: none; margin: 0; padding: 0; font-size: 11px; color: var(--dim); min-height: 48px; }
+.side .s-log li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 16px; }
+.side .s-log li:first-child { color: var(--text); }
+.side .s-log time { color: var(--mint); margin-right: 5px; font-variant-numeric: tabular-nums; }
+.side-done { position: absolute; top: 40%; padding: 10px 16px; border-radius: 14px; background: rgba(11, 15, 20, 0.9); border: 1px solid var(--mint);
+  font-size: 16px; color: var(--text); white-space: nowrap; transform: translate(-50%, -50%); }
+.side-done.side-L { left: 25%; } .side-done.side-R { left: 75%; }
+.side-done b { color: var(--mint); margin-right: 6px; } .side-done .good { color: var(--mint); font-weight: 700; } .side-done .bad { color: var(--red); font-weight: 700; }

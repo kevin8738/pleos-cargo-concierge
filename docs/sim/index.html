@@ -14,6 +14,8 @@
 </head>
 <body>
   <canvas id="scene"></canvas>
+  <!-- 좌우 동시 비교: 가운데 구분선·격차 칩, 반쪽 HUD 는 split.js 가 넣는다 -->
+  <div id="split"><div id="split-divider"></div><div id="split-gap">같은 자리에서 동시에 출발</div></div>
   <div id="loading"><div class="box"><h2>VIP 조수석 — 3D 주행 시뮬레이션</h2><p id="load-txt">에셋 불러오는 중…</p>
     <div class="bar"><div id="load-bar"></div></div>
     <p class="sub">실제 에셋 · Poly Haven CC0 모델·야간 HDRI·PBR 텍스처 + 자체 생성 3D(세단·시트·핸들·대시보드·VIP 품목) · Three.js 0.160</p></div></div>
@@ -27,7 +29,7 @@
       <button data-mode="C"><b>C · 직접</b><small>운전</small></button>
     </div>
     <div class="row"><label for="category">VIP 분류</label><select id="category"></select></div>
-    <div class="row"><button id="btn-compare" class="accent">비교 시작 (A → B)</button><button id="btn-reset">리셋 (R)</button></div>
+    <div class="row"><button id="btn-compare" class="accent">비교 시작 (좌 A · 우 B 동시)</button><button id="btn-reset">리셋 (R)</button></div>
     <div class="row small"><span class="lbl">카메라</span><button data-cam="1">1 체이스</button><button data-cam="2">2 캐빈</button><button data-cam="3">3 지도</button></div>
     <div class="row small"><span class="lbl">배속</span><button data-speed="1">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button></div>
     <p id="hint"></p>

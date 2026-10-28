@@ -211,8 +211,8 @@ class Chunks {
     this.stats = { chunks: this.map.size, draws, instances };
   }
   /** 먼 청크 숨김 (안개 + 원경 실루엣이 대신) */
-  update(cam) {
-    for (const ch of this.map.values()) ch.group.visible = ch.center.distanceTo(cam) < RENDER.chunkCull + ch.radius;
+  update(cams) {   // 카메라가 여럿(좌우 비교)이면 어느 한 쪽에라도 가까운 청크는 보인다
+    for (const ch of this.map.values()) ch.group.visible = cams.some((c) => ch.center.distanceTo(c) < RENDER.chunkCull + ch.radius);
   }
 }
 
@@ -430,14 +430,24 @@ function buildLamps(ctx) {
 
 const _order = [], _m = new THREE.Matrix4(), _c = new THREE.Color(), _v = new THREE.Vector3(), _v2 = new THREE.Vector3();
 /** 가로등 갱신: 가까운 6개에 SpotLight, 웅덩이 데칼은 실제 조명이 붙은 만큼 줄이고, 반사 줄기 배치 */
-function updateLamps(L, focus, cam, mapMode) {
+function updateLamps(L, focuses, cam, mapMode) {
   const { heads, lights, pools, poolColor, streaks } = L;
-  _order.length = 0;
-  for (let i = 0; i < heads.length; i++) _order.push([heads[i].distanceToSquared(focus), i]);
-  _order.sort((a, b) => a[0] - b[0]);
+  // 초점(차)마다 가까운 순서. 초점이 둘(좌우 비교)이면 번갈아 배정해 각 차 주변에 절반씩 실제 광원이 붙는다
+  const orders = focuses.map((f) => { const o = []; for (let i = 0; i < heads.length; i++) o.push([heads[i].distanceToSquared(f), i]); o.sort((a, b) => a[0] - b[0]); return o; });
+  _order.length = 0; for (const e of orders[0]) _order.push(e);
+  const picks = [], used = new Set(), ptr = orders.map(() => 0);
+  while (picks.length < lights.length) {
+    let progressed = false;
+    for (let f = 0; f < orders.length && picks.length < lights.length; f++) {
+      while (ptr[f] < orders[f].length && used.has(orders[f][ptr[f]][1])) ptr[f]++;
+      if (ptr[f] < orders[f].length) { const e = orders[f][ptr[f]++]; used.add(e[1]); picks.push(e); progressed = true; }
+    }
+    if (!progressed) break;
+  }
   for (let i = 0; i < heads.length; i++) pools.setColorAt(i, poolColor);
   lights.forEach((l, k) => {
-    const [d2, i] = _order[k], d = Math.sqrt(d2), w = mapMode ? 0 : THREE.MathUtils.clamp((52 - d) / 14, 0, 1);
+    if (!picks[k]) { l.intensity = 0; return; }
+    const [d2, i] = picks[k], d = Math.sqrt(d2), w = mapMode ? 0 : THREE.MathUtils.clamp((52 - d) / 14, 0, 1);
     const hp = heads[i];
     l.position.set(hp.x, hp.y - 0.05, hp.z);
     l.target.position.set(hp.x, 0, hp.z);
@@ -537,13 +547,14 @@ function buildTrees(ctx) {
   return { spots: spotsT, near, far, timer: 0, zero: new THREE.Matrix4().makeScale(0, 0, 0), nearSet: new Set() };
 }
 
-function updateTrees(T, cam, dt, mapMode) {
+function updateTrees(T, cams, dt, mapMode) {
   if (!T) return;
   if ((T.timer -= dt) > 0) return;
   T.timer = 0.25;
   const cand = [];
   if (!mapMode) for (let i = 0; i < T.spots.length; i++) {
-    const d = T.spots[i].pos.distanceToSquared(cam);
+    let d = Infinity;
+    for (const c of cams) d = Math.min(d, T.spots[i].pos.distanceToSquared(c));   // 어느 카메라에든 가까우면 3D 가로수
     if (d < RENDER.nearTreeDist ** 2) cand.push([d, i]);
   }
   cand.sort((a, b) => a[0] - b[0]);
@@ -1087,16 +1098,17 @@ export function buildWorld(scene, track, lib, renderer) {
   chunks.finalize();
 
   let mapMode = false;
-  const camPos = new THREE.Vector3();
+  const camPos = [];
   return {
     fog,
     stats: { buildings: ctx.buildingCount ?? 0, chunks: chunks.stats, props: ctx.propCounts, backdrop: ctx.backdropCount, trees: trees?.spots.length ?? 0, lamps: lamps.heads.length },
-    /** 매 프레임: 청크 컬링, 가로등 풀, 가로수 LOD */
-    update(camera, focus, dt) {
-      camPos.copy(camera.position);
-      if (!mapMode) chunks.update(camPos);
-      updateLamps(lamps, focus, camPos, mapMode);
-      updateTrees(trees, camPos, dt, mapMode);
+    /** 매 프레임: 청크 컬링, 가로등 풀, 가로수 LOD. cameras/focuses 는 배열(좌우 비교면 2개) 또는 단일 */
+    update(cameras, focuses, dt) {
+      const cams = Array.isArray(cameras) ? cameras : [cameras], foci = Array.isArray(focuses) ? focuses : [focuses];
+      const cp = cams.map((c, i) => (camPos[i] ??= new THREE.Vector3()).copy(c.position));
+      if (!mapMode) chunks.update(cp);
+      updateLamps(lamps, foci, cp[0], mapMode);
+      updateTrees(trees, cp, dt, mapMode);
     },
     /** 지도 모드: 안개·하늘·청크(파사드)·가로등 조명 끔 */
     setMapMode(on) {

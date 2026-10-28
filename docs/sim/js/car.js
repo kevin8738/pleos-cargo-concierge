@@ -93,6 +93,12 @@ export class CarModel {
     this._display();
   }
 
+  /** 렌더 레이어 지정 (좌우 비교에서 차마다 다른 레이어 → 자기 화면에만 보인다). 이후 교체되는 품목에도 적용 */
+  setLayer(n) {
+    this.layer = n;
+    this.group.traverse((o) => o.layers.set(n));
+  }
+
   /** 생성 차체: 파트별 실제 재질. 성공하면 true */
   _bodyGltf(M) {
     const body = this.lib?.instance?.('sedan_body', { forward: '+z' });
@@ -325,6 +331,7 @@ export class CarModel {
     if (!obj) { obj = this._procBox(); used = '프로시저럴 흰 상자'; }
     obj.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; for (const m of [].concat(o.material)) { if (m.isMeshStandardMaterial) { m.envMapIntensity = 0.3; if (m.vertexColors) { m.color.setScalar(0.72); } } } } });   // 가로등 아래서 흰 상자가 타지 않게 (종이 알베도 ≈ 0.7)
     this.itemHolder.add(obj);
+    if (this.layer != null) obj.traverse((o) => o.layers.set(this.layer));
     const h = new THREE.Box3().setFromObject(obj).getSize(new THREE.Vector3()).y;
     this.gauge.position.y = h + 0.08;
     this.used.vip = used;

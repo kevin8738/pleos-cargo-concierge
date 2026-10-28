@@ -61,6 +61,13 @@ export class Hud {
     $('touch').classList.toggle('hidden', !(key === 'C' && matchMedia('(pointer: coarse)').matches));
   }
 
+  /** 좌우 동시 비교 켜기/끄기: body.split 로 반쪽 HUD 표시, 모드 버튼 대신 비교 버튼 강조 */
+  setSplit(on) {
+    document.body.classList.toggle('split', on);
+    $('btn-compare').classList.toggle('on', on);
+    if (on) { this.setActive('mode', '-'); $('hint').textContent = '동시 비교 중 · 왼쪽 A 사람 기준 · 오른쪽 B 분류 기준 · 1/2/3 카메라 · R 다시 비교 · H 패널 숨김'; }
+  }
+
   /** 분류 표시 갱신 */
   setCategory(cat) {
     $('category').value = cat.id;
@@ -175,10 +182,10 @@ export class Hud {
     this.showCard('같은 코스, 두 가지 운전', `
       <p>사람에게 편한 <b>0.40 G</b>로 달리면 조수석 케이크가 망가지고, 케이크 한계 <b>0.15 G</b>의 75 % 이내로 달리면 무사합니다.
       「VIP 조수석」 앱의 추정식으로 같은 코스를 두 번 달려 비교합니다.</p>
-      <ul><li><b>비교 시작</b>: A(사람 기준) → B(케이크 기준) 자동 주행 후 비교 카드</li>
+      <ul><li><b>비교 시작</b>: 왼쪽 A(사람 기준)·오른쪽 B(케이크 기준)가 같은 코스를 <b>동시에</b> 달리고, 둘 다 도착하면 비교 카드</li>
       <li>카메라: <b>1</b> 체이스 · <b>2</b> 캐빈(상자가 밀리는 모습) · <b>3</b> 지도(G 벡터)</li>
       <li><b>C 직접 운전</b>: 방향키 · Space 급제동 · R 리셋 · <b>H</b> 패널 숨김 · <b>F</b> FPS</li></ul>`,
-    { label: '비교 시작 (A → B)', fn: onCompare }, 'A부터 둘러보기 (Esc)');
+    { label: '비교 시작 (좌 A · 우 B)', fn: onCompare }, 'A부터 둘러보기 (Esc)');
   }
 
   /** 한 주행 리포트 */
