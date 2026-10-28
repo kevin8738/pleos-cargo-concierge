@@ -19,7 +19,7 @@ export class Runner {
     this.veh = new Vehicle(); this.gEst = new GEstimator(); this.driver = new AutoDriver(track); this.monitor = new AppMonitor(track);
     this.car = new CarModel(lib); this.car.setLayer(layer); scene.add(this.car.group);
     this.chaseCam = new THREE.PerspectiveCamera(CHASE.fov, 1, 0.3, 4000);
-    this.cabinCam = new THREE.PerspectiveCamera(CABIN_VIEW.fov, 1, 0.05, 4000);
+    this.cabinCam = new THREE.PerspectiveCamera((this.car.cabinView ?? CABIN_VIEW).fov, 1, 0.05, 4000);
     for (const c of [this.chaseCam, this.cabinCam]) c.layers.enable(layer);
     this.chaseLook = new THREE.Vector3();
   }

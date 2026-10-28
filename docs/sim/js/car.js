@@ -1,7 +1,7 @@
 /**
- * car.js (v2) — 실사형 세단: 이미지→3D 로 만든 차체(assets/dist/sedan_body.glb, 파트 노드 paint/glass/light_front/light_rear/dark)에
- * 실제 재질(클리어코트 도장·틴팅 유리·발광 등화)을 입히고, 바퀴 4개(회전·조향)·전조등 SpotLight·실내(생성 시트·대시보드·핸들)·
- * 조수석 VIP 품목(분류별 생성 GLB)·센터 디스플레이(캔버스)를 조립한다. 생성 GLB 가 없으면 v1.1 의 프로시저럴 세단으로 폴백.
+ * car.js — 공식 사진과 TRELLIS.2 형상을 바탕으로 재구성한 2021 아이오닉 5.
+ * 차체·실내·격자 휠의 재질과 피벗을 유지하고 조향·등화·듀얼 화면·조수석 VIP 품목을 조립한다.
+ * 전용 GLB 가 없으면 기존 생성 차체와 프로시저럴 세단으로 폴백한다.
  * 차는 로컬 +X 방향을 보고, 왼쪽이 -Z(운전석), 오른쪽이 +Z(조수석)이다.
  */
 import * as THREE from 'three';
@@ -49,6 +49,7 @@ function box(w, h, d, mat, x, y, z, parent) {
 /** 메시의 파트 이름: 노드 이름 → 없으면 COLOR_0 첫 정점으로 팔레트 분류 */
 function partName(o) {
   const n = (o.name || o.parent?.name || '').toLowerCase();
+  for (const k of Object.keys(PALETTE)) if (n === k || n.startsWith(`${k}_`)) return k;
   for (const k of Object.keys(PALETTE)) if (n.includes(k)) return k;
   const c = o.geometry.attributes.color;
   if (!c) return 'paint';
@@ -121,7 +122,7 @@ export class CarModel {
     const B = this.body = { id, ...BODIES[id] }, item = this.lib.items?.get(id);
     this.wheelMeta = item?.car_meta?.wheels ?? null;
     M.paint.color.set(B.paint);
-    const body = this.lib.instance(id, { forward: '+z' });
+    const body = B.authored ? this._authoredScene(id) : this.lib.instance(id, { forward: '+z' });
     if (!body) return false;
     this.bodyMeshes = [];
     body.traverse((o) => {
@@ -129,6 +130,18 @@ export class CarModel {
       const part = partName(o);
       this.bodyMeshes.push(o);
       if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals();   // 분할 GLB 에 법선이 없으면 계산 (없으면 검게 보인다)
+      if (B.authored) {
+        for (const mat of [].concat(o.material)) {
+          mat.envMapIntensity = part === 'glass' ? 0.5 : B.pbr.envIntensity;
+          if (part === 'glass' && mat.transparent) mat.depthWrite = false;
+          if (part === 'light_rear') {
+            this.rearLampMaterials ??= new Set(); this.rearLampMaterials.add(mat);
+          }
+        }
+        o.castShadow = part !== 'glass'; o.receiveShadow = false;
+        o.renderOrder = part === 'glass' ? 2 : 0;
+        return;
+      }
       const keepVC = B.photoPaint && (part === 'paint' || part === 'dark') && !!o.geometry.attributes.color;
       if (B.textured && part !== 'glass' && o.material?.map) { // 창면은 별도 투명 재질, 외장은 원본 PBR 유지
         const src = o.material;
@@ -150,12 +163,35 @@ export class CarModel {
     });
     // instance() 는 바닥을 y=0 에 맞추지만, 바퀴를 뺀 차체의 최저점은 타이어 바닥보다 높다 → 원래 전고만큼 올려 지상고 복원
     const fullH = item?.car_meta?.size_m?.[1] ?? B.H;
-    body.position.y = Math.max(0, fullH - (body.userData?.size?.y ?? fullH));
+    body.position.y = B.nativeCoordinates ? 0 : Math.max(0, fullH - (body.userData?.size?.y ?? fullH));
     this.bodyLift = body.position.y;
     this.group.add(body);
     this.roofY = this._surfaceY(-0.06 * B.L, 0) ?? B.H;          // 지붕 실측 (헤드라이너·실내등·눈높이 기준)
-    this.used.body = `${id}.glb — ${B.label}, ${B.paintName} (${B.textured ? 'TRELLIS.2 텍스처 차체' : '이미지→3D 형상 + 규칙 팔레트 → 파트 재질'})`;
+    this.used.body = `${id}.glb — ${B.label}, ${B.paintName} (${B.authored ? '공식 참조 기반 형상·부품 재구성' : B.textured ? 'TRELLIS.2 텍스처 차체' : '이미지→3D 형상 + 규칙 팔레트 → 파트 재질'})`;
     return true;
+  }
+
+  /** Authored assets already share the simulator's metre coordinates and pivots. */
+  _authoredScene(id) {
+    const source = this.lib?.models?.get(id)?.gltf?.scene;
+    if (!source) return null;
+    const obj = source.clone(true);
+    const materials = new Map();
+    obj.traverse(o => {
+      if (!o.isMesh) return;
+      const clone = src => {
+        if (!materials.has(src)) {
+          const mat = src.clone();
+          if (mat.isMeshStandardMaterial) { mat.envMap = this.lib.envMap; mat.envMapIntensity = 0.35; }
+          materials.set(src, mat);
+        }
+        return materials.get(src);
+      };
+      o.material = Array.isArray(o.material) ? o.material.map(clone) : clone(o.material);
+      o.castShadow = ![].concat(o.material).some(m => m.transparent);
+      o.receiveShadow = true;
+    });
+    return obj;
   }
 
   /** 차체 외피 실측: 위에서 내려 쏜 레이가 닿는 높이 / 옆에서 쏜 레이가 닿는 반폭 (차 로컬, 차체가 없으면 null) */
@@ -336,6 +372,7 @@ export class CarModel {
   /** 실내: 생성 시트 2개·대시보드·핸들 (없으면 간단 모델), 바닥·천장 트림.
    *  치수는 차체를 레이캐스트로 실측한 실내 외피(벨트라인·창턱 반폭, 지붕 높이)에 BODIES 의 바닥 높이·카울 위치·시트 위치를 더해 정한다 */
   _interior(M) {
+    if (this.body.cabin && this._authoredInterior()) return;
     const g = this.group, lib = this.lib, B = this.body, L = B.L, F = B.floor;
     const roof = this.roofY, headY = roof - 0.06;
     const trimXs = B.textured ? [-0.28 * L, -0.14 * L, 0, 0.18 * L] : [-0.05 * L];
@@ -410,6 +447,20 @@ export class CarModel {
     this.cabinView = { pos: new THREE.Vector3(B.seatX - 0.08, headY - 0.15, -B.seatZ + 0.02), look: new THREE.Vector3(B.cowlX - 0.55, F + 0.49, 0.2), fov: 80 };
   }
 
+  _authoredInterior() {
+    const id = this.body.cabin, cabin = this._authoredScene(id);
+    if (!cabin) return false;
+    this.group.add(cabin);
+    const meta = this.lib.items.get(id)?.car_meta ?? {};
+    this.cabinMeta = meta;
+    CARGO_BASE.fromArray(meta.cargo?.position ?? [0.07, 0.725, 0.4]);
+    this.wheelSpinner = cabin.getObjectByName('steering_wheel') ?? new THREE.Group();
+    const cv = meta.cabinView ?? { pos: [-0.1, 1.36, -0.38], look: [0.65, 0.93, 0.22], fov: 80 };
+    this.cabinView = { pos: new THREE.Vector3().fromArray(cv.pos), look: new THREE.Vector3().fromArray(cv.look), fov: cv.fov };
+    this.used.seat = this.used.dashboard = this.used.steering = `${id}.glb — 2021 공식 실내 참조`;
+    return true;
+  }
+
   /** 바퀴 4개: 타이어(원통) + 림(디스크·스포크). 위치는 생성 차체의 바퀴 중심 메타가 있으면 그것을 쓴다 */
   _wheels(M) {
     this.spinners = []; this.frontPivots = [];
@@ -417,13 +468,21 @@ export class CarModel {
     if (this.wheelMeta && this.wheelMeta.length === 4) {
       // 메타는 GLB 좌표(+z 앞) → 차 로컬(+x 앞): (x, y, z) → (z, y, -x)
       const halfW = (this.body?.W ?? SEDAN.W) / 2;
-      specs = this.wheelMeta.map((w) => { const wd = Math.min(0.26, w.width), zc = Math.sign(-w.center[0]) * Math.min(Math.abs(w.center[0]), halfW - wd / 2 - 0.012);   // 타이어 바깥면이 차체 밖으로 안 나오게
+      specs = this.wheelMeta.map((w) => { if (this.body.nativeCoordinates) return { x: w.center[0], y: w.center[1], z: w.center[2], r: w.radius, w: w.width };
+        const wd = Math.min(0.26, w.width), zc = Math.sign(-w.center[0]) * Math.min(Math.abs(w.center[0]), halfW - wd / 2 - 0.012);   // 타이어 바깥면이 차체 밖으로 안 나오게
         return { x: w.center[2], y: w.center[1], z: zc, r: w.radius, w: wd }; });
     } else {
       for (const x of [AXLE_X, -AXLE_X]) for (const z of [-TRACK_HALF, TRACK_HALF]) specs.push({ x, y: CAR.wheelRadius, z, r: CAR.wheelRadius, w: 0.24 });
     }
     for (const s of specs) {
       const pivot = new THREE.Group(), spin = new THREE.Group();
+      const authoredWheel = this.body.wheelAsset && this._authoredScene(this.body.wheelAsset);
+      if (authoredWheel) {
+        if (s.z < 0) authoredWheel.rotation.y = Math.PI;
+        spin.add(authoredWheel); pivot.position.set(s.x, s.y, s.z); pivot.add(spin); this.group.add(pivot);
+        this.spinners.push(spin); if (s.x > 0) this.frontPivots.push(pivot);
+        continue;
+      }
       const tire = new THREE.Mesh(new THREE.CylinderGeometry(s.r, s.r, s.w, 28).rotateX(Math.PI / 2), M.tire);
       const rr = Math.min(this.body.rimRadius ?? s.r * 0.66, s.r * 0.8), spokes = this.body.spokes ?? 5;
       const rim = new THREE.Mesh(new THREE.CylinderGeometry(rr, rr, s.w * 1.02, 40).rotateX(Math.PI / 2), M.rimDark);
@@ -500,11 +559,24 @@ export class CarModel {
 
   /** 센터 디스플레이(가로로 긴 패널) — 캔버스 텍스처로 앱 화면 */
   _display() {
+    const spec = this.cabinMeta?.display;
     this.dispCanvas = document.createElement('canvas');
-    this.dispCanvas.width = 512; this.dispCanvas.height = 160;
+    this.dispCanvas.width = 512; this.dispCanvas.height = spec ? Math.round(512 * spec.height / spec.width) : 160;
     this.dispTex = new THREE.CanvasTexture(this.dispCanvas);
     this.dispTex.colorSpace = THREE.SRGBColorSpace;
-    const panel = new THREE.Mesh(new THREE.PlaneGeometry(0.56, 0.175), new THREE.MeshBasicMaterial({ map: this.dispTex, toneMapped: false }));
+    const panel = new THREE.Mesh(new THREE.PlaneGeometry(spec?.width ?? 0.56, spec?.height ?? 0.175), new THREE.MeshBasicMaterial({ map: this.dispTex, toneMapped: false }));
+    if (spec) {
+      this._placeDisplay(panel, spec);
+      const cluster = this.cabinMeta.instrumentDisplay;
+      if (cluster) {
+        this.clusterCanvas = document.createElement('canvas'); this.clusterCanvas.width = 512;
+        this.clusterCanvas.height = Math.round(512 * cluster.height / cluster.width);
+        this.clusterTex = new THREE.CanvasTexture(this.clusterCanvas); this.clusterTex.colorSpace = THREE.SRGBColorSpace;
+        const screen = new THREE.Mesh(new THREE.PlaneGeometry(cluster.width, cluster.height), new THREE.MeshBasicMaterial({ map: this.clusterTex, toneMapped: false }));
+        this._placeDisplay(screen, { ...cluster, position: cluster.position ?? cluster.center });
+      }
+      return;
+    }
     const B = this.body, px = B.cowlX - 0.2, py = B.floor + 0.55;
     panel.position.set(px, py, 0.1);                                   // 대시보드 윗단 뒷면에 붙은 와이드 디스플레이
     panel.rotation.y = -Math.PI / 2;
@@ -513,10 +585,30 @@ export class CarModel {
     bezel.renderOrder = -1;
   }
 
+  _placeDisplay(panel, spec) {
+    const n = new THREE.Vector3().fromArray(spec.normal).normalize();
+    const up = new THREE.Vector3().fromArray(spec.up ?? [0, 1, 0]).normalize();
+    const right = new THREE.Vector3().crossVectors(up, n).normalize();
+    up.crossVectors(n, right).normalize();
+    panel.position.fromArray(spec.position).addScaledVector(n, 0.002);
+    panel.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(right, up, n));
+    this.group.add(panel);
+  }
+
   drawDisplay(badge, totalG, limit, msg) {
-    const c = this.dispCanvas.getContext('2d'), W = 512, H = 160;
+    const c = this.dispCanvas.getContext('2d'), W = this.dispCanvas.width, H = this.dispCanvas.height;
     const col = badge === 'OVER' ? COLORS.red : badge === 'NEAR' ? COLORS.champ : COLORS.mint;
     c.fillStyle = COLORS.bg; c.fillRect(0, 0, W, H);
+    if (this.cabinMeta) {
+      c.save(); c.scale(1, H / 240);
+      c.textAlign = 'left'; c.textBaseline = 'middle'; c.fillStyle = COLORS.text; c.font = `600 25px ${FONT}`; c.fillText('VIP 조수석', 24, 30);
+      c.fillStyle = col; c.font = `bold 27px ${FONT}`; c.fillText(badge, 24, 79);
+      c.font = `bold 62px ${FONT}`; c.fillStyle = COLORS.text; c.fillText(`${totalG.toFixed(2)} G`, 170, 104);
+      c.font = `23px ${FONT}`; c.fillStyle = COLORS.dim; c.fillText(`한계 ${limit.toFixed(2)} G`, 170, 151);
+      c.fillStyle = COLORS.champ; c.font = `23px ${FONT}`; let text = msg || '조용히 지켜보는 중';
+      while (text && c.measureText(text).width > W - 48) text = text.slice(0, -1);
+      c.fillText(text, 24, 208); c.restore(); this.dispTex.needsUpdate = true; return;
+    }
     c.fillStyle = col; c.beginPath(); c.roundRect(20, 18, 150, 58, 29); c.fill();
     c.textBaseline = 'middle'; c.textAlign = 'center';
     c.fillStyle = COLORS.bg; c.font = `bold 34px ${FONT}`; c.fillText(badge, 95, 48);
@@ -539,6 +631,17 @@ export class CarModel {
     this.wheelSpinner.rotation.x = -veh.steer * DEG;
     const braking = veh.aLon < BRAKE_LIGHT_ACCEL;
     this.mats.light_rear.emissiveIntensity = braking ? 4.0 : 1.2;
+    for (const mat of this.rearLampMaterials ?? []) mat.emissiveIntensity = braking ? 2.5 : 0.8;
+    if (this.clusterCanvas) {
+      const c = this.clusterCanvas.getContext('2d'), W = this.clusterCanvas.width, H = this.clusterCanvas.height;
+      c.fillStyle = '#e6e9e8'; c.fillRect(0, 0, W, H);
+      c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillStyle = '#253336';
+      c.font = `500 66px ${FONT}`; c.fillText(Math.round(Math.abs(veh.v) * 3.6).toString(), W * 0.32, H * 0.46);
+      c.font = `19px ${FONT}`; c.fillText('km/h', W * 0.32, H * 0.79);
+      c.font = `500 25px ${FONT}`; c.fillText('IONIQ 5', W * 0.75, H * 0.35);
+      c.strokeStyle = '#8aacae'; c.lineWidth = 3; c.beginPath(); c.moveTo(W * 0.59, H * 0.72); c.lineTo(W * 0.91, H * 0.72); c.stroke();
+      this.clusterTex.needsUpdate = true;
+    }
   }
 
   updateCargo(latG, lonG, totalG, dt) {

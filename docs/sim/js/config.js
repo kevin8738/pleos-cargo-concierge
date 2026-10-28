@@ -98,7 +98,7 @@ export const PROBE_GENERATED = false;
 
 /** 이미지→3D 로 만들 예정인 생성 에셋 id (assets/glb/<id>.glb). 없으면 각자 대체물로 폴백 */
 export const GENERATED_IDS = [
-  'ioniq5_t2', 'ioniq5_body', 'ioniq5_dashboard', 'ioniq5_steering', 'sedan_body', 'car_seat', 'steering_wheel', 'dashboard',
+  'ioniq5_2021', 'ioniq5_cabin', 'ioniq5_wheel20', 'ioniq5_t2', 'ioniq5_body', 'ioniq5_dashboard', 'ioniq5_steering', 'sedan_body', 'car_seat', 'steering_wheel', 'dashboard',
   'cake_box', 'tteokbokki_bag', 'bouquet', 'grocery_bag', 'coffee_carrier', 'pet_carrier',
   'watermelon_net', 'laptop_box', 'pottery_vase', 'cake_slice_box',
 ];
@@ -145,6 +145,9 @@ export const VIP_ASSETS = {
 /** 차체 에셋 후보 (앞에서부터 있는 것을 쓴다)와, 레이캐스트로 실측할 수 없는 실내 기준값.
  *  L/W/H 실측(m), floor 실내 바닥 높이, cowlX 앞유리 아랫선(카울) x, seatX/seatZ 앞좌석 위치, paint 도장색 */
 export const BODIES = {
+  ioniq5_2021: { label: '현대 아이오닉 5 (2021)', L: 4.635, W: 1.89, H: 1.605, floor: 0.47, cowlX: 1.10, seatX: 0, seatZ: 0.40,
+    paint: 0xb7b9b8, paintName: '실버 메탈릭', authored: true, nativeCoordinates: true, nativeMirrors: true,
+    cabin: 'ioniq5_cabin', wheelAsset: 'ioniq5_wheel20', pbr: { envIntensity: 0.55 } },
   ioniq5_t2: { label: '현대 아이오닉 5 (TRELLIS.2 텍스처)', L: 4.635, W: 1.89, H: 1.605, floor: 0.47, cowlX: 1.25, seatX: 0.0, seatZ: 0.40, paint: 0xffffff, paintName: 'PBR 텍스처(Cyber Gray)',
     seat: 0x8c8e93, trim: 0x3b3e44, carpet: 0x2a2c31, dash: 0x9a9ca1, seatPbr: 'leather_white', textured: true, nativeMirrors: true,
     pbr: { clearcoat: 0.2, envIntensity: 0.35, metalnessScale: 0.6 }, rimRadius: 0.254, spokes: 20,
@@ -158,7 +161,7 @@ export const BODIES = {
   sedan_body: { label: '일반형 대형 세단', L: 4.99, W: 1.88, H: 1.46, floor: 0.33, cowlX: 1.1, seatX: -0.12, seatZ: 0.42, paint: 0x1f3566, paintName: 'Navy',
     seat: 0x1b1d23, trim: 0x1b1e24, carpet: 0x15171b, dash: 0x1a1c21 },
 };
-export const BODY_ORDER = ['ioniq5_t2', 'ioniq5_body', 'sedan_body'];
+export const BODY_ORDER = ['ioniq5_2021', 'ioniq5_t2', 'ioniq5_body', 'sedan_body'];
 
 /** 세단 치수 (차 로컬 +X = 앞, +Z = 조수석). 축거 2.9 m 는 물리와 같다 (프로시저럴 폴백용) */
 export const SEDAN = { L: 4.99, W: 1.88, H: 1.46, nose: 2.45, tail: -2.54, axle: 1.45, track: 0.81 };

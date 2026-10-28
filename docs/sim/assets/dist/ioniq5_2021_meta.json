@@ -1,0 +1,116 @@
+{
+  "forward": "+x",
+  "coordinate_system": {
+    "forward": "+X",
+    "up": "+Y",
+    "passenger": "+Z"
+  },
+  "native_parts": {
+    "glass": true,
+    "lights": true,
+    "mirrors": true,
+    "wheels": false
+  },
+  "body_wheelless": true,
+  "body_size_m": [
+    4.635,
+    1.605,
+    1.89
+  ],
+  "size_m": [
+    4.635,
+    1.445,
+    2.154
+  ],
+  "roof_y": 1.555,
+  "floor_y": 0.47,
+  "cowl_x": 1.1,
+  "wheel_asset": {
+    "id": "ioniq5_wheel20",
+    "axis": "+z",
+    "radius": 0.36875,
+    "width": 0.255,
+    "includes_tire": true,
+    "centered_at_origin": true,
+    "both_faces_authored": true
+  },
+  "dimensions_m": {
+    "length": 4.635,
+    "width": 1.89,
+    "height": 1.605,
+    "wheelbase": 3.0
+  },
+  "bounds_m": [
+    [
+      -2.3175,
+      0.16,
+      -1.077
+    ],
+    [
+      2.3175,
+      1.605,
+      1.077
+    ]
+  ],
+  "source": {
+    "raw_path": "glb/_t2_ioniq5_official1536.glb",
+    "raw_sha256": "cf848fe6df3b913ac9ac9e52ce0688e7f84a8da9afd81aa9c486f78c353a83b1",
+    "reference_paths": [
+      "refs/ioniq5_official/front_three_quarter_studio.jpg",
+      "refs/ioniq5_official/side_studio.jpg",
+      "refs/ioniq5_official/front_studio.jpg",
+      "refs/ioniq5_official/rear_studio.jpg",
+      "refs/ioniq5_official/wheel_20inch_detail.jpg"
+    ],
+    "raw_contribution": "Bounded broad hood/roof curvature only; clean deterministic manufactured panels replace generated triangles."
+  },
+  "wheels": [
+    {
+      "center": [
+        1.4725,
+        0.36875,
+        -0.814
+      ],
+      "radius": 0.36875,
+      "asset": "ioniq5_wheel20",
+      "width": 0.255,
+      "name": "front_left"
+    },
+    {
+      "center": [
+        1.4725,
+        0.36875,
+        0.814
+      ],
+      "radius": 0.36875,
+      "asset": "ioniq5_wheel20",
+      "width": 0.255,
+      "name": "front_right"
+    },
+    {
+      "center": [
+        -1.5275,
+        0.36875,
+        -0.8185
+      ],
+      "radius": 0.36875,
+      "asset": "ioniq5_wheel20",
+      "width": 0.255,
+      "name": "rear_left"
+    },
+    {
+      "center": [
+        -1.5275,
+        0.36875,
+        0.8185
+      ],
+      "radius": 0.36875,
+      "asset": "ioniq5_wheel20",
+      "width": 0.255,
+      "name": "rear_right"
+    }
+  ],
+  "normals_exported": true,
+  "faces": 213026,
+  "model_type": "reference-constrained reconstruction, not official CAD"
+}
