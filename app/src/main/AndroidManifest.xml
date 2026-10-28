@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Android Automotive OS only (Pleos Connect is AAOS based). -->
+    <uses-feature android:name="android.hardware.type.automotive" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+
+    <!-- Speech input (STT fallback via android.speech.SpeechRecognizer; Pleos STT also records audio). -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!--
+      Stock AAOS car permissions, used by the CarPropertyManager adapter on the standard emulator.
+      protectionLevel (AOSP 14): CAR_SPEED / CAR_POWERTRAIN = dangerous (grant with `adb shell pm grant`),
+      CONTROL_CAR_CLIMATE / CONTROL_CAR_DOORS / CONTROL_CAR_SEATS / READ_CAR_STEERING = signature|privileged
+      (only granted to a priv-app; see demo/README notes). Declaring them is harmless when not granted —
+      the adapter reports PERMISSION_DENIED per feature instead of crashing.
+    -->
+    <uses-permission android:name="android.car.permission.CAR_INFO" />
+    <uses-permission android:name="android.car.permission.CAR_SPEED" />
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" />
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_CLIMATE" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_DOORS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.car.permission.CONTROL_CAR_SEATS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.car.permission.READ_CAR_STEERING" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.car.permission.CAR_DYNAMICS_STATE" tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".CargoApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CargoConcierge">
+
+        <!-- android.car is present on every AAOS build; optional so the APK also installs elsewhere. -->
+        <uses-library android:name="android.car" android:required="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|uiMode|density"
+            android:theme="@style/Theme.CargoConcierge">
+            <!-- Required by AAOS / Pleos review for any app that stays usable while driving.
+                 The driving UI is a static badge only; all interaction is gated on PARKED. -->
+            <meta-data android:name="distractionOptimized" android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          Demo bridge (debug builds only, checked in code): lets `adb shell am broadcast` drive the
+          MockVehicle / demo navi and inject voice text, on any emulator incl. Pleos_Connect_v2.1.
+          See demo/demo_broadcast.sh.
+        -->
+        <receiver
+            android:name=".demo.DemoBroadcastReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="ai.vipseat.cargoconcierge.DEMO" />
+                <action android:name="ai.vipseat.cargoconcierge.VOICE_TEXT" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

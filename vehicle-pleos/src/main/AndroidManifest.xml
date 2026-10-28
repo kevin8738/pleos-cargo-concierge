@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      Pleos Vehicle Service permissions (protectionLevel normal per the official sample manifest;
+      string values verified against ai.pleos.playground.vehicle.constant.PleosPermission in Vehicle-2.3.2.aar).
+      Only the domains this app touches are declared.
+    -->
+    <uses-permission android:name="pleos.car.permission.CAR_DOORS" />
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE" />
+    <uses-permission android:name="pleos.car.permission.CAR_POWERTRAIN" />
+    <uses-permission android:name="pleos.car.permission.CAR_SPEED" />
+    <uses-permission android:name="pleos.car.permission.CAR_INFO" />
+    <uses-permission android:name="pleos.car.permission.CAR_CLIMATE" />
+    <uses-permission android:name="pleos.car.permission.CONTROL_CAR_CLIMATE" />
+    <uses-permission android:name="pleos.car.permission.CAR_SEATS" />
+    <uses-permission android:name="pleos.car.permission.CONTROL_CAR_SEATS" />
+    <uses-permission android:name="pleos.car.permission.READ_CAR_STEERING" />
+
+    <!-- NaviHelper (official sample manifest) -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE_SEARCH" />
+    <uses-permission android:name="pleos.car.permission.NAVI_CUSTOM_ETC" />
+
+    <!-- FusedLocation (runtime permission; constant verified in fused-location-data-0.0.3.aar) -->
+    <uses-permission android:name="pleos.car.permission.FUSED_LOCATION" />
+    <!-- Pleos TTS/STT services (SDK 3.3.1) refuse to initialise without these: "Permission pleos.car.permission.TTS_SERVICE is required" -->
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE" />
+    <uses-permission android:name="pleos.car.permission.STT_SERVICE" />
+
+    <!-- Pleos TTS/STT SDK AARs declare INTERNET themselves (server/hybrid modes). -->
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

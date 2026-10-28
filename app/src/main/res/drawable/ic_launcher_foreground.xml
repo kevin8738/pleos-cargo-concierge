@@ -1,0 +1,103 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M44 41.75L56.5 41.75C60.25 41.75 62.75 44.25 62.75 48L62.75 63 40.25 63 40.25 45.5C40.25 43 41.5 41.75 44 41.75Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="40.25"
+                android:startY="41.75"
+                android:endX="40.25"
+                android:endY="41.75">
+                <item
+                    android:color="#FF9BEAE2"
+                    android:offset="0"/>
+                <item
+                    android:color="#FF4FD1C5"
+                    android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M42.75 34.5c0-2.21 1.79-4 4-4h8.25c2.21 0 4 1.79 4 4v0.75c0 2.21-1.79 4-4 4h-8.25c-2.21 0-4-1.79-4-4z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="83"
+                android:startY="72.25"
+                android:endX="83"
+                android:endY="72.25">
+                <item
+                    android:color="#FF9BEAE2"
+                    android:offset="0"/>
+                <item
+                    android:color="#FF4FD1C5"
+                    android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M35.25 63L67.75 63C70.25 63 72.12 64.88 72.12 67.38L72.12 73 31.5 73 31.5 66.75C31.5 64.25 33.38 63 35.25 63Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="31.5"
+                android:startY="630"
+                android:endX="31.51"
+                android:endY="631">
+                <item
+                    android:color="#FF4FD1C5"
+                    android:offset="0"/>
+                <item
+                    android:color="#FF1FA396"
+                    android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M35.25 74.25c0-0.69 0.56-1.25 1.25-1.25h2.5c0.69 0 1.25 0.56 1.25 1.25v1.25c0 0.69-0.56 1.25-1.25 1.25h-2.5c-0.69 0-1.25-0.56-1.25-1.25z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="66.75"
+                android:startY="703"
+                android:endX="66.76"
+                android:endY="704">
+                <item
+                    android:color="#FF4FD1C5"
+                    android:offset="0"/>
+                <item
+                    android:color="#FF1FA396"
+                    android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M63.38 74.25c0-0.69 0.56-1.25 1.25-1.25h2.5c0.69 0 1.25 0.56 1.25 1.25v1.25c0 0.69-0.56 1.25-1.25 1.25h-2.5c-0.69 0-1.25-0.56-1.25-1.25z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="130.13"
+                android:startY="776"
+                android:endX="130.14"
+                android:endY="777">
+                <item
+                    android:color="#FF4FD1C5"
+                    android:offset="0"/>
+                <item
+                    android:color="#FF1FA396"
+                    android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FFF2D18B"
+        android:pathData="M71.5 31.75C73.15 37.6 73.15 37.6 79 39.25 73.15 40.9 73.15 40.9 71.5 46.75 69.85 40.9 69.85 40.9 64 39.25 69.85 37.6 69.85 37.6 71.5 31.75Z"/>
+    <path
+        android:fillColor="#FFF2D18B"
+        android:pathData="M77.13 26.38C77.89 29.11 77.89 29.11 80.63 29.88 77.89 30.64 77.89 30.64 77.13 33.38 76.36 30.64 76.36 30.64 73.63 29.88 76.36 29.11 76.36 29.11 77.13 26.38Z"/>
+</vector>
