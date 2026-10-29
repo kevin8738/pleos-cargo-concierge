@@ -7,6 +7,7 @@ import ai.vipseat.cargoconcierge.core.model.CargoSpot
 import ai.vipseat.cargoconcierge.core.model.DoorId
 import ai.vipseat.cargoconcierge.core.model.DrivingMode
 import ai.vipseat.cargoconcierge.core.model.Gear
+import ai.vipseat.cargoconcierge.core.model.GQualityReason
 import ai.vipseat.cargoconcierge.core.model.NaviEvent
 import ai.vipseat.cargoconcierge.core.model.TripReport
 import ai.vipseat.cargoconcierge.core.model.TripStats
@@ -250,9 +251,25 @@ class CargoStateMachine(
     // ---------------------------------------------------------------- vehicle signals
 
     private fun onVehicle(signal: VehicleSignal, nowMs: Long, effects: MutableList<Effect>) {
+        // Preserve observed limitations even when the existing freshness/order gate returns early.
+        val invalid = when (signal) {
+            is VehicleSignal.Speed -> !signal.mps.isFinite() || signal.mps < 0.0
+            is VehicleSignal.SteeringAngle -> !signal.degrees.isFinite()
+            is VehicleSignal.BrakePedal -> signal.percent?.let { !it.isFinite() || it !in 0.0..100.0 } == true
+            else -> false
+        }
+        if (invalid) recordQuality(GQualityReason.INVALID_SAMPLE)
+        val previousMotionTime = when (signal) {
+            is VehicleSignal.Speed -> speedReceivedMs
+            is VehicleSignal.SteeringAngle -> steeringReceivedMs
+            is VehicleSignal.BrakePedal -> brakeReceivedMs
+            else -> null
+        }
+        if (previousMotionTime?.let { nowMs < it } == true) recordQuality(GQualityReason.REORDERED_SAMPLE)
         if (signal is VehicleSignal.GearChanged && gearReceivedMs?.let { nowMs < it } == true) return
         if (signal is VehicleSignal.Speed && speedReceivedMs?.let { nowMs <= it } == true) return
         if (signal is VehicleSignal.Speed && !isFresh(speedReceivedMs, nowMs)) {
+            recordObservedGap(nowMs)
             gEstimator.reset()
             (state as? CargoState.Guarding)?.let { state = it.copy(lastEstimate = null) }
         }
@@ -421,7 +438,7 @@ class CargoStateMachine(
 
     private fun onMotion(signal: VehicleSignal, nowMs: Long, effects: MutableList<Effect>) {
         refreshMotionStatus(nowMs)
-        val g = state as? CargoState.Guarding ?: return
+        var g = state as? CargoState.Guarding ?: return
         if (g.motionStatus == MotionSignalStatus.STALE || g.motionStatus == MotionSignalStatus.DISCONNECTED) return
         val speed = snapshot.speedMps ?: return
         val steering = snapshot.steeringDeg.takeIf { isFresh(steeringReceivedMs, nowMs) }
@@ -435,8 +452,23 @@ class CargoStateMachine(
             val lat = steering?.let { gEstimator.lateralG(speed, it) } ?: 0.0
             GEstimate(lateralG = lat, longitudinalG = prevLong, speedMps = speed,
                 lateralAvailable = steering != null,
-                longitudinalAvailable = g.lastEstimate?.longitudinalAvailable == true)
+                longitudinalAvailable = g.lastEstimate?.longitudinalAvailable == true,
+                qualityReasons = g.lastEstimate?.qualityReasons.orEmpty().filterTo(mutableSetOf()) {
+                    it == GQualityReason.INITIAL_BASELINE || it == GQualityReason.SOURCE_HANDOFF
+                })
         }
+        // Include values that contributed to this estimate/baseline, not rejected source events.
+        val usedOrigins = buildSet {
+            add(snapshot.speedProvenance)
+            if (steering != null) add(snapshot.steeringProvenance)
+            if (brake != null && (signal is VehicleSignal.BrakePedal || brakePercent != null)) add(snapshot.brakeProvenance)
+        }
+        g = g.copy(trip = g.trip.copy(
+            motionProvenance = g.trip.motionProvenance + usedOrigins,
+            qualityReasons = g.trip.qualityReasons + estimate.qualityReasons +
+                if (!estimate.totalG.isFinite()) setOf(GQualityReason.INVALID_SAMPLE) else emptySet(),
+        ))
+        state = g
         if (snapshot.isParkedStill) {
             val parked = g.copy(lastEstimate = estimate.takeIf { it.hasData && it.totalG.isFinite() }, badge = BadgeLevel.OK)
             state = parked
@@ -448,9 +480,20 @@ class CargoStateMachine(
             return
         }
         val ratio = estimate.ratioTo(g.preset.limitG)
+        val sampleReasons = buildSet {
+            if (!estimate.lateralAvailable) add(GQualityReason.PARTIAL_AXES)
+            // Initial/source-change baselines are informational; don't condemn every normal startup.
+            if (!estimate.longitudinalAvailable && g.trip.freshLongitudinalSamples > 0 &&
+                GQualityReason.SOURCE_HANDOFF !in estimate.qualityReasons &&
+                GQualityReason.INITIAL_BASELINE !in estimate.qualityReasons) add(GQualityReason.PARTIAL_AXES)
+            // This is the existing prototype policy boundary, not a physical cap or jump detector.
+            if (estimate.totalG >= config.emergencyG) add(GQualityReason.HIGH_G_UNASSESSED)
+        }
         val trip = g.trip.copy(
             maxG = maxOf(g.trip.maxG, estimate.totalG),
             gSamples = g.trip.gSamples + 1,
+            freshLongitudinalSamples = g.trip.freshLongitudinalSamples + if (estimate.longitudinalFresh) 1 else 0,
+            qualityReasons = g.trip.qualityReasons + sampleReasons,
             departedMs = g.trip.departedMs ?: nowMs,
         )
         var next = g.copy(trip = trip, lastEstimate = estimate)
@@ -590,12 +633,17 @@ class CargoStateMachine(
             drivingChimeCount = g.trip.drivingChimeCount,
             audioSuppressionCounts = g.trip.audioSuppressionCounts,
             gSamples = g.trip.gSamples,
+            freshLongitudinalSamples = g.trip.freshLongitudinalSamples,
+            motionProvenance = g.trip.motionProvenance,
+            qualityReasons = g.trip.qualityReasons + if (g.trip.gSamples > 0 && g.trip.freshLongitudinalSamples == 0)
+                setOf(GQualityReason.PARTIAL_AXES) else emptySet(),
         )
         state = CargoState.Arrived(g.preset, report, reason, g.spot)
         effects += Effect.Speak("${g.spot.label} ${g.preset.arrivalNoun} 챙기세요", priority = true)
         effects += Effect.RestoreCabin
         effects += Effect.Chime(ChimeKind.SUCCESS)
         effects += Effect.Log("도착 ($reason) · 최대 ${formatG(report.maxG)}G · 코칭 ${report.coachingCount}회")
+        effects += Effect.Log("보고서 · provenance=${report.motionProvenance.sortedBy { it.name }} · quality=${report.qualityReasons.sortedBy { it.name }} · motionEvents=${report.gSamples} · freshLongitudinalSamples=${report.freshLongitudinalSamples} · ${report.comparisonLabel}")
     }
 
     private fun isFresh(receivedMs: Long?, nowMs: Long): Boolean =
@@ -609,6 +657,7 @@ class CargoStateMachine(
     }
 
     private fun refreshMotionStatus(nowMs: Long) {
+        recordObservedGap(nowMs)
         val g = state as? CargoState.Guarding ?: return
         val status = motionStatus(nowMs)
         val unavailable = status == MotionSignalStatus.STALE || status == MotionSignalStatus.DISCONNECTED
@@ -618,6 +667,19 @@ class CargoStateMachine(
         state = g.copy(motionStatus = status,
             lastEstimate = if (clearEstimate) null else g.lastEstimate,
             badge = if (unavailable) BadgeLevel.OK else g.badge)
+    }
+
+    private fun recordQuality(reason: GQualityReason) {
+        val g = state as? CargoState.Guarding ?: return
+        state = g.copy(trip = g.trip.copy(qualityReasons = g.trip.qualityReasons + reason))
+    }
+
+    private fun recordObservedGap(nowMs: Long) {
+        val g = state as? CargoState.Guarding ?: return
+        if (g.trip.motionProvenance.isEmpty()) return // No prior session input to lose.
+        if (sourceDisconnected || speedReceivedMs?.let { nowMs >= it && nowMs - it > config.motionFreshnessMs } == true) {
+            recordQuality(GQualityReason.INPUT_GAP)
+        }
     }
 
     /** All app-generated driving audio shares this gate, regardless of its originating feature. */

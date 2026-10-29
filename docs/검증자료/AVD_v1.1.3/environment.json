@@ -1,0 +1,34 @@
+{
+  "app": "1.1.3-pleos",
+  "versionCode": 6,
+  "vehicle_sdk": "2.3.2",
+  "vehicle_service": "2.3.22",
+  "vehicle_service_code": 74,
+  "product": "crp_avd_arm64",
+  "api": 34,
+  "serial": "emulator-5554",
+  "port_forward_verified": true,
+  "version": "1.1.3-pleos",
+  "tests": {
+    "core": {
+      "tests": 158,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "mapping": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "test_total": 161,
+  "lint": {
+    "Warning": 33
+  },
+  "release_build": "PASS",
+  "signature_verify": "PASS",
+  "apk_bytes": 47821703,
+  "apk_sha256": "a994a151706c9091562b81b19e35c75b72f6b9b61b403f114ef6e6d26d1d8a84"
+}

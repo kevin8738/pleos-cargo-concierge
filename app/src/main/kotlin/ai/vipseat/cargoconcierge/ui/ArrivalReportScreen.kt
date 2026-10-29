@@ -30,6 +30,12 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ArrivalReportScreen(ui: UiState, state: CargoState.Arrived, vm: CargoViewModel) {
     val r = state.report
+    val reportColor = when {
+        r.gSamples == 0 -> MistDim
+        !r.canCompare -> Champagne
+        r.withinLimit -> Leaf
+        else -> Coral
+    }
     Row(Modifier.fillMaxSize().padding(40.dp), horizontalArrangement = Arrangement.spacedBy(32.dp)) {
         Column(Modifier.weight(1.3f), verticalArrangement = Arrangement.spacedBy(24.dp)) {
             Panel(Modifier.fillMaxWidth()) {
@@ -49,17 +55,19 @@ fun ArrivalReportScreen(ui: UiState, state: CargoState.Arrived, vm: CargoViewMod
                         Spacer(Modifier.width(28.dp))
                         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                                StatTile("최대 추정 G · 기준 ${CargoStateMachine.formatG(r.preset.limitG)}G", if (r.gSamples == 0) "—" else "${CargoStateMachine.formatG(r.maxG)}G", R.drawable.ic_speed, Modifier.weight(1f), if (r.gSamples == 0) MistDim else if (r.withinLimit) Leaf else Coral)
+                                StatTile(if (r.hasSyntheticInput) "모의 입력 최대 추정 G" else "최대 추정 G · 기준 ${CargoStateMachine.formatG(r.preset.limitG)}G", if (r.gSamples == 0) "—" else "${CargoStateMachine.formatG(r.maxG)}G", R.drawable.ic_speed, Modifier.weight(1f), reportColor)
                                 StatTile("평균 설정 온도", r.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", R.drawable.ic_thermo, Modifier.weight(1f))
                                 StatTile("이동 시간", formatDuration(r.durationMs), R.drawable.ic_clock, Modifier.weight(1f))
                             }
                             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                                 StatTile("음성 요청", "${r.coachingCount}회", R.drawable.ic_wave, Modifier.weight(1f))
                                 StatTile("효과음 요청", "${r.warnCount}회", R.drawable.ic_bell, Modifier.weight(1f))
-                                StatTile("추정 기준", if (r.gSamples == 0) "기록 없음" else if (r.withinLimit) "이내" else "초과", R.drawable.ic_shield, Modifier.weight(1f), if (r.gSamples == 0) MistDim else if (r.withinLimit) Leaf else Coral)
+                                StatTile("추정 기준 판정", r.comparisonLabel, R.drawable.ic_shield, Modifier.weight(1f), reportColor)
                             }
                         }
                     }
+                    Spacer(Modifier.height(12.dp))
+                    Text(r.qualitySummary, style = MaterialTheme.typography.bodyMedium, color = MistDim)
                     Spacer(Modifier.height(24.dp))
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         LineIcon(R.drawable.ic_restore, tint = Mint, size = 24.dp)

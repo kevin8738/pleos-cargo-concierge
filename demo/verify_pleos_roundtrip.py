@@ -90,14 +90,14 @@ assert 'versionName=2.3.22' in service and 'versionCode=74 ' in service
 forwards = adb('forward','--list').decode().splitlines()
 assert any(line.split() == [args.serial,'tcp:8088','tcp:8088'] for line in forwards), '8088 must forward to the selected emulator'
 package_info = adb('shell','dumpsys','package',PACKAGE).decode()
-assert 'versionName=1.1.2-pleos' in package_info and 'versionCode=5 ' in package_info
+assert 'versionName=1.1.3-pleos' in package_info and 'versionCode=6 ' in package_info
 before = api('/vehicle/state')
 assert before['gear']['actual']['value'] == 'Park'
 assert all(before['controls'][key] == 0 for key in ('speed_kph','accelerator_pct','brake_pct','steering_deg'))
 assert before['availability']['available'] and before['hvac']['emulator_active'], 'Open official Console in browser'
 args.out.mkdir(parents=True)
 (args.out/'tester-before.json').write_text(json.dumps(before,indent=2)+'\n')
-(args.out/'environment.json').write_text(json.dumps({'app':'1.1.2-pleos','versionCode':5,'vehicle_sdk':'2.3.2','vehicle_service':'2.3.22','vehicle_service_code':74,'product':'crp_avd_arm64','api':34,'serial':args.serial,'port_forward_verified':True},indent=2)+'\n')
+(args.out/'environment.json').write_text(json.dumps({'app':'1.1.3-pleos','versionCode':6,'vehicle_sdk':'2.3.2','vehicle_service':'2.3.22','vehicle_service_code':74,'product':'crp_avd_arm64','api':34,'serial':args.serial,'port_forward_verified':True},indent=2)+'\n')
 results = {}
 try:
     api('/vehicle/hvac?power=true&passenger_temp=22.0','PUT')

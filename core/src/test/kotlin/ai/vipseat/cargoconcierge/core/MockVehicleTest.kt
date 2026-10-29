@@ -14,6 +14,32 @@ import org.junit.Test
 
 class MockVehicleTest {
     @Test
+    fun `every mock motion emission is synthetic including direct injection`() = runTest {
+        val v = MockVehicle()
+        val seen = mutableListOf<VehicleSignal>()
+        val job = launch(start = CoroutineStart.UNDISPATCHED) { v.signals.collect { seen += it } }
+        v.setSpeedMps(1.0)
+        v.setSpeedKph(3.6)
+        v.setSteering(2.0)
+        v.setBrake(false)
+        v.emit(VehicleSignal.Speed(3.0))
+        v.emit(VehicleSignal.SteeringAngle(4.0))
+        v.emit(VehicleSignal.BrakePedal(true, 20.0))
+        testScheduler.runCurrent()
+        assertEquals(7, seen.size)
+        seen.forEach { signal ->
+            val provenance = when (signal) {
+                is VehicleSignal.Speed -> signal.provenance
+                is VehicleSignal.SteeringAngle -> signal.provenance
+                is VehicleSignal.BrakePedal -> signal.provenance
+                else -> error("Expected motion")
+            }
+            assertEquals(ai.vipseat.cargoconcierge.core.model.MotionProvenance.SYNTHETIC, provenance)
+        }
+        job.cancel()
+    }
+
+    @Test
     fun `real-source injection connection emits no synthetic initial vacancy`() = runTest {
         val v = MockVehicle()
         val seen = mutableListOf<VehicleSignal>()

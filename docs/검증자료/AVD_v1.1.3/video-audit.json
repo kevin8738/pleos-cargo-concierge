@@ -1,0 +1,15 @@
+{
+  "duration_seconds": 82.233889,
+  "bytes": 35460679,
+  "width": 2560,
+  "height": 1440,
+  "audio_streams": 0,
+  "screenrecord_data_streams": 2,
+  "sha256": "527a74d19c5279ffce5df3849e832a8bbd214c31455e81aec47a0b6b904e359a",
+  "checks": 9,
+  "cleanup_verified": true,
+  "raw_max_G_displayed": 3.69,
+  "report_synthetic_explicit": true,
+  "high_G_unassessed_explicit": true,
+  "physical_G_accuracy_validated": false
+}

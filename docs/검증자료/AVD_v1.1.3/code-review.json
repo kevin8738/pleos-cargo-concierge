@@ -1,0 +1,28 @@
+{
+  "reviewer": "independent native Codex subagent",
+  "verdict": "PASS",
+  "must_fix_remaining": 0,
+  "fixed_findings": [
+    "preserve known SYNTHETIC when environment tag UNKNOWN",
+    "preserve handoff baseline on sub50ms speed update until first new difference"
+  ],
+  "tests": {
+    "core": 158,
+    "app": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "preserved": [
+    "raw maximum",
+    "badge",
+    "audio policy",
+    "cabin control boundaries"
+  ],
+  "not_verified": [
+    "AVD UI",
+    "release package",
+    "physical G accuracy",
+    "cargo effects"
+  ]
+}

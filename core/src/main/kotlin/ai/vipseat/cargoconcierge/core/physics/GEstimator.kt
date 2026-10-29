@@ -1,5 +1,6 @@
 package ai.vipseat.cargoconcierge.core.physics
 
+import ai.vipseat.cargoconcierge.core.model.GQualityReason
 import kotlin.math.abs
 import kotlin.math.hypot
 import kotlin.math.roundToInt
@@ -12,6 +13,9 @@ data class GEstimate(
     val speedMps: Double,
     val lateralAvailable: Boolean = true,
     val longitudinalAvailable: Boolean = true,
+    /** True only for a new accepted dv/dt, never a cached EMA or brake-only estimate. */
+    val longitudinalFresh: Boolean = false,
+    val qualityReasons: Set<GQualityReason> = emptySet(),
 ) {
     val hasData: Boolean get() = lateralAvailable || longitudinalAvailable
     val totalG: Double get() = hypot(lateralG, longitudinalG)
@@ -47,6 +51,8 @@ class GEstimator(
     private var lastSpeedSourceId: Int? = null
     private var emaLong = 0.0
     private var hasLongEstimate = false
+    /** Retained across sub-minimum-interval samples until a valid new difference is available. */
+    private var pendingBaselineReason: GQualityReason? = null
 
     fun lateralG(speedMps: Double, steeringWheelDeg: Double): Double {
         if (!speedMps.isFinite() || speedMps < 0.0 || !steeringWheelDeg.isFinite()) return 0.0
@@ -65,14 +71,24 @@ class GEstimator(
     ): GEstimate {
         // Invalid samples never move the baseline; ordering and same-source minimum dt are checked below.
         if (!speedMps.isFinite() || speedMps < 0.0) {
-            return GEstimate(0.0, 0.0, lastSpeed ?: 0.0, lateralAvailable = false, longitudinalAvailable = false)
+            return GEstimate(0.0, 0.0, lastSpeed ?: 0.0, lateralAvailable = false, longitudinalAvailable = false,
+                qualityReasons = setOf(GQualityReason.INVALID_SAMPLE))
+        }
+        val reasons = mutableSetOf<GQualityReason>()
+        if (steeringWheelDeg?.isFinite() == false || brakePercent?.let { !it.isFinite() || it !in 0.0..100.0 } == true) {
+            reasons += GQualityReason.INVALID_SAMPLE
         }
         // Fresh sources can disagree by a fixed offset. Their first sample starts a new dv/dt
         // baseline and EMA; steering-based lateral G still uses the current speed below.
         // Reordered samples must not reset an otherwise valid baseline, even across sources.
-        if (sourceId != lastSpeedSourceId && lastTimestampMs?.let { timestampMs > it } == true) reset()
+        if (sourceId != lastSpeedSourceId && lastTimestampMs?.let { timestampMs > it } == true) {
+            reset()
+            pendingBaselineReason = GQualityReason.SOURCE_HANDOFF
+            reasons += GQualityReason.SOURCE_HANDOFF
+        }
         val speed = speedMps
         var aLong = 0.0
+        var longitudinalFresh = false
         val ls = lastSpeed
         val lt = lastTimestampMs
         if (ls != null && lt != null) {
@@ -83,16 +99,29 @@ class GEstimator(
                 speedMps = ls,
                 lateralAvailable = steeringWheelDeg?.isFinite() == true,
                 longitudinalAvailable = hasLongEstimate,
+                qualityReasons = reasons + listOfNotNull(pendingBaselineReason) +
+                    if (dt < 0.0) setOf(GQualityReason.REORDERED_SAMPLE) else emptySet(),
             )
             when {
-                dt > MAX_GAP_S -> { emaLong = 0.0; hasLongEstimate = false } // stale sample: restart smoothing
+                dt > MAX_GAP_S -> {
+                    emaLong = 0.0
+                    hasLongEstimate = false
+                    pendingBaselineReason = null
+                    reasons += GQualityReason.INPUT_GAP
+                }
                 dt >= MIN_DT_S -> {
                     val raw = (speed - ls) / dt
                     emaLong = smoothing * raw + (1 - smoothing) * emaLong
                     hasLongEstimate = true
+                    longitudinalFresh = raw.isFinite() && emaLong.isFinite()
+                    if (!longitudinalFresh) reasons += GQualityReason.INVALID_SAMPLE
+                    else pendingBaselineReason = null
                 }
             }
             aLong = emaLong
+        } else if (GQualityReason.SOURCE_HANDOFF !in reasons) {
+            pendingBaselineReason = GQualityReason.INITIAL_BASELINE
+            reasons += GQualityReason.INITIAL_BASELINE
         }
         lastSpeed = speed
         lastTimestampMs = timestampMs
@@ -104,9 +133,11 @@ class GEstimator(
             if (abs(aBrake) > abs(aLong)) aLong = aBrake
         }
         val lat = if (steeringWheelDeg != null) lateralG(speed, steeringWheelDeg) else 0.0
+        if (!lat.isFinite() || !aLong.isFinite()) reasons += GQualityReason.INVALID_SAMPLE
         return GEstimate(lateralG = lat, longitudinalG = aLong / G, speedMps = speed,
             lateralAvailable = steeringWheelDeg?.isFinite() == true,
-            longitudinalAvailable = hasLongEstimate || hasBrakeEstimate)
+            longitudinalAvailable = hasLongEstimate || hasBrakeEstimate,
+            longitudinalFresh = longitudinalFresh, qualityReasons = reasons)
     }
 
     fun reset() {
@@ -115,6 +146,7 @@ class GEstimator(
         lastSpeedSourceId = null
         emaLong = 0.0
         hasLongEstimate = false
+        pendingBaselineReason = null
     }
 
     companion object {

@@ -7,7 +7,9 @@ import ai.vipseat.cargoconcierge.core.model.CargoSpot
 import ai.vipseat.cargoconcierge.core.model.DoorId
 import ai.vipseat.cargoconcierge.core.model.DrivingMode
 import ai.vipseat.cargoconcierge.core.model.Gear
+import ai.vipseat.cargoconcierge.core.model.MotionProvenance
 import ai.vipseat.cargoconcierge.core.model.VehicleSignal
+import ai.vipseat.cargoconcierge.core.model.withMotionProvenance
 import ai.vipseat.cargoconcierge.core.port.ApplyConsent
 import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
 import ai.vipseat.cargoconcierge.core.port.CabinCapabilities
@@ -179,7 +181,7 @@ class MockVehicle : VehiclePort {
     fun setCabinTemp(c: Double) { cabin = cabin.copy(tempC = c); emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, c)) }
     fun setDrivingMode(m: DrivingMode) = emit(VehicleSignal.DrivingModeChanged(m))
 
-    fun emit(signal: VehicleSignal) { _signals.tryEmit(signal) }
+    fun emit(signal: VehicleSignal) { _signals.tryEmit(signal.withMotionProvenance(MotionProvenance.SYNTHETIC)) }
 
     companion object {
         private val SEAT_FEATURES = setOf(CabinFeature.SEAT_HEATER, CabinFeature.SEAT_VENT)

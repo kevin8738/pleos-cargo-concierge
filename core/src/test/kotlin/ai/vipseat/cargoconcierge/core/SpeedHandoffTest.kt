@@ -7,6 +7,7 @@ import ai.vipseat.cargoconcierge.core.engine.CargoStateMachine
 import ai.vipseat.cargoconcierge.core.engine.Effect
 import ai.vipseat.cargoconcierge.core.model.CargoPreset
 import ai.vipseat.cargoconcierge.core.model.Gear
+import ai.vipseat.cargoconcierge.core.model.GQualityReason
 import ai.vipseat.cargoconcierge.core.model.VehicleSignal
 import ai.vipseat.cargoconcierge.core.physics.GEstimator
 import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
@@ -117,7 +118,7 @@ class SpeedHandoffTest {
 
         val effects = m.speed(arbiter, 1, 8.0, 10_200)
         assertNoDrivingOutput(effects)
-        assertEquals(before.trip, m.guard().trip)
+        assertEquals(before.trip.copy(qualityReasons = before.trip.qualityReasons + GQualityReason.SOURCE_HANDOFF), m.guard().trip)
         assertEquals(before.cabin, m.guard().cabin)
         assertEquals(before.spot, m.guard().spot)
         assertEquals(before.voiceCoachCount, m.guard().voiceCoachCount)

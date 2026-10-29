@@ -5,7 +5,9 @@ import ai.vipseat.cargoconcierge.core.mock.MockVehicle
 import ai.vipseat.cargoconcierge.core.model.CabinPlan
 import ai.vipseat.cargoconcierge.core.model.CargoSpot
 import ai.vipseat.cargoconcierge.core.model.NaviEvent
+import ai.vipseat.cargoconcierge.core.model.MotionProvenance
 import ai.vipseat.cargoconcierge.core.model.VehicleSignal
+import ai.vipseat.cargoconcierge.core.model.withMotionProvenance
 import ai.vipseat.cargoconcierge.core.port.ApplyConsent
 import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
 import ai.vipseat.cargoconcierge.core.port.CabinCapabilities
@@ -14,11 +16,16 @@ import ai.vipseat.cargoconcierge.core.port.RealMotionObserver
 import ai.vipseat.cargoconcierge.core.port.SpeedArbiter
 import ai.vipseat.cargoconcierge.core.port.VehiclePort
 import android.os.SystemClock
+import android.os.Build
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onEach
+
+/** The currently verified official AVD pair only. UNKNOWN never asserts a real vehicle. */
+internal fun vehicleMotionProvenance(product: String, sdkInt: Int): MotionProvenance =
+    if (product == "crp_avd_arm64" && sdkInt == 34) MotionProvenance.SYNTHETIC else MotionProvenance.UNKNOWN
 
 /**
  * Real sources (Pleos SDK, AOSP CarPropertyManager) merged with the scriptable mock. Signals from
@@ -37,6 +44,7 @@ class MergedVehicle(
     private val steeringArbiter = SpeedArbiter.forSources(sources.size)
     private val realMotionArbiter = SpeedArbiter(LongArray(sources.size) { 2_000L })
     private val sourceStatuses = mutableMapOf<Int, VehicleSignal.SourceStatus>()
+    private val platformProvenance = vehicleMotionProvenance(Build.PRODUCT, Build.VERSION.SDK_INT)
 
     override val name: String =
         if (sources.isEmpty()) mock.name else sources.joinToString(" + ") { it.name } + " + demo bridge"
@@ -71,7 +79,7 @@ class MergedVehicle(
                     ).also { combined ->
                         if (!combined.connected) (controlTarget as? RealMotionObserver)?.observeRealMotion(combined, SystemClock.elapsedRealtime())
                     }
-                } else sig
+                } else sig.withMotionProvenance(if (priority == 0) MotionProvenance.SYNTHETIC else platformProvenance)
             }
         }.toTypedArray(),
     )
