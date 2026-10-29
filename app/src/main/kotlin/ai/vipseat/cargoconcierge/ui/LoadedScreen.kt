@@ -63,7 +63,7 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                                 if (state.heldByPassenger) Chip("동승자가 들고 있어요", color = Champagne, icon = R.drawable.ic_seat, modifier = Modifier.align(Alignment.CenterVertically))
                             }
                             Text(
-                                "허용 ${CargoStateMachine.formatG(p.limitG)}G · 급커브 권장 ${GEstimator.recommendedKph(p.limitG)} km/h 이하 · ${p.tagline}",
+                                "추정 코칭 기준 ${CargoStateMachine.formatG(p.limitG)}G · ${p.tagline}",
                                 style = MaterialTheme.typography.bodyLarge, color = MistDim,
                             )
                         }
@@ -81,6 +81,10 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                     } else {
                         FlowChips(cabin.outcomes)
                     }
+                    if (ui.cabinRestorePending) {
+                        Text(ui.cabinNotice ?: "복원 상태 확인 필요", style = MaterialTheme.typography.bodyMedium, color = MistDim)
+                        IconPill(R.drawable.ic_restore, "P 정차 후 복원 다시 확인", onClick = vm::retryRestore)
+                    }
                     Spacer(Modifier.height(24.dp))
                     SectionTitle("분류 바꾸기 · 정차 중에만 · 한계와 공조가 바뀌어요", icon = R.drawable.ic_sliders)
                     ReclassifyRow(p, vm)
@@ -92,7 +96,7 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                         ) {
                             LineIcon(R.drawable.ic_shield, tint = Mint, size = 28.dp)
                             Column {
-                                Text("출발 준비 완료", style = MaterialTheme.typography.titleLarge)
+                                Text("코칭 시작됨 · 설정 결과 확인", style = MaterialTheme.typography.titleLarge)
                                 Text("주행 중에는 배지 하나만 보이고, 안내는 음성으로 해요", style = MaterialTheme.typography.bodyMedium, color = MistDim)
                             }
                         }
@@ -104,9 +108,9 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                 Column {
                     SectionTitle("이번 이동", icon = R.drawable.ic_route)
                     val t = state.trip
-                    StatRow("최대 G", "${CargoStateMachine.formatG(t.maxG)}G", badgeColor(state.badge), icon = R.drawable.ic_speed)
-                    StatRow("경고음 / 음성 코칭", "${t.warnCount}회 / ${t.coachingCount}회", icon = R.drawable.ic_bell)
-                    StatRow("조수석 존 평균 온도", t.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", icon = R.drawable.ic_thermo)
+                    StatRow("최대 추정 G", "${CargoStateMachine.formatG(t.maxG)}G", badgeColor(state.badge), icon = R.drawable.ic_speed)
+                    StatRow("효과음 / 음성 요청", "${t.warnCount}회 / ${t.coachingCount}회", icon = R.drawable.ic_bell)
+                    StatRow("캐빈 평균 온도", t.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", icon = R.drawable.ic_thermo)
                     state.lastEstimate?.let { e ->
                         StatRow("마지막 추정 (횡 / 종)", "${CargoStateMachine.formatG(e.lateralG)} / ${CargoStateMachine.formatG(e.longitudinalG)} G", icon = R.drawable.ic_steering)
                     }

@@ -51,6 +51,7 @@ class CargoSpotTest {
         m.v(VehicleSignal.SeatOccupancy(CargoSpot.REAR_RIGHT, true), 500)
         m.doorCycle(DoorId.REAR_RIGHT, 1_000)
         assertEquals(CargoState.Idle, m.state)
+        m.park(2_000)
         m.doorCycle(DoorId.PASSENGER, 2_000)
         assertEquals(CargoSpot.FRONT_PASSENGER, (m.state as CargoState.Offering).spot)
     }
@@ -80,6 +81,7 @@ class CargoSpotTest {
         m.dispatch(Action.SelectPreset(CargoPreset.HOT_FOOD), 1_000)
         m.v(VehicleSignal.SeatOccupancy(CargoSpot.FRONT_PASSENGER, true), 2_000)
         assertTrue(m.state is CargoState.Guarding)
+        m.park(3_000)
         val fx = m.v(VehicleSignal.SeatOccupancy(CargoSpot.REAR_LEFT, true), 3_000)
         assertEquals(CargoState.Idle, m.state)
         assertTrue(fx.contains(Effect.RestoreCabin))

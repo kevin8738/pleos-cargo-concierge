@@ -10,7 +10,10 @@ data class GEstimate(
     val lateralG: Double,
     val longitudinalG: Double,
     val speedMps: Double,
+    val lateralAvailable: Boolean = true,
+    val longitudinalAvailable: Boolean = true,
 ) {
+    val hasData: Boolean get() = lateralAvailable || longitudinalAvailable
     val totalG: Double get() = hypot(lateralG, longitudinalG)
     fun ratioTo(limitG: Double): Double = if (limitG <= 0.0) 0.0 else totalG / limitG
 }
@@ -24,8 +27,8 @@ data class GEstimate(
  *   κ      = tan(δ_road) / L                              (path curvature, 1/m; L = wheelbase)
  *   a_lat  = v² · κ                                       (m/s²)
  * With L = 2.9 m and ratio 15: 30 km/h and 90° on the wheel → δ_road = 6° → κ = 0.0362 → 0.26 g.
- * The kinematic model ignores tyre slip / understeer, so at higher speed it slightly
- * over-estimates — acceptable for a conservative cargo guard.
+ * The kinematic model ignores tyre slip, banking and vehicle-specific calibration. Its
+ * error and delay have not been validated on a vehicle; this is an estimate, not a safety limit.
  *
  * Longitudinal:
  *   a_long = dv/dt smoothed with an EMA (alpha = [smoothing]).
@@ -42,8 +45,10 @@ class GEstimator(
     private var lastSpeed: Double? = null
     private var lastTimestampMs: Long? = null
     private var emaLong = 0.0
+    private var hasLongEstimate = false
 
     fun lateralG(speedMps: Double, steeringWheelDeg: Double): Double {
+        if (!speedMps.isFinite() || speedMps < 0.0 || !steeringWheelDeg.isFinite()) return 0.0
         val roadWheelRad = Math.toRadians(steeringWheelDeg / steeringRatio)
         val curvature = tan(roadWheelRad) / wheelbaseM
         return abs(speedMps * speedMps * curvature) / G
@@ -56,17 +61,29 @@ class GEstimator(
         brakePercent: Double?,
         timestampMs: Long,
     ): GEstimate {
-        val speed = speedMps.coerceAtLeast(0.0)
+        // Invalid / reordered / too-close samples must not move the derivative baseline.
+        if (!speedMps.isFinite() || speedMps < 0.0) {
+            return GEstimate(0.0, 0.0, lastSpeed ?: 0.0, lateralAvailable = false, longitudinalAvailable = false)
+        }
+        val speed = speedMps
         var aLong = 0.0
         val ls = lastSpeed
         val lt = lastTimestampMs
         if (ls != null && lt != null) {
             val dt = (timestampMs - lt) / 1000.0
+            if (dt < MIN_DT_S) return GEstimate(
+                lateralG = steeringWheelDeg?.let { lateralG(ls, it) } ?: 0.0,
+                longitudinalG = emaLong / G,
+                speedMps = ls,
+                lateralAvailable = steeringWheelDeg?.isFinite() == true,
+                longitudinalAvailable = hasLongEstimate,
+            )
             when {
-                dt > MAX_GAP_S -> emaLong = 0.0 // stale sample: restart smoothing
+                dt > MAX_GAP_S -> { emaLong = 0.0; hasLongEstimate = false } // stale sample: restart smoothing
                 dt >= MIN_DT_S -> {
                     val raw = (speed - ls) / dt
                     emaLong = smoothing * raw + (1 - smoothing) * emaLong
+                    hasLongEstimate = true
                 }
             }
             aLong = emaLong
@@ -74,18 +91,22 @@ class GEstimator(
         lastSpeed = speed
         lastTimestampMs = timestampMs
 
-        if (brakePressed == true && brakePercent != null && brakePercent > 0.0) {
-            val aBrake = -(brakePercent.coerceIn(0.0, 100.0) / 100.0) * maxBrakeDecelMps2
+        val hasBrakeEstimate = brakePressed == true && brakePercent != null && brakePercent.isFinite() && brakePercent > 0.0
+        if (hasBrakeEstimate) {
+            val aBrake = -(brakePercent!!.coerceIn(0.0, 100.0) / 100.0) * maxBrakeDecelMps2
             if (abs(aBrake) > abs(aLong)) aLong = aBrake
         }
         val lat = if (steeringWheelDeg != null) lateralG(speed, steeringWheelDeg) else 0.0
-        return GEstimate(lateralG = lat, longitudinalG = aLong / G, speedMps = speed)
+        return GEstimate(lateralG = lat, longitudinalG = aLong / G, speedMps = speed,
+            lateralAvailable = steeringWheelDeg?.isFinite() == true,
+            longitudinalAvailable = hasLongEstimate || hasBrakeEstimate)
     }
 
     fun reset() {
         lastSpeed = null
         lastTimestampMs = null
         emaLong = 0.0
+        hasLongEstimate = false
     }
 
     companion object {

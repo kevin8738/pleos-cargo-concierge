@@ -65,7 +65,7 @@ private fun HeroCard(ui: UiState, vm: CargoViewModel) {
             Text("${ui.spot.label}에 무엇을 실으셨나요?", style = MaterialTheme.typography.headlineLarge)
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    "문이나 트렁크를 닫으면 차가 먼저 물어봐요. 자리는 오른쪽 차량 그림에서 고르고,\n말로 해도 돼요: “뒷자리에 떡볶이 실었어” — 처음 보는 물건도 등록돼요",
+                    "이미 실었다면 아래 VIP로 바로 시작하세요.\n자리를 고르거나 “조수석에 케이크 실었어”라고 말해요.",
                     style = MaterialTheme.typography.bodyLarge, color = MistDim, modifier = Modifier.weight(1f),
                 )
                 HeroIllustration(Modifier.width(380.dp))
@@ -77,10 +77,15 @@ private fun HeroCard(ui: UiState, vm: CargoViewModel) {
                     tonal = true, enabled = !ui.listening, icon = R.drawable.ic_mic,
                 )
             }
+            ui.cabinNotice?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MistDim) }
+            if (ui.cabinRestorePending) {
+                Text(ui.cabinNotice ?: "복원 상태 확인 필요", style = MaterialTheme.typography.bodyMedium, color = MistDim)
+                IconPill(R.drawable.ic_restore, "P 정차 후 복원 다시 확인", onClick = vm::retryRestore)
+            }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(if (ui.recent.isEmpty()) "추천 VIP" else "최근 VIP", style = MaterialTheme.typography.labelLarge, color = MistDim, modifier = Modifier.padding(top = 10.dp, end = 4.dp))
                 (if (ui.recent.isEmpty()) CargoPreset.SUGGESTIONS else ui.recent.take(6)).forEach { p ->
-                    Chip("${p.displayName} ${p.limitG}G", color = itemColor(p.kind), leading = { PresetGlyph(p, 24.dp) }, modifier = Modifier.clickable { vm.openOffer() })
+                    Chip("${p.displayName} ${p.limitG}G", color = itemColor(p.kind), leading = { PresetGlyph(p, 24.dp) }, modifier = Modifier.clickable { vm.selectPreset(p) })
                 }
             }
         }

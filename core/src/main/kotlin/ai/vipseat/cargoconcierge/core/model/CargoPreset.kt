@@ -63,8 +63,8 @@ data class CabinPlan(
  *  Cabin plans: 18 ℃ is near the lowest setting a cabin HVAC offers (not a fridge — the app says so);
  *  22 ℃ / indirect airflow keeps pets inside the 7–29 ℃ band of USDA 9 CFR §3.15/3.19 and flowers
  *  away from the vent draft that florist/extension guides warn about; seat heater OFF for electronics
- *  follows device ambient limits (Apple: operate 0–35 ℃); the hot-food warmer is capped at level 2 and
- *  45 min because heated-seat surfaces reach 40–48 ℃ in published burn case reports.
+ *  follows device ambient limits (Apple: operate 0–35 ℃). Positive heating requests are withheld by
+ *  CabinCommandPolicy until thermal tests; no duration limit has been validated.
  *  All limits are hypotheses until the 11/1–11/8 measurements (slide/spill onset, box temperature).
  */
 data class CargoPreset(
@@ -97,15 +97,15 @@ data class CargoPreset(
             tagline = "조수석 18℃ · 열선 OFF",
             voiceAliases = listOf("케이크", "케익", "생크림", "조각케이크", "디저트", "마카롱", "타르트", "빙수", "아이스크림케이크"),
         )
-        /** 0.12 g: a wide 1 cm-headspace soup tub spills statically at 0.125 g; warmer level 2, capped (burn case reports: seats reach 40–48 ℃). */
+        /** 0.12 g: a wide 1 cm-headspace soup tub spills statically at 0.125 g; proposed heater level 2 is withheld by the submission policy pending thermal validation. */
         val HOT_FOOD = CargoPreset(
             kind = CargoKind.HOT_FOOD,
             displayName = "뜨거운 음식",
             emoji = "🍲",
             limitG = 0.12,
-            cabin = CabinPlan(fanLevel = 0, airflow = AirflowMode.OFF, seatHeaterLevel = 2, seatVentLevel = 0), // 2단 기본(3단은 설정), 30분 뒤 1단, 45분 OFF는 호스트 타이머
+            cabin = CabinPlan(fanLevel = 0, airflow = AirflowMode.OFF, seatHeaterLevel = 2, seatVentLevel = 0), // Requested concept only; CabinCommandPolicy withholds positive heating.
             arrivalNoun = "음식",
-            tagline = "열선 2단 워머 · 송풍 OFF",
+            tagline = "송풍 OFF 요청 · 보온 열선 검증 대기",
             voiceAliases = listOf("떡볶이", "치킨", "피자", "족발", "탕", "국물", "음식", "포장", "배달", "뜨거운", "찜", "보쌈", "짜장면", "탕수육", "국밥"),
         )
         /** 0.20 g: bouquets tolerate comfort-level motion; 22 ℃ + floor airflow = cool, no vent draft (temperature is the #1 postharvest factor). */

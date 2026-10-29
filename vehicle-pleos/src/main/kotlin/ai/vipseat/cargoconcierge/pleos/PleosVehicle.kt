@@ -28,16 +28,26 @@ import ai.vipseat.cargoconcierge.core.port.ApplyConsent
 import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
 import ai.vipseat.cargoconcierge.core.port.CabinCapabilities
 import ai.vipseat.cargoconcierge.core.port.CabinFeature
+import ai.vipseat.cargoconcierge.core.port.CabinSettingOwner
 import ai.vipseat.cargoconcierge.core.port.FeatureOutcome
 import ai.vipseat.cargoconcierge.core.port.FeatureStatus
+import ai.vipseat.cargoconcierge.core.port.RealMotionObserver
 import ai.vipseat.cargoconcierge.core.port.VehiclePort
 import android.content.Context
+import android.os.SystemClock
 import android.util.Log
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.merge
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlin.coroutines.resume
 
@@ -53,7 +63,7 @@ import kotlin.coroutines.resume
  * *setter* (DrivingMode is read-only), brake pedal *percentage* (boolean only).
  * Speed is derived from FusedLocation fixes by [PleosLocationSpeed] and merged into [signals].
  */
-class PleosVehicle(context: Context) : VehiclePort {
+class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
     override val name: String = "Pleos Vehicle SDK 2.3.2"
 
     private val app = context.applicationContext
@@ -63,7 +73,6 @@ class PleosVehicle(context: Context) : VehiclePort {
     override val signals: Flow<VehicleSignal> = merge(_signals, locationSpeed.signals)
 
     private val passengerSeat = SeatArea(SeatValue.ROW_1_RIGHT)
-    private val rearSeats = SeatArea(SeatValue.ROW_2_LEFT, SeatValue.ROW_2_RIGHT)
     /** Seat area per VIP spot (SeatValue names verified with javap against Vehicle-2.3.2.aar). */
     private val seatAreas = mapOf(
         CargoSpot.FRONT_PASSENGER to passengerSeat,
@@ -80,30 +89,42 @@ class PleosVehicle(context: Context) : VehiclePort {
     )
     private val status = linkedMapOf<String, String>()
     private val occupancy: MutableMap<CargoSpot, Boolean?> = java.util.Collections.synchronizedMap(HashMap())
-    @Volatile private var lastPassengerTempC: Float? = null
+    @Volatile private var lastGear = Gear.UNKNOWN
+    @Volatile private var lastGearAt = 0L
     /** A temperature zone that covers row 2 but no row-1 seat — only such a zone may be retuned for a rear VIP. */
     @Volatile private var rearTempArea: SeatArea? = null
+    @Volatile private var passengerTempArea: SeatArea? = null
     // Fan speed/direction are not per-seat on every head unit (the Pleos emulator exposes a front zone shared
     // with the driver): resolve the zone covering the passenger seat once, and never touch a shared zone.
     @Volatile private var fanArea: SeatArea? = null
     @Volatile private var dirArea: SeatArea? = null
     @Volatile private var zonesResolved = false
-    private var initialized = false
+    @Volatile private var initialized = false
+    private val cabinMutex = Mutex()
+    private val temperatureSettings = linkedMapOf<String, CabinSettingOwner<Float>>()
+    private val levelSettings = linkedMapOf<String, CabinSettingOwner<Int>>()
+    private val directionSettings = linkedMapOf<String, CabinSettingOwner<FanDirectionType>>()
+    private var motionPolling: Job? = null
+    private data class SpeedReading(val mps: Double, val receivedAtMs: Long)
+    @Volatile private var realSpeed: SpeedReading? = null
 
-    private data class SavedCabin(val spot: CargoSpot, val tempC: Float?, val fan: Int?, val direction: FanDirectionType?, val heater: Int?, val vent: Int?)
-    private var saved: SavedCabin? = null
+    override fun observeRealMotion(signal: VehicleSignal, receivedAtMs: Long) {
+        when (signal) {
+            is VehicleSignal.Speed -> if (signal.mps.isFinite() && signal.mps >= 0) realSpeed = SpeedReading(signal.mps, receivedAtMs)
+            is VehicleSignal.SourceStatus -> if (!signal.connected) realSpeed = null
+            else -> Unit
+        }
+    }
 
     // ------------------------------------------------------------------ listeners (verified interfaces)
 
     private val gearListener = object : GearSelectionListener {
-        override fun onSelected(gear: VehicleGear?) { emit(VehicleSignal.GearChanged(gear.toCore())) }
-        override fun onFailed(e: Exception) { fail("gear", e) }
+        override fun onSelected(gear: VehicleGear?) { recordGear(gear) }
+        override fun onFailed(e: Exception) { recordGear(null); fail("gear", e) }
     }
     private val steeringListener = object : SteeringWheelAngleListener {
-        // The Pleos emulator re-publishes PERF_STEERING_ANGLE = 0.0 every ~3 s without a change; forwarding those repeats would
-        // overwrite a steering value that another source (demo bridge, AOSP) just reported, so unchanged values are dropped.
         override fun onSteeringWheelAngleUpdated(angle: Float?) {
-            angle?.let { if (it != lastSteeringDeg) { lastSteeringDeg = it; emit(VehicleSignal.SteeringAngle(it.toDouble())) } }
+            angle?.takeIf { it.isFinite() }?.let { emit(VehicleSignal.SteeringAngle(it.toDouble())) }
         }
         override fun onFailed(e: Exception) { fail("steering", e) }
     }
@@ -124,7 +145,7 @@ class PleosVehicle(context: Context) : VehiclePort {
         }
     }
     private val tempListener = object : HvacTemperatureListener {
-        override fun onHvacTemperatureUpdated(celsius: Float?) { celsius?.let { lastPassengerTempC = it; emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }
+        override fun onHvacTemperatureUpdated(celsius: Float?) { celsius?.takeIf { it.isFinite() }?.let { emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }
         override fun onFailed(e: Exception) { fail("hvacTemp", e) }
     }
     private val drivingModeListener = object : DrivingModeStateListener {
@@ -156,22 +177,28 @@ class PleosVehicle(context: Context) : VehiclePort {
         register("drivingMode") { vehicle.getDrivingMode().registerDrivingModeState(drivingModeListener) }
 
         // Initial reads so the snapshot is populated before the first change event.
-        runCatching { vehicle.getGear().getCurrentGearSelectionState({ emit(VehicleSignal.GearChanged(it.toCore())) }, { fail("gear.get", it) }) }
+        runCatching { vehicle.getGear().getCurrentGearSelectionState(::recordGear, { fail("gear.get", it) }) }
         doorAreas.forEach { (id, area) ->
             runCatching { vehicle.getDoor().getCurrentDoorPosition(area, { emit(VehicleSignal.Door(id, (it ?: 0) > 0)) }, { fail("door.get-$id", it) }) }
         }
         seatAreas.forEach { (spot, area) ->
             runCatching { vehicle.getSeat().getCurrentSeatOccupancy(area, { occupancy[spot] = it; emit(VehicleSignal.SeatOccupancy(spot, it)) }, { fail("occupancy.get-${spot.name.lowercase()}", it) }) }
         }
-        runCatching { vehicle.getHVAC().getHvacTemperature(passengerSeat, TemperatureUnit.CELSIUS, { t -> t?.let { lastPassengerTempC = it; emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }, { fail("hvacTemp.get", it) }) }
+        runCatching { vehicle.getHVAC().getHvacTemperature(passengerSeat, TemperatureUnit.CELSIUS, { t -> t?.takeIf { it.isFinite() }?.let { emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }, { fail("hvacTemp.get", it) }) }
 
         status["speed"] = locationSpeed.start()
+        startMotionPolling()
         emit(VehicleSignal.SourceStatus(true, status.entries.joinToString(" ") { "${it.key}=${it.value}" }))
     }
 
-    override suspend fun disconnect() {
+    override suspend fun disconnect() = cabinMutex.withLock {
+        initialized = false
+        motionPolling?.cancel()
+        motionPolling = null
+        lastGear = Gear.UNKNOWN
+        lastGearAt = 0L
+        realSpeed = null
         locationSpeed.stop()
-        if (!initialized) return
         runCatching { vehicle.getGear().unregisterGearSelection(gearListener) }
         runCatching { vehicle.getSteeringWheel().unregisterSteeringWheelAngle(steeringListener) }
         runCatching { vehicle.getBrake().unregisterBrakePedalStatus(brakeListener) }
@@ -180,7 +207,7 @@ class PleosVehicle(context: Context) : VehiclePort {
         runCatching { vehicle.getHVAC().unregisterHvacTemperature(passengerSeat, tempListener) }
         runCatching { vehicle.getDrivingMode().unregisterDrivingModeState(drivingModeListener) }
         runCatching { vehicle.release() }
-        initialized = false
+        zonesResolved = false
     }
 
     // ------------------------------------------------------------------ capabilities
@@ -210,82 +237,160 @@ class PleosVehicle(context: Context) : VehiclePort {
 
     // ------------------------------------------------------------------ cabin control
 
-    override suspend fun applyCabin(plan: CabinPlan, consent: ApplyConsent, spot: CargoSpot): CabinApplyResult {
-        if (!initialized) return CabinApplyResult(emptyList())
-        if (spot == CargoSpot.TRUNK) return CabinApplyResult.unsupported(plan, "트렁크는 공조 영역이 아니에요")
-        val hvac = vehicle.getHVAC()
-        val seat = vehicle.getSeat()
+    override suspend fun applyCabin(plan: CabinPlan, consent: ApplyConsent, spot: CargoSpot): CabinApplyResult = cabinMutex.withLock {
+        if (!initialized) return@withLock CabinApplyResult(CabinApplyResult.unsupported(plan, "차량 연결 없음 · 변경하지 않음").outcomes.map { it.copy(status = FeatureStatus.FAILED) })
+        if (spot == CargoSpot.TRUNK) return@withLock CabinApplyResult.unsupported(plan, "트렁크는 공조 영역이 아니에요")
         resolveHvacZones()
         val seatArea = seatAreas.getValue(spot)
-        val rear = spot.isRear
-        val tempArea: SeatArea? = if (rear) rearTempArea else passengerSeat
-        val seatOccupied = occupancy[spot]
-        if (saved == null) {
-            saved = SavedCabin(
-                spot = spot,
-                // The emulator accepts set() on the passenger zone but get() reports "not available": fall back to the last listener value.
-                tempC = tempArea?.let { area -> awaitValue { ok, err -> hvac.getHvacTemperature(area, TemperatureUnit.CELSIUS, ok, err) } } ?: if (rear) null else lastPassengerTempC,
-                fan = if (rear) null else fanArea?.takeIf { it.passengerOnly() }?.let { area -> awaitValue { ok, err -> hvac.getHvacFanSpeed(area, ok, err) } },
-                direction = if (rear) null else dirArea?.takeIf { it.passengerOnly() }?.let { area -> awaitValue { ok, err -> hvac.getHvacFanDirection(area, ok, err) } },
-                heater = awaitValue { ok, err -> seat.getHvacSeatTemperature(seatArea, ok, err) },
-                vent = awaitValue { ok, err -> seat.getHvacSeatVentilationState(seatArea, ok, err) },
-            )
-        }
+        val tempArea = if (spot.isRear) rearTempArea?.takeIf { area -> seatArea.values.all { area.covers(it) } } else passengerTempArea
         val out = ArrayList<FeatureOutcome>()
-        plan.temperatureC?.let { t ->
-            out += if (tempArea == null) FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.UNSUPPORTED, "뒷좌석 단독 존 없음")
-            else outcome(CabinFeature.TEMPERATURE) { ok, err -> hvac.setHvacTemperature(tempArea, t.toFloat(), TemperatureUnit.CELSIUS, { _, _ -> ok() }, err) }
+        plan.temperatureC?.let { out += applyTemperature(CabinFeature.TEMPERATURE, tempArea, it.toFloat()) }
+        // AIRFLOW.OFF and FAN address the same physical property: send and own only one final value.
+        if (plan.airflow != AirflowMode.OFF) plan.fanLevel?.let {
+            out += applyFan(CabinFeature.FAN, if (spot.isRear) null else fanArea, it)
         }
-        plan.fanLevel?.let { f ->
-            out += if (rear) FeatureOutcome(CabinFeature.FAN, FeatureStatus.UNSUPPORTED, "뒷좌석 송풍 제어 없음")
-            else zoneOutcome(CabinFeature.FAN, fanArea) { area, ok, err -> hvac.setHvacFanSpeed(area, f, { _, _ -> ok() }, err) }
-        }
-        if (plan.airflow != AirflowMode.UNCHANGED && rear) {
-            out += FeatureOutcome(CabinFeature.AIRFLOW, FeatureStatus.UNSUPPORTED, "뒷좌석 송풍 제어 없음")
-        } else when (plan.airflow) {
-            AirflowMode.DIRECT_FACE -> out += zoneOutcome(CabinFeature.AIRFLOW, dirArea) { area, ok, err -> hvac.setHvacFanDirection(area, FanDirectionType.FACE, { _, _ -> ok() }, err) }
-            AirflowMode.INDIRECT_FLOOR -> out += zoneOutcome(CabinFeature.AIRFLOW, dirArea) { area, ok, err -> hvac.setHvacFanDirection(area, FanDirectionType.FLOOR, { _, _ -> ok() }, err) }
-            AirflowMode.OFF -> out += zoneOutcome(CabinFeature.AIRFLOW, fanArea) { area, ok, err -> hvac.setHvacFanSpeed(area, 0, { _, _ -> ok() }, err) }
+        when (plan.airflow) {
+            AirflowMode.OFF -> {
+                val result = applyFan(CabinFeature.AIRFLOW, if (spot.isRear) null else fanArea, 0)
+                out += result
+                if (plan.fanLevel != null) out += result.copy(feature = CabinFeature.FAN)
+            }
+            AirflowMode.DIRECT_FACE -> out += applyDirection(if (spot.isRear) null else dirArea, FanDirectionType.FACE)
+            AirflowMode.INDIRECT_FLOOR -> out += applyDirection(if (spot.isRear) null else dirArea, FanDirectionType.FLOOR)
             AirflowMode.UNCHANGED -> Unit
         }
         plan.seatHeaterLevel?.let { level ->
-            out += if (level > 0 && seatOccupied != true && !consent.emptySeatHeaterAllowed) {
-                FeatureOutcome(CabinFeature.SEAT_HEATER, FeatureStatus.SKIPPED_NO_CONSENT, "empty seat, no consent")
-            } else {
-                val r = outcome(CabinFeature.SEAT_HEATER) { ok, err -> seat.setHvacSeatTemperature(seatArea, level, { _, _ -> ok() }, err) }
-                if (r.status == FeatureStatus.APPLIED && level > 0 && seatOccupied == false) {
-                    // Occupant classification may silently refuse: read back and report honestly.
-                    val readBack = awaitValue { ok, err -> seat.getHvacSeatTemperature(seatArea, ok, err) }
-                    if (readBack == 0) FeatureOutcome(CabinFeature.SEAT_HEATER, FeatureStatus.BLOCKED_BY_OCCUPANCY, "read-back 0 on empty seat") else r
-                } else r
+            out += when {
+                level > 0 && !consent.emptySeatHeaterAllowed -> FeatureOutcome(CabinFeature.SEAT_HEATER, FeatureStatus.SKIPPED_NO_CONSENT, "빈 좌석 열선 동의 없음")
+                level > 0 -> FeatureOutcome(CabinFeature.SEAT_HEATER, FeatureStatus.PENDING_VALIDATION, "적재물 열선은 실측 검증 전 비활성")
+                else -> applySeatLevel(CabinFeature.SEAT_HEATER, seatArea, level)
             }
         }
-        plan.seatVentLevel?.let { level ->
-            out += outcome(CabinFeature.SEAT_VENT) { ok, err -> seat.setHvacSeatVentilation(seatArea, level, { _, _ -> ok() }, err) }
-        }
-        plan.rearZoneTemperatureC?.let { t ->
-            val area = rearTempArea
-            out += if (area == null) FeatureOutcome(CabinFeature.REAR_TEMPERATURE, FeatureStatus.UNSUPPORTED, "후석 단독 존 없음")
-            else outcome(CabinFeature.REAR_TEMPERATURE) { ok, err -> hvac.setHvacTemperature(area, t.toFloat(), TemperatureUnit.CELSIUS, { _, _ -> ok() }, err) }
-        }
-        return CabinApplyResult(out)
+        plan.seatVentLevel?.let { out += applySeatLevel(CabinFeature.SEAT_VENT, seatArea, it) }
+        plan.rearZoneTemperatureC?.let { out += applyTemperature(CabinFeature.REAR_TEMPERATURE, rearTempArea, it.toFloat()) }
+        CabinApplyResult(out).also { logCabinResult("apply", it) }
     }
 
-    override suspend fun restoreCabin(): CabinApplyResult {
-        val s = saved ?: return CabinApplyResult.EMPTY
-        saved = null
-        if (!initialized) return CabinApplyResult.EMPTY
-        val hvac = vehicle.getHVAC()
-        val seat = vehicle.getSeat()
-        val seatArea = seatAreas[s.spot] ?: passengerSeat
-        val tempArea = if (s.spot.isRear) rearTempArea else passengerSeat
-        val out = ArrayList<FeatureOutcome>()
-        s.tempC?.let { v -> tempArea?.let { area -> out += outcome(CabinFeature.TEMPERATURE) { ok, err -> hvac.setHvacTemperature(area, v, TemperatureUnit.CELSIUS, { _, _ -> ok() }, err) } } }
-        s.fan?.let { v -> out += zoneOutcome(CabinFeature.FAN, fanArea) { area, ok, err -> hvac.setHvacFanSpeed(area, v, { _, _ -> ok() }, err) } }
-        s.direction?.let { v -> out += zoneOutcome(CabinFeature.AIRFLOW, dirArea) { area, ok, err -> hvac.setHvacFanDirection(area, v, { _, _ -> ok() }, err) } }
-        s.heater?.let { v -> out += outcome(CabinFeature.SEAT_HEATER) { ok, err -> seat.setHvacSeatTemperature(seatArea, v, { _, _ -> ok() }, err) } }
-        s.vent?.let { v -> out += outcome(CabinFeature.SEAT_VENT) { ok, err -> seat.setHvacSeatVentilation(seatArea, v, { _, _ -> ok() }, err) } }
-        return CabinApplyResult(out)
+    override suspend fun restoreCabin(): CabinApplyResult = cabinMutex.withLock {
+        val settings = allSettings().filter { it.needsRestore }
+        val out = if (!initialized) settings.map {
+            FeatureOutcome(it.feature, FeatureStatus.FAILED, "차량 연결 없음 · 복원 보류, 재시도 가능")
+        } else settings.map { it.restore() }
+        // Keep failures for an explicit retry. Successful/mismatched properties need no further write.
+        if (allSettings().none { it.needsRestore }) {
+            temperatureSettings.clear()
+            levelSettings.clear()
+            directionSettings.clear()
+        }
+        CabinApplyResult(out).also { logCabinResult("restore", it) }
+    }
+
+    private fun allSettings(): List<CabinSettingOwner<*>> =
+        temperatureSettings.values + levelSettings.values + directionSettings.values
+
+    private suspend fun applyTemperature(feature: CabinFeature, area: SeatArea?, target: Float): FeatureOutcome {
+        if (area == null) return FeatureOutcome(feature, FeatureStatus.UNSUPPORTED, "독립 온도 존 없음")
+        if (!target.isFinite()) return FeatureOutcome(feature, FeatureStatus.FAILED, "유효하지 않은 온도")
+        val setting = temperatureSettings.getOrPut(area.key()) {
+            CabinSettingOwner(
+                feature = feature,
+                read = { awaitValue<Float?> { ok, err -> vehicle.getHVAC().getHvacTemperature(area, TemperatureUnit.CELSIUS, ok, err) }?.takeIf { it.isFinite() } },
+                write = { value -> outcome(feature) { ok, err -> vehicle.getHVAC().setHvacTemperature(area, value, TemperatureUnit.CELSIUS, { _, _ -> ok() }, err) } },
+                guard = { restoring -> commandGuard(feature, area, restoring) },
+                matches = { a, b -> kotlin.math.abs(a - b) < 0.1f },
+                maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+            )
+        }
+        return setting.apply(target).copy(feature = feature)
+    }
+
+    private suspend fun applyFan(feature: CabinFeature, area: SeatArea?, target: Int): FeatureOutcome {
+        zoneRestriction(feature, area)?.let { return it }
+        val zone = requireNotNull(area)
+        val setting = levelSettings.getOrPut("fan:${zone.key()}") {
+            CabinSettingOwner(
+                feature = feature,
+                read = { awaitValue<Int?> { ok, err -> vehicle.getHVAC().getHvacFanSpeed(zone, ok, err) } },
+                write = { value -> outcome(feature) { ok, err -> vehicle.getHVAC().setHvacFanSpeed(zone, value, { _, _ -> ok() }, err) } },
+                guard = { restoring -> commandGuard(feature, zone, restoring) },
+                maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+            )
+        }
+        return setting.apply(target).copy(feature = feature)
+    }
+
+    private suspend fun applyDirection(area: SeatArea?, target: FanDirectionType): FeatureOutcome {
+        val feature = CabinFeature.AIRFLOW
+        zoneRestriction(feature, area)?.let { return it }
+        val zone = requireNotNull(area)
+        val setting = directionSettings.getOrPut(zone.key()) {
+            CabinSettingOwner(
+                feature = feature,
+                read = { awaitValue<FanDirectionType?> { ok, err -> vehicle.getHVAC().getHvacFanDirection(zone, ok, err) } },
+                write = { value -> outcome(feature) { ok, err -> vehicle.getHVAC().setHvacFanDirection(zone, value, { _, _ -> ok() }, err) } },
+                guard = { restoring -> commandGuard(feature, zone, restoring) },
+                maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+            )
+        }
+        return setting.apply(target)
+    }
+
+    private suspend fun applySeatLevel(feature: CabinFeature, area: SeatArea, target: Int): FeatureOutcome {
+        val heater = feature == CabinFeature.SEAT_HEATER
+        val setting = levelSettings.getOrPut("${feature.name}:${area.key()}") {
+            CabinSettingOwner(
+                feature = feature,
+                read = { awaitValue<Int?> { ok, err ->
+                    if (heater) vehicle.getSeat().getHvacSeatTemperature(area, ok, err)
+                    else vehicle.getSeat().getHvacSeatVentilationState(area, ok, err)
+                } },
+                write = { value -> outcome(feature) { ok, err ->
+                    if (heater) vehicle.getSeat().setHvacSeatTemperature(area, value, { _, _ -> ok() }, err)
+                    else vehicle.getSeat().setHvacSeatVentilation(area, value, { _, _ -> ok() }, err)
+                } },
+                guard = { restoring -> commandGuard(feature, area, restoring) },
+                maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+            )
+        }
+        return setting.apply(target)
+    }
+
+    /** Re-read the real vehicle immediately before every write; demo/UI state is not authority. */
+    private suspend fun commandGuard(feature: CabinFeature, area: SeatArea, restoring: Boolean): FeatureOutcome? {
+        if (!initialized) return FeatureOutcome(feature, FeatureStatus.FAILED, "차량 연결 없음 · 명령 보류")
+        val gear = awaitValue<VehicleGear?> { ok, err -> vehicle.getGear().getCurrentGearSelectionState(ok, err) }
+        recordGear(gear)
+        if (gear.toCore() != Gear.PARK) return FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "P 기어 확인 불가 · 명령 보류")
+        if (!restoring) {
+            for ((spot, seatArea) in seatAreas.filter { (_, seat) -> seat.values.any { area.covers(it) } }) {
+                val occupied = awaitValue<Boolean?> { ok, err -> vehicle.getSeat().getCurrentSeatOccupancy(seatArea, ok, err) }
+                occupancy[spot] = occupied
+                if (occupied != false) return FeatureOutcome(feature, FeatureStatus.BLOCKED_BY_OCCUPANCY, "${spot.short} 비착좌 확인 불가 · 변경하지 않음")
+            }
+        }
+        val now = SystemClock.elapsedRealtime()
+        val speed = realSpeed?.takeIf { now - it.receivedAtMs in 0..SIGNAL_FRESHNESS_MS }?.mps
+            ?: locationSpeed.freshSpeedMps(SIGNAL_FRESHNESS_MS)
+        return when {
+            !initialized -> FeatureOutcome(feature, FeatureStatus.FAILED, "차량 연결 끊김 · 명령 보류")
+            lastGear != Gear.PARK || now - lastGearAt !in 0..SIGNAL_FRESHNESS_MS ->
+                FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "최신 P 기어 확인 불가 · 명령 보류")
+            speed == null -> FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "최신 차속 확인 불가 · 명령 보류")
+            speed >= 0.3 -> FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "정차 확인 불가 · 명령 보류")
+            else -> null
+        }
+    }
+
+    private fun zoneRestriction(feature: CabinFeature, area: SeatArea?): FeatureOutcome? = when {
+        area == null -> FeatureOutcome(feature, FeatureStatus.UNSUPPORTED, "독립 조수석 존 없음")
+        !area.passengerOnly() -> FeatureOutcome(feature, FeatureStatus.UNCHANGED, "운전석과 공유하는 존이라 유지")
+        else -> null
+    }
+
+    private fun SeatArea.key(): String = values.map { it.name }.sorted().joinToString(",")
+
+    private fun logCabinResult(operation: String, result: CabinApplyResult) {
+        result.outcomes.forEach { Log.i(TAG, "$operation ${it.feature}: ${it.status} · ${it.detail}") }
     }
 
     // ------------------------------------------------------------------ helpers
@@ -328,8 +433,28 @@ class PleosVehicle(context: Context) : VehiclePort {
         emit(VehicleSignal.SourceStatus(initialized, status.entries.joinToString(" ") { "${it.key}=${it.value}" }))
     }
 
-    private var lastSteeringDeg: Float? = null
     private fun emit(signal: VehicleSignal) { _signals.tryEmit(signal) }
+
+    private fun recordGear(gear: VehicleGear?) {
+        lastGear = gear.toCore()
+        lastGearAt = SystemClock.elapsedRealtime()
+        emit(VehicleSignal.GearChanged(lastGear))
+    }
+
+    /** Real getter observations keep ON_CHANGE signals fresh; cached values are never republished. */
+    private fun startMotionPolling() {
+        motionPolling?.cancel()
+        motionPolling = CoroutineScope(Dispatchers.IO).launch {
+            while (isActive && initialized) {
+                val gear = awaitValue<VehicleGear?> { ok, err -> vehicle.getGear().getCurrentGearSelectionState(ok, err) }
+                recordGear(gear)
+                awaitValue<Float?> { ok, err -> vehicle.getSteeringWheel().getCurrentSteeringWheelAngle(ok, err) }
+                    ?.takeIf { it.isFinite() }
+                    ?.let { emit(VehicleSignal.SteeringAngle(it.toDouble())) }
+                delay(MOTION_POLL_MS)
+            }
+        }
+    }
 
     private fun SeatArea.covers(v: SeatValue) = values.contains(v)
     private fun SeatArea.passengerOnly() = values.size == 1 && covers(SeatValue.ROW_1_RIGHT)
@@ -340,20 +465,16 @@ class PleosVehicle(context: Context) : VehiclePort {
         val hvac = vehicle.getHVAC()
         fanArea = awaitValue<SeatArea?> { ok, err -> hvac.checkHvacFanSpeedCapabilities({ _, areas -> ok(areas.keys.firstOrNull { it.covers(SeatValue.ROW_1_RIGHT) }) }, err) }
         dirArea = awaitValue<SeatArea?> { ok, err -> hvac.checkHvacFanDirectionCapabilities({ _, areas -> ok(areas.keys.firstOrNull { it.covers(SeatValue.ROW_1_RIGHT) }) }, err) }
+        passengerTempArea = awaitValue<SeatArea?> { ok, err ->
+            hvac.checkHvacTemperatureCapabilities({ cfg, areas -> ok(areas.keys.firstOrNull { cfg.accessType.writable() && it.passengerOnly() }) }, err)
+        }
         rearTempArea = awaitValue<SeatArea?> { ok, err ->
-            hvac.checkHvacTemperatureCapabilities({ _, areas ->
-                ok(areas.keys.firstOrNull { (it.covers(SeatValue.ROW_2_LEFT) || it.covers(SeatValue.ROW_2_RIGHT)) && !it.covers(SeatValue.ROW_1_LEFT) && !it.covers(SeatValue.ROW_1_RIGHT) })
+            hvac.checkHvacTemperatureCapabilities({ cfg, areas ->
+                ok(areas.keys.firstOrNull { cfg.accessType.writable() && it.values.isNotEmpty() && it.values.all { value -> value in REAR_SEATS } })
             }, err)
         }
         zonesResolved = true
         Log.i(TAG, "hvac zones: passenger fan=${fanArea?.values?.joinToString()} direction=${dirArea?.values?.joinToString()} rearTemp=${rearTempArea?.values?.joinToString() ?: "none"}")
-    }
-
-    /** Applies a zone control only when the zone is the passenger seat alone; a zone shared with the driver is left untouched. */
-    private suspend fun zoneOutcome(feature: CabinFeature, area: SeatArea?, call: (SeatArea, ok: () -> Unit, err: (Exception) -> Unit) -> Unit): FeatureOutcome = when {
-        area == null -> FeatureOutcome(feature, FeatureStatus.UNSUPPORTED, "조수석 존 없음")
-        !area.passengerOnly() -> FeatureOutcome(feature, FeatureStatus.UNCHANGED, "운전석과 공유하는 존이라 유지")
-        else -> outcome(feature) { ok, err -> call(area, ok, err) }
     }
 
     private fun ai.pleos.playground.vehicle.api.model.capability.AccessType.writable() =
@@ -379,5 +500,8 @@ class PleosVehicle(context: Context) : VehiclePort {
         const val TAG = "PleosVehicle"
         const val SERVICE_BIND_GRACE_MS = 800L
         const val CALL_TIMEOUT_MS = 3_000L
+        const val SIGNAL_FRESHNESS_MS = 2_000L
+        const val MOTION_POLL_MS = 1_000L
+        val REAR_SEATS = setOf(SeatValue.ROW_2_LEFT, SeatValue.ROW_2_CENTER, SeatValue.ROW_2_RIGHT)
     }
 }

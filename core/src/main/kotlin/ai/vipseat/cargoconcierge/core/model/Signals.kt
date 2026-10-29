@@ -66,23 +66,25 @@ data class VehicleSnapshot(
 ) {
     fun apply(signal: VehicleSignal): VehicleSnapshot = when (signal) {
         is VehicleSignal.GearChanged -> copy(gear = signal.gear)
-        is VehicleSignal.Speed -> copy(speedMps = signal.mps.coerceAtLeast(0.0))
-        is VehicleSignal.SteeringAngle -> copy(steeringDeg = signal.degrees)
-        is VehicleSignal.BrakePedal -> copy(brakePressed = signal.pressed, brakePercent = signal.percent)
+        is VehicleSignal.Speed -> copy(speedMps = signal.mps.takeIf { it.isFinite() && it >= 0.0 })
+        is VehicleSignal.SteeringAngle -> copy(steeringDeg = signal.degrees.takeIf { it.isFinite() })
+        is VehicleSignal.BrakePedal -> copy(brakePressed = signal.pressed, brakePercent = signal.percent?.takeIf { it.isFinite() && it in 0.0..100.0 })
         is VehicleSignal.Door -> copy(doors = doors + (signal.id to signal.open))
         is VehicleSignal.SeatOccupancy -> copy(occupancy = occupancy + (signal.seat to signal.occupied))
         is VehicleSignal.CabinTemperature ->
             if (signal.zone == CabinZone.FRONT_PASSENGER) copy(passengerTempC = signal.celsius) else this
         is VehicleSignal.DrivingModeChanged -> copy(drivingMode = signal.mode)
-        is VehicleSignal.SourceStatus -> copy(connected = signal.connected, sourceDetail = signal.detail)
+        is VehicleSignal.SourceStatus -> if (signal.connected) copy(connected = true, sourceDetail = signal.detail)
+            else copy(connected = false, sourceDetail = signal.detail, gear = Gear.UNKNOWN,
+                speedMps = null, steeringDeg = null, brakePressed = null, brakePercent = null)
     }
 
     val passengerOccupied: Boolean? get() = occupancy[CargoSpot.FRONT_PASSENGER]
 
     fun occupied(spot: CargoSpot): Boolean = occupancy[spot] == true
 
-    /** Unknown speed counts as stationary: a parked car with no speed feed must still trigger. */
-    val isStationary: Boolean get() = (speedMps ?: 0.0) < STATIONARY_MPS
+    /** Configuration requires a known finite speed; missing signals do not prove the car is still. */
+    val isStationary: Boolean get() = speedMps?.let { it.isFinite() && it >= 0.0 && it < STATIONARY_MPS } == true
 
     val isParkedStill: Boolean get() = gear == Gear.PARK && isStationary
 

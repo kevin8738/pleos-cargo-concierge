@@ -1,6 +1,7 @@
 package ai.vipseat.cargoconcierge.core.engine
 
 import ai.vipseat.cargoconcierge.core.model.CargoKind
+import ai.vipseat.cargoconcierge.core.model.AudioSuppressionReason
 import ai.vipseat.cargoconcierge.core.model.CargoPreset
 import ai.vipseat.cargoconcierge.core.model.CargoSpot
 import ai.vipseat.cargoconcierge.core.model.DoorId
@@ -23,6 +24,9 @@ enum class BadgeLevel { OK, WARN, OVER }
 
 /** PARKED = full UI allowed; DRIVING = static badge only (distraction optimised). */
 enum class UiMode { PARKED, DRIVING }
+
+/** Reception freshness only; these labels do not certify sensor accuracy or transport latency. */
+enum class MotionSignalStatus { FRESH, SPEED_ONLY, STALE, DISCONNECTED }
 
 sealed interface CargoState {
     data object Idle : CargoState
@@ -57,7 +61,7 @@ sealed interface CargoState {
         val lastBumpCoachMs: Long = CargoStateMachine.NEVER,
         val lastBadgeChangeMs: Long = CargoStateMachine.NEVER,
         val sportModeNoticed: Boolean = false,
-        /** Spoken F3 coaching lines this trip (capped by [CargoStateMachine.Config.maxVoiceCoachPerTrip]). */
+        /** All driving speech requests admitted this trip (capped by [CargoStateMachine.Config.maxVoiceCoachPerTrip]). */
         val voiceCoachCount: Int = 0,
         /** The navigation app said "arrived" while we were still in D: restoring waits for P. */
         val arrivalPending: String? = null,
@@ -65,6 +69,9 @@ sealed interface CargoState {
         val spot: CargoSpot = CargoSpot.FRONT_PASSENGER,
         /** The seat was already occupied when the VIP was placed there: the passenger holds it, seat heater/vent stay untouched. */
         val heldByPassenger: Boolean = false,
+        val motionStatus: MotionSignalStatus = MotionSignalStatus.STALE,
+        val lastAudibleMs: Long = CargoStateMachine.NEVER,
+        val lastAudioSuppression: AudioSuppressionReason? = null,
     ) : CargoState
 
     data class Arrived(val preset: CargoPreset, val report: TripReport, val reason: String, val spot: CargoSpot = CargoSpot.FRONT_PASSENGER) : CargoState
@@ -105,6 +112,7 @@ sealed interface Action {
     data class CabinApplied(val result: CabinApplyResult) : Action
     data object AcknowledgeReport : Action
     data object EndTrip : Action
+    data object ResetOfferSuppression : Action
 }
 
 /**
@@ -117,8 +125,8 @@ sealed interface Action {
  *    sitting there (a passenger just got out); a trigger that times out [Config.ignoredOffersBeforeMute]
  *    times in a row is muted until a preset is chosen or [unmuteTriggers] is called; any sheet closes the
  *    moment the car moves. The user may still pick an occupied seat (the passenger holds the VIP).
- *  - F3 coaching: one soft chime when the guard *enters* WARN/OVER, voice only when the limit is
- *    exceeded, at most [Config.maxVoiceCoachPerTrip] spoken lines per trip, never during an emergency
+ *  - F3 coaching: one shared audible gate across all driving speech and chimes, at most
+ *    [Config.maxVoiceCoachPerTrip] spoken lines per trip, never during a high-G manoeuvre
  *    manoeuvre (≥ [Config.emergencyG]) and never for steering-dominated exceedances below
  *    [Config.minCoachSpeedMps] (parking).
  *  - F5 restore only in P: a navigation "arrived" while still in D is acknowledged and the restore
@@ -140,13 +148,18 @@ class CargoStateMachine(
         val passengerExitSuppressMs: Long = 30_000,
         /** Automatic offers from one trigger go quiet after this many consecutive time-outs. */
         val ignoredOffersBeforeMute: Int = 3,
-        /** Spoken F3 coaching per trip; chime + badge keep working afterwards. */
+        /** All admitted driving speech requests per trip, including navigation and status. */
         val maxVoiceCoachPerTrip: Int = 3,
+        /** Prototype burden policy, configurable and not validated as a safety threshold. */
+        val maxAudiblePerTrip: Int = 6,
+        val audibleCooldownMs: Long = 8_000,
+        /** Maximum age of a received motion value. Does not measure SDK transport delay. */
+        val motionFreshnessMs: Long = 2_000,
         /** Below this speed a steering-dominated exceedance is a parking manoeuvre: record, don't coach. */
         val minCoachSpeedMps: Double = 15.0 / 3.6,
         /**
-         * At or above this total g the driver is handling an emergency: never speak over it.
-         * 0.6 g ≈ 6 m/s², the deceleration at which UN R13/R13-H lets the emergency stop signal activate.
+         * Prototype high-G suppression threshold for all audio. It does not detect or certify an
+         * emergency; calibration and real-world error/latency measurements remain outstanding.
          */
         val emergencyG: Double = 0.6,
     )
@@ -172,12 +185,23 @@ class CargoStateMachine(
     /** Last moment someone was known to be in (or just leaving) each seat. */
     private val lastPresenceMs = HashMap<CargoSpot, Long>()
     private val ignoredOfferStreak = HashMap<String, Int>()
+    private var gearReceivedMs: Long? = null
+    private var speedReceivedMs: Long? = null
+    private var steeringReceivedMs: Long? = null
+    private var brakeReceivedMs: Long? = null
+    private var sourceDisconnected = false
 
     val uiMode: UiMode get() = if (snapshot.isDriving) UiMode.DRIVING else UiMode.PARKED
+
+    /** Permission based on freshly received P and stationary speed, not merely cached values. */
+    fun canControlCabin(nowMs: Long): Boolean = !sourceDisconnected && snapshot.isParkedStill &&
+        isFresh(gearReceivedMs, nowMs) && isFresh(speedReceivedMs, nowMs)
 
     /** Triggers (DoorId name or [EXTERNAL_TRIGGER]) whose automatic offers are currently muted. */
     val mutedTriggers: Set<String>
         get() = ignoredOfferStreak.filterValues { it >= config.ignoredOffersBeforeMute }.keys
+
+    val mutedTriggerCount: Int get() = mutedTriggers.size
 
     /** Settings → "자동 제안 다시 켜기". */
     fun unmuteTriggers() {
@@ -186,22 +210,23 @@ class CargoStateMachine(
 
     fun dispatch(action: Action, nowMs: Long): List<Effect> {
         val effects = ArrayList<Effect>(4)
+        val previousGuard = state as? CargoState.Guarding
         when (action) {
             is Action.Vehicle -> onVehicle(action.signal, nowMs, effects)
             is Action.Navi -> onNavi(action.event, nowMs, effects)
             Action.Tick -> onTick(nowMs, effects)
-            Action.OpenOffer -> if (state is CargoState.Idle && !snapshot.isDriving) {
+            Action.OpenOffer -> if (state is CargoState.Idle && canControlCabin(nowMs)) {
                 state = CargoState.Offering(null, nowMs, nowMs + config.offerTimeoutMs, spot = preferredSpot)
                 effects += Effect.Log("프리셋 시트 열림 (수동 · ${preferredSpot.label})")
             }
-            is Action.ExternalOffer -> if (state is CargoState.Idle && !snapshot.isDriving) {
+            is Action.ExternalOffer -> if (state is CargoState.Idle && canControlCabin(nowMs)) {
                 offerAutomatically(trigger = null, spot = preferredSpot, reason = action.reason, nowMs = nowMs, effects = effects)
             }
             Action.DismissOffer -> if (state is CargoState.Offering) {
                 state = CargoState.Idle
                 effects += Effect.Log("프리셋 시트 닫힘")
             }
-            is Action.SelectSpot -> onSelectSpot(action.spot, effects)
+            is Action.SelectSpot -> onSelectSpot(action.spot, nowMs, effects)
             is Action.SelectPreset -> startGuard(action.preset, action.spot, nowMs, effects, spoken = false)
             is Action.VoicePreset -> startGuard(action.preset, action.spot, nowMs, effects, spoken = true)
             is Action.CabinApplied -> onCabinApplied(action.result, effects)
@@ -213,15 +238,44 @@ class CargoStateMachine(
                 if (state !is CargoState.Idle) effects += Effect.Log("가드 종료")
                 state = CargoState.Idle
             }
+            Action.ResetOfferSuppression -> {
+                unmuteTriggers()
+                effects += Effect.Log("자동 제안 음소거 해제")
+            }
         }
+        limitDrivingAudio(previousGuard, nowMs, effects)
         return effects
     }
 
     // ---------------------------------------------------------------- vehicle signals
 
     private fun onVehicle(signal: VehicleSignal, nowMs: Long, effects: MutableList<Effect>) {
+        if (signal is VehicleSignal.GearChanged && gearReceivedMs?.let { nowMs < it } == true) return
+        if (signal is VehicleSignal.Speed && speedReceivedMs?.let { nowMs <= it } == true) return
+        if (signal is VehicleSignal.Speed && !isFresh(speedReceivedMs, nowMs)) {
+            gEstimator.reset()
+            (state as? CargoState.Guarding)?.let { state = it.copy(lastEstimate = null) }
+        }
         val prev = snapshot
         snapshot = snapshot.apply(signal)
+        when (signal) {
+            is VehicleSignal.GearChanged -> gearReceivedMs = nowMs.takeIf { signal.gear != Gear.UNKNOWN }
+            is VehicleSignal.Speed -> speedReceivedMs = nowMs.takeIf { snapshot.speedMps != null }
+            is VehicleSignal.SteeringAngle -> steeringReceivedMs = nowMs.takeIf { snapshot.steeringDeg != null }
+            is VehicleSignal.BrakePedal -> brakeReceivedMs = nowMs
+            is VehicleSignal.SourceStatus -> {
+                sourceDisconnected = !signal.connected
+                if (!signal.connected) {
+                    gearReceivedMs = null
+                    speedReceivedMs = null
+                    steeringReceivedMs = null
+                    brakeReceivedMs = null
+                    gEstimator.reset()
+                }
+                refreshMotionStatus(nowMs)
+            }
+            else -> Unit
+        }
 
         when (signal) {
             is VehicleSignal.Door -> onDoor(prev, signal, nowMs, effects)
@@ -229,7 +283,7 @@ class CargoStateMachine(
                 onMotion(signal, nowMs, effects)
             is VehicleSignal.SeatOccupancy -> onOccupancy(prev, signal, nowMs, effects)
             is VehicleSignal.CabinTemperature -> (state as? CargoState.Guarding)?.let { g ->
-                state = g.copy(trip = g.trip.copy(tempSumC = g.trip.tempSumC + signal.celsius, tempSamples = g.trip.tempSamples + 1))
+                if (signal.celsius.isFinite()) state = g.copy(trip = g.trip.copy(tempSumC = g.trip.tempSumC + signal.celsius, tempSamples = g.trip.tempSamples + 1))
             }
             is VehicleSignal.DrivingModeChanged -> (state as? CargoState.Guarding)?.let { g ->
                 if (signal.mode == DrivingMode.SPORT && !g.sportModeNoticed) {
@@ -241,7 +295,7 @@ class CargoStateMachine(
             else -> Unit
         }
         // Leaving a sheet open while the car starts moving would be a distraction: close it.
-        if (state is CargoState.Offering && snapshot.isDriving) {
+        if (state is CargoState.Offering && !snapshot.isParkedStill) {
             state = CargoState.Idle
             effects += Effect.Log("주행 시작 → 프리셋 시트 자동 닫힘")
         }
@@ -254,7 +308,7 @@ class CargoStateMachine(
                 state = g.copy(trip = g.trip.copy(departedMs = nowMs))
                 effects += Effect.Log("출발 감지 (기어 ${signal.gear})")
             }
-        } else if (g.arrivalPending != null && snapshot.isStationary) {
+        } else if (g.arrivalPending != null && canControlCabin(nowMs)) {
             arrive(g, nowMs, reason = "내비 목적지 도착 후 P", effects = effects)
         }
     }
@@ -284,7 +338,11 @@ class CargoStateMachine(
     }
 
     /** Cabin map / sheet chips. Moving a guarded VIP re-applies the plan at the new spot (parked only). */
-    private fun onSelectSpot(spot: CargoSpot, effects: MutableList<Effect>) {
+    private fun onSelectSpot(spot: CargoSpot, nowMs: Long, effects: MutableList<Effect>) {
+        if (!canControlCabin(nowMs)) {
+            effects += Effect.Log("기어 P와 정차 신호를 확인한 뒤 VIP 자리를 바꿀 수 있어요")
+            return
+        }
         preferredSpot = spot
         when (val s = state) {
             is CargoState.Offering -> {
@@ -292,10 +350,6 @@ class CargoStateMachine(
                 effects += Effect.Log("VIP 자리: ${spot.label}")
             }
             is CargoState.Guarding -> if (s.spot != spot) {
-                if (snapshot.isDriving) {
-                    effects += Effect.Log("주행 중에는 VIP 자리를 바꾸지 않아요 (${spot.label} 요청 무시)")
-                    return
-                }
                 val held = spot.hasSeat && snapshot.occupied(spot)
                 state = s.copy(spot = spot, heldByPassenger = held, cabin = null)
                 effects += Effect.RestoreCabin
@@ -311,13 +365,13 @@ class CargoStateMachine(
         val spot = CargoSpot.forDoor(signal.id)
 
         // F1 ①: P + speed 0 + a load door (passenger, rear left/right, trunk) open→closed, subject to the suppression rules.
-        if (closedEdge && spot != null && snapshot.isParkedStill && state is CargoState.Idle) {
+        if (closedEdge && spot != null && canControlCabin(nowMs) && state is CargoState.Idle) {
             offerAutomatically(trigger = signal.id, spot = spot, reason = "", nowMs = nowMs, effects = effects)
             return
         }
         // F5: P + driver door opens while guarding.
         val g = state as? CargoState.Guarding ?: return
-        if (signal.id == DoorId.DRIVER && signal.open && snapshot.gear == Gear.PARK && snapshot.isStationary) {
+        if (signal.id == DoorId.DRIVER && signal.open && canControlCabin(nowMs)) {
             arrive(g, nowMs, reason = "운전석 도어 열림", effects = effects)
         }
     }
@@ -347,20 +401,31 @@ class CargoStateMachine(
     }
 
     private fun onMotion(signal: VehicleSignal, nowMs: Long, effects: MutableList<Effect>) {
+        refreshMotionStatus(nowMs)
         val g = state as? CargoState.Guarding ?: return
+        if (g.motionStatus == MotionSignalStatus.STALE || g.motionStatus == MotionSignalStatus.DISCONNECTED) return
         val speed = snapshot.speedMps ?: return
+        val steering = snapshot.steeringDeg.takeIf { isFresh(steeringReceivedMs, nowMs) }
+        val brake = snapshot.brakePressed.takeIf { isFresh(brakeReceivedMs, nowMs) }
+        val brakePercent = snapshot.brakePercent.takeIf { isFresh(brakeReceivedMs, nowMs) }
         // Only speed samples advance the longitudinal estimator; steering/brake just refresh lateral.
         val estimate = if (signal is VehicleSignal.Speed) {
-            gEstimator.update(speed, snapshot.steeringDeg, snapshot.brakePressed, snapshot.brakePercent, nowMs)
+            gEstimator.update(speed, steering, brake, brakePercent, nowMs)
         } else {
             val prevLong = g.lastEstimate?.longitudinalG ?: 0.0
-            val lat = snapshot.steeringDeg?.let { gEstimator.lateralG(speed, it) } ?: 0.0
-            GEstimate(lateralG = lat, longitudinalG = prevLong, speedMps = speed)
+            val lat = steering?.let { gEstimator.lateralG(speed, it) } ?: 0.0
+            GEstimate(lateralG = lat, longitudinalG = prevLong, speedMps = speed,
+                lateralAvailable = steering != null,
+                longitudinalAvailable = g.lastEstimate?.longitudinalAvailable == true)
         }
-        if (!snapshot.isDriving) {
-            val parked = g.copy(lastEstimate = estimate, badge = BadgeLevel.OK)
+        if (snapshot.isParkedStill) {
+            val parked = g.copy(lastEstimate = estimate.takeIf { it.hasData && it.totalG.isFinite() }, badge = BadgeLevel.OK)
             state = parked
-            if (parked.arrivalPending != null) arrive(parked, nowMs, reason = "내비 목적지 도착 후 P", effects = effects)
+            if (parked.arrivalPending != null && canControlCabin(nowMs)) arrive(parked, nowMs, reason = "내비 목적지 도착 후 P", effects = effects)
+            return
+        }
+        if (!estimate.hasData || !estimate.totalG.isFinite()) {
+            state = g.copy(lastEstimate = null, badge = BadgeLevel.OK)
             return
         }
         val ratio = estimate.ratioTo(g.preset.limitG)
@@ -378,29 +443,14 @@ class CargoStateMachine(
         if (level != BadgeLevel.OK) {
             val entering = g.badge == BadgeLevel.OK || (level == BadgeLevel.OVER && g.badge == BadgeLevel.WARN)
             val parkingManoeuvre = speed < config.minCoachSpeedMps && estimate.lateralG >= abs(estimate.longitudinalG)
-            val emergency = estimate.totalG >= config.emergencyG
             next = next.copy(badge = level, lastBadgeChangeMs = nowMs)
             // (a) one soft chime when the guard *enters* WARN/OVER — not on every sample while it lasts
             if (entering && !parkingManoeuvre && nowMs - g.lastWarnMs >= config.chimeCooldownMs) {
                 effects += Effect.Chime(ChimeKind.SOFT)
-                next = next.copy(lastWarnMs = nowMs, trip = next.trip.copy(warnCount = next.trip.warnCount + 1))
             }
             // (b) voice only once the limit is actually exceeded; capped per trip; never over an emergency
-            if (level == BadgeLevel.OVER && nowMs - g.lastCoachMs >= config.coachCooldownMs) {
-                when {
-                    parkingManoeuvre -> Unit
-                    emergency -> effects += Effect.Log("긴급 조작(${formatG(estimate.totalG)}g) → 음성 코칭 억제, 리포트에만 기록")
-                    g.voiceCoachCount >= config.maxVoiceCoachPerTrip ->
-                        effects += Effect.Log("주행당 음성 코칭 ${config.maxVoiceCoachPerTrip}회 상한 → 효과음·배지만")
-                    else -> {
-                        effects += Effect.Speak(coachingLine(g.preset, estimate))
-                        next = next.copy(
-                            lastCoachMs = nowMs,
-                            voiceCoachCount = g.voiceCoachCount + 1,
-                            trip = next.trip.copy(coachingCount = next.trip.coachingCount + 1),
-                        )
-                    }
-                }
+            if (level == BadgeLevel.OVER && !parkingManoeuvre && nowMs - g.lastCoachMs >= config.coachCooldownMs) {
+                effects += Effect.Speak(coachingLine(g.preset, estimate))
             }
         } else if (g.badge != BadgeLevel.OK && nowMs - g.lastBadgeChangeMs >= config.badgeHoldMs) {
             next = next.copy(badge = BadgeLevel.OK, lastBadgeChangeMs = nowMs)
@@ -427,14 +477,14 @@ class CargoStateMachine(
             is NaviEvent.SharpCurveAhead -> if (snapshot.isDriving && nowMs - g.lastCurveCoachMs >= config.curveCoachCooldownMs) {
                 effects += Effect.Chime(ChimeKind.SOFT)
                 effects += Effect.Speak("${event.distanceM}미터 앞 급커브, 조금 줄여 부드럽게")
-                state = g.copy(lastCurveCoachMs = nowMs, trip = g.trip.copy(coachingCount = g.trip.coachingCount + 1))
+                state = g.copy(lastCurveCoachMs = nowMs)
             }
             is NaviEvent.SpeedBumpAhead -> if (snapshot.isDriving && nowMs - g.lastBumpCoachMs >= config.bumpCoachCooldownMs) {
                 effects += Effect.Speak("${event.distanceM}미터 앞 과속방지턱, 천천히 넘어 주세요")
-                state = g.copy(lastBumpCoachMs = nowMs, trip = g.trip.copy(coachingCount = g.trip.coachingCount + 1))
+                state = g.copy(lastBumpCoachMs = nowMs)
             }
             is NaviEvent.DestinationArrived -> when {
-                !snapshot.isDriving -> arrive(g, nowMs, reason = "내비 목적지 도착", effects = effects)
+                canControlCabin(nowMs) -> arrive(g, nowMs, reason = "내비 목적지 도착", effects = effects)
                 g.arrivalPending == null -> {
                     state = g.copy(arrivalPending = event.name ?: "목적지")
                     effects += Effect.Speak("목적지예요. 주차하면 ${g.preset.arrivalNoun} 챙기기를 알려 드릴게요")
@@ -451,12 +501,18 @@ class CargoStateMachine(
 
     private fun startGuard(preset: CargoPreset, requested: CargoSpot?, nowMs: Long, effects: MutableList<Effect>, spoken: Boolean) {
         if (state is CargoState.Arrived) return
+        if (!canControlCabin(nowMs)) {
+            effects += Effect.Log("기어 P와 정차 신호를 확인한 뒤 VIP 모드를 시작할 수 있어요")
+            return
+        }
         val spot = requested ?: (state as? CargoState.Offering)?.spot ?: preferredSpot
         // Selecting an occupied seat is allowed: the passenger holds the VIP, so seat heater/vent are left alone.
         val held = spot.hasSeat && snapshot.occupied(spot)
         gEstimator.reset()
         ignoredOfferStreak.clear() // the user engaged: every muted trigger gets another chance
         preferredSpot = spot
+        // A replacement may omit features or move to another zone; release the previous plan first.
+        if (state is CargoState.Guarding) effects += Effect.RestoreCabin
         state = CargoState.Guarding(preset = preset, trip = TripStats(startedMs = nowMs), spot = spot, heldByPassenger = held)
         effects += Effect.ApplyCabin(preset, spot, held)
         effects += Effect.Chime(ChimeKind.SUCCESS)
@@ -472,15 +528,16 @@ class CargoStateMachine(
         val heater = result.status(CabinFeature.SEAT_HEATER)
         when (heater) {
             FeatureStatus.BLOCKED_BY_OCCUPANCY ->
-                effects += Effect.Speak("${g.spot.label} 자리가 비어 있어 열선은 켜지지 않았어요. 송풍을 끄고 보온할게요")
+                effects += Effect.Speak("착좌 조건을 확인하지 못해 ${g.spot.label} 열선 설정은 변경하지 않았어요")
             FeatureStatus.SKIPPED_NO_CONSENT ->
-                effects += Effect.Speak("빈 좌석 열선은 설정에서 허용하면 켤 수 있어요")
+                effects += Effect.Speak("열선 설정은 변경하지 않았어요. 적용 결과를 확인해 주세요")
             else -> Unit
         }
         effects += Effect.Log("캐빈 적용: ${result.applied.size}개 성공, ${result.problems.size}개 미적용")
     }
 
     private fun onTick(nowMs: Long, effects: MutableList<Effect>) {
+        refreshMotionStatus(nowMs)
         when (val s = state) {
             is CargoState.Offering -> if (nowMs >= s.deadlineMs) {
                 if (s.isAutomatic) {
@@ -501,6 +558,7 @@ class CargoStateMachine(
     }
 
     private fun arrive(g: CargoState.Guarding, nowMs: Long, reason: String, effects: MutableList<Effect>) {
+        if (!canControlCabin(nowMs)) return
         val report = TripReport(
             preset = g.preset,
             maxG = g.trip.maxG,
@@ -509,12 +567,88 @@ class CargoStateMachine(
             warnCount = g.trip.warnCount,
             durationMs = nowMs - (g.trip.departedMs ?: g.trip.startedMs),
             spot = g.spot,
+            drivingSpeechCount = g.trip.drivingSpeechCount,
+            drivingChimeCount = g.trip.drivingChimeCount,
+            audioSuppressionCounts = g.trip.audioSuppressionCounts,
+            gSamples = g.trip.gSamples,
         )
         state = CargoState.Arrived(g.preset, report, reason, g.spot)
         effects += Effect.Speak("${g.spot.label} ${g.preset.arrivalNoun} 챙기세요", priority = true)
         effects += Effect.RestoreCabin
         effects += Effect.Chime(ChimeKind.SUCCESS)
         effects += Effect.Log("도착 ($reason) · 최대 ${formatG(report.maxG)}G · 코칭 ${report.coachingCount}회")
+    }
+
+    private fun isFresh(receivedMs: Long?, nowMs: Long): Boolean =
+        receivedMs != null && nowMs >= receivedMs && nowMs - receivedMs <= config.motionFreshnessMs
+
+    private fun motionStatus(nowMs: Long): MotionSignalStatus = when {
+        sourceDisconnected -> MotionSignalStatus.DISCONNECTED
+        !isFresh(speedReceivedMs, nowMs) || snapshot.speedMps == null -> MotionSignalStatus.STALE
+        !isFresh(steeringReceivedMs, nowMs) || snapshot.steeringDeg == null -> MotionSignalStatus.SPEED_ONLY
+        else -> MotionSignalStatus.FRESH
+    }
+
+    private fun refreshMotionStatus(nowMs: Long) {
+        val g = state as? CargoState.Guarding ?: return
+        val status = motionStatus(nowMs)
+        val unavailable = status == MotionSignalStatus.STALE || status == MotionSignalStatus.DISCONNECTED
+        if (unavailable) gEstimator.reset()
+        // A missing estimate is distinct from a measured 0 G. Clear obsolete lateral values too.
+        val clearEstimate = unavailable || (status == MotionSignalStatus.SPEED_ONLY && g.motionStatus == MotionSignalStatus.FRESH)
+        state = g.copy(motionStatus = status,
+            lastEstimate = if (clearEstimate) null else g.lastEstimate,
+            badge = if (unavailable) BadgeLevel.OK else g.badge)
+    }
+
+    /** All app-generated driving audio shares this gate, regardless of its originating feature. */
+    private fun limitDrivingAudio(previous: CargoState.Guarding?, nowMs: Long, effects: MutableList<Effect>) {
+        if (canControlCabin(nowMs)) return
+        val audible = effects.filter { it is Effect.Speak || it is Effect.Chime }
+        if (audible.isEmpty()) return
+        val g = (state as? CargoState.Guarding) ?: previous
+        if (g == null) {
+            effects.removeAll(audible.toSet())
+            return
+        }
+        val status = motionStatus(nowMs)
+        val reason = when {
+            status == MotionSignalStatus.STALE || status == MotionSignalStatus.DISCONNECTED -> AudioSuppressionReason.SIGNAL_UNAVAILABLE
+            snapshot.gear == Gear.PARK -> AudioSuppressionReason.SIGNAL_UNAVAILABLE
+            (g.lastEstimate?.totalG ?: 0.0) >= config.emergencyG -> AudioSuppressionReason.EMERGENCY
+            g.trip.drivingAudibleCount >= config.maxAudiblePerTrip -> AudioSuppressionReason.TRIP_LIMIT
+            nowMs - g.lastAudibleMs < config.audibleCooldownMs -> AudioSuppressionReason.COOLDOWN
+            else -> null
+        }
+        val speech = audible.filterIsInstance<Effect.Speak>().firstOrNull()
+            ?.takeIf { g.trip.drivingSpeechCount < config.maxVoiceCoachPerTrip }
+        val selected = if (reason == null) speech ?: audible.filterIsInstance<Effect.Chime>().firstOrNull() else null
+        val suppression = reason ?: if (selected == null) AudioSuppressionReason.VOICE_LIMIT
+            else if (audible.size > 1) AudioSuppressionReason.COALESCED else null
+        val suppressed = audible.size - if (selected == null) 0 else 1
+        effects.removeAll(audible.toSet())
+        if (selected != null) effects += selected
+        val isSpeech = selected is Effect.Speak
+        val isChime = selected is Effect.Chime
+        val trip = g.trip.copy(
+            drivingSpeechCount = g.trip.drivingSpeechCount + if (isSpeech) 1 else 0,
+            drivingChimeCount = g.trip.drivingChimeCount + if (isChime) 1 else 0,
+            coachingCount = g.trip.coachingCount + if (isSpeech) 1 else 0,
+            warnCount = g.trip.warnCount + if (isChime) 1 else 0,
+            audioSuppressionCounts = if (suppression == null) g.trip.audioSuppressionCounts else
+                g.trip.audioSuppressionCounts + (suppression to ((g.trip.audioSuppressionCounts[suppression] ?: 0) + suppressed)),
+        )
+        if (state is CargoState.Guarding) state = (state as CargoState.Guarding).copy(
+            trip = trip,
+            lastAudibleMs = if (selected != null) nowMs else g.lastAudibleMs,
+            lastCoachMs = if (isSpeech) nowMs else g.lastCoachMs,
+            lastWarnMs = if (isChime) nowMs else g.lastWarnMs,
+            voiceCoachCount = trip.drivingSpeechCount,
+            lastAudioSuppression = suppression,
+        )
+        if (suppression != null && suppression != g.lastAudioSuppression) {
+            effects += Effect.Log("주행 안내 억제: $suppression ($suppressed 요청) · 허용 음성 ${trip.drivingSpeechCount}, 효과음 ${trip.drivingChimeCount}")
+        }
     }
 
     companion object {

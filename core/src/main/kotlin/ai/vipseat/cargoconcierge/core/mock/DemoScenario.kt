@@ -22,8 +22,8 @@ class DemoActors(
  *
  * Speeds ramp at ≈1 m/s² (0.10 g) so that only the *intended* moments cross the 0.15 g cake limit:
  *   20 s  45° @ 30 km/h  → 0.13 g  (85 %, soft chime)
- *   26 s 100° @ 30 km/h  → 0.29 g  (over → TTS coaching)
- *   33 s navi sharp curve → "100미터 앞 급커브, 조금 줄여 부드럽게"
+ *   26 s 100° @ 30 km/h  → 0.29 g  (over, shared audio cooldown may suppress speech)
+ *   33 s navi sharp curve → speech subject to the same shared cooldown/budget
  *   41 s  85° @ 22 km/h  → 0.13 g  (slowed down as coached: chime only)
  *   51 s 30→12 km/h in 1 s → 0.51 g (hard brake → TTS coaching)
  *   70 s P + driver door → "조수석 케이크 챙기세요" + trip report
@@ -32,8 +32,9 @@ object DemoScenario {
     val cakeRun: List<DemoStep> = listOf(
         DemoStep(0, "베이커리 앞 정차 · 기어 P") { a -> a.vehicle.setGear(Gear.PARK); a.vehicle.setSpeedKph(0.0); a.vehicle.setPassengerOccupied(false) },
         DemoStep(1_500, "조수석 도어 열림") { a -> a.vehicle.setDoor(DoorId.PASSENGER, true) },
-        DemoStep(4_000, "케이크 상자를 시트에 놓고 도어 닫힘 → 프리셋 제안") { a -> a.vehicle.setDoor(DoorId.PASSENGER, false) },
-        DemoStep(7_000, "\"케이크\" 선택 → 조수석 18℃ · 열선 OFF") { a -> a.selectPreset(CargoKind.CAKE) },
+        DemoStep(4_000, "케이크 상자를 시트에 놓고 도어 닫힘 → 프리셋 제안") { a -> a.vehicle.setGear(Gear.PARK); a.vehicle.setSpeedKph(0.0); a.vehicle.setDoor(DoorId.PASSENGER, false) },
+        DemoStep(6_500, "시작 전 정차 신호 확인 · 시뮬레이션 입력") { a -> a.vehicle.setGear(Gear.PARK); a.vehicle.setSpeedKph(0.0) },
+        DemoStep(7_000, "\"케이크\" 선택 → 조수석 18℃ · 열선 OFF") { a -> a.vehicle.setSpeedKph(0.0); a.selectPreset(CargoKind.CAKE) },
         DemoStep(11_000, "출발 · 기어 D") { a -> a.vehicle.setGear(Gear.DRIVE) },
         DemoStep(12_000, "부드러운 가속 10 km/h") { a -> a.vehicle.setSpeedKph(10.0) },
         DemoStep(14_000, "가속 17 km/h") { a -> a.vehicle.setSpeedKph(17.0) },
@@ -41,9 +42,9 @@ object DemoScenario {
         DemoStep(18_000, "순항 30 km/h") { a -> a.vehicle.setSpeedKph(30.0) },
         DemoStep(20_000, "완만한 코너 · 핸들 45° (≈0.13G, 80 % 경고음)") { a -> a.vehicle.setSteering(45.0) },
         DemoStep(23_000, "핸들 복원") { a -> a.vehicle.setSteering(0.0); a.vehicle.setSpeedKph(30.0) },
-        DemoStep(26_000, "급한 코너 · 핸들 100° (≈0.29G, 한계 초과 → TTS 코칭)") { a -> a.vehicle.setSteering(100.0) },
+        DemoStep(26_000, "급한 코너 · 핸들 100° (≈0.29G, 공통 안내 제한 적용)") { a -> a.vehicle.setSpeedKph(30.0); a.vehicle.setSteering(100.0) },
         DemoStep(29_000, "핸들 복원") { a -> a.vehicle.setSteering(0.0); a.vehicle.setSpeedKph(30.0) },
-        DemoStep(33_000, "내비: 100 m 앞 급커브 → \"조금 줄여 부드럽게\"") { a -> a.navi.sharpCurve(100, TurnDirection.RIGHT) },
+        DemoStep(33_000, "내비: 100 m 앞 급커브 · 공통 안내 제한 적용") { a -> a.vehicle.setSpeedKph(30.0); a.navi.sharpCurve(100, TurnDirection.RIGHT) },
         DemoStep(35_000, "감속 27 km/h") { a -> a.vehicle.setSpeedKph(27.0) },
         DemoStep(37_000, "감속 24 km/h") { a -> a.vehicle.setSpeedKph(24.0) },
         DemoStep(39_000, "감속 22 km/h") { a -> a.vehicle.setSpeedKph(22.0) },
@@ -59,7 +60,7 @@ object DemoScenario {
         DemoStep(64_000, "감속 6 km/h") { a -> a.vehicle.setSpeedKph(6.0) },
         DemoStep(66_000, "정차") { a -> a.vehicle.setSpeedKph(0.0) },
         DemoStep(68_000, "기어 P") { a -> a.vehicle.setGear(Gear.PARK) },
-        DemoStep(70_000, "운전석 도어 열림 → \"조수석 케이크 챙기세요\" · 리포트") { a -> a.vehicle.setDoor(DoorId.DRIVER, true) },
+        DemoStep(70_000, "운전석 도어 열림 → \"조수석 케이크 챙기세요\" · 리포트") { a -> a.vehicle.setSpeedKph(0.0); a.vehicle.setDoor(DoorId.DRIVER, true) },
     )
 
     val durationMs: Long get() = cakeRun.last().atMs + 1_000

@@ -1,6 +1,7 @@
 package ai.vipseat.cargoconcierge.ui
 
 import ai.vipseat.cargoconcierge.R
+import ai.vipseat.cargoconcierge.core.engine.MotionSignalStatus
 import ai.vipseat.cargoconcierge.core.engine.BadgeLevel
 import ai.vipseat.cargoconcierge.core.engine.CargoState
 import ai.vipseat.cargoconcierge.core.engine.CargoStateMachine
@@ -42,13 +43,14 @@ fun DrivingBadgeScreen(ui: UiState) {
             }
             return@Box
         }
-        val color = badgeColor(guarding.badge)
+        val unavailable = guarding.motionStatus == MotionSignalStatus.STALE || guarding.motionStatus == MotionSignalStatus.DISCONNECTED
+        val color = if (unavailable) MistDim else badgeColor(guarding.badge)
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-            GuardBadge(guarding.preset, color, size = 360.dp, label = "${CargoStateMachine.formatG(guarding.preset.limitG)}G 가드")
+            GuardBadge(guarding.preset, color, size = 360.dp, label = if (unavailable) "신호 확인 중" else "${CargoStateMachine.formatG(guarding.preset.limitG)}G 기준")
             Spacer(Modifier.height(24.dp))
             Text(
-                when (guarding.badge) {
-                    BadgeLevel.OK -> "${guarding.preset.arrivalNoun} 편안함"
+                if (unavailable) "주행 추정을 잠시 멈췄어요" else when (guarding.badge) {
+                    BadgeLevel.OK -> "추정값이 코칭 기준 이내예요"
                     BadgeLevel.WARN -> "조금만 부드럽게"
                     BadgeLevel.OVER -> "${guarding.preset.arrivalNoun} 기준 초과"
                 },
@@ -57,7 +59,7 @@ fun DrivingBadgeScreen(ui: UiState) {
             )
             Spacer(Modifier.height(12.dp))
             Text(
-                "주행 중에는 음성으로만 안내해요",
+                if (guarding.motionStatus == MotionSignalStatus.SPEED_ONLY) "조향 신호 미확인 · 가감속만 추정해요" else "추정값 안내 · 적재물 상태는 정차 후 확인해 주세요",
                 style = MaterialTheme.typography.titleMedium,
                 color = MistDim,
                 modifier = Modifier.padding(top = 8.dp),

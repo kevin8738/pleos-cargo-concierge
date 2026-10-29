@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-/** Debug-only entry point for the adb demo scripts. No-op in release builds. */
+/** Contest replay entry point. Manifest restricts senders to holders of android.permission.DUMP. */
 class DemoBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (!BuildConfig.DEMO_BRIDGE) return   // contest/prototype builds keep the adb demo bridge; set DEMO_BRIDGE=false for an App Market build

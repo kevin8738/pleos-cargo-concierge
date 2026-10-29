@@ -1,5 +1,9 @@
 package ai.vipseat.cargoconcierge.vm
 
+import ai.vipseat.cargoconcierge.core.engine.CabinCommandGate
+import ai.vipseat.cargoconcierge.core.port.CabinCommandPolicy
+import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
+import ai.vipseat.cargoconcierge.core.port.FeatureStatus
 import ai.vipseat.cargoconcierge.core.engine.Action
 import ai.vipseat.cargoconcierge.core.engine.CargoState
 import ai.vipseat.cargoconcierge.core.engine.CargoStateMachine
@@ -65,6 +69,9 @@ data class UiState(
     val recent: List<CargoPreset> = emptyList(),
     /** Where the VIP rides: the active session's spot, else the one picked on the cabin map. */
     val spot: CargoSpot = CargoSpot.FRONT_PASSENGER,
+    val mutedOfferCount: Int = 0,
+    val cabinNotice: String? = null,
+    val cabinRestorePending: Boolean = false,
 ) {
     /** The only question the UI asks: may it show more than the static badge? */
     val interactive: Boolean get() = uiMode == UiMode.PARKED && !uxRestricted
@@ -82,6 +89,8 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
     private val demoPlayer: DemoPlayer
     /** Cabin commands run strictly in order (a spot move is restore → apply). */
     private val cabinMutex = Mutex()
+    private val cabinGate = CabinCommandGate()
+    private var restoreBlocked = false
 
     init {
         val s = graph.settings.settings.value
@@ -90,6 +99,7 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
         _ui.update {
             it.copy(
                 settings = s,
+                cabinNotice = if (graph.settings.cabinSessionPending) "이전 실행의 공조 복원을 확인하지 못했어요. 차량 설정을 직접 확인해 주세요." else null,
                 vehicleSource = graph.vehicle.name,
                 naviSource = graph.navi.name,
                 speechSource = graph.speech.name,
@@ -135,6 +145,19 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
     /** Host-side F1 ②/③ triggers (pre-boot door history, pickup-store geofence) — obeys the reducer's suppression rules. */
     fun externalOffer(reason: String) = dispatch(Action.ExternalOffer(reason))
     fun acknowledgeReport() = dispatch(Action.AcknowledgeReport)
+    fun retryRestore() {
+        if (!_ui.value.interactive || !sm.canControlCabin(now())) return
+        if (sm.state is CargoState.Guarding) dispatch(Action.EndTrip)
+        else handle(Effect.RestoreCabin, cabinGate.advance())
+    }
+    fun resetOfferSuppression() = dispatch(Action.ResetOfferSuppression)
+    fun continueWithSameVip() {
+        val arrived = sm.state as? CargoState.Arrived ?: return
+        if (!_ui.value.interactive || !sm.canControlCabin(now())) return
+        dispatch(Action.AcknowledgeReport)
+        dispatch(Action.SelectSpot(arrived.spot))
+        dispatch(Action.SelectPreset(arrived.preset))
+    }
     fun endTrip() = dispatch(Action.EndTrip)
     fun toggleSettings(show: Boolean = !_ui.value.showSettings) = _ui.update { it.copy(showSettings = show) }
     fun toggleDemoPanel(show: Boolean = !_ui.value.showDemoPanel) = _ui.update { it.copy(showDemoPanel = show) }
@@ -161,17 +184,17 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
             }
             VoiceIntent.EndTrip -> { log("음성: \"$text\" → 종료"); dispatch(Action.EndTrip) }
             VoiceIntent.OpenSheet -> { log("음성: \"$text\" → 프리셋"); dispatch(Action.OpenOffer) }
-            is VoiceIntent.Unknown -> { log("음성: \"$text\" → 인식 못함"); speak("무엇을 실었는지 못 알아들었어요. 조수석에 도자기 실었어, 처럼 말씀해 주세요") }
+            is VoiceIntent.Unknown -> { log("음성: \"$text\" → 인식 못함"); if (_ui.value.interactive && sm.canControlCabin(now())) speak("무엇을 실었는지 못 알아들었어요. 조수석에 도자기 실었어, 처럼 말씀해 주세요") }
         }
     }
 
     fun startListening() {
-        if (_ui.value.listening) return
+        if (_ui.value.listening || !_ui.value.interactive || !sm.canControlCabin(now())) return
         viewModelScope.launch {
             _ui.update { it.copy(listening = true) }
             val text = runCatching { graph.voice.listenOnce() }.getOrNull()
             _ui.update { it.copy(listening = false) }
-            if (text.isNullOrBlank()) { log("음성 입력 없음 (${graph.voice.name})"); speak("잘 못 들었어요") } else voiceText(text)
+            if (text.isNullOrBlank()) { log("음성 입력 없음 (${graph.voice.name})"); if (_ui.value.interactive && sm.canControlCabin(now())) speak("잘 못 들었어요") } else voiceText(text)
         }
     }
 
@@ -209,9 +232,11 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
 
     private fun dispatch(action: Action) {
         val t = now()
+        val wasParked = _ui.value.interactive
         val effects = sm.dispatch(action, t)
+        if (wasParked && sm.uiMode == UiMode.DRIVING) graph.speech.stop()
         val state = sm.state
-        if ((action is Action.SelectPreset || action is Action.VoicePreset) && state is CargoState.Guarding) graph.recents.record(state.preset)
+        if ((action is Action.SelectPreset || action is Action.VoicePreset) && state is CargoState.Guarding && effects.any { it is Effect.ApplyCabin }) graph.recents.record(state.preset)
         // logcat-only (never the on-screen event log): the demo video's G gauge is driven by the app's own estimate.
         if (action is Action.Vehicle && state is CargoState.Guarding) state.lastEstimate?.let { e ->
             Log.d(TAG, String.format(java.util.Locale.US, "G lat=%.3f lon=%.3f total=%.3f limit=%.2f badge=%s kph=%.0f",
@@ -224,34 +249,74 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
                 snapshot = sm.snapshot,
                 offerRemainingMs = (state as? CargoState.Offering)?.let { o -> (o.deadlineMs - t).coerceAtLeast(0) } ?: 0,
                 spot = sm.currentSpot,
+                mutedOfferCount = sm.mutedTriggerCount,
             )
         }
-        effects.forEach(::handle)
+        val cabinTicket = if (effects.any { it is Effect.ApplyCabin || it == Effect.RestoreCabin }) cabinGate.advance() else 0L
+        effects.forEach { handle(it, cabinTicket) }
     }
 
-    private fun handle(effect: Effect) {
+    private fun handle(effect: Effect, cabinTicket: Long) {
         when (effect) {
             is Effect.Speak -> speak(effect.text, effect.priority)
             is Effect.Chime -> graph.chime.play(effect.kind)
             is Effect.ApplyCabin -> viewModelScope.launch {
                 cabinMutex.withLock {
-                    val consent = ApplyConsent(emptySeatHeaterAllowed = graph.settings.settings.value.emptySeatHeaterConsent)
-                    // A passenger already sitting there holds the VIP: never heat or ventilate a person's seat for cargo.
-                    val plan = if (effect.heldByPassenger) effect.preset.cabin.copy(seatHeaterLevel = null, seatVentLevel = null) else effect.preset.cabin
-                    log("캐빈 적용 → ${effect.spot.label}${if (effect.heldByPassenger) " (동승자가 들고 있음 · 열선·통풍 제외)" else ""}")
-                    val result = withContext(Dispatchers.IO) {
-                        runCatching { graph.vehicle.applyCabin(plan, consent, effect.spot) }
-                            .onFailure { Log.w(TAG, "applyCabin failed", it) }
-                            .getOrDefault(ai.vipseat.cargoconcierge.core.port.CabinApplyResult.EMPTY)
+                    val active = sm.state as? CargoState.Guarding
+                    if (!cabinGate.isCurrent(cabinTicket) || active?.preset != effect.preset || active.spot != effect.spot) {
+                        log("지난 세션의 대기 공조 요청 취소")
+                        return@withLock
                     }
-                    result.outcomes.forEach { o -> log("  ${o.feature}: ${o.status}${if (o.detail.isNotBlank()) " (${o.detail})" else ""}") }
-                    dispatch(Action.CabinApplied(result))
+                    if (restoreBlocked) {
+                        log("이전 캐빈 복원 미확인 → 새 설정 적용 보류")
+                        graph.settings.setCabinSessionPending(true)
+                        _ui.update { it.copy(cabinNotice = "이전 설정 복원을 확인하지 못해 새 설정 적용을 보류했어요.", cabinRestorePending = true) }
+                        val blocked = CabinApplyResult.unsupported(effect.preset.cabin, "이전 설정 복원을 먼저 확인해 주세요")
+                        dispatch(Action.CabinApplied(CabinApplyResult(blocked.outcomes.map { it.copy(status = FeatureStatus.FAILED) })))
+                        return@withLock
+                    }
+                    if (!_ui.value.interactive || !sm.canControlCabin(now())) {
+                        log("공조 실행 시 P·정차 조건 미충족 → 적용하지 않음")
+                        val blocked = CabinApplyResult.unsupported(effect.preset.cabin, "P·정차 확인 필요")
+                        dispatch(Action.CabinApplied(CabinApplyResult(blocked.outcomes.map { it.copy(status = FeatureStatus.DRIVING_RESTRICTED) })))
+                        return@withLock
+                    }
+                    val consent = ApplyConsent(emptySeatHeaterAllowed = false)
+                    val request = CabinCommandPolicy.prepare(effect.preset.cabin,
+                        effect.heldByPassenger || (effect.spot.hasSeat && sm.snapshot.occupied(effect.spot)))
+                    _ui.update { it.copy(cabinNotice = "캐빈 설정 결과를 확인하고 있어요", cabinRestorePending = false) }
+                    graph.settings.setCabinSessionPending(true)
+                    log("캐빈 적용 → ${effect.spot.label}")
+                    val result = withContext(Dispatchers.IO) {
+                        runCatching { graph.vehicle.applyCabin(request.plan, consent, effect.spot) }
+                            .onFailure { Log.w(TAG, "applyCabin failed", it) }
+                            .getOrElse { CabinApplyResult(CabinApplyResult.unsupported(request.plan, "제어 응답 실패").outcomes.map { o -> o.copy(status = FeatureStatus.FAILED) }) }
+                    }
+                    val reported = CabinApplyResult(result.outcomes + request.withheld)
+                    reported.outcomes.forEach { o -> log("  ${o.feature}: ${o.status}${if (o.detail.isNotBlank()) " (${o.detail})" else ""}") }
+                    if (cabinGate.isCurrent(cabinTicket)) {
+                        _ui.update { it.copy(cabinNotice = "종료 시 앱이 바꾼 값만 조건을 확인해 복원해요") }
+                        dispatch(Action.CabinApplied(reported))
+                    }
                 }
             }
             Effect.RestoreCabin -> viewModelScope.launch {
                 cabinMutex.withLock {
-                    withContext(Dispatchers.IO) { runCatching { graph.vehicle.restoreCabin() } }
-                    log("캐빈 원복")
+                    val result = withContext(Dispatchers.IO) {
+                        runCatching { graph.vehicle.restoreCabin() }
+                            .onFailure { Log.w(TAG, "restoreCabin failed", it) }.getOrNull()
+                    }
+                    result?.outcomes?.forEach { o -> log("원복 ${o.feature}: ${o.status} ${o.detail}") }
+                    val failed = result == null || result.problems.isNotEmpty()
+                    restoreBlocked = failed
+                    val notice = if (failed) "복원하지 못한 항목이 있어요. P 정차 후 차량 설정을 확인해 주세요."
+                        else if (result!!.outcomes.isEmpty()) "복원할 앱 변경값이 없어요. 미적용 항목은 그대로예요."
+                        else "앱 변경값의 조건부 복원을 마쳤어요. 외부에서 바뀐 값은 유지해요."
+                    if (cabinGate.isCurrent(cabinTicket)) {
+                        graph.settings.setCabinSessionPending(failed)
+                        _ui.update { it.copy(cabinNotice = notice, cabinRestorePending = failed) }
+                    }
+                    log(notice)
                 }
             }
             is Effect.Log -> log(effect.message)
@@ -261,7 +326,14 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
     private fun speak(text: String, priority: Boolean = false) {
         log("TTS: $text")
         if (!graph.settings.settings.value.ttsEnabled) return
-        viewModelScope.launch { runCatching { graph.speech.speak(text, priority) }.onFailure { Log.w(TAG, "speak failed", it) } }
+        val requestedWhileParked = sm.snapshot.isParkedStill
+        viewModelScope.launch {
+            if (requestedWhileParked && !sm.canControlCabin(now())) return@launch
+            runCatching {
+                graph.speech.stop() // Do not build a queue of obsolete coaching or parked status messages.
+                graph.speech.speak(text, priority)
+            }.onFailure { Log.w(TAG, "speak failed", it) }
+        }
     }
 
     private fun log(text: String) {
@@ -270,6 +342,7 @@ class CargoViewModel(private val graph: AppGraph) : ViewModel() {
     }
 
     override fun onCleared() {
+        cabinGate.advance()
         demoPlayer.stop()
         viewModelScope.launch { runCatching { graph.vehicle.disconnect() }; runCatching { graph.navi.disconnect() } }
         graph.speech.stop()

@@ -40,15 +40,16 @@ fun SettingsScreen(ui: UiState, vm: CargoViewModel) {
         Panel(Modifier.fillMaxWidth()) {
             Column {
                 SectionTitle("안전 · 동의", icon = R.drawable.ic_shield)
-                ToggleRow(
-                    "빈 좌석 열선 허용",
-                    "뜨거운 음식 프리셋이 비어 있는 VIP 좌석(조수석·뒷좌석)의 열선을 켤 수 있게 합니다. 차량의 승객감지(OCS)가 차단하면 그 결과를 그대로 보여줍니다.",
-                    s.emptySeatHeaterConsent,
-                ) { v -> vm.updateSettings { it.copy(emptySeatHeaterConsent = v) } }
+                Text("음식 보온 열선 · 검증 대기", style = MaterialTheme.typography.titleLarge)
+                Text("음식·용기·시트의 온도 검증 전에는 열선을 켜지 않아요. 기존 허용 설정이 있어도 적용하지 않습니다.", style = MaterialTheme.typography.bodyMedium, color = MistDim)
                 Divider(); Spacer(Modifier.height(16.dp))
-                ToggleRow("음성 코칭 (TTS)", "한계 초과·급커브·도착 시 음성 안내", s.ttsEnabled) { v -> vm.updateSettings { it.copy(ttsEnabled = v) } }
+                ToggleRow("음성 코칭 (TTS)", "추정 기준 초과·급커브·도착 안내 (주행 중 공통 횟수·간격 제한)", s.ttsEnabled) { v -> vm.updateSettings { it.copy(ttsEnabled = v) } }
                 Divider(); Spacer(Modifier.height(16.dp))
-                ToggleRow("경고음", "허용치 80 %에서 짧은 알림음", s.chimeEnabled) { v -> vm.updateSettings { it.copy(chimeEnabled = v) } }
+                ToggleRow("경고음", "추정 기준 80 %에서 짧은 알림음 (음성과 공통 예산)", s.chimeEnabled) { v -> vm.updateSettings { it.copy(chimeEnabled = v) } }
+                Divider(); Spacer(Modifier.height(16.dp))
+                Text("자동 제안 억제 ${ui.mutedOfferCount}개", style = MaterialTheme.typography.titleLarge)
+                Text("3회 연속 응답하지 않은 문 제안을 다시 받을 수 있어요.", style = MaterialTheme.typography.bodyMedium, color = MistDim)
+                IconPill(R.drawable.ic_restore, "자동 제안 다시 받기", onClick = vm::resetOfferSuppression)
                 Divider(); Spacer(Modifier.height(16.dp))
                 ToggleRow("데모 급커브 주입 허용", "내비가 곡률 정보를 주지 않을 때 \"100 m 앞 급커브\" 데모 이벤트를 허용", s.demoCurveInjection) { v -> vm.updateSettings { it.copy(demoCurveInjection = v) } }
             }
@@ -66,7 +67,7 @@ fun SettingsScreen(ui: UiState, vm: CargoViewModel) {
                             PresetGlyph(p, 36.dp)
                             Text(p.displayName, style = MaterialTheme.typography.titleLarge, modifier = Modifier.width(260.dp))
                             Chip(p.kind.label, color = ai.vipseat.cargoconcierge.ui.theme.itemColor(p.kind))
-                            Text("허용 ${p.limitG}G · ${p.tagline}", style = MaterialTheme.typography.bodyMedium, color = MistDim, modifier = Modifier.weight(1f))
+                            Text("추정 기준 ${p.limitG}G · ${p.tagline}", style = MaterialTheme.typography.bodyMedium, color = MistDim, modifier = Modifier.weight(1f))
                             IconPill(R.drawable.ic_close, "지우기", onClick = { vm.removeRecent(p.displayName) })
                         }
                     }
@@ -77,7 +78,7 @@ fun SettingsScreen(ui: UiState, vm: CargoViewModel) {
             Column {
                 SectionTitle("차량 모델 (G 추정)", icon = R.drawable.ic_steering)
                 Text("a_lat = v² · tan(δ_wheel / ratio) / L  ·  L = ${s.wheelbaseM} m, ratio = ${s.steeringRatio}", style = MaterialTheme.typography.bodyLarge)
-                Text("앱 재시작 시 적용 · 아반떼/투싼급 승용 기본값", style = MaterialTheme.typography.bodyMedium, color = MistDim)
+                Text("시제품 가정값 · 차종별 보정·실측 전. 적재물 손상 여부를 판정하지 않습니다.", style = MaterialTheme.typography.bodyMedium, color = MistDim)
             }
         }
         Panel(Modifier.fillMaxWidth()) {

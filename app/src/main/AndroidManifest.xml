@@ -53,12 +53,13 @@
         </activity>
 
         <!--
-          Demo bridge (debug builds only, checked in code): lets `adb shell am broadcast` drive the
+          Contest demo bridge (adb shell permission required, checked in code): lets `adb shell am broadcast` drive the
           MockVehicle / demo navi and inject voice text, on any emulator incl. Pleos_Connect_v2.1.
           See demo/demo_broadcast.sh.
         -->
         <receiver
             android:name=".demo.DemoBroadcastReceiver"
+            android:permission="android.permission.DUMP"
             android:exported="true"
             tools:ignore="ExportedReceiver">
             <intent-filter>

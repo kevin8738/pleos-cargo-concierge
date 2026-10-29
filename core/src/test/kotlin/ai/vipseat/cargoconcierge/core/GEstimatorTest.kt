@@ -11,6 +11,35 @@ import org.junit.Test
 class GEstimatorTest {
 
     @Test
+    fun `out of order speed cannot replace the derivative baseline`() {
+        val e = GEstimator(smoothing = 1.0)
+        e.update(10.0, null, false, null, 1_000)
+        e.update(100.0, null, false, null, 500)
+        val next = e.update(11.0, null, false, null, 2_000)
+        assertEquals(1.0 / GEstimator.G, next.longitudinalG, 1e-9)
+    }
+
+    @Test
+    fun `duplicate and very fast samples do not replace the derivative baseline`() {
+        val e = GEstimator(smoothing = 1.0)
+        e.update(10.0, null, false, null, 1_000)
+        e.update(100.0, null, false, null, 1_000)
+        e.update(100.0, null, false, null, 1_010)
+        val next = e.update(11.0, null, false, null, 2_000)
+        assertEquals(1.0 / GEstimator.G, next.longitudinalG, 1e-9)
+    }
+
+    @Test
+    fun `invalid numerical input cannot poison later finite estimates`() {
+        val e = GEstimator(smoothing = 1.0)
+        e.update(10.0, null, false, null, 1_000)
+        e.update(Double.NaN, Double.NaN, true, Double.NaN, 1_500)
+        val next = e.update(11.0, Double.POSITIVE_INFINITY, false, null, 2_000)
+        assertTrue(next.totalG.isFinite())
+        assertEquals(1.0 / GEstimator.G, next.longitudinalG, 1e-9)
+    }
+
+    @Test
     fun `no speed means no lateral g`() {
         val e = GEstimator()
         assertEquals(0.0, e.lateralG(0.0, 180.0), 1e-9)

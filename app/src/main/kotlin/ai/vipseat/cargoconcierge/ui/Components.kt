@@ -66,9 +66,10 @@ fun statusLabel(s: FeatureStatus): String = when (s) {
     FeatureStatus.UNCHANGED -> "유지"
     FeatureStatus.UNSUPPORTED -> "차량 미지원"
     FeatureStatus.PERMISSION_DENIED -> "권한 없음"
-    FeatureStatus.BLOCKED_BY_OCCUPANCY -> "빈 좌석 감지로 차단"
-    FeatureStatus.SKIPPED_NO_CONSENT -> "설정에서 허용 필요"
+    FeatureStatus.BLOCKED_BY_OCCUPANCY -> "착좌 조건으로 제한"
+    FeatureStatus.SKIPPED_NO_CONSENT -> "동의 없음 · 미적용"
     FeatureStatus.DRIVING_RESTRICTED -> "주행 중 제한"
+    FeatureStatus.PENDING_VALIDATION -> "실측 검증 대기"
     FeatureStatus.FAILED -> "실패"
 }
 

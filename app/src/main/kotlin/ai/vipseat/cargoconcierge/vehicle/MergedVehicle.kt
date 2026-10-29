@@ -10,6 +10,7 @@ import ai.vipseat.cargoconcierge.core.port.ApplyConsent
 import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
 import ai.vipseat.cargoconcierge.core.port.CabinCapabilities
 import ai.vipseat.cargoconcierge.core.port.NaviPort
+import ai.vipseat.cargoconcierge.core.port.RealMotionObserver
 import ai.vipseat.cargoconcierge.core.port.SpeedArbiter
 import ai.vipseat.cargoconcierge.core.port.VehiclePort
 import android.os.SystemClock
@@ -17,6 +18,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.merge
+import kotlinx.coroutines.flow.onEach
 
 /**
  * Real sources (Pleos SDK, AOSP CarPropertyManager) merged with the scriptable mock. Signals from
@@ -32,13 +34,45 @@ class MergedVehicle(
     constructor(primary: VehiclePort?, mock: MockVehicle) : this(listOfNotNull(primary), mock)
 
     private val arbiter = SpeedArbiter.forSources(sources.size)
+    private val steeringArbiter = SpeedArbiter.forSources(sources.size)
+    private val realMotionArbiter = SpeedArbiter(LongArray(sources.size) { 2_000L })
+    private val sourceStatuses = mutableMapOf<Int, VehicleSignal.SourceStatus>()
 
     override val name: String =
         if (sources.isEmpty()) mock.name else sources.joinToString(" + ") { it.name } + " + demo bridge"
 
     override val signals: Flow<VehicleSignal> = merge(
         *(listOf(mock) + sources).mapIndexed { priority, src ->
-            src.signals.filter { sig -> sig !is VehicleSignal.Speed || arbiter.accept(priority, SystemClock.elapsedRealtime()) }
+            src.signals.onEach { sig ->
+                // Observe actual AOSP/Pleos speed BEFORE the demo-priority filter. Synthetic samples
+                // can drive the coaching demonstration, but cannot authorize real cabin commands.
+                if (priority > 0 && sig is VehicleSignal.Speed && sig.mps.isFinite() && sig.mps >= 0) {
+                    val now = SystemClock.elapsedRealtime()
+                    if (synchronized(realMotionArbiter) { realMotionArbiter.accept(priority - 1, now) }) {
+                        (controlTarget as? RealMotionObserver)?.observeRealMotion(sig, now)
+                    }
+                }
+            }.filter { sig ->
+                val now = SystemClock.elapsedRealtime()
+                when (sig) {
+                    is VehicleSignal.Speed -> synchronized(arbiter) { arbiter.accept(priority, now) }
+                    is VehicleSignal.SteeringAngle -> synchronized(steeringArbiter) { steeringArbiter.accept(priority, now) }
+                    is VehicleSignal.SourceStatus -> priority > 0 || sources.isEmpty()
+                    else -> true
+                }
+            }.map { sig ->
+                if (sig is VehicleSignal.SourceStatus && priority > 0) synchronized(sourceStatuses) {
+                    sourceStatuses[priority] = sig
+                    VehicleSignal.SourceStatus(
+                        connected = sourceStatuses.values.any { it.connected },
+                        detail = sourceStatuses.entries.sortedBy { it.key }.joinToString(" | ") {
+                            "${sources[it.key - 1].name}: ${if (it.value.connected) "연결" else "연결 끊김"} ${it.value.detail}"
+                        },
+                    ).also { combined ->
+                        if (!combined.connected) (controlTarget as? RealMotionObserver)?.observeRealMotion(combined, SystemClock.elapsedRealtime())
+                    }
+                } else sig
+            }
         }.toTypedArray(),
     )
 
@@ -48,6 +82,11 @@ class MergedVehicle(
     }
 
     override suspend fun disconnect() {
+        (controlTarget as? RealMotionObserver)?.observeRealMotion(VehicleSignal.SourceStatus(false, "disconnect"), SystemClock.elapsedRealtime())
+        synchronized(realMotionArbiter) { realMotionArbiter.reset() }
+        synchronized(arbiter) { arbiter.reset() }
+        synchronized(steeringArbiter) { steeringArbiter.reset() }
+        synchronized(sourceStatuses) { sourceStatuses.clear() }
         sources.forEach { runCatching { it.disconnect() } }
         mock.disconnect()
     }

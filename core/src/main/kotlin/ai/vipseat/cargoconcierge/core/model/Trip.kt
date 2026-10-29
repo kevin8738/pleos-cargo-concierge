@@ -1,5 +1,8 @@
 package ai.vipseat.cargoconcierge.core.model
 
+/** Reducer policy reasons, not measurements of speaker playback or driver attention. */
+enum class AudioSuppressionReason { EMERGENCY, SIGNAL_UNAVAILABLE, COOLDOWN, TRIP_LIMIT, VOICE_LIMIT, COALESCED }
+
 /** Running statistics for the current guarded trip. */
 data class TripStats(
     val startedMs: Long,
@@ -10,8 +13,13 @@ data class TripStats(
     val coachingCount: Int = 0,
     val warnCount: Int = 0,
     val gSamples: Int = 0,
+    /** Driving effect requests admitted by the reducer; TTS/audio output may still be unavailable or muted. */
+    val drivingSpeechCount: Int = 0,
+    val drivingChimeCount: Int = 0,
+    val audioSuppressionCounts: Map<AudioSuppressionReason, Int> = emptyMap(),
 ) {
     val avgTempC: Double? get() = if (tempSamples == 0) null else tempSumC / tempSamples
+    val drivingAudibleCount: Int get() = drivingSpeechCount + drivingChimeCount
 }
 
 data class TripReport(
@@ -22,14 +30,18 @@ data class TripReport(
     val warnCount: Int,
     val durationMs: Long,
     val spot: CargoSpot = CargoSpot.FRONT_PASSENGER,
+    val drivingSpeechCount: Int = 0,
+    val drivingChimeCount: Int = 0,
+    val audioSuppressionCounts: Map<AudioSuppressionReason, Int> = emptyMap(),
+    val gSamples: Int = 0,
 ) {
-    val withinLimit: Boolean get() = maxG <= preset.limitG
+    val drivingAudibleCount: Int get() = drivingSpeechCount + drivingChimeCount
+    val withinLimit: Boolean get() = gSamples > 0 && maxG <= preset.limitG
 
     val verdict: String
         get() = when {
-            maxG <= preset.limitG * 0.8 -> "완벽한 배송이었어요"
-            withinLimit -> "한계 안에서 도착했어요"
-            maxG <= preset.limitG * 1.3 -> "조금 흔들렸지만 괜찮아요"
-            else -> "${preset.arrivalNoun} 상태를 확인해 보세요"
+            gSamples == 0 -> "유효한 주행 추정 기록이 없어요"
+            withinLimit -> "기록된 추정 G는 설정 기준 이내예요"
+            else -> "추정 G가 설정 기준을 넘었어요. ${preset.arrivalNoun} 상태를 확인해 주세요"
         }
 }

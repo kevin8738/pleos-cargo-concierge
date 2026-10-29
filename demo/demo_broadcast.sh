@@ -2,7 +2,7 @@
 # =====================================================================================
 #  VIP 조수석 — demo bridge over adb broadcast (works on ANY emulator: stock AAOS, Pleos_Connect_v2.1, phone AVD)
 # =====================================================================================
-#  Drives the in-app MockVehicle / demo navi through DemoBroadcastReceiver (debug builds only).
+#  Drives the in-app MockVehicle / demo navi through DemoBroadcastReceiver (contest builds, adb shell permission required).
 #  The app must be in the foreground (the mock signal flow has no replay).
 #
 #    ./demo_broadcast.sh gear P|D|R|N

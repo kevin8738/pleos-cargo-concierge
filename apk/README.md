@@ -2,11 +2,12 @@
 
 [`VIPSeat_CargoConcierge_release.apk`](VIPSeat_CargoConcierge_release.apk)는 **Pleos SDK 연동 release 서명본**입니다. 공식 Pleos_Connect_v2.1 에뮬레이터에서 실행을 확인했습니다.
 
-- 크기: 47,739,775 bytes
-- 패키지: `ai.vipseat.cargoconcierge`, versionCode 2, minSdk 28 / targetSdk 34
+- 크기: 47,772,551 bytes
+- 패키지: `ai.vipseat.cargoconcierge`, versionCode 3, versionName 1.1.0-pleos, minSdk 28 / targetSdk 34
 - 서명 검증: `apksigner verify` 통과. 서명 키는 저장소에 포함하지 않습니다.
 - 파일명: 공모전의 `팀명_앱이름_release.apk` 규칙 적용
-- 동일 파일: [Release v1.0.0](https://github.com/kevin8738/pleos-cargo-concierge/releases/tag/v1.0.0)
+- 현재 제출본은 이 폴더의 v1.1.0입니다. 기존 Release v1.0.0의 APK·영상은 당시 이력입니다.
+- [변경·검증 기록](../docs/검증_v1.1.0.md): 코어 테스트 109개, lint 오류 0·경고 33. 실차 시험과 구분합니다.
 
 저장소 루트에서 설치합니다.
 

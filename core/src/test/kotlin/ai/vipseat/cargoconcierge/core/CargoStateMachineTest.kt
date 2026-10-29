@@ -139,6 +139,7 @@ class CargoStateMachineTest {
     fun `voice preset skips the sheet and speaks a confirmation`() {
         val m = sm()
         m.v(VehicleSignal.GearChanged(Gear.PARK), 0)
+        m.v(VehicleSignal.Speed(0.0), 0)
         val fx = m.dispatch(Action.VoicePreset(CargoPreset.HOT_FOOD), 100)
         assertTrue(m.state is CargoState.Guarding)
         assertTrue(fx.spoken().single().startsWith("네, 뜨거운 음식"))
@@ -148,11 +149,13 @@ class CargoStateMachineTest {
     fun `occupancy-blocked heater is explained by voice`() {
         val m = sm()
         m.startDriving(CargoKind.HOT_FOOD)
+        m.v(VehicleSignal.Speed(30.0 / 3.6), 4_000)
         val fx = m.dispatch(Action.CabinApplied(CabinApplyResult(listOf(
             FeatureOutcome(CabinFeature.SEAT_HEATER, FeatureStatus.BLOCKED_BY_OCCUPANCY),
             FeatureOutcome(CabinFeature.FAN, FeatureStatus.APPLIED),
         ))), 5_000)
-        assertTrue(fx.spoken().single().contains("열선은 켜지지 않았어요"))
+        assertTrue(fx.spoken().single().contains("열선 설정은 변경하지 않았어요"))
+        assertFalse(fx.spoken().single().contains("보온할게요"))
         assertEquals(FeatureStatus.BLOCKED_BY_OCCUPANCY, (m.state as CargoState.Guarding).cabin?.status(CabinFeature.SEAT_HEATER))
     }
 
@@ -185,7 +188,8 @@ class CargoStateMachineTest {
         assertTrue(fx2.spoken().isEmpty())
         assertEquals(1, (m.state as CargoState.Guarding).trip.coachingCount)
         // After cooldown it coaches again.
-        val fx3 = m.v(VehicleSignal.SteeringAngle(110.0), 13_000)
+        m.v(VehicleSignal.Speed(30.0 / 3.6), 13_000)
+        val fx3 = m.v(VehicleSignal.SteeringAngle(110.0), 13_001)
         assertEquals(1, fx3.spoken().size)
     }
 
@@ -230,6 +234,7 @@ class CargoStateMachineTest {
     fun `sport mode is noticed once with a comfort suggestion`() {
         val m = sm()
         m.startDriving(CargoKind.CAKE)
+        m.v(VehicleSignal.Speed(30.0 / 3.6), 4_000)
         val fx = m.v(VehicleSignal.DrivingModeChanged(DrivingMode.SPORT), 5_000)
         assertTrue(fx.spoken().single().contains("에코 모드"))
         assertTrue(m.v(VehicleSignal.DrivingModeChanged(DrivingMode.SPORT), 6_000).spoken().isEmpty())
@@ -373,7 +378,9 @@ class CargoStateMachineTest {
         val m = sm()
         for (i in 1..4) {
             m.v(VehicleSignal.GearChanged(Gear.PARK), 100_000L * i)
+            m.v(VehicleSignal.Speed(0.0), 100_000L * i)
             m.dispatch(Action.OpenOffer, 100_000L * i + 1)
+            assertTrue(m.state is CargoState.Offering)
             m.dispatch(Action.Tick, 100_000L * i + 20_000)
         }
         assertTrue(m.mutedTriggers.isEmpty())
@@ -383,6 +390,7 @@ class CargoStateMachineTest {
     fun `external offer from a pickup-store geofence opens the sheet while parked only`() {
         val m = sm()
         m.v(VehicleSignal.GearChanged(Gear.PARK), 0)
+        m.v(VehicleSignal.Speed(0.0), 0)
         val fx = m.dispatch(Action.ExternalOffer("지오펜스: 단골 베이커리"), 1_000)
         val s = m.state as CargoState.Offering
         assertEquals("지오펜스: 단골 베이커리", s.reason)
@@ -396,7 +404,7 @@ class CargoStateMachineTest {
     // ------------------------------------------------------------ v4: coaching policy (F3)
 
     @Test
-    fun `voice coaching is capped at three per trip while chimes and the badge continue`() {
+    fun `speech is capped at three and further entries use only the remaining shared chime budget`() {
         val m = sm()
         m.startDriving(CargoKind.CAKE)
         m.v(VehicleSignal.Speed(30.0 / 3.6), 4_000)
@@ -405,6 +413,7 @@ class CargoStateMachineTest {
         repeat(5) {
             m.v(VehicleSignal.SteeringAngle(0.0), t)                      // back to OK
             m.dispatch(Action.Tick, t + 3_500)                             // badge hold expires
+            m.v(VehicleSignal.Speed(30.0 / 3.6), t + 4_000)
             spoken += m.v(VehicleSignal.SteeringAngle(100.0), t + 4_000).spoken().size // ≈0.29 g → OVER
             t += 12_000
         }
@@ -412,16 +421,17 @@ class CargoStateMachineTest {
         val g = m.state as CargoState.Guarding
         assertEquals(3, g.voiceCoachCount)
         assertEquals(BadgeLevel.OVER, g.badge)
-        assertEquals(5, g.trip.warnCount) // one chime per entry into WARN/OVER
+        assertEquals(2, g.trip.warnCount) // first three entries speak instead of stacking a chime
+        assertEquals(5, g.trip.drivingAudibleCount)
     }
 
     @Test
-    fun `the chime fires on entering WARN or OVER, not on every sample while it lasts`() {
+    fun `the chime fires on entering WARN, not on every sample while it lasts`() {
         val m = sm()
         m.startDriving(CargoKind.CAKE)
         m.v(VehicleSignal.Speed(30.0 / 3.6), 4_000)
-        assertEquals(1, m.v(VehicleSignal.SteeringAngle(100.0), 4_100).chimes().size)
-        assertTrue(m.v(VehicleSignal.SteeringAngle(105.0), 10_000).chimes().isEmpty()) // still OVER, 6 s later
+        assertEquals(1, m.v(VehicleSignal.SteeringAngle(45.0), 4_100).chimes().size)
+        assertTrue(m.v(VehicleSignal.SteeringAngle(46.0), 5_000).chimes().isEmpty())
         assertEquals(1, (m.state as CargoState.Guarding).trip.warnCount)
     }
 
@@ -458,6 +468,7 @@ class CargoStateMachineTest {
         val m = sm()
         m.startDriving(CargoKind.CAKE)
         m.v(VehicleSignal.Speed(20.0 / 3.6), 4_000)
+        m.v(VehicleSignal.Speed(20.0 / 3.6), 30_000)
         val fx = m.dispatch(Action.Navi(NaviEvent.DestinationArrived("집")), 30_000)
         val g = m.state as CargoState.Guarding
         assertEquals("집", g.arrivalPending)
@@ -476,6 +487,7 @@ class CargoStateMachineTest {
     fun `a passenger sitting down ends a passenger-seat preset and restores the cabin`() {
         val m = sm()
         m.startDriving(CargoKind.HOT_FOOD)
+        m.v(VehicleSignal.Speed(30.0 / 3.6), 4_000)
         val fx = m.v(VehicleSignal.SeatOccupancy(true), 5_000)
         assertEquals(CargoState.Idle, m.state)
         assertTrue(fx.contains(Effect.RestoreCabin))

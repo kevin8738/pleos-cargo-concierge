@@ -6,6 +6,7 @@ import ai.pleos.playground.location.fused.model.LocationData
 import ai.vipseat.cargoconcierge.core.model.VehicleSignal
 import ai.vipseat.cargoconcierge.core.physics.LocationSpeedEstimator
 import android.content.Context
+import android.os.SystemClock
 import android.util.Log
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -21,16 +22,40 @@ class PleosLocationSpeed(private val context: Context) {
     val signals: SharedFlow<VehicleSignal> = _signals
     private val estimator = LocationSpeedEstimator()
     private var fused: FusedLocation? = null
+    private var lastFixTimestamp: Long? = null
+    private data class SpeedReading(val mps: Double, val receivedAtMs: Long)
+    @Volatile private var latestSpeed: SpeedReading? = null
 
     private val listener = object : FusedLocationListener {
         override fun onChanged(location: LocationData?) {
             val l = location ?: return
-            estimator.update(l.latitude, l.longitude, l.timestampMillis)?.let { _signals.tryEmit(VehicleSignal.Speed(it)) }
+            if (!l.latitude.isFinite() || !l.longitude.isFinite() || l.latitude !in -90.0..90.0 || l.longitude !in -180.0..180.0) {
+                latestSpeed = null
+                estimator.reset()
+                return
+            }
+            val previous = lastFixTimestamp
+            // Duplicate/backward and too-close fixes cannot make an old speed estimate fresh.
+            if (previous != null && l.timestampMillis - previous < MIN_FIX_INTERVAL_MS) return
+            if (previous != null && l.timestampMillis - previous > MAX_FIX_GAP_MS) {
+                latestSpeed = null
+                estimator.reset()
+            }
+            lastFixTimestamp = l.timestampMillis
+            estimator.update(l.latitude, l.longitude, l.timestampMillis)?.takeIf { it.isFinite() && it >= 0 }?.let {
+                latestSpeed = SpeedReading(it, SystemClock.elapsedRealtime())
+                _signals.tryEmit(VehicleSignal.Speed(it))
+            }
         }
         override fun onError(exception: Exception) {
+            latestSpeed = null
             Log.w(TAG, "fused location error: ${exception.message}")
         }
     }
+
+    fun freshSpeedMps(maxAgeMs: Long): Double? = latestSpeed
+        ?.takeIf { SystemClock.elapsedRealtime() - it.receivedAtMs in 0..maxAgeMs }
+        ?.mps
 
     /** Returns a short status string for the source detail line. */
     fun start(): String = try {
@@ -52,8 +77,14 @@ class PleosLocationSpeed(private val context: Context) {
             runCatching { f.release() }
         }
         fused = null
+        latestSpeed = null
+        lastFixTimestamp = null
         estimator.reset()
     }
 
-    private companion object { const val TAG = "PleosLocationSpeed" }
+    private companion object {
+        const val TAG = "PleosLocationSpeed"
+        const val MIN_FIX_INTERVAL_MS = 200L
+        const val MAX_FIX_GAP_MS = 10_000L
+    }
 }
