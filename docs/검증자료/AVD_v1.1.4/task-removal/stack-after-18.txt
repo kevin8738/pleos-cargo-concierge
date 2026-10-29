@@ -1,0 +1,16 @@
+RootTask id=1000386 bounds=[853,90][2535,1300] displayId=0 userId=10
+ configuration={1.0 310mcc260mnc [ko_KR] ldltr sw1440dp w1682dp h1210dp 160dpi xlrg land car finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(853, 90 - 2535, 1300) mAppBounds=Rect(853, 90 - 2535, 1300) mMaxBounds=Rect(0, 0 - 2560, 1440) mDisplayRotation=ROTATION_0 mWindowingMode=multi-window mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.48 fontWeightAdjustment=0}
+  taskId=1000386: ai.umos.maps.android.navigation.app/ai.umos.maps.android.navigation.app.MainActivity bounds=[853,90][2535,1300] userId=10 visible=true topActivity=ComponentInfo{ai.umos.maps.android.navigation.app/ai.umos.maps.android.navigation.app.MainActivity}
+
+RootTask id=1000385 bounds=[0,0][853,1300] displayId=0 userId=10
+ configuration={1.0 310mcc260mnc [ko_KR] ldltr sw1440dp w853dp h1210dp 160dpi xlrg port car finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 853, 1300) mAppBounds=Rect(0, 0 - 853, 1300) mMaxBounds=Rect(0, 0 - 2560, 1440) mDisplayRotation=ROTATION_0 mWindowingMode=multi-window mDisplayWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.48 fontWeightAdjustment=0}
+  taskId=1000385: ai.umos.drivingview/ai.umos.drivingview.DrivingViewActivity bounds=[0,0][853,1300] userId=10 visible=true topActivity=ComponentInfo{ai.umos.drivingview/ai.umos.drivingview.DrivingViewActivity}
+
+RootTask id=1 bounds=[0,0][2560,1440] displayId=0 userId=10
+ configuration={1.0 310mcc260mnc [ko_KR] ldltr sw1440dp w2560dp h1210dp 160dpi xlrg long land car finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2560, 1440) mAppBounds=Rect(0, 0 - 2560, 1300) mMaxBounds=Rect(0, 0 - 2560, 1440) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0} s.48 fontWeightAdjustment=0}
+  taskId=1000383: ai.umos.homescreen/ai.umos.homescreen.HomeActivity bounds=[0,0][2560,1440] userId=10 visible=true topActivity=ComponentInfo{ai.umos.homescreen/ai.umos.homescreen.HomeActivity}
+
+RootTask id=1000384 bounds=[0,0][2560,1440] displayId=0 userId=0
+ configuration={1.0 310mcc260mnc [ko_KR] ldltr sw1440dp w2560dp h1210dp 160dpi xlrg long land car finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 2560, 1440) mAppBounds=Rect(0, 0 - 2560, 1300) mMaxBounds=Rect(0, 0 - 2560, 1440) mDisplayRotation=ROTATION_0 mWindowingMode=multi-window mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.48 fontWeightAdjustment=0}
+  taskId=1000384: unknown bounds=[0,0][2560,1440] userId=0 visible=false
+

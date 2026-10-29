@@ -1,0 +1,23 @@
+{
+  "app/build.gradle.kts": "e8c38c962db1cf9d6a6b7e5116919d41728edb0c8dddf080a9a3cf6d7abeb034",
+  "app/src/main/AndroidManifest.xml": "50b0d80f24fc052ddb8e94b1a52ce1b3fe7287a093f3f9ae92f45399e8e64c88",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/MainActivity.kt": "9b0a34384a30295bb2eb6184b00f6971de32e928570326c9c65c7b0e1c41592c",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/di/AppGraph.kt": "c9bdc71f5d63db4004e9c512492ac215f06689cab4850bfb8eb76b92b885f9d5",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/di/Sources.kt": "f1e5b4ddd6d76b8cd25921342c68b4e796b3d3c5ecc4d5987fb1e95697dc2237",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/vehicle/MergedVehicle.kt": "08d84595d9352877382e9e7e57ba3e97e7ccbd39c74e0231e0f0a02f3b2ef891",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/vehicle/aosp/AospCarVehicle.kt": "630741a2e5e054ba7c360e8ab6052a680b1d202d88da6751795ea1fd124127d3",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/vm/CargoViewModel.kt": "b9442a8015d3896f524813b4c5b5548c82496298be9a386acf822ee8536e4603",
+  "app/src/pleos/kotlin/ai/vipseat/cargoconcierge/di/FlavorSources.kt": "e21975dff2cdfe555dcb59988fee95f29774cb6f6cd1f3567b9c86031ff67ade",
+  "core/src/main/kotlin/ai/vipseat/cargoconcierge/core/port/RealMotionObserver.kt": "b25aa1ef5f7d7755ba92f6fa2a8fbb18c750957e7a8e014cfc5070059c0c78cf",
+  "vehicle-pleos/src/main/kotlin/ai/vipseat/cargoconcierge/pleos/PleosLocationSpeed.kt": "2003407ec00958cd0eabcdadab1013da90b305a62c2392c23e692e9d65524434",
+  "vehicle-pleos/src/main/kotlin/ai/vipseat/cargoconcierge/pleos/PleosNavi.kt": "86cf2c7d143925821bf3bd913b90513f05db02f3899f6d61d8adf79cf716c724",
+  "vehicle-pleos/src/main/kotlin/ai/vipseat/cargoconcierge/pleos/PleosSpeech.kt": "2724aec1eb5185ffb0e8a3a172ca328e62775e40a1e4be9289fc2b7a8b72d9ed",
+  "vehicle-pleos/src/main/kotlin/ai/vipseat/cargoconcierge/pleos/PleosVehicle.kt": "dcf42bfba4e19ab28dcb1b16ba45aa1d0a019d339a1a03cf1f791bf465a24c80",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/runtime/CabinWorkDrain.kt": "235100cd7904931ad5b813f1a3cd62c2a0ac99f6f4c7b03818df8618af3befd0",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/runtime/CargoSession.kt": "3b8440364b8d9c14afa7196ee2cd5e1e51fcb5f4e89bb50a074009bff88faff1",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/runtime/GuardForegroundService.kt": "b217a681c1a4a6554f2e5793533f28a193a3df8148c368eef83ade0bd12b2b82",
+  "app/src/main/kotlin/ai/vipseat/cargoconcierge/runtime/GuardStartGate.kt": "59079ebdcd6016d80f47258e1be023bbaa835304c480ae193eb1612de5718d80",
+  "app/src/test/kotlin/ai/vipseat/cargoconcierge/runtime/CabinWorkDrainTest.kt": "6fc3fb16fb747d88f26b0109630b96100381b40e1fbcba8d4b5320ccc2c871b5",
+  "app/src/test/kotlin/ai/vipseat/cargoconcierge/runtime/GuardStartGateTest.kt": "5d2e6b6e74964b36ffb267e17ed291ab76762a47a6072006002dc3243efa2ba6",
+  "app/src/test/kotlin/ai/vipseat/cargoconcierge/vehicle/RealMotionRoutingTest.kt": "5708991c7050977dcab2634c7c598cf4425df557bf7cfa2fba55409a5d3cacc0"
+}

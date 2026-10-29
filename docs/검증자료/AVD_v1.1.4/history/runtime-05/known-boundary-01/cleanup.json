@@ -1,0 +1,15 @@
+{
+  "verified": false,
+  "cleanupRequired": true,
+  "executionErrors": [
+    "Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'broadcast', '-n', 'ai.vipseat.cargoconcierge/.demo.DemoBroadcastReceiver', '-a', 'ai.vipseat.cargoconcierge.DEMO', '--es', 'cmd', 'navi', '--es', 'value', 'arrived']' timed out after 6 seconds"
+  ],
+  "cleanupErrors": [
+    "end: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'broadcast', '-n', 'ai.vipseat.cargoconcierge/.demo.DemoBroadcastReceiver', '-a', 'ai.vipseat.cargoconcierge.DEMO', '--es', 'cmd', 'end']' timed out after 6 seconds",
+    "ack: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'broadcast', '-n', 'ai.vipseat.cargoconcierge/.demo.DemoBroadcastReceiver', '-a', 'ai.vipseat.cargoconcierge.DEMO', '--es', 'cmd', 'ack']' timed out after 6 seconds",
+    "motion_zero: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'broadcast', '-n', 'ai.vipseat.cargoconcierge/.demo.DemoBroadcastReceiver', '-a', 'ai.vipseat.cargoconcierge.DEMO', '--es', 'cmd', 'steer', '--es', 'value', '0']' timed out after 6 seconds",
+    "settings: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'broadcast', '-n', 'ai.vipseat.cargoconcierge/.demo.DemoBroadcastReceiver', '-a', 'ai.vipseat.cargoconcierge.DEMO', '--es', 'cmd', 'settings', '--es', 'value', 'on']' timed out after 6 seconds",
+    "cleanup readback: substring not found"
+  ],
+  "originalMotionTracePropertyRestored": true
+}

@@ -1,0 +1,13 @@
+{
+  "event": "runtime_snapshot",
+  "hostUnixNs": 1793291056016359000,
+  "hostMonotonicNs": 40548615860416,
+  "label": "initial_idle",
+  "pid": "26822",
+  "isFrozen": false,
+  "servicePresent": false,
+  "foregroundService": false,
+  "serviceTypeMask": null,
+  "foregroundIdCorrect": false,
+  "activeNotificationCount": 0
+}

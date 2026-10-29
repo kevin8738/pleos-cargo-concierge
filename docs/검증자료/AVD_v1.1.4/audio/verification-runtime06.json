@@ -1,0 +1,98 @@
+{
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+  "mode": "Offline raw packet/PCM/WAV/hash/time-window recomputation; settings use existing XML parser.",
+  "expected_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "cases": [
+    {
+      "case": "tts_on_chime_off",
+      "packets": 1264,
+      "pcm_sha256": "fe26a02a46a74242c03d812aef68f8c9692aefa73f9cf1b21eac94666eec4cfa",
+      "response": {
+        "window_seconds": [
+          0,
+          8
+        ],
+        "packet_count": 671,
+        "captured_pcm_seconds": 7.897291666666667,
+        "peak_absolute_s16": 1432,
+        "rms_s16_over_received_samples": 185.4842265311857
+      },
+      "lifecycle": {
+        "TTS_START": 1,
+        "TTS_DONE": 1,
+        "TTS_ERROR": 0
+      }
+    },
+    {
+      "case": "tts_off_chime_off",
+      "packets": 1280,
+      "pcm_sha256": "c6bec6200e9e55bc573c668a951e23662a2cc14c191a99c257e03d7c0fa6a7ce",
+      "response": {
+        "window_seconds": [
+          0,
+          8
+        ],
+        "packet_count": 683,
+        "captured_pcm_seconds": 0.6403125,
+        "peak_absolute_s16": 2,
+        "rms_s16_over_received_samples": 1.4514596076637323
+      },
+      "lifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0
+      }
+    },
+    {
+      "case": "tts_off_chime_on",
+      "packets": 1265,
+      "pcm_sha256": "367e1d5d0af87260ffc223b4e4fbbdbe1fa3069532dd5786e865ead095aab08b",
+      "response": {
+        "window_seconds": [
+          0,
+          8
+        ],
+        "packet_count": 673,
+        "captured_pcm_seconds": 3.8231041666666665,
+        "peak_absolute_s16": 146,
+        "rms_s16_over_received_samples": 16.20940249180549
+      },
+      "lifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0
+      }
+    },
+    {
+      "case": "both_off_chime_control",
+      "packets": 1281,
+      "pcm_sha256": "ef5cfa242c2e41b87307614781bb52678b6206f0090bf7ce5fdde504a2472d2c",
+      "response": {
+        "window_seconds": [
+          0,
+          8
+        ],
+        "packet_count": 684,
+        "captured_pcm_seconds": 0.6412291666666666,
+        "peak_absolute_s16": 2,
+        "rms_s16_over_received_samples": 1.4749222223253313
+      },
+      "lifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "COFFEE selection only; TTS-only, chime-only and two both-off controls.",
+    "Both-on and competing navigation/media audio are not exercised.",
+    "PCM/WAV concatenate received packets; duration is not continuous wall time or utterance duration.",
+    "Output contrast does not establish speech intelligibility, physical speaker output, vehicle effects or driver burden.",
+    "Intermittent focus snapshots do not exclude short focus transitions.",
+    "TTS_ERROR=0 refers only to the filtered app log, not every service.",
+    "No microphone, STT, host audio input, HVAC command, AVD restart or app reinstall."
+  ],
+  "independent_reviewer": "Not claimed; an independent reviewer can inspect this output and raw files."
+}

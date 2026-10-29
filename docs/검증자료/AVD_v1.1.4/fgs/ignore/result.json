@@ -1,0 +1,82 @@
+{
+  "mode": "ignore",
+  "afterFailure": {
+    "event": "runtime_snapshot",
+    "hostUnixNs": 1793290967330180000,
+    "hostMonotonicNs": 40459927952041,
+    "label": "after-failure",
+    "pid": "26822",
+    "isFrozen": false,
+    "servicePresent": false,
+    "foregroundService": false,
+    "serviceTypeMask": null,
+    "foregroundIdCorrect": false,
+    "activeNotificationCount": 0
+  },
+  "recovery": {
+    "passed": true,
+    "ready": {
+      "event": "ready",
+      "elapsedMs": 9718502,
+      "requestId": 21,
+      "startedMs": 9718502,
+      "visible": true,
+      "ending": false,
+      "guarding": true
+    },
+    "active": {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793290982991470000,
+      "hostMonotonicNs": 40475589547583,
+      "label": "recovery-active_10",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    "stopped": {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793290985761750000,
+      "hostMonotonicNs": 40478359881250,
+      "label": "recovery-stopped",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    }
+  },
+  "passed": true,
+  "issues": [],
+  "readyCount": 0,
+  "guardTraceCount": 0,
+  "observedMotionTraces": 17,
+  "cabinOperationLogCount": 0,
+  "failureNotice": true,
+  "promotionFailureMessages": [
+    "foreground promotion failed: IllegalStateException"
+  ],
+  "failedRequestCount": 1,
+  "failureRequestLatencySeconds": 0.066351,
+  "silentIgnorePromotionLogs": 1,
+  "ordinaryStartDowngradeLogs": 1,
+  "systemCaseRows": [
+    {
+      "hostReceivedUnixNs": 1793290956815917000,
+      "line": "         1793290957.097   753   782 I ActivityManager: Background started FGS: Allowed [callingPackage: ai.vipseat.cargoconcierge; callingUid: 1010175; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { cmp=ai.vipseat.cargoconcierge/.runtime.GuardForegroundService (has extras) }; code:PROC_STATE_TOP; tempAllowListReason:<null>; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null: isBindService:false]"
+    },
+    {
+      "hostReceivedUnixNs": 1793290956816057000,
+      "line": "         1793290957.097   753   782 W ActivityManager: startForegroundService not allowed due to app op: service Intent { cmp=ai.vipseat.cargoconcierge/.runtime.GuardForegroundService (has extras) } to ai.vipseat.cargoconcierge/.runtime.GuardForegroundService from pid=26822 uid=1010175 pkg=ai.vipseat.cargoconcierge"
+    },
+    {
+      "hostReceivedUnixNs": 1793290956832915000,
+      "line": "         1793290957.116   753  1376 W ActivityManager: Service.startForeground() not allowed due to app op: service ai.vipseat.cargoconcierge/.runtime.GuardForegroundService"
+    }
+  ]
+}

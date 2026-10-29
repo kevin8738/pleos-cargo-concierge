@@ -1,0 +1,1 @@
+START_FOREGROUND: allow; time=+34s163ms ago; duration=+13s467ms

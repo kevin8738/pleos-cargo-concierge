@@ -1,0 +1,551 @@
+{
+  "cases": [
+    {
+      "case": "location-on-03",
+      "installed_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+      "observations": 90,
+      "review_input_sha256": {
+        "access-after.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "access-before.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "cleanup-idle_0.xml": "7e4eacb202fc41b6e51e6ade23a046911b59e349b8f60cd85a8e701546fd7b5a",
+        "cleanup-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "cleanup-process.txt": "0025957ab03a139f256dc07ab42daded7e07b7f841b2916c6a5ded0f7e534eac",
+        "cleanup-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "cleanup-snapshot.json": "95dddd3b58b01d3cc309e25549692b3638a25ea68a5d1ea1dc0112e51140f555",
+        "coffee-before.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "current-user.json": "edf38cc6ad4bb63f82006b8ac849f9e261ee496a5e1bfd2e8c5aa5f523dbee40",
+        "guard-start_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_0-process.txt": "24d2099ba675b553534c2bedcc2b7edca7d096789785c486ee247096136bca9e",
+        "guard-start_0-service.txt": "37c4dba0e481871d8984f13db54ed2e039db78dee8b4d0789970461237913ea6",
+        "guard-start_0-snapshot.json": "f75ee89a8fe4ec4d7b3e6c7e8e20cc9eaf99717ded9135e02cccdacabdd4bb92",
+        "guard-start_1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_1-process.txt": "ca1083a0e9db1625e2ff671e60e90117a7447c88290b74f9992df93d112d5767",
+        "guard-start_1-service.txt": "f8d3877391b6e5fc9b6472009cbf2bfb750e07a4acc6921083706384e56a0264",
+        "guard-start_1-snapshot.json": "aef32692417d79bb4c0d11f773289cce8c14a1762405a600c5fa07c0d9205153",
+        "guard-start_10-notification.txt": "3b7b8efea41db4dc21f0ea600876411bb1cc39504e4a706905dad6bd0498c64d",
+        "guard-start_10-process.txt": "89ebca7da8af85ff1a7f0f070314ee3a22ea9876e8ce0c82f5ec52cd825638b2",
+        "guard-start_10-service.txt": "6e088e0b242e6b391edc1d0de7def85b6208b6816996ab5bfa9a06b200dc05ad",
+        "guard-start_10-snapshot.json": "5356ba93bb421c9e9379da40a3115b1d451c6bf7650422e1fdd9b8f197dbd9de",
+        "guard-start_2-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_2-process.txt": "4188ac5f2136b4a534d81d88866c4a9a2ae4e621f93645757d1c70b54f73e0de",
+        "guard-start_2-service.txt": "506288bd35265d397c4b2fa54226b9d1986153c00f4d4a5165fa9a78ee6f8697",
+        "guard-start_2-snapshot.json": "0cf96afa82dcb415db2b6f8ef6df6d6cb2822f7175a5789d709717518302e74e",
+        "guard-start_3-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_3-process.txt": "a3502a75b02648d0ccb89499526f4141b4b0b33eec87a73a1d7e40925e3728cb",
+        "guard-start_3-service.txt": "96f5ad0f4a4dacb25421d7e97212784df97aadacff258a96d3b1185f3842edc0",
+        "guard-start_3-snapshot.json": "3b96c35f707dac6cb6169a3e74bb2d752705b27efbed597e3fd57152972fbb7b",
+        "guard-start_4-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_4-process.txt": "295e2aa98f8939306e04adbd8a657d3ebd963955127acf2d7567dc95c2b3aa44",
+        "guard-start_4-service.txt": "08353ff48aad9b0689404135dd42611db6153233368075b0711d5d2019e6e829",
+        "guard-start_4-snapshot.json": "46c818292d9c6735108d91037dc0f3ca565b41fb28090315e8f5e0a8788c58e4",
+        "guard-start_5-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_5-process.txt": "9eca4270a2b1a112afe87a0f8de8bcd5478537528284fcc25697dc6514c0d8aa",
+        "guard-start_5-service.txt": "e0bb80f77cbc55f2ba5582df5437303e9813fb9cfccdae39b47aa00529ad33d1",
+        "guard-start_5-snapshot.json": "f712e0e747a7306bb3486070efdd241597cea56fed7d17f8af803e12a50bb4c7",
+        "guard-start_6-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_6-process.txt": "4f0c653034df34dd7c8dc204ede0324e671f59809fc5e2cadfa0afa932b47109",
+        "guard-start_6-service.txt": "23e4e79162565fccfa5c169a9bdc808aaab13fdb8e13360522b5134c1bde5d72",
+        "guard-start_6-snapshot.json": "6ea43dc8782dfaf93f759bf811cb2769a3e29002844ad478a107283790a61d3b",
+        "guard-start_7-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_7-process.txt": "5b1cb3a735347bc8eeee28a0ef4b54c739c3db74c3239c77486bf9fdd51e3e4f",
+        "guard-start_7-service.txt": "350585035bf95465d7dc63e07f9523e1794703c4320d329efbfd47973533b152",
+        "guard-start_7-snapshot.json": "65d2ba0e8ba65c62638e0fff5c507666d1d6289a91adffa6d1c7acaea64fdc7b",
+        "guard-start_8-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_8-process.txt": "e5e129c0786c8b945e3c20c351a925345bf55eac272ed14c7d2b600b8a642d82",
+        "guard-start_8-service.txt": "e04e5b1ba1bbbe1e5563d73a1f42c5c25765597ea3b064db4cdd11ed982636cd",
+        "guard-start_8-snapshot.json": "79baf2086d8338552bddff8d017a1da55af37ba1bc61606055ffdcde1191cdf6",
+        "guard-start_9-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_9-process.txt": "ae95ff0f17898aaccf23e86e6a545812f3073398578131fef864a5c8bacb0aeb",
+        "guard-start_9-service.txt": "113f185a5b0b6247e1b1eb24d6b85f9bc7b15ef7d53d998a0e7771164e0a8dea",
+        "guard-start_9-snapshot.json": "ffc08d0c9d88f9f5c6a1da755b86fbdcf86dcc6dbadb62b4ab73f5215e1957b4",
+        "harness-source.py": "75cf8fef0f4f68182d93f690e1fb9fae1f0126c9ccf0e91d1636dead31f3553a",
+        "initial-idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "initial-idle-process.txt": "e315f6ac0f1ba3b3d9f3557783f71efb46601155a2d36e00ba3030eeadf791cb",
+        "initial-idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "initial-idle-snapshot.json": "87b62706de17d06c49bffa072bcb10b8c43f0629b556f207753ccd3861c6f650",
+        "initial-idle.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "input-ledger.jsonl": "8f60b388b22f27c13394f348d2811454c33181d84267ae089b76b146e7e0e707",
+        "log-properties-after.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "log-properties-before.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "observations.jsonl": "10912d323a2d86d94e12902a83786be6c5e77e16df9b7688369a34e5bd1bef7f",
+        "result.json": "3c02446c2ed78523470e085a9b01f27f688ee4347e6cef26dd91a10bfd2eb89d",
+        "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+        "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+        "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+        "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+        "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "vehicle-after.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c",
+        "vehicle-before.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c"
+      },
+      "guard_window_seconds": 11.378216,
+      "location_active_in_guard": 1,
+      "type_mask": "0x40000008",
+      "first_foreground_snapshot_seconds": 0.288312,
+      "first_notification_snapshot_seconds": 11.336514
+    },
+    {
+      "case": "location-off-02",
+      "installed_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+      "observations": 31,
+      "review_input_sha256": {
+        "access-after.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "access-before.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "cleanup-idle_0.xml": "e092053687921640d34950fc9b9cccb0602cfee465d676d4720cd01b41e8a35a",
+        "cleanup-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "cleanup-process.txt": "98fdbe10c0fe40639d2a39db334e8c504d2ca1dab239d376b7130fb76c0d5a67",
+        "cleanup-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "cleanup-snapshot.json": "8ca89f7ac701bc5401c0aa3d722f16f42456a17d04c0a6a84d829137402aeeb3",
+        "coffee-before.xml": "7e4eacb202fc41b6e51e6ade23a046911b59e349b8f60cd85a8e701546fd7b5a",
+        "current-user.json": "edf38cc6ad4bb63f82006b8ac849f9e261ee496a5e1bfd2e8c5aa5f523dbee40",
+        "guard-start_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_0-process.txt": "513805169b450c5658ebf8ec42219fd14c5e6c0a4997ca254e0561e5ab58bbfc",
+        "guard-start_0-service.txt": "5a04296df6c83888dd8b7c9e4672dffdd551f962efd059fcda18a98b7afba2f6",
+        "guard-start_0-snapshot.json": "4e7552d9ab594733b2cca136a171ed8353c2b7423d925c3dfce536421246dd90",
+        "guard-start_1-notification.txt": "52a914ab1f6d1f0521005d47c54ba52e5362de1d08eade37204931fabef8449c",
+        "guard-start_1-process.txt": "683904dc61ef82ca3dd5e08edc91df3e70b738990c31576a3a007d30114ad761",
+        "guard-start_1-service.txt": "e40e68a6714c4e7eb134745c8f81333ea57a55b919e68ede82ba3f380f588367",
+        "guard-start_1-snapshot.json": "d19a24a666bffe5e55629ed4434e2185917cd0411013bffd83bffd691910ae22",
+        "harness-source.py": "75cf8fef0f4f68182d93f690e1fb9fae1f0126c9ccf0e91d1636dead31f3553a",
+        "initial-idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "initial-idle-process.txt": "243f47fa7779af9612527a2e1719a442a42d5f267d0e17dca3864018bb10716a",
+        "initial-idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "initial-idle-snapshot.json": "d0e4aeb7204ec4e8782be575e45d24f61f82fc83bfd3e96f28bdcc1092bca094",
+        "initial-idle.xml": "7e4eacb202fc41b6e51e6ade23a046911b59e349b8f60cd85a8e701546fd7b5a",
+        "input-ledger.jsonl": "390f02472c5fd6710f03eac4686182510bca04bdf020e3c721f0fc9a9ac3972d",
+        "log-properties-after.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "log-properties-before.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "observations.jsonl": "5a95cc74ba75a7c568bcf14db4ad369de6bc94cd79d1050657e3e285873f8fc0",
+        "result.json": "cfe798b781ac0c6780b02632e152a779321ef4ec57c0bb97651eac0afc8da0b7",
+        "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+        "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+        "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+        "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+        "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "vehicle-after.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c",
+        "vehicle-before.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c"
+      },
+      "guard_window_seconds": 1.423278,
+      "location_active_in_guard": 0,
+      "type_mask": "0x40000000",
+      "first_foreground_snapshot_seconds": 0.279873,
+      "first_notification_snapshot_seconds": 1.380202
+    },
+    {
+      "case": "location-active-off-02",
+      "installed_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+      "observations": 53,
+      "review_input_sha256": {
+        "access-after.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "access-before.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "cleanup-idle_0.xml": "d463f5bf0429ccb024304d2a39b2aa0ecb34605a7fae15f81428f0ea1a5f485f",
+        "cleanup-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "cleanup-process.txt": "312f1b8f9e5f43ffec7eed64236d0a1808830b29dbb423ffe8df8d924eb44311",
+        "cleanup-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "cleanup-snapshot.json": "21017c37f84c317567361bb8052fddc176f38eee301bf48ff15648c74f51fa4a",
+        "coffee-before.xml": "e092053687921640d34950fc9b9cccb0602cfee465d676d4720cd01b41e8a35a",
+        "current-user.json": "edf38cc6ad4bb63f82006b8ac849f9e261ee496a5e1bfd2e8c5aa5f523dbee40",
+        "guard-start_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard-start_0-process.txt": "83f862bc4b90d7f011da51b692e79ba1d75949af4b73fd9ba71b07924420ce5c",
+        "guard-start_0-service.txt": "f62352eb7d88b4030ac5cdbdb3a9e194e1a3f015c5e3466c3ced65422352c8d5",
+        "guard-start_0-snapshot.json": "e4d74a23325f63a161ffc846c14c989150da6ac3b48e876278e3cba211a7b4f2",
+        "guard-start_1-notification.txt": "7b4a1fd20886862ed72fd3c9a31534f7db9177c0deb84141ceb773b66e6ea8c6",
+        "guard-start_1-process.txt": "bef4ce14efe2583f99da9709996861e7caa481487387de89d0d5d121f2396738",
+        "guard-start_1-service.txt": "6a6167315e08da436cfee4ede001c5ef03c14f0c8b490cdb4e29c0b626483266",
+        "guard-start_1-snapshot.json": "8c9acef5f5ae612b1595804058b20f363fb812af70a23950e35397da0bf503a7",
+        "harness-source.py": "75cf8fef0f4f68182d93f690e1fb9fae1f0126c9ccf0e91d1636dead31f3553a",
+        "initial-idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "initial-idle-process.txt": "b5d79f4a4ffe6845896a8161466f151eeae6a89287d1642eb416cbc44e1ac7f8",
+        "initial-idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "initial-idle-snapshot.json": "4acedc2ab7745a953a22522e84bd74b7d8d3d5121c398a4872107177e1815a3d",
+        "initial-idle.xml": "e092053687921640d34950fc9b9cccb0602cfee465d676d4720cd01b41e8a35a",
+        "input-ledger.jsonl": "0086b30bb3294d897f1b704ca1e6d71bddda07e6d7665b75b5d7898d921c5df5",
+        "log-properties-after.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "log-properties-before.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "observations.jsonl": "01f68ea666c97f375250c054030f71bcb3e497ca1595b93d347a126186b2535c",
+        "result.json": "0b6ae49c12f4ab9084b8a5074260d45a890598b65b941bb6a99a9d21ae55e7bf",
+        "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+        "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+        "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+        "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+        "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "vehicle-after.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c",
+        "vehicle-before.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c"
+      },
+      "guard_window_seconds": 10.547559,
+      "location_active_in_guard": 1,
+      "type_mask": "0x40000008",
+      "first_foreground_snapshot_seconds": 0.249354,
+      "first_notification_snapshot_seconds": 1.353655,
+      "off_window_seconds": 4.004521,
+      "on_same_guard_seconds": 5.054423,
+      "off_to_stop_ms": 54.508,
+      "on_same_guard_ticks": 5,
+      "post_end_active_after_finished_ms": 6.83
+    },
+    {
+      "case": "location-reconnect-02",
+      "installed_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+      "observations": 126,
+      "review_input_sha256": {
+        "access-after.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "access-before.json": "fd5a297c8b8a2d50943f4630cee081c3f1e74f622c7d27aa7b37203d3b80a5ef",
+        "cleanup-idle_0.xml": "bcfe7d2de593cfe85af1fd3c9031112fe4009778c4a4a61c36537541d8c3d2a2",
+        "cleanup-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "cleanup-process.txt": "b148330b53a412826281e3f1d1655317c2fb60bb20ce16558b6d9fa80ca40b61",
+        "cleanup-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "cleanup-snapshot.json": "59eefbf622381eef9e2f42a49188c9f75b2cc08e0778772654f74011b1a6aaa9",
+        "current-user.json": "edf38cc6ad4bb63f82006b8ac849f9e261ee496a5e1bfd2e8c5aa5f523dbee40",
+        "harness-source.py": "75cf8fef0f4f68182d93f690e1fb9fae1f0126c9ccf0e91d1636dead31f3553a",
+        "idle-hidden-0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "idle-hidden-0-process.txt": "974e52a5193886d5b27f3f6b7d1ef8e6c9e6caf427525f45f0f9a344e0616996",
+        "idle-hidden-0-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "idle-hidden-0-snapshot.json": "077eaa11e6d9687a88cdbf8dce6d6fd3093f61645b1381015bb8de6894191ccd",
+        "idle-hidden-1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "idle-hidden-1-process.txt": "05bda4a04f61ff7ef9dfbe6ef3c53a58f5c5432545f3996550e0863c2e4eb207",
+        "idle-hidden-1-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "idle-hidden-1-snapshot.json": "d7a4a1c7914c3501a97ba456f7a5dcfce26aa5d0ae70ee6526254819435f9392",
+        "idle-return-0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "idle-return-0-process.txt": "cfabba04fd8ceb18e835fb2cc612621e48df937946164f23dae1eaed1f700cea",
+        "idle-return-0-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "idle-return-0-snapshot.json": "802c3322cbe2ba7ed02ebe3a9d636077226def8a89657915b5b47f1c6bc5544d",
+        "idle-return-1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "idle-return-1-process.txt": "f0e55b9ef5b73aeaed2eb0c2ed6dbc76d797f1aa21588e01c9972b54fc60c302",
+        "idle-return-1-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "idle-return-1-snapshot.json": "00922b3404a963d08e4a0ed5d646dfca7a5a1cd3004acef4e13e7d04914add3e",
+        "initial-idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "initial-idle-process.txt": "00fcd98b1b97c883528bb2f5d9e40d6558f7e0dc6241363c2fa2575ae7b3ba62",
+        "initial-idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "initial-idle-snapshot.json": "f8fafa334193df50baad3aa515a3468a3ca034fd9e5f98acc6b2720ee76aaf09",
+        "initial-idle.xml": "d463f5bf0429ccb024304d2a39b2aa0ecb34605a7fae15f81428f0ea1a5f485f",
+        "input-ledger.jsonl": "68c9dcfdc21bcbaba858378c1d064023fee84d37c9383525be2c7f730c8ce63f",
+        "log-properties-after.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "log-properties-before.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+        "observations.jsonl": "86c6fb8f566b771de9b5598642fadcabc2a65311c3ebf2113a5d69e046adc498",
+        "result.json": "f2a4d4602c62e266501e3cc68a8d432ddbbf1b32e38a12c2ef9e832c12884e57",
+        "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+        "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+        "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+        "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+        "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "vehicle-after.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c",
+        "vehicle-before.json": "ce27aef89cc80ecac15d7b4d71b5941f23e6eee30f63a1741c3df0894e04dc1c"
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "window_seconds": 1.291836,
+          "observed_motion_rows": 14,
+          "saved_motion_rows": 12,
+          "setup_log_counts": {
+            "AospCarVehicle": 1,
+            "PleosNavi": 1,
+            "CargoVM": 1
+          }
+        },
+        {
+          "cycle": 1,
+          "window_seconds": 1.428383,
+          "observed_motion_rows": 13,
+          "saved_motion_rows": 12,
+          "setup_log_counts": {
+            "AospCarVehicle": 1,
+            "PleosNavi": 1,
+            "CargoVM": 1
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Control-boundary observations only: no injected/recorded GPS fix, location cache value or physical speed accuracy proof.",
+    "New source setup logs and MotionTrace do not prove actual fresh gear or Pleos getter/native route callback.",
+    "Observation stream is selected structured records, not a separately retained complete raw log; live host times lack clock calibration.",
+    "Permission flags/appops/location and log-property after readbacks are now retained and match before.",
+    "Input hashes generated at review; prior parser failure and earlier runtime04 observations remain preserved."
+  ],
+  "checks": [
+    {
+      "check": "location-on-03 runtime06 identity/no execution errors",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/cleanup-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_10-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_2-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_3-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_4-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_5-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_6-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_7-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_8-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/guard-start_9-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03/initial-idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 access restored including flags/appops/location",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 log properties restored readback",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 retained cabin subset unchanged",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 audio toggles restored XML",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 cleanup no service notification",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 foreground types match location gate",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 single ready matching session",
+      "passed": true
+    },
+    {
+      "check": "location-on-03 location subscription gate",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 runtime06 identity/no execution errors",
+      "passed": true
+    },
+    {
+      "check": "location-off-02/cleanup-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-off-02/guard-start_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-off-02/guard-start_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-off-02/initial-idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 access restored including flags/appops/location",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 log properties restored readback",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 retained cabin subset unchanged",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 audio toggles restored XML",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 cleanup no service notification",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 foreground types match location gate",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 single ready matching session",
+      "passed": true
+    },
+    {
+      "check": "location-off-02 location subscription gate",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 runtime06 identity/no execution errors",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02/cleanup-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02/guard-start_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02/guard-start_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02/initial-idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 access restored including flags/appops/location",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 log properties restored readback",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 retained cabin subset unchanged",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 audio toggles restored XML",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 cleanup no service notification",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 foreground types match location gate",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 single ready matching session",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 location subscription gate",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 revoke then ON never resumes same guard",
+      "passed": true
+    },
+    {
+      "check": "location-active-off-02 later active belongs after End finished",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 runtime06 identity/no execution errors",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02/cleanup-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02/idle-hidden-0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02/idle-hidden-1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02/idle-return-0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02/idle-return-1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02/initial-idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 access restored including flags/appops/location",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 log properties restored readback",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 retained cabin subset unchanged",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 audio toggles restored XML",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 cleanup no service notification",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 cycle 0 setup and Idle traces",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 cycle 0 saved traces are in raw period",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 cycle 1 setup and Idle traces",
+      "passed": true
+    },
+    {
+      "check": "location-reconnect-02 cycle 1 saved traces are in raw period",
+      "passed": true
+    }
+  ],
+  "check_count": 66,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

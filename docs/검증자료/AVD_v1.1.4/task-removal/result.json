@@ -1,0 +1,125 @@
+{
+  "onTaskRemovedDirectlyInstrumented": false,
+  "callbackScope": "Exact shell task removal, matching GuardRuntime lost and teardown; no direct onTaskRemoved marker.",
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "user": 10,
+  "initialPid": "25541",
+  "clockCalibration": {
+    "deviceMinusHostNs": 298963260,
+    "uncertaintyNs": 13367000,
+    "hostBeforeNs": 1793291236240611000,
+    "hostAfterNs": 1793291236267345000,
+    "deviceEpochNs": 1793291236552941260
+  },
+  "session": {
+    "requestId": 1,
+    "startedMs": 9993895
+  },
+  "removeRequest": {
+    "event": "shell_task_remove_request",
+    "hostUnixNs": 1793291248449068000,
+    "hostMonotonicNs": 40741052321250,
+    "selectedRoot": {
+      "rootId": 1000400,
+      "displayId": 0,
+      "userId": 10,
+      "tasks": [
+        {
+          "taskId": 1000400,
+          "component": "ai.vipseat.cargoconcierge/ai.vipseat.cargoconcierge.MainActivity",
+          "userId": 10,
+          "visible": true,
+          "topActivity": "ai.vipseat.cargoconcierge/ai.vipseat.cargoconcierge.MainActivity"
+        }
+      ]
+    },
+    "inventoryAgeMs": 0.773166
+  },
+  "lost": {
+    "hostReceivedUnixNs": 1793291248503378000,
+    "hostReceivedMonotonicNs": 40741106633416,
+    "line": "         1793291248.792 25541 25541 I GuardRuntime: {\"event\":\"lost\",\"elapsedMs\":9995324,\"requestId\":1,\"startedMs\":9993895,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291248.792,
+    "pid": 25541,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"lost\",\"elapsedMs\":9995324,\"requestId\":1,\"startedMs\":9993895,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "lost",
+      "elapsedMs": 9995324,
+      "requestId": 1,
+      "startedMs": 9993895,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  "manualRelaunch": {
+    "event": "manual_relaunch_request",
+    "hostUnixNs": 1793291266776524000,
+    "hostMonotonicNs": 40759380134666
+  },
+  "renewedRuntimeRows": 0,
+  "postRemovalGuardRows": 0,
+  "observedWriteRows": 0,
+  "passed": true,
+  "issues": [],
+  "runtimeSnapshots": [
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291248368597000,
+      "hostMonotonicNs": 40740971848958,
+      "label": "guard_active_1",
+      "pid": "25541",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291249768379000,
+      "hostMonotonicNs": 40742371658208,
+      "label": "removed_1",
+      "pid": "",
+      "isFrozen": null,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291256796196000,
+      "hostMonotonicNs": 40749399612125,
+      "label": "removed_8",
+      "pid": "",
+      "isFrozen": null,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291266775739000,
+      "hostMonotonicNs": 40759379349416,
+      "label": "removed_18",
+      "pid": "",
+      "isFrozen": null,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    }
+  ],
+  "limits": [
+    "onTaskRemoved callback directly uninstrumented; lost alone is shared with other teardown paths.",
+    "Shell task removal is not a successful Recents swipe test; prior Recents run remains unexecuted.",
+    "18s stationary AVD observation; no bus-level write capture or physical driving claim."
+  ]
+}

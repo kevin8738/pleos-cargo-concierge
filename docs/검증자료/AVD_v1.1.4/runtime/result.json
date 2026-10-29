@@ -1,0 +1,70 @@
+{
+  "runtimeSnapshots": [
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291069465482000,
+      "hostMonotonicNs": 40562065246125,
+      "label": "guard_foreground_0",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291092193349000,
+      "hostMonotonicNs": 40584793555583,
+      "label": "background_0",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291100191970000,
+      "hostMonotonicNs": 40592792332875,
+      "label": "background_8",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291109382331000,
+      "hostMonotonicNs": 40601982872666,
+      "label": "background_17_2",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    }
+  ],
+  "liveRows": 247,
+  "issues": [],
+  "liveRouteDrive": 1,
+  "liveTbt": 12,
+  "liveFreeDrive": 1,
+  "backgroundTicks": 21,
+  "maximumTickGapMs": 1007,
+  "passed": true,
+  "limits": [
+    "Stationary official AVD and public synthetic destination; no route progression, driving or audio claim.",
+    "No motion DEMO after one parked preparation; real source freshness and physical accuracy are separate.",
+    "No logged cabin write outcomes plus unchanged readback is not a vehicle-bus capture.",
+    "Task-removal case blocks if a unique VIP dismiss control cannot be observed."
+  ]
+}

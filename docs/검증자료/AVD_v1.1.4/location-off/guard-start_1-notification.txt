@@ -1,0 +1,67 @@
+    NotificationRecord(0x08c8ceb9: pkg=ai.vipseat.cargoconcierge user=UserHandle{10} id=7301 tag=null importance=2 key=10|ai.vipseat.cargoconcierge|7301|null|1010175: Notification(channel=cargo_active_guard shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 category=service vis=PRIVATE))
+      uid=1010175 userId=10
+      opPkg=ai.vipseat.cargoconcierge
+      icon=Icon(typ=RESOURCE pkg=ai.vipseat.cargoconcierge id=0x7f0700c6)
+      flags=0x62
+      originalFlags=0x42
+      pri=0
+      key=10|ai.vipseat.cargoconcierge|7301|null|1010175
+      seen=false
+      groupKey=10|ai.vipseat.cargoconcierge|7301|null|1010175
+      notification=
+            fullscreenIntent=null
+            contentIntent=PendingIntent{89292fe: PendingIntentRecord{ff25f32 ai.vipseat.cargoconcierge startActivity (allowlist: 144f590:+30s0ms/0/NOTIFICATION_SERVICE/NotificationManagerService)}}
+            deleteIntent=null
+            number=0
+            groupAlertBehavior=0
+            when=1793291384161
+            tickerText=null
+            vis=0
+            contentView=null
+            bigContentView=null
+            headsUpContentView=null
+            color=0x00000000
+            timeout=unknown
+            extras={
+                android.title=String [length=15]
+                android.reduced.images=Boolean (true)
+                android.text=String [length=34]
+                android.appInfo=ApplicationInfo (ApplicationInfo{da62a5f ai.vipseat.cargoconcierge})
+            }
+      publicNotification=
+            None
+      stats=SingleNotificationStats{posttimeElapsedMs=10130902, posttimeToFirstClickMs=-1, posttimeToDismissMs=-1, airtimeCount=0, airtimeMs=0, currentAirtimeStartElapsedMs=-1, airtimeExpandedMs=0, posttimeToFirstVisibleExpansionMs=-1, currentAirtimeExpandedStartElapsedMs=-1, requestedImportance=3, naturalImportance=2, isNoisy=true}
+      mContactAffinity=0.0
+      mRecentlyIntrusive=false
+      mPackagePriority=0
+      mPackageVisibility=-1000
+      mSystemImportance=UNSPECIFIED
+      mAsstImportance=UNSPECIFIED
+      mImportance=LOW
+      mImportanceExplanation=app
+      mProposedImportance=UNSPECIFIED
+      mIsAppImportanceLocked=true
+      mSensitiveContent=false
+      mIntercept=false
+      mHidden==false
+      mGlobalSortKey=crtcl=0x0002:intrsv=1:grnk=0x0004:gsmry=1:nsk:rnk=0x0004
+      mRankingTimeMs=1793291384161
+      mCreationTimeMs=1793291384168
+      mVisibleSinceMs=0
+      mUpdateTimeMs=1793291384168
+      mInterruptionTimeMs=1793291384369
+      mSuppressedVisualEffects= 0
+      mSound= content://settings/system/notification_sound
+      mVibration= null
+      mAttributes= AudioAttributes: usage=USAGE_NOTIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null
+      mLight= null
+      mShowBadge=true
+      mColorized=false
+      mAllowBubble=false
+      isBubble=false
+      mIsInterruptive=true
+      effectiveNotificationChannel=NotificationChannel{mId='cargo_active_guard', mName=VIP 가드 실행, mDescription=hasDescription , mImportance=2, mBypassDnd=false, mLockscreenVisibility=-1000, mSound=content://settings/system/notification_sound, mLights=false, mLightColor=0, mVibration=null, mUserLockedFields=0, mUserVisibleTaskShown=true, mVibrationEnabled=false, mShowBadge=true, mDeleted=false, mDeletedTimeMs=-1, mGroup='null', mAudioAttributes=AudioAttributes: usage=USAGE_NOTIFICATION content=CONTENT_TYPE_SONIFICATION flags=0x800 tags= bundle=null, mBlockableSystem=false, mAllowBubbles=-1, mImportanceLockedDefaultApp=false, mOriginalImp=2, mParent=null, mConversationId=null, mDemoted=false, mImportantConvo=false}
+      mAdjustments=[]
+      shortcut=null found valid? false
+      mUserVisOverride=-1000
+

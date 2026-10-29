@@ -1,0 +1,72 @@
+{
+  "mode": "deny",
+  "afterFailure": {
+    "event": "runtime_snapshot",
+    "hostUnixNs": 1793291003691329000,
+    "hostMonotonicNs": 40496289810041,
+    "label": "after-failure",
+    "pid": "26822",
+    "isFrozen": false,
+    "servicePresent": false,
+    "foregroundService": false,
+    "serviceTypeMask": null,
+    "foregroundIdCorrect": false,
+    "activeNotificationCount": 0
+  },
+  "recovery": {
+    "passed": true,
+    "ready": {
+      "event": "ready",
+      "elapsedMs": 9754895,
+      "requestId": 26,
+      "startedMs": 9754895,
+      "visible": true,
+      "ending": false,
+      "guarding": true
+    },
+    "active": {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291009401099000,
+      "hostMonotonicNs": 40501999691833,
+      "label": "recovery-active_1",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    "stopped": {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291012821495000,
+      "hostMonotonicNs": 40505420154541,
+      "label": "recovery-stopped",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    }
+  },
+  "passed": true,
+  "issues": [],
+  "readyCount": 0,
+  "guardTraceCount": 0,
+  "observedMotionTraces": 17,
+  "cabinOperationLogCount": 0,
+  "failureNotice": true,
+  "promotionFailureMessages": [],
+  "failedRequestCount": 1,
+  "failureRequestLatencySeconds": 0.043927,
+  "silentIgnorePromotionLogs": 0,
+  "ordinaryStartDowngradeLogs": 0,
+  "systemCaseRows": [
+    {
+      "hostReceivedUnixNs": 1793290993129771000,
+      "line": "         1793290993.411   753 29983 I ActivityManager: Background started FGS: Allowed [callingPackage: ai.vipseat.cargoconcierge; callingUid: 1010175; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { cmp=ai.vipseat.cargoconcierge/.runtime.GuardForegroundService (has extras) }; code:PROC_STATE_TOP; tempAllowListReason:<null>; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null: isBindService:false]"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+10-29 08:46:33.050 30919 30919 I CargoVM : 가드 서비스 준비: 요청 4
+10-29 08:46:33.050 30919 30919 I CargoVM : 캐빈 적용 → 조수석
+10-29 08:46:33.053 30919 30919 I CargoVM : TTS: 케이크 VIP 모드, 조수석. 0.15G 가드를 시작할게요
+10-29 08:46:33.053 30919  2099 I [Pleos][SDK]b: [binder:30919_8]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 22.0
+10-29 08:46:33.054 30919 30919 I CargoVM : 가드 시작: 케이크 (0.15G) · 조수석
+10-29 08:46:33.056 30919  2099 I [Pleos][SDK]b: [binder:30919_8]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 1
+10-29 08:46:33.066 30919 30982 I PleosVehicle: temperature synchronization readback: state=false
+10-29 08:46:33.075 30919 30982 I PleosVehicle: apply TEMPERATURE: DRIVING_RESTRICTED · 최신 차속 확인 불가 · 명령 보류 · confirmation=NONE value=null hvacPowerAtCheck=null
+10-29 08:46:33.075 30919 30982 I PleosVehicle: apply FAN: UNCHANGED · 운전석과 공유하는 존이라 유지 · confirmation=NONE value=null hvacPowerAtCheck=null
+10-29 08:46:33.075 30919 30982 I PleosVehicle: apply AIRFLOW: UNCHANGED · 운전석과 공유하는 존이라 유지 · confirmation=NONE value=null hvacPowerAtCheck=null
+10-29 08:46:33.075 30919 30982 I PleosVehicle: apply SEAT_HEATER: UNCHANGED · 이미 요청값 · 변경하지 않음 · confirmation=VALUE_CONFIRMED value=0 hvacPowerAtCheck=null
+10-29 08:46:33.075 30919 30982 I PleosVehicle: apply SEAT_VENT: UNCHANGED · 이미 요청값 · 변경하지 않음 · confirmation=VALUE_CONFIRMED value=0 hvacPowerAtCheck=null
+10-29 08:46:33.208 30919 30919 I CargoVM :   TEMPERATURE: DRIVING_RESTRICTED (최신 차속 확인 불가 · 명령 보류)
+10-29 08:46:33.209 30919 30919 I CargoVM :   FAN: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 08:46:33.209 30919 30919 I CargoVM :   AIRFLOW: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 08:46:33.209 30919 30919 I CargoVM :   SEAT_HEATER: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 08:46:33.209 30919 30919 I CargoVM :   SEAT_VENT: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 08:46:33.209 30919 30919 I CargoVM : 캐빈 적용: 0개 성공, 1개 미적용
+10-29 08:46:33.209 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.282 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.368 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.436 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.439 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.468 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.568 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.769 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:33.868 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.071 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.269 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.441 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.443 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.468 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.668 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.868 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:34.969 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.069 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.275 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.447 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.448 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.469 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.673 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.674 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.869 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:35.970 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.170 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.368 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.450 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.450 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.468 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.571 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.771 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:36.868 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.068 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.169 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.369 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.455 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.456 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.568 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.769 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.868 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:37.969 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.170 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.270 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.460 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.463 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.468 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.568 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.670 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.869 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:38.869 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:39.071 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:39.268 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:39.368 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:39.467 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:39.475 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 08:46:39.478 30919 30919 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0

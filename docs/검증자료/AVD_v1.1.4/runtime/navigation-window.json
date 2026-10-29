@@ -1,0 +1,37 @@
+{
+  "request": {
+    "event": "native_route_request",
+    "hostUnixNs": 1793291079798666000,
+    "hostMonotonicNs": 40572398631458
+  },
+  "active": {
+    "event": "native_route_active",
+    "hostUnixNs": 1793291091909149000,
+    "hostMonotonicNs": 40584509350416,
+    "deviceElapsedMs": 9838720
+  },
+  "background": {
+    "event": "guard_background_activity",
+    "hostUnixNs": 1793291092028859000,
+    "hostMonotonicNs": 40584629062458,
+    "deviceElapsedMs": 9838800,
+    "pid": "26822",
+    "focus": [
+      "topResumedActivity=ActivityRecord{3dbfd79 u10 ai.umos.maps.android.navigation.app/.MainActivity t1000386}",
+      "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}",
+      "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"
+    ],
+    "vipActivityState": "STOPPED",
+    "vipVisible": false
+  },
+  "endRequest": {
+    "event": "native_route_end_request",
+    "hostUnixNs": 1793291112326849000,
+    "hostMonotonicNs": 40604927449125
+  },
+  "returnStart": {
+    "event": "vip_return_start",
+    "hostUnixNs": 1793291117589542000,
+    "hostMonotonicNs": 40610190245583
+  }
+}

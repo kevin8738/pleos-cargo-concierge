@@ -1,0 +1,137 @@
+{
+  "hvac": {
+    "power_on": false,
+    "auto_on": false,
+    "ac_on": true,
+    "dual_on": false,
+    "sync_on": false,
+    "recirc_on": false,
+    "fan_speed": 3,
+    "auto_blower_level": 1,
+    "driver": {
+      "temp_c": 22.0,
+      "seat_temp": 0,
+      "seat_mode": "Off",
+      "fan_direction": 1,
+      "fan_direction_label": "Face"
+    },
+    "passenger": {
+      "temp_c": 22.0,
+      "seat_temp": 0,
+      "seat_mode": "Off",
+      "fan_direction": 1,
+      "fan_direction_label": "Face"
+    },
+    "row2": {
+      "left_seat_temp": 0,
+      "right_seat_temp": 0
+    },
+    "front_defroster_on": false,
+    "rear_defroster_on": false
+  },
+  "seat": {
+    "positions": {
+      "slide": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "recline": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "tilt": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "height": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "lumbar": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      }
+    },
+    "moves": {
+      "slide": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "recline": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "tilt": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "height": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "lumbar": {
+        "driver": 0,
+        "passenger": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      }
+    },
+    "occupied": {
+      "driver": false,
+      "passenger": false,
+      "rear_left": false,
+      "rear_right": false
+    }
+  },
+  "body": {
+    "doors": {
+      "front_left": false,
+      "front_right": false,
+      "rear_left": false,
+      "rear_right": false
+    },
+    "door_locks": {
+      "front_left": true,
+      "front_right": true,
+      "rear_left": true,
+      "rear_right": true,
+      "all": true
+    },
+    "windows": {
+      "front_left": 0,
+      "front_right": 0,
+      "rear_left": 0,
+      "rear_right": 0
+    },
+    "closures": {
+      "frunk": false,
+      "frunk_position": 0.0,
+      "trunk": false,
+      "trunk_position": 0.0
+    }
+  },
+  "controls": {
+    "speed_kph": 0,
+    "accelerator_pct": 0,
+    "brake_pct": 0,
+    "steering_deg": 0
+  }
+}

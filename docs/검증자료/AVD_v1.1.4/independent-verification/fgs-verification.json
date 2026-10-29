@@ -1,0 +1,396 @@
+{
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "cases": [
+    {
+      "mode": "ignore",
+      "fault_window_seconds": 12.646654,
+      "failure_latency_seconds": 0.066351,
+      "ready": 0,
+      "guard_traces": 0,
+      "cabin_operation_logs": 0,
+      "motion_traces": 17,
+      "system_silent_ignore_rows": 1,
+      "recovery_first_foreground_snapshot_seconds": 0.25639,
+      "recovery_first_notification_snapshot_seconds": 11.357428,
+      "recovery_samples": 11
+    },
+    {
+      "mode": "deny",
+      "fault_window_seconds": 12.69158,
+      "failure_latency_seconds": 0.043927,
+      "ready": 0,
+      "guard_traces": 0,
+      "cabin_operation_logs": 0,
+      "motion_traces": 17,
+      "system_silent_ignore_rows": 0,
+      "recovery_first_foreground_snapshot_seconds": 0.239908,
+      "recovery_first_notification_snapshot_seconds": 1.366851,
+      "recovery_samples": 2
+    }
+  ],
+  "review_input_sha256": {
+    "cleanup-current.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "cleanup-idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "cleanup-idle-process.txt": "fce42f25a1c4249eddc671b1d45229c5289d208c68bf05ab30b65f41b08dbdc2",
+    "cleanup-idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "cleanup-idle-snapshot.json": "f17142f5129df0cd770ae046e807bc29b659d3b51df07dbd0815ebdf548a68cf",
+    "cleanup-idle.png": "8bda1ac6527caf8c5b70fba22b00dff60f163d6041a26bb93dda17b59dd5e0fb",
+    "cleanup-idle.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "cleanup-idle_0.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "cleanup.json": "67830d26d6501769d70996eda89bbd93daafc6fc49b2aa105c3e1fae5c5d6c48",
+    "deny/after-failure-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "deny/after-failure-process.txt": "68d477f1aa847f5dae089df8867565e092459e825674ea8d3d4497b8dc607c27",
+    "deny/after-failure-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "deny/after-failure-snapshot.json": "736329605c2117ea958c3f7c2363767a950c06726266345a7b42cc7d6c10e0f5",
+    "deny/before-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "deny/before-process.txt": "a928f1ba458f1480761f4271a0d0207c65ce1eecc89a40258a5906e1d37022c2",
+    "deny/before-request.png": "1671823a2db6e0a7a40d7e6d69a249ebd12f40865f315da7f65ef84c22395087",
+    "deny/before-request.xml": "b473879f58bf7eff1740927bd0dafbd4f10de62262b998639b3e828781f99fa1",
+    "deny/before-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "deny/before-snapshot.json": "e4295a600359dbb6c71dc95902c30b9783a8467a5a56b2e13675d765c956e2a2",
+    "deny/failure-ui.png": "f3463ce57b7e16a39c8f3ac346442dbb679e219481196d5a092d1404ea117b9d",
+    "deny/failure-ui.xml": "42f12676f6919d058ac43c1de724b904d5bed4182f9ee4e88220ea5fd70f4935",
+    "deny/idle-after-failure.xml": "42f12676f6919d058ac43c1de724b904d5bed4182f9ee4e88220ea5fd70f4935",
+    "deny/injected-appop.txt": "303d0b2357978edfcdb1b444a3942585ccdd1f6bd650d6e7898396c754b38456",
+    "deny/input-ledger.jsonl": "891e1a211080ff48c78b6c7e4593b9e3fe459a2a2b8e090614a3d45f7cd15a33",
+    "deny/live-log.jsonl": "ca8bb703b31122d54e4eca9f5368c7bb15cf578b2ae43e468ee8df683942888c",
+    "deny/live.log": "7376ed0f382b48d42bd72c4acb6291330cc9d89f3b8cd00914889135398a772e",
+    "deny/recovery-active_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "deny/recovery-active_0-process.txt": "9a6e66e848fdf4bb06f5151a46f4abec57b1df9cd881d2d298ce3aebe4287140",
+    "deny/recovery-active_0-service.txt": "31c894a94a039e70432d6b03355f97bdfdd0c7aedc3f79cf3778da5e3372c36c",
+    "deny/recovery-active_0-snapshot.json": "a74cd4b77e9f945a0b6c5873048788c80589a313c0aac4a8ae423be1047766b6",
+    "deny/recovery-active_1-notification.txt": "ad109ab7f2c8df3ff8bdd2dc008e266ab5dea3772ca9837fe746bfb131d3f2a8",
+    "deny/recovery-active_1-process.txt": "6807311fdf51d2aa0b4f7ba7577444a42a34c49f4c5ffb298789d0ca9c598dcf",
+    "deny/recovery-active_1-service.txt": "778a409e6a4af5a8cfc47158605aff13d53c33291675392f6fd8cddab85270b8",
+    "deny/recovery-active_1-snapshot.json": "2d6a6978378ee55c0bb51862dd383de8e2585f295a411299d8d7ecc20ba6569b",
+    "deny/recovery-before.xml": "42f12676f6919d058ac43c1de724b904d5bed4182f9ee4e88220ea5fd70f4935",
+    "deny/recovery-end_0.xml": "d51aa75678ce8ad2fff4bcedf14915c2077fe5e95af2e11fd529a930e1b8b043",
+    "deny/recovery-idle.png": "8bda1ac6527caf8c5b70fba22b00dff60f163d6041a26bb93dda17b59dd5e0fb",
+    "deny/recovery-idle.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "deny/recovery-idle_0.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "deny/recovery-stopped-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "deny/recovery-stopped-process.txt": "13f327c60a5df2008a9e1e551ad5f409b135062cbb7fbacdee2732a874aee7cd",
+    "deny/recovery-stopped-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "deny/recovery-stopped-snapshot.json": "47ed7dbde70d751f1d0739bbaeb60f34136a1e2f0eec3db1f204cefa5e76a444",
+    "deny/restored-appop.txt": "2ef03de39c05b3d870253ffda1b1bcc46aa9a1be4a8cf36f05296ad299b2d720",
+    "deny/result.json": "14b08099a4a1a54a104a5a29a7b68fe336b9193e3fcdc6d8d7d258c9a83fe445",
+    "deny/system-filtered.jsonl": "7c8426e01ddd8c06e153ae0f5af87f1113c9f8e9878c3e142cb3a2db047a4520",
+    "deny/system-filtered.log": "264b65f477a2a5952c1a7e229dc07543196a2801c12f1dfc3109e83a61a74e7e",
+    "environment.json": "3a9680f87590588b81dc9c65316e74da85db3eba08964d53cd98d99a5af34e03",
+    "finally-restored-appop.txt": "33479b25dc897dfeb687a4106536267680adeebad71027363fa270ce106792c9",
+    "finally-uid-appop.txt": "7b5be473db4bd1941aaedaf0bcee4e7102f60528d4f5145b620020148cc80727",
+    "harness-source.py": "92930f7461f5269ef79fb117c8d88896ec08c6acc3c3db69daf6c6d450bd0f46",
+    "ignore/after-failure-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/after-failure-process.txt": "cd2b43b00482e82adc6bc1273d0553c3134cfb8ce9b0193ff44d1703fe805c45",
+    "ignore/after-failure-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "ignore/after-failure-snapshot.json": "ea8f4b4b38d16a9e051f0afa2fcff3e9d62e0eb4591dee5e1e60ed3f5154af4a",
+    "ignore/before-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/before-process.txt": "b54fbcb89138fa3512a68dac49cede93f30a0517a3301e2d62a127a157f4dba6",
+    "ignore/before-request.png": "9ff7ffbc4823916bc69f473efea8f7f191ac1bf6100d13901bb18171b0b21d47",
+    "ignore/before-request.xml": "be8ba99cc2820f8c1e5ac38d4b78e6c6128c1e3c06c886cd8819f945ba4acd1b",
+    "ignore/before-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "ignore/before-snapshot.json": "a98b1eedf01d2a9ea50fc385c86ed824a4b36fe764d162e648e26b0692031702",
+    "ignore/failure-ui.png": "6b23c54c07a01db9992fb1987ddee94d7415e897073c1c1290f0024802f7ca3f",
+    "ignore/failure-ui.xml": "ffc5f48c89775e73b3491c35da5520d4f99a41dc0d3dd08d6c87526c6d5a670a",
+    "ignore/idle-after-failure.xml": "ffc5f48c89775e73b3491c35da5520d4f99a41dc0d3dd08d6c87526c6d5a670a",
+    "ignore/injected-appop.txt": "03381116995172c18d2fe972d9eb793b457c85fe91463a85443b411fd508cc21",
+    "ignore/input-ledger.jsonl": "5f2a4ec41c1c23e0a6a94800116d3c765ceed462a5c00687801b147b7f0a1b1b",
+    "ignore/live-log.jsonl": "6020b18703e947d0abaf8de32944c493640e7760a51f8bb37bfc9a2f0663b329",
+    "ignore/live.log": "112c8c1b9439e4505d6b888f44652ab13d676d30a73173e47566ddb4ba7c4427",
+    "ignore/recovery-active_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_0-process.txt": "64d8d05952008ad7caa448e8fee712507de48d128deea397058d164244e20594",
+    "ignore/recovery-active_0-service.txt": "6b99ed3a618c609593812dc43fc191c3c66679452e7f587f9849d8970a6533f1",
+    "ignore/recovery-active_0-snapshot.json": "7ffcaa139e6875c9ed2e9ba2357d33174bec4fb25d0c3c7b6432b39046d4a7e0",
+    "ignore/recovery-active_1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_1-process.txt": "21957cfd173f2f7000b77164a11d436268933c5f5355f49061298cf69bc4997e",
+    "ignore/recovery-active_1-service.txt": "8c0c9494a92b2e6a2ffa59d807cfe33ac9afd9a6a429dc40a96ff67274edf135",
+    "ignore/recovery-active_1-snapshot.json": "c9def521c6ec28d20eb34971933c220d03f4dd93de8665a859e2ec4da0a2eec6",
+    "ignore/recovery-active_10-notification.txt": "584554a270ecf644755b5b6a005769ec3a3bae488ffcb0752b3a054ca8660abf",
+    "ignore/recovery-active_10-process.txt": "09887416e161606d271f756724cd32ae92d89e7e7673ca7ebaccb647a4bfccc8",
+    "ignore/recovery-active_10-service.txt": "dbf0772e049459b6e8c37ee66a56ca6cbe1d0c87a9dcd73a67092cf7cfd88402",
+    "ignore/recovery-active_10-snapshot.json": "93b2a18f44ca7abcc2e758885415e9f05d1b96f425977f0d7f853c11bcf8deba",
+    "ignore/recovery-active_2-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_2-process.txt": "9f8c17eb8c9406ecdfd2e6bd4a19e4f7b92846e11cc06763207d30cb0d78952c",
+    "ignore/recovery-active_2-service.txt": "f900da990af017c0fd0fe7be8c0003f43e9c87c796c95b4eb0b642d9914cb2d6",
+    "ignore/recovery-active_2-snapshot.json": "e60a1683aca744d71bfb12fd61b660d24d8e0d64c5b8afd265714e2a90c47d8f",
+    "ignore/recovery-active_3-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_3-process.txt": "f84bbbe4b517ae4a01d526a2059642b78981d97fdefb72f11b0b52f9662d0849",
+    "ignore/recovery-active_3-service.txt": "b2e49cb98418b8033e12b0bd898a11346925491163de4b893be7f4810012b43b",
+    "ignore/recovery-active_3-snapshot.json": "87871007f8e0191bfd43de6da065bebc33d77f55dca8d4b7a51c9f5bbdbf852d",
+    "ignore/recovery-active_4-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_4-process.txt": "c48dd9e2c85561c10c7fafdc93a4ceebf6de2d478c50f68dfe4489cd155d2ed9",
+    "ignore/recovery-active_4-service.txt": "2e749d86c7b955fdbd2985bb00aeb0385675ba1678627d7b4e64bb94bba0362b",
+    "ignore/recovery-active_4-snapshot.json": "26231ee42e8519d50e06a321eb6bdc384a58360476f445a9cd8bbc7bfcb31ed8",
+    "ignore/recovery-active_5-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_5-process.txt": "80f32ea493e6692abc779f86881bc4cbdcc80cb56cc29c2b62c3c82d1eaaab26",
+    "ignore/recovery-active_5-service.txt": "5279ce4a7baa1ef7a42c6accc3aadd57e1f6ef25dfce5a293df9d68f45d60a5b",
+    "ignore/recovery-active_5-snapshot.json": "e0bb9f95a1ed596651a3bbe4bf54f2c9bb0e1e17c8bb745fb1d12a60ae2da44a",
+    "ignore/recovery-active_6-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_6-process.txt": "9ca21af02a2830e628c355ad62a87b173284cd1f5fafc69ef7bdc58fbc08ce2d",
+    "ignore/recovery-active_6-service.txt": "821d66c790838f822c02c0f2696658f419ed5a90c73194ca52c841dbb0002105",
+    "ignore/recovery-active_6-snapshot.json": "4b9e89f0d2b43d24831816ad5c6f202a282e7b9d0769ca2686b3c478d357a984",
+    "ignore/recovery-active_7-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_7-process.txt": "8a56ebc81a537f8d3bb455cd46a2dfcd58a4b89957a790d451864bc78d04b041",
+    "ignore/recovery-active_7-service.txt": "13d6bdd4962b860548c597892668752c44ef13034741bec343cd6e71babb51d3",
+    "ignore/recovery-active_7-snapshot.json": "6cb9d0eaf544bd8c92052595a4cd9442aca4f62d3ae30106ed12bcabfd365b57",
+    "ignore/recovery-active_8-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_8-process.txt": "6c00ca86af180b1fa55f472bde73d57115494bd5f9973a7389226f65ea78df42",
+    "ignore/recovery-active_8-service.txt": "3b06d4a364f1b782708305ef985176c304722c8e011fb54796474794e99d32d6",
+    "ignore/recovery-active_8-snapshot.json": "9ae2ce10b94649373101488902c6f3f057bc210ba2c27060ec93a27f476570eb",
+    "ignore/recovery-active_9-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-active_9-process.txt": "50705b629e4199b101a4e6c16504129e7dc679a1e00c9f04a46fe948565244e2",
+    "ignore/recovery-active_9-service.txt": "8a182bf21ce5620235f99aa30b1c3e50830a0da721ba9ef49fd66281432ebc88",
+    "ignore/recovery-active_9-snapshot.json": "1c5fef1c43339073472d735b62d5f7792bb2fb9b4d89bfbec664ff6827237c49",
+    "ignore/recovery-before.xml": "ffc5f48c89775e73b3491c35da5520d4f99a41dc0d3dd08d6c87526c6d5a670a",
+    "ignore/recovery-end_0.xml": "dc68d022373839f2fa1a0c5e2f3eb00c06644f6aae20ce3fd68a1da962dcf3a9",
+    "ignore/recovery-idle.png": "1671823a2db6e0a7a40d7e6d69a249ebd12f40865f315da7f65ef84c22395087",
+    "ignore/recovery-idle.xml": "b473879f58bf7eff1740927bd0dafbd4f10de62262b998639b3e828781f99fa1",
+    "ignore/recovery-idle_0.xml": "b473879f58bf7eff1740927bd0dafbd4f10de62262b998639b3e828781f99fa1",
+    "ignore/recovery-stopped-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ignore/recovery-stopped-process.txt": "826b11462175010ee5c7733db2cb987bf63c49acdf97f3d5d1af661bf09c8462",
+    "ignore/recovery-stopped-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "ignore/recovery-stopped-snapshot.json": "c6840cc280267e8561d342ee56d06af7cebe20cd780f0e5283549e0e519dca3f",
+    "ignore/restored-appop.txt": "638afca3c566a77a8c5ec67b8339ca1417254b7fd8b63716efd40ea3945579c6",
+    "ignore/result.json": "5144fdffa0a5c14dbd4aa8a62ee22fdce2817aa9313271c6e44af480749cdf74",
+    "ignore/system-filtered.jsonl": "10253448c53db971ecd0e1a7566ea29e4021dd60badfa1b6445cd817813e0fc9",
+    "ignore/system-filtered.log": "a363bdfafdd24b9ac67da5c75afbf425951e2815a197de703b4e44f8bbae77a0",
+    "initial-idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "initial-idle-process.txt": "399da803628c234ed74ffcf705d718b9c760aaf658025d938efb5c2a36562206",
+    "initial-idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "initial-idle-snapshot.json": "5b8bead60f0bd9a9509a06c4cb72fb6101610d7ecbd834e3808ece2b155abbf2",
+    "initial-idle.png": "9ff7ffbc4823916bc69f473efea8f7f191ac1bf6100d13901bb18171b0b21d47",
+    "initial-idle.xml": "be8ba99cc2820f8c1e5ac38d4b78e6c6128c1e3c06c886cd8819f945ba4acd1b",
+    "input-ledger.jsonl": "82b490c8c25b2e846483c6ba35ce116e66cbc23c46e05c33d40672474025272b",
+    "original-appop.txt": "bccfd5d3c076e201199ec1087a3aa6d43517ebed55d689242729a30004fbc04c",
+    "original-log-properties.json": "a82d9e398a0bce4a51d99f4b100b27e109fdb2e088d4460f2c2ce78a32342325",
+    "original-uid-appop.txt": "7b5be473db4bd1941aaedaf0bcee4e7102f60528d4f5145b620020148cc80727",
+    "result.json": "967d4619f0cac1e19892346f28595a7dd4ffbb2c3bfb69e897d4b19d47c4cf10",
+    "runtime-helper-source.py": "08b6be9ed1287508c8bcee21906bfc556dc5ff78f41a8bed50a761dc29291ae6",
+    "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+    "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+    "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+    "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+    "settings-original.json": "b3beee3f76104221d29535b03e82b6de936975e031a6750e77e0a46923419035",
+    "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+    "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+    "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+    "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+    "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+    "vehicle-after.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a",
+    "vehicle-before.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a"
+  },
+  "hash_scope": "Input hashes generated at independent review; no pre-existing artifact manifest in this dataset. Installed hash is recorded by harness plus candidate APK recomputed here.",
+  "limits": [
+    "Android14 only; API28 and API29-33 fallback not measured.",
+    "Deny confirms immediate rejected request, not a recorded exception class/stack trace.",
+    "No ready/cabin operation in live selected logs plus unchanged readback is not bus-level no-write proof.",
+    "Notification first-seen times are sampled posting bounds, not foreground-promotion latency.",
+    "Failure windows use host receipt times and are separate from recovery; no device clock calibration retained in this probe.",
+    "Log-property restoration is harness assertion without separately retained raw after value."
+  ],
+  "checks": [
+    {
+      "check": "candidate actual and installed hash",
+      "passed": true
+    },
+    {
+      "check": "Android14 user10 package-scoped operation",
+      "passed": true
+    },
+    {
+      "check": "exact package original mode restored",
+      "passed": true
+    },
+    {
+      "check": "UID override unchanged raw",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore raw/log rows equal",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore independently parsed fields",
+      "passed": true
+    },
+    {
+      "check": "ignore precise fault window and no ready guard cabin",
+      "passed": true
+    },
+    {
+      "check": "ignore failure latency",
+      "passed": true
+    },
+    {
+      "check": "ignore system raw/log equality",
+      "passed": true
+    },
+    {
+      "check": "ignore actual silent-ignore branch",
+      "passed": true
+    },
+    {
+      "check": "ignore appop injected/restored readback",
+      "passed": true
+    },
+    {
+      "check": "ignore failure notice and idle controls",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/after-failure-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/before-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_10-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_2-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_3-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_4-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_5-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_6-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_7-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_8-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-active_9-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/ignore/recovery-stopped-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "ignore failed and recovery-End service notification absent",
+      "passed": true
+    },
+    {
+      "check": "ignore every recovery sample foreground same pid typed",
+      "passed": true
+    },
+    {
+      "check": "ignore one matching recovery ready",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny raw/log rows equal",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny independently parsed fields",
+      "passed": true
+    },
+    {
+      "check": "deny precise fault window and no ready guard cabin",
+      "passed": true
+    },
+    {
+      "check": "deny failure latency",
+      "passed": true
+    },
+    {
+      "check": "deny system raw/log equality",
+      "passed": true
+    },
+    {
+      "check": "deny actual silent-ignore branch",
+      "passed": true
+    },
+    {
+      "check": "deny appop injected/restored readback",
+      "passed": true
+    },
+    {
+      "check": "deny failure notice and idle controls",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny/after-failure-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny/before-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny/recovery-active_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny/recovery-active_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/deny/recovery-stopped-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "deny failed and recovery-End service notification absent",
+      "passed": true
+    },
+    {
+      "check": "deny every recovery sample foreground same pid typed",
+      "passed": true
+    },
+    {
+      "check": "deny one matching recovery ready",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03 unchanged measured cabin fields and Park",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03 audio settings restored raw XML",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/initial-idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "fgs-failure-03/cleanup-idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "cleanup assertion no execution errors",
+      "passed": true
+    }
+  ],
+  "check_count": 50,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

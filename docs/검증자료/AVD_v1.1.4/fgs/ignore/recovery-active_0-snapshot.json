@@ -1,0 +1,13 @@
+{
+  "event": "runtime_snapshot",
+  "hostUnixNs": 1793290971890432000,
+  "hostMonotonicNs": 40464488293291,
+  "label": "recovery-active_0",
+  "pid": "26822",
+  "isFrozen": false,
+  "servicePresent": true,
+  "foregroundService": true,
+  "serviceTypeMask": 1073741832,
+  "foregroundIdCorrect": true,
+  "activeNotificationCount": 0
+}

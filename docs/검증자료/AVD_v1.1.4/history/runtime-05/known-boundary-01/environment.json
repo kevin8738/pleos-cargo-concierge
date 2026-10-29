@@ -1,0 +1,35 @@
+{
+  "pid": "12526",
+  "installedApkSha256": "14709ea8c5b7c16f8d91592d27d3d408e65fd513fd8246aea004c71f1903fe03",
+  "versions": [
+    "versionCode=7 minSdk=28 targetSdk=34",
+    "versionName=1.1.4-pleos"
+  ],
+  "traceStartElapsedMs": 8702290,
+  "originalMotionTraceProperty": "",
+  "motionPath": "DEMO synthetic",
+  "consolePath": "actual gear setter only",
+  "backgroundSurface": "none",
+  "policy": {
+    "limitG": 0.12,
+    "warnRatio": 0.8,
+    "chimeCooldownMs": 5000,
+    "coachCooldownMs": 8000,
+    "audibleCooldownMs": 8000,
+    "badgeHoldMs": 3000,
+    "maxVoiceCoachPerTrip": 3,
+    "maxAudiblePerTrip": 6,
+    "emergencyG": 0.6,
+    "minCoachSpeedMps": 4.166666666666667
+  },
+  "sourceHashes": {
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/engine/CargoStateMachine.kt": "621e7a12e9fa44d9d34382f36fcf61bb73abb9d8cfb89fb4f0dce218f65e3699",
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/model/CargoPreset.kt": "3255c2e2ef2539c0a8810ea2a70e808898715e4d45f63f6d850103a39b81cecb",
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/physics/GEstimator.kt": "3fb680db6cf398a26c49a28ca26a17f1b37789bf56464080793d1d5d7f09f7da"
+  },
+  "audioSettings": {
+    "tts": false,
+    "chime": false
+  },
+  "audioScope": "Reducer admitted requests only; no PCM/playback claim"
+}

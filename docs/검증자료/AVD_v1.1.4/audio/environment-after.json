@@ -1,0 +1,13 @@
+{
+  "host_unix_ns": 1793290905338947000,
+  "host_monotonic_ns": 40397935511000,
+  "host_utc": "2026-10-29T16:21:45.338952+00:00",
+  "installed_base_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "apk_bytes": 47871331,
+  "versionName": "1.1.4-pleos",
+  "versionCode": 7,
+  "product": "crp_avd_arm64",
+  "sdk": "34",
+  "pid": "26822",
+  "matches_expected_candidate": true
+}

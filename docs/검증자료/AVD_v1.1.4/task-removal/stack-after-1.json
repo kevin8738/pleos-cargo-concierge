@@ -1,0 +1,58 @@
+[
+  {
+    "rootId": 1000386,
+    "displayId": 0,
+    "userId": 10,
+    "tasks": [
+      {
+        "taskId": 1000386,
+        "component": "ai.umos.maps.android.navigation.app/ai.umos.maps.android.navigation.app.MainActivity",
+        "userId": 10,
+        "visible": true,
+        "topActivity": "ai.umos.maps.android.navigation.app/ai.umos.maps.android.navigation.app.MainActivity"
+      }
+    ]
+  },
+  {
+    "rootId": 1000385,
+    "displayId": 0,
+    "userId": 10,
+    "tasks": [
+      {
+        "taskId": 1000385,
+        "component": "ai.umos.drivingview/ai.umos.drivingview.DrivingViewActivity",
+        "userId": 10,
+        "visible": true,
+        "topActivity": "ai.umos.drivingview/ai.umos.drivingview.DrivingViewActivity"
+      }
+    ]
+  },
+  {
+    "rootId": 1,
+    "displayId": 0,
+    "userId": 10,
+    "tasks": [
+      {
+        "taskId": 1000383,
+        "component": "ai.umos.homescreen/ai.umos.homescreen.HomeActivity",
+        "userId": 10,
+        "visible": true,
+        "topActivity": "ai.umos.homescreen/ai.umos.homescreen.HomeActivity"
+      }
+    ]
+  },
+  {
+    "rootId": 1000384,
+    "displayId": 0,
+    "userId": 0,
+    "tasks": [
+      {
+        "taskId": 1000384,
+        "component": "unknown",
+        "userId": 0,
+        "visible": false,
+        "topActivity": null
+      }
+    ]
+  }
+]

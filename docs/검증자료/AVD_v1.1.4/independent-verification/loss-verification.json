@@ -1,0 +1,394 @@
+{
+  "cases": [
+    {
+      "case": "runtime-force-stop-02",
+      "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+      "observation_seconds_before_manual_relaunch": 18.212755,
+      "original_pid": "26822",
+      "manual_relaunch_pid": "25541",
+      "renewed_runtime": 0,
+      "guarded_after_loss": 0,
+      "observed_successful_write": 0,
+      "review_input_sha256": {
+        "before-coffee-tap.xml": "feef767014a80111dda869a7c9fce35b384da648334d34967e9c1a9127296d68",
+        "cleanup-current.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "cleanup-idle.png": "04f775aff07d12110d2499441c9138f3f87e4b530c17cd3b7811d14df6cb36b4",
+        "cleanup-idle.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "cleanup-idle_0.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "cleanup.json": "3b9efb8a909b8a9fe82e74e295bb34a0e20e57cd80a46bf630abc4c6a29e9d73",
+        "cleanup_idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "cleanup_idle-process.txt": "e1c6f0ea78d803d2ac37b262dac7d2603c2485ef246b3014e28af27c598795ce",
+        "cleanup_idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "cleanup_idle-snapshot.json": "1d0bc52c030203f9e6ddaf0193fb9db51e24a8ad386f5c60e314a715b280e682",
+        "coffee-active.png": "edf2e15c3c3ee5d564bf6a53a154c5f773ceab6ba52a6a4c18aceeb62b0d43df",
+        "coffee-active.xml": "e5f6c3cff17c4e9dd64af73c38e0436083ecc32d3bc8583f3f674bd9cf677437",
+        "environment.json": "8e8388bf48ac37fa7892412056af67ebfd64f90ebf747ece7dc2d0c96c774f15",
+        "guard_foreground_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_0-process.txt": "1843fd38b99368a717f794fff6361ba1d233f83f987a7a36c2eb963890e8727c",
+        "guard_foreground_0-service.txt": "5d20a3fcd3c4d3d0ac302a3f227b9519c39f6e9a7f73f60796f1fd11021bff10",
+        "guard_foreground_0-snapshot.json": "917bca3d5760b37dee1ab1973fbe78bb138415bb7320da86245b554ad9b32bf3",
+        "guard_foreground_1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_1-process.txt": "722a316bc1045e15b328ae44b7d4ac49b08cdeb9f81173deae3f233e6511a0e2",
+        "guard_foreground_1-service.txt": "838f46b778ff4119aa09c996e99d3dedb515804c4ea900e23e2a41f4099f73f1",
+        "guard_foreground_1-snapshot.json": "8f34d65370d6ecc0b9f91a79447ef4e9d05b09fc9685fb55b752d72f19289e3f",
+        "guard_foreground_2-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_2-process.txt": "337dd19760fff20c0b70fd3ec0710a67977ca7e2dfb770f84a7ef84700006da7",
+        "guard_foreground_2-service.txt": "9d6f512aa63acf6e0b944dd240d5dac657c143b93bcda79999fb48e933cdbc5a",
+        "guard_foreground_2-snapshot.json": "4fe18a4baa51e283fa1f1a00b5dabe9f7ff1cb2254b72709a3ecbe0143745c92",
+        "guard_foreground_3-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_3-process.txt": "d23e6be449a6a6c60e6f62e53c46a5eaa435c7e5ae3699f75079f9a8e9fb9ed3",
+        "guard_foreground_3-service.txt": "b60efd0402324161edf518ddd7bacb5ec9615908dc45a1b30c42dfbc425bdbe1",
+        "guard_foreground_3-snapshot.json": "8b4fc1fd51ab5fb18ac576f8edf719563323666913155f8487788efadefe22cf",
+        "guard_foreground_4-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_4-process.txt": "9aedaf0f0134886385af28e63e35bbda1db6987d099de281d24cc1ded98ce04e",
+        "guard_foreground_4-service.txt": "0e487b59147c679ecc6d9635cd26924944f1ec9476fa9982cd747c6df0d1ce0a",
+        "guard_foreground_4-snapshot.json": "5afd447a0604b0f65eb5397bc22ca3ba47f3daf8412d809e305d016b0fca0074",
+        "guard_foreground_5-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_5-process.txt": "8d0bea327584331a4a63d969a3a2e07a397704b398e14799174025916e0f2575",
+        "guard_foreground_5-service.txt": "29e311ab6589da9ed53d7767417cb1c5615c8e13d2cc359ee002efb544c47efb",
+        "guard_foreground_5-snapshot.json": "f74ad40edb909b6f9d680e12afeb35cd2c450ffec54e847cca5b762ab8bbecbf",
+        "guard_foreground_6-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_foreground_6-process.txt": "804906c3897c7270c1c0554352565873c4f97b856ad09c8162f81c4750d733a2",
+        "guard_foreground_6-service.txt": "42d50d3919ba821d1bd6f6057f44865519710a6035938309cfc37d244490eea9",
+        "guard_foreground_6-snapshot.json": "e3e2eb6f3874c665563c82ecee025db06ef006d30949ea59f289fed38084d416",
+        "guard_foreground_7-notification.txt": "17eba25c5df7d95d1e99c76dd0dc4f5fff56aee96792d14b2510808e513b4f87",
+        "guard_foreground_7-process.txt": "c580d3550a58a913cf12fba5e4001b95d7e05ac807e1ce508a21de2ca1e83aa6",
+        "guard_foreground_7-service.txt": "088387eb2fd478ba834f05e75f85791456e7a66e8cd223a1604277b524094c2a",
+        "guard_foreground_7-snapshot.json": "2f07b31f4f4cca202397551b12e6589fdc6946207743fc6414528d3a22218c01",
+        "harness-source.py": "08b6be9ed1287508c8bcee21906bfc556dc5ff78f41a8bed50a761dc29291ae6",
+        "initial-idle.png": "7c0d7e0984483521fb9453350e121e32f9f90b50da945f41e0e80b7875c5b9b4",
+        "initial-idle.xml": "feef767014a80111dda869a7c9fce35b384da648334d34967e9c1a9127296d68",
+        "initial_idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "initial_idle-process.txt": "8a0f3bde415395a0de29b08e04d80d3144560d24cd506234ebecc053a502c810",
+        "initial_idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "initial_idle-snapshot.json": "98abd58bdb3caf410803b129f31224178b4dd7a6b860253001df29ff222f3240",
+        "input-ledger.jsonl": "860bbee33f9a6c4c0e3b68ea01fa339d4f75157256d2ecd5bfba4e7db475a7d2",
+        "interrupted_1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "interrupted_1-process.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "interrupted_1-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "interrupted_1-snapshot.json": "db053b95f73f549487a35deddcd83d77b77db7ab1df6d33a50a35bb61ef09d2c",
+        "interrupted_18-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "interrupted_18-process.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "interrupted_18-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "interrupted_18-snapshot.json": "9887d60d942a619425cfa7e83bd9aae366392ee356e456372de063daa420e6e5",
+        "interrupted_8-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "interrupted_8-process.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "interrupted_8-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "interrupted_8-snapshot.json": "703ddba3abacec7332f4c0f28ab94bac7ced0a7775d4541663a2f51919164c21",
+        "live-log.jsonl": "a568e082e01beff8567ff2c27f3f009f004da03845a8815e4233aebc5b911896",
+        "live.log": "c97017ac500d882ee81c7b1e41e843a3b671375c65eb3e2543b8a5b09f486987",
+        "relaunch-idle.png": "7ca76a7123f675aba88ed1c23e5abffae6c37a099e6047aa8ca17d47bf05a1c7",
+        "relaunch-idle.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "relaunch-idle_0.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "relaunch_no_guard-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "relaunch_no_guard-process.txt": "8445569bba783e463b6daeb6c918db63840ecf7d130f5e4af5f0a95fd382e258",
+        "relaunch_no_guard-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "relaunch_no_guard-snapshot.json": "aa75add7e6810c4b606609ff92af1513cf74fceb468bcf52bdebdae47bbbcd5a",
+        "result.json": "74b3586497a77f66479879a233122c2b6c1901313e2a17530c1add9459e0d7cd",
+        "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+        "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+        "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-original.json": "b3beee3f76104221d29535b03e82b6de936975e031a6750e77e0a46923419035",
+        "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+        "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+        "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "vehicle-after.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a",
+        "vehicle-before.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a"
+      }
+    },
+    {
+      "case": "runtime-shell-task-removal-01",
+      "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+      "observation_seconds_before_manual_relaunch": 18.327456,
+      "original_pid": "25541",
+      "manual_relaunch_pid": "8300",
+      "renewed_runtime": 0,
+      "guarded_after_loss": 0,
+      "observed_successful_write": 0,
+      "review_input_sha256": {
+        "before-coffee.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "cleanup-current.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "cleanup-idle.png": "79e6dbd7bf80e63b3599163eeb191778799de936e41ce85f6e8c40102017c7b7",
+        "cleanup-idle.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "cleanup-idle_0.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "cleanup.json": "0204a4a38b72d4cfa23552631571edeb69e6e10f7ed75af2448f78d8ad1ac29d",
+        "cleanup_idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "cleanup_idle-process.txt": "a7e9aa74520b5ecd13b9252d97ce51a6d494a4697ec2da5c52e2305cd0290ac4",
+        "cleanup_idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "cleanup_idle-snapshot.json": "96935413f943ec587cbf4149322e17030c62f7aeac305786b2bc1d7203bf538d",
+        "fault-helper-source.py": "92930f7461f5269ef79fb117c8d88896ec08c6acc3c3db69daf6c6d450bd0f46",
+        "guard_active_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "guard_active_0-process.txt": "bbb0620b7c3a4b4e39a1db281f231f746342db3b89ae08cdbbbdb6edd273b3c8",
+        "guard_active_0-service.txt": "73307466ffc0650d0761d386310818d074be7ec9def4cd3a5a5ac01f476870db",
+        "guard_active_0-snapshot.json": "f3f43474a6bb1d11401391d6c1543dcadf439a0492ca1c4a7589e679d7a05322",
+        "guard_active_1-notification.txt": "9cf8776900b5782d0f02beb047fa0808f36823a40c6bc0bdfd85fb7aeb76652b",
+        "guard_active_1-process.txt": "68d63143498cc2eb0d203203764eeca42b3af96c68b7f2e08898c33cfc8a92c7",
+        "guard_active_1-service.txt": "8914ffa0c62d7861d0f5a14a9183998fdd54d98d536f4b1c8e22ab975f46f199",
+        "guard_active_1-snapshot.json": "37476f1164da5bfb14d551422f6e83c6ae7bd0c9b7083836f63449a0c697ae6e",
+        "harness-source.py": "fa8c706baa0383fe1071b9b9f47e61933059133cf7353a830418f12b840901e4",
+        "initial_idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "initial_idle-process.txt": "02b1774331da3b9b444e04417ae0f20ae06186badcb923c98afa4d94c395dd4e",
+        "initial_idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "initial_idle-snapshot.json": "239b1d6e2413164becc46a4ad34a3eac04cd7da811bc9fcaf3268f26f4705b38",
+        "initial_idle_0.xml": "18d7c64e4ed8b2c2260f0ac19496afb9c8390fb3f28047dd8c2fe1a5b16771cc",
+        "input-ledger.jsonl": "50745f3b8ae26a687d6478c64f71fc3c03ed435fd92dec078d430ac2b6255ede",
+        "live-log.jsonl": "ef47e775de3d1d13a2a6dee8344589c6960af6ef2faabbe291fee6d07bcd28a8",
+        "live.log": "439c0936a4f6cc8dcc4a916a7377a532a72f525060a6d4d0e878228f380c8bb2",
+        "manual-relaunch-idle.png": "b0d1ffbaed5e960c72d27e5fb6c633e4ac72b965c996ed8c42f5b20381fd3402",
+        "manual-relaunch-idle.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "manual-relaunch-idle_0.xml": "92afd37d047cff1bdf499d0cc88eaee381e1b0a7fa876fec5cf263091c9517ca",
+        "manual_relaunch-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "manual_relaunch-process.txt": "22f383bee037886de285c29a82d3a24435bd023aa970f7670ddd1ed7bedf2e96",
+        "manual_relaunch-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "manual_relaunch-snapshot.json": "8a57c13c02bfc6503ac0ec605112250c54685f84aadda86144eeae490f575ab1",
+        "qa-helper-source.py": "20d23504aa7412c3e70c8ca0c8d64c201bc8a09103a058314597bafa9f33bcc2",
+        "remove-command.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "removed_1-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "removed_1-process.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "removed_1-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "removed_1-snapshot.json": "fde9a88de7a6cf904f3bf3fe05000366799e476ef3228086a02c5a737480c552",
+        "removed_18-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "removed_18-process.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "removed_18-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "removed_18-snapshot.json": "435d1ed817ff8d5da5848edcfc5bc0646fb5fd7d73ff4b4bd7bb5aa485ff1be7",
+        "removed_8-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "removed_8-process.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "removed_8-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+        "removed_8-snapshot.json": "9450653749de143757363eb4e77c3e90af3f75b66843a39ceedd351f8d96a53d",
+        "result.json": "674ba37dd0207d92637f80c4d96a253f5100a3d701aea41a8b389f9e2c510877",
+        "runtime-helper-source.py": "08b6be9ed1287508c8bcee21906bfc556dc5ff78f41a8bed50a761dc29291ae6",
+        "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+        "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+        "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-original.json": "b3beee3f76104221d29535b03e82b6de936975e031a6750e77e0a46923419035",
+        "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+        "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+        "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+        "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+        "stack-after-1.json": "f90f3393d8706e1d7f681144ce1bfbb9e4d781000ff89c0ffaaee1a30add3cf6",
+        "stack-after-1.txt": "c7113756e9d473e04fe46cf88ea621723e89561aa39b5d3b7276cbec246da7c0",
+        "stack-after-18.json": "f90f3393d8706e1d7f681144ce1bfbb9e4d781000ff89c0ffaaee1a30add3cf6",
+        "stack-after-18.txt": "c7113756e9d473e04fe46cf88ea621723e89561aa39b5d3b7276cbec246da7c0",
+        "stack-after-8.json": "f90f3393d8706e1d7f681144ce1bfbb9e4d781000ff89c0ffaaee1a30add3cf6",
+        "stack-after-8.txt": "c7113756e9d473e04fe46cf88ea621723e89561aa39b5d3b7276cbec246da7c0",
+        "stack-before.json": "5b4225bcf9267a9edaa627efe0b488557d29de234c39980809daacdb6cbf6628",
+        "stack-before.txt": "8cf942dafe4024e062860e206e7c6b9817956c63fb7fe623578cea921429bbe0",
+        "stack-immediate-before.json": "5b4225bcf9267a9edaa627efe0b488557d29de234c39980809daacdb6cbf6628",
+        "stack-immediate-before.txt": "8cf942dafe4024e062860e206e7c6b9817956c63fb7fe623578cea921429bbe0",
+        "stack-preflight.json": "5b4225bcf9267a9edaa627efe0b488557d29de234c39980809daacdb6cbf6628",
+        "stack-preflight.txt": "8cf942dafe4024e062860e206e7c6b9817956c63fb7fe623578cea921429bbe0",
+        "vehicle-after.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a",
+        "vehicle-before.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a"
+      }
+    }
+  ],
+  "limits": [
+    "Scope is stationary COFFEE with zero cabin changes, bounded roughly18s loss window and manual relaunch.",
+    "Shell-owned root removal with matching lost/teardown is observed; onTaskRemoved callback itself is not directly instrumented.",
+    "No successful Recents swipe: prior runtime04 runtime-task-removal-01 remains unexecuted/failed and preserved.",
+    "Filtered no-successful-write logs plus readback is not bus-level no-write evidence or physical cargo safety.",
+    "Input hashes generated at review; no earlier artifact manifest in these datasets."
+  ],
+  "checks": [
+    {
+      "check": "runtime-force-stop-02 candidate",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 raw/log rows equal",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 independently parsed fields",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/cleanup_idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_2-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_3-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_4-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_5-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_6-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/guard_foreground_7-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/initial_idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/interrupted_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/interrupted_18-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/interrupted_8-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02/relaunch_no_guard-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 no renewal guarding or observed successful write after loss",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 1/8/18s interrupted samples absent pid service notification",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 manual relaunch new process idle no guard",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 unchanged measured cabin fields and Park",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 audio settings restored raw XML",
+      "passed": true
+    },
+    {
+      "check": "runtime-force-stop-02 cleanup verified and no errors",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 candidate",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 raw/log rows equal",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 independently parsed fields",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/cleanup_idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/guard_active_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/guard_active_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/initial_idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/manual_relaunch-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/removed_1-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/removed_18-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01/removed_8-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 no renewal guarding or observed successful write after loss",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 1/8/18s interrupted samples absent pid service notification",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 manual relaunch new process idle no guard",
+      "passed": true
+    },
+    {
+      "check": "selected root solely owned by VIP user10",
+      "passed": true
+    },
+    {
+      "check": "fresh task inventory",
+      "passed": true
+    },
+    {
+      "check": "raw stack ownership anchor",
+      "passed": true
+    },
+    {
+      "check": "task root removed 1",
+      "passed": true
+    },
+    {
+      "check": "task root removed 8",
+      "passed": true
+    },
+    {
+      "check": "task root removed 18",
+      "passed": true
+    },
+    {
+      "check": "one lost matching original session",
+      "passed": true
+    },
+    {
+      "check": "empty success shell return",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 unchanged measured cabin fields and Park",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 audio settings restored raw XML",
+      "passed": true
+    },
+    {
+      "check": "runtime-shell-task-removal-01 cleanup verified and no errors",
+      "passed": true
+    }
+  ],
+  "check_count": 48,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

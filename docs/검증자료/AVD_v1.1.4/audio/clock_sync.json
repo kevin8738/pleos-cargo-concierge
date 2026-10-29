@@ -1,0 +1,13 @@
+{
+  "host_before": {
+    "host_unix_ns": 1793290756113298000,
+    "host_monotonic_ns": 40248706952083,
+    "host_utc": "2026-10-29T16:19:16.113302+00:00"
+  },
+  "device_epoch_ns_text": "1793290756417560573",
+  "host_after": {
+    "host_unix_ns": 1793290756140561000,
+    "host_monotonic_ns": 40248734215916,
+    "host_utc": "2026-10-29T16:19:16.140566+00:00"
+  }
+}

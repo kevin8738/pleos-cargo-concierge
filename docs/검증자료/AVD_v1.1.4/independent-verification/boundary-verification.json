@@ -1,0 +1,155 @@
+{
+  "candidate": {
+    "expected_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "actual_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "apk_bytes": 47871331,
+    "source_count": 21,
+    "source_mismatches": []
+  },
+  "artifact_hashes": {
+    "count": 30,
+    "mismatches": []
+  },
+  "derived": {
+    "trace_rows": 439,
+    "guard_rows": 435,
+    "speed_rows": 145,
+    "motion_events": 416,
+    "fresh_longitudinal_samples": 139,
+    "maximum_g": 0.12354462329191915,
+    "admissions": [
+      {
+        "tMs": 9422188,
+        "kind": "chime"
+      },
+      {
+        "tMs": 9432184,
+        "kind": "speech"
+      },
+      {
+        "tMs": 9440228,
+        "kind": "speech"
+      }
+    ],
+    "suppression": {
+      "COALESCED": 1
+    },
+    "admission_intervals_ms": [
+      9996,
+      8044
+    ],
+    "arrival_state": "ARRIVED",
+    "final_state": "IDLE",
+    "drain_after_arrival_ms": 5,
+    "drain_before_cleanup_end_ms": 3580
+  },
+  "limits": [
+    "Foreground DEMO synthetic input; not native speed accuracy or physical cargo protection.",
+    "COALESCED and admitted intervals observed; voice/trip budget saturation and cooldown rejection not exercised.",
+    "Arrival reaches ARRIVED/report; final Idle follows explicit cleanup End/ack.",
+    "Service-finish log and responsive report show drain progressed; no service dump in this dataset.",
+    "Property restoration is harness readback assertion; raw property-after output not separately retained.",
+    "Filtered logs and one bounded run do not establish universal ANR absence."
+  ],
+  "checks": [
+    {
+      "check": "runtime06 candidate hash and 21 source manifest entries",
+      "passed": true
+    },
+    {
+      "check": "artifact-sha256.json hashes",
+      "passed": true
+    },
+    {
+      "check": "installed hash",
+      "passed": true
+    },
+    {
+      "check": "core source hashes",
+      "passed": true
+    },
+    {
+      "check": "raw MotionTrace matches retained trace JSON",
+      "passed": true
+    },
+    {
+      "check": "record counts",
+      "passed": true
+    },
+    {
+      "check": "one guard session",
+      "passed": true
+    },
+    {
+      "check": "fixed model all rows",
+      "passed": true
+    },
+    {
+      "check": "fixed model guard retained in harness",
+      "passed": true
+    },
+    {
+      "check": "independent G and running count oracle",
+      "passed": true
+    },
+    {
+      "check": "independent badge/admission oracle",
+      "passed": true
+    },
+    {
+      "check": "received dt supported and reported bounds",
+      "passed": true
+    },
+    {
+      "check": "final counters and maximum",
+      "passed": true
+    },
+    {
+      "check": "admissions and coalescing",
+      "passed": true
+    },
+    {
+      "check": "all speed steering brake ledger requests received in order",
+      "passed": true
+    },
+    {
+      "check": "speed count",
+      "passed": true
+    },
+    {
+      "check": "same PID at observed surfaces",
+      "passed": true
+    },
+    {
+      "check": "arrival report transfer",
+      "passed": true
+    },
+    {
+      "check": "synthetic noncomparability",
+      "passed": true
+    },
+    {
+      "check": "cleanup final Idle P0",
+      "passed": true
+    },
+    {
+      "check": "drain return before cleanup End",
+      "passed": true
+    },
+    {
+      "check": "vehicle cleanup readback fields",
+      "passed": true
+    },
+    {
+      "check": "settings raw XML muted and restored",
+      "passed": true
+    },
+    {
+      "check": "no recorded execution or cleanup errors",
+      "passed": true
+    }
+  ],
+  "check_count": 24,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

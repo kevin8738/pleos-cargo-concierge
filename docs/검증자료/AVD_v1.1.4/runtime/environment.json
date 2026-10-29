@@ -1,0 +1,28 @@
+{
+  "case": "navigation",
+  "scope": "Official AVD runtime; no physical sensor accuracy or audio measurement.",
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "originalPid": "26822",
+  "clockCalibration": {
+    "deviceMinusHostNs": 299806636,
+    "uncertaintyNs": 17271500,
+    "hostBeforeNs": 1793291064541716000,
+    "hostAfterNs": 1793291064576259000,
+    "deviceEpochNs": 1793291064858794136
+  },
+  "originalLogProperties": {
+    "GuardRuntime": "",
+    "MotionTrace": ""
+  },
+  "locationTypeExpectation": "on",
+  "session": {
+    "requestId": 29,
+    "startedMs": 9813615
+  },
+  "navigationWindow": {
+    "startHostNs": 1793291079798666000,
+    "endRequestHostNs": 1793291112326849000,
+    "returnHostNs": 1793291117589542000,
+    "backgroundStartHostNs": 1793291092028859000
+  }
+}

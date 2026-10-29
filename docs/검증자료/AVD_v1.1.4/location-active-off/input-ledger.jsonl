@@ -1,0 +1,30 @@
+{"event": "runtime_snapshot", "hostUnixNs": 1793291416925468000, "hostMonotonicNs": 40909532007000, "label": "initial-idle", "pid": "8300", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}
+{"event": "command_start", "hostUnixNs": 1793291417052949000, "hostMonotonicNs": 40909659490583, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291417095397000, "hostMonotonicNs": 40909701938375, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 40909659490583}
+{"event": "command_start", "hostUnixNs": 1793291419140445000, "hostMonotonicNs": 40911747026666, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291419185107000, "hostMonotonicNs": 40911791689875, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 40911747026666}
+{"event": "command_start", "hostUnixNs": 1793291425489097000, "hostMonotonicNs": 40918095802666, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291425530288000, "hostMonotonicNs": 40918136994666, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 40918095802666}
+{"event": "system_location_request", "hostUnixNs": 1793291425674787000, "hostMonotonicNs": 40918281496541, "enabled": true}
+{"event": "system_location_confirmed", "hostUnixNs": 1793291425742347000, "hostMonotonicNs": 40918349058041, "enabled": true}
+{"event": "command_start", "hostUnixNs": 1793291430922806000, "hostMonotonicNs": 40923529616916, "command": "speed", "value": 0, "phase": "setup-only", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291430963941000, "hostMonotonicNs": 40923570752875, "command": "speed", "value": 0, "phase": "setup-only", "step": null, "startHostMonotonicNs": 40923529616916}
+{"event": "coffee_start", "hostUnixNs": 1793291430964266000, "hostMonotonicNs": 40923571077958}
+{"event": "coffee_tap", "hostUnixNs": 1793291430964361000, "hostMonotonicNs": 40923571172625, "bounds": [1057, 738, 1148, 762]}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291431213620000, "hostMonotonicNs": 40923820436916, "label": "guard-start_0", "pid": "8300", "isFrozen": false, "servicePresent": true, "foregroundService": true, "serviceTypeMask": 1073741832, "foregroundIdCorrect": true, "activeNotificationCount": 0}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291432317921000, "hostMonotonicNs": 40924924759291, "label": "guard-start_1", "pid": "8300", "isFrozen": false, "servicePresent": true, "foregroundService": true, "serviceTypeMask": 1073741832, "foregroundIdCorrect": true, "activeNotificationCount": 1}
+{"event": "system_location_request", "hostUnixNs": 1793291432319013000, "hostMonotonicNs": 40924925851208, "enabled": false}
+{"event": "system_location_confirmed", "hostUnixNs": 1793291432385221000, "hostMonotonicNs": 40924992060583, "enabled": false}
+{"event": "system_location_request", "hostUnixNs": 1793291436389742000, "hostMonotonicNs": 40928996661000, "enabled": true}
+{"event": "system_location_confirmed", "hostUnixNs": 1793291436457402000, "hostMonotonicNs": 40929064321041, "enabled": true}
+{"event": "command_start", "hostUnixNs": 1793291441511825000, "hostMonotonicNs": 40934118834958, "command": "end", "value": null, "phase": "cleanup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291441593015000, "hostMonotonicNs": 40934200026208, "command": "end", "value": null, "phase": "cleanup", "step": null, "startHostMonotonicNs": 40934118834958}
+{"event": "command_start", "hostUnixNs": 1793291443595136000, "hostMonotonicNs": 40936202185416, "command": "ack", "value": null, "phase": "cleanup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291443643156000, "hostMonotonicNs": 40936250205333, "command": "ack", "value": null, "phase": "cleanup", "step": null, "startHostMonotonicNs": 40936202185416}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291443763898000, "hostMonotonicNs": 40936370949583, "label": "cleanup", "pid": "8300", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}
+{"event": "system_location_request", "hostUnixNs": 1793291443764589000, "hostMonotonicNs": 40936371640500, "enabled": true}
+{"event": "system_location_confirmed", "hostUnixNs": 1793291443830601000, "hostMonotonicNs": 40936437654666, "enabled": true}
+{"event": "command_start", "hostUnixNs": 1793291443831048000, "hostMonotonicNs": 40936438101416, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291443879312000, "hostMonotonicNs": 40936486366333, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 40936438101416}
+{"event": "command_start", "hostUnixNs": 1793291450099531000, "hostMonotonicNs": 40942706701750, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291450141380000, "hostMonotonicNs": 40942748551125, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 40942706701750}

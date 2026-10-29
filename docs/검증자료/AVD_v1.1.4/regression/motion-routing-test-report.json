@@ -1,0 +1,26 @@
+{
+  "red": {
+    "tests": 9,
+    "assertionFailures": 8,
+    "log": "motion-routing-red-complete.log",
+    "compiled": true
+  },
+  "green": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "command": "./gradlew --offline --console=plain -PincludePleos=false :app:testMockDebugUnitTest --tests ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest",
+  "sha256": {
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/port/RealMotionObserver.kt": "b25aa1ef5f7d7755ba92f6fa2a8fbb18c750957e7a8e014cfc5070059c0c78cf",
+    "app/app/src/main/kotlin/ai/vipseat/cargoconcierge/vehicle/MergedVehicle.kt": "08d84595d9352877382e9e7e57ba3e97e7ccbd39c74e0231e0f0a02f3b2ef891",
+    "app/vehicle-pleos/src/main/kotlin/ai/vipseat/cargoconcierge/pleos/PleosVehicle.kt": "dcf42bfba4e19ab28dcb1b16ba45aa1d0a019d339a1a03cf1f791bf465a24c80",
+    "app/app/src/test/kotlin/ai/vipseat/cargoconcierge/vehicle/RealMotionRoutingTest.kt": "5708991c7050977dcab2634c7c598cf4425df557bf7cfa2fba55409a5d3cacc0"
+  },
+  "limitations": [
+    "Pleos adapter compile and full suite belong to leader follow-up.",
+    "No release build, install, adb or AVD performed.",
+    "AVD C3 and actual location cache invalidation remain integration validation."
+  ]
+}

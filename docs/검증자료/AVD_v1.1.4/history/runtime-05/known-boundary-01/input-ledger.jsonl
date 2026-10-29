@@ -1,0 +1,912 @@
+{"event": "before", "hostUnixNs": 1793289946546390000, "hostMonotonicNs": 39439124238291, "deviceElapsedMs": 8693300, "pid": "12526", "focus": ["topResumedActivity=ActivityRecord{303066f u10 ai.vipseat.cargoconcierge/.MainActivity t1000397}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "command_start", "hostUnixNs": 1793289946546850000, "hostMonotonicNs": 39439124696000, "command": "end", "value": null, "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793289946591087000, "hostMonotonicNs": 39439168933625, "command": "end", "value": null, "phase": "setup", "step": null, "startHostMonotonicNs": 39439124696000}
+{"event": "command_start", "hostUnixNs": 1793289946591472000, "hostMonotonicNs": 39439169319375, "command": "ack", "value": null, "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793289946632898000, "hostMonotonicNs": 39439210746083, "command": "ack", "value": null, "phase": "setup", "step": null, "startHostMonotonicNs": 39439169319375}
+{"event": "command_start", "hostUnixNs": 1793289946633273000, "hostMonotonicNs": 39439211120666, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793289946676320000, "hostMonotonicNs": 39439254168541, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 39439211120666}
+{"event": "command_start", "hostUnixNs": 1793289948896227000, "hostMonotonicNs": 39441474119083, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793289948943149000, "hostMonotonicNs": 39441521041791, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 39441474119083}
+{"event": "command_start", "hostUnixNs": 1793289955156260000, "hostMonotonicNs": 39447734273958, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793289955200245000, "hostMonotonicNs": 39447778259458, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 39447734273958}
+{"event": "command_start", "hostUnixNs": 1793289955200620000, "hostMonotonicNs": 39447778634750, "command": "steer", "value": 0, "phase": "setup", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289955322584000, "hostMonotonicNs": 39447900601458, "command": "steer", "value": 0, "phase": "setup", "step": 0, "startHostMonotonicNs": 39447778634750}
+{"event": "command_start", "hostUnixNs": 1793289955323041000, "hostMonotonicNs": 39447901058500, "command": "brake", "value": 0, "phase": "setup", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289955384139000, "hostMonotonicNs": 39447962157125, "command": "brake", "value": 0, "phase": "setup", "step": 0, "startHostMonotonicNs": 39447901058500}
+{"event": "command_start", "hostUnixNs": 1793289955384548000, "hostMonotonicNs": 39447962566000, "command": "speed", "value": 0, "phase": "setup", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289955434110000, "hostMonotonicNs": 39448012129666, "command": "speed", "value": 0, "phase": "setup", "step": 0, "startHostMonotonicNs": 39447962566000}
+{"event": "command_start", "hostUnixNs": 1793289955553474000, "hostMonotonicNs": 39448131496291, "command": "preset", "value": "COFFEE", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793289955660463000, "hostMonotonicNs": 39448238486541, "command": "preset", "value": "COFFEE", "phase": "setup", "step": null, "startHostMonotonicNs": 39448131496291}
+{"event": "phase_start", "hostUnixNs": 1793289955660978000, "hostMonotonicNs": 39448239002208, "phase": "baseline"}
+{"event": "command_start", "hostUnixNs": 1793289955662548000, "hostMonotonicNs": 39448240571625, "command": "steer", "value": 0, "phase": "baseline", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289955805683000, "hostMonotonicNs": 39448383709583, "command": "steer", "value": 0, "phase": "baseline", "step": 0, "startHostMonotonicNs": 39448240571625}
+{"event": "command_start", "hostUnixNs": 1793289955806114000, "hostMonotonicNs": 39448384141125, "command": "brake", "value": 0, "phase": "baseline", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289955862209000, "hostMonotonicNs": 39448440237000, "command": "brake", "value": 0, "phase": "baseline", "step": 0, "startHostMonotonicNs": 39448384141125}
+{"event": "command_start", "hostUnixNs": 1793289955862584000, "hostMonotonicNs": 39448440611833, "command": "speed", "value": 0, "phase": "baseline", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289955898392000, "hostMonotonicNs": 39448476420250, "command": "speed", "value": 0, "phase": "baseline", "step": 0, "startHostMonotonicNs": 39448440611833}
+{"event": "command_start", "hostUnixNs": 1793289956171036000, "hostMonotonicNs": 39448749070250, "command": "steer", "value": 0, "phase": "baseline", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289956217024000, "hostMonotonicNs": 39448795058083, "command": "steer", "value": 0, "phase": "baseline", "step": 1, "startHostMonotonicNs": 39448749070250}
+{"event": "command_start", "hostUnixNs": 1793289956217472000, "hostMonotonicNs": 39448795506208, "command": "brake", "value": 0, "phase": "baseline", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289956261455000, "hostMonotonicNs": 39448839490791, "command": "brake", "value": 0, "phase": "baseline", "step": 1, "startHostMonotonicNs": 39448795506208}
+{"event": "command_start", "hostUnixNs": 1793289956261808000, "hostMonotonicNs": 39448839843291, "command": "speed", "value": 0, "phase": "baseline", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289956305015000, "hostMonotonicNs": 39448883051250, "command": "speed", "value": 0, "phase": "baseline", "step": 1, "startHostMonotonicNs": 39448839843291}
+{"event": "command_start", "hostUnixNs": 1793289956668794000, "hostMonotonicNs": 39449246837500, "command": "steer", "value": 0, "phase": "baseline", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289956714937000, "hostMonotonicNs": 39449292981333, "command": "steer", "value": 0, "phase": "baseline", "step": 2, "startHostMonotonicNs": 39449246837500}
+{"event": "command_start", "hostUnixNs": 1793289956715363000, "hostMonotonicNs": 39449293407541, "command": "brake", "value": 0, "phase": "baseline", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289956758095000, "hostMonotonicNs": 39449336140500, "command": "brake", "value": 0, "phase": "baseline", "step": 2, "startHostMonotonicNs": 39449293407541}
+{"event": "command_start", "hostUnixNs": 1793289956758457000, "hostMonotonicNs": 39449336501708, "command": "speed", "value": 0, "phase": "baseline", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289956798362000, "hostMonotonicNs": 39449376407791, "command": "speed", "value": 0, "phase": "baseline", "step": 2, "startHostMonotonicNs": 39449336501708}
+{"event": "command_start", "hostUnixNs": 1793289957166967000, "hostMonotonicNs": 39449745019958, "command": "steer", "value": 0, "phase": "baseline", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289957211985000, "hostMonotonicNs": 39449790040291, "command": "steer", "value": 0, "phase": "baseline", "step": 3, "startHostMonotonicNs": 39449745019958}
+{"event": "command_start", "hostUnixNs": 1793289957212822000, "hostMonotonicNs": 39449790876375, "command": "brake", "value": 0, "phase": "baseline", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289957251870000, "hostMonotonicNs": 39449829925375, "command": "brake", "value": 0, "phase": "baseline", "step": 3, "startHostMonotonicNs": 39449790876375}
+{"event": "command_start", "hostUnixNs": 1793289957252230000, "hostMonotonicNs": 39449830285166, "command": "speed", "value": 0, "phase": "baseline", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289957296962000, "hostMonotonicNs": 39449875018375, "command": "speed", "value": 0, "phase": "baseline", "step": 3, "startHostMonotonicNs": 39449830285166}
+{"event": "command_start", "hostUnixNs": 1793289957667639000, "hostMonotonicNs": 39450245701916, "command": "steer", "value": 0, "phase": "baseline", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289957713191000, "hostMonotonicNs": 39450291254625, "command": "steer", "value": 0, "phase": "baseline", "step": 4, "startHostMonotonicNs": 39450245701916}
+{"event": "command_start", "hostUnixNs": 1793289957713649000, "hostMonotonicNs": 39450291712833, "command": "brake", "value": 0, "phase": "baseline", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289957759513000, "hostMonotonicNs": 39450337578125, "command": "brake", "value": 0, "phase": "baseline", "step": 4, "startHostMonotonicNs": 39450291712833}
+{"event": "command_start", "hostUnixNs": 1793289957759924000, "hostMonotonicNs": 39450337988291, "command": "speed", "value": 0, "phase": "baseline", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289957804011000, "hostMonotonicNs": 39450382076833, "command": "speed", "value": 0, "phase": "baseline", "step": 4, "startHostMonotonicNs": 39450337988291}
+{"event": "command_start", "hostUnixNs": 1793289958169127000, "hostMonotonicNs": 39450747200125, "command": "steer", "value": 0, "phase": "baseline", "step": 5}
+{"event": "console_drive", "hostUnixNs": 1793289958201106000, "hostMonotonicNs": 39450779179541, "actual": {"bridge_ready": true, "input_mode": "http-g29", "actual_topic": "SDV_MOTION_GEAR_BASE_GEARBASE_ACTUAL_GEAR", "supported_gears": ["Park", "Reverse", "Neutral", "Drive"], "actual": {"value": "Drive", "source": "web", "timestamp_ms": 1793289958457, "source_timestamp": 0, "source_location": ""}}}
+{"event": "command_done", "hostUnixNs": 1793289958244830000, "hostMonotonicNs": 39450822903708, "command": "steer", "value": 0, "phase": "baseline", "step": 5, "startHostMonotonicNs": 39450747200125}
+{"event": "command_start", "hostUnixNs": 1793289958245145000, "hostMonotonicNs": 39450823218875, "command": "brake", "value": 0, "phase": "baseline", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289958315754000, "hostMonotonicNs": 39450893829625, "command": "brake", "value": 0, "phase": "baseline", "step": 5, "startHostMonotonicNs": 39450823218875}
+{"event": "command_start", "hostUnixNs": 1793289958316119000, "hostMonotonicNs": 39450894194333, "command": "speed", "value": 0, "phase": "baseline", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289958362974000, "hostMonotonicNs": 39450941050541, "command": "speed", "value": 0, "phase": "baseline", "step": 5, "startHostMonotonicNs": 39450894194333}
+{"event": "command_start", "hostUnixNs": 1793289958664715000, "hostMonotonicNs": 39451242797083, "command": "steer", "value": 0, "phase": "baseline", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289958711283000, "hostMonotonicNs": 39451289366500, "command": "steer", "value": 0, "phase": "baseline", "step": 6, "startHostMonotonicNs": 39451242797083}
+{"event": "command_start", "hostUnixNs": 1793289958711659000, "hostMonotonicNs": 39451289741708, "command": "brake", "value": 0, "phase": "baseline", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289958752051000, "hostMonotonicNs": 39451330135958, "command": "brake", "value": 0, "phase": "baseline", "step": 6, "startHostMonotonicNs": 39451289741708}
+{"event": "command_start", "hostUnixNs": 1793289958752608000, "hostMonotonicNs": 39451330691791, "command": "speed", "value": 0, "phase": "baseline", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289958793063000, "hostMonotonicNs": 39451371147583, "command": "speed", "value": 0, "phase": "baseline", "step": 6, "startHostMonotonicNs": 39451330691791}
+{"event": "command_start", "hostUnixNs": 1793289959167815000, "hostMonotonicNs": 39451745907666, "command": "steer", "value": 0, "phase": "baseline", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289959215656000, "hostMonotonicNs": 39451793749166, "command": "steer", "value": 0, "phase": "baseline", "step": 7, "startHostMonotonicNs": 39451745907666}
+{"event": "command_start", "hostUnixNs": 1793289959216004000, "hostMonotonicNs": 39451794097333, "command": "brake", "value": 0, "phase": "baseline", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289959255241000, "hostMonotonicNs": 39451833335125, "command": "brake", "value": 0, "phase": "baseline", "step": 7, "startHostMonotonicNs": 39451794097333}
+{"event": "command_start", "hostUnixNs": 1793289959255627000, "hostMonotonicNs": 39451833722000, "command": "speed", "value": 0, "phase": "baseline", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289959305187000, "hostMonotonicNs": 39451883282000, "command": "speed", "value": 0, "phase": "baseline", "step": 7, "startHostMonotonicNs": 39451833722000}
+{"event": "command_start", "hostUnixNs": 1793289959671621000, "hostMonotonicNs": 39452249724125, "command": "steer", "value": 0, "phase": "baseline", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289959711061000, "hostMonotonicNs": 39452289163708, "command": "steer", "value": 0, "phase": "baseline", "step": 8, "startHostMonotonicNs": 39452249724125}
+{"event": "command_start", "hostUnixNs": 1793289959711456000, "hostMonotonicNs": 39452289559041, "command": "brake", "value": 0, "phase": "baseline", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289959759584000, "hostMonotonicNs": 39452337688166, "command": "brake", "value": 0, "phase": "baseline", "step": 8, "startHostMonotonicNs": 39452289559041}
+{"event": "command_start", "hostUnixNs": 1793289959760075000, "hostMonotonicNs": 39452338179833, "command": "speed", "value": 0, "phase": "baseline", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289959796197000, "hostMonotonicNs": 39452374301666, "command": "speed", "value": 0, "phase": "baseline", "step": 8, "startHostMonotonicNs": 39452338179833}
+{"event": "command_start", "hostUnixNs": 1793289960168078000, "hostMonotonicNs": 39452746189333, "command": "steer", "value": 0, "phase": "baseline", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289960216084000, "hostMonotonicNs": 39452794196166, "command": "steer", "value": 0, "phase": "baseline", "step": 9, "startHostMonotonicNs": 39452746189333}
+{"event": "command_start", "hostUnixNs": 1793289960216439000, "hostMonotonicNs": 39452794552000, "command": "brake", "value": 0, "phase": "baseline", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289960257500000, "hostMonotonicNs": 39452835613583, "command": "brake", "value": 0, "phase": "baseline", "step": 9, "startHostMonotonicNs": 39452794552000}
+{"event": "command_start", "hostUnixNs": 1793289960257906000, "hostMonotonicNs": 39452836019541, "command": "speed", "value": 0, "phase": "baseline", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289960299637000, "hostMonotonicNs": 39452877751708, "command": "speed", "value": 0, "phase": "baseline", "step": 9, "startHostMonotonicNs": 39452836019541}
+{"event": "command_start", "hostUnixNs": 1793289960667956000, "hostMonotonicNs": 39453246079250, "command": "steer", "value": 0, "phase": "baseline", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289960712988000, "hostMonotonicNs": 39453291110208, "command": "steer", "value": 0, "phase": "baseline", "step": 10, "startHostMonotonicNs": 39453246079250}
+{"event": "command_start", "hostUnixNs": 1793289960713341000, "hostMonotonicNs": 39453291463500, "command": "brake", "value": 0, "phase": "baseline", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289960749741000, "hostMonotonicNs": 39453327864333, "command": "brake", "value": 0, "phase": "baseline", "step": 10, "startHostMonotonicNs": 39453291463500}
+{"event": "command_start", "hostUnixNs": 1793289960750126000, "hostMonotonicNs": 39453328248958, "command": "speed", "value": 0, "phase": "baseline", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289960789117000, "hostMonotonicNs": 39453367240458, "command": "speed", "value": 0, "phase": "baseline", "step": 10, "startHostMonotonicNs": 39453328248958}
+{"event": "command_start", "hostUnixNs": 1793289961167777000, "hostMonotonicNs": 39453745909041, "command": "steer", "value": 0, "phase": "baseline", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289961207730000, "hostMonotonicNs": 39453785861916, "command": "steer", "value": 0, "phase": "baseline", "step": 11, "startHostMonotonicNs": 39453745909041}
+{"event": "command_start", "hostUnixNs": 1793289961208132000, "hostMonotonicNs": 39453786264333, "command": "brake", "value": 0, "phase": "baseline", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289961258215000, "hostMonotonicNs": 39453836348291, "command": "brake", "value": 0, "phase": "baseline", "step": 11, "startHostMonotonicNs": 39453786264333}
+{"event": "command_start", "hostUnixNs": 1793289961258559000, "hostMonotonicNs": 39453836691708, "command": "speed", "value": 0, "phase": "baseline", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289961298745000, "hostMonotonicNs": 39453876879708, "command": "speed", "value": 0, "phase": "baseline", "step": 11, "startHostMonotonicNs": 39453836691708}
+{"event": "phase_start", "hostUnixNs": 1793289961299271000, "hostMonotonicNs": 39453877404291, "phase": "acceleration"}
+{"event": "command_start", "hostUnixNs": 1793289961666732000, "hostMonotonicNs": 39454244873041, "command": "steer", "value": 0, "phase": "acceleration", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289961707027000, "hostMonotonicNs": 39454285168875, "command": "steer", "value": 0, "phase": "acceleration", "step": 0, "startHostMonotonicNs": 39454244873041}
+{"event": "command_start", "hostUnixNs": 1793289961707418000, "hostMonotonicNs": 39454285559416, "command": "brake", "value": 0, "phase": "acceleration", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289961757304000, "hostMonotonicNs": 39454335446875, "command": "brake", "value": 0, "phase": "acceleration", "step": 0, "startHostMonotonicNs": 39454285559416}
+{"event": "command_start", "hostUnixNs": 1793289961757645000, "hostMonotonicNs": 39454335787958, "command": "speed", "value": 0.9, "phase": "acceleration", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289961801714000, "hostMonotonicNs": 39454379857375, "command": "speed", "value": 0.9, "phase": "acceleration", "step": 0, "startHostMonotonicNs": 39454335787958}
+{"event": "command_start", "hostUnixNs": 1793289962167713000, "hostMonotonicNs": 39454745863208, "command": "steer", "value": 0, "phase": "acceleration", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289962212569000, "hostMonotonicNs": 39454790720208, "command": "steer", "value": 0, "phase": "acceleration", "step": 1, "startHostMonotonicNs": 39454745863208}
+{"event": "command_start", "hostUnixNs": 1793289962212926000, "hostMonotonicNs": 39454791077416, "command": "brake", "value": 0, "phase": "acceleration", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289962248318000, "hostMonotonicNs": 39454826470541, "command": "brake", "value": 0, "phase": "acceleration", "step": 1, "startHostMonotonicNs": 39454791077416}
+{"event": "command_start", "hostUnixNs": 1793289962248764000, "hostMonotonicNs": 39454826916083, "command": "speed", "value": 1.8, "phase": "acceleration", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289962286228000, "hostMonotonicNs": 39454864380875, "command": "speed", "value": 1.8, "phase": "acceleration", "step": 1, "startHostMonotonicNs": 39454826916083}
+{"event": "command_start", "hostUnixNs": 1793289962668374000, "hostMonotonicNs": 39455246534958, "command": "steer", "value": 0, "phase": "acceleration", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289962709037000, "hostMonotonicNs": 39455287197833, "command": "steer", "value": 0, "phase": "acceleration", "step": 2, "startHostMonotonicNs": 39455246534958}
+{"event": "command_start", "hostUnixNs": 1793289962709386000, "hostMonotonicNs": 39455287547625, "command": "brake", "value": 0, "phase": "acceleration", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289962746774000, "hostMonotonicNs": 39455324936208, "command": "brake", "value": 0, "phase": "acceleration", "step": 2, "startHostMonotonicNs": 39455287547625}
+{"event": "command_start", "hostUnixNs": 1793289962747104000, "hostMonotonicNs": 39455325266208, "command": "speed", "value": 2.7, "phase": "acceleration", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289962783973000, "hostMonotonicNs": 39455362135583, "command": "speed", "value": 2.7, "phase": "acceleration", "step": 2, "startHostMonotonicNs": 39455325266208}
+{"event": "command_start", "hostUnixNs": 1793289963163516000, "hostMonotonicNs": 39455741686250, "command": "steer", "value": 0, "phase": "acceleration", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289963200501000, "hostMonotonicNs": 39455778671666, "command": "steer", "value": 0, "phase": "acceleration", "step": 3, "startHostMonotonicNs": 39455741686250}
+{"event": "command_start", "hostUnixNs": 1793289963200853000, "hostMonotonicNs": 39455779023416, "command": "brake", "value": 0, "phase": "acceleration", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289963241400000, "hostMonotonicNs": 39455819571500, "command": "brake", "value": 0, "phase": "acceleration", "step": 3, "startHostMonotonicNs": 39455779023416}
+{"event": "command_start", "hostUnixNs": 1793289963241791000, "hostMonotonicNs": 39455819962916, "command": "speed", "value": 3.6, "phase": "acceleration", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289963279985000, "hostMonotonicNs": 39455858157000, "command": "speed", "value": 3.6, "phase": "acceleration", "step": 3, "startHostMonotonicNs": 39455819962916}
+{"event": "command_start", "hostUnixNs": 1793289963664322000, "hostMonotonicNs": 39456242502291, "command": "steer", "value": 0, "phase": "acceleration", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289963701810000, "hostMonotonicNs": 39456279990250, "command": "steer", "value": 0, "phase": "acceleration", "step": 4, "startHostMonotonicNs": 39456242502291}
+{"event": "command_start", "hostUnixNs": 1793289963702181000, "hostMonotonicNs": 39456280361875, "command": "brake", "value": 0, "phase": "acceleration", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289963745072000, "hostMonotonicNs": 39456323253416, "command": "brake", "value": 0, "phase": "acceleration", "step": 4, "startHostMonotonicNs": 39456280361875}
+{"event": "command_start", "hostUnixNs": 1793289963745433000, "hostMonotonicNs": 39456323614750, "command": "speed", "value": 4.5, "phase": "acceleration", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289963784089000, "hostMonotonicNs": 39456362271666, "command": "speed", "value": 4.5, "phase": "acceleration", "step": 4, "startHostMonotonicNs": 39456323614750}
+{"event": "command_start", "hostUnixNs": 1793289964162590000, "hostMonotonicNs": 39456740779541, "command": "steer", "value": 0, "phase": "acceleration", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289964204142000, "hostMonotonicNs": 39456782332666, "command": "steer", "value": 0, "phase": "acceleration", "step": 5, "startHostMonotonicNs": 39456740779541}
+{"event": "command_start", "hostUnixNs": 1793289964204540000, "hostMonotonicNs": 39456782730166, "command": "brake", "value": 0, "phase": "acceleration", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289964244268000, "hostMonotonicNs": 39456822459541, "command": "brake", "value": 0, "phase": "acceleration", "step": 5, "startHostMonotonicNs": 39456782730166}
+{"event": "command_start", "hostUnixNs": 1793289964244592000, "hostMonotonicNs": 39456822783125, "command": "speed", "value": 5.4, "phase": "acceleration", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289964284116000, "hostMonotonicNs": 39456862308000, "command": "speed", "value": 5.4, "phase": "acceleration", "step": 5, "startHostMonotonicNs": 39456822783125}
+{"event": "command_start", "hostUnixNs": 1793289964670877000, "hostMonotonicNs": 39457249077416, "command": "steer", "value": 0, "phase": "acceleration", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289964713824000, "hostMonotonicNs": 39457292024750, "command": "steer", "value": 0, "phase": "acceleration", "step": 6, "startHostMonotonicNs": 39457249077416}
+{"event": "command_start", "hostUnixNs": 1793289964714322000, "hostMonotonicNs": 39457292522375, "command": "brake", "value": 0, "phase": "acceleration", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289964759934000, "hostMonotonicNs": 39457338135416, "command": "brake", "value": 0, "phase": "acceleration", "step": 6, "startHostMonotonicNs": 39457292522375}
+{"event": "command_start", "hostUnixNs": 1793289964760359000, "hostMonotonicNs": 39457338560375, "command": "speed", "value": 6.3, "phase": "acceleration", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289964797071000, "hostMonotonicNs": 39457375273083, "command": "speed", "value": 6.3, "phase": "acceleration", "step": 6, "startHostMonotonicNs": 39457338560375}
+{"event": "command_start", "hostUnixNs": 1793289965170866000, "hostMonotonicNs": 39457749077375, "command": "steer", "value": 0, "phase": "acceleration", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289965223092000, "hostMonotonicNs": 39457801302708, "command": "steer", "value": 0, "phase": "acceleration", "step": 7, "startHostMonotonicNs": 39457749077375}
+{"event": "command_start", "hostUnixNs": 1793289965223523000, "hostMonotonicNs": 39457801733250, "command": "brake", "value": 0, "phase": "acceleration", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289965267623000, "hostMonotonicNs": 39457845834083, "command": "brake", "value": 0, "phase": "acceleration", "step": 7, "startHostMonotonicNs": 39457801733250}
+{"event": "command_start", "hostUnixNs": 1793289965267984000, "hostMonotonicNs": 39457846195500, "command": "speed", "value": 7.2, "phase": "acceleration", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289965306850000, "hostMonotonicNs": 39457885061791, "command": "speed", "value": 7.2, "phase": "acceleration", "step": 7, "startHostMonotonicNs": 39457846195500}
+{"event": "command_start", "hostUnixNs": 1793289965668785000, "hostMonotonicNs": 39458247004083, "command": "steer", "value": 0, "phase": "acceleration", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289965707849000, "hostMonotonicNs": 39458286069083, "command": "steer", "value": 0, "phase": "acceleration", "step": 8, "startHostMonotonicNs": 39458247004083}
+{"event": "command_start", "hostUnixNs": 1793289965708184000, "hostMonotonicNs": 39458286404041, "command": "brake", "value": 0, "phase": "acceleration", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289965747168000, "hostMonotonicNs": 39458325388916, "command": "brake", "value": 0, "phase": "acceleration", "step": 8, "startHostMonotonicNs": 39458286404041}
+{"event": "command_start", "hostUnixNs": 1793289965747544000, "hostMonotonicNs": 39458325764708, "command": "speed", "value": 8.1, "phase": "acceleration", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289965792807000, "hostMonotonicNs": 39458371028833, "command": "speed", "value": 8.1, "phase": "acceleration", "step": 8, "startHostMonotonicNs": 39458325764708}
+{"event": "command_start", "hostUnixNs": 1793289966166714000, "hostMonotonicNs": 39458744943000, "command": "steer", "value": 0, "phase": "acceleration", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289966205254000, "hostMonotonicNs": 39458783483833, "command": "steer", "value": 0, "phase": "acceleration", "step": 9, "startHostMonotonicNs": 39458744943000}
+{"event": "command_start", "hostUnixNs": 1793289966205662000, "hostMonotonicNs": 39458783891125, "command": "brake", "value": 0, "phase": "acceleration", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289966254705000, "hostMonotonicNs": 39458832935250, "command": "brake", "value": 0, "phase": "acceleration", "step": 9, "startHostMonotonicNs": 39458783891125}
+{"event": "command_start", "hostUnixNs": 1793289966255074000, "hostMonotonicNs": 39458833304583, "command": "speed", "value": 9.0, "phase": "acceleration", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289966303432000, "hostMonotonicNs": 39458881663291, "command": "speed", "value": 9.0, "phase": "acceleration", "step": 9, "startHostMonotonicNs": 39458833304583}
+{"event": "command_start", "hostUnixNs": 1793289966666789000, "hostMonotonicNs": 39459245028125, "command": "steer", "value": 0, "phase": "acceleration", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289966715348000, "hostMonotonicNs": 39459293587458, "command": "steer", "value": 0, "phase": "acceleration", "step": 10, "startHostMonotonicNs": 39459245028125}
+{"event": "command_start", "hostUnixNs": 1793289966715702000, "hostMonotonicNs": 39459293941583, "command": "brake", "value": 0, "phase": "acceleration", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289966751700000, "hostMonotonicNs": 39459329939916, "command": "brake", "value": 0, "phase": "acceleration", "step": 10, "startHostMonotonicNs": 39459293941583}
+{"event": "command_start", "hostUnixNs": 1793289966752085000, "hostMonotonicNs": 39459330325500, "command": "speed", "value": 9.9, "phase": "acceleration", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289966787445000, "hostMonotonicNs": 39459365686541, "command": "speed", "value": 9.9, "phase": "acceleration", "step": 10, "startHostMonotonicNs": 39459330325500}
+{"event": "command_start", "hostUnixNs": 1793289967162464000, "hostMonotonicNs": 39459740712291, "command": "steer", "value": 0, "phase": "acceleration", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289967205497000, "hostMonotonicNs": 39459783745750, "command": "steer", "value": 0, "phase": "acceleration", "step": 11, "startHostMonotonicNs": 39459740712291}
+{"event": "command_start", "hostUnixNs": 1793289967205910000, "hostMonotonicNs": 39459784159375, "command": "brake", "value": 0, "phase": "acceleration", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289967243020000, "hostMonotonicNs": 39459821269791, "command": "brake", "value": 0, "phase": "acceleration", "step": 11, "startHostMonotonicNs": 39459784159375}
+{"event": "command_start", "hostUnixNs": 1793289967243379000, "hostMonotonicNs": 39459821628208, "command": "speed", "value": 10.8, "phase": "acceleration", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289967282016000, "hostMonotonicNs": 39459860266041, "command": "speed", "value": 10.8, "phase": "acceleration", "step": 11, "startHostMonotonicNs": 39459821628208}
+{"event": "command_start", "hostUnixNs": 1793289967666812000, "hostMonotonicNs": 39460245072375, "command": "steer", "value": 0, "phase": "acceleration", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793289967703768000, "hostMonotonicNs": 39460282027291, "command": "steer", "value": 0, "phase": "acceleration", "step": 12, "startHostMonotonicNs": 39460245072375}
+{"event": "command_start", "hostUnixNs": 1793289967704258000, "hostMonotonicNs": 39460282516958, "command": "brake", "value": 0, "phase": "acceleration", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793289967740804000, "hostMonotonicNs": 39460319063541, "command": "brake", "value": 0, "phase": "acceleration", "step": 12, "startHostMonotonicNs": 39460282516958}
+{"event": "command_start", "hostUnixNs": 1793289967741138000, "hostMonotonicNs": 39460319397000, "command": "speed", "value": 11.700000000000001, "phase": "acceleration", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793289967777818000, "hostMonotonicNs": 39460356078375, "command": "speed", "value": 11.700000000000001, "phase": "acceleration", "step": 12, "startHostMonotonicNs": 39460319397000}
+{"event": "command_start", "hostUnixNs": 1793289968163747000, "hostMonotonicNs": 39460742014791, "command": "steer", "value": 0, "phase": "acceleration", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793289968206399000, "hostMonotonicNs": 39460784667000, "command": "steer", "value": 0, "phase": "acceleration", "step": 13, "startHostMonotonicNs": 39460742014791}
+{"event": "command_start", "hostUnixNs": 1793289968206825000, "hostMonotonicNs": 39460785093250, "command": "brake", "value": 0, "phase": "acceleration", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793289968248728000, "hostMonotonicNs": 39460826997291, "command": "brake", "value": 0, "phase": "acceleration", "step": 13, "startHostMonotonicNs": 39460785093250}
+{"event": "command_start", "hostUnixNs": 1793289968249447000, "hostMonotonicNs": 39460827716208, "command": "speed", "value": 12.6, "phase": "acceleration", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793289968286603000, "hostMonotonicNs": 39460864872708, "command": "speed", "value": 12.6, "phase": "acceleration", "step": 13, "startHostMonotonicNs": 39460827716208}
+{"event": "command_start", "hostUnixNs": 1793289968666684000, "hostMonotonicNs": 39461244961166, "command": "steer", "value": 0, "phase": "acceleration", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793289968712318000, "hostMonotonicNs": 39461290596083, "command": "steer", "value": 0, "phase": "acceleration", "step": 14, "startHostMonotonicNs": 39461244961166}
+{"event": "command_start", "hostUnixNs": 1793289968712742000, "hostMonotonicNs": 39461291020750, "command": "brake", "value": 0, "phase": "acceleration", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793289968752291000, "hostMonotonicNs": 39461330570083, "command": "brake", "value": 0, "phase": "acceleration", "step": 14, "startHostMonotonicNs": 39461291020750}
+{"event": "command_start", "hostUnixNs": 1793289968752605000, "hostMonotonicNs": 39461330884458, "command": "speed", "value": 13.5, "phase": "acceleration", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793289968789798000, "hostMonotonicNs": 39461368078250, "command": "speed", "value": 13.5, "phase": "acceleration", "step": 14, "startHostMonotonicNs": 39461330884458}
+{"event": "command_start", "hostUnixNs": 1793289969167440000, "hostMonotonicNs": 39461745728000, "command": "steer", "value": 0, "phase": "acceleration", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793289969206160000, "hostMonotonicNs": 39461784447833, "command": "steer", "value": 0, "phase": "acceleration", "step": 15, "startHostMonotonicNs": 39461745728000}
+{"event": "command_start", "hostUnixNs": 1793289969206560000, "hostMonotonicNs": 39461784847958, "command": "brake", "value": 0, "phase": "acceleration", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793289969250005000, "hostMonotonicNs": 39461828293208, "command": "brake", "value": 0, "phase": "acceleration", "step": 15, "startHostMonotonicNs": 39461784847958}
+{"event": "command_start", "hostUnixNs": 1793289969250369000, "hostMonotonicNs": 39461828657791, "command": "speed", "value": 14.4, "phase": "acceleration", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793289969283948000, "hostMonotonicNs": 39461862237291, "command": "speed", "value": 14.4, "phase": "acceleration", "step": 15, "startHostMonotonicNs": 39461828657791}
+{"event": "command_start", "hostUnixNs": 1793289969666793000, "hostMonotonicNs": 39462245089750, "command": "steer", "value": 0, "phase": "acceleration", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793289969706736000, "hostMonotonicNs": 39462285033708, "command": "steer", "value": 0, "phase": "acceleration", "step": 16, "startHostMonotonicNs": 39462245089750}
+{"event": "command_start", "hostUnixNs": 1793289969707134000, "hostMonotonicNs": 39462285431291, "command": "brake", "value": 0, "phase": "acceleration", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793289969745693000, "hostMonotonicNs": 39462323991375, "command": "brake", "value": 0, "phase": "acceleration", "step": 16, "startHostMonotonicNs": 39462285431291}
+{"event": "command_start", "hostUnixNs": 1793289969746022000, "hostMonotonicNs": 39462324320208, "command": "speed", "value": 15.3, "phase": "acceleration", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793289969785455000, "hostMonotonicNs": 39462363754458, "command": "speed", "value": 15.3, "phase": "acceleration", "step": 16, "startHostMonotonicNs": 39462324320208}
+{"event": "command_start", "hostUnixNs": 1793289970168444000, "hostMonotonicNs": 39462746751166, "command": "steer", "value": 0, "phase": "acceleration", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793289970209516000, "hostMonotonicNs": 39462787823875, "command": "steer", "value": 0, "phase": "acceleration", "step": 17, "startHostMonotonicNs": 39462746751166}
+{"event": "command_start", "hostUnixNs": 1793289970209866000, "hostMonotonicNs": 39462788173250, "command": "brake", "value": 0, "phase": "acceleration", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793289970249352000, "hostMonotonicNs": 39462827660291, "command": "brake", "value": 0, "phase": "acceleration", "step": 17, "startHostMonotonicNs": 39462788173250}
+{"event": "command_start", "hostUnixNs": 1793289970249805000, "hostMonotonicNs": 39462828113375, "command": "speed", "value": 16.2, "phase": "acceleration", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793289970292684000, "hostMonotonicNs": 39462870992708, "command": "speed", "value": 16.2, "phase": "acceleration", "step": 17, "startHostMonotonicNs": 39462828113375}
+{"event": "command_start", "hostUnixNs": 1793289970666523000, "hostMonotonicNs": 39463244840208, "command": "steer", "value": 0, "phase": "acceleration", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793289970710388000, "hostMonotonicNs": 39463288704916, "command": "steer", "value": 0, "phase": "acceleration", "step": 18, "startHostMonotonicNs": 39463244840208}
+{"event": "command_start", "hostUnixNs": 1793289970710807000, "hostMonotonicNs": 39463289124500, "command": "brake", "value": 0, "phase": "acceleration", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793289970753469000, "hostMonotonicNs": 39463331787083, "command": "brake", "value": 0, "phase": "acceleration", "step": 18, "startHostMonotonicNs": 39463289124500}
+{"event": "command_start", "hostUnixNs": 1793289970753841000, "hostMonotonicNs": 39463332158666, "command": "speed", "value": 17.1, "phase": "acceleration", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793289970793281000, "hostMonotonicNs": 39463371599583, "command": "speed", "value": 17.1, "phase": "acceleration", "step": 18, "startHostMonotonicNs": 39463332158666}
+{"event": "command_start", "hostUnixNs": 1793289971162516000, "hostMonotonicNs": 39463740842916, "command": "steer", "value": 0, "phase": "acceleration", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793289971209025000, "hostMonotonicNs": 39463787351500, "command": "steer", "value": 0, "phase": "acceleration", "step": 19, "startHostMonotonicNs": 39463740842916}
+{"event": "command_start", "hostUnixNs": 1793289971209371000, "hostMonotonicNs": 39463787698041, "command": "brake", "value": 0, "phase": "acceleration", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793289971255490000, "hostMonotonicNs": 39463833817875, "command": "brake", "value": 0, "phase": "acceleration", "step": 19, "startHostMonotonicNs": 39463787698041}
+{"event": "command_start", "hostUnixNs": 1793289971255843000, "hostMonotonicNs": 39463834170625, "command": "speed", "value": 18.0, "phase": "acceleration", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793289971297084000, "hostMonotonicNs": 39463875412916, "command": "speed", "value": 18.0, "phase": "acceleration", "step": 19, "startHostMonotonicNs": 39463834170625}
+{"event": "phase_start", "hostUnixNs": 1793289971297708000, "hostMonotonicNs": 39463876036416, "phase": "settle"}
+{"event": "command_start", "hostUnixNs": 1793289971663819000, "hostMonotonicNs": 39464242158291, "command": "steer", "value": 0, "phase": "settle", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289971705906000, "hostMonotonicNs": 39464284242708, "command": "steer", "value": 0, "phase": "settle", "step": 0, "startHostMonotonicNs": 39464242158291}
+{"event": "command_start", "hostUnixNs": 1793289971706294000, "hostMonotonicNs": 39464284630458, "command": "brake", "value": 0, "phase": "settle", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289971748362000, "hostMonotonicNs": 39464326699250, "command": "brake", "value": 0, "phase": "settle", "step": 0, "startHostMonotonicNs": 39464284630458}
+{"event": "command_start", "hostUnixNs": 1793289971748686000, "hostMonotonicNs": 39464327022958, "command": "speed", "value": 18, "phase": "settle", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289971787403000, "hostMonotonicNs": 39464365741416, "command": "speed", "value": 18, "phase": "settle", "step": 0, "startHostMonotonicNs": 39464327022958}
+{"event": "command_start", "hostUnixNs": 1793289972171287000, "hostMonotonicNs": 39464749633916, "command": "steer", "value": 0, "phase": "settle", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289972209905000, "hostMonotonicNs": 39464788251458, "command": "steer", "value": 0, "phase": "settle", "step": 1, "startHostMonotonicNs": 39464749633916}
+{"event": "command_start", "hostUnixNs": 1793289972210257000, "hostMonotonicNs": 39464788603666, "command": "brake", "value": 0, "phase": "settle", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289972250118000, "hostMonotonicNs": 39464828465375, "command": "brake", "value": 0, "phase": "settle", "step": 1, "startHostMonotonicNs": 39464788603666}
+{"event": "command_start", "hostUnixNs": 1793289972250804000, "hostMonotonicNs": 39464829152583, "command": "speed", "value": 18, "phase": "settle", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289972295022000, "hostMonotonicNs": 39464873370041, "command": "speed", "value": 18, "phase": "settle", "step": 1, "startHostMonotonicNs": 39464829152583}
+{"event": "command_start", "hostUnixNs": 1793289972664584000, "hostMonotonicNs": 39465242940583, "command": "steer", "value": 0, "phase": "settle", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289972707171000, "hostMonotonicNs": 39465285527291, "command": "steer", "value": 0, "phase": "settle", "step": 2, "startHostMonotonicNs": 39465242940583}
+{"event": "command_start", "hostUnixNs": 1793289972707564000, "hostMonotonicNs": 39465285920375, "command": "brake", "value": 0, "phase": "settle", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289972753379000, "hostMonotonicNs": 39465331735791, "command": "brake", "value": 0, "phase": "settle", "step": 2, "startHostMonotonicNs": 39465285920375}
+{"event": "command_start", "hostUnixNs": 1793289972753734000, "hostMonotonicNs": 39465332091500, "command": "speed", "value": 18, "phase": "settle", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289972794902000, "hostMonotonicNs": 39465373260291, "command": "speed", "value": 18, "phase": "settle", "step": 2, "startHostMonotonicNs": 39465332091500}
+{"event": "command_start", "hostUnixNs": 1793289973165916000, "hostMonotonicNs": 39465744281916, "command": "steer", "value": 0, "phase": "settle", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289973201470000, "hostMonotonicNs": 39465779835791, "command": "steer", "value": 0, "phase": "settle", "step": 3, "startHostMonotonicNs": 39465744281916}
+{"event": "command_start", "hostUnixNs": 1793289973201900000, "hostMonotonicNs": 39465780265458, "command": "brake", "value": 0, "phase": "settle", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289973237045000, "hostMonotonicNs": 39465815411916, "command": "brake", "value": 0, "phase": "settle", "step": 3, "startHostMonotonicNs": 39465780265458}
+{"event": "command_start", "hostUnixNs": 1793289973237402000, "hostMonotonicNs": 39465815767875, "command": "speed", "value": 18, "phase": "settle", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289973276623000, "hostMonotonicNs": 39465854989791, "command": "speed", "value": 18, "phase": "settle", "step": 3, "startHostMonotonicNs": 39465815767875}
+{"event": "command_start", "hostUnixNs": 1793289973668392000, "hostMonotonicNs": 39466246767541, "command": "steer", "value": 0, "phase": "settle", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289973713313000, "hostMonotonicNs": 39466291689208, "command": "steer", "value": 0, "phase": "settle", "step": 4, "startHostMonotonicNs": 39466246767541}
+{"event": "command_start", "hostUnixNs": 1793289973713635000, "hostMonotonicNs": 39466292010666, "command": "brake", "value": 0, "phase": "settle", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289973753562000, "hostMonotonicNs": 39466331939125, "command": "brake", "value": 0, "phase": "settle", "step": 4, "startHostMonotonicNs": 39466292010666}
+{"event": "command_start", "hostUnixNs": 1793289973753932000, "hostMonotonicNs": 39466332309166, "command": "speed", "value": 18, "phase": "settle", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289973799606000, "hostMonotonicNs": 39466377983958, "command": "speed", "value": 18, "phase": "settle", "step": 4, "startHostMonotonicNs": 39466332309166}
+{"event": "command_start", "hostUnixNs": 1793289974164762000, "hostMonotonicNs": 39466743147583, "command": "steer", "value": 0, "phase": "settle", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289974208631000, "hostMonotonicNs": 39466787016541, "command": "steer", "value": 0, "phase": "settle", "step": 5, "startHostMonotonicNs": 39466743147583}
+{"event": "command_start", "hostUnixNs": 1793289974208978000, "hostMonotonicNs": 39466787362916, "command": "brake", "value": 0, "phase": "settle", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289974246646000, "hostMonotonicNs": 39466825032208, "command": "brake", "value": 0, "phase": "settle", "step": 5, "startHostMonotonicNs": 39466787362916}
+{"event": "command_start", "hostUnixNs": 1793289974246979000, "hostMonotonicNs": 39466825365500, "command": "speed", "value": 18, "phase": "settle", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289974283795000, "hostMonotonicNs": 39466862182083, "command": "speed", "value": 18, "phase": "settle", "step": 5, "startHostMonotonicNs": 39466825365500}
+{"event": "command_start", "hostUnixNs": 1793289974662766000, "hostMonotonicNs": 39467241160833, "command": "steer", "value": 0, "phase": "settle", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289974696664000, "hostMonotonicNs": 39467275059500, "command": "steer", "value": 0, "phase": "settle", "step": 6, "startHostMonotonicNs": 39467241160833}
+{"event": "command_start", "hostUnixNs": 1793289974697010000, "hostMonotonicNs": 39467275404958, "command": "brake", "value": 0, "phase": "settle", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289974739837000, "hostMonotonicNs": 39467318233083, "command": "brake", "value": 0, "phase": "settle", "step": 6, "startHostMonotonicNs": 39467275404958}
+{"event": "command_start", "hostUnixNs": 1793289974740250000, "hostMonotonicNs": 39467318646166, "command": "speed", "value": 18, "phase": "settle", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289974798349000, "hostMonotonicNs": 39467376746000, "command": "speed", "value": 18, "phase": "settle", "step": 6, "startHostMonotonicNs": 39467318646166}
+{"event": "command_start", "hostUnixNs": 1793289975163224000, "hostMonotonicNs": 39467741629208, "command": "steer", "value": 0, "phase": "settle", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289975202275000, "hostMonotonicNs": 39467780679791, "command": "steer", "value": 0, "phase": "settle", "step": 7, "startHostMonotonicNs": 39467741629208}
+{"event": "command_start", "hostUnixNs": 1793289975202587000, "hostMonotonicNs": 39467780991583, "command": "brake", "value": 0, "phase": "settle", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289975241535000, "hostMonotonicNs": 39467819941333, "command": "brake", "value": 0, "phase": "settle", "step": 7, "startHostMonotonicNs": 39467780991583}
+{"event": "command_start", "hostUnixNs": 1793289975242390000, "hostMonotonicNs": 39467820796208, "command": "speed", "value": 18, "phase": "settle", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289975281455000, "hostMonotonicNs": 39467859861041, "command": "speed", "value": 18, "phase": "settle", "step": 7, "startHostMonotonicNs": 39467820796208}
+{"event": "command_start", "hostUnixNs": 1793289975667055000, "hostMonotonicNs": 39468245468500, "command": "steer", "value": 0, "phase": "settle", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289975710388000, "hostMonotonicNs": 39468288802583, "command": "steer", "value": 0, "phase": "settle", "step": 8, "startHostMonotonicNs": 39468245468500}
+{"event": "command_start", "hostUnixNs": 1793289975710709000, "hostMonotonicNs": 39468289123708, "command": "brake", "value": 0, "phase": "settle", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289975747680000, "hostMonotonicNs": 39468326095541, "command": "brake", "value": 0, "phase": "settle", "step": 8, "startHostMonotonicNs": 39468289123708}
+{"event": "command_start", "hostUnixNs": 1793289975748149000, "hostMonotonicNs": 39468326564083, "command": "speed", "value": 18, "phase": "settle", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289975791681000, "hostMonotonicNs": 39468370097375, "command": "speed", "value": 18, "phase": "settle", "step": 8, "startHostMonotonicNs": 39468326564083}
+{"event": "command_start", "hostUnixNs": 1793289976168955000, "hostMonotonicNs": 39468747379583, "command": "steer", "value": 0, "phase": "settle", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289976216892000, "hostMonotonicNs": 39468795316250, "command": "steer", "value": 0, "phase": "settle", "step": 9, "startHostMonotonicNs": 39468747379583}
+{"event": "command_start", "hostUnixNs": 1793289976217230000, "hostMonotonicNs": 39468795654750, "command": "brake", "value": 0, "phase": "settle", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289976254197000, "hostMonotonicNs": 39468832623125, "command": "brake", "value": 0, "phase": "settle", "step": 9, "startHostMonotonicNs": 39468795654750}
+{"event": "command_start", "hostUnixNs": 1793289976254627000, "hostMonotonicNs": 39468833052916, "command": "speed", "value": 18, "phase": "settle", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289976302825000, "hostMonotonicNs": 39468881251458, "command": "speed", "value": 18, "phase": "settle", "step": 9, "startHostMonotonicNs": 39468833052916}
+{"event": "command_start", "hostUnixNs": 1793289976664642000, "hostMonotonicNs": 39469243076541, "command": "steer", "value": 0, "phase": "settle", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289976706441000, "hostMonotonicNs": 39469284875666, "command": "steer", "value": 0, "phase": "settle", "step": 10, "startHostMonotonicNs": 39469243076541}
+{"event": "command_start", "hostUnixNs": 1793289976706862000, "hostMonotonicNs": 39469285295916, "command": "brake", "value": 0, "phase": "settle", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289976751637000, "hostMonotonicNs": 39469330071958, "command": "brake", "value": 0, "phase": "settle", "step": 10, "startHostMonotonicNs": 39469285295916}
+{"event": "command_start", "hostUnixNs": 1793289976751993000, "hostMonotonicNs": 39469330428416, "command": "speed", "value": 18, "phase": "settle", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289976791499000, "hostMonotonicNs": 39469369934708, "command": "speed", "value": 18, "phase": "settle", "step": 10, "startHostMonotonicNs": 39469330428416}
+{"event": "command_start", "hostUnixNs": 1793289977170002000, "hostMonotonicNs": 39469748446333, "command": "steer", "value": 0, "phase": "settle", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289977220597000, "hostMonotonicNs": 39469799040916, "command": "steer", "value": 0, "phase": "settle", "step": 11, "startHostMonotonicNs": 39469748446333}
+{"event": "command_start", "hostUnixNs": 1793289977220940000, "hostMonotonicNs": 39469799384125, "command": "brake", "value": 0, "phase": "settle", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289977256734000, "hostMonotonicNs": 39469835179083, "command": "brake", "value": 0, "phase": "settle", "step": 11, "startHostMonotonicNs": 39469799384125}
+{"event": "command_start", "hostUnixNs": 1793289977257078000, "hostMonotonicNs": 39469835522875, "command": "speed", "value": 18, "phase": "settle", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289977308741000, "hostMonotonicNs": 39469887186916, "command": "speed", "value": 18, "phase": "settle", "step": 11, "startHostMonotonicNs": 39469835522875}
+{"event": "phase_start", "hostUnixNs": 1793289977309062000, "hostMonotonicNs": 39469887508083, "phase": "ok60"}
+{"event": "ok60", "hostUnixNs": 1793289977464720000, "hostMonotonicNs": 39470043168916, "deviceElapsedMs": 8724220, "pid": "12526", "focus": ["topResumedActivity=ActivityRecord{303066f u10 ai.vipseat.cargoconcierge/.MainActivity t1000397}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "command_start", "hostUnixNs": 1793289977663015000, "hostMonotonicNs": 39470241468583, "command": "steer", "value": 60, "phase": "ok60", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289977744979000, "hostMonotonicNs": 39470323433458, "command": "steer", "value": 60, "phase": "ok60", "step": 0, "startHostMonotonicNs": 39470241468583}
+{"event": "command_start", "hostUnixNs": 1793289977745253000, "hostMonotonicNs": 39470323707208, "command": "brake", "value": 0, "phase": "ok60", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289977807235000, "hostMonotonicNs": 39470385690333, "command": "brake", "value": 0, "phase": "ok60", "step": 0, "startHostMonotonicNs": 39470323707208}
+{"event": "command_start", "hostUnixNs": 1793289977807525000, "hostMonotonicNs": 39470385981083, "command": "speed", "value": 18, "phase": "ok60", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289977862999000, "hostMonotonicNs": 39470441455791, "command": "speed", "value": 18, "phase": "ok60", "step": 0, "startHostMonotonicNs": 39470385981083}
+{"event": "command_start", "hostUnixNs": 1793289978170551000, "hostMonotonicNs": 39470749015125, "command": "steer", "value": 60, "phase": "ok60", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289978225699000, "hostMonotonicNs": 39470804163791, "command": "steer", "value": 60, "phase": "ok60", "step": 1, "startHostMonotonicNs": 39470749015125}
+{"event": "command_start", "hostUnixNs": 1793289978226143000, "hostMonotonicNs": 39470804606666, "command": "brake", "value": 0, "phase": "ok60", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289978274127000, "hostMonotonicNs": 39470852591666, "command": "brake", "value": 0, "phase": "ok60", "step": 1, "startHostMonotonicNs": 39470804606666}
+{"event": "command_start", "hostUnixNs": 1793289978274448000, "hostMonotonicNs": 39470852912375, "command": "speed", "value": 18, "phase": "ok60", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289978324609000, "hostMonotonicNs": 39470903074750, "command": "speed", "value": 18, "phase": "ok60", "step": 1, "startHostMonotonicNs": 39470852912375}
+{"event": "command_start", "hostUnixNs": 1793289978669351000, "hostMonotonicNs": 39471247823750, "command": "steer", "value": 60, "phase": "ok60", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289978723287000, "hostMonotonicNs": 39471301760041, "command": "steer", "value": 60, "phase": "ok60", "step": 2, "startHostMonotonicNs": 39471247823750}
+{"event": "command_start", "hostUnixNs": 1793289978723581000, "hostMonotonicNs": 39471302054458, "command": "brake", "value": 0, "phase": "ok60", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289978768196000, "hostMonotonicNs": 39471346670666, "command": "brake", "value": 0, "phase": "ok60", "step": 2, "startHostMonotonicNs": 39471302054458}
+{"event": "command_start", "hostUnixNs": 1793289978768521000, "hostMonotonicNs": 39471346995208, "command": "speed", "value": 18, "phase": "ok60", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289978823259000, "hostMonotonicNs": 39471401734000, "command": "speed", "value": 18, "phase": "ok60", "step": 2, "startHostMonotonicNs": 39471346995208}
+{"event": "command_start", "hostUnixNs": 1793289979163369000, "hostMonotonicNs": 39471741851458, "command": "steer", "value": 60, "phase": "ok60", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289979213763000, "hostMonotonicNs": 39471792245833, "command": "steer", "value": 60, "phase": "ok60", "step": 3, "startHostMonotonicNs": 39471741851458}
+{"event": "command_start", "hostUnixNs": 1793289979214050000, "hostMonotonicNs": 39471792533125, "command": "brake", "value": 0, "phase": "ok60", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289979263874000, "hostMonotonicNs": 39471842357583, "command": "brake", "value": 0, "phase": "ok60", "step": 3, "startHostMonotonicNs": 39471792533125}
+{"event": "command_start", "hostUnixNs": 1793289979264205000, "hostMonotonicNs": 39471842689333, "command": "speed", "value": 18, "phase": "ok60", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289979307664000, "hostMonotonicNs": 39471886148375, "command": "speed", "value": 18, "phase": "ok60", "step": 3, "startHostMonotonicNs": 39471842689333}
+{"event": "command_start", "hostUnixNs": 1793289979668066000, "hostMonotonicNs": 39472246557791, "command": "steer", "value": 60, "phase": "ok60", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289979718968000, "hostMonotonicNs": 39472297461291, "command": "steer", "value": 60, "phase": "ok60", "step": 4, "startHostMonotonicNs": 39472246557791}
+{"event": "command_start", "hostUnixNs": 1793289979719339000, "hostMonotonicNs": 39472297831833, "command": "brake", "value": 0, "phase": "ok60", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289979769666000, "hostMonotonicNs": 39472348159541, "command": "brake", "value": 0, "phase": "ok60", "step": 4, "startHostMonotonicNs": 39472297831833}
+{"event": "command_start", "hostUnixNs": 1793289979769947000, "hostMonotonicNs": 39472348440500, "command": "speed", "value": 18, "phase": "ok60", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289979814679000, "hostMonotonicNs": 39472393174125, "command": "speed", "value": 18, "phase": "ok60", "step": 4, "startHostMonotonicNs": 39472348440500}
+{"event": "command_start", "hostUnixNs": 1793289980160645000, "hostMonotonicNs": 39472739146750, "command": "steer", "value": 60, "phase": "ok60", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289980236195000, "hostMonotonicNs": 39472814697708, "command": "steer", "value": 60, "phase": "ok60", "step": 5, "startHostMonotonicNs": 39472739146750}
+{"event": "command_start", "hostUnixNs": 1793289980236648000, "hostMonotonicNs": 39472815150875, "command": "brake", "value": 0, "phase": "ok60", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289980288385000, "hostMonotonicNs": 39472866889125, "command": "brake", "value": 0, "phase": "ok60", "step": 5, "startHostMonotonicNs": 39472815150875}
+{"event": "command_start", "hostUnixNs": 1793289980288726000, "hostMonotonicNs": 39472867230250, "command": "speed", "value": 18, "phase": "ok60", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289980365612000, "hostMonotonicNs": 39472944116958, "command": "speed", "value": 18, "phase": "ok60", "step": 5, "startHostMonotonicNs": 39472867230250}
+{"event": "command_start", "hostUnixNs": 1793289980665781000, "hostMonotonicNs": 39473244293166, "command": "steer", "value": 60, "phase": "ok60", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289980743547000, "hostMonotonicNs": 39473322060250, "command": "steer", "value": 60, "phase": "ok60", "step": 6, "startHostMonotonicNs": 39473244293166}
+{"event": "command_start", "hostUnixNs": 1793289980743854000, "hostMonotonicNs": 39473322367000, "command": "brake", "value": 0, "phase": "ok60", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289980823780000, "hostMonotonicNs": 39473402294750, "command": "brake", "value": 0, "phase": "ok60", "step": 6, "startHostMonotonicNs": 39473322367000}
+{"event": "command_start", "hostUnixNs": 1793289980824115000, "hostMonotonicNs": 39473402629416, "command": "speed", "value": 18, "phase": "ok60", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289980875830000, "hostMonotonicNs": 39473454346041, "command": "speed", "value": 18, "phase": "ok60", "step": 6, "startHostMonotonicNs": 39473402629416}
+{"event": "command_start", "hostUnixNs": 1793289981170224000, "hostMonotonicNs": 39473748745333, "command": "steer", "value": 60, "phase": "ok60", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289981288576000, "hostMonotonicNs": 39473867099333, "command": "steer", "value": 60, "phase": "ok60", "step": 7, "startHostMonotonicNs": 39473748745333}
+{"event": "command_start", "hostUnixNs": 1793289981289118000, "hostMonotonicNs": 39473867641833, "command": "brake", "value": 0, "phase": "ok60", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289981349383000, "hostMonotonicNs": 39473927908416, "command": "brake", "value": 0, "phase": "ok60", "step": 7, "startHostMonotonicNs": 39473867641833}
+{"event": "command_start", "hostUnixNs": 1793289981349725000, "hostMonotonicNs": 39473928250041, "command": "speed", "value": 18, "phase": "ok60", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289981417309000, "hostMonotonicNs": 39473995835375, "command": "speed", "value": 18, "phase": "ok60", "step": 7, "startHostMonotonicNs": 39473928250041}
+{"event": "phase_start", "hostUnixNs": 1793289981417692000, "hostMonotonicNs": 39473996218000, "phase": "below90"}
+{"event": "below90", "hostUnixNs": 1793289981552006000, "hostMonotonicNs": 39474130534625, "deviceElapsedMs": 8728300, "pid": "12526", "focus": ["topResumedActivity=ActivityRecord{303066f u10 ai.vipseat.cargoconcierge/.MainActivity t1000397}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "command_start", "hostUnixNs": 1793289981670363000, "hostMonotonicNs": 39474248894666, "command": "steer", "value": 90, "phase": "below90", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289981713044000, "hostMonotonicNs": 39474291575708, "command": "steer", "value": 90, "phase": "below90", "step": 0, "startHostMonotonicNs": 39474248894666}
+{"event": "command_start", "hostUnixNs": 1793289981713342000, "hostMonotonicNs": 39474291873541, "command": "brake", "value": 0, "phase": "below90", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289981764947000, "hostMonotonicNs": 39474343479541, "command": "brake", "value": 0, "phase": "below90", "step": 0, "startHostMonotonicNs": 39474291873541}
+{"event": "command_start", "hostUnixNs": 1793289981765295000, "hostMonotonicNs": 39474343828291, "command": "speed", "value": 18, "phase": "below90", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289981811355000, "hostMonotonicNs": 39474389888583, "command": "speed", "value": 18, "phase": "below90", "step": 0, "startHostMonotonicNs": 39474343828291}
+{"event": "command_start", "hostUnixNs": 1793289982168835000, "hostMonotonicNs": 39474747377208, "command": "steer", "value": 90, "phase": "below90", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289982243075000, "hostMonotonicNs": 39474821617041, "command": "steer", "value": 90, "phase": "below90", "step": 1, "startHostMonotonicNs": 39474747377208}
+{"event": "command_start", "hostUnixNs": 1793289982243626000, "hostMonotonicNs": 39474822168625, "command": "brake", "value": 0, "phase": "below90", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289982309536000, "hostMonotonicNs": 39474888079666, "command": "brake", "value": 0, "phase": "below90", "step": 1, "startHostMonotonicNs": 39474822168625}
+{"event": "command_start", "hostUnixNs": 1793289982309857000, "hostMonotonicNs": 39474888400250, "command": "speed", "value": 18, "phase": "below90", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289982363859000, "hostMonotonicNs": 39474942403166, "command": "speed", "value": 18, "phase": "below90", "step": 1, "startHostMonotonicNs": 39474888400250}
+{"event": "command_start", "hostUnixNs": 1793289982663182000, "hostMonotonicNs": 39475241732750, "command": "steer", "value": 90, "phase": "below90", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289982718550000, "hostMonotonicNs": 39475297101208, "command": "steer", "value": 90, "phase": "below90", "step": 2, "startHostMonotonicNs": 39475241732750}
+{"event": "command_start", "hostUnixNs": 1793289982718892000, "hostMonotonicNs": 39475297443666, "command": "brake", "value": 0, "phase": "below90", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289982762368000, "hostMonotonicNs": 39475340920625, "command": "brake", "value": 0, "phase": "below90", "step": 2, "startHostMonotonicNs": 39475297443666}
+{"event": "command_start", "hostUnixNs": 1793289982762704000, "hostMonotonicNs": 39475341256333, "command": "speed", "value": 18, "phase": "below90", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289982807774000, "hostMonotonicNs": 39475386326791, "command": "speed", "value": 18, "phase": "below90", "step": 2, "startHostMonotonicNs": 39475341256333}
+{"event": "command_start", "hostUnixNs": 1793289983167035000, "hostMonotonicNs": 39475745594625, "command": "steer", "value": 90, "phase": "below90", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289983210319000, "hostMonotonicNs": 39475788879750, "command": "steer", "value": 90, "phase": "below90", "step": 3, "startHostMonotonicNs": 39475745594625}
+{"event": "command_start", "hostUnixNs": 1793289983210678000, "hostMonotonicNs": 39475789239416, "command": "brake", "value": 0, "phase": "below90", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289983251243000, "hostMonotonicNs": 39475829804583, "command": "brake", "value": 0, "phase": "below90", "step": 3, "startHostMonotonicNs": 39475789239416}
+{"event": "command_start", "hostUnixNs": 1793289983251583000, "hostMonotonicNs": 39475830144666, "command": "speed", "value": 18, "phase": "below90", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289983287554000, "hostMonotonicNs": 39475866116625, "command": "speed", "value": 18, "phase": "below90", "step": 3, "startHostMonotonicNs": 39475830144666}
+{"event": "command_start", "hostUnixNs": 1793289983664077000, "hostMonotonicNs": 39476242646416, "command": "steer", "value": 90, "phase": "below90", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289983704345000, "hostMonotonicNs": 39476282915958, "command": "steer", "value": 90, "phase": "below90", "step": 4, "startHostMonotonicNs": 39476242646416}
+{"event": "command_start", "hostUnixNs": 1793289983704658000, "hostMonotonicNs": 39476283228875, "command": "brake", "value": 0, "phase": "below90", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289983744861000, "hostMonotonicNs": 39476323432125, "command": "brake", "value": 0, "phase": "below90", "step": 4, "startHostMonotonicNs": 39476283228875}
+{"event": "command_start", "hostUnixNs": 1793289983745156000, "hostMonotonicNs": 39476323727541, "command": "speed", "value": 18, "phase": "below90", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289983783892000, "hostMonotonicNs": 39476362463916, "command": "speed", "value": 18, "phase": "below90", "step": 4, "startHostMonotonicNs": 39476323727541}
+{"event": "command_start", "hostUnixNs": 1793289984163212000, "hostMonotonicNs": 39476741791375, "command": "steer", "value": 90, "phase": "below90", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289984207943000, "hostMonotonicNs": 39476786523791, "command": "steer", "value": 90, "phase": "below90", "step": 5, "startHostMonotonicNs": 39476741791375}
+{"event": "command_start", "hostUnixNs": 1793289984208237000, "hostMonotonicNs": 39476786817750, "command": "brake", "value": 0, "phase": "below90", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289984255992000, "hostMonotonicNs": 39476834573958, "command": "brake", "value": 0, "phase": "below90", "step": 5, "startHostMonotonicNs": 39476786817750}
+{"event": "command_start", "hostUnixNs": 1793289984256342000, "hostMonotonicNs": 39476834922833, "command": "speed", "value": 18, "phase": "below90", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289984300307000, "hostMonotonicNs": 39476878889500, "command": "speed", "value": 18, "phase": "below90", "step": 5, "startHostMonotonicNs": 39476834922833}
+{"event": "command_start", "hostUnixNs": 1793289984661356000, "hostMonotonicNs": 39477239946166, "command": "steer", "value": 90, "phase": "below90", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289984697399000, "hostMonotonicNs": 39477275988875, "command": "steer", "value": 90, "phase": "below90", "step": 6, "startHostMonotonicNs": 39477239946166}
+{"event": "command_start", "hostUnixNs": 1793289984697699000, "hostMonotonicNs": 39477276288916, "command": "brake", "value": 0, "phase": "below90", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289984746393000, "hostMonotonicNs": 39477324984000, "command": "brake", "value": 0, "phase": "below90", "step": 6, "startHostMonotonicNs": 39477276288916}
+{"event": "command_start", "hostUnixNs": 1793289984746778000, "hostMonotonicNs": 39477325369291, "command": "speed", "value": 18, "phase": "below90", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289984786023000, "hostMonotonicNs": 39477364614750, "command": "speed", "value": 18, "phase": "below90", "step": 6, "startHostMonotonicNs": 39477325369291}
+{"event": "command_start", "hostUnixNs": 1793289985165336000, "hostMonotonicNs": 39477743936125, "command": "steer", "value": 90, "phase": "below90", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289985209746000, "hostMonotonicNs": 39477788346125, "command": "steer", "value": 90, "phase": "below90", "step": 7, "startHostMonotonicNs": 39477743936125}
+{"event": "command_start", "hostUnixNs": 1793289985210032000, "hostMonotonicNs": 39477788631875, "command": "brake", "value": 0, "phase": "below90", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289985254386000, "hostMonotonicNs": 39477832986583, "command": "brake", "value": 0, "phase": "below90", "step": 7, "startHostMonotonicNs": 39477788631875}
+{"event": "command_start", "hostUnixNs": 1793289985254754000, "hostMonotonicNs": 39477833354541, "command": "speed", "value": 18, "phase": "below90", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289985292643000, "hostMonotonicNs": 39477871244958, "command": "speed", "value": 18, "phase": "below90", "step": 7, "startHostMonotonicNs": 39477833354541}
+{"event": "phase_start", "hostUnixNs": 1793289985292950000, "hostMonotonicNs": 39477871551291, "phase": "warn100"}
+{"event": "warn100", "hostUnixNs": 1793289985432029000, "hostMonotonicNs": 39478010633833, "deviceElapsedMs": 8732190, "pid": "12526", "focus": ["topResumedActivity=ActivityRecord{303066f u10 ai.vipseat.cargoconcierge/.MainActivity t1000397}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "command_start", "hostUnixNs": 1793289985665663000, "hostMonotonicNs": 39478244271958, "command": "steer", "value": 100, "phase": "warn100", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289985716522000, "hostMonotonicNs": 39478295131458, "command": "steer", "value": 100, "phase": "warn100", "step": 0, "startHostMonotonicNs": 39478244271958}
+{"event": "command_start", "hostUnixNs": 1793289985716865000, "hostMonotonicNs": 39478295475166, "command": "brake", "value": 0, "phase": "warn100", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289985773628000, "hostMonotonicNs": 39478352239083, "command": "brake", "value": 0, "phase": "warn100", "step": 0, "startHostMonotonicNs": 39478295475166}
+{"event": "command_start", "hostUnixNs": 1793289985774144000, "hostMonotonicNs": 39478352755125, "command": "speed", "value": 18, "phase": "warn100", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289985816817000, "hostMonotonicNs": 39478395429250, "command": "speed", "value": 18, "phase": "warn100", "step": 0, "startHostMonotonicNs": 39478352755125}
+{"event": "command_start", "hostUnixNs": 1793289986170314000, "hostMonotonicNs": 39478748933041, "command": "steer", "value": 100, "phase": "warn100", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289986223066000, "hostMonotonicNs": 39478801686125, "command": "steer", "value": 100, "phase": "warn100", "step": 1, "startHostMonotonicNs": 39478748933041}
+{"event": "command_start", "hostUnixNs": 1793289986223427000, "hostMonotonicNs": 39478802046583, "command": "brake", "value": 0, "phase": "warn100", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289986266687000, "hostMonotonicNs": 39478845307625, "command": "brake", "value": 0, "phase": "warn100", "step": 1, "startHostMonotonicNs": 39478802046583}
+{"event": "command_start", "hostUnixNs": 1793289986267124000, "hostMonotonicNs": 39478845744916, "command": "speed", "value": 18, "phase": "warn100", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289986303752000, "hostMonotonicNs": 39478882373250, "command": "speed", "value": 18, "phase": "warn100", "step": 1, "startHostMonotonicNs": 39478845744916}
+{"event": "command_start", "hostUnixNs": 1793289986670316000, "hostMonotonicNs": 39479248944250, "command": "steer", "value": 100, "phase": "warn100", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289986710092000, "hostMonotonicNs": 39479288720583, "command": "steer", "value": 100, "phase": "warn100", "step": 2, "startHostMonotonicNs": 39479248944250}
+{"event": "command_start", "hostUnixNs": 1793289986710473000, "hostMonotonicNs": 39479289102416, "command": "brake", "value": 0, "phase": "warn100", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289986753714000, "hostMonotonicNs": 39479332343666, "command": "brake", "value": 0, "phase": "warn100", "step": 2, "startHostMonotonicNs": 39479289102416}
+{"event": "command_start", "hostUnixNs": 1793289986754069000, "hostMonotonicNs": 39479332699000, "command": "speed", "value": 18, "phase": "warn100", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289986817494000, "hostMonotonicNs": 39479396124958, "command": "speed", "value": 18, "phase": "warn100", "step": 2, "startHostMonotonicNs": 39479332699000}
+{"event": "command_start", "hostUnixNs": 1793289987164264000, "hostMonotonicNs": 39479742901708, "command": "steer", "value": 100, "phase": "warn100", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289987212647000, "hostMonotonicNs": 39479791286125, "command": "steer", "value": 100, "phase": "warn100", "step": 3, "startHostMonotonicNs": 39479742901708}
+{"event": "command_start", "hostUnixNs": 1793289987212982000, "hostMonotonicNs": 39479791620500, "command": "brake", "value": 0, "phase": "warn100", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289987252401000, "hostMonotonicNs": 39479831040541, "command": "brake", "value": 0, "phase": "warn100", "step": 3, "startHostMonotonicNs": 39479791620500}
+{"event": "command_start", "hostUnixNs": 1793289987252755000, "hostMonotonicNs": 39479831395125, "command": "speed", "value": 18, "phase": "warn100", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289987293433000, "hostMonotonicNs": 39479872073291, "command": "speed", "value": 18, "phase": "warn100", "step": 3, "startHostMonotonicNs": 39479831395125}
+{"event": "command_start", "hostUnixNs": 1793289987666983000, "hostMonotonicNs": 39480245631041, "command": "steer", "value": 100, "phase": "warn100", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289987716285000, "hostMonotonicNs": 39480294934333, "command": "steer", "value": 100, "phase": "warn100", "step": 4, "startHostMonotonicNs": 39480245631041}
+{"event": "command_start", "hostUnixNs": 1793289987716807000, "hostMonotonicNs": 39480295455750, "command": "brake", "value": 0, "phase": "warn100", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289987774179000, "hostMonotonicNs": 39480352829125, "command": "brake", "value": 0, "phase": "warn100", "step": 4, "startHostMonotonicNs": 39480295455750}
+{"event": "command_start", "hostUnixNs": 1793289987774505000, "hostMonotonicNs": 39480353155000, "command": "speed", "value": 18, "phase": "warn100", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289987830554000, "hostMonotonicNs": 39480409205125, "command": "speed", "value": 18, "phase": "warn100", "step": 4, "startHostMonotonicNs": 39480353155000}
+{"event": "command_start", "hostUnixNs": 1793289988165360000, "hostMonotonicNs": 39480744017208, "command": "steer", "value": 100, "phase": "warn100", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289988203632000, "hostMonotonicNs": 39480782290416, "command": "steer", "value": 100, "phase": "warn100", "step": 5, "startHostMonotonicNs": 39480744017208}
+{"event": "command_start", "hostUnixNs": 1793289988204065000, "hostMonotonicNs": 39480782723000, "command": "brake", "value": 0, "phase": "warn100", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289988241310000, "hostMonotonicNs": 39480819969916, "command": "brake", "value": 0, "phase": "warn100", "step": 5, "startHostMonotonicNs": 39480782723000}
+{"event": "command_start", "hostUnixNs": 1793289988241883000, "hostMonotonicNs": 39480820542541, "command": "speed", "value": 18, "phase": "warn100", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289988283595000, "hostMonotonicNs": 39480862255083, "command": "speed", "value": 18, "phase": "warn100", "step": 5, "startHostMonotonicNs": 39480820542541}
+{"event": "command_start", "hostUnixNs": 1793289988669471000, "hostMonotonicNs": 39481248138833, "command": "steer", "value": 100, "phase": "warn100", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289988710325000, "hostMonotonicNs": 39481288993750, "command": "steer", "value": 100, "phase": "warn100", "step": 6, "startHostMonotonicNs": 39481248138833}
+{"event": "command_start", "hostUnixNs": 1793289988710684000, "hostMonotonicNs": 39481289352583, "command": "brake", "value": 0, "phase": "warn100", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289988754529000, "hostMonotonicNs": 39481333198333, "command": "brake", "value": 0, "phase": "warn100", "step": 6, "startHostMonotonicNs": 39481289352583}
+{"event": "command_start", "hostUnixNs": 1793289988754888000, "hostMonotonicNs": 39481333556708, "command": "speed", "value": 18, "phase": "warn100", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289988796634000, "hostMonotonicNs": 39481375303500, "command": "speed", "value": 18, "phase": "warn100", "step": 6, "startHostMonotonicNs": 39481333556708}
+{"event": "command_start", "hostUnixNs": 1793289989167849000, "hostMonotonicNs": 39481746526416, "command": "steer", "value": 100, "phase": "warn100", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289989204825000, "hostMonotonicNs": 39481783502958, "command": "steer", "value": 100, "phase": "warn100", "step": 7, "startHostMonotonicNs": 39481746526416}
+{"event": "command_start", "hostUnixNs": 1793289989205125000, "hostMonotonicNs": 39481783802875, "command": "brake", "value": 0, "phase": "warn100", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289989246589000, "hostMonotonicNs": 39481825267916, "command": "brake", "value": 0, "phase": "warn100", "step": 7, "startHostMonotonicNs": 39481783802875}
+{"event": "command_start", "hostUnixNs": 1793289989247036000, "hostMonotonicNs": 39481825714750, "command": "speed", "value": 18, "phase": "warn100", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289989283236000, "hostMonotonicNs": 39481861915375, "command": "speed", "value": 18, "phase": "warn100", "step": 7, "startHostMonotonicNs": 39481825714750}
+{"event": "command_start", "hostUnixNs": 1793289989666281000, "hostMonotonicNs": 39482244967916, "command": "steer", "value": 100, "phase": "warn100", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289989700992000, "hostMonotonicNs": 39482279679416, "command": "steer", "value": 100, "phase": "warn100", "step": 8, "startHostMonotonicNs": 39482244967916}
+{"event": "command_start", "hostUnixNs": 1793289989701367000, "hostMonotonicNs": 39482280054750, "command": "brake", "value": 0, "phase": "warn100", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289989744105000, "hostMonotonicNs": 39482322793666, "command": "brake", "value": 0, "phase": "warn100", "step": 8, "startHostMonotonicNs": 39482280054750}
+{"event": "command_start", "hostUnixNs": 1793289989744452000, "hostMonotonicNs": 39482323140666, "command": "speed", "value": 18, "phase": "warn100", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289989778818000, "hostMonotonicNs": 39482357506916, "command": "speed", "value": 18, "phase": "warn100", "step": 8, "startHostMonotonicNs": 39482323140666}
+{"event": "command_start", "hostUnixNs": 1793289990170394000, "hostMonotonicNs": 39482749090708, "command": "steer", "value": 100, "phase": "warn100", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289990211109000, "hostMonotonicNs": 39482789806625, "command": "steer", "value": 100, "phase": "warn100", "step": 9, "startHostMonotonicNs": 39482749090708}
+{"event": "command_start", "hostUnixNs": 1793289990211444000, "hostMonotonicNs": 39482790141875, "command": "brake", "value": 0, "phase": "warn100", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289990245209000, "hostMonotonicNs": 39482823907458, "command": "brake", "value": 0, "phase": "warn100", "step": 9, "startHostMonotonicNs": 39482790141875}
+{"event": "command_start", "hostUnixNs": 1793289990245528000, "hostMonotonicNs": 39482824225708, "command": "speed", "value": 18, "phase": "warn100", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793289990279804000, "hostMonotonicNs": 39482858502625, "command": "speed", "value": 18, "phase": "warn100", "step": 9, "startHostMonotonicNs": 39482824225708}
+{"event": "command_start", "hostUnixNs": 1793289990669659000, "hostMonotonicNs": 39483248365666, "command": "steer", "value": 100, "phase": "warn100", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289990712313000, "hostMonotonicNs": 39483291020041, "command": "steer", "value": 100, "phase": "warn100", "step": 10, "startHostMonotonicNs": 39483248365666}
+{"event": "command_start", "hostUnixNs": 1793289990712667000, "hostMonotonicNs": 39483291373875, "command": "brake", "value": 0, "phase": "warn100", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289990761965000, "hostMonotonicNs": 39483340673541, "command": "brake", "value": 0, "phase": "warn100", "step": 10, "startHostMonotonicNs": 39483291373875}
+{"event": "command_start", "hostUnixNs": 1793289990762324000, "hostMonotonicNs": 39483341032375, "command": "speed", "value": 18, "phase": "warn100", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793289990805176000, "hostMonotonicNs": 39483383884916, "command": "speed", "value": 18, "phase": "warn100", "step": 10, "startHostMonotonicNs": 39483341032375}
+{"event": "command_start", "hostUnixNs": 1793289991169699000, "hostMonotonicNs": 39483748414625, "command": "steer", "value": 100, "phase": "warn100", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289991211086000, "hostMonotonicNs": 39483789802458, "command": "steer", "value": 100, "phase": "warn100", "step": 11, "startHostMonotonicNs": 39483748414625}
+{"event": "command_start", "hostUnixNs": 1793289991211416000, "hostMonotonicNs": 39483790132583, "command": "brake", "value": 0, "phase": "warn100", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289991255150000, "hostMonotonicNs": 39483833867291, "command": "brake", "value": 0, "phase": "warn100", "step": 11, "startHostMonotonicNs": 39483790132583}
+{"event": "command_start", "hostUnixNs": 1793289991255572000, "hostMonotonicNs": 39483834290000, "command": "speed", "value": 18, "phase": "warn100", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793289991296044000, "hostMonotonicNs": 39483874762458, "command": "speed", "value": 18, "phase": "warn100", "step": 11, "startHostMonotonicNs": 39483834290000}
+{"event": "command_start", "hostUnixNs": 1793289991668896000, "hostMonotonicNs": 39484247621791, "command": "steer", "value": 100, "phase": "warn100", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793289991718980000, "hostMonotonicNs": 39484297707333, "command": "steer", "value": 100, "phase": "warn100", "step": 12, "startHostMonotonicNs": 39484247621791}
+{"event": "command_start", "hostUnixNs": 1793289991719297000, "hostMonotonicNs": 39484298023625, "command": "brake", "value": 0, "phase": "warn100", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793289991768674000, "hostMonotonicNs": 39484347402083, "command": "brake", "value": 0, "phase": "warn100", "step": 12, "startHostMonotonicNs": 39484298023625}
+{"event": "command_start", "hostUnixNs": 1793289991769328000, "hostMonotonicNs": 39484348056125, "command": "speed", "value": 18, "phase": "warn100", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793289991818158000, "hostMonotonicNs": 39484396886833, "command": "speed", "value": 18, "phase": "warn100", "step": 12, "startHostMonotonicNs": 39484348056125}
+{"event": "command_start", "hostUnixNs": 1793289992166252000, "hostMonotonicNs": 39484744987541, "command": "steer", "value": 100, "phase": "warn100", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793289992201729000, "hostMonotonicNs": 39484780466000, "command": "steer", "value": 100, "phase": "warn100", "step": 13, "startHostMonotonicNs": 39484744987541}
+{"event": "command_start", "hostUnixNs": 1793289992202271000, "hostMonotonicNs": 39484781007541, "command": "brake", "value": 0, "phase": "warn100", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793289992241741000, "hostMonotonicNs": 39484820477708, "command": "brake", "value": 0, "phase": "warn100", "step": 13, "startHostMonotonicNs": 39484781007541}
+{"event": "command_start", "hostUnixNs": 1793289992242102000, "hostMonotonicNs": 39484820839416, "command": "speed", "value": 18, "phase": "warn100", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793289992284177000, "hostMonotonicNs": 39484862914958, "command": "speed", "value": 18, "phase": "warn100", "step": 13, "startHostMonotonicNs": 39484820839416}
+{"event": "command_start", "hostUnixNs": 1793289992662629000, "hostMonotonicNs": 39485241375250, "command": "steer", "value": 100, "phase": "warn100", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793289992703042000, "hostMonotonicNs": 39485281788625, "command": "steer", "value": 100, "phase": "warn100", "step": 14, "startHostMonotonicNs": 39485241375250}
+{"event": "command_start", "hostUnixNs": 1793289992703405000, "hostMonotonicNs": 39485282151416, "command": "brake", "value": 0, "phase": "warn100", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793289992745264000, "hostMonotonicNs": 39485324010916, "command": "brake", "value": 0, "phase": "warn100", "step": 14, "startHostMonotonicNs": 39485282151416}
+{"event": "command_start", "hostUnixNs": 1793289992745567000, "hostMonotonicNs": 39485324314166, "command": "speed", "value": 18, "phase": "warn100", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793289992790478000, "hostMonotonicNs": 39485369226500, "command": "speed", "value": 18, "phase": "warn100", "step": 14, "startHostMonotonicNs": 39485324314166}
+{"event": "command_start", "hostUnixNs": 1793289993166051000, "hostMonotonicNs": 39485744806291, "command": "steer", "value": 100, "phase": "warn100", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793289993202015000, "hostMonotonicNs": 39485780770666, "command": "steer", "value": 100, "phase": "warn100", "step": 15, "startHostMonotonicNs": 39485744806291}
+{"event": "command_start", "hostUnixNs": 1793289993202359000, "hostMonotonicNs": 39485781114833, "command": "brake", "value": 0, "phase": "warn100", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793289993239552000, "hostMonotonicNs": 39485818309208, "command": "brake", "value": 0, "phase": "warn100", "step": 15, "startHostMonotonicNs": 39485781114833}
+{"event": "command_start", "hostUnixNs": 1793289993239962000, "hostMonotonicNs": 39485818718208, "command": "speed", "value": 18, "phase": "warn100", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793289993279374000, "hostMonotonicNs": 39485858131666, "command": "speed", "value": 18, "phase": "warn100", "step": 15, "startHostMonotonicNs": 39485818718208}
+{"event": "command_start", "hostUnixNs": 1793289993663077000, "hostMonotonicNs": 39486241841666, "command": "steer", "value": 100, "phase": "warn100", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793289993704231000, "hostMonotonicNs": 39486282996375, "command": "steer", "value": 100, "phase": "warn100", "step": 16, "startHostMonotonicNs": 39486241841666}
+{"event": "command_start", "hostUnixNs": 1793289993704577000, "hostMonotonicNs": 39486283342208, "command": "brake", "value": 0, "phase": "warn100", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793289993745406000, "hostMonotonicNs": 39486324172166, "command": "brake", "value": 0, "phase": "warn100", "step": 16, "startHostMonotonicNs": 39486283342208}
+{"event": "command_start", "hostUnixNs": 1793289993745762000, "hostMonotonicNs": 39486324528000, "command": "speed", "value": 18, "phase": "warn100", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793289993781670000, "hostMonotonicNs": 39486360437125, "command": "speed", "value": 18, "phase": "warn100", "step": 16, "startHostMonotonicNs": 39486324528000}
+{"event": "command_start", "hostUnixNs": 1793289994163009000, "hostMonotonicNs": 39486741783250, "command": "steer", "value": 100, "phase": "warn100", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793289994203204000, "hostMonotonicNs": 39486781979083, "command": "steer", "value": 100, "phase": "warn100", "step": 17, "startHostMonotonicNs": 39486741783250}
+{"event": "command_start", "hostUnixNs": 1793289994203557000, "hostMonotonicNs": 39486782331875, "command": "brake", "value": 0, "phase": "warn100", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793289994244064000, "hostMonotonicNs": 39486822840416, "command": "brake", "value": 0, "phase": "warn100", "step": 17, "startHostMonotonicNs": 39486782331875}
+{"event": "command_start", "hostUnixNs": 1793289994244393000, "hostMonotonicNs": 39486823169250, "command": "speed", "value": 18, "phase": "warn100", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793289994281625000, "hostMonotonicNs": 39486860401375, "command": "speed", "value": 18, "phase": "warn100", "step": 17, "startHostMonotonicNs": 39486823169250}
+{"event": "command_start", "hostUnixNs": 1793289994661258000, "hostMonotonicNs": 39487240042041, "command": "steer", "value": 100, "phase": "warn100", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793289994704113000, "hostMonotonicNs": 39487282898125, "command": "steer", "value": 100, "phase": "warn100", "step": 18, "startHostMonotonicNs": 39487240042041}
+{"event": "command_start", "hostUnixNs": 1793289994704415000, "hostMonotonicNs": 39487283200208, "command": "brake", "value": 0, "phase": "warn100", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793289994744478000, "hostMonotonicNs": 39487323263625, "command": "brake", "value": 0, "phase": "warn100", "step": 18, "startHostMonotonicNs": 39487283200208}
+{"event": "command_start", "hostUnixNs": 1793289994745071000, "hostMonotonicNs": 39487323857375, "command": "speed", "value": 18, "phase": "warn100", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793289994786054000, "hostMonotonicNs": 39487364840791, "command": "speed", "value": 18, "phase": "warn100", "step": 18, "startHostMonotonicNs": 39487323857375}
+{"event": "command_start", "hostUnixNs": 1793289995162430000, "hostMonotonicNs": 39487741224500, "command": "steer", "value": 100, "phase": "warn100", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793289995197867000, "hostMonotonicNs": 39487776662166, "command": "steer", "value": 100, "phase": "warn100", "step": 19, "startHostMonotonicNs": 39487741224500}
+{"event": "command_start", "hostUnixNs": 1793289995198211000, "hostMonotonicNs": 39487777005541, "command": "brake", "value": 0, "phase": "warn100", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793289995237836000, "hostMonotonicNs": 39487816631458, "command": "brake", "value": 0, "phase": "warn100", "step": 19, "startHostMonotonicNs": 39487777005541}
+{"event": "command_start", "hostUnixNs": 1793289995238520000, "hostMonotonicNs": 39487817315958, "command": "speed", "value": 18, "phase": "warn100", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793289995285206000, "hostMonotonicNs": 39487864002708, "command": "speed", "value": 18, "phase": "warn100", "step": 19, "startHostMonotonicNs": 39487817315958}
+{"event": "phase_start", "hostUnixNs": 1793289995285517000, "hostMonotonicNs": 39487864313166, "phase": "over120"}
+{"event": "over120", "hostUnixNs": 1793289995410719000, "hostMonotonicNs": 39487989517541, "deviceElapsedMs": 8742170, "pid": "12526", "focus": ["topResumedActivity=ActivityRecord{303066f u10 ai.vipseat.cargoconcierge/.MainActivity t1000397}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "command_start", "hostUnixNs": 1793289995662102000, "hostMonotonicNs": 39488240905333, "command": "steer", "value": 120, "phase": "over120", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289995711387000, "hostMonotonicNs": 39488290192208, "command": "steer", "value": 120, "phase": "over120", "step": 0, "startHostMonotonicNs": 39488240905333}
+{"event": "command_start", "hostUnixNs": 1793289995711806000, "hostMonotonicNs": 39488290610875, "command": "brake", "value": 0, "phase": "over120", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289995752140000, "hostMonotonicNs": 39488330945375, "command": "brake", "value": 0, "phase": "over120", "step": 0, "startHostMonotonicNs": 39488290610875}
+{"event": "command_start", "hostUnixNs": 1793289995752568000, "hostMonotonicNs": 39488331373791, "command": "speed", "value": 18, "phase": "over120", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793289995793687000, "hostMonotonicNs": 39488372493208, "command": "speed", "value": 18, "phase": "over120", "step": 0, "startHostMonotonicNs": 39488331373791}
+{"event": "command_start", "hostUnixNs": 1793289996172673000, "hostMonotonicNs": 39488751487041, "command": "steer", "value": 120, "phase": "over120", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289996207116000, "hostMonotonicNs": 39488785930500, "command": "steer", "value": 120, "phase": "over120", "step": 1, "startHostMonotonicNs": 39488751487041}
+{"event": "command_start", "hostUnixNs": 1793289996207450000, "hostMonotonicNs": 39488786264708, "command": "brake", "value": 0, "phase": "over120", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289996249283000, "hostMonotonicNs": 39488828098333, "command": "brake", "value": 0, "phase": "over120", "step": 1, "startHostMonotonicNs": 39488786264708}
+{"event": "command_start", "hostUnixNs": 1793289996249916000, "hostMonotonicNs": 39488828731958, "command": "speed", "value": 18, "phase": "over120", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793289996291239000, "hostMonotonicNs": 39488870054875, "command": "speed", "value": 18, "phase": "over120", "step": 1, "startHostMonotonicNs": 39488828731958}
+{"event": "command_start", "hostUnixNs": 1793289996664924000, "hostMonotonicNs": 39489243746833, "command": "steer", "value": 120, "phase": "over120", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289996714051000, "hostMonotonicNs": 39489292874916, "command": "steer", "value": 120, "phase": "over120", "step": 2, "startHostMonotonicNs": 39489243746833}
+{"event": "command_start", "hostUnixNs": 1793289996714451000, "hostMonotonicNs": 39489293275916, "command": "brake", "value": 0, "phase": "over120", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289996780705000, "hostMonotonicNs": 39489359530625, "command": "brake", "value": 0, "phase": "over120", "step": 2, "startHostMonotonicNs": 39489293275916}
+{"event": "command_start", "hostUnixNs": 1793289996781093000, "hostMonotonicNs": 39489359918166, "command": "speed", "value": 18, "phase": "over120", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793289996827445000, "hostMonotonicNs": 39489406271375, "command": "speed", "value": 18, "phase": "over120", "step": 2, "startHostMonotonicNs": 39489359918166}
+{"event": "command_start", "hostUnixNs": 1793289997166968000, "hostMonotonicNs": 39489745800458, "command": "steer", "value": 120, "phase": "over120", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289997204680000, "hostMonotonicNs": 39489783513666, "command": "steer", "value": 120, "phase": "over120", "step": 3, "startHostMonotonicNs": 39489745800458}
+{"event": "command_start", "hostUnixNs": 1793289997205054000, "hostMonotonicNs": 39489783887458, "command": "brake", "value": 0, "phase": "over120", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289997247744000, "hostMonotonicNs": 39489826578916, "command": "brake", "value": 0, "phase": "over120", "step": 3, "startHostMonotonicNs": 39489783887458}
+{"event": "command_start", "hostUnixNs": 1793289997248075000, "hostMonotonicNs": 39489826909791, "command": "speed", "value": 18, "phase": "over120", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793289997280973000, "hostMonotonicNs": 39489859808541, "command": "speed", "value": 18, "phase": "over120", "step": 3, "startHostMonotonicNs": 39489826909791}
+{"event": "command_start", "hostUnixNs": 1793289997667013000, "hostMonotonicNs": 39490245855833, "command": "steer", "value": 120, "phase": "over120", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289997705350000, "hostMonotonicNs": 39490284193458, "command": "steer", "value": 120, "phase": "over120", "step": 4, "startHostMonotonicNs": 39490245855833}
+{"event": "command_start", "hostUnixNs": 1793289997705723000, "hostMonotonicNs": 39490284567000, "command": "brake", "value": 0, "phase": "over120", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289997747819000, "hostMonotonicNs": 39490326663875, "command": "brake", "value": 0, "phase": "over120", "step": 4, "startHostMonotonicNs": 39490284567000}
+{"event": "command_start", "hostUnixNs": 1793289997748183000, "hostMonotonicNs": 39490327027583, "command": "speed", "value": 18, "phase": "over120", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793289997789114000, "hostMonotonicNs": 39490367958708, "command": "speed", "value": 18, "phase": "over120", "step": 4, "startHostMonotonicNs": 39490327027583}
+{"event": "command_start", "hostUnixNs": 1793289998160713000, "hostMonotonicNs": 39490739565583, "command": "steer", "value": 120, "phase": "over120", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289998202907000, "hostMonotonicNs": 39490781760250, "command": "steer", "value": 120, "phase": "over120", "step": 5, "startHostMonotonicNs": 39490739565583}
+{"event": "command_start", "hostUnixNs": 1793289998203308000, "hostMonotonicNs": 39490782161833, "command": "brake", "value": 0, "phase": "over120", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289998237977000, "hostMonotonicNs": 39490816831583, "command": "brake", "value": 0, "phase": "over120", "step": 5, "startHostMonotonicNs": 39490782161833}
+{"event": "command_start", "hostUnixNs": 1793289998238710000, "hostMonotonicNs": 39490817564166, "command": "speed", "value": 18, "phase": "over120", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793289998278939000, "hostMonotonicNs": 39490857793625, "command": "speed", "value": 18, "phase": "over120", "step": 5, "startHostMonotonicNs": 39490817564166}
+{"event": "command_start", "hostUnixNs": 1793289998665823000, "hostMonotonicNs": 39491244685458, "command": "steer", "value": 120, "phase": "over120", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289998700078000, "hostMonotonicNs": 39491278941750, "command": "steer", "value": 120, "phase": "over120", "step": 6, "startHostMonotonicNs": 39491244685458}
+{"event": "command_start", "hostUnixNs": 1793289998700560000, "hostMonotonicNs": 39491279422458, "command": "brake", "value": 0, "phase": "over120", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289998741348000, "hostMonotonicNs": 39491320211791, "command": "brake", "value": 0, "phase": "over120", "step": 6, "startHostMonotonicNs": 39491279422458}
+{"event": "command_start", "hostUnixNs": 1793289998742037000, "hostMonotonicNs": 39491320900958, "command": "speed", "value": 18, "phase": "over120", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793289998784307000, "hostMonotonicNs": 39491363171833, "command": "speed", "value": 18, "phase": "over120", "step": 6, "startHostMonotonicNs": 39491320900958}
+{"event": "command_start", "hostUnixNs": 1793289999169981000, "hostMonotonicNs": 39491748853291, "command": "steer", "value": 120, "phase": "over120", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289999208298000, "hostMonotonicNs": 39491787170416, "command": "steer", "value": 120, "phase": "over120", "step": 7, "startHostMonotonicNs": 39491748853291}
+{"event": "command_start", "hostUnixNs": 1793289999208668000, "hostMonotonicNs": 39491787540875, "command": "brake", "value": 0, "phase": "over120", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289999244438000, "hostMonotonicNs": 39491823311250, "command": "brake", "value": 0, "phase": "over120", "step": 7, "startHostMonotonicNs": 39491787540875}
+{"event": "command_start", "hostUnixNs": 1793289999244759000, "hostMonotonicNs": 39491823632583, "command": "speed", "value": 18, "phase": "over120", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793289999284880000, "hostMonotonicNs": 39491863754083, "command": "speed", "value": 18, "phase": "over120", "step": 7, "startHostMonotonicNs": 39491823632583}
+{"event": "command_start", "hostUnixNs": 1793289999663491000, "hostMonotonicNs": 39492242372666, "command": "steer", "value": 120, "phase": "over120", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289999702502000, "hostMonotonicNs": 39492281384083, "command": "steer", "value": 120, "phase": "over120", "step": 8, "startHostMonotonicNs": 39492242372666}
+{"event": "command_start", "hostUnixNs": 1793289999702835000, "hostMonotonicNs": 39492281717208, "command": "brake", "value": 0, "phase": "over120", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289999745362000, "hostMonotonicNs": 39492324245458, "command": "brake", "value": 0, "phase": "over120", "step": 8, "startHostMonotonicNs": 39492281717208}
+{"event": "command_start", "hostUnixNs": 1793289999745846000, "hostMonotonicNs": 39492324729583, "command": "speed", "value": 18, "phase": "over120", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793289999778354000, "hostMonotonicNs": 39492357238333, "command": "speed", "value": 18, "phase": "over120", "step": 8, "startHostMonotonicNs": 39492324729583}
+{"event": "command_start", "hostUnixNs": 1793290000164182000, "hostMonotonicNs": 39492743073291, "command": "steer", "value": 120, "phase": "over120", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290000204264000, "hostMonotonicNs": 39492783156208, "command": "steer", "value": 120, "phase": "over120", "step": 9, "startHostMonotonicNs": 39492743073291}
+{"event": "command_start", "hostUnixNs": 1793290000204563000, "hostMonotonicNs": 39492783455208, "command": "brake", "value": 0, "phase": "over120", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290000253157000, "hostMonotonicNs": 39492832050666, "command": "brake", "value": 0, "phase": "over120", "step": 9, "startHostMonotonicNs": 39492783455208}
+{"event": "command_start", "hostUnixNs": 1793290000253491000, "hostMonotonicNs": 39492832384291, "command": "speed", "value": 18, "phase": "over120", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290000293173000, "hostMonotonicNs": 39492872066541, "command": "speed", "value": 18, "phase": "over120", "step": 9, "startHostMonotonicNs": 39492832384291}
+{"event": "command_start", "hostUnixNs": 1793290000669927000, "hostMonotonicNs": 39493248830458, "command": "steer", "value": 120, "phase": "over120", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290000708609000, "hostMonotonicNs": 39493287510958, "command": "steer", "value": 120, "phase": "over120", "step": 10, "startHostMonotonicNs": 39493248830458}
+{"event": "command_start", "hostUnixNs": 1793290000708906000, "hostMonotonicNs": 39493287807791, "command": "brake", "value": 0, "phase": "over120", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290000747548000, "hostMonotonicNs": 39493326450916, "command": "brake", "value": 0, "phase": "over120", "step": 10, "startHostMonotonicNs": 39493287807791}
+{"event": "command_start", "hostUnixNs": 1793290000747915000, "hostMonotonicNs": 39493326817750, "command": "speed", "value": 18, "phase": "over120", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290000792748000, "hostMonotonicNs": 39493371651666, "command": "speed", "value": 18, "phase": "over120", "step": 10, "startHostMonotonicNs": 39493326817750}
+{"event": "command_start", "hostUnixNs": 1793290001161374000, "hostMonotonicNs": 39493740285833, "command": "steer", "value": 120, "phase": "over120", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290001203108000, "hostMonotonicNs": 39493782020125, "command": "steer", "value": 120, "phase": "over120", "step": 11, "startHostMonotonicNs": 39493740285833}
+{"event": "command_start", "hostUnixNs": 1793290001203436000, "hostMonotonicNs": 39493782347625, "command": "brake", "value": 0, "phase": "over120", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290001248283000, "hostMonotonicNs": 39493827196125, "command": "brake", "value": 0, "phase": "over120", "step": 11, "startHostMonotonicNs": 39493782347625}
+{"event": "command_start", "hostUnixNs": 1793290001248656000, "hostMonotonicNs": 39493827568708, "command": "speed", "value": 18, "phase": "over120", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290001293033000, "hostMonotonicNs": 39493871946250, "command": "speed", "value": 18, "phase": "over120", "step": 11, "startHostMonotonicNs": 39493827568708}
+{"event": "command_start", "hostUnixNs": 1793290001664047000, "hostMonotonicNs": 39494242968416, "command": "steer", "value": 120, "phase": "over120", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793290001707392000, "hostMonotonicNs": 39494286313625, "command": "steer", "value": 120, "phase": "over120", "step": 12, "startHostMonotonicNs": 39494242968416}
+{"event": "command_start", "hostUnixNs": 1793290001707730000, "hostMonotonicNs": 39494286652041, "command": "brake", "value": 0, "phase": "over120", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793290001743582000, "hostMonotonicNs": 39494322504333, "command": "brake", "value": 0, "phase": "over120", "step": 12, "startHostMonotonicNs": 39494286652041}
+{"event": "command_start", "hostUnixNs": 1793290001743958000, "hostMonotonicNs": 39494322880583, "command": "speed", "value": 18, "phase": "over120", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793290001784703000, "hostMonotonicNs": 39494363626416, "command": "speed", "value": 18, "phase": "over120", "step": 12, "startHostMonotonicNs": 39494322880583}
+{"event": "command_start", "hostUnixNs": 1793290002169845000, "hostMonotonicNs": 39494748775875, "command": "steer", "value": 120, "phase": "over120", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793290002213032000, "hostMonotonicNs": 39494791963208, "command": "steer", "value": 120, "phase": "over120", "step": 13, "startHostMonotonicNs": 39494748775875}
+{"event": "command_start", "hostUnixNs": 1793290002213396000, "hostMonotonicNs": 39494792328041, "command": "brake", "value": 0, "phase": "over120", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793290002249573000, "hostMonotonicNs": 39494828505000, "command": "brake", "value": 0, "phase": "over120", "step": 13, "startHostMonotonicNs": 39494792328041}
+{"event": "command_start", "hostUnixNs": 1793290002249922000, "hostMonotonicNs": 39494828854416, "command": "speed", "value": 18, "phase": "over120", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793290002290762000, "hostMonotonicNs": 39494869695333, "command": "speed", "value": 18, "phase": "over120", "step": 13, "startHostMonotonicNs": 39494828854416}
+{"event": "command_start", "hostUnixNs": 1793290002669234000, "hostMonotonicNs": 39495248175166, "command": "steer", "value": 120, "phase": "over120", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793290002712236000, "hostMonotonicNs": 39495291177208, "command": "steer", "value": 120, "phase": "over120", "step": 14, "startHostMonotonicNs": 39495248175166}
+{"event": "command_start", "hostUnixNs": 1793290002712619000, "hostMonotonicNs": 39495291560458, "command": "brake", "value": 0, "phase": "over120", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793290002753482000, "hostMonotonicNs": 39495332423666, "command": "brake", "value": 0, "phase": "over120", "step": 14, "startHostMonotonicNs": 39495291560458}
+{"event": "command_start", "hostUnixNs": 1793290002753855000, "hostMonotonicNs": 39495332796958, "command": "speed", "value": 18, "phase": "over120", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793290002793407000, "hostMonotonicNs": 39495372350833, "command": "speed", "value": 18, "phase": "over120", "step": 14, "startHostMonotonicNs": 39495332796958}
+{"event": "command_start", "hostUnixNs": 1793290003167116000, "hostMonotonicNs": 39495746065833, "command": "steer", "value": 120, "phase": "over120", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793290003210376000, "hostMonotonicNs": 39495789327208, "command": "steer", "value": 120, "phase": "over120", "step": 15, "startHostMonotonicNs": 39495746065833}
+{"event": "command_start", "hostUnixNs": 1793290003210708000, "hostMonotonicNs": 39495789659250, "command": "brake", "value": 0, "phase": "over120", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793290003247448000, "hostMonotonicNs": 39495826400166, "command": "brake", "value": 0, "phase": "over120", "step": 15, "startHostMonotonicNs": 39495789659250}
+{"event": "command_start", "hostUnixNs": 1793290003247800000, "hostMonotonicNs": 39495826751125, "command": "speed", "value": 18, "phase": "over120", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793290003283186000, "hostMonotonicNs": 39495862138583, "command": "speed", "value": 18, "phase": "over120", "step": 15, "startHostMonotonicNs": 39495826751125}
+{"event": "command_start", "hostUnixNs": 1793290003664423000, "hostMonotonicNs": 39496243382958, "command": "steer", "value": 120, "phase": "over120", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793290003703754000, "hostMonotonicNs": 39496282714416, "command": "steer", "value": 120, "phase": "over120", "step": 16, "startHostMonotonicNs": 39496243382958}
+{"event": "command_start", "hostUnixNs": 1793290003704252000, "hostMonotonicNs": 39496283212875, "command": "brake", "value": 0, "phase": "over120", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793290003744403000, "hostMonotonicNs": 39496323363958, "command": "brake", "value": 0, "phase": "over120", "step": 16, "startHostMonotonicNs": 39496283212875}
+{"event": "command_start", "hostUnixNs": 1793290003744847000, "hostMonotonicNs": 39496323808000, "command": "speed", "value": 18, "phase": "over120", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793290003786605000, "hostMonotonicNs": 39496365566833, "command": "speed", "value": 18, "phase": "over120", "step": 16, "startHostMonotonicNs": 39496323808000}
+{"event": "command_start", "hostUnixNs": 1793290004160254000, "hostMonotonicNs": 39496739223500, "command": "steer", "value": 120, "phase": "over120", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793290004194785000, "hostMonotonicNs": 39496773755500, "command": "steer", "value": 120, "phase": "over120", "step": 17, "startHostMonotonicNs": 39496739223500}
+{"event": "command_start", "hostUnixNs": 1793290004195152000, "hostMonotonicNs": 39496774121916, "command": "brake", "value": 0, "phase": "over120", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793290004235529000, "hostMonotonicNs": 39496814500500, "command": "brake", "value": 0, "phase": "over120", "step": 17, "startHostMonotonicNs": 39496774121916}
+{"event": "command_start", "hostUnixNs": 1793290004236046000, "hostMonotonicNs": 39496815017250, "command": "speed", "value": 18, "phase": "over120", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793290004275424000, "hostMonotonicNs": 39496854395416, "command": "speed", "value": 18, "phase": "over120", "step": 17, "startHostMonotonicNs": 39496815017250}
+{"event": "command_start", "hostUnixNs": 1793290004662635000, "hostMonotonicNs": 39497241615375, "command": "steer", "value": 120, "phase": "over120", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793290004699499000, "hostMonotonicNs": 39497278478916, "command": "steer", "value": 120, "phase": "over120", "step": 18, "startHostMonotonicNs": 39497241615375}
+{"event": "command_start", "hostUnixNs": 1793290004699916000, "hostMonotonicNs": 39497278895916, "command": "brake", "value": 0, "phase": "over120", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793290004735272000, "hostMonotonicNs": 39497314252583, "command": "brake", "value": 0, "phase": "over120", "step": 18, "startHostMonotonicNs": 39497278895916}
+{"event": "command_start", "hostUnixNs": 1793290004735661000, "hostMonotonicNs": 39497314641250, "command": "speed", "value": 18, "phase": "over120", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793290004770886000, "hostMonotonicNs": 39497349867416, "command": "speed", "value": 18, "phase": "over120", "step": 18, "startHostMonotonicNs": 39497314641250}
+{"event": "command_start", "hostUnixNs": 1793290005167082000, "hostMonotonicNs": 39497746072208, "command": "steer", "value": 120, "phase": "over120", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793290005207214000, "hostMonotonicNs": 39497786203666, "command": "steer", "value": 120, "phase": "over120", "step": 19, "startHostMonotonicNs": 39497746072208}
+{"event": "command_start", "hostUnixNs": 1793290005207559000, "hostMonotonicNs": 39497786548416, "command": "brake", "value": 0, "phase": "over120", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793290005251659000, "hostMonotonicNs": 39497830649833, "command": "brake", "value": 0, "phase": "over120", "step": 19, "startHostMonotonicNs": 39497786548416}
+{"event": "command_start", "hostUnixNs": 1793290005252023000, "hostMonotonicNs": 39497831014125, "command": "speed", "value": 18, "phase": "over120", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793290005288365000, "hostMonotonicNs": 39497867356083, "command": "speed", "value": 18, "phase": "over120", "step": 19, "startHostMonotonicNs": 39497831014125}
+{"event": "phase_start", "hostUnixNs": 1793290005288691000, "hostMonotonicNs": 39497867682875, "phase": "recover60"}
+{"event": "recover60", "hostUnixNs": 1793290005402598000, "hostMonotonicNs": 39497981592083, "deviceElapsedMs": 8752160, "pid": "12526", "focus": ["topResumedActivity=ActivityRecord{303066f u10 ai.vipseat.cargoconcierge/.MainActivity t1000397}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "command_start", "hostUnixNs": 1793290005666344000, "hostMonotonicNs": 39498245343333, "command": "steer", "value": 60, "phase": "recover60", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290005712303000, "hostMonotonicNs": 39498291302416, "command": "steer", "value": 60, "phase": "recover60", "step": 0, "startHostMonotonicNs": 39498245343333}
+{"event": "command_start", "hostUnixNs": 1793290005712743000, "hostMonotonicNs": 39498291742958, "command": "brake", "value": 0, "phase": "recover60", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290005748614000, "hostMonotonicNs": 39498327613958, "command": "brake", "value": 0, "phase": "recover60", "step": 0, "startHostMonotonicNs": 39498291742958}
+{"event": "command_start", "hostUnixNs": 1793290005748933000, "hostMonotonicNs": 39498327933416, "command": "speed", "value": 18, "phase": "recover60", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290005789053000, "hostMonotonicNs": 39498368054250, "command": "speed", "value": 18, "phase": "recover60", "step": 0, "startHostMonotonicNs": 39498327933416}
+{"event": "command_start", "hostUnixNs": 1793290006164404000, "hostMonotonicNs": 39498743412416, "command": "steer", "value": 60, "phase": "recover60", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290006200767000, "hostMonotonicNs": 39498779776500, "command": "steer", "value": 60, "phase": "recover60", "step": 1, "startHostMonotonicNs": 39498743412416}
+{"event": "command_start", "hostUnixNs": 1793290006201067000, "hostMonotonicNs": 39498780076166, "command": "brake", "value": 0, "phase": "recover60", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290006239113000, "hostMonotonicNs": 39498818122833, "command": "brake", "value": 0, "phase": "recover60", "step": 1, "startHostMonotonicNs": 39498780076166}
+{"event": "command_start", "hostUnixNs": 1793290006239479000, "hostMonotonicNs": 39498818488958, "command": "speed", "value": 18, "phase": "recover60", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290006274921000, "hostMonotonicNs": 39498853931875, "command": "speed", "value": 18, "phase": "recover60", "step": 1, "startHostMonotonicNs": 39498818488958}
+{"event": "command_start", "hostUnixNs": 1793290006669963000, "hostMonotonicNs": 39499248982583, "command": "steer", "value": 60, "phase": "recover60", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290006712742000, "hostMonotonicNs": 39499291761291, "command": "steer", "value": 60, "phase": "recover60", "step": 2, "startHostMonotonicNs": 39499248982583}
+{"event": "command_start", "hostUnixNs": 1793290006713090000, "hostMonotonicNs": 39499292109416, "command": "brake", "value": 0, "phase": "recover60", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290006748737000, "hostMonotonicNs": 39499327756875, "command": "brake", "value": 0, "phase": "recover60", "step": 2, "startHostMonotonicNs": 39499292109416}
+{"event": "command_start", "hostUnixNs": 1793290006749054000, "hostMonotonicNs": 39499328074000, "command": "speed", "value": 18, "phase": "recover60", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290006783568000, "hostMonotonicNs": 39499362588583, "command": "speed", "value": 18, "phase": "recover60", "step": 2, "startHostMonotonicNs": 39499328074000}
+{"event": "command_start", "hostUnixNs": 1793290007167920000, "hostMonotonicNs": 39499746949125, "command": "steer", "value": 60, "phase": "recover60", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290007206362000, "hostMonotonicNs": 39499785390916, "command": "steer", "value": 60, "phase": "recover60", "step": 3, "startHostMonotonicNs": 39499746949125}
+{"event": "command_start", "hostUnixNs": 1793290007206697000, "hostMonotonicNs": 39499785726041, "command": "brake", "value": 0, "phase": "recover60", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290007247780000, "hostMonotonicNs": 39499826809958, "command": "brake", "value": 0, "phase": "recover60", "step": 3, "startHostMonotonicNs": 39499785726041}
+{"event": "command_start", "hostUnixNs": 1793290007248102000, "hostMonotonicNs": 39499827131458, "command": "speed", "value": 18, "phase": "recover60", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290007287659000, "hostMonotonicNs": 39499866689208, "command": "speed", "value": 18, "phase": "recover60", "step": 3, "startHostMonotonicNs": 39499827131458}
+{"event": "command_start", "hostUnixNs": 1793290007662840000, "hostMonotonicNs": 39500241878666, "command": "steer", "value": 60, "phase": "recover60", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290007700666000, "hostMonotonicNs": 39500279704541, "command": "steer", "value": 60, "phase": "recover60", "step": 4, "startHostMonotonicNs": 39500241878666}
+{"event": "command_start", "hostUnixNs": 1793290007700992000, "hostMonotonicNs": 39500280029958, "command": "brake", "value": 0, "phase": "recover60", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290007737970000, "hostMonotonicNs": 39500317009041, "command": "brake", "value": 0, "phase": "recover60", "step": 4, "startHostMonotonicNs": 39500280029958}
+{"event": "command_start", "hostUnixNs": 1793290007738334000, "hostMonotonicNs": 39500317373083, "command": "speed", "value": 18, "phase": "recover60", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290007778885000, "hostMonotonicNs": 39500357924833, "command": "speed", "value": 18, "phase": "recover60", "step": 4, "startHostMonotonicNs": 39500317373083}
+{"event": "command_start", "hostUnixNs": 1793290008169695000, "hostMonotonicNs": 39500748742583, "command": "steer", "value": 60, "phase": "recover60", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290008211678000, "hostMonotonicNs": 39500790726416, "command": "steer", "value": 60, "phase": "recover60", "step": 5, "startHostMonotonicNs": 39500748742583}
+{"event": "command_start", "hostUnixNs": 1793290008212048000, "hostMonotonicNs": 39500791096791, "command": "brake", "value": 0, "phase": "recover60", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290008251022000, "hostMonotonicNs": 39500830071083, "command": "brake", "value": 0, "phase": "recover60", "step": 5, "startHostMonotonicNs": 39500791096791}
+{"event": "command_start", "hostUnixNs": 1793290008251350000, "hostMonotonicNs": 39500830399041, "command": "speed", "value": 18, "phase": "recover60", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290008286363000, "hostMonotonicNs": 39500865412791, "command": "speed", "value": 18, "phase": "recover60", "step": 5, "startHostMonotonicNs": 39500830399041}
+{"event": "command_start", "hostUnixNs": 1793290008669689000, "hostMonotonicNs": 39501248746333, "command": "steer", "value": 60, "phase": "recover60", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290008713381000, "hostMonotonicNs": 39501292439000, "command": "steer", "value": 60, "phase": "recover60", "step": 6, "startHostMonotonicNs": 39501248746333}
+{"event": "command_start", "hostUnixNs": 1793290008713706000, "hostMonotonicNs": 39501292764208, "command": "brake", "value": 0, "phase": "recover60", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290008759613000, "hostMonotonicNs": 39501338673041, "command": "brake", "value": 0, "phase": "recover60", "step": 6, "startHostMonotonicNs": 39501292764208}
+{"event": "command_start", "hostUnixNs": 1793290008760203000, "hostMonotonicNs": 39501339261875, "command": "speed", "value": 18, "phase": "recover60", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290008798273000, "hostMonotonicNs": 39501377333208, "command": "speed", "value": 18, "phase": "recover60", "step": 6, "startHostMonotonicNs": 39501339261875}
+{"event": "command_start", "hostUnixNs": 1793290009162762000, "hostMonotonicNs": 39501741828750, "command": "steer", "value": 60, "phase": "recover60", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290009199127000, "hostMonotonicNs": 39501778194750, "command": "steer", "value": 60, "phase": "recover60", "step": 7, "startHostMonotonicNs": 39501741828750}
+{"event": "command_start", "hostUnixNs": 1793290009199476000, "hostMonotonicNs": 39501778543416, "command": "brake", "value": 0, "phase": "recover60", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290009246655000, "hostMonotonicNs": 39501825723083, "command": "brake", "value": 0, "phase": "recover60", "step": 7, "startHostMonotonicNs": 39501778543416}
+{"event": "command_start", "hostUnixNs": 1793290009246977000, "hostMonotonicNs": 39501826045375, "command": "speed", "value": 18, "phase": "recover60", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290009286503000, "hostMonotonicNs": 39501865571875, "command": "speed", "value": 18, "phase": "recover60", "step": 7, "startHostMonotonicNs": 39501826045375}
+{"event": "command_start", "hostUnixNs": 1793290009665468000, "hostMonotonicNs": 39502244544500, "command": "steer", "value": 60, "phase": "recover60", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793290009705745000, "hostMonotonicNs": 39502284822416, "command": "steer", "value": 60, "phase": "recover60", "step": 8, "startHostMonotonicNs": 39502244544500}
+{"event": "command_start", "hostUnixNs": 1793290009706059000, "hostMonotonicNs": 39502285136875, "command": "brake", "value": 0, "phase": "recover60", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793290009739620000, "hostMonotonicNs": 39502318698250, "command": "brake", "value": 0, "phase": "recover60", "step": 8, "startHostMonotonicNs": 39502285136875}
+{"event": "command_start", "hostUnixNs": 1793290009739973000, "hostMonotonicNs": 39502319051375, "command": "speed", "value": 18, "phase": "recover60", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793290009776613000, "hostMonotonicNs": 39502355692208, "command": "speed", "value": 18, "phase": "recover60", "step": 8, "startHostMonotonicNs": 39502319051375}
+{"event": "command_start", "hostUnixNs": 1793290010171181000, "hostMonotonicNs": 39502750267500, "command": "steer", "value": 60, "phase": "recover60", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290010210558000, "hostMonotonicNs": 39502789645958, "command": "steer", "value": 60, "phase": "recover60", "step": 9, "startHostMonotonicNs": 39502750267500}
+{"event": "command_start", "hostUnixNs": 1793290010210890000, "hostMonotonicNs": 39502789977458, "command": "brake", "value": 0, "phase": "recover60", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290010247654000, "hostMonotonicNs": 39502826741875, "command": "brake", "value": 0, "phase": "recover60", "step": 9, "startHostMonotonicNs": 39502789977458}
+{"event": "command_start", "hostUnixNs": 1793290010247982000, "hostMonotonicNs": 39502827070375, "command": "speed", "value": 18, "phase": "recover60", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290010289058000, "hostMonotonicNs": 39502868147083, "command": "speed", "value": 18, "phase": "recover60", "step": 9, "startHostMonotonicNs": 39502827070375}
+{"event": "command_start", "hostUnixNs": 1793290010662806000, "hostMonotonicNs": 39503241902250, "command": "steer", "value": 60, "phase": "recover60", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290010710933000, "hostMonotonicNs": 39503290030458, "command": "steer", "value": 60, "phase": "recover60", "step": 10, "startHostMonotonicNs": 39503241902250}
+{"event": "command_start", "hostUnixNs": 1793290010711261000, "hostMonotonicNs": 39503290357833, "command": "brake", "value": 0, "phase": "recover60", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290010751716000, "hostMonotonicNs": 39503330814250, "command": "brake", "value": 0, "phase": "recover60", "step": 10, "startHostMonotonicNs": 39503290357833}
+{"event": "command_start", "hostUnixNs": 1793290010752179000, "hostMonotonicNs": 39503331277250, "command": "speed", "value": 18, "phase": "recover60", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290010793357000, "hostMonotonicNs": 39503372455666, "command": "speed", "value": 18, "phase": "recover60", "step": 10, "startHostMonotonicNs": 39503331277250}
+{"event": "command_start", "hostUnixNs": 1793290011160766000, "hostMonotonicNs": 39503739873083, "command": "steer", "value": 60, "phase": "recover60", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290011199812000, "hostMonotonicNs": 39503778918833, "command": "steer", "value": 60, "phase": "recover60", "step": 11, "startHostMonotonicNs": 39503739873083}
+{"event": "command_start", "hostUnixNs": 1793290011200347000, "hostMonotonicNs": 39503779453625, "command": "brake", "value": 0, "phase": "recover60", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290011242038000, "hostMonotonicNs": 39503821145791, "command": "brake", "value": 0, "phase": "recover60", "step": 11, "startHostMonotonicNs": 39503779453625}
+{"event": "command_start", "hostUnixNs": 1793290011242358000, "hostMonotonicNs": 39503821465791, "command": "speed", "value": 18, "phase": "recover60", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290011276841000, "hostMonotonicNs": 39503855948750, "command": "speed", "value": 18, "phase": "recover60", "step": 11, "startHostMonotonicNs": 39503821465791}
+{"event": "phase_start", "hostUnixNs": 1793290011277162000, "hostMonotonicNs": 39503856269666, "phase": "straight"}
+{"event": "command_start", "hostUnixNs": 1793290011662576000, "hostMonotonicNs": 39504241691875, "command": "steer", "value": 0, "phase": "straight", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290011704141000, "hostMonotonicNs": 39504283257416, "command": "steer", "value": 0, "phase": "straight", "step": 0, "startHostMonotonicNs": 39504241691875}
+{"event": "command_start", "hostUnixNs": 1793290011704464000, "hostMonotonicNs": 39504283580250, "command": "brake", "value": 0, "phase": "straight", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290011743403000, "hostMonotonicNs": 39504322519791, "command": "brake", "value": 0, "phase": "straight", "step": 0, "startHostMonotonicNs": 39504283580250}
+{"event": "command_start", "hostUnixNs": 1793290011743719000, "hostMonotonicNs": 39504322836500, "command": "speed", "value": 18, "phase": "straight", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290011775537000, "hostMonotonicNs": 39504354655125, "command": "speed", "value": 18, "phase": "straight", "step": 0, "startHostMonotonicNs": 39504322836500}
+{"event": "command_start", "hostUnixNs": 1793290012163566000, "hostMonotonicNs": 39504742692583, "command": "steer", "value": 0, "phase": "straight", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290012207647000, "hostMonotonicNs": 39504786773750, "command": "steer", "value": 0, "phase": "straight", "step": 1, "startHostMonotonicNs": 39504742692583}
+{"event": "command_start", "hostUnixNs": 1793290012208528000, "hostMonotonicNs": 39504787653833, "command": "brake", "value": 0, "phase": "straight", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290012244499000, "hostMonotonicNs": 39504823627166, "command": "brake", "value": 0, "phase": "straight", "step": 1, "startHostMonotonicNs": 39504787653833}
+{"event": "command_start", "hostUnixNs": 1793290012244838000, "hostMonotonicNs": 39504823965208, "command": "speed", "value": 18, "phase": "straight", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290012282633000, "hostMonotonicNs": 39504861760416, "command": "speed", "value": 18, "phase": "straight", "step": 1, "startHostMonotonicNs": 39504823965208}
+{"event": "command_start", "hostUnixNs": 1793290012664472000, "hostMonotonicNs": 39505243607291, "command": "steer", "value": 0, "phase": "straight", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290012709999000, "hostMonotonicNs": 39505289135083, "command": "steer", "value": 0, "phase": "straight", "step": 2, "startHostMonotonicNs": 39505243607291}
+{"event": "command_start", "hostUnixNs": 1793290012710476000, "hostMonotonicNs": 39505289611958, "command": "brake", "value": 0, "phase": "straight", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290012749420000, "hostMonotonicNs": 39505328556791, "command": "brake", "value": 0, "phase": "straight", "step": 2, "startHostMonotonicNs": 39505289611958}
+{"event": "command_start", "hostUnixNs": 1793290012749720000, "hostMonotonicNs": 39505328856916, "command": "speed", "value": 18, "phase": "straight", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290012784293000, "hostMonotonicNs": 39505363430625, "command": "speed", "value": 18, "phase": "straight", "step": 2, "startHostMonotonicNs": 39505328856916}
+{"event": "command_start", "hostUnixNs": 1793290013166593000, "hostMonotonicNs": 39505745738458, "command": "steer", "value": 0, "phase": "straight", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290013207887000, "hostMonotonicNs": 39505787032916, "command": "steer", "value": 0, "phase": "straight", "step": 3, "startHostMonotonicNs": 39505745738458}
+{"event": "command_start", "hostUnixNs": 1793290013208261000, "hostMonotonicNs": 39505787406750, "command": "brake", "value": 0, "phase": "straight", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290013245350000, "hostMonotonicNs": 39505824496250, "command": "brake", "value": 0, "phase": "straight", "step": 3, "startHostMonotonicNs": 39505787406750}
+{"event": "command_start", "hostUnixNs": 1793290013245698000, "hostMonotonicNs": 39505824844666, "command": "speed", "value": 18, "phase": "straight", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290013286946000, "hostMonotonicNs": 39505866093708, "command": "speed", "value": 18, "phase": "straight", "step": 3, "startHostMonotonicNs": 39505824844666}
+{"event": "phase_start", "hostUnixNs": 1793290013287294000, "hostMonotonicNs": 39505866441750, "phase": "deceleration"}
+{"event": "command_start", "hostUnixNs": 1793290013666658000, "hostMonotonicNs": 39506245813500, "command": "steer", "value": 0, "phase": "deceleration", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290013707676000, "hostMonotonicNs": 39506286831041, "command": "steer", "value": 0, "phase": "deceleration", "step": 0, "startHostMonotonicNs": 39506245813500}
+{"event": "command_start", "hostUnixNs": 1793290013708013000, "hostMonotonicNs": 39506287168416, "command": "brake", "value": 0, "phase": "deceleration", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290013747383000, "hostMonotonicNs": 39506326540041, "command": "brake", "value": 0, "phase": "deceleration", "step": 0, "startHostMonotonicNs": 39506287168416}
+{"event": "command_start", "hostUnixNs": 1793290013747892000, "hostMonotonicNs": 39506327048750, "command": "speed", "value": 17.1, "phase": "deceleration", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290013786686000, "hostMonotonicNs": 39506365842666, "command": "speed", "value": 17.1, "phase": "deceleration", "step": 0, "startHostMonotonicNs": 39506327048750}
+{"event": "command_start", "hostUnixNs": 1793290014168883000, "hostMonotonicNs": 39506748048833, "command": "steer", "value": 0, "phase": "deceleration", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290014207042000, "hostMonotonicNs": 39506786207750, "command": "steer", "value": 0, "phase": "deceleration", "step": 1, "startHostMonotonicNs": 39506748048833}
+{"event": "command_start", "hostUnixNs": 1793290014207362000, "hostMonotonicNs": 39506786527125, "command": "brake", "value": 0, "phase": "deceleration", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290014244457000, "hostMonotonicNs": 39506823622875, "command": "brake", "value": 0, "phase": "deceleration", "step": 1, "startHostMonotonicNs": 39506786527125}
+{"event": "command_start", "hostUnixNs": 1793290014244818000, "hostMonotonicNs": 39506823983583, "command": "speed", "value": 16.2, "phase": "deceleration", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290014277390000, "hostMonotonicNs": 39506856556791, "command": "speed", "value": 16.2, "phase": "deceleration", "step": 1, "startHostMonotonicNs": 39506823983583}
+{"event": "command_start", "hostUnixNs": 1793290014665025000, "hostMonotonicNs": 39507244199000, "command": "steer", "value": 0, "phase": "deceleration", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290014701598000, "hostMonotonicNs": 39507280773041, "command": "steer", "value": 0, "phase": "deceleration", "step": 2, "startHostMonotonicNs": 39507244199000}
+{"event": "command_start", "hostUnixNs": 1793290014701877000, "hostMonotonicNs": 39507281051958, "command": "brake", "value": 0, "phase": "deceleration", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290014747329000, "hostMonotonicNs": 39507326504500, "command": "brake", "value": 0, "phase": "deceleration", "step": 2, "startHostMonotonicNs": 39507281051958}
+{"event": "command_start", "hostUnixNs": 1793290014747744000, "hostMonotonicNs": 39507326919625, "command": "speed", "value": 15.3, "phase": "deceleration", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290014790611000, "hostMonotonicNs": 39507369787208, "command": "speed", "value": 15.3, "phase": "deceleration", "step": 2, "startHostMonotonicNs": 39507326919625}
+{"event": "command_start", "hostUnixNs": 1793290015162748000, "hostMonotonicNs": 39507741931500, "command": "steer", "value": 0, "phase": "deceleration", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290015205874000, "hostMonotonicNs": 39507785059291, "command": "steer", "value": 0, "phase": "deceleration", "step": 3, "startHostMonotonicNs": 39507741931500}
+{"event": "command_start", "hostUnixNs": 1793290015206230000, "hostMonotonicNs": 39507785414541, "command": "brake", "value": 0, "phase": "deceleration", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290015248477000, "hostMonotonicNs": 39507827662500, "command": "brake", "value": 0, "phase": "deceleration", "step": 3, "startHostMonotonicNs": 39507785414541}
+{"event": "command_start", "hostUnixNs": 1793290015248810000, "hostMonotonicNs": 39507827995958, "command": "speed", "value": 14.4, "phase": "deceleration", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290015284688000, "hostMonotonicNs": 39507863874000, "command": "speed", "value": 14.4, "phase": "deceleration", "step": 3, "startHostMonotonicNs": 39507827995958}
+{"event": "command_start", "hostUnixNs": 1793290015668513000, "hostMonotonicNs": 39508247706666, "command": "steer", "value": 0, "phase": "deceleration", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290015712393000, "hostMonotonicNs": 39508291587958, "command": "steer", "value": 0, "phase": "deceleration", "step": 4, "startHostMonotonicNs": 39508247706666}
+{"event": "command_start", "hostUnixNs": 1793290015712719000, "hostMonotonicNs": 39508291913375, "command": "brake", "value": 0, "phase": "deceleration", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290015757701000, "hostMonotonicNs": 39508336896333, "command": "brake", "value": 0, "phase": "deceleration", "step": 4, "startHostMonotonicNs": 39508291913375}
+{"event": "command_start", "hostUnixNs": 1793290015758094000, "hostMonotonicNs": 39508337289958, "command": "speed", "value": 13.5, "phase": "deceleration", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290015796493000, "hostMonotonicNs": 39508375689125, "command": "speed", "value": 13.5, "phase": "deceleration", "step": 4, "startHostMonotonicNs": 39508337289958}
+{"event": "command_start", "hostUnixNs": 1793290016168520000, "hostMonotonicNs": 39508747724375, "command": "steer", "value": 0, "phase": "deceleration", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290016210101000, "hostMonotonicNs": 39508789305125, "command": "steer", "value": 0, "phase": "deceleration", "step": 5, "startHostMonotonicNs": 39508747724375}
+{"event": "command_start", "hostUnixNs": 1793290016210473000, "hostMonotonicNs": 39508789677125, "command": "brake", "value": 0, "phase": "deceleration", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290016248087000, "hostMonotonicNs": 39508827292041, "command": "brake", "value": 0, "phase": "deceleration", "step": 5, "startHostMonotonicNs": 39508789677125}
+{"event": "command_start", "hostUnixNs": 1793290016248449000, "hostMonotonicNs": 39508827654416, "command": "speed", "value": 12.6, "phase": "deceleration", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290016281089000, "hostMonotonicNs": 39508860296833, "command": "speed", "value": 12.6, "phase": "deceleration", "step": 5, "startHostMonotonicNs": 39508827654416}
+{"event": "command_start", "hostUnixNs": 1793290016665780000, "hostMonotonicNs": 39509244993916, "command": "steer", "value": 0, "phase": "deceleration", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290016711973000, "hostMonotonicNs": 39509291187000, "command": "steer", "value": 0, "phase": "deceleration", "step": 6, "startHostMonotonicNs": 39509244993916}
+{"event": "command_start", "hostUnixNs": 1793290016712285000, "hostMonotonicNs": 39509291498708, "command": "brake", "value": 0, "phase": "deceleration", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290016756931000, "hostMonotonicNs": 39509336146541, "command": "brake", "value": 0, "phase": "deceleration", "step": 6, "startHostMonotonicNs": 39509291498708}
+{"event": "command_start", "hostUnixNs": 1793290016757315000, "hostMonotonicNs": 39509336529916, "command": "speed", "value": 11.700000000000001, "phase": "deceleration", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290016797254000, "hostMonotonicNs": 39509376469666, "command": "speed", "value": 11.700000000000001, "phase": "deceleration", "step": 6, "startHostMonotonicNs": 39509336529916}
+{"event": "command_start", "hostUnixNs": 1793290017163073000, "hostMonotonicNs": 39509742295791, "command": "steer", "value": 0, "phase": "deceleration", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290017202779000, "hostMonotonicNs": 39509782002833, "command": "steer", "value": 0, "phase": "deceleration", "step": 7, "startHostMonotonicNs": 39509742295791}
+{"event": "command_start", "hostUnixNs": 1793290017203098000, "hostMonotonicNs": 39509782321416, "command": "brake", "value": 0, "phase": "deceleration", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290017240040000, "hostMonotonicNs": 39509819264500, "command": "brake", "value": 0, "phase": "deceleration", "step": 7, "startHostMonotonicNs": 39509782321416}
+{"event": "command_start", "hostUnixNs": 1793290017240630000, "hostMonotonicNs": 39509819854833, "command": "speed", "value": 10.8, "phase": "deceleration", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290017277185000, "hostMonotonicNs": 39509856410583, "command": "speed", "value": 10.8, "phase": "deceleration", "step": 7, "startHostMonotonicNs": 39509819854833}
+{"event": "command_start", "hostUnixNs": 1793290017668240000, "hostMonotonicNs": 39510247472583, "command": "steer", "value": 0, "phase": "deceleration", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793290017711322000, "hostMonotonicNs": 39510290555083, "command": "steer", "value": 0, "phase": "deceleration", "step": 8, "startHostMonotonicNs": 39510247472583}
+{"event": "command_start", "hostUnixNs": 1793290017711644000, "hostMonotonicNs": 39510290877125, "command": "brake", "value": 0, "phase": "deceleration", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793290017751543000, "hostMonotonicNs": 39510330777833, "command": "brake", "value": 0, "phase": "deceleration", "step": 8, "startHostMonotonicNs": 39510290877125}
+{"event": "command_start", "hostUnixNs": 1793290017751864000, "hostMonotonicNs": 39510331098708, "command": "speed", "value": 9.9, "phase": "deceleration", "step": 8}
+{"event": "command_done", "hostUnixNs": 1793290017784882000, "hostMonotonicNs": 39510364116708, "command": "speed", "value": 9.9, "phase": "deceleration", "step": 8, "startHostMonotonicNs": 39510331098708}
+{"event": "command_start", "hostUnixNs": 1793290018165708000, "hostMonotonicNs": 39510744951791, "command": "steer", "value": 0, "phase": "deceleration", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290018197356000, "hostMonotonicNs": 39510776599250, "command": "steer", "value": 0, "phase": "deceleration", "step": 9, "startHostMonotonicNs": 39510744951791}
+{"event": "command_start", "hostUnixNs": 1793290018197751000, "hostMonotonicNs": 39510776993875, "command": "brake", "value": 0, "phase": "deceleration", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290018236066000, "hostMonotonicNs": 39510815309416, "command": "brake", "value": 0, "phase": "deceleration", "step": 9, "startHostMonotonicNs": 39510776993875}
+{"event": "command_start", "hostUnixNs": 1793290018236486000, "hostMonotonicNs": 39510815729625, "command": "speed", "value": 9.0, "phase": "deceleration", "step": 9}
+{"event": "command_done", "hostUnixNs": 1793290018292110000, "hostMonotonicNs": 39510871355208, "command": "speed", "value": 9.0, "phase": "deceleration", "step": 9, "startHostMonotonicNs": 39510815729625}
+{"event": "command_start", "hostUnixNs": 1793290018662993000, "hostMonotonicNs": 39511242245916, "command": "steer", "value": 0, "phase": "deceleration", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290018698535000, "hostMonotonicNs": 39511277787958, "command": "steer", "value": 0, "phase": "deceleration", "step": 10, "startHostMonotonicNs": 39511242245916}
+{"event": "command_start", "hostUnixNs": 1793290018698850000, "hostMonotonicNs": 39511278102666, "command": "brake", "value": 0, "phase": "deceleration", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290018741821000, "hostMonotonicNs": 39511321075041, "command": "brake", "value": 0, "phase": "deceleration", "step": 10, "startHostMonotonicNs": 39511278102666}
+{"event": "command_start", "hostUnixNs": 1793290018742260000, "hostMonotonicNs": 39511321514041, "command": "speed", "value": 8.1, "phase": "deceleration", "step": 10}
+{"event": "command_done", "hostUnixNs": 1793290018777908000, "hostMonotonicNs": 39511357162625, "command": "speed", "value": 8.1, "phase": "deceleration", "step": 10, "startHostMonotonicNs": 39511321514041}
+{"event": "command_start", "hostUnixNs": 1793290019169337000, "hostMonotonicNs": 39511748600000, "command": "steer", "value": 0, "phase": "deceleration", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290019215102000, "hostMonotonicNs": 39511794364958, "command": "steer", "value": 0, "phase": "deceleration", "step": 11, "startHostMonotonicNs": 39511748600000}
+{"event": "command_start", "hostUnixNs": 1793290019215501000, "hostMonotonicNs": 39511794763666, "command": "brake", "value": 0, "phase": "deceleration", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290019252986000, "hostMonotonicNs": 39511832249708, "command": "brake", "value": 0, "phase": "deceleration", "step": 11, "startHostMonotonicNs": 39511794763666}
+{"event": "command_start", "hostUnixNs": 1793290019253302000, "hostMonotonicNs": 39511832565583, "command": "speed", "value": 7.2, "phase": "deceleration", "step": 11}
+{"event": "command_done", "hostUnixNs": 1793290019300343000, "hostMonotonicNs": 39511879607208, "command": "speed", "value": 7.2, "phase": "deceleration", "step": 11, "startHostMonotonicNs": 39511832565583}
+{"event": "command_start", "hostUnixNs": 1793290019662242000, "hostMonotonicNs": 39512241516208, "command": "steer", "value": 0, "phase": "deceleration", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793290019710077000, "hostMonotonicNs": 39512289349250, "command": "steer", "value": 0, "phase": "deceleration", "step": 12, "startHostMonotonicNs": 39512241516208}
+{"event": "command_start", "hostUnixNs": 1793290019710389000, "hostMonotonicNs": 39512289661708, "command": "brake", "value": 0, "phase": "deceleration", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793290019749832000, "hostMonotonicNs": 39512329105750, "command": "brake", "value": 0, "phase": "deceleration", "step": 12, "startHostMonotonicNs": 39512289661708}
+{"event": "command_start", "hostUnixNs": 1793290019750185000, "hostMonotonicNs": 39512329458291, "command": "speed", "value": 6.3, "phase": "deceleration", "step": 12}
+{"event": "command_done", "hostUnixNs": 1793290019790017000, "hostMonotonicNs": 39512369290666, "command": "speed", "value": 6.3, "phase": "deceleration", "step": 12, "startHostMonotonicNs": 39512329458291}
+{"event": "command_start", "hostUnixNs": 1793290020168365000, "hostMonotonicNs": 39512747646750, "command": "steer", "value": 0, "phase": "deceleration", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793290020207021000, "hostMonotonicNs": 39512786302875, "command": "steer", "value": 0, "phase": "deceleration", "step": 13, "startHostMonotonicNs": 39512747646750}
+{"event": "command_start", "hostUnixNs": 1793290020207344000, "hostMonotonicNs": 39512786625958, "command": "brake", "value": 0, "phase": "deceleration", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793290020252736000, "hostMonotonicNs": 39512832018708, "command": "brake", "value": 0, "phase": "deceleration", "step": 13, "startHostMonotonicNs": 39512786625958}
+{"event": "command_start", "hostUnixNs": 1793290020253059000, "hostMonotonicNs": 39512832342416, "command": "speed", "value": 5.4, "phase": "deceleration", "step": 13}
+{"event": "command_done", "hostUnixNs": 1793290020302546000, "hostMonotonicNs": 39512881830500, "command": "speed", "value": 5.4, "phase": "deceleration", "step": 13, "startHostMonotonicNs": 39512832342416}
+{"event": "command_start", "hostUnixNs": 1793290020662087000, "hostMonotonicNs": 39513241379583, "command": "steer", "value": 0, "phase": "deceleration", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793290020702026000, "hostMonotonicNs": 39513281318000, "command": "steer", "value": 0, "phase": "deceleration", "step": 14, "startHostMonotonicNs": 39513241379583}
+{"event": "command_start", "hostUnixNs": 1793290020702348000, "hostMonotonicNs": 39513281639708, "command": "brake", "value": 0, "phase": "deceleration", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793290020737497000, "hostMonotonicNs": 39513316790041, "command": "brake", "value": 0, "phase": "deceleration", "step": 14, "startHostMonotonicNs": 39513281639708}
+{"event": "command_start", "hostUnixNs": 1793290020737874000, "hostMonotonicNs": 39513317167041, "command": "speed", "value": 4.5, "phase": "deceleration", "step": 14}
+{"event": "command_done", "hostUnixNs": 1793290020779188000, "hostMonotonicNs": 39513358481583, "command": "speed", "value": 4.5, "phase": "deceleration", "step": 14, "startHostMonotonicNs": 39513317167041}
+{"event": "command_start", "hostUnixNs": 1793290021167688000, "hostMonotonicNs": 39513746989708, "command": "steer", "value": 0, "phase": "deceleration", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793290021209515000, "hostMonotonicNs": 39513788816625, "command": "steer", "value": 0, "phase": "deceleration", "step": 15, "startHostMonotonicNs": 39513746989708}
+{"event": "command_start", "hostUnixNs": 1793290021209839000, "hostMonotonicNs": 39513789140541, "command": "brake", "value": 0, "phase": "deceleration", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793290021248000000, "hostMonotonicNs": 39513827302791, "command": "brake", "value": 0, "phase": "deceleration", "step": 15, "startHostMonotonicNs": 39513789140541}
+{"event": "command_start", "hostUnixNs": 1793290021248325000, "hostMonotonicNs": 39513827627708, "command": "speed", "value": 3.6, "phase": "deceleration", "step": 15}
+{"event": "command_done", "hostUnixNs": 1793290021283669000, "hostMonotonicNs": 39513862972500, "command": "speed", "value": 3.6, "phase": "deceleration", "step": 15, "startHostMonotonicNs": 39513827627708}
+{"event": "command_start", "hostUnixNs": 1793290021668646000, "hostMonotonicNs": 39514247957625, "command": "steer", "value": 0, "phase": "deceleration", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793290021716671000, "hostMonotonicNs": 39514295982291, "command": "steer", "value": 0, "phase": "deceleration", "step": 16, "startHostMonotonicNs": 39514247957625}
+{"event": "command_start", "hostUnixNs": 1793290021717014000, "hostMonotonicNs": 39514296325666, "command": "brake", "value": 0, "phase": "deceleration", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793290021750635000, "hostMonotonicNs": 39514329947666, "command": "brake", "value": 0, "phase": "deceleration", "step": 16, "startHostMonotonicNs": 39514296325666}
+{"event": "command_start", "hostUnixNs": 1793290021750981000, "hostMonotonicNs": 39514330292916, "command": "speed", "value": 2.7, "phase": "deceleration", "step": 16}
+{"event": "command_done", "hostUnixNs": 1793290021790917000, "hostMonotonicNs": 39514370229666, "command": "speed", "value": 2.7, "phase": "deceleration", "step": 16, "startHostMonotonicNs": 39514330292916}
+{"event": "command_start", "hostUnixNs": 1793290022169250000, "hostMonotonicNs": 39514748571541, "command": "steer", "value": 0, "phase": "deceleration", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793290022209119000, "hostMonotonicNs": 39514788440041, "command": "steer", "value": 0, "phase": "deceleration", "step": 17, "startHostMonotonicNs": 39514748571541}
+{"event": "command_start", "hostUnixNs": 1793290022209465000, "hostMonotonicNs": 39514788786208, "command": "brake", "value": 0, "phase": "deceleration", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793290022252247000, "hostMonotonicNs": 39514831568625, "command": "brake", "value": 0, "phase": "deceleration", "step": 17, "startHostMonotonicNs": 39514788786208}
+{"event": "command_start", "hostUnixNs": 1793290022252600000, "hostMonotonicNs": 39514831922458, "command": "speed", "value": 1.8, "phase": "deceleration", "step": 17}
+{"event": "command_done", "hostUnixNs": 1793290022290652000, "hostMonotonicNs": 39514869974541, "command": "speed", "value": 1.8, "phase": "deceleration", "step": 17, "startHostMonotonicNs": 39514831922458}
+{"event": "command_start", "hostUnixNs": 1793290022661973000, "hostMonotonicNs": 39515241303958, "command": "steer", "value": 0, "phase": "deceleration", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793290022708973000, "hostMonotonicNs": 39515288303791, "command": "steer", "value": 0, "phase": "deceleration", "step": 18, "startHostMonotonicNs": 39515241303958}
+{"event": "command_start", "hostUnixNs": 1793290022709345000, "hostMonotonicNs": 39515288675750, "command": "brake", "value": 0, "phase": "deceleration", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793290022743056000, "hostMonotonicNs": 39515322388000, "command": "brake", "value": 0, "phase": "deceleration", "step": 18, "startHostMonotonicNs": 39515288675750}
+{"event": "command_start", "hostUnixNs": 1793290022743392000, "hostMonotonicNs": 39515322724000, "command": "speed", "value": 0.9, "phase": "deceleration", "step": 18}
+{"event": "command_done", "hostUnixNs": 1793290022784639000, "hostMonotonicNs": 39515363971708, "command": "speed", "value": 0.9, "phase": "deceleration", "step": 18, "startHostMonotonicNs": 39515322724000}
+{"event": "command_start", "hostUnixNs": 1793290023165723000, "hostMonotonicNs": 39515745064458, "command": "steer", "value": 0, "phase": "deceleration", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793290023215019000, "hostMonotonicNs": 39515794361000, "command": "steer", "value": 0, "phase": "deceleration", "step": 19, "startHostMonotonicNs": 39515745064458}
+{"event": "command_start", "hostUnixNs": 1793290023215377000, "hostMonotonicNs": 39515794718041, "command": "brake", "value": 0, "phase": "deceleration", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793290023252666000, "hostMonotonicNs": 39515832007750, "command": "brake", "value": 0, "phase": "deceleration", "step": 19, "startHostMonotonicNs": 39515794718041}
+{"event": "command_start", "hostUnixNs": 1793290023253002000, "hostMonotonicNs": 39515832343875, "command": "speed", "value": 0.0, "phase": "deceleration", "step": 19}
+{"event": "command_done", "hostUnixNs": 1793290023291256000, "hostMonotonicNs": 39515870599041, "command": "speed", "value": 0.0, "phase": "deceleration", "step": 19, "startHostMonotonicNs": 39515832343875}
+{"event": "phase_start", "hostUnixNs": 1793290023291732000, "hostMonotonicNs": 39515871074041, "phase": "stop"}
+{"event": "command_start", "hostUnixNs": 1793290023663056000, "hostMonotonicNs": 39516242405625, "command": "steer", "value": 0, "phase": "stop", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290023704544000, "hostMonotonicNs": 39516283894083, "command": "steer", "value": 0, "phase": "stop", "step": 0, "startHostMonotonicNs": 39516242405625}
+{"event": "command_start", "hostUnixNs": 1793290023704906000, "hostMonotonicNs": 39516284256958, "command": "brake", "value": 0, "phase": "stop", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290023739320000, "hostMonotonicNs": 39516318671583, "command": "brake", "value": 0, "phase": "stop", "step": 0, "startHostMonotonicNs": 39516284256958}
+{"event": "command_start", "hostUnixNs": 1793290023739819000, "hostMonotonicNs": 39516319170500, "command": "speed", "value": 0, "phase": "stop", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290023777530000, "hostMonotonicNs": 39516356881958, "command": "speed", "value": 0, "phase": "stop", "step": 0, "startHostMonotonicNs": 39516319170500}
+{"event": "command_start", "hostUnixNs": 1793290024166831000, "hostMonotonicNs": 39516746190708, "command": "steer", "value": 0, "phase": "stop", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290024213028000, "hostMonotonicNs": 39516792388125, "command": "steer", "value": 0, "phase": "stop", "step": 1, "startHostMonotonicNs": 39516746190708}
+{"event": "command_start", "hostUnixNs": 1793290024213350000, "hostMonotonicNs": 39516792710541, "command": "brake", "value": 0, "phase": "stop", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290024252117000, "hostMonotonicNs": 39516831478166, "command": "brake", "value": 0, "phase": "stop", "step": 1, "startHostMonotonicNs": 39516792710541}
+{"event": "command_start", "hostUnixNs": 1793290024252487000, "hostMonotonicNs": 39516831848375, "command": "speed", "value": 0, "phase": "stop", "step": 1}
+{"event": "command_done", "hostUnixNs": 1793290024287570000, "hostMonotonicNs": 39516866931958, "command": "speed", "value": 0, "phase": "stop", "step": 1, "startHostMonotonicNs": 39516831848375}
+{"event": "command_start", "hostUnixNs": 1793290024665839000, "hostMonotonicNs": 39517245208375, "command": "steer", "value": 0, "phase": "stop", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290024705949000, "hostMonotonicNs": 39517285318583, "command": "steer", "value": 0, "phase": "stop", "step": 2, "startHostMonotonicNs": 39517245208375}
+{"event": "command_start", "hostUnixNs": 1793290024706279000, "hostMonotonicNs": 39517285648583, "command": "brake", "value": 0, "phase": "stop", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290024742899000, "hostMonotonicNs": 39517322269458, "command": "brake", "value": 0, "phase": "stop", "step": 2, "startHostMonotonicNs": 39517285648583}
+{"event": "command_start", "hostUnixNs": 1793290024743234000, "hostMonotonicNs": 39517322604541, "command": "speed", "value": 0, "phase": "stop", "step": 2}
+{"event": "command_done", "hostUnixNs": 1793290024783377000, "hostMonotonicNs": 39517362748875, "command": "speed", "value": 0, "phase": "stop", "step": 2, "startHostMonotonicNs": 39517322604541}
+{"event": "command_start", "hostUnixNs": 1793290025168312000, "hostMonotonicNs": 39517747693833, "command": "steer", "value": 0, "phase": "stop", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290025213271000, "hostMonotonicNs": 39517792650833, "command": "steer", "value": 0, "phase": "stop", "step": 3, "startHostMonotonicNs": 39517747693833}
+{"event": "command_start", "hostUnixNs": 1793290025213631000, "hostMonotonicNs": 39517793011250, "command": "brake", "value": 0, "phase": "stop", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290025255323000, "hostMonotonicNs": 39517834704166, "command": "brake", "value": 0, "phase": "stop", "step": 3, "startHostMonotonicNs": 39517793011250}
+{"event": "command_start", "hostUnixNs": 1793290025255690000, "hostMonotonicNs": 39517835070666, "command": "speed", "value": 0, "phase": "stop", "step": 3}
+{"event": "command_done", "hostUnixNs": 1793290025296897000, "hostMonotonicNs": 39517876278625, "command": "speed", "value": 0, "phase": "stop", "step": 3, "startHostMonotonicNs": 39517835070666}
+{"event": "command_start", "hostUnixNs": 1793290025664593000, "hostMonotonicNs": 39518243981833, "command": "steer", "value": 0, "phase": "stop", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290025708654000, "hostMonotonicNs": 39518288043541, "command": "steer", "value": 0, "phase": "stop", "step": 4, "startHostMonotonicNs": 39518243981833}
+{"event": "command_start", "hostUnixNs": 1793290025709046000, "hostMonotonicNs": 39518288435666, "command": "brake", "value": 0, "phase": "stop", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290025745897000, "hostMonotonicNs": 39518325287416, "command": "brake", "value": 0, "phase": "stop", "step": 4, "startHostMonotonicNs": 39518288435666}
+{"event": "command_start", "hostUnixNs": 1793290025746230000, "hostMonotonicNs": 39518325620041, "command": "speed", "value": 0, "phase": "stop", "step": 4}
+{"event": "command_done", "hostUnixNs": 1793290025784773000, "hostMonotonicNs": 39518364164291, "command": "speed", "value": 0, "phase": "stop", "step": 4, "startHostMonotonicNs": 39518325620041}
+{"event": "command_start", "hostUnixNs": 1793290026166234000, "hostMonotonicNs": 39518745633083, "command": "steer", "value": 0, "phase": "stop", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290026199444000, "hostMonotonicNs": 39518778843041, "command": "steer", "value": 0, "phase": "stop", "step": 5, "startHostMonotonicNs": 39518745633083}
+{"event": "command_start", "hostUnixNs": 1793290026199831000, "hostMonotonicNs": 39518779230083, "command": "brake", "value": 0, "phase": "stop", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290026242768000, "hostMonotonicNs": 39518822168291, "command": "brake", "value": 0, "phase": "stop", "step": 5, "startHostMonotonicNs": 39518779230083}
+{"event": "command_start", "hostUnixNs": 1793290026243111000, "hostMonotonicNs": 39518822511250, "command": "speed", "value": 0, "phase": "stop", "step": 5}
+{"event": "command_done", "hostUnixNs": 1793290026283155000, "hostMonotonicNs": 39518862556083, "command": "speed", "value": 0, "phase": "stop", "step": 5, "startHostMonotonicNs": 39518822511250}
+{"event": "command_start", "hostUnixNs": 1793290026669322000, "hostMonotonicNs": 39519248730041, "command": "steer", "value": 0, "phase": "stop", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290026705556000, "hostMonotonicNs": 39519284964541, "command": "steer", "value": 0, "phase": "stop", "step": 6, "startHostMonotonicNs": 39519248730041}
+{"event": "command_start", "hostUnixNs": 1793290026706001000, "hostMonotonicNs": 39519285411375, "command": "brake", "value": 0, "phase": "stop", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290026744180000, "hostMonotonicNs": 39519323590000, "command": "brake", "value": 0, "phase": "stop", "step": 6, "startHostMonotonicNs": 39519285411375}
+{"event": "command_start", "hostUnixNs": 1793290026744511000, "hostMonotonicNs": 39519323920208, "command": "speed", "value": 0, "phase": "stop", "step": 6}
+{"event": "command_done", "hostUnixNs": 1793290026787849000, "hostMonotonicNs": 39519367259250, "command": "speed", "value": 0, "phase": "stop", "step": 6, "startHostMonotonicNs": 39519323920208}
+{"event": "command_start", "hostUnixNs": 1793290027166297000, "hostMonotonicNs": 39519745715291, "command": "steer", "value": 0, "phase": "stop", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290027202895000, "hostMonotonicNs": 39519782313416, "command": "steer", "value": 0, "phase": "stop", "step": 7, "startHostMonotonicNs": 39519745715291}
+{"event": "command_start", "hostUnixNs": 1793290027203218000, "hostMonotonicNs": 39519782636875, "command": "brake", "value": 0, "phase": "stop", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290027255367000, "hostMonotonicNs": 39519834787166, "command": "brake", "value": 0, "phase": "stop", "step": 7, "startHostMonotonicNs": 39519782636875}
+{"event": "command_start", "hostUnixNs": 1793290027255712000, "hostMonotonicNs": 39519835131375, "command": "speed", "value": 0, "phase": "stop", "step": 7}
+{"event": "command_done", "hostUnixNs": 1793290027295424000, "hostMonotonicNs": 39519874844458, "command": "speed", "value": 0, "phase": "stop", "step": 7, "startHostMonotonicNs": 39519835131375}
+{"event": "command_start", "hostUnixNs": 1793290027695930000, "hostMonotonicNs": 39520275358250, "command": "steer", "value": 0, "phase": "park", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290027866599000, "hostMonotonicNs": 39520446030708, "command": "steer", "value": 0, "phase": "park", "step": 0, "startHostMonotonicNs": 39520275358250}
+{"event": "command_start", "hostUnixNs": 1793290027867037000, "hostMonotonicNs": 39520446468666, "command": "brake", "value": 0, "phase": "park", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290027909663000, "hostMonotonicNs": 39520489095125, "command": "brake", "value": 0, "phase": "park", "step": 0, "startHostMonotonicNs": 39520446468666}
+{"event": "command_start", "hostUnixNs": 1793290027910007000, "hostMonotonicNs": 39520489439083, "command": "speed", "value": 0, "phase": "park", "step": 0}
+{"event": "command_done", "hostUnixNs": 1793290027951364000, "hostMonotonicNs": 39520530797458, "command": "speed", "value": 0, "phase": "park", "step": 0, "startHostMonotonicNs": 39520489439083}
+{"event": "command_start", "hostUnixNs": 1793290027962157000, "hostMonotonicNs": 39520541592416, "command": "navi", "value": "arrived", "phase": "setup", "step": null}
+{"event": "execution_error", "hostUnixNs": 1793290033968577000, "hostMonotonicNs": 39526548128250, "error": "Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'am', 'broadcast', '-n', 'ai.vipseat.cargoconcierge/.demo.DemoBroadcastReceiver', '-a', 'ai.vipseat.cargoconcierge.DEMO', '--es', 'cmd', 'navi', '--es', 'value', 'arrived']' timed out after 6 seconds"}
+{"event": "command_start", "hostUnixNs": 1793290034020492000, "hostMonotonicNs": 39526600043666, "command": "end", "value": null, "phase": "cleanup", "step": null}
+{"event": "command_start", "hostUnixNs": 1793290040028975000, "hostMonotonicNs": 39532608644625, "command": "ack", "value": null, "phase": "cleanup", "step": null}
+{"event": "command_start", "hostUnixNs": 1793290046038767000, "hostMonotonicNs": 39538618552791, "command": "steer", "value": 0, "phase": "cleanup", "step": 0}
+{"event": "command_start", "hostUnixNs": 1793290052043829000, "hostMonotonicNs": 39544623732666, "command": "settings", "value": "on", "phase": "setup", "step": null}

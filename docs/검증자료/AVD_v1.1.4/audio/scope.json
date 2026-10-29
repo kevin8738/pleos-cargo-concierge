@@ -1,0 +1,35 @@
+{
+  "capture_seconds": 15,
+  "cases": [
+    [
+      "tts_on_chime_off",
+      true,
+      false
+    ],
+    [
+      "tts_off_chime_off",
+      false,
+      false
+    ],
+    [
+      "tts_off_chime_on",
+      false,
+      true
+    ],
+    [
+      "both_off_chime_control",
+      false,
+      false
+    ]
+  ],
+  "trigger": "COFFEE select for all four; end has no success chime in current source",
+  "excluded": [
+    "microphone",
+    "STT",
+    "host audio",
+    "external media",
+    "actual HVAC mutation",
+    "AVD restart"
+  ],
+  "wav_interpretation": "Concatenated received packets, not continuous wall-time audio; raw packet bytes/timestamps retained."
+}

@@ -1,0 +1,6 @@
+  *APP* UID 1010175 ProcessRecord{3048234 26822:ai.vipseat.cargoconcierge/u10a175}
+    pid=26822
+    curProcState=2 mRepProcState=2 setProcState=2 lastStateTime=-7m21s4ms
+    cached=false empty=false
+    foregroundActivities=true (rep=true)
+    hasPendingCompaction=false    isFreezeExempt=false isPendingFreeze=false isFrozen=false

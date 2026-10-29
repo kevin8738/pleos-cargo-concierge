@@ -1,0 +1,13 @@
+{
+  "event": "runtime_snapshot",
+  "hostUnixNs": 1793291384104965000,
+  "hostMonotonicNs": 40876710863416,
+  "label": "guard-start_0",
+  "pid": "8300",
+  "isFrozen": false,
+  "servicePresent": true,
+  "foregroundService": true,
+  "serviceTypeMask": 1073741824,
+  "foregroundIdCorrect": true,
+  "activeNotificationCount": 0
+}

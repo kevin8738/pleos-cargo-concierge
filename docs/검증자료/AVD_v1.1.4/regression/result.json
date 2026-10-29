@@ -1,0 +1,34 @@
+{
+  "hypothesis": "Completed Job.join returns inline while completion removal is queued on the same dispatcher; repeated joins starve the queue and timeout.",
+  "external_evidence": "known-boundary-diagnosis-01/dropbox-own-anr-0.txt PID 12526 main Runnable in JobSupport.join/CargoSession finishAfterCabinWork",
+  "red": {
+    "tests": 1,
+    "failures": 1,
+    "expected": "test-only spin detector while actual TestDispatcher removal remains queued"
+  },
+  "green": [
+    {
+      "name": "ai.vipseat.cargoconcierge.runtime.CabinWorkDrainTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "ai.vipseat.cargoconcierge.runtime.GuardStartGateTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "production_change": "Join a snapshot of cabin jobs and remove that completed batch directly before taking the next batch.",
+  "unchanged": [
+    "15 second timeout",
+    "cabin command serialization and restore policy",
+    "pending handling after cancellation",
+    "service release only after drain result"
+  ],
+  "scope": "JVM scheduler regression and existing start gate tests; no APK/install/AVD work",
+  "test_command": "JAVA_HOME=<installed JDK17> app/gradlew -p app --offline --console=plain -PincludePleos=false :app:testMockDebugUnitTest --tests ai.vipseat.cargoconcierge.runtime.CabinWorkDrainTest --tests ai.vipseat.cargoconcierge.runtime.GuardStartGateTest"
+}

@@ -1,0 +1,45 @@
+{
+  "expected_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "before": {
+    "host_unix_ns": 1793290753793012000,
+    "host_monotonic_ns": 40246386622791,
+    "host_utc": "2026-10-29T16:19:13.793025+00:00",
+    "installed_base_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "apk_bytes": 47871331,
+    "versionName": "1.1.4-pleos",
+    "versionCode": 7,
+    "product": "crp_avd_arm64",
+    "sdk": "34",
+    "pid": "26822",
+    "matches_expected_candidate": true
+  },
+  "after": {
+    "host_unix_ns": 1793290905338947000,
+    "host_monotonic_ns": 40397935511000,
+    "host_utc": "2026-10-29T16:21:45.338952+00:00",
+    "installed_base_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "apk_bytes": 47871331,
+    "versionName": "1.1.4-pleos",
+    "versionCode": 7,
+    "product": "crp_avd_arm64",
+    "sdk": "34",
+    "pid": "26822",
+    "matches_expected_candidate": true
+  },
+  "identity_verification": "PASS",
+  "same_process": true,
+  "capture_exit_code": 0,
+  "wrapper_error_type": null,
+  "after_measurement_error_type": null,
+  "host_input_allowed": false,
+  "emulator_audio_enabled": true,
+  "limits": [
+    "COFFEE selection only; TTS-only, chime-only and two both-off controls.",
+    "Both-on and competing navigation/media audio are not exercised.",
+    "PCM/WAV concatenate received packets; duration is not continuous wall time or utterance duration.",
+    "Output contrast does not establish speech intelligibility, physical speaker output, vehicle effects or driver burden.",
+    "Intermittent focus snapshots do not exclude short focus transitions.",
+    "TTS_ERROR=0 refers only to the filtered app log, not every service.",
+    "No microphone, STT, host audio input, HVAC command, AVD restart or app reinstall."
+  ]
+}

@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
     private val graph by lazy { CargoApp.graph(this) }
     private val viewModel: CargoViewModel by viewModels { CargoViewModel.Factory(graph) }
 
-    private val permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { }
+    private val permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { graph.session.refreshLocationAccess() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +31,11 @@ class MainActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         graph.uxMonitor.start()
+        graph.session.setUiVisible(true)
     }
 
     override fun onStop() {
+        graph.session.setUiVisible(false)
         graph.uxMonitor.stop()
         super.onStop()
     }

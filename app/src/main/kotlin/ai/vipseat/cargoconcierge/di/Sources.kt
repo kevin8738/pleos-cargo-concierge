@@ -17,6 +17,10 @@ data class Sources(
     /** Runtime permissions the Activity should request on start. */
     val runtimePermissions: List<String>,
     val description: String,
+    /** Permissions and system location state; this alone does not grant a background lease. */
+    val locationAccessAvailable: () -> Boolean = { false },
+    /** Only the visible UI / a successfully promoted location guard service may allow this feed. */
+    val setLocationAccessAllowed: (Boolean) -> Unit = {},
 )
 
 interface SourceFactory {

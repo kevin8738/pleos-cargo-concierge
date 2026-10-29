@@ -1,0 +1,25 @@
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 10 active services:
+  * ServiceRecord{342c5dc u10 ai.vipseat.cargoconcierge/.runtime.GuardForegroundService}
+    intent={cmp=ai.vipseat.cargoconcierge/.runtime.GuardForegroundService}
+    packageName=ai.vipseat.cargoconcierge
+    processName=ai.vipseat.cargoconcierge
+    baseDir=/data/app/~~0QbQIlIKySbnK97yprgTDg==/ai.vipseat.cargoconcierge-ZtM2nE03D4QVGtb70Arjqw==/base.apk
+    dataDir=/data/user/10/ai.vipseat.cargoconcierge
+    app=ProcessRecord{3048234 26822:ai.vipseat.cargoconcierge/u10a175}
+    mAllowWhileInUsePermissionInFgsReason=PROC_STATE_TOP
+    mAllowWIUInBindService=DENIED
+    mAllowWIUByBindings=DENIED
+    allowUiJobScheduling=true
+    recentCallingPackage=ai.vipseat.cargoconcierge
+    recentCallingUid=1010175
+    allowStartForeground=PROC_STATE_TOP
+    mAllowStartInBindService=DENIED
+    mAllowStartByBindings=DENIED
+    startForegroundCount=1
+    infoAllowStartForeground=[callingPackage: ai.vipseat.cargoconcierge; callingUid: 1010175; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { cmp=ai.vipseat.cargoconcierge/.runtime.GuardForegroundService (has extras) }; code:PROC_STATE_TOP; tempAllowListReason:<null>; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null: isBindService:false]
+    isForeground=true foregroundId=7301 types=40000008 foregroundNoti=Notification(channel=cargo_active_guard shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x42 color=0x00000000 category=service vis=PRIVATE)
+    createTime=-2s379ms startingBgTimeout=--
+    lastActivity=-2s379ms restartTime=-2s379ms createdFromFg=true
+    startRequested=true delayedStop=false stopIfKilled=true callStart=true lastStartId=1
+ startCommandResult=2

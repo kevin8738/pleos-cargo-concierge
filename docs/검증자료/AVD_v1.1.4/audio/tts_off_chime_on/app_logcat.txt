@@ -1,0 +1,13 @@
+--------- beginning of main
+         1793290843.632 26822 26822 I DemoBridge: gear=P
+         1793290843.632 26822 26822 I DemoBridge: broadcast → gear=P
+         1793290843.678 26822 26822 I DemoBridge: speed=0kph
+         1793290843.678 26822 26822 I DemoBridge: broadcast → speed=0kph
+         1793290843.730 26822 26822 I DemoBridge: preset=COFFEE
+         1793290843.730 26822 26822 I DemoBridge: broadcast → preset=COFFEE
+         1793290843.735 26822 26822 I CargoVM : 가드 서비스 준비: 요청 12
+         1793290843.736 26822 26822 I CargoVM : 캐빈 적용 → 조수석
+         1793290843.737 26822 26822 I CargoVM : TTS: 커피 VIP 모드, 조수석. 0.12G 가드를 시작할게요
+         1793290843.737 26822 26822 I CargoVM : 가드 시작: 커피 (0.12G) · 조수석
+         1793290843.847 26822 26822 I CargoVM : 캐빈 적용: 0개 성공, 0개 미적용
+         1793290843.933 26822 26872 D AudioTrack: stop(126): called with 9360 frames delivered

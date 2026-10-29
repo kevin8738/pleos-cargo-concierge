@@ -1,0 +1,19 @@
+{"event": "runtime_snapshot", "hostUnixNs": 1793290990388031000, "hostMonotonicNs": 40482986253416, "label": "before", "pid": "26822", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}
+{"event": "visible_idle", "hostUnixNs": 1793290992905957000, "hostMonotonicNs": 40485504228000, "deviceElapsedMs": 9739690, "pid": "26822", "focus": ["topResumedActivity=ActivityRecord{58c107 u10 ai.vipseat.cargoconcierge/.MainActivity t1000399}", "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}", "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"], "vipActivityState": "RESUMED", "vipVisible": true}
+{"event": "appop_mode", "hostUnixNs": 1793290992995642000, "hostMonotonicNs": 40485593914750, "user": "10", "operation": "START_FOREGROUND", "mode": "deny"}
+{"event": "command_start", "hostUnixNs": 1793290993033883000, "hostMonotonicNs": 40485632156083, "command": "speed", "value": 0, "phase": "park_preparation", "step": null}
+{"event": "command_done", "hostUnixNs": 1793290993083629000, "hostMonotonicNs": 40485681903458, "command": "speed", "value": 0, "phase": "park_preparation", "step": null, "startHostMonotonicNs": 40485632156083}
+{"event": "fault_preset_request", "hostUnixNs": 1793290993083932000, "hostMonotonicNs": 40485682206166, "mode": "deny"}
+{"event": "coffee_ui_tap", "hostUnixNs": 1793290993084027000, "hostMonotonicNs": 40485682301250, "bounds": [1057, 738, 1148, 762]}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291003691329000, "hostMonotonicNs": 40496289810041, "label": "after-failure", "pid": "26822", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}
+{"event": "fault_observation_end", "hostUnixNs": 1793291005775512000, "hostMonotonicNs": 40498374034958}
+{"event": "appop_mode", "hostUnixNs": 1793291005851026000, "hostMonotonicNs": 40498449549708, "user": "10", "operation": "START_FOREGROUND", "mode": "allow"}
+{"event": "command_start", "hostUnixNs": 1793291007993148000, "hostMonotonicNs": 40500591713458, "command": "speed", "value": 0, "phase": "park_preparation", "step": null}
+{"event": "command_done", "hostUnixNs": 1793291008033987000, "hostMonotonicNs": 40500632553250, "command": "speed", "value": 0, "phase": "park_preparation", "step": null, "startHostMonotonicNs": 40500591713458}
+{"event": "recovery_normal_start", "hostUnixNs": 1793291008034248000, "hostMonotonicNs": 40500632814333}
+{"event": "recovery_coffee_tap", "hostUnixNs": 1793291008034326000, "hostMonotonicNs": 40500632892333, "bounds": [1057, 738, 1148, 762]}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291008274156000, "hostMonotonicNs": 40500872726875, "label": "recovery-active_0", "pid": "26822", "isFrozen": false, "servicePresent": true, "foregroundService": true, "serviceTypeMask": 1073741832, "foregroundIdCorrect": true, "activeNotificationCount": 0}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291009401099000, "hostMonotonicNs": 40501999691833, "label": "recovery-active_1", "pid": "26822", "isFrozen": false, "servicePresent": true, "foregroundService": true, "serviceTypeMask": 1073741832, "foregroundIdCorrect": true, "activeNotificationCount": 1}
+{"event": "recovery_end_request", "hostUnixNs": 1793291012167930000, "hostMonotonicNs": 40504766576458}
+{"event": "recovery_end_tap", "hostUnixNs": 1793291012168059000, "hostMonotonicNs": 40504766705833, "bounds": [1553, 724, 1717, 757]}
+{"event": "runtime_snapshot", "hostUnixNs": 1793291012821495000, "hostMonotonicNs": 40505420154541, "label": "recovery-stopped", "pid": "26822", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}

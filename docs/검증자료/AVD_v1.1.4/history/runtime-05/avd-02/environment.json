@@ -1,0 +1,12 @@
+{
+  "app": "1.1.4-pleos",
+  "versionCode": 7,
+  "apk_sha256": "14709ea8c5b7c16f8d91592d27d3d408e65fd513fd8246aea004c71f1903fe03",
+  "vehicle_sdk": "2.3.2",
+  "vehicle_service": "2.3.22",
+  "vehicle_service_code": 74,
+  "product": "crp_avd_arm64",
+  "api": 34,
+  "serial": "emulator-5554",
+  "port_forward_verified": true
+}

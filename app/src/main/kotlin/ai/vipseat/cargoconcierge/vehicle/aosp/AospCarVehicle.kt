@@ -26,6 +26,8 @@ import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlin.math.abs
 
@@ -38,10 +40,15 @@ import kotlin.math.abs
  * Pleos documents its Vehicle Service as CarPropertyManager-compatible; the Pleos flavor uses the
  * typed Pleos SDK instead (see :vehicle-pleos).
  */
-class AospCarVehicle private constructor(private val context: Context, private val car: Car) : VehiclePort {
+class AospCarVehicle private constructor(private val context: Context, initialCar: Car) : VehiclePort {
     override val name: String = "AOSP CarPropertyManager"
 
-    private val pm: CarPropertyManager? = runCatching { car.getCarManager(Car.PROPERTY_SERVICE) as? CarPropertyManager }.getOrNull()
+    private val lifecycleMutex = Mutex()
+    private val callbackLock = Any()
+    private var car: Car? = initialCar
+    @Volatile private var pm: CarPropertyManager? = null
+    private var callback: CarPropertyManager.CarPropertyEventCallback? = null
+    private var connectionGeneration = 0L
     private val _signals = MutableSharedFlow<VehicleSignal>(extraBufferCapacity = 256)
     override val signals: SharedFlow<VehicleSignal> = _signals
 
@@ -49,13 +56,29 @@ class AospCarVehicle private constructor(private val context: Context, private v
     private var saved: MutableMap<Pair<Int, Int>, Any>? = null
     private val occupancy: MutableMap<CargoSpot, Boolean?> = java.util.Collections.synchronizedMap(HashMap())
 
-    private val callback = object : CarPropertyManager.CarPropertyEventCallback {
+    private fun callbackFor(generation: Long) = object : CarPropertyManager.CarPropertyEventCallback {
         override fun onChangeEvent(value: CarPropertyValue<*>) {
-            toSignal(value)?.let { _signals.tryEmit(it) }
+            synchronized(callbackLock) {
+                if (connectionGeneration != generation || callback == null) return
+                // Decode occupancy inside the same boundary: a retired callback must not alter
+                // the cache even when its event arrives after unregisterCallback returns.
+                toSignal(value)?.let { _signals.tryEmit(it) }
+            }
         }
         override fun onErrorEvent(propId: Int, zone: Int) {
-            Log.w(TAG, "property error prop=0x${Integer.toHexString(propId)} zone=$zone")
+            synchronized(callbackLock) {
+                if (connectionGeneration != generation || callback == null) return
+                Log.w(TAG, "property error prop=0x${Integer.toHexString(propId)} zone=$zone")
+            }
         }
+    }
+
+    private fun emitIfCurrent(generation: Long, signal: VehicleSignal): Unit = synchronized(callbackLock) {
+        if (connectionGeneration == generation && callback != null) _signals.tryEmit(signal)
+    }
+
+    private fun subscriptionDetail(): String = synchronized(callbackLock) {
+        subscriptionStatus.entries.joinToString(" ") { "${it.key}=${it.value}" }
     }
 
     private fun toSignal(v: CarPropertyValue<*>): VehicleSignal? = when (v.propertyId) {
@@ -74,12 +97,27 @@ class AospCarVehicle private constructor(private val context: Context, private v
         else -> null
     }
 
-    override suspend fun connect() = withContext(Dispatchers.IO) {
-        val manager = pm
+    override suspend fun connect() = withContext(Dispatchers.IO) { lifecycleMutex.withLock {
+        if (callback != null && pm != null && car?.isConnected == true) return@withLock
+        // Car.disconnect invalidates every manager obtained from that Car. Reacquire both
+        // objects after an idle runtime stop instead of reusing the disconnected manager.
+        if (callback != null || car?.isConnected == false) disconnectLocked()
+        val connectedCar = car ?: runCatching { Car.createCar(context) }.getOrNull().also { car = it }
+        val manager = runCatching { connectedCar?.getCarManager(Car.PROPERTY_SERVICE) as? CarPropertyManager }.getOrNull()
         if (manager == null) {
+            disconnectLocked()
             _signals.tryEmit(VehicleSignal.SourceStatus(false, "CarPropertyManager unavailable"))
-            return@withContext
+            return@withLock
         }
+        val generation = synchronized(callbackLock) {
+            connectionGeneration += 1
+            occupancy.clear()
+            subscriptionStatus.clear()
+            pm = manager
+            callback = callbackFor(connectionGeneration)
+            connectionGeneration
+        }
+        val currentCallback = requireNotNull(callback)
         val wanted = listOf(
             "speed" to (VehiclePropertyIds.PERF_VEHICLE_SPEED to CarPropertyManager.SENSOR_RATE_UI),
             "gear" to (VehiclePropertyIds.GEAR_SELECTION to CarPropertyManager.SENSOR_RATE_ONCHANGE),
@@ -91,25 +129,44 @@ class AospCarVehicle private constructor(private val context: Context, private v
         )
         for ((label, spec) in wanted) {
             val (prop, rate) = spec
-            subscriptionStatus[label] = try {
+            val status = try {
                 if (manager.getCarPropertyConfig(prop) == null) "absent"
-                else if (manager.registerCallback(callback, prop, rate)) "ok" else "refused"
+                else if (manager.registerCallback(currentCallback, prop, rate)) "ok" else "refused"
             } catch (e: SecurityException) { "no-permission" } catch (e: Exception) { "error:${e.javaClass.simpleName}" }
+            synchronized(callbackLock) { subscriptionStatus[label] = status }
         }
         // Initial values so the snapshot is not empty before the first change event.
-        runCatching { _signals.tryEmit(VehicleSignal.GearChanged(gearOf(manager.getIntProperty(VehiclePropertyIds.GEAR_SELECTION, 0)))) }
-        runCatching { _signals.tryEmit(VehicleSignal.Speed(abs(manager.getFloatProperty(VehiclePropertyIds.PERF_VEHICLE_SPEED, 0).toDouble()))) }
+        runCatching { emitIfCurrent(generation, VehicleSignal.GearChanged(gearOf(manager.getIntProperty(VehiclePropertyIds.GEAR_SELECTION, 0)))) }
+        runCatching { emitIfCurrent(generation, VehicleSignal.Speed(abs(manager.getFloatProperty(VehiclePropertyIds.PERF_VEHICLE_SPEED, 0).toDouble()))) }
         for (door in listOf(DOOR_ROW_1_LEFT, DOOR_ROW_1_RIGHT, DOOR_ROW_2_LEFT, DOOR_ROW_2_RIGHT, DOOR_REAR)) {
-            runCatching { _signals.tryEmit(VehicleSignal.Door(doorOf(door)!!, manager.getIntProperty(VehiclePropertyIds.DOOR_POS, door) > 0)) }
+            runCatching { emitIfCurrent(generation, VehicleSignal.Door(doorOf(door)!!, manager.getIntProperty(VehiclePropertyIds.DOOR_POS, door) > 0)) }
         }
-        val detail = subscriptionStatus.entries.joinToString(" ") { "${it.key}=${it.value}" }
+        val detail = subscriptionDetail()
         Log.i(TAG, "subscriptions: $detail")
-        _signals.tryEmit(VehicleSignal.SourceStatus(true, detail))
-    }
+        emitIfCurrent(generation, VehicleSignal.SourceStatus(true, detail))
+    } }
 
-    override suspend fun disconnect() {
-        runCatching { pm?.unregisterCallback(callback) }
-        runCatching { car.disconnect() }
+    override suspend fun disconnect() = withContext(Dispatchers.IO) { lifecycleMutex.withLock {
+        disconnectLocked()
+    } }
+
+    /** lifecycleMutex is held; invalidate callbacks before making SDK calls outside callbackLock. */
+    private fun disconnectLocked() {
+        val oldManager = pm
+        val oldCar = car
+        val oldCallback = synchronized(callbackLock) {
+            connectionGeneration += 1
+            val old = callback
+            callback = null
+            pm = null
+            occupancy.clear()
+            subscriptionStatus.clear()
+            old
+        }
+        car = null
+        if (oldCallback != null) runCatching { oldManager?.unregisterCallback(oldCallback) }
+        runCatching { oldCar?.disconnect() }
+        if (oldCar != null) _signals.tryEmit(VehicleSignal.SourceStatus(false, "disconnected"))
     }
 
     override suspend fun capabilities(): CabinCapabilities = withContext(Dispatchers.IO) {
@@ -124,7 +181,7 @@ class AospCarVehicle private constructor(private val context: Context, private v
                 CabinFeature.SEAT_VENT to has(VehiclePropertyIds.HVAC_SEAT_VENTILATION),
                 CabinFeature.REAR_TEMPERATURE to (areaIdContaining(VehiclePropertyIds.HVAC_TEMPERATURE_SET, VehicleAreaSeat.SEAT_ROW_2_RIGHT) != null),
             ),
-            detail = subscriptionStatus.entries.joinToString(" ") { "${it.key}=${it.value}" },
+            detail = subscriptionDetail(),
         )
     }
 

@@ -1,0 +1,327 @@
+{
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "artifact_hashes": {
+    "count": 63,
+    "mismatches": []
+  },
+  "current_source_count": 21,
+  "integration_assertions": 10,
+  "old_pid": [
+    "9676"
+  ],
+  "restart_pid": [
+    "9768"
+  ],
+  "critical_readbacks": {
+    "C1-occupied-blocked": {
+      "utc": "2026-10-29T16:33:15.675931+00:00",
+      "passenger_temperature_c": 22.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": true,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C2-vacant-before": {
+      "utc": "2026-10-29T16:33:24.417227+00:00",
+      "passenger_temperature_c": 22.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C3-applied": {
+      "utc": "2026-10-29T16:33:31.104856+00:00",
+      "passenger_temperature_c": 18.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C4-restored": {
+      "utc": "2026-10-29T16:33:37.731140+00:00",
+      "passenger_temperature_c": 22.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C5-external-change": {
+      "utc": "2026-10-29T16:33:51.454860+00:00",
+      "passenger_temperature_c": 21.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C6-vacancy-lost": {
+      "utc": "2026-10-29T16:34:05.128683+00:00",
+      "passenger_temperature_c": 22.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": true,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C7-power-off-setting-only": {
+      "utc": "2026-10-29T16:34:14.916704+00:00",
+      "passenger_temperature_c": 18.0,
+      "driver_temperature_c": 22.0,
+      "console_passenger_occupied": false,
+      "hvac_power": false,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C8-dual-false": {
+      "utc": "2026-10-29T16:34:27.706499+00:00",
+      "passenger_temperature_c": 18.0,
+      "driver_temperature_c": 24.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C9-dual-true": {
+      "utc": "2026-10-29T16:34:40.519084+00:00",
+      "passenger_temperature_c": 24.0,
+      "driver_temperature_c": 24.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": true,
+      "console_available": true
+    },
+    "C9B-external-sync-restore-deferred": {
+      "utc": "2026-10-29T16:34:59.354554+00:00",
+      "passenger_temperature_c": 18.0,
+      "driver_temperature_c": 18.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": true,
+      "console_available": true
+    },
+    "C9C-sync-off-retry-restored": {
+      "utc": "2026-10-29T16:35:10.140243+00:00",
+      "passenger_temperature_c": 22.0,
+      "driver_temperature_c": 18.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C10-drive-restore-deferred": {
+      "utc": "2026-10-29T16:35:23.822663+00:00",
+      "passenger_temperature_c": 18.0,
+      "driver_temperature_c": 18.0,
+      "console_passenger_occupied": true,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C11-park-retry-restored": {
+      "utc": "2026-10-29T16:35:35.398361+00:00",
+      "passenger_temperature_c": 22.0,
+      "driver_temperature_c": 18.0,
+      "console_passenger_occupied": true,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    },
+    "C12-restart-manual-check": {
+      "utc": "2026-10-29T16:35:49.999617+00:00",
+      "passenger_temperature_c": 18.0,
+      "driver_temperature_c": 18.0,
+      "console_passenger_occupied": false,
+      "hvac_power": true,
+      "hvac_dual": false,
+      "console_available": true
+    }
+  },
+  "source_changes_vs_runtime05": [
+    "app/src/main/kotlin/ai/vipseat/cargoconcierge/runtime/CargoSession.kt"
+  ],
+  "limits": [
+    "Official API34 AVD/VehicleService2.3.22 settings readback, not cabin/cargo temperature or cooling effect.",
+    "C8/C9 End-after driver/SYNC assertions are inside harness but separate after-End checkpoints are absent.",
+    "C12 is one restart checkpoint and selected logs; no perpetual no-write or full vehicle-bus proof.",
+    "No input-ledger/clock calibration here; exact command latency not established.",
+    "Tester cleanup resets fixture externally; separate from app conditional restore in C4/C9C/C11.",
+    "runtime05 control PASS is scoped only; later runtime05 ANR remains failed/preserved."
+  ],
+  "checks": [
+    {
+      "check": "artifact-sha256.json hashes",
+      "passed": true
+    },
+    {
+      "check": "manifest complete coverage and 63 files",
+      "passed": true
+    },
+    {
+      "check": "candidate APK installed identity",
+      "passed": true
+    },
+    {
+      "check": "21 current candidate source hashes",
+      "passed": true
+    },
+    {
+      "check": "runtime05 motion/freshness code unchanged in runtime06",
+      "passed": true
+    },
+    {
+      "check": "10 recorded integrated results true",
+      "passed": true
+    },
+    {
+      "check": "C1-occupied-blocked console readback",
+      "passed": true
+    },
+    {
+      "check": "C2-vacant-before console readback",
+      "passed": true
+    },
+    {
+      "check": "C3-applied console readback",
+      "passed": true
+    },
+    {
+      "check": "C4-restored console readback",
+      "passed": true
+    },
+    {
+      "check": "C5-external-change console readback",
+      "passed": true
+    },
+    {
+      "check": "C6-vacancy-lost console readback",
+      "passed": true
+    },
+    {
+      "check": "C7-power-off-setting-only console readback",
+      "passed": true
+    },
+    {
+      "check": "C8-dual-false console readback",
+      "passed": true
+    },
+    {
+      "check": "C9-dual-true console readback",
+      "passed": true
+    },
+    {
+      "check": "C9B-external-sync-restore-deferred console readback",
+      "passed": true
+    },
+    {
+      "check": "C9C-sync-off-retry-restored console readback",
+      "passed": true
+    },
+    {
+      "check": "C10-drive-restore-deferred console readback",
+      "passed": true
+    },
+    {
+      "check": "C11-park-retry-restored console readback",
+      "passed": true
+    },
+    {
+      "check": "C12-restart-manual-check console readback",
+      "passed": true
+    },
+    {
+      "check": "C3 SDK22 command SDK18 before APPLIED",
+      "passed": true
+    },
+    {
+      "check": "C4 apply then restore SDK18 command SDK22 before APPLIED",
+      "passed": true
+    },
+    {
+      "check": "C1 unconfirmed vacancy blocks",
+      "passed": true
+    },
+    {
+      "check": "C5 external21 readback preserved",
+      "passed": true
+    },
+    {
+      "check": "C6 vacancy lost conditional restore",
+      "passed": true
+    },
+    {
+      "check": "C7 power off disclosed in SDK and UI",
+      "passed": true
+    },
+    {
+      "check": "C8-dual-false before driver/sync baseline unchanged",
+      "passed": true
+    },
+    {
+      "check": "C9-dual-true before driver/sync baseline unchanged",
+      "passed": true
+    },
+    {
+      "check": "C9 sync failed no temperature command success",
+      "passed": true
+    },
+    {
+      "check": "C9B restore deferred with retry UI",
+      "passed": true
+    },
+    {
+      "check": "C9C after failed restore explicit retry reads18 writes reads22",
+      "passed": true
+    },
+    {
+      "check": "C10 drive restriction then C11 P retry readback",
+      "passed": true
+    },
+    {
+      "check": "C12 different process",
+      "passed": true
+    },
+    {
+      "check": "C12 warning Idle and initial SDK18",
+      "passed": true
+    },
+    {
+      "check": "C12 no automatic observed apply restore command or guard start",
+      "passed": true
+    },
+    {
+      "check": "external tester cleanup assertion",
+      "passed": true
+    },
+    {
+      "check": "cleanup HVAC power_on",
+      "passed": true
+    },
+    {
+      "check": "cleanup HVAC dual_on",
+      "passed": true
+    },
+    {
+      "check": "cleanup HVAC driver",
+      "passed": true
+    },
+    {
+      "check": "cleanup HVAC passenger",
+      "passed": true
+    },
+    {
+      "check": "cleanup parked vacant zero controls",
+      "passed": true
+    },
+    {
+      "check": "prior runtime04 C3 failure preserved",
+      "passed": true
+    }
+  ],
+  "check_count": 42,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

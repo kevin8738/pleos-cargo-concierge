@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "case": "C3-applied",
+  "expectedTemperatureC": 18,
+  "actualTemperatureC": 22,
+  "reason": "DRIVING_RESTRICTED: latest speed unavailable at cabin guard after location lease transition",
+  "cleanupVerified": true,
+  "candidate": "runtime-04",
+  "apk_sha256": "6d886a66a3170eda552dcbdb5b0951474134e94a3db78aad3f0923a30770947d",
+  "classification": "application regression; source-distinct invalidation fix required; no pass claimed"
+}

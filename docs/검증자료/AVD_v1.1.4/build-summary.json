@@ -1,0 +1,26 @@
+{
+  "version": "1.1.4-pleos",
+  "versionCode": 7,
+  "tests": {
+    "core": {
+      "tests": 158,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "mapping": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "test_total": 182,
+  "lint": {
+    "Warning": 33
+  },
+  "release_build": "PASS",
+  "signature_verify": "PASS",
+  "apk_bytes": 47871331,
+  "apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c"
+}

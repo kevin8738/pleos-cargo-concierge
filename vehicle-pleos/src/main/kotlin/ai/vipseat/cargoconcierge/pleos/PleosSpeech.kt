@@ -4,6 +4,7 @@ import ai.pleos.playground.stt.SpeechToText
 import ai.pleos.playground.stt.listener.ResultListener
 import ai.pleos.playground.tts.TextToSpeech
 import ai.pleos.playground.tts.constant.Mode
+import ai.pleos.playground.tts.listener.EventListener
 import ai.pleos.playground.tts.listener.OnInitializeListener
 import ai.vipseat.cargoconcierge.core.port.SpeechPort
 import ai.vipseat.cargoconcierge.core.port.VoiceInputPort
@@ -19,18 +20,24 @@ import ai.pleos.playground.stt.listener.OnInitializeListener as SttInitListener
 import ai.pleos.playground.tts.constant.ErrorType as TtsErrorType
 
 /**
- * Pleos TextToSpeech 3.3.1. Verified: TextToSpeech(context, Mode), initialize(OnInitializeListener),
- * setLocale(Locale), speak(String, boolean), stop(), release().
- * ASSUMPTIONS (not verifiable from bytecode): the boolean on speak() flushes the queue when true;
- * HYBRID mode works without registerApp(). If initialisation fails, [available] stays false and
- * FallbackSpeech routes to the platform engine.
+ * Pleos TextToSpeech 3.3.1: Korean synthesis requires ko-KR, and speak's boolean is isFinal.
+ * HYBRID can attempt on-device synthesis when server credentials are unavailable; initialization
+ * alone does not prove synthesis or playback. Event callbacks expose the later outcome.
  */
 class PleosSpeech(context: Context) : SpeechPort {
     override val name = "Pleos TTS 3.3.1"
     @Volatile override var available: Boolean = false
         private set
+    private val eventListener = object : EventListener {
+        override fun onStart() { Log.i(TAG, "TTS_START") }
+        override fun onReady() { Log.i(TAG, "TTS_READY") }
+        override fun onDone() { Log.i(TAG, "TTS_DONE") }
+        override fun onError(error: TtsErrorType) { Log.w(TAG, "TTS_ERROR:$error") }
+        override fun onStop() { Log.i(TAG, "TTS_STOP") }
+        override fun onUpdatedRms(rms: Double) {}
+    }
     private val tts: TextToSpeech? = runCatching { TextToSpeech(context.applicationContext, Mode.HYBRID) }
-        .onFailure { Log.w(TAG, "TTS construct failed: ${it.message}") }
+        .onFailure { Log.w(TAG, "TTS_CONSTRUCT_ERROR") }
         .getOrNull()
 
     init {
@@ -38,22 +45,32 @@ class PleosSpeech(context: Context) : SpeechPort {
             runCatching {
                 t.initialize(object : OnInitializeListener {
                     override fun onSuccess() {
-                        runCatching { t.setLocale(Locale.KOREAN) }
-                        available = true
-                        Log.i(TAG, "Pleos TTS ready")
+                        runCatching {
+                            t.setLocale(Locale.KOREA)
+                            t.addEventListener(eventListener)
+                        }.onSuccess {
+                            available = true
+                            Log.i(TAG, "TTS_INITIALIZED")
+                        }.onFailure {
+                            available = false
+                            Log.w(TAG, "TTS_CONFIGURATION_ERROR")
+                        }
                     }
                     override fun onFailure(error: TtsErrorType) {
                         available = false
-                        Log.w(TAG, "Pleos TTS init failed: $error")
+                        Log.w(TAG, "TTS_INIT_ERROR:$error")
                     }
                 })
-            }.onFailure { Log.w(TAG, "TTS initialize threw: ${it.message}") }
+            }.onFailure { Log.w(TAG, "TTS_INIT_ERROR") }
         }
     }
 
     override suspend fun speak(text: String, priority: Boolean) {
         val t = tts ?: return
-        runCatching { t.speak(text, priority) }.onFailure { Log.w(TAG, "speak failed: ${it.message}"); available = false }
+        // Every request is a complete sentence. CargoViewModel stops obsolete speech before this
+        // call; its priority flag must not be passed as the SDK's streaming completion flag.
+        runCatching { t.speak(text, isFinal = true) }
+            .onFailure { Log.w(TAG, "TTS_REQUEST_ERROR"); available = false }
     }
 
     override fun stop() { runCatching { tts?.stop() } }

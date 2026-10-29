@@ -66,12 +66,15 @@ import kotlin.coroutines.resume
  * *setter* (DrivingMode is read-only), brake pedal *percentage* (boolean only).
  * Speed is derived from FusedLocation fixes by [PleosLocationSpeed] and merged into [signals].
  */
-class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
+class PleosVehicle(context: Context, locationAccessAvailable: () -> Boolean = { false }) : VehiclePort, RealMotionObserver {
     override val name: String = "Pleos Vehicle SDK 2.3.2"
 
     private val app = context.applicationContext
     private val vehicle = Vehicle(app)
-    private val locationSpeed = PleosLocationSpeed(app)
+    private val locationSpeed = PleosLocationSpeed(app, locationAccessAvailable)
+    private val locationLifecycleLock = Any()
+    private var locationAccessAllowed = false
+    private var locationConnectionReady = false
     private val _signals = MutableSharedFlow<VehicleSignal>(extraBufferCapacity = 256)
     override val signals: Flow<VehicleSignal> = merge(_signals, locationSpeed.signals)
 
@@ -114,12 +117,21 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
     private val directionSettings = linkedMapOf<String, CabinSettingOwner<FanDirectionType>>()
     private var motionPolling: Job? = null
     private data class SpeedReading(val mps: Double, val receivedAtMs: Long)
-    @Volatile private var realSpeed: SpeedReading? = null
+    /** MergedVehicle forwards only other actual ports; our location feed stays in locationSpeed. */
+    @Volatile private var externalRealSpeed: SpeedReading? = null
+
+    /** A visible UI or a successfully promoted location FGS owns this permission to subscribe. */
+    fun setLocationAccessAllowed(allowed: Boolean) = synchronized(locationLifecycleLock) {
+        locationAccessAllowed = allowed
+        locationSpeed.setAccessAllowed(allowed)
+        if (allowed && locationConnectionReady) locationSpeed.start()
+        Unit
+    }
 
     override fun observeRealMotion(signal: VehicleSignal, receivedAtMs: Long) {
         when (signal) {
-            is VehicleSignal.Speed -> if (signal.mps.isFinite() && signal.mps >= 0) realSpeed = SpeedReading(signal.mps, receivedAtMs)
-            is VehicleSignal.SourceStatus -> if (!signal.connected) realSpeed = null
+            is VehicleSignal.Speed -> if (signal.mps.isFinite() && signal.mps >= 0) externalRealSpeed = SpeedReading(signal.mps, receivedAtMs)
+            is VehicleSignal.SourceStatus -> if (!signal.connected) externalRealSpeed = null
             else -> Unit
         }
     }
@@ -245,7 +257,10 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
         seatAreas.forEach { (spot, area) -> readConfirmedVacancy(spot, area) }
         runCatching { vehicle.getHVAC().getHvacTemperature(passengerSeat, TemperatureUnit.CELSIUS, { t -> t?.takeIf { it.isFinite() }?.let { emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }, { fail("hvacTemp.get", it) }) }
 
-        status["speed"] = locationSpeed.start()
+        synchronized(locationLifecycleLock) {
+            locationConnectionReady = initialized
+            status["speed"] = if (locationConnectionReady && locationAccessAllowed) locationSpeed.start() else "fusedlocation-disabled"
+        }
         startMotionPolling()
         emit(VehicleSignal.SourceStatus(true, status.entries.joinToString(" ") { "${it.key}=${it.value}" }))
     }
@@ -264,8 +279,12 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
         motionPolling = null
         lastGear = Gear.UNKNOWN
         lastGearAt = 0L
-        realSpeed = null
-        locationSpeed.stop()
+        externalRealSpeed = null
+        synchronized(locationLifecycleLock) {
+            locationConnectionReady = false
+            locationAccessAllowed = false
+            locationSpeed.stop()
+        }
         runCatching { vehicle.getGear().unregisterGearSelection(gearListener) }
         runCatching { vehicle.getSteeringWheel().unregisterSteeringWheelAngle(steeringListener) }
         runCatching { vehicle.getBrake().unregisterBrakePedalStatus(brakeListener) }
@@ -510,8 +529,11 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
             }
         }
         // Evaluate all freshness after the additional read, never with a pre-SYNC timestamp.
+        // Retire revoked location data even without a new callback. This cannot invalidate an
+        // independent fresh AOSP observation; the two feeds no longer share a cache.
+        locationSpeed.hasAccess()
         val now = SystemClock.elapsedRealtime()
-        val speed = realSpeed?.takeIf { now - it.receivedAtMs in 0..SIGNAL_FRESHNESS_MS }?.mps
+        val speed = externalRealSpeed?.takeIf { now - it.receivedAtMs in 0..SIGNAL_FRESHNESS_MS }?.mps
             ?: locationSpeed.freshSpeedMps(SIGNAL_FRESHNESS_MS)
         val stillVacant = synchronized(occupancyLock) {
             coveredSeats.isNotEmpty() && coveredSeats.keys.all {
@@ -598,6 +620,8 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
         motionPolling?.cancel()
         motionPolling = CoroutineScope(Dispatchers.IO).launch {
             while (isActive && initialized) {
+                // Permission/location revocation must retire cached fixes even without a callback.
+                locationSpeed.hasAccess()
                 val gear = awaitValue<VehicleGear?> { ok, err -> vehicle.getGear().getCurrentGearSelectionState(ok, err) }
                 recordGear(gear)
                 awaitValue<Float?> { ok, err -> vehicle.getSteeringWheel().getCurrentSteeringWheelAngle(ok, err) }

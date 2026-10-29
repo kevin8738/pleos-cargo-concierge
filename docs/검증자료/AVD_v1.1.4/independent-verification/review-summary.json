@@ -1,0 +1,73 @@
+{
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+  "offline_check_count": 329,
+  "groups": [
+    {
+      "file": "audio-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 54,
+      "errors": [],
+      "sha256": "9958fe98141fe4469d989565dd0e7881dea700600040f586dc0acc2a55ee9115"
+    },
+    {
+      "file": "boundary-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 24,
+      "errors": [],
+      "sha256": "4443d36e9a22e500fb99146c6888fdb912b976546a7644ddffb77f6a77624c68"
+    },
+    {
+      "file": "control-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 42,
+      "errors": [],
+      "sha256": "85402b318f770229b35107fa9071aa04cccbcddd92496909be4b68b545f54628"
+    },
+    {
+      "file": "fgs-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 50,
+      "errors": [],
+      "sha256": "a3a4068290acf860924753bf327994d914fd28248585aa43c927d93d3e737034"
+    },
+    {
+      "file": "flow-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 19,
+      "errors": [],
+      "sha256": "aea6019bf1f425f3b9e98d9fe9fc4b67bd7a098c829cd13c426d648c1461e417"
+    },
+    {
+      "file": "location-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 66,
+      "errors": [],
+      "sha256": "35f87cad35ff3eaa2114136787656e35a008ab8e7172a796cb7946575b7f2510"
+    },
+    {
+      "file": "loss-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 48,
+      "errors": [],
+      "sha256": "240d194ff52d5deec4e4c6abc6a992418cbd5fff6e1eb3578e206bf732c8b644"
+    },
+    {
+      "file": "native-verification.json",
+      "verdict": "PASS_WITH_SCOPE_LIMITATIONS",
+      "offline_check_count": 26,
+      "errors": [],
+      "sha256": "18f4d4a5a341c049619763826bfbf9490281c56901b213f62ac48436448f74aa"
+    }
+  ],
+  "scope": "Independent read-only saved-evidence review; no ADB/AVD/build/code mutation. Offline checks are not added to app/core test count. Prior failed attempts preserved.",
+  "material_claim_limits": [
+    "Native direct-hidden ticks conservative20 vs harness21 including one clock-boundary ambiguous tick; route-request callback denominator separate.",
+    "Arrival reaches ARRIVED/report; Idle after explicit End/ack cleanup.",
+    "No physical sensor/G/cargo/thermal/driver validation.",
+    "Shell task removal is observed; no directly instrumented onTaskRemoved or successful Recents swipe.",
+    "Audio amplitude contrast only; PCM packet files reconstructed from capturedPCM.",
+    "Location control/subscription/reconnect setup observed, not freshGPS/gear/Pleos getter correctness.",
+    "API28-33 fallback, saturated audio budgets/cooldown rejection, both-on/nav-media audio contention unmeasured."
+  ]
+}

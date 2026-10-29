@@ -1,0 +1,128 @@
+[
+  {
+    "hostReceivedUnixNs": 1793291086196945000,
+    "hostReceivedMonotonicNs": 40578797035625,
+    "line": "         1793291086.481 26822   523 I PleosNavi: SDK callback navigation-status=ROUTE_DRIVE",
+    "deviceEpochSeconds": 1793291086.481,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback navigation-status=ROUTE_DRIVE"
+  },
+  {
+    "hostReceivedUnixNs": 1793291087248501000,
+    "hostReceivedMonotonicNs": 40579848612250,
+    "line": "         1793291087.534 26822   523 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291087.534,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291088849873000,
+    "hostReceivedMonotonicNs": 40581450015333,
+    "line": "         1793291089.134 26822 14526 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291089.134,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291091868887000,
+    "hostReceivedMonotonicNs": 40584469087875,
+    "line": "         1793291092.154 26822 23945 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291092.154,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291094845002000,
+    "hostReceivedMonotonicNs": 40587445261958,
+    "line": "         1793291095.130 26822 23945 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291095.13,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291097860324000,
+    "hostReceivedMonotonicNs": 40590460642916,
+    "line": "         1793291098.145 26822 27077 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291098.145,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291100860471000,
+    "hostReceivedMonotonicNs": 40593460848583,
+    "line": "         1793291101.146 26822 27077 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291101.146,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291103857436000,
+    "hostReceivedMonotonicNs": 40596457870875,
+    "line": "         1793291104.143 26822 27077 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291104.143,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291106859539000,
+    "hostReceivedMonotonicNs": 40599460033000,
+    "line": "         1793291107.145 26822 26871 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291107.145,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291109877387000,
+    "hostReceivedMonotonicNs": 40602477941291,
+    "line": "         1793291110.163 26822 26871 D PleosNavi: SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]",
+    "deviceEpochSeconds": 1793291110.163,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=20 first=[TURN_LEFT:80.0m, TURN_RIGHT:380.0m]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291112496955000,
+    "hostReceivedMonotonicNs": 40605097558541,
+    "line": "         1793291112.781 26822 27042 D PleosNavi: SDK callback tbt count=0 first=[]",
+    "deviceEpochSeconds": 1793291112.781,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=0 first=[]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291112500929000,
+    "hostReceivedMonotonicNs": 40605101533125,
+    "line": "         1793291112.785 26822 27042 I PleosNavi: SDK callback navigation-status=FREE_DRIVE",
+    "deviceEpochSeconds": 1793291112.785,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback navigation-status=FREE_DRIVE"
+  },
+  {
+    "hostReceivedUnixNs": 1793291112501039000,
+    "hostReceivedMonotonicNs": 40605101641666,
+    "line": "         1793291112.786 26822 26848 D PleosNavi: SDK callback tbt count=0 first=[]",
+    "deviceEpochSeconds": 1793291112.786,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=0 first=[]"
+  },
+  {
+    "hostReceivedUnixNs": 1793291113267639000,
+    "hostReceivedMonotonicNs": 40605868258333,
+    "line": "         1793291113.551 26822  8211 D PleosNavi: SDK callback tbt count=0 first=[]",
+    "deviceEpochSeconds": 1793291113.551,
+    "pid": 26822,
+    "tag": "PleosNavi",
+    "message": "SDK callback tbt count=0 first=[]"
+  }
+]

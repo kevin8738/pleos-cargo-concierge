@@ -1,0 +1,921 @@
+{
+  "case": "reconnect",
+  "cycles": [
+    {
+      "cycle": 0,
+      "newAospSubscription": true,
+      "newNaviReady": true,
+      "newCombinedConnection": true,
+      "motionTraceRows": [
+        {
+          "hostNs": 1793291487435122000,
+          "deviceEpochSeconds": 1793291487.728,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234261,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291487435281000,
+          "deviceEpochSeconds": 1793291487.728,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234261,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291487480132000,
+          "deviceEpochSeconds": 1793291487.773,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234306,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291487578521000,
+          "deviceEpochSeconds": 1793291487.871,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234403,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291487776415000,
+          "deviceEpochSeconds": 1793291488.068,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234601,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291487876053000,
+          "deviceEpochSeconds": 1793291488.169,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234701,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291487984343000,
+          "deviceEpochSeconds": 1793291488.277,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10234810,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291488175522000,
+          "deviceEpochSeconds": 1793291488.469,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10235001,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291488229663000,
+          "deviceEpochSeconds": 1793291488.523,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10235056,
+            "event": "motion",
+            "raw": {
+              "kind": "steering",
+              "degrees": 0,
+              "sourceId": null,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291488238510000,
+          "deviceEpochSeconds": 1793291488.531,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10235064,
+            "event": "motion",
+            "raw": {
+              "kind": "brake",
+              "pressed": false,
+              "percent": null,
+              "sourceId": null,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291488295481000,
+          "deviceEpochSeconds": 1793291488.588,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10235121,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291488311479000,
+          "deviceEpochSeconds": 1793291488.6,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10235133,
+            "event": "motion",
+            "raw": {
+              "kind": "steering",
+              "degrees": 0,
+              "sourceId": null,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        }
+      ]
+    },
+    {
+      "cycle": 1,
+      "newAospSubscription": true,
+      "newNaviReady": true,
+      "newCombinedConnection": true,
+      "motionTraceRows": [
+        {
+          "hostNs": 1793291493106987000,
+          "deviceEpochSeconds": 1793291493.4,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10239933,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493323307000,
+          "deviceEpochSeconds": 1793291493.616,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240149,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493343284000,
+          "deviceEpochSeconds": 1793291493.636,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240169,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493347251000,
+          "deviceEpochSeconds": 1793291493.636,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240169,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493475058000,
+          "deviceEpochSeconds": 1793291493.768,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240301,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493574706000,
+          "deviceEpochSeconds": 1793291493.868,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240401,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493776669000,
+          "deviceEpochSeconds": 1793291494.069,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240602,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493921154000,
+          "deviceEpochSeconds": 1793291494.213,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240746,
+            "event": "motion",
+            "raw": {
+              "kind": "steering",
+              "degrees": 0,
+              "sourceId": null,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493922129000,
+          "deviceEpochSeconds": 1793291494.216,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240749,
+            "event": "motion",
+            "raw": {
+              "kind": "brake",
+              "pressed": false,
+              "percent": null,
+              "sourceId": null,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493971801000,
+          "deviceEpochSeconds": 1793291494.265,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240798,
+            "event": "motion",
+            "raw": {
+              "kind": "steering",
+              "degrees": 0,
+              "sourceId": null,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291493974938000,
+          "deviceEpochSeconds": 1793291494.268,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10240801,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        },
+        {
+          "hostNs": 1793291494176220000,
+          "deviceEpochSeconds": 1793291494.469,
+          "tag": "MotionTrace",
+          "data": {
+            "schema": 1,
+            "tMs": 10241001,
+            "event": "motion",
+            "raw": {
+              "kind": "speed",
+              "mps": 0,
+              "sourceId": 1,
+              "provenance": "SYNTHETIC"
+            },
+            "uiMode": "PARKED",
+            "previousGuarding": false,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "snapshot": {
+              "gear": "PARK",
+              "speedMps": 0,
+              "steeringDeg": 0,
+              "brakePressed": false,
+              "brakePercent": null,
+              "speedProvenance": "SYNTHETIC",
+              "steeringProvenance": "SYNTHETIC",
+              "brakeProvenance": "SYNTHETIC",
+              "parkedStill": true
+            },
+            "state": "IDLE"
+          }
+        }
+      ]
+    }
+  ],
+  "verdict": "REVIEW_REQUIRED: source setup logs and fresh trace must be distinguished; no gear/Pleos getter trace assertion",
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "issues": [],
+  "cleanupVerified": true,
+  "executedWithoutError": true,
+  "limits": [
+    "No GPS fix injected or recorded; cache invalidation and real speed accuracy unmeasured.",
+    "Reconnect logs alone do not prove fresh gear/Pleos getter or native route callback delivery.",
+    "Stationary COFFEE AVD only; no human/real-car validation."
+  ]
+}

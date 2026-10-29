@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"capture_status\": \"CAPTURED\", \"audio_observation\": \"NONZERO_PCM\", \"rpc_status\": \"CANCELLED\", \"packet_count\": 1281, \"bytes_written\": 230580, \"exit_code\": 0}\n",
+  "stderr_present_suppressed": false
+}

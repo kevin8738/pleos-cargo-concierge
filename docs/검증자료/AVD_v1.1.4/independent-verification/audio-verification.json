@@ -1,0 +1,447 @@
+{
+  "candidate": {
+    "expected_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "actual_apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "apk_bytes": 47871331,
+    "source_count": 21,
+    "source_mismatches": []
+  },
+  "artifact_hashes": {
+    "count": 5179,
+    "mismatches": []
+  },
+  "cases": [
+    {
+      "case": "tts_on_chime_off",
+      "packets": 1264,
+      "pcm_bytes": 1655428,
+      "pcm_sha256": "fe26a02a46a74242c03d812aef68f8c9692aefa73f9cf1b21eac94666eec4cfa",
+      "windows": {
+        "pre_event": {
+          "window_seconds": [
+            -3,
+            0
+          ],
+          "packet_count": 208,
+          "captured_pcm_seconds": 0.195,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4518077443297122
+        },
+        "response_0_to_8s": {
+          "window_seconds": [
+            0,
+            8
+          ],
+          "packet_count": 671,
+          "captured_pcm_seconds": 7.897291666666667,
+          "peak_absolute_s16": 1432,
+          "rms_s16_over_received_samples": 185.4842265311857
+        },
+        "late_8_to_12s": {
+          "window_seconds": [
+            8,
+            12
+          ],
+          "packet_count": 337,
+          "captured_pcm_seconds": 0.48475,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.1521948022362167
+        }
+      },
+      "pcm_seconds": 8.622020833333334,
+      "wall_seconds": 15.009169,
+      "tts": {
+        "TTS_START": 1,
+        "TTS_DONE": 1,
+        "TTS_ERROR": 0
+      },
+      "packet_clock_residual_seconds": [
+        -0.004481071999999919,
+        -0.00023107200000005435
+      ]
+    },
+    {
+      "case": "tts_off_chime_off",
+      "packets": 1280,
+      "pcm_bytes": 230396,
+      "pcm_sha256": "c6bec6200e9e55bc573c668a951e23662a2cc14c191a99c257e03d7c0fa6a7ce",
+      "windows": {
+        "pre_event": {
+          "window_seconds": [
+            -3,
+            0
+          ],
+          "packet_count": 210,
+          "captured_pcm_seconds": 0.19685416666666666,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4506559145034497
+        },
+        "response_0_to_8s": {
+          "window_seconds": [
+            0,
+            8
+          ],
+          "packet_count": 683,
+          "captured_pcm_seconds": 0.6403125,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4514596076637323
+        },
+        "late_8_to_12s": {
+          "window_seconds": [
+            8,
+            12
+          ],
+          "packet_count": 340,
+          "captured_pcm_seconds": 0.31877083333333334,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.451039620185388
+        }
+      },
+      "pcm_seconds": 1.1999791666666666,
+      "wall_seconds": 15.005493,
+      "tts": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0
+      },
+      "packet_clock_residual_seconds": [
+        -0.0042908159999992534,
+        -0.00023681599999999386
+      ]
+    },
+    {
+      "case": "tts_off_chime_on",
+      "packets": 1265,
+      "pcm_bytes": 840596,
+      "pcm_sha256": "367e1d5d0af87260ffc223b4e4fbbdbe1fa3069532dd5786e865ead095aab08b",
+      "windows": {
+        "pre_event": {
+          "window_seconds": [
+            -3,
+            0
+          ],
+          "packet_count": 207,
+          "captured_pcm_seconds": 0.19404166666666667,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.459421789781688
+        },
+        "response_0_to_8s": {
+          "window_seconds": [
+            0,
+            8
+          ],
+          "packet_count": 673,
+          "captured_pcm_seconds": 3.8231041666666665,
+          "peak_absolute_s16": 146,
+          "rms_s16_over_received_samples": 16.20940249180549
+        },
+        "late_8_to_12s": {
+          "window_seconds": [
+            8,
+            12
+          ],
+          "packet_count": 338,
+          "captured_pcm_seconds": 0.3168958333333333,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4747117799765856
+        }
+      },
+      "pcm_seconds": 4.378104166666667,
+      "wall_seconds": 15.00651,
+      "tts": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0
+      },
+      "packet_clock_residual_seconds": [
+        -0.0048532159999999935,
+        -0.0002252160000000003
+      ]
+    },
+    {
+      "case": "both_off_chime_control",
+      "packets": 1281,
+      "pcm_bytes": 230580,
+      "pcm_sha256": "ef5cfa242c2e41b87307614781bb52678b6206f0090bf7ce5fdde504a2472d2c",
+      "windows": {
+        "pre_event": {
+          "window_seconds": [
+            -3,
+            0
+          ],
+          "packet_count": 212,
+          "captured_pcm_seconds": 0.19875,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4730101526646886
+        },
+        "response_0_to_8s": {
+          "window_seconds": [
+            0,
+            8
+          ],
+          "packet_count": 684,
+          "captured_pcm_seconds": 0.6412291666666666,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4749222223253313
+        },
+        "late_8_to_12s": {
+          "window_seconds": [
+            8,
+            12
+          ],
+          "packet_count": 341,
+          "captured_pcm_seconds": 0.3196875,
+          "peak_absolute_s16": 2,
+          "rms_s16_over_received_samples": 1.4734425369666058
+        }
+      },
+      "pcm_seconds": 1.2009375,
+      "wall_seconds": 15.002801,
+      "tts": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0
+      },
+      "packet_clock_residual_seconds": [
+        -0.0039948640000009306,
+        -0.0002008640000000228
+      ]
+    }
+  ],
+  "total_packets": 5090,
+  "clock": {
+    "device_minus_host_ns": 290631073,
+    "half_roundtrip_ns": 13631500.0,
+    "window_clock": "capture packet epoch empirically tracks capture host epoch, not device logcat epoch; windows are relative to host command start"
+  },
+  "limits": [
+    "Packet files are post-capture slices of the PCM, not an independent network packet recording; equality verifies faithful segmentation.",
+    "RMS uses received samples and duration is packet concatenation, not wall-time silence or utterance length.",
+    "ON/OFF amplitude contrast only; no intelligibility or physical speaker/cargo/driver burden proof.",
+    "COFFEE selection: TTS-only, chime-only and two both-off controls. Both-on and navigation/media contention untested.",
+    "TTS_ERROR=0 is limited to selected app log tags.",
+    "Cleanup establishes XML settings/Idle P0/drain log; this dataset contains no final service/notification dump.",
+    "Clock sync is a single point; no drift bound. Packet windows are not aligned to device logcat without clock conversion."
+  ],
+  "checks": [
+    {
+      "check": "runtime06 candidate identity and current source",
+      "passed": true
+    },
+    {
+      "check": "artifact-sha256-runtime06.json hashes",
+      "passed": true
+    },
+    {
+      "check": "installed before/after same candidate and PID",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off packet concat equals PCM",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off WAV header/payload equals PCM",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off every packet metadata/statistic/offset",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off monotonic packet stamps",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off pre_event independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off response_0_to_8s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off late_8_to_12s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off overall PCM metrics/hash",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off duration-limit transport complete",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off settings raw XML",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off COFFEE and zero cabin changes",
+      "passed": true
+    },
+    {
+      "check": "tts_on_chime_off filtered TTS lifecycle",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off packet concat equals PCM",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off WAV header/payload equals PCM",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off every packet metadata/statistic/offset",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off monotonic packet stamps",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off pre_event independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off response_0_to_8s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off late_8_to_12s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off overall PCM metrics/hash",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off duration-limit transport complete",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off settings raw XML",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off COFFEE and zero cabin changes",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_off filtered TTS lifecycle",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on packet concat equals PCM",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on WAV header/payload equals PCM",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on every packet metadata/statistic/offset",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on monotonic packet stamps",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on pre_event independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on response_0_to_8s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on late_8_to_12s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on overall PCM metrics/hash",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on duration-limit transport complete",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on settings raw XML",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on COFFEE and zero cabin changes",
+      "passed": true
+    },
+    {
+      "check": "tts_off_chime_on filtered TTS lifecycle",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control packet concat equals PCM",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control WAV header/payload equals PCM",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control every packet metadata/statistic/offset",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control monotonic packet stamps",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control pre_event independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control response_0_to_8s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control late_8_to_12s independently recomputed",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control overall PCM metrics/hash",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control duration-limit transport complete",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control settings raw XML",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control COFFEE and zero cabin changes",
+      "passed": true
+    },
+    {
+      "check": "both_off_chime_control filtered TTS lifecycle",
+      "passed": true
+    },
+    {
+      "check": "original audio toggles restored XML",
+      "passed": true
+    },
+    {
+      "check": "final UI Idle P0 and service drain message",
+      "passed": true
+    },
+    {
+      "check": "summary cleanup no failure",
+      "passed": true
+    }
+  ],
+  "check_count": 54,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

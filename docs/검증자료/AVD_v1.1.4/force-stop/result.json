@@ -1,0 +1,68 @@
+{
+  "runtimeSnapshots": [
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291181905842000,
+      "hostMonotonicNs": 40674507797791,
+      "label": "guard_foreground_7",
+      "pid": "26822",
+      "isFrozen": false,
+      "servicePresent": true,
+      "foregroundService": true,
+      "serviceTypeMask": 1073741832,
+      "foregroundIdCorrect": true,
+      "activeNotificationCount": 1
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291183143653000,
+      "hostMonotonicNs": 40675745632875,
+      "label": "interrupted_1",
+      "pid": "",
+      "isFrozen": null,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291190157292000,
+      "hostMonotonicNs": 40682759408791,
+      "label": "interrupted_8",
+      "pid": "",
+      "isFrozen": null,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    },
+    {
+      "event": "runtime_snapshot",
+      "hostUnixNs": 1793291200118674000,
+      "hostMonotonicNs": 40692720985916,
+      "label": "interrupted_18",
+      "pid": "",
+      "isFrozen": null,
+      "servicePresent": false,
+      "foregroundService": false,
+      "serviceTypeMask": null,
+      "foregroundIdCorrect": false,
+      "activeNotificationCount": 0
+    }
+  ],
+  "liveRows": 230,
+  "issues": [],
+  "renewedRuntimeRows": 0,
+  "postInterruptionGuardRows": 0,
+  "observedWriteRows": 0,
+  "passed": true,
+  "limits": [
+    "Stationary official AVD and public synthetic destination; no route progression, driving or audio claim.",
+    "No motion DEMO after one parked preparation; real source freshness and physical accuracy are separate.",
+    "No logged cabin write outcomes plus unchanged readback is not a vehicle-bus capture.",
+    "Task-removal case blocks if a unique VIP dismiss control cannot be observed."
+  ]
+}

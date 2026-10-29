@@ -1,0 +1,380 @@
+[
+  {
+    "hostReceivedUnixNs": 1793291092032358000,
+    "hostReceivedMonotonicNs": 40584632562500,
+    "line": "         1793291092.317 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9838850,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291092.317,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9838850,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9838850,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291093037810000,
+    "hostReceivedMonotonicNs": 40585638033833,
+    "line": "         1793291093.323 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9839856,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291093.323,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9839856,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9839856,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291094044425000,
+    "hostReceivedMonotonicNs": 40586644668333,
+    "line": "         1793291094.327 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9840860,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291094.327,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9840860,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9840860,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291095047576000,
+    "hostReceivedMonotonicNs": 40587647839791,
+    "line": "         1793291095.333 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9841866,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291095.333,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9841866,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9841866,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291096053115000,
+    "hostReceivedMonotonicNs": 40588653397666,
+    "line": "         1793291096.339 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9842872,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291096.339,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9842872,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9842872,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291097058266000,
+    "hostReceivedMonotonicNs": 40589658567916,
+    "line": "         1793291097.342 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9843875,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291097.342,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9843875,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9843875,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291098059777000,
+    "hostReceivedMonotonicNs": 40590660099708,
+    "line": "         1793291098.345 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9844878,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291098.345,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9844878,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9844878,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291099062807000,
+    "hostReceivedMonotonicNs": 40591663148500,
+    "line": "         1793291099.347 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9845880,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291099.347,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9845880,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9845880,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291100094230000,
+    "hostReceivedMonotonicNs": 40592694592791,
+    "line": "         1793291100.351 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9846884,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291100.351,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9846884,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9846884,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291101071322000,
+    "hostReceivedMonotonicNs": 40593671702916,
+    "line": "         1793291101.357 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9847890,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291101.357,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9847890,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9847890,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291102076479000,
+    "hostReceivedMonotonicNs": 40594676879250,
+    "line": "         1793291102.362 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9848895,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291102.362,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9848895,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9848895,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291103081449000,
+    "hostReceivedMonotonicNs": 40595681868791,
+    "line": "         1793291103.364 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9849897,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291103.364,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9849897,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9849897,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291104081263000,
+    "hostReceivedMonotonicNs": 40596681703083,
+    "line": "         1793291104.366 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9850899,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291104.366,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9850899,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9850899,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291105085911000,
+    "hostReceivedMonotonicNs": 40597686369833,
+    "line": "         1793291105.371 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9851904,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291105.371,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9851904,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9851904,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291106092028000,
+    "hostReceivedMonotonicNs": 40598692506708,
+    "line": "         1793291106.378 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9852911,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291106.378,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9852911,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9852911,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291107104720000,
+    "hostReceivedMonotonicNs": 40599705218000,
+    "line": "         1793291107.385 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9853918,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291107.385,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9853918,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9853918,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291108103703000,
+    "hostReceivedMonotonicNs": 40600704221000,
+    "line": "         1793291108.389 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9854922,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291108.389,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9854922,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9854922,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291109110286000,
+    "hostReceivedMonotonicNs": 40601710823375,
+    "line": "         1793291109.396 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9855929,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291109.396,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9855929,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9855929,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291110112939000,
+    "hostReceivedMonotonicNs": 40602713497833,
+    "line": "         1793291110.398 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9856931,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291110.398,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9856931,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9856931,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291111121847000,
+    "hostReceivedMonotonicNs": 40603722424416,
+    "line": "         1793291111.402 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9857935,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291111.402,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9857935,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9857935,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  },
+  {
+    "hostReceivedUnixNs": 1793291112120956000,
+    "hostReceivedMonotonicNs": 40604721552458,
+    "line": "         1793291112.405 26822 26822 I GuardRuntime: {\"event\":\"tick\",\"elapsedMs\":9858938,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "deviceEpochSeconds": 1793291112.405,
+    "pid": 26822,
+    "tag": "GuardRuntime",
+    "message": "{\"event\":\"tick\",\"elapsedMs\":9858938,\"requestId\":29,\"startedMs\":9813615,\"visible\":false,\"ending\":false,\"guarding\":true}",
+    "data": {
+      "event": "tick",
+      "elapsedMs": 9858938,
+      "requestId": 29,
+      "startedMs": 9813615,
+      "visible": false,
+      "ending": false,
+      "guarding": true
+    }
+  }
+]

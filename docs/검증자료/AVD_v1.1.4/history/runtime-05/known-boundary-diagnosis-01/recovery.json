@@ -1,0 +1,41 @@
+{
+  "originalCleanupRemainsFalse": true,
+  "manualTesterRecovery": true,
+  "issues": [],
+  "installedApkSha256": "14709ea8c5b7c16f8d91592d27d3d408e65fd513fd8246aea004c71f1903fe03",
+  "restoredAudioFlags": {
+    "tts": true,
+    "chime": true
+  },
+  "restoredMotionTraceProperty": "",
+  "finalSnapshot": {
+    "event": "runtime_snapshot",
+    "hostUnixNs": 1793290377530291000,
+    "hostMonotonicNs": 39870116539958,
+    "label": "recovery-final-idle",
+    "pid": "14662",
+    "isFrozen": false,
+    "servicePresent": false,
+    "foregroundService": false,
+    "serviceTypeMask": null,
+    "foregroundIdCorrect": false,
+    "activeNotificationCount": 0
+  },
+  "foreground": {
+    "event": "recovery-foreground",
+    "hostUnixNs": 1793290377625682000,
+    "hostMonotonicNs": 39870211933750,
+    "deviceElapsedMs": 9124390,
+    "pid": "14662",
+    "focus": [
+      "topResumedActivity=ActivityRecord{95e37b5 u10 ai.vipseat.cargoconcierge/.MainActivity t1000398}",
+      "topResumedActivity=ActivityRecord{8b8b5e3 u10 ai.umos.drivingview/.DrivingViewActivity t1000385}",
+      "topResumedActivity=ActivityRecord{9b5f2e6 u10 ai.umos.homescreen/.HomeActivity t1000383}"
+    ],
+    "vipActivityState": "RESUMED",
+    "vipVisible": true
+  },
+  "vehicleFieldsUnchanged": true,
+  "rootForwardPreserved": true,
+  "rootHeartbeatNotTouched": true
+}

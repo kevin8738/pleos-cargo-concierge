@@ -1,0 +1,67 @@
+{
+  "passed": false,
+  "issues": [
+    "synthetic comparison boundary absent from report UI",
+    "execution did not complete",
+    "cleanup not verified",
+    "final MotionTrace does not establish IDLE/P0"
+  ],
+  "traceRows": 436,
+  "guardRows": 435,
+  "receivedSpeedRows": 145,
+  "expectedMaximumG": 0.12354462329191915,
+  "motionEvents": 417,
+  "freshLongitudinalSamples": 139,
+  "model": {
+    "wheelbaseM": 2.9000000953674316,
+    "steeringRatio": 15,
+    "smoothing": 0.5,
+    "gravityMps2": 9.80665,
+    "maxBrakeDecelMps2": 8
+  },
+  "boundaryPolicy": {
+    "limitG": 0.12,
+    "warnRatio": 0.8,
+    "chimeCooldownMs": 5000,
+    "coachCooldownMs": 8000,
+    "audibleCooldownMs": 8000,
+    "badgeHoldMs": 3000,
+    "maxVoiceCoachPerTrip": 3,
+    "maxAudiblePerTrip": 6,
+    "emergencyG": 0.6,
+    "minCoachSpeedMps": 4.166666666666667
+  },
+  "audioOracle": {
+    "drivingSpeechCount": 2,
+    "drivingChimeCount": 1,
+    "coachingCount": 2,
+    "warnCount": 1,
+    "suppressed": {
+      "COALESCED": 1
+    },
+    "admissions": [
+      {
+        "tMs": 8732506,
+        "kind": "chime"
+      },
+      {
+        "tMs": 8742497,
+        "kind": "speech"
+      },
+      {
+        "tMs": 8750530,
+        "kind": "speech"
+      }
+    ],
+    "actualPlayback": "not measured; both settings OFF"
+  },
+  "receivedDtMinSeconds": 0.398,
+  "receivedDtMaxSeconds": 0.658,
+  "arrivalTraces": 1,
+  "evidenceScope": "Synthetic DEMO -> production estimator/badge/audio-admission/report; received dt oracle. Both audio settings OFF; playback unmeasured.",
+  "limits": [
+    "Foreground synthetic boundary probe; no native SDK background claim.",
+    "No vehicle accuracy, physical cargo outcome, native navigation or audio claim.",
+    "Gaps/reordered batches are failures; no policy changes or discarded background interval."
+  ]
+}

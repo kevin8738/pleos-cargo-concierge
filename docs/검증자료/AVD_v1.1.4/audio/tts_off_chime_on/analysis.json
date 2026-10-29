@@ -1,0 +1,59 @@
+{
+  "case": "tts_off_chime_on",
+  "trigger": {
+    "command": "preset",
+    "value": "COFFEE",
+    "started": {
+      "host_unix_ns": 1793290843405051000,
+      "host_monotonic_ns": 40336000406916,
+      "host_utc": "2026-10-29T16:20:43.405051+00:00"
+    },
+    "finished": {
+      "host_unix_ns": 1793290843455414000,
+      "host_monotonic_ns": 40336050771375,
+      "host_utc": "2026-10-29T16:20:43.455420+00:00"
+    }
+  },
+  "windows": {
+    "pre_event": {
+      "window_seconds": [
+        -3,
+        0
+      ],
+      "packet_count": 207,
+      "captured_pcm_seconds": 0.19404166666666667,
+      "peak_absolute_s16": 2,
+      "rms_s16_over_received_samples": 1.459421789781688
+    },
+    "response_0_to_8s": {
+      "window_seconds": [
+        0,
+        8
+      ],
+      "packet_count": 673,
+      "captured_pcm_seconds": 3.8231041666666665,
+      "peak_absolute_s16": 146,
+      "rms_s16_over_received_samples": 16.20940249180549
+    },
+    "late_8_to_12s": {
+      "window_seconds": [
+        8,
+        12
+      ],
+      "packet_count": 338,
+      "captured_pcm_seconds": 0.3168958333333333,
+      "peak_absolute_s16": 2,
+      "rms_s16_over_received_samples": 1.4747117799765856
+    }
+  },
+  "capture_status": "CAPTURED",
+  "rpc_status": "CANCELLED",
+  "wall_seconds": 15.00651,
+  "packet_count": 1265,
+  "pcm_duration_seconds": 4.378104166666667,
+  "peak_absolute_s16": 146,
+  "rms_normalized": 0.00046253138220123054,
+  "packet_timestamp_span_seconds": 14.983808,
+  "wav_is_packet_concatenation_not_continuous_wall_time": true,
+  "attribution_limit": "Only an ON/OFF amplitude/time-window contrast; content intelligibility, navigation contention and vehicle effects unverified."
+}

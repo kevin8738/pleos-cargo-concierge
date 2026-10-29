@@ -1,0 +1,24 @@
+{
+  "case": "force-stop",
+  "scope": "Official AVD runtime; no physical sensor accuracy or audio measurement.",
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "originalPid": "26822",
+  "clockCalibration": {
+    "deviceMinusHostNs": 299044769,
+    "uncertaintyNs": 13334500,
+    "hostBeforeNs": 1793291169170490000,
+    "hostAfterNs": 1793291169197159000,
+    "deviceEpochNs": 1793291169482869269
+  },
+  "originalLogProperties": {
+    "GuardRuntime": "",
+    "MotionTrace": ""
+  },
+  "locationTypeExpectation": "on",
+  "session": {
+    "requestId": 32,
+    "startedMs": 9918265
+  },
+  "interruptedHostNs": 1793291181906752000,
+  "manualRelaunchHostNs": 1793291200119507000
+}

@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"capture_status\": \"CAPTURED\", \"audio_observation\": \"NONZERO_PCM\", \"rpc_status\": \"DEADLINE_EXCEEDED\", \"packet_count\": 1264, \"bytes_written\": 1655428, \"exit_code\": 0}\n",
+  "stderr_present_suppressed": false
+}

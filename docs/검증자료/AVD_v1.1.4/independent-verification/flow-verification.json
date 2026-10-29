@@ -1,0 +1,124 @@
+{
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "artifact_hashes": {
+    "count": 29,
+    "mismatches": []
+  },
+  "files_outside_existing_manifest": [
+    "decode-check.log",
+    "decode-original-timebase.log"
+  ],
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 2560,
+        "height": 1440
+      },
+      {
+        "codec_type": "data"
+      },
+      {
+        "codec_type": "data"
+      }
+    ],
+    "format": {
+      "duration": "82.287311",
+      "size": "34623201"
+    }
+  },
+  "video_sha256": "74483ce733bb5a47bd3271eac06968baeffafb676e3031c091217967fdd1eda8",
+  "raw_display_max_g": 4.49,
+  "visual_inspection": "A4-arrival.png directly inspected: 4.49G, synthetic input, highG unassessed, real-driving assessment unavailable, 18C average SETTING,22C passenger restored.",
+  "limits": [
+    "Flow demonstrates emulator interaction/readback, not physical G accuracy/cargo outcome; do not compare4.49G against earlier fixture runs3.69G/4.53G.",
+    "Silent screenrecord has no audio stream; audio-output evidence is separate matrix03.",
+    "Initial one-tap is supported by retained harness/timeline plus loaded UI; no independent input-event recording.",
+    "Root decoder evidence inspected, decode not rerun by reviewer; ffprobe metadata and source SHA independently recomputed.",
+    "Video end duration differs from host flow_complete timestamp by about83ms; different capture/host clocks, not evidence of a cut.",
+    "Tester cleanup is external fixture restore, distinct from app arrival restore."
+  ],
+  "checks": [
+    {
+      "check": "artifact-sha256.json hashes",
+      "passed": true
+    },
+    {
+      "check": "before/after installed same runtime06",
+      "passed": true
+    },
+    {
+      "check": "nine reported assertions true",
+      "passed": true
+    },
+    {
+      "check": "initial idle22",
+      "passed": true
+    },
+    {
+      "check": "loaded18 setting and limits visible",
+      "passed": true
+    },
+    {
+      "check": "driving Console state and short UI",
+      "passed": true
+    },
+    {
+      "check": "park driver door arrival and restored22",
+      "passed": true
+    },
+    {
+      "check": "synthetic highG report explicit",
+      "passed": true
+    },
+    {
+      "check": "conditional restoration disclosure",
+      "passed": true
+    },
+    {
+      "check": "power-off setting18 and UI",
+      "passed": true
+    },
+    {
+      "check": "occupied blocked leaves22 with UI",
+      "passed": true
+    },
+    {
+      "check": "one initial cake tap marker and ordered observations",
+      "passed": true
+    },
+    {
+      "check": "single screenrecord session and observed cake tap path",
+      "passed": true
+    },
+    {
+      "check": "video bytes and SHA",
+      "passed": true
+    },
+    {
+      "check": "video duration",
+      "passed": true
+    },
+    {
+      "check": "video2560x1440 no audio and two data streams",
+      "passed": true
+    },
+    {
+      "check": "root decode evidence original timebase zero errors",
+      "passed": true
+    },
+    {
+      "check": "tester fixture restored values",
+      "passed": true
+    },
+    {
+      "check": "flow SDK readback18/22 and applied/restore observed",
+      "passed": true
+    }
+  ],
+  "check_count": 19,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

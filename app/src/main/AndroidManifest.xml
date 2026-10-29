@@ -7,6 +7,14 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-feature android:name="android.hardware.microphone" android:required="false" />
 
+    <!-- User-started active guards remain observable while the built-in navigation is foreground. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <!-- Speech input (STT fallback via android.speech.SpeechRecognizer; Pleos STT also records audio). -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -33,6 +41,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.CargoConcierge">
+
+        <service
+            android:name=".runtime.GuardForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse|location">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="User-started cargo guard processes live vehicle and navigation events and bounded coaching while navigation is foreground; delayed work cannot provide the active guard. Stops after guard end and cabin result handling." />
+        </service>
 
         <!-- android.car is present on every AAOS build; optional so the APK also installs elsewhere. -->
         <uses-library android:name="android.car" android:required="false" />

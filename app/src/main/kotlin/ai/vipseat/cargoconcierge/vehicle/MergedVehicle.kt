@@ -37,14 +37,19 @@ class MergedVehicle(
     private val sources: List<VehiclePort>,
     private val mock: MockVehicle,
     private val controlTarget: VehiclePort? = sources.firstOrNull(),
+    private val monotonicNowMs: () -> Long = { SystemClock.elapsedRealtime() },
+    private val platformProvenance: MotionProvenance = vehicleMotionProvenance(Build.PRODUCT, Build.VERSION.SDK_INT),
 ) : VehiclePort {
     constructor(primary: VehiclePort?, mock: MockVehicle) : this(listOfNotNull(primary), mock)
 
     private val arbiter = SpeedArbiter.forSources(sources.size)
     private val steeringArbiter = SpeedArbiter.forSources(sources.size)
     private val realMotionArbiter = SpeedArbiter(LongArray(sources.size) { 2_000L })
+    // Guarded together with realMotionArbiter. The observer never owns this target's own feed.
+    private var realMotionActive = false
+    private var observedMotionPriority: Int? = null
+    private val disconnectedMotionSources = mutableSetOf<Int>()
     private val sourceStatuses = mutableMapOf<Int, VehicleSignal.SourceStatus>()
-    private val platformProvenance = vehicleMotionProvenance(Build.PRODUCT, Build.VERSION.SDK_INT)
 
     override val name: String =
         if (sources.isEmpty()) mock.name else sources.joinToString(" + ") { it.name } + " + demo bridge"
@@ -52,16 +57,32 @@ class MergedVehicle(
     override val signals: Flow<VehicleSignal> = merge(
         *(listOf(mock) + sources).mapIndexed { priority, src ->
             src.signals.onEach { sig ->
-                // Observe actual AOSP/Pleos speed BEFORE the demo-priority filter. Synthetic samples
-                // can drive the coaching demonstration, but cannot authorize real cabin commands.
-                if (priority > 0 && sig is VehicleSignal.Speed && sig.mps.isFinite() && sig.mps >= 0) {
-                    val now = SystemClock.elapsedRealtime()
-                    if (synchronized(realMotionArbiter) { realMotionArbiter.accept(priority - 1, now) }) {
-                        (controlTarget as? RealMotionObserver)?.observeRealMotion(sig, now)
+                // Other actual sources reach the command guard before the demo-priority filter.
+                // Never loop a target's location-derived speed back into its external cache.
+                if (priority > 0 && src !== controlTarget) synchronized(realMotionArbiter) {
+                    if (realMotionActive) when (sig) {
+                        is VehicleSignal.Speed -> if (priority !in disconnectedMotionSources && sig.mps.isFinite() && sig.mps >= 0) {
+                            val now = monotonicNowMs()
+                            if (realMotionArbiter.accept(priority - 1, now)) {
+                                observedMotionPriority = priority
+                                (controlTarget as? RealMotionObserver)?.observeRealMotion(sig, now)
+                            }
+                        }
+                        is VehicleSignal.SourceStatus -> if (sig.connected) {
+                            disconnectedMotionSources.remove(priority)
+                        } else {
+                            disconnectedMotionSources.add(priority)
+                            if (observedMotionPriority == priority) {
+                                observedMotionPriority = null
+                                realMotionArbiter.reset()
+                                (controlTarget as? RealMotionObserver)?.observeRealMotion(sig, monotonicNowMs())
+                            }
+                        }
+                        else -> Unit
                     }
                 }
             }.mapNotNull { sig ->
-                val now = SystemClock.elapsedRealtime()
+                val now = monotonicNowMs()
                 when (sig) {
                     is VehicleSignal.Speed -> synchronized(arbiter) { arbiter.acceptSpeed(priority, sig, now) }
                     is VehicleSignal.SteeringAngle -> sig.takeIf { synchronized(steeringArbiter) { steeringArbiter.accept(priority, now) } }
@@ -76,22 +97,35 @@ class MergedVehicle(
                         detail = sourceStatuses.entries.sortedBy { it.key }.joinToString(" | ") {
                             "${sources[it.key - 1].name}: ${if (it.value.connected) "연결" else "연결 끊김"} ${it.value.detail}"
                         },
-                    ).also { combined ->
-                        if (!combined.connected) (controlTarget as? RealMotionObserver)?.observeRealMotion(combined, SystemClock.elapsedRealtime())
-                    }
+                    )
                 } else sig.withMotionProvenance(if (priority == 0) MotionProvenance.SYNTHETIC else platformProvenance)
             }
         }.toTypedArray(),
     )
 
     override suspend fun connect() {
+        synchronized(realMotionArbiter) {
+            // Actual initial getter samples can precede SourceStatus(true). Explicit connect
+            // opens a new observation phase; a queued speed during teardown cannot open it.
+            if (!realMotionActive) {
+                realMotionArbiter.reset()
+                observedMotionPriority = null
+                disconnectedMotionSources.clear()
+                realMotionActive = true
+            }
+        }
         sources.forEach { runCatching { it.connect() } }
         mock.connect(emitInitialState = sources.isEmpty())
     }
 
     override suspend fun disconnect() {
-        (controlTarget as? RealMotionObserver)?.observeRealMotion(VehicleSignal.SourceStatus(false, "disconnect"), SystemClock.elapsedRealtime())
-        synchronized(realMotionArbiter) { realMotionArbiter.reset() }
+        synchronized(realMotionArbiter) {
+            realMotionActive = false
+            observedMotionPriority = null
+            disconnectedMotionSources.clear()
+            realMotionArbiter.reset()
+            (controlTarget as? RealMotionObserver)?.observeRealMotion(VehicleSignal.SourceStatus(false, "disconnect"), monotonicNowMs())
+        }
         synchronized(arbiter) { arbiter.reset() }
         synchronized(steeringArbiter) { steeringArbiter.reset() }
         synchronized(sourceStatuses) { sourceStatuses.clear() }

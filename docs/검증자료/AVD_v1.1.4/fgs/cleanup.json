@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "executionErrors": [],
+  "cleanupErrors": [],
+  "restoredMode": "allow",
+  "restoredProperties": {
+    "GuardRuntime": "",
+    "MotionTrace": ""
+  }
+}

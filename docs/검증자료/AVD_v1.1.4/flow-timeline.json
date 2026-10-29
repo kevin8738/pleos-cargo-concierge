@@ -1,0 +1,53 @@
+{
+  "events": [
+    {
+      "seconds": 2.0,
+      "event": "A1-home"
+    },
+    {
+      "seconds": 6.87,
+      "event": "tap_recent_cake_once"
+    },
+    {
+      "seconds": 10.88,
+      "event": "A2-loaded"
+    },
+    {
+      "seconds": 13.63,
+      "event": "console_drive_start"
+    },
+    {
+      "seconds": 25.37,
+      "event": "A3-driving"
+    },
+    {
+      "seconds": 46.52,
+      "event": "console_park_driver_door_open"
+    },
+    {
+      "seconds": 51.53,
+      "event": "A4-arrival"
+    },
+    {
+      "seconds": 58.55,
+      "event": "power_off_second_trip"
+    },
+    {
+      "seconds": 62.57,
+      "event": "A5-power-off"
+    },
+    {
+      "seconds": 72.57,
+      "event": "occupied_unknown_third_trip"
+    },
+    {
+      "seconds": 76.58,
+      "event": "A6-occupied-blocked"
+    },
+    {
+      "seconds": 82.37,
+      "event": "flow_complete"
+    }
+  ],
+  "limits": "Actual v1.1.4 APK in official AVD. All vehicle inputs including motion are synthetic Console/DDS simulator values; SDK calls/readbacks are real emulator operations. UI cake is tapped at observed bounds. end/ack use adb UI actions. No physical cargo test or measured audio. Uninterrupted silent screen recording."
+}

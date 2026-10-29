@@ -1,0 +1,14 @@
+{
+  "command": "preset",
+  "value": "COFFEE",
+  "started": {
+    "host_unix_ns": 1793290775252613000,
+    "host_monotonic_ns": 40267846640375,
+    "host_utc": "2026-10-29T16:19:35.252615+00:00"
+  },
+  "finished": {
+    "host_unix_ns": 1793290775305838000,
+    "host_monotonic_ns": 40267899866500,
+    "host_utc": "2026-10-29T16:19:35.305843+00:00"
+  }
+}

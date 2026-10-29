@@ -1,0 +1,29 @@
+{
+  "tts": {
+    "checked": true,
+    "bounds": [
+      2415,
+      368,
+      2467,
+      416
+    ]
+  },
+  "chime": {
+    "checked": false,
+    "bounds": [
+      2415,
+      455,
+      2467,
+      503
+    ]
+  },
+  "demo_curve": {
+    "checked": true,
+    "bounds": [
+      2415,
+      671,
+      2467,
+      719
+    ]
+  }
+}

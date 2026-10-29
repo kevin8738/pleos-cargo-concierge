@@ -16,6 +16,9 @@ import ai.vipseat.cargoconcierge.vehicle.MergedVehicle
 import ai.vipseat.cargoconcierge.vehicle.aosp.AospCarVehicle
 import android.Manifest
 import android.content.Context
+import android.content.pm.PackageManager
+import android.location.LocationManager
+import androidx.core.content.ContextCompat
 
 /**
  * pleos flavor: Pleos_Connect_v2.1 AVD / Pleos device.
@@ -29,7 +32,15 @@ import android.content.Context
  */
 object FlavorSources : SourceFactory {
     override fun create(context: Context, mockVehicle: MockVehicle, mockNavi: MockNavi): Sources {
-        val pleosVehicle = PleosVehicle(context)
+        val app = context.applicationContext
+        val locationAccessAvailable: () -> Boolean = {
+            val standardPermission = listOf(Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION)
+                .any { ContextCompat.checkSelfPermission(app, it) == PackageManager.PERMISSION_GRANTED }
+            standardPermission &&
+                ContextCompat.checkSelfPermission(app, "pleos.car.permission.FUSED_LOCATION") == PackageManager.PERMISSION_GRANTED &&
+                runCatching { app.getSystemService(LocationManager::class.java)?.isLocationEnabled == true }.getOrDefault(false)
+        }
+        val pleosVehicle = PleosVehicle(context, locationAccessAvailable)
         val aosp = AospCarVehicle.createIfAvailable(context)
         val pleosNavi = PleosNavi(context)
         return Sources(
@@ -39,10 +50,14 @@ object FlavorSources : SourceFactory {
             voice = FallbackVoiceInput(primary = PleosVoiceInput(context), fallback = AndroidSttVoiceInput(context)),
             runtimePermissions = listOf(
                 Manifest.permission.RECORD_AUDIO,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
                 "android.car.permission.CAR_SPEED",
                 "android.car.permission.CAR_POWERTRAIN",
             ) + PleosRuntime.runtimePermissions,
             description = "Pleos Vehicle 2.3.2 (control) · CarPropertyManager (speed/gear) · NaviHelper 3.0.5 · FusedLocation 1.1.3 · TTS/STT 3.3.1 (+ demo bridge)",
+            locationAccessAvailable = locationAccessAvailable,
+            setLocationAccessAllowed = pleosVehicle::setLocationAccessAllowed,
         )
     }
 }

@@ -1,0 +1,17 @@
+{
+  "case": "off",
+  "session": {
+    "requestId": 4,
+    "startedMs": 10130701
+  },
+  "verdict": "CONTROL_BOUNDARY_OBSERVED_ONLY",
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "issues": [],
+  "cleanupVerified": true,
+  "executedWithoutError": true,
+  "limits": [
+    "No GPS fix injected or recorded; cache invalidation and real speed accuracy unmeasured.",
+    "Reconnect logs alone do not prove fresh gear/Pleos getter or native route callback delivery.",
+    "Stationary COFFEE AVD only; no human/real-car validation."
+  ]
+}

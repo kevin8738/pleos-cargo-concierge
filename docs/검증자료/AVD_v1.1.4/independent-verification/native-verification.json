@@ -1,0 +1,266 @@
+{
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "clock": {
+    "deviceMinusHostNs": 299806636,
+    "uncertaintyNs": 17271500,
+    "hostBeforeNs": 1793291064541716000,
+    "hostAfterNs": 1793291064576259000,
+    "deviceEpochNs": 1793291064858794136
+  },
+  "windows": {
+    "route_request_to_return": {
+      "host_duration_seconds": 37.790876,
+      "harness_tolerance": {
+        "route_drive": 1,
+        "tbt": 12,
+        "free_drive": 1,
+        "ticks": 38,
+        "max_tick_gap_ms": 1013
+      },
+      "conservative": {
+        "route_drive": 1,
+        "tbt": 12,
+        "free_drive": 1,
+        "ticks": 38,
+        "max_tick_gap_ms": 1013
+      }
+    },
+    "direct_hidden_before_end": {
+      "host_duration_seconds": 20.29799,
+      "harness_tolerance": {
+        "route_drive": 0,
+        "tbt": 6,
+        "free_drive": 0,
+        "ticks": 21,
+        "max_tick_gap_ms": 1007
+      },
+      "conservative": {
+        "route_drive": 0,
+        "tbt": 6,
+        "free_drive": 0,
+        "ticks": 20,
+        "max_tick_gap_ms": 1007
+      }
+    },
+    "direct_hidden_to_return": {
+      "host_duration_seconds": 25.560683,
+      "harness_tolerance": {
+        "route_drive": 0,
+        "tbt": 9,
+        "free_drive": 1,
+        "ticks": 26,
+        "max_tick_gap_ms": 1007
+      },
+      "conservative": {
+        "route_drive": 0,
+        "tbt": 9,
+        "free_drive": 1,
+        "ticks": 25,
+        "max_tick_gap_ms": 1007
+      }
+    }
+  },
+  "session": {
+    "requestId": 29,
+    "startedMs": 9813615
+  },
+  "pid": "26822",
+  "end_to_no_service_snapshot_seconds": 0.58788,
+  "review_input_sha256": {
+    "after_guard_end-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "after_guard_end-process.txt": "e9363d4e9b89667a2b68745712726f2b685d788a4cb314e4867907f7a7400ce3",
+    "after_guard_end-service.txt": "9e41987fe0590b6071762b0a821bdfcfe2abea9ea4a34442a2998a2e7140217a",
+    "after_guard_end-snapshot.json": "aa614c1106ec93f1207df68016070f75c5a67a753c7c67bea9db00b7b9ab047a",
+    "after_guard_end_0-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "after_guard_end_0-process.txt": "28ae981f3168ee6a4eea61d9881060f4b0bf0a2d85eff2069d85374e3d2f25d4",
+    "after_guard_end_0-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "after_guard_end_0-snapshot.json": "d8ff9d8aef70e0fc0c7ab9d138315e1d7d32ab59f6829741d58a48554c1538fd",
+    "background-ticks.json": "78e00611125a86445095b697c931cfa657a98e52124ce21c6fe73eed2bab5d18",
+    "background_0-notification.txt": "e3fc6a2954b171345fc1d90abdf7f8ed1e79833962e2b1701e356fefe7dc1af6",
+    "background_0-process.txt": "4cedc373578ed5427106b4b7b9612031be6a46bf6b3388b550d455af28580c9e",
+    "background_0-service.txt": "ddeb1dfc43ba07bc14eda43db828696da65b8ad68316d268b154e34805ef5133",
+    "background_0-snapshot.json": "b9d8c9daa645e51cb6018e0a11636c4d5f0d554848657f1c651e361dc347728d",
+    "background_17_2-notification.txt": "e3fc6a2954b171345fc1d90abdf7f8ed1e79833962e2b1701e356fefe7dc1af6",
+    "background_17_2-process.txt": "5fba2d15857eabb00be7d76342064f1bbfea6eb0f90b77f00506bfcaa12c82b1",
+    "background_17_2-service.txt": "7e208a657f6b1b16ad37789dc6be3e9fe0679e6ed3f46eedf5156e89c1153dd6",
+    "background_17_2-snapshot.json": "eb2baf156763e62d4b74629f6967a4892182d8f8498f7fcbd24603f10e1a5605",
+    "background_8-notification.txt": "e3fc6a2954b171345fc1d90abdf7f8ed1e79833962e2b1701e356fefe7dc1af6",
+    "background_8-process.txt": "39d1ffacb51d2a61b2e52e217fe0639af5147888d98a974f9fb0eeb0ef9f44c0",
+    "background_8-service.txt": "2c27df42791a5c5fd33bcdf74877bd0e51300f8b39c5403a9071271703063bd8",
+    "background_8-snapshot.json": "967db4b390d9cf409aa92cd8053a242582cbb2ac2e70bfd89315791850d9f77c",
+    "before-coffee-tap.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "cleanup-current.xml": "feef767014a80111dda869a7c9fce35b384da648334d34967e9c1a9127296d68",
+    "cleanup-idle.png": "7c0d7e0984483521fb9453350e121e32f9f90b50da945f41e0e80b7875c5b9b4",
+    "cleanup-idle.xml": "feef767014a80111dda869a7c9fce35b384da648334d34967e9c1a9127296d68",
+    "cleanup-idle_0.xml": "feef767014a80111dda869a7c9fce35b384da648334d34967e9c1a9127296d68",
+    "cleanup.json": "3b9efb8a909b8a9fe82e74e295bb34a0e20e57cd80a46bf630abc4c6a29e9d73",
+    "cleanup_idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "cleanup_idle-process.txt": "996ae56591a4b4b540cb44313d3af137207ee3cde896ab2381ed49d3ccf0221d",
+    "cleanup_idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "cleanup_idle-snapshot.json": "00b480ef1d47161c12d55d16b95e28f97aed53547210ab119d98dfaf2d2619a9",
+    "coffee-active.png": "285bd55b42ff74aa57826f5483620c7d988ff55f73fb05f1571a3bee935e0685",
+    "coffee-active.xml": "7b146c474f91ec66b9989484d8cf318da64921fa7bf9b7437b78953e60d9eb7e",
+    "end-guard_0.xml": "23cf43c2d23547a5d444ef48c80fe993c3802c9c05b930eafdfc7a076ee32efc",
+    "environment.json": "94ffc346d2d0dbb42338a3b48a1d751debdac0ed89cfa7cd195152194e95ff13",
+    "guard_foreground_0-notification.txt": "e3fc6a2954b171345fc1d90abdf7f8ed1e79833962e2b1701e356fefe7dc1af6",
+    "guard_foreground_0-process.txt": "ff039faa835fd8807a6004eaa651da5b990d5e9d65c979342dd76a73cf499aa4",
+    "guard_foreground_0-service.txt": "0b68bafb9cb7c7e0404e055a163e8ad6c2d5a15acdfacdca1d294033f292d3c2",
+    "guard_foreground_0-snapshot.json": "25e27ea8cae77a595f5b304c779e05461f09d1d12e448c29f196c1c8600b314f",
+    "harness-source.py": "08b6be9ed1287508c8bcee21906bfc556dc5ff78f41a8bed50a761dc29291ae6",
+    "initial-idle.png": "2dd8e9d5ad9ca975388f8514cef23bd2184ac112b80d94e5d59ed254ad0f399b",
+    "initial-idle.xml": "d43a9f5ada42277d2356acd8f01783b495a44ed5d9b89d18e9aa2737c53f6a89",
+    "initial_idle-notification.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "initial_idle-process.txt": "7eafd4d4b72dd2d1c9a0f9a93d61ea3211be742c9478b9dc9947b5a7c9902a1a",
+    "initial_idle-service.txt": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+    "initial_idle-snapshot.json": "54cc1246b1f2ddc953e3e67b256f71b672ceeac486171063a4faa0e2015b7bd0",
+    "input-ledger.jsonl": "2d847e483041b553842462a62988ff7460ce2726fa892427c695edfd10f04e5a",
+    "live-log.jsonl": "8b4ec7d3601bb00d5591e2176df533ac0d13bd1a8149cfe996ae068d68ac4354",
+    "live-navigation-callbacks.json": "815486813119a459ea15c153f0a95b56ed5c386df6a264dbecdca762a5c1d824",
+    "live.log": "15fa162daac98759899c26d4f129e206fd07b89d8bb28baa73c1e81aa99ea644",
+    "native-route.png": "a4f611b319a7afb6b2d60f5dd655008c099941e398bc8d3d05f0acbd0905a18b",
+    "native-route.xml": "686724e340d0eab72838f0a95efb27e4ce29fb9c9956a19ce30afa9f974bb1d6",
+    "native_end_check.xml": "686724e340d0eab72838f0a95efb27e4ce29fb9c9956a19ce30afa9f974bb1d6",
+    "native_ended_0.xml": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+    "navi_detail_0.xml": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+    "navi_home_0.xml": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+    "navi_results_0.xml": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+    "navi_route_0.xml": "7ba91fef430659ceecb5804fb8fdc523832e936c127efb38db80df048e00d47e",
+    "navi_route_1.xml": "7ba91fef430659ceecb5804fb8fdc523832e936c127efb38db80df048e00d47e",
+    "navi_route_2.xml": "686724e340d0eab72838f0a95efb27e4ce29fb9c9956a19ce30afa9f974bb1d6",
+    "navi_search_0.xml": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+    "navigation-window.json": "9e733561ad8a9dff5988d3e75a96a24034743f6b4181fddab876cf0be0ae35e8",
+    "result.json": "18ab1d4c8564f5311290c46f429989f0873603e1d5642682a74f36e9f97bd69f",
+    "settings-muted.json": "2f85d8c356bb33e1c6c30ce23a645a1305db46957f45a5c0a273862b3b5d61e6",
+    "settings-muted_after_chime.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+    "settings-muted_after_tts.xml": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+    "settings-muted_before.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+    "settings-original.json": "b3beee3f76104221d29535b03e82b6de936975e031a6750e77e0a46923419035",
+    "settings-original.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+    "settings-restored.json": "f324bde2316934eadcef0587d9783ec30e349a49a5aed39af715e6a450b57805",
+    "settings-restored_after_chime.xml": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+    "settings-restored_after_tts.xml": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+    "settings-restored_before.xml": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+    "vehicle-after.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a",
+    "vehicle-before.json": "214795844ff7f2add9db8e01fa56abd1357f883bc45ad6f0c6bda21cca163d1a",
+    "vip-returned.png": "c9e54f8ac875d9c9b810c1ea9f133026b3cad78877561a66dd8c3f84fbc2efc7",
+    "vip-returned.xml": "23cf43c2d23547a5d444ef48c80fe993c3802c9c05b930eafdfc7a076ee32efc"
+  },
+  "hash_scope": "Review-generated input hashes; dataset has no prior artifact manifest.",
+  "limits": [
+    "One tick falls within clock uncertainty at the hidden observation start; 21 with harness tolerance, 20 conservative.",
+    "ROUTE_DRIVE 1/TBT12/FREE1 use route-request-to-return, not the directly observed hidden interval.",
+    "Stopped stationary official AVD, public route and live callbacks; no actual route progression or real vehicle accuracy.",
+    "Host receipt and calibrated device timestamp both bounded; single calibration gives no long-term drift bound.",
+    "Readback and selected logs are not a vehicle bus or physical temperature measurement.",
+    "Property restore/forward ownership are harness assertions; no separate final raw proof."
+  ],
+  "checks": [
+    {
+      "check": "installed runtime06 hash",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03 raw/log rows equal",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03 independently parsed fields",
+      "passed": true
+    },
+    {
+      "check": "clock arithmetic",
+      "passed": true
+    },
+    {
+      "check": "window boundaries from raw ledger",
+      "passed": true
+    },
+    {
+      "check": "direct hidden observation",
+      "passed": true
+    },
+    {
+      "check": "saved callback rows and counts match raw",
+      "passed": true
+    },
+    {
+      "check": "hidden ticks same session, visible false False",
+      "passed": true
+    },
+    {
+      "check": "saved background ticks match raw selected",
+      "passed": true
+    },
+    {
+      "check": "hidden ticks same session, visible false True",
+      "passed": true
+    },
+    {
+      "check": "no DEMO in directly observed background window",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/after_guard_end-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/after_guard_end_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/background_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/background_17_2-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/background_8-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/cleanup_idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/guard_foreground_0-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03/initial_idle-snapshot.json raw snapshots",
+      "passed": true
+    },
+    {
+      "check": "all active snapshots same PID foreground location and notification",
+      "passed": true
+    },
+    {
+      "check": "post-End service/notification absent",
+      "passed": true
+    },
+    {
+      "check": "one ready/finished same request",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03 unchanged measured cabin fields and Park",
+      "passed": true
+    },
+    {
+      "check": "runtime-avd-03 audio settings restored raw XML",
+      "passed": true
+    },
+    {
+      "check": "cleanup assertion no errors",
+      "passed": true
+    },
+    {
+      "check": "cleanup UI idle and service absent",
+      "passed": true
+    }
+  ],
+  "check_count": 26,
+  "errors": [],
+  "verdict": "PASS_WITH_SCOPE_LIMITATIONS"
+}

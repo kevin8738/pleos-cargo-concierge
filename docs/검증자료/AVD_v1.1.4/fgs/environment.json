@@ -1,0 +1,10 @@
+{
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "user": "10",
+  "operation": "START_FOREGROUND",
+  "originalMode": "allow",
+  "packageUid": "1010175",
+  "uidOverrideRaw": "No operations.\nDefault mode: allow\n",
+  "device": "emulator-5554",
+  "sdk": 34
+}
