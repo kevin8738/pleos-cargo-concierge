@@ -1,0 +1,6 @@
+{
+  "stage": "final forward inventory parser",
+  "error": "IndexError from blank line in adb forward --list",
+  "deviceMutationAfterError": false,
+  "repair": "discard empty lines before parsing three-field forward records"
+}

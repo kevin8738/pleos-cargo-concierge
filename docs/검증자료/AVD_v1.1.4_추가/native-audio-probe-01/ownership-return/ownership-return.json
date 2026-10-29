@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "identity": {
+    "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "pid": "22692",
+    "product": "crp_avd_arm64",
+    "api": "34"
+  },
+  "motionTraceProperty": "",
+  "settings": {
+    "tts": true,
+    "chime": true,
+    "demo_curve": true
+  },
+  "idleParkZeroUiObserved": true,
+  "servicePresent": false,
+  "activeNotificationCount": 0,
+  "ownConsoleHelperClosed": true,
+  "own8088ForwardRemoved": true,
+  "temporaryCredentialFilesRemaining": 0,
+  "lastVehicleReadbackFile": "../vehicle-after.json",
+  "lastVehicleReadbackSha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+  "nativeRouteOffEvidence": "../native-final-idle_0.xml",
+  "originalOnCleanupFailurePreserved": true,
+  "allNewCaptureRunsFinished": true
+}

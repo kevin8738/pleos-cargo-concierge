@@ -1,0 +1,64 @@
+{
+  "passed": false,
+  "issues": [
+    "cleanup not verified"
+  ],
+  "traceRows": 547,
+  "guardRows": 540,
+  "receivedSpeedRows": 180,
+  "expectedMaximumG": 0.12354462329191915,
+  "motionEvents": 417,
+  "freshLongitudinalSamples": 139,
+  "model": {
+    "wheelbaseM": 2.9000000953674316,
+    "steeringRatio": 15,
+    "smoothing": 0.5,
+    "gravityMps2": 9.80665,
+    "maxBrakeDecelMps2": 8
+  },
+  "boundaryPolicy": {
+    "limitG": 0.12,
+    "warnRatio": 0.8,
+    "chimeCooldownMs": 5000,
+    "coachCooldownMs": 8000,
+    "audibleCooldownMs": 8000,
+    "badgeHoldMs": 3000,
+    "maxVoiceCoachPerTrip": 3,
+    "maxAudiblePerTrip": 6,
+    "emergencyG": 0.6,
+    "minCoachSpeedMps": 4.166666666666667
+  },
+  "audioOracle": {
+    "drivingSpeechCount": 2,
+    "drivingChimeCount": 1,
+    "coachingCount": 2,
+    "warnCount": 1,
+    "suppressed": {
+      "COALESCED": 1
+    },
+    "admissions": [
+      {
+        "tMs": 14330256,
+        "kind": "chime"
+      },
+      {
+        "tMs": 14340236,
+        "kind": "speech"
+      },
+      {
+        "tMs": 14348267,
+        "kind": "speech"
+      }
+    ],
+    "actualPlayback": "separate PCM/callback observation in audio-result.json; reducer counts alone are not playback"
+  },
+  "receivedDtMinSeconds": 0.276,
+  "receivedDtMaxSeconds": 0.61,
+  "arrivalTraces": 1,
+  "evidenceScope": "Synthetic DEMO -> production estimator/badge/audio-admission/report; received dt oracle. Audio measured separately; reducer admission is not playback.",
+  "limits": [
+    "Foreground synthetic boundary probe; no native SDK background claim.",
+    "No vehicle accuracy, physical cargo outcome or native navigation claim; PCM/callback scope is separate.",
+    "Gaps/reordered batches are failures; no policy changes or discarded background interval."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "executionPassed": true,
+  "issues": [],
+  "nativeSpeechContentVerified": false,
+  "nativeVipContentionVerified": false,
+  "routeWindowCovered": false,
+  "baseline": {
+    "hostEpochWindow": [
+      1793296666.862803,
+      1793296681.17189
+    ],
+    "packetCount": 1238,
+    "receivedPcmSeconds": 1.1606041666666667,
+    "rmsS16": 1.4936635808221452,
+    "peakS16": 2
+  },
+  "response": {
+    "hostEpochWindow": [
+      1793296681.17189,
+      1793296710.949174
+    ],
+    "packetCount": 2215,
+    "receivedPcmSeconds": 7.884833333333333,
+    "rmsS16": 163.2952436120724,
+    "peakS16": 1842
+  },
+  "amplitudeContrastObserved": false,
+  "routeActiveHostEpochSeconds": 1793296696.0952919,
+  "packetCount": 3453,
+  "pcmDurationSeconds": 9.0454375,
+  "wallSeconds": 40.010816,
+  "pcmSha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+  "conclusion": "Native navigation audible output not established in this one bounded probe",
+  "limits": [
+    "No VIP guard or driving output in this case; no contention experiment",
+    "Native-only UI operations can also emit sounds; PCM alone does not identify spoken route guidance",
+    "Sparse received PCM concatenation is not continuous wall-time audio; no GPS progression or microphone"
+  ]
+}

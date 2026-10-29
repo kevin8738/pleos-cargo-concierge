@@ -1,0 +1,158 @@
+{
+  "session": 14897726,
+  "audioSettings": {
+    "tts": false,
+    "chime": false
+  },
+  "admissions": [
+    {
+      "kind": "chime",
+      "tMs": 14940833,
+      "tripStartedMs": 14897726,
+      "hostEpochSeconds": 1793296194.2167344,
+      "clockUncertaintySeconds": 0.015972,
+      "badge": "WARN",
+      "estimate": {
+        "lateralG": 0.10274804105870626,
+        "longitudinalG": 1.8784745009494125e-10,
+        "totalG": 0.10274804105870626,
+        "speedMps": 5,
+        "lateralAvailable": true,
+        "longitudinalAvailable": true,
+        "longitudinalFresh": false,
+        "hasData": true,
+        "quality": []
+      },
+      "pre": {
+        "hostEpochWindow": [
+          1793296191.2167344,
+          1793296194.1167345
+        ],
+        "packetCount": 249,
+        "receivedPcmSeconds": 0.23341666666666666,
+        "rmsS16": 1.4953963628557239,
+        "peakS16": 2
+      },
+      "response": {
+        "hostEpochWindow": [
+          1793296194.2167344,
+          1793296196.2167344
+        ],
+        "packetCount": 174,
+        "receivedPcmSeconds": 0.163125,
+        "rmsS16": 1.493771658440695,
+        "peakS16": 2
+      },
+      "lifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      }
+    },
+    {
+      "kind": "speech",
+      "tMs": 14950833,
+      "tripStartedMs": 14897726,
+      "hostEpochSeconds": 1793296204.2157342,
+      "clockUncertaintySeconds": 0.015972,
+      "badge": "OVER",
+      "estimate": {
+        "lateralG": 0.12354462329191918,
+        "longitudinalG": 1.7914528855795026e-16,
+        "totalG": 0.12354462329191918,
+        "speedMps": 5,
+        "lateralAvailable": true,
+        "longitudinalAvailable": true,
+        "longitudinalFresh": false,
+        "hasData": true,
+        "quality": []
+      },
+      "pre": {
+        "hostEpochWindow": [
+          1793296201.2157342,
+          1793296204.1157343
+        ],
+        "packetCount": 249,
+        "receivedPcmSeconds": 0.23341666666666666,
+        "rmsS16": 1.4940528301689842,
+        "peakS16": 2
+      },
+      "response": {
+        "hostEpochWindow": [
+          1793296204.2157342,
+          1793296212.0157342
+        ],
+        "packetCount": 667,
+        "receivedPcmSeconds": 0.6253125,
+        "rmsS16": 1.493988174763609,
+        "peakS16": 2
+      },
+      "lifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      }
+    },
+    {
+      "kind": "speech",
+      "tMs": 14958875,
+      "tripStartedMs": 14897726,
+      "hostEpochSeconds": 1793296212.2577343,
+      "clockUncertaintySeconds": 0.015972,
+      "badge": "OVER",
+      "estimate": {
+        "lateralG": 0.12354462329191918,
+        "longitudinalG": 2.7335401696464578e-21,
+        "totalG": 0.12354462329191918,
+        "speedMps": 5,
+        "lateralAvailable": true,
+        "longitudinalAvailable": true,
+        "longitudinalFresh": false,
+        "hasData": true,
+        "quality": []
+      },
+      "pre": {
+        "hostEpochWindow": [
+          1793296209.2577343,
+          1793296212.1577344
+        ],
+        "packetCount": 249,
+        "receivedPcmSeconds": 0.2334375,
+        "rmsS16": 1.4930300657828524,
+        "peakS16": 2
+      },
+      "response": {
+        "hostEpochWindow": [
+          1793296212.2577343,
+          1793296220.0577343
+        ],
+        "packetCount": 670,
+        "receivedPcmSeconds": 0.628125,
+        "rmsS16": 1.4935738523436475,
+        "peakS16": 2
+      },
+      "lifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      }
+    }
+  ],
+  "packetCount": 3437,
+  "pcmSha256": "6f4960a29fc65ab2e72cd14def8cdf6597eeb01bc3bef15fb50a6d45327aea77",
+  "pcmDurationSeconds": 3.222166666666667,
+  "wallSeconds": 40.007213,
+  "packetReceiveLagSeconds": {
+    "min": -0.0006339550018310547,
+    "max": 0.004305124282836914
+  },
+  "limits": [
+    "mixed emulator output only; no microphone/host input",
+    "PCM concatenates sparse received samples, not continuous wall time",
+    "no speech intelligibility or physical effect claim",
+    "driving window only; arrival speech playback not measured"
+  ]
+}

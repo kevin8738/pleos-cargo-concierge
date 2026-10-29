@@ -1,0 +1,134 @@
+{"event": "runtime_snapshot", "hostUnixNs": 1793296461306386000, "hostMonotonicNs": 45953677070750, "label": "preflight-runtime", "pid": "22692", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}
+{"event": "command_start", "hostUnixNs": 1793296461307492000, "hostMonotonicNs": 45953678175875, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296461357022000, "hostMonotonicNs": 45953727704875, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 45953678175875}
+{"event": "command_start", "hostUnixNs": 1793296463402763000, "hostMonotonicNs": 45955773402333, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296463445547000, "hostMonotonicNs": 45955816184500, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 45955773402333}
+{"event": "demo_hold_expiry_wait", "hostUnixNs": 1793296463446006000, "hostMonotonicNs": 45955816642833, "seconds": 61}
+{"event": "console_park_request", "hostUnixNs": 1793296526996641000, "hostMonotonicNs": 46019365855458}
+{"event": "console_request", "hostUnixNs": 1793296529995648000, "hostMonotonicNs": 46022364795875, "path": "/vehicle/hvac?dual=false&power=true&passenger_temp=22.0"}
+{"event": "console_response", "hostUnixNs": 1793296530000613000, "hostMonotonicNs": 46022369761166, "path": "/vehicle/hvac?dual=false&power=true&passenger_temp=22.0", "startHostMonotonicNs": 46022364795875}
+{"event": "console_request", "hostUnixNs": 1793296530000858000, "hostMonotonicNs": 46022370005666, "path": "/vehicle/seat?kind=occupied&area=passenger&value=false"}
+{"event": "console_response", "hostUnixNs": 1793296530004896000, "hostMonotonicNs": 46022374044125, "path": "/vehicle/seat?kind=occupied&area=passenger&value=false", "startHostMonotonicNs": 46022370005666}
+{"event": "console_request", "hostUnixNs": 1793296530005223000, "hostMonotonicNs": 46022374370125, "path": "/vehicle/body?door_fl=false"}
+{"event": "console_response", "hostUnixNs": 1793296530011969000, "hostMonotonicNs": 46022381116041, "path": "/vehicle/body?door_fl=false", "startHostMonotonicNs": 46022374370125}
+{"event": "lifecycle_request", "hostUnixNs": 1793296533074647000, "hostMonotonicNs": 46025443727166, "command": "preset", "value": "CAKE"}
+{"event": "lifecycle_completed", "hostUnixNs": 1793296533140923000, "hostMonotonicNs": 46025510000375, "command": "preset"}
+{"event": "lifecycle_request", "hostUnixNs": 1793296537149391000, "hostMonotonicNs": 46029518378583, "command": "end", "value": null}
+{"event": "lifecycle_completed", "hostUnixNs": 1793296537197216000, "hostMonotonicNs": 46029566202166, "command": "end"}
+{"event": "lifecycle_request", "hostUnixNs": 1793296541199288000, "hostMonotonicNs": 46033568186083, "command": "ack", "value": null}
+{"event": "lifecycle_completed", "hostUnixNs": 1793296541251766000, "hostMonotonicNs": 46033620661958, "command": "ack"}
+{"event": "screenrecord_started", "hostUnixNs": 1793296543731322000, "hostMonotonicNs": 46036100162708, "devicePid": "21690", "path": "/sdcard/v23-driving-on.mp4", "audio": false}
+{"event": "A1-home", "hostUnixNs": 1793296548450296000, "hostMonotonicNs": 46040819031250}
+{"event": "tap_recent_cake_once", "hostUnixNs": 1793296550576627000, "hostMonotonicNs": 46042945313916, "bounds": [1057, 738, 1165, 762]}
+{"event": "A2-loaded", "hostUnixNs": 1793296557416681000, "hostMonotonicNs": 46049785215291}
+{"event": "console_request", "hostUnixNs": 1793296557416806000, "hostMonotonicNs": 46049785340041, "path": "/vehicle/gear?gear=Drive"}
+{"event": "console_response", "hostUnixNs": 1793296557424821000, "hostMonotonicNs": 46049793355041, "path": "/vehicle/gear?gear=Drive", "startHostMonotonicNs": 46049785340041}
+{"event": "console_request", "hostUnixNs": 1793296557425074000, "hostMonotonicNs": 46049793607875, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296557431439000, "hostMonotonicNs": 46049799972583, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46049793607875}
+{"event": "console_request", "hostUnixNs": 1793296557935645000, "hostMonotonicNs": 46050304167875, "path": "/vehicle/controls?speed=2&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296557942052000, "hostMonotonicNs": 46050310575041, "path": "/vehicle/controls?speed=2&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46050304167875}
+{"event": "console_request", "hostUnixNs": 1793296558446300000, "hostMonotonicNs": 46050814812125, "path": "/vehicle/controls?speed=4&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296558463353000, "hostMonotonicNs": 46050831863333, "path": "/vehicle/controls?speed=4&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46050814812125}
+{"event": "console_request", "hostUnixNs": 1793296558973642000, "hostMonotonicNs": 46051342142083, "path": "/vehicle/controls?speed=6&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296558977580000, "hostMonotonicNs": 46051346079541, "path": "/vehicle/controls?speed=6&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46051342142083}
+{"event": "console_request", "hostUnixNs": 1793296559483721000, "hostMonotonicNs": 46051852208833, "path": "/vehicle/controls?speed=8&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296559487359000, "hostMonotonicNs": 46051855846916, "path": "/vehicle/controls?speed=8&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46051852208833}
+{"event": "console_request", "hostUnixNs": 1793296559989069000, "hostMonotonicNs": 46052357546083, "path": "/vehicle/controls?speed=10&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296559997943000, "hostMonotonicNs": 46052366419791, "path": "/vehicle/controls?speed=10&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46052357546083}
+{"event": "console_request", "hostUnixNs": 1793296560501165000, "hostMonotonicNs": 46052869630500, "path": "/vehicle/controls?speed=12&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296560506742000, "hostMonotonicNs": 46052875207416, "path": "/vehicle/controls?speed=12&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46052869630500}
+{"event": "console_request", "hostUnixNs": 1793296561016782000, "hostMonotonicNs": 46053385235208, "path": "/vehicle/controls?speed=14&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296561021115000, "hostMonotonicNs": 46053389569000, "path": "/vehicle/controls?speed=14&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46053385235208}
+{"event": "console_request", "hostUnixNs": 1793296561531668000, "hostMonotonicNs": 46053900110583, "path": "/vehicle/controls?speed=16&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296561538488000, "hostMonotonicNs": 46053906930375, "path": "/vehicle/controls?speed=16&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46053900110583}
+{"event": "console_request", "hostUnixNs": 1793296562048677000, "hostMonotonicNs": 46054417108458, "path": "/vehicle/controls?speed=18&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296562061544000, "hostMonotonicNs": 46054429974333, "path": "/vehicle/controls?speed=18&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46054417108458}
+{"event": "console_request", "hostUnixNs": 1793296562572727000, "hostMonotonicNs": 46054941145458, "path": "/vehicle/controls?speed=20&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296562587183000, "hostMonotonicNs": 46054955601875, "path": "/vehicle/controls?speed=20&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46054941145458}
+{"event": "console_request", "hostUnixNs": 1793296563088772000, "hostMonotonicNs": 46055457179416, "path": "/vehicle/controls?speed=22&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296563092988000, "hostMonotonicNs": 46055461395125, "path": "/vehicle/controls?speed=22&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46055457179416}
+{"event": "console_request", "hostUnixNs": 1793296563595923000, "hostMonotonicNs": 46055964319416, "path": "/vehicle/controls?speed=24&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296563600800000, "hostMonotonicNs": 46055969195916, "path": "/vehicle/controls?speed=24&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46055964319416}
+{"event": "console_request", "hostUnixNs": 1793296564109388000, "hostMonotonicNs": 46056477772583, "path": "/vehicle/controls?speed=26&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296564116771000, "hostMonotonicNs": 46056485155458, "path": "/vehicle/controls?speed=26&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46056477772583}
+{"event": "console_request", "hostUnixNs": 1793296564627036000, "hostMonotonicNs": 46056995409125, "path": "/vehicle/controls?speed=28&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296564634402000, "hostMonotonicNs": 46057002774750, "path": "/vehicle/controls?speed=28&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46056995409125}
+{"event": "console_request", "hostUnixNs": 1793296565144553000, "hostMonotonicNs": 46057512915000, "path": "/vehicle/controls?speed=30&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296565148684000, "hostMonotonicNs": 46057517045708, "path": "/vehicle/controls?speed=30&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46057512915000}
+{"event": "console_request", "hostUnixNs": 1793296565658968000, "hostMonotonicNs": 46058027317833, "path": "/vehicle/controls?speed=32&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296565669951000, "hostMonotonicNs": 46058038301125, "path": "/vehicle/controls?speed=32&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46058027317833}
+{"event": "console_request", "hostUnixNs": 1793296566177373000, "hostMonotonicNs": 46058545711791, "path": "/vehicle/controls?speed=34&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296566182967000, "hostMonotonicNs": 46058551305208, "path": "/vehicle/controls?speed=34&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46058545711791}
+{"event": "console_request", "hostUnixNs": 1793296566688784000, "hostMonotonicNs": 46059057111583, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296566698565000, "hostMonotonicNs": 46059066891416, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46059057111583}
+{"event": "console_request", "hostUnixNs": 1793296567207161000, "hostMonotonicNs": 46059575477375, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=60"}
+{"event": "console_response", "hostUnixNs": 1793296567211959000, "hostMonotonicNs": 46059580274500, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=60", "startHostMonotonicNs": 46059575477375}
+{"event": "A3-driving", "hostUnixNs": 1793296571695680000, "hostMonotonicNs": 46064063894416}
+{"event": "console_request", "hostUnixNs": 1793296571695870000, "hostMonotonicNs": 46064064084708, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296571698744000, "hostMonotonicNs": 46064066958625, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46064064084708}
+{"event": "console_request", "hostUnixNs": 1793296574708670000, "hostMonotonicNs": 46067076818291, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296574721573000, "hostMonotonicNs": 46067089720250, "path": "/vehicle/controls?speed=36&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46067076818291}
+{"event": "console_request", "hostUnixNs": 1793296575225957000, "hostMonotonicNs": 46067594092583, "path": "/vehicle/controls?speed=34&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296575230050000, "hostMonotonicNs": 46067598185625, "path": "/vehicle/controls?speed=34&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46067594092583}
+{"event": "console_request", "hostUnixNs": 1793296575740408000, "hostMonotonicNs": 46068108532666, "path": "/vehicle/controls?speed=32&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296575746240000, "hostMonotonicNs": 46068114363916, "path": "/vehicle/controls?speed=32&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46068108532666}
+{"event": "console_request", "hostUnixNs": 1793296576248350000, "hostMonotonicNs": 46068616463500, "path": "/vehicle/controls?speed=30&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296576260973000, "hostMonotonicNs": 46068629085333, "path": "/vehicle/controls?speed=30&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46068616463500}
+{"event": "console_request", "hostUnixNs": 1793296576766226000, "hostMonotonicNs": 46069134327958, "path": "/vehicle/controls?speed=28&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296576770055000, "hostMonotonicNs": 46069138156541, "path": "/vehicle/controls?speed=28&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46069134327958}
+{"event": "console_request", "hostUnixNs": 1793296577273694000, "hostMonotonicNs": 46069641784125, "path": "/vehicle/controls?speed=26&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296577279056000, "hostMonotonicNs": 46069647145791, "path": "/vehicle/controls?speed=26&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46069641784125}
+{"event": "console_request", "hostUnixNs": 1793296577788289000, "hostMonotonicNs": 46070156367833, "path": "/vehicle/controls?speed=24&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296577792264000, "hostMonotonicNs": 46070160342750, "path": "/vehicle/controls?speed=24&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46070156367833}
+{"event": "console_request", "hostUnixNs": 1793296578300712000, "hostMonotonicNs": 46070668779750, "path": "/vehicle/controls?speed=22&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296578304573000, "hostMonotonicNs": 46070672639500, "path": "/vehicle/controls?speed=22&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46070668779750}
+{"event": "console_request", "hostUnixNs": 1793296578809529000, "hostMonotonicNs": 46071177584458, "path": "/vehicle/controls?speed=20&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296578816318000, "hostMonotonicNs": 46071184373541, "path": "/vehicle/controls?speed=20&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46071177584458}
+{"event": "console_request", "hostUnixNs": 1793296579317321000, "hostMonotonicNs": 46071685364791, "path": "/vehicle/controls?speed=18&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296579323993000, "hostMonotonicNs": 46071692036500, "path": "/vehicle/controls?speed=18&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46071685364791}
+{"event": "console_request", "hostUnixNs": 1793296579834456000, "hostMonotonicNs": 46072202488833, "path": "/vehicle/controls?speed=16&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296579838187000, "hostMonotonicNs": 46072206219791, "path": "/vehicle/controls?speed=16&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46072202488833}
+{"event": "console_request", "hostUnixNs": 1793296580346431000, "hostMonotonicNs": 46072714451958, "path": "/vehicle/controls?speed=14&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296580353831000, "hostMonotonicNs": 46072721852000, "path": "/vehicle/controls?speed=14&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46072714451958}
+{"event": "console_request", "hostUnixNs": 1793296580857739000, "hostMonotonicNs": 46073225749041, "path": "/vehicle/controls?speed=12&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296580864575000, "hostMonotonicNs": 46073232584791, "path": "/vehicle/controls?speed=12&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46073225749041}
+{"event": "console_request", "hostUnixNs": 1793296581369202000, "hostMonotonicNs": 46073737201250, "path": "/vehicle/controls?speed=10&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296581380199000, "hostMonotonicNs": 46073748197125, "path": "/vehicle/controls?speed=10&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46073737201250}
+{"event": "console_request", "hostUnixNs": 1793296581888734000, "hostMonotonicNs": 46074256720708, "path": "/vehicle/controls?speed=8&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296581903042000, "hostMonotonicNs": 46074271028208, "path": "/vehicle/controls?speed=8&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46074256720708}
+{"event": "console_request", "hostUnixNs": 1793296582410472000, "hostMonotonicNs": 46074778446833, "path": "/vehicle/controls?speed=6&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296582418271000, "hostMonotonicNs": 46074786245708, "path": "/vehicle/controls?speed=6&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46074778446833}
+{"event": "console_request", "hostUnixNs": 1793296582929587000, "hostMonotonicNs": 46075297551208, "path": "/vehicle/controls?speed=4&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296582937231000, "hostMonotonicNs": 46075305194291, "path": "/vehicle/controls?speed=4&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46075297551208}
+{"event": "console_request", "hostUnixNs": 1793296583448236000, "hostMonotonicNs": 46075816187500, "path": "/vehicle/controls?speed=2&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296583458064000, "hostMonotonicNs": 46075826016208, "path": "/vehicle/controls?speed=2&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46075816187500}
+{"event": "console_request", "hostUnixNs": 1793296583959024000, "hostMonotonicNs": 46076326965000, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296583971801000, "hostMonotonicNs": 46076339740958, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46076326965000}
+{"event": "console_request", "hostUnixNs": 1793296584483011000, "hostMonotonicNs": 46076850939583, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296584487179000, "hostMonotonicNs": 46076855107333, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46076850939583}
+{"event": "console_park_request", "hostUnixNs": 1793296584487379000, "hostMonotonicNs": 46076855307500}
+{"event": "console_request", "hostUnixNs": 1793296590381984000, "hostMonotonicNs": 46082749781000, "path": "/vehicle/body?door_fl=true"}
+{"event": "console_response", "hostUnixNs": 1793296590386725000, "hostMonotonicNs": 46082754521416, "path": "/vehicle/body?door_fl=true", "startHostMonotonicNs": 46082749781000}
+{"event": "console_park_driver_door_open", "hostUnixNs": 1793296590387141000, "hostMonotonicNs": 46082754937833}
+{"event": "A4-arrival", "hostUnixNs": 1793296598008136000, "hostMonotonicNs": 46090375762708}
+{"event": "execution_complete", "hostUnixNs": 1793296598016737000, "hostMonotonicNs": 46090384362958}
+{"event": "console_request", "hostUnixNs": 1793296599949059000, "hostMonotonicNs": 46092316641208, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0"}
+{"event": "console_response", "hostUnixNs": 1793296599953680000, "hostMonotonicNs": 46092321261916, "path": "/vehicle/controls?speed=0&accelerator=0&brake=0&steering=0", "startHostMonotonicNs": 46092316641208}
+{"event": "console_park_request", "hostUnixNs": 1793296599953935000, "hostMonotonicNs": 46092321517500}
+{"event": "lifecycle_request", "hostUnixNs": 1793296602805169000, "hostMonotonicNs": 46095172686833, "command": "end", "value": null}
+{"event": "lifecycle_completed", "hostUnixNs": 1793296602854594000, "hostMonotonicNs": 46095222110958, "command": "end"}
+{"event": "lifecycle_request", "hostUnixNs": 1793296605860804000, "hostMonotonicNs": 46098228254833, "command": "ack", "value": null}
+{"event": "lifecycle_completed", "hostUnixNs": 1793296605895845000, "hostMonotonicNs": 46098263294041, "command": "ack"}
+{"event": "console_request", "hostUnixNs": 1793296607904378000, "hostMonotonicNs": 46100271783041, "path": "/vehicle/hvac?dual=false&power=false&passenger_temp=22.0&driver_temp=22.0"}
+{"event": "console_response", "hostUnixNs": 1793296607915890000, "hostMonotonicNs": 46100283294291, "path": "/vehicle/hvac?dual=false&power=false&passenger_temp=22.0&driver_temp=22.0", "startHostMonotonicNs": 46100271783041}
+{"event": "console_request", "hostUnixNs": 1793296607916176000, "hostMonotonicNs": 46100283580416, "path": "/vehicle/hvac?dual=false"}
+{"event": "console_response", "hostUnixNs": 1793296607920387000, "hostMonotonicNs": 46100287791375, "path": "/vehicle/hvac?dual=false", "startHostMonotonicNs": 46100283580416}
+{"event": "console_request", "hostUnixNs": 1793296607920796000, "hostMonotonicNs": 46100288200291, "path": "/vehicle/seat?kind=occupied&area=passenger&value=false"}
+{"event": "console_response", "hostUnixNs": 1793296607925174000, "hostMonotonicNs": 46100292578666, "path": "/vehicle/seat?kind=occupied&area=passenger&value=false", "startHostMonotonicNs": 46100288200291}
+{"event": "console_request", "hostUnixNs": 1793296607925397000, "hostMonotonicNs": 46100292801083, "path": "/vehicle/body?door_fl=false"}
+{"event": "console_response", "hostUnixNs": 1793296607929810000, "hostMonotonicNs": 46100297214208, "path": "/vehicle/body?door_fl=false", "startHostMonotonicNs": 46100292801083}
+{"event": "command_start", "hostUnixNs": 1793296609937225000, "hostMonotonicNs": 46102304585041, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296609975376000, "hostMonotonicNs": 46102342733625, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 46102304585041}
+{"event": "command_start", "hostUnixNs": 1793296612069013000, "hostMonotonicNs": 46104436324208, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296612108936000, "hostMonotonicNs": 46104476245958, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 46104436324208}
+{"event": "runtime_snapshot", "hostUnixNs": 1793296614771513000, "hostMonotonicNs": 46107138763041, "label": "cleanup-runtime", "pid": "22692", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}

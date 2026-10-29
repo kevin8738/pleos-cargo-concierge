@@ -1,0 +1,18 @@
+{
+  "request": {
+    "event": "native_route_request",
+    "hostUnixNs": 1793296681171890000,
+    "hostMonotonicNs": 46173537654625
+  },
+  "active": {
+    "event": "native_route_active",
+    "hostUnixNs": 1793296696095292000,
+    "hostMonotonicNs": 46188460722875,
+    "deviceElapsedMs": 15442670
+  },
+  "ended": {
+    "event": "native_audio_observation_route_ended",
+    "hostUnixNs": 1793296710949174000,
+    "hostMonotonicNs": 46203314272375
+  }
+}

@@ -1,0 +1,3467 @@
+{
+  "schema": "v23-additional-publication-1",
+  "candidate": "runtime-06",
+  "version": "1.1.4-pleos",
+  "versionCode": 7,
+  "apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "preflight_source_sha256": "40407fa71dfad66f31bc51ef352d98509f9533603e4d7f415e5be831da3e8da2",
+  "limitations": {
+    "field_data_rows": 0,
+    "synthetic_arrival": true,
+    "physical_g_accuracy_validated": false,
+    "historical_4_49_exact_pair_recovered": false,
+    "new_trace_is_separate_observation": true,
+    "native_audio_contention_validated": false,
+    "listening_clarity_or_fatigue_validated": false,
+    "sparse_pcm_is_continuous_wall_time": false,
+    "post_split_parts_are_wire_packets": false
+  },
+  "source_root": ".omx/qa/submission-v23",
+  "scope": "Additional evidence only. Observed result values are preserved, including false/unknown/failure; publication readiness is not an application PASS.",
+  "source_bytes_unchanged": true,
+  "previous_publication_bytes_unchanged": true,
+  "previous_publication_inventory_sha256": "4078022a871c08c910dc1717ab7d0a171aa6334bd5fb546c6ad84b41dc69dd91",
+  "previous_publication_files": 930,
+  "redaction": {
+    "project_root": "<PROJECT>",
+    "local_user_home": "<LOCAL_HOME>"
+  },
+  "hash_scope": "source_sha256 hashes immutable local original bytes; published_sha256/sha256 hashes public bytes; ZIP member hashes cover lossless original pieces.",
+  "privacy_scope": "Selected byte hashes were attested privacy-reviewed by the independent preflight author. Pattern checks do not inspect visual/audio personal information.",
+  "runs": [
+    {
+      "id": "driving-on",
+      "source_dir": "driving-audio-01/both-on",
+      "result_scope": "Original ON execution/cleanup false because empty MotionTrace property restoration failed; valid ON driving/PCM/arrival observations, original UI-parser recovery false preserved, distinct tester recovery confirmed. No relabelled original PASS.",
+      "identity_before": {
+        "path": "driving-audio-01/both-on/environment.json",
+        "pointer": "/installedApkSha256"
+      },
+      "identity_after": {
+        "path": "driving-audio-01/both-on/recovery-01/recovery-confirmed.json",
+        "pointer": "/identity/installedApkSha256"
+      },
+      "cleanup": {
+        "path": "driving-audio-01/both-on/recovery-01/recovery-confirmed.json",
+        "pointer": "/manualTesterRecoveryVerified"
+      },
+      "observed_results": [
+        {
+          "reference": {
+            "path": "driving-audio-01/both-on/result.json",
+            "pointer": ""
+          },
+          "value": {
+            "passed": false,
+            "issues": [
+              "property cleanup: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'setprop', 'log.tag.MotionTrace', '']' returned non-zero exit status 1."
+            ],
+            "oraclePassed": false,
+            "audioObserved": true
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-on/oracle-result.json",
+            "pointer": ""
+          },
+          "value": {
+            "passed": false,
+            "issues": [
+              "cleanup not verified"
+            ],
+            "traceRows": 547,
+            "guardRows": 540,
+            "receivedSpeedRows": 180,
+            "expectedMaximumG": 0.12354462329191915,
+            "motionEvents": 417,
+            "freshLongitudinalSamples": 139,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "boundaryPolicy": {
+              "limitG": 0.12,
+              "warnRatio": 0.8,
+              "chimeCooldownMs": 5000,
+              "coachCooldownMs": 8000,
+              "audibleCooldownMs": 8000,
+              "badgeHoldMs": 3000,
+              "maxVoiceCoachPerTrip": 3,
+              "maxAudiblePerTrip": 6,
+              "emergencyG": 0.6,
+              "minCoachSpeedMps": 4.166666666666667
+            },
+            "audioOracle": {
+              "drivingSpeechCount": 2,
+              "drivingChimeCount": 1,
+              "coachingCount": 2,
+              "warnCount": 1,
+              "suppressed": {
+                "COALESCED": 1
+              },
+              "admissions": [
+                {
+                  "tMs": 14330256,
+                  "kind": "chime"
+                },
+                {
+                  "tMs": 14340236,
+                  "kind": "speech"
+                },
+                {
+                  "tMs": 14348267,
+                  "kind": "speech"
+                }
+              ],
+              "actualPlayback": "separate PCM/callback observation in audio-result.json; reducer counts alone are not playback"
+            },
+            "receivedDtMinSeconds": 0.276,
+            "receivedDtMaxSeconds": 0.61,
+            "arrivalTraces": 1,
+            "evidenceScope": "Synthetic DEMO -> production estimator/badge/audio-admission/report; received dt oracle. Audio measured separately; reducer admission is not playback.",
+            "limits": [
+              "Foreground synthetic boundary probe; no native SDK background claim.",
+              "No vehicle accuracy, physical cargo outcome or native navigation claim; PCM/callback scope is separate.",
+              "Gaps/reordered batches are failures; no policy changes or discarded background interval."
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-on/audio-result.json",
+            "pointer": ""
+          },
+          "value": {
+            "session": 14282460,
+            "audioSettings": {
+              "tts": true,
+              "chime": true
+            },
+            "admissions": [
+              {
+                "kind": "chime",
+                "tMs": 14330256,
+                "tripStartedMs": 14282460,
+                "hostEpochSeconds": 1793295583.6275313,
+                "clockUncertaintySeconds": 0.0147665,
+                "badge": "WARN",
+                "estimate": {
+                  "lateralG": 0.10274804105870626,
+                  "longitudinalG": 1.9183293169955516e-10,
+                  "totalG": 0.10274804105870626,
+                  "speedMps": 5,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": false,
+                  "hasData": true,
+                  "quality": []
+                },
+                "pre": {
+                  "hostEpochWindow": [
+                    1793295580.6275313,
+                    1793295583.5275314
+                  ],
+                  "packetCount": 250,
+                  "receivedPcmSeconds": 0.234375,
+                  "rmsS16": 1.4505631090488043,
+                  "peakS16": 2
+                },
+                "response": {
+                  "hostEpochWindow": [
+                    1793295583.6275313,
+                    1793295585.6275313
+                  ],
+                  "packetCount": 174,
+                  "receivedPcmSeconds": 1.9705833333333334,
+                  "rmsS16": 12.794093744220703,
+                  "peakS16": 152
+                },
+                "lifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                }
+              },
+              {
+                "kind": "speech",
+                "tMs": 14340236,
+                "tripStartedMs": 14282460,
+                "hostEpochSeconds": 1793295593.6085312,
+                "clockUncertaintySeconds": 0.0147665,
+                "badge": "OVER",
+                "estimate": {
+                  "lateralG": 0.12354462329191918,
+                  "longitudinalG": 1.8294614000278012e-16,
+                  "totalG": 0.12354462329191918,
+                  "speedMps": 5,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": false,
+                  "hasData": true,
+                  "quality": []
+                },
+                "pre": {
+                  "hostEpochWindow": [
+                    1793295590.6085312,
+                    1793295593.5085313
+                  ],
+                  "packetCount": 248,
+                  "receivedPcmSeconds": 0.23252083333333334,
+                  "rmsS16": 1.4811783945326866,
+                  "peakS16": 2
+                },
+                "response": {
+                  "hostEpochWindow": [
+                    1793295593.6085312,
+                    1793295601.4085312
+                  ],
+                  "packetCount": 645,
+                  "receivedPcmSeconds": 7.651666666666666,
+                  "rmsS16": 195.85871878285866,
+                  "peakS16": 1345
+                },
+                "lifecycle": {
+                  "TTS_START": 1,
+                  "TTS_DONE": 1,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 1
+                }
+              },
+              {
+                "kind": "speech",
+                "tMs": 14348267,
+                "tripStartedMs": 14282460,
+                "hostEpochSeconds": 1793295601.6395311,
+                "clockUncertaintySeconds": 0.0147665,
+                "badge": "OVER",
+                "estimate": {
+                  "lateralG": 0.12354462329191918,
+                  "longitudinalG": 2.791536560101015e-21,
+                  "totalG": 0.12354462329191918,
+                  "speedMps": 5,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": false,
+                  "hasData": true,
+                  "quality": []
+                },
+                "pre": {
+                  "hostEpochWindow": [
+                    1793295598.6395311,
+                    1793295601.5395312
+                  ],
+                  "packetCount": 235,
+                  "receivedPcmSeconds": 2.7125,
+                  "rmsS16": 0.12124545694372671,
+                  "peakS16": 2
+                },
+                "response": {
+                  "hostEpochWindow": [
+                    1793295601.6395311,
+                    1793295609.439531
+                  ],
+                  "packetCount": 647,
+                  "receivedPcmSeconds": 7.609854166666667,
+                  "rmsS16": 196.39517575777424,
+                  "peakS16": 1345
+                },
+                "lifecycle": {
+                  "TTS_START": 1,
+                  "TTS_DONE": 1,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 1
+                }
+              }
+            ],
+            "packetCount": 3386,
+            "pcmSha256": "152c610963025dfe58468786b13a8c7605b849b545570447891bc7ed73d1c230",
+            "pcmDurationSeconds": 20.25979166666667,
+            "wallSeconds": 40.005296,
+            "packetReceiveLagSeconds": {
+              "min": -0.0006260871887207031,
+              "max": 0.003837108612060547
+            },
+            "limits": [
+              "mixed emulator output only; no microphone/host input",
+              "PCM concatenates sparse received samples, not continuous wall time",
+              "no speech intelligibility or physical effect claim",
+              "driving window only; arrival speech playback not measured"
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-on/cleanup.json",
+            "pointer": ""
+          },
+          "value": {
+            "verified": false,
+            "executionErrors": [],
+            "cleanupErrors": [
+              "property cleanup: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'setprop', 'log.tag.MotionTrace', '']' returned non-zero exit status 1."
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-on/recovery-01/recovery.json",
+            "pointer": ""
+          },
+          "value": {
+            "manualTesterRecoveryVerified": false,
+            "originalCleanupRemainsFalse": true,
+            "motionTraceProperty": "",
+            "settings": {
+              "tts": true,
+              "chime": true,
+              "demo_curve": true
+            },
+            "samePid": true,
+            "identity": {
+              "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+              "pid": "22692",
+              "product": "crp_avd_arm64",
+              "api": "34"
+            },
+            "idleUiObserved": false,
+            "parkSpeedZero": true,
+            "serviceAbsent": true,
+            "notificationCount": 0,
+            "unchangedVehicleDomains": {
+              "hvac": true,
+              "seat": true,
+              "body": true,
+              "controls": true
+            },
+            "action": "only shell-quoted restoration of original MotionTrace property; UI/settings/readback verification; no restart/reset"
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-on/recovery-01/recovery-confirmed.json",
+            "pointer": ""
+          },
+          "value": {
+            "manualTesterRecoveryVerified": true,
+            "originalCleanupRemainsFalse": true,
+            "motionTraceProperty": "",
+            "settings": {
+              "tts": true,
+              "chime": true,
+              "demo_curve": true
+            },
+            "samePid": true,
+            "identity": {
+              "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+              "pid": "22692",
+              "product": "crp_avd_arm64",
+              "api": "34"
+            },
+            "idleUiObserved": true,
+            "parkSpeedZero": true,
+            "serviceAbsent": true,
+            "notificationCount": 0,
+            "unchangedVehicleDomains": {
+              "hvac": true,
+              "seat": true,
+              "body": true,
+              "controls": true
+            },
+            "action": "only shell-quoted restoration of original MotionTrace property; UI/settings/readback verification; no restart/reset",
+            "originalRecoveryParserVerdict": false,
+            "parserCorrection": "Original check required English VIP Seat, but actual saved idle XML uses Korean VIP 조수석. Confirmed using actual unique idle prompt plus preset picker/P/0 km/h/navigation idle. No device mutation or original evidence rewrite.",
+            "idleXmlSha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+            "originalRecoverySha256": "a60787ca67b1ee539bc85d9cd56a7a67cd2f6f7ed1a5e96bff3221dee2afe785"
+          }
+        }
+      ]
+    },
+    {
+      "id": "driving-off",
+      "source_dir": "driving-audio-01/both-off",
+      "result_scope": "Separate OFF session after recorded tester recovery, exact APK and same PID; sampled OFF windows, numeric report and cleanup true.",
+      "identity_before": {
+        "path": "driving-audio-01/both-off/environment.json",
+        "pointer": "/installedApkSha256"
+      },
+      "identity_after": {
+        "path": "driving-audio-01/both-off/environment-after.json",
+        "pointer": "/installedApkSha256"
+      },
+      "cleanup": {
+        "path": "driving-audio-01/both-off/cleanup.json",
+        "pointer": "/verified"
+      },
+      "observed_results": [
+        {
+          "reference": {
+            "path": "driving-audio-01/both-off/result.json",
+            "pointer": ""
+          },
+          "value": {
+            "passed": true,
+            "issues": [],
+            "oraclePassed": true,
+            "audioObserved": true
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-off/oracle-result.json",
+            "pointer": ""
+          },
+          "value": {
+            "passed": true,
+            "issues": [],
+            "traceRows": 520,
+            "guardRows": 513,
+            "receivedSpeedRows": 171,
+            "expectedMaximumG": 0.12354462329191915,
+            "motionEvents": 417,
+            "freshLongitudinalSamples": 139,
+            "model": {
+              "wheelbaseM": 2.9000000953674316,
+              "steeringRatio": 15,
+              "smoothing": 0.5,
+              "gravityMps2": 9.80665,
+              "maxBrakeDecelMps2": 8
+            },
+            "boundaryPolicy": {
+              "limitG": 0.12,
+              "warnRatio": 0.8,
+              "chimeCooldownMs": 5000,
+              "coachCooldownMs": 8000,
+              "audibleCooldownMs": 8000,
+              "badgeHoldMs": 3000,
+              "maxVoiceCoachPerTrip": 3,
+              "maxAudiblePerTrip": 6,
+              "emergencyG": 0.6,
+              "minCoachSpeedMps": 4.166666666666667
+            },
+            "audioOracle": {
+              "drivingSpeechCount": 2,
+              "drivingChimeCount": 1,
+              "coachingCount": 2,
+              "warnCount": 1,
+              "suppressed": {
+                "COALESCED": 1
+              },
+              "admissions": [
+                {
+                  "tMs": 14940833,
+                  "kind": "chime"
+                },
+                {
+                  "tMs": 14950833,
+                  "kind": "speech"
+                },
+                {
+                  "tMs": 14958875,
+                  "kind": "speech"
+                }
+              ],
+              "actualPlayback": "separate PCM/callback observation in audio-result.json; reducer counts alone are not playback"
+            },
+            "receivedDtMinSeconds": 0.413,
+            "receivedDtMaxSeconds": 0.616,
+            "arrivalTraces": 1,
+            "evidenceScope": "Synthetic DEMO -> production estimator/badge/audio-admission/report; received dt oracle. Audio measured separately; reducer admission is not playback.",
+            "limits": [
+              "Foreground synthetic boundary probe; no native SDK background claim.",
+              "No vehicle accuracy, physical cargo outcome or native navigation claim; PCM/callback scope is separate.",
+              "Gaps/reordered batches are failures; no policy changes or discarded background interval."
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-off/audio-result.json",
+            "pointer": ""
+          },
+          "value": {
+            "session": 14897726,
+            "audioSettings": {
+              "tts": false,
+              "chime": false
+            },
+            "admissions": [
+              {
+                "kind": "chime",
+                "tMs": 14940833,
+                "tripStartedMs": 14897726,
+                "hostEpochSeconds": 1793296194.2167344,
+                "clockUncertaintySeconds": 0.015972,
+                "badge": "WARN",
+                "estimate": {
+                  "lateralG": 0.10274804105870626,
+                  "longitudinalG": 1.8784745009494125e-10,
+                  "totalG": 0.10274804105870626,
+                  "speedMps": 5,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": false,
+                  "hasData": true,
+                  "quality": []
+                },
+                "pre": {
+                  "hostEpochWindow": [
+                    1793296191.2167344,
+                    1793296194.1167345
+                  ],
+                  "packetCount": 249,
+                  "receivedPcmSeconds": 0.23341666666666666,
+                  "rmsS16": 1.4953963628557239,
+                  "peakS16": 2
+                },
+                "response": {
+                  "hostEpochWindow": [
+                    1793296194.2167344,
+                    1793296196.2167344
+                  ],
+                  "packetCount": 174,
+                  "receivedPcmSeconds": 0.163125,
+                  "rmsS16": 1.493771658440695,
+                  "peakS16": 2
+                },
+                "lifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                }
+              },
+              {
+                "kind": "speech",
+                "tMs": 14950833,
+                "tripStartedMs": 14897726,
+                "hostEpochSeconds": 1793296204.2157342,
+                "clockUncertaintySeconds": 0.015972,
+                "badge": "OVER",
+                "estimate": {
+                  "lateralG": 0.12354462329191918,
+                  "longitudinalG": 1.7914528855795026e-16,
+                  "totalG": 0.12354462329191918,
+                  "speedMps": 5,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": false,
+                  "hasData": true,
+                  "quality": []
+                },
+                "pre": {
+                  "hostEpochWindow": [
+                    1793296201.2157342,
+                    1793296204.1157343
+                  ],
+                  "packetCount": 249,
+                  "receivedPcmSeconds": 0.23341666666666666,
+                  "rmsS16": 1.4940528301689842,
+                  "peakS16": 2
+                },
+                "response": {
+                  "hostEpochWindow": [
+                    1793296204.2157342,
+                    1793296212.0157342
+                  ],
+                  "packetCount": 667,
+                  "receivedPcmSeconds": 0.6253125,
+                  "rmsS16": 1.493988174763609,
+                  "peakS16": 2
+                },
+                "lifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                }
+              },
+              {
+                "kind": "speech",
+                "tMs": 14958875,
+                "tripStartedMs": 14897726,
+                "hostEpochSeconds": 1793296212.2577343,
+                "clockUncertaintySeconds": 0.015972,
+                "badge": "OVER",
+                "estimate": {
+                  "lateralG": 0.12354462329191918,
+                  "longitudinalG": 2.7335401696464578e-21,
+                  "totalG": 0.12354462329191918,
+                  "speedMps": 5,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": false,
+                  "hasData": true,
+                  "quality": []
+                },
+                "pre": {
+                  "hostEpochWindow": [
+                    1793296209.2577343,
+                    1793296212.1577344
+                  ],
+                  "packetCount": 249,
+                  "receivedPcmSeconds": 0.2334375,
+                  "rmsS16": 1.4930300657828524,
+                  "peakS16": 2
+                },
+                "response": {
+                  "hostEpochWindow": [
+                    1793296212.2577343,
+                    1793296220.0577343
+                  ],
+                  "packetCount": 670,
+                  "receivedPcmSeconds": 0.628125,
+                  "rmsS16": 1.4935738523436475,
+                  "peakS16": 2
+                },
+                "lifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                }
+              }
+            ],
+            "packetCount": 3437,
+            "pcmSha256": "6f4960a29fc65ab2e72cd14def8cdf6597eeb01bc3bef15fb50a6d45327aea77",
+            "pcmDurationSeconds": 3.222166666666667,
+            "wallSeconds": 40.007213,
+            "packetReceiveLagSeconds": {
+              "min": -0.0006339550018310547,
+              "max": 0.004305124282836914
+            },
+            "limits": [
+              "mixed emulator output only; no microphone/host input",
+              "PCM concatenates sparse received samples, not continuous wall time",
+              "no speech intelligibility or physical effect claim",
+              "driving window only; arrival speech playback not measured"
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/both-off/cleanup.json",
+            "pointer": ""
+          },
+          "value": {
+            "verified": true,
+            "executionErrors": [],
+            "cleanupErrors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "driving-continued-comparison",
+      "source_dir": "driving-audio-01",
+      "result_scope": "Original paired harness stopped after ON cleanup failure. Later OFF plus explicit recovery support saved-window contrast; singleSuccessfulPairedRun remains false. Operational signal contrast, no intelligibility or contention claim.",
+      "identity_before": {
+        "path": "driving-audio-01/both-on/environment.json",
+        "pointer": "/installedApkSha256"
+      },
+      "identity_after": {
+        "path": "driving-audio-01/both-off/environment-after.json",
+        "pointer": "/installedApkSha256"
+      },
+      "cleanup": {
+        "path": "driving-audio-01/both-off/cleanup.json",
+        "pointer": "/verified"
+      },
+      "observed_results": [
+        {
+          "reference": {
+            "path": "driving-audio-01/result.json",
+            "pointer": ""
+          },
+          "value": {
+            "passed": false,
+            "reason": "case failed; queue stopped",
+            "cases": [
+              {
+                "passed": false,
+                "issues": [
+                  "property cleanup: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'setprop', 'log.tag.MotionTrace', '']' returned non-zero exit status 1."
+                ],
+                "oraclePassed": false,
+                "audioObserved": true
+              }
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "driving-audio-01/continued-comparison.json",
+            "pointer": ""
+          },
+          "value": {
+            "contrastEstablished": true,
+            "issues": [],
+            "originalOnExecutionPassed": false,
+            "originalOnCleanupVerified": false,
+            "separateManualRecoveryVerified": true,
+            "offExecutionPassed": true,
+            "offCleanupVerified": true,
+            "singleSuccessfulPairedRun": false,
+            "comparisons": [
+              {
+                "kind": "chime",
+                "on": {
+                  "hostEpochWindow": [
+                    1793295583.6275313,
+                    1793295585.6275313
+                  ],
+                  "packetCount": 174,
+                  "receivedPcmSeconds": 1.9705833333333334,
+                  "rmsS16": 12.794093744220703,
+                  "peakS16": 152
+                },
+                "onPre": {
+                  "hostEpochWindow": [
+                    1793295580.6275313,
+                    1793295583.5275314
+                  ],
+                  "packetCount": 250,
+                  "receivedPcmSeconds": 0.234375,
+                  "rmsS16": 1.4505631090488043,
+                  "peakS16": 2
+                },
+                "off": {
+                  "hostEpochWindow": [
+                    1793296194.2167344,
+                    1793296196.2167344
+                  ],
+                  "packetCount": 174,
+                  "receivedPcmSeconds": 0.163125,
+                  "rmsS16": 1.493771658440695,
+                  "peakS16": 2
+                },
+                "onLifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                },
+                "offLifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                },
+                "receivedSamplesInAllWindows": true,
+                "amplitudeContrastObserved": true,
+                "lifecycleObserved": true
+              },
+              {
+                "kind": "speech",
+                "on": {
+                  "hostEpochWindow": [
+                    1793295593.6085312,
+                    1793295601.4085312
+                  ],
+                  "packetCount": 645,
+                  "receivedPcmSeconds": 7.651666666666666,
+                  "rmsS16": 195.85871878285866,
+                  "peakS16": 1345
+                },
+                "onPre": {
+                  "hostEpochWindow": [
+                    1793295590.6085312,
+                    1793295593.5085313
+                  ],
+                  "packetCount": 248,
+                  "receivedPcmSeconds": 0.23252083333333334,
+                  "rmsS16": 1.4811783945326866,
+                  "peakS16": 2
+                },
+                "off": {
+                  "hostEpochWindow": [
+                    1793296204.2157342,
+                    1793296212.0157342
+                  ],
+                  "packetCount": 667,
+                  "receivedPcmSeconds": 0.6253125,
+                  "rmsS16": 1.493988174763609,
+                  "peakS16": 2
+                },
+                "onLifecycle": {
+                  "TTS_START": 1,
+                  "TTS_DONE": 1,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 1
+                },
+                "offLifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                },
+                "receivedSamplesInAllWindows": true,
+                "amplitudeContrastObserved": true,
+                "lifecycleObserved": true
+              },
+              {
+                "kind": "speech",
+                "on": {
+                  "hostEpochWindow": [
+                    1793295601.6395311,
+                    1793295609.439531
+                  ],
+                  "packetCount": 647,
+                  "receivedPcmSeconds": 7.609854166666667,
+                  "rmsS16": 196.39517575777424,
+                  "peakS16": 1345
+                },
+                "onPre": {
+                  "hostEpochWindow": [
+                    1793295598.6395311,
+                    1793295601.5395312
+                  ],
+                  "packetCount": 235,
+                  "receivedPcmSeconds": 2.7125,
+                  "rmsS16": 0.12124545694372671,
+                  "peakS16": 2
+                },
+                "off": {
+                  "hostEpochWindow": [
+                    1793296212.2577343,
+                    1793296220.0577343
+                  ],
+                  "packetCount": 670,
+                  "receivedPcmSeconds": 0.628125,
+                  "rmsS16": 1.4935738523436475,
+                  "peakS16": 2
+                },
+                "onLifecycle": {
+                  "TTS_START": 1,
+                  "TTS_DONE": 1,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 1
+                },
+                "offLifecycle": {
+                  "TTS_START": 0,
+                  "TTS_DONE": 0,
+                  "TTS_ERROR": 0,
+                  "TTS_STOP": 0
+                },
+                "receivedSamplesInAllWindows": true,
+                "amplitudeContrastObserved": true,
+                "lifecycleObserved": true
+              }
+            ],
+            "criterion": "RMS and peak greater than 3x both own pre-window and OFF response, with received samples in every compared window; operational signal contrast only",
+            "scope": "synthetic WARN chime and OVER TTS in emulator output; sparse concatenated PCM is not continuous wall-time audio; arrival playback/intelligibility/navigation contention/physical effect unverified",
+            "evidenceSha256": {
+              "result.json": "b4ce58c55bf1cf045fd4ea387e3fb796fe2a1019be4c439821cc90d55fe5c589",
+              "both-on/result.json": "a17e7cfe40c4d5f43691e75796010e43ffb0d3dcabca29f6b807ae698b05905f",
+              "both-on/cleanup.json": "67ead33f8328f86ebb8a59e0dc3a88651fb05389584d0332e8573b51382fa91e",
+              "both-on/audio-result.json": "9911e7be3c6280f0c5c5d3c69c0e48367aaee31e08184059676891fed354f91c",
+              "both-on/recovery-01/recovery-confirmed.json": "571d1eda8297ab34f3ab7b8eb3e6c2b7b04d7f071edd75aac1602e9b731d286b",
+              "both-off/result.json": "cd4102a2de5468e07d0fb615f2cadad824afed732eced2717f2fcce004ccf701",
+              "both-off/cleanup.json": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+              "both-off/audio-result.json": "d38cba5c954c62a03e71c06845c0ec150090116c8e13626e29130e8bc4816da5",
+              "off-harness-source.py": "d61677ec16dbda220ab763f651bc35f5a31f48034fe10c2e7256c8ef89552e73"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "flow-trace",
+      "source_dir": "flow-trace-01",
+      "result_scope": "New CAKE Console A1-A4 synthetic observation, maximum4.437252817516956G/display4.44 and accepted pair arithmetic verified. Original historical4.49 exact pair remains unestablished; no physical accuracy or source/setter root-cause claim.",
+      "identity_before": {
+        "path": "flow-trace-01/environment.json",
+        "pointer": "/installedApkSha256"
+      },
+      "identity_after": {
+        "path": "flow-trace-01/environment-after.json",
+        "pointer": "/installedApkSha256"
+      },
+      "cleanup": {
+        "path": "flow-trace-01/cleanup.json",
+        "pointer": "/verified"
+      },
+      "observed_results": [
+        {
+          "reference": {
+            "path": "flow-trace-01/result.json",
+            "pointer": ""
+          },
+          "value": {
+            "executionPassed": true,
+            "arithmeticVerified": true,
+            "issues": [],
+            "historical449CauseEstablished": false,
+            "physicalGAccuracyValidated": false
+          }
+        },
+        {
+          "reference": {
+            "path": "flow-trace-01/analysis.json",
+            "pointer": ""
+          },
+          "value": {
+            "arithmeticVerified": true,
+            "issues": [],
+            "guardRows": 326,
+            "acceptedPairs": 270,
+            "sessions": [
+              15297239
+            ],
+            "maximum": {
+              "traceIndex": 128,
+              "row": {
+                "schema": 1,
+                "tMs": 15312872,
+                "event": "motion",
+                "raw": {
+                  "kind": "speed",
+                  "mps": 0.2777777910232544,
+                  "sourceId": 1,
+                  "provenance": "SYNTHETIC"
+                },
+                "uiMode": "DRIVING",
+                "previousGuarding": true,
+                "model": {
+                  "wheelbaseM": 2.9000000953674316,
+                  "steeringRatio": 15,
+                  "smoothing": 0.5,
+                  "gravityMps2": 9.80665,
+                  "maxBrakeDecelMps2": 8
+                },
+                "snapshot": {
+                  "gear": "DRIVE",
+                  "speedMps": 0.2777777910232544,
+                  "steeringDeg": 0,
+                  "brakePressed": false,
+                  "brakePercent": 0,
+                  "speedProvenance": "SYNTHETIC",
+                  "steeringProvenance": "SYNTHETIC",
+                  "brakeProvenance": "SYNTHETIC",
+                  "parkedStill": false
+                },
+                "state": "GUARDING",
+                "presetKind": "CAKE",
+                "limitG": 0.15,
+                "motionStatus": "FRESH",
+                "badge": "OVER",
+                "trip": {
+                  "startedMs": 15297239,
+                  "maxG": 4.437252817516956,
+                  "gSamples": 75,
+                  "freshLongitudinalSamples": 63,
+                  "drivingSpeechCount": 2,
+                  "drivingChimeCount": 0,
+                  "coachingCount": 2,
+                  "warnCount": 0,
+                  "provenance": [
+                    "SYNTHETIC"
+                  ],
+                  "quality": [
+                    "HIGH_G_UNASSESSED",
+                    "INITIAL_BASELINE"
+                  ]
+                },
+                "estimate": {
+                  "lateralG": 0,
+                  "longitudinalG": -4.437252817516956,
+                  "totalG": 4.437252817516956,
+                  "speedMps": 0.2777777910232544,
+                  "lateralAvailable": true,
+                  "longitudinalAvailable": true,
+                  "longitudinalFresh": true,
+                  "hasData": true,
+                  "quality": []
+                }
+              },
+              "independentExpectedTotalG": 4.437252817516956,
+              "arithmeticVerified": true
+            },
+            "maximumLongitudinalPair": {
+              "from": {
+                "tMs": 15312771,
+                "mps": 9.44444465637207,
+                "sourceId": 1,
+                "traceIndex": 126
+              },
+              "to": {
+                "tMs": 15312872,
+                "mps": 0.2777777910232544,
+                "sourceId": 1,
+                "traceIndex": 128
+              },
+              "dtSeconds": 0.101,
+              "deltaMps": -9.166666865348816,
+              "rawAccelerationMps2": -90.75907787474074,
+              "previousEmaMps2": 3.7299071889354223,
+              "emaMps2": -43.514585342902656,
+              "expectedLongitudinalG": -4.437252817516956,
+              "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+            },
+            "report": {
+              "maxG": 4.437252817516956,
+              "durationMs": 32963,
+              "gSamples": 237,
+              "freshLongitudinalSamples": 199,
+              "drivingSpeechCount": 3,
+              "drivingChimeCount": 0,
+              "coachingCount": 3,
+              "warnCount": 0,
+              "audioSuppressionCounts": {
+                "COALESCED": 1,
+                "COOLDOWN": 1,
+                "EMERGENCY": 14,
+                "VOICE_LIMIT": 4,
+                "SIGNAL_UNAVAILABLE": 13
+              },
+              "provenance": [
+                "SYNTHETIC"
+              ],
+              "quality": [
+                "HIGH_G_UNASSESSED",
+                "INITIAL_BASELINE"
+              ],
+              "hasSyntheticInput": true,
+              "canCompare": false
+            },
+            "highGObserved": true,
+            "historical449CauseEstablished": false,
+            "physicalGAccuracyValidated": false,
+            "limits": [
+              "New Console synthetic replay only; historical run omitted raw MotionTrace and cannot be reconstructed.",
+              "Setters are requests, not accepted speed samples. Numeric dt uses actual MotionTrace tMs.",
+              "Steering freshness uses traced availability; unlogged resets are unresolved if arithmetic disagrees.",
+              "The independent pair calculation does not validate vehicle calibration, cargo forces or audible output."
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "flow-trace-01/cleanup.json",
+            "pointer": ""
+          },
+          "value": {
+            "verified": true,
+            "executionErrors": [],
+            "cleanupErrors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "native-only",
+      "source_dir": "native-audio-probe-01",
+      "result_scope": "One native-only observation, nonzero mixed PCM but complete route window not covered; contrast/content/contention false preserved. Execution and cleanup true do not mean route speech established.",
+      "identity_before": {
+        "path": "native-audio-probe-01/environment.json",
+        "pointer": "/installedApkSha256"
+      },
+      "identity_after": {
+        "path": "native-audio-probe-01/environment-after.json",
+        "pointer": "/installedApkSha256"
+      },
+      "cleanup": {
+        "path": "native-audio-probe-01/cleanup.json",
+        "pointer": "/verified"
+      },
+      "observed_results": [
+        {
+          "reference": {
+            "path": "native-audio-probe-01/result.json",
+            "pointer": ""
+          },
+          "value": {
+            "executionPassed": true,
+            "issues": [],
+            "nativeSpeechContentVerified": false,
+            "nativeVipContentionVerified": false,
+            "routeWindowCovered": false,
+            "baseline": {
+              "hostEpochWindow": [
+                1793296666.862803,
+                1793296681.17189
+              ],
+              "packetCount": 1238,
+              "receivedPcmSeconds": 1.1606041666666667,
+              "rmsS16": 1.4936635808221452,
+              "peakS16": 2
+            },
+            "response": {
+              "hostEpochWindow": [
+                1793296681.17189,
+                1793296710.949174
+              ],
+              "packetCount": 2215,
+              "receivedPcmSeconds": 7.884833333333333,
+              "rmsS16": 163.2952436120724,
+              "peakS16": 1842
+            },
+            "amplitudeContrastObserved": false,
+            "routeActiveHostEpochSeconds": 1793296696.0952919,
+            "packetCount": 3453,
+            "pcmDurationSeconds": 9.0454375,
+            "wallSeconds": 40.010816,
+            "pcmSha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+            "conclusion": "Native navigation audible output not established in this one bounded probe",
+            "limits": [
+              "No VIP guard or driving output in this case; no contention experiment",
+              "Native-only UI operations can also emit sounds; PCM alone does not identify spoken route guidance",
+              "Sparse received PCM concatenation is not continuous wall-time audio; no GPS progression or microphone"
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "native-audio-probe-01/audio-result.json",
+            "pointer": ""
+          },
+          "value": {
+            "nativeSpeechContentVerified": false,
+            "nativeVipContentionVerified": false,
+            "routeWindowCovered": false,
+            "baseline": {
+              "hostEpochWindow": [
+                1793296666.862803,
+                1793296681.17189
+              ],
+              "packetCount": 1238,
+              "receivedPcmSeconds": 1.1606041666666667,
+              "rmsS16": 1.4936635808221452,
+              "peakS16": 2
+            },
+            "response": {
+              "hostEpochWindow": [
+                1793296681.17189,
+                1793296710.949174
+              ],
+              "packetCount": 2215,
+              "receivedPcmSeconds": 7.884833333333333,
+              "rmsS16": 163.2952436120724,
+              "peakS16": 1842
+            },
+            "amplitudeContrastObserved": false,
+            "routeActiveHostEpochSeconds": 1793296696.0952919,
+            "packetCount": 3453,
+            "pcmDurationSeconds": 9.0454375,
+            "wallSeconds": 40.010816,
+            "pcmSha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+            "conclusion": "Native navigation audible output not established in this one bounded probe",
+            "limits": [
+              "No VIP guard or driving output in this case; no contention experiment",
+              "Native-only UI operations can also emit sounds; PCM alone does not identify spoken route guidance",
+              "Sparse received PCM concatenation is not continuous wall-time audio; no GPS progression or microphone"
+            ]
+          }
+        },
+        {
+          "reference": {
+            "path": "native-audio-probe-01/cleanup.json",
+            "pointer": ""
+          },
+          "value": {
+            "verified": true,
+            "executionErrors": [],
+            "cleanupErrors": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "native-ownership-return",
+      "source_dir": "native-audio-probe-01",
+      "result_scope": "Two final readback-parser failures retained, corrected saved final Idle/P0/settings/runtime and tester-recorded helper/forward/token cleanup. No further capture or app reset.",
+      "identity_before": {
+        "path": "native-audio-probe-01/environment.json",
+        "pointer": "/installedApkSha256"
+      },
+      "identity_after": {
+        "path": "native-audio-probe-01/ownership-return/ownership-return.json",
+        "pointer": "/identity/installedApkSha256"
+      },
+      "cleanup": {
+        "path": "native-audio-probe-01/ownership-return/ownership-return.json",
+        "pointer": "/verified"
+      },
+      "observed_results": [
+        {
+          "reference": {
+            "path": "native-audio-probe-01/ownership-return/verification-error.json",
+            "pointer": ""
+          },
+          "value": {
+            "stage": "final forward inventory parser",
+            "error": "IndexError from blank line in adb forward --list",
+            "deviceMutationAfterError": false,
+            "repair": "discard empty lines before parsing three-field forward records"
+          }
+        },
+        {
+          "reference": {
+            "path": "native-audio-probe-01/ownership-return/verification-error-02.json",
+            "pointer": ""
+          },
+          "value": {
+            "stage": "saved snapshot filename lookup",
+            "error": "runtime-final.json absent; helper saves runtime-final-snapshot.json",
+            "deviceMutationAfterError": false
+          }
+        },
+        {
+          "reference": {
+            "path": "native-audio-probe-01/ownership-return/ownership-return.json",
+            "pointer": ""
+          },
+          "value": {
+            "verified": true,
+            "identity": {
+              "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+              "pid": "22692",
+              "product": "crp_avd_arm64",
+              "api": "34"
+            },
+            "motionTraceProperty": "",
+            "settings": {
+              "tts": true,
+              "chime": true,
+              "demo_curve": true
+            },
+            "idleParkZeroUiObserved": true,
+            "servicePresent": false,
+            "activeNotificationCount": 0,
+            "ownConsoleHelperClosed": true,
+            "own8088ForwardRemoved": true,
+            "temporaryCredentialFilesRemaining": 0,
+            "lastVehicleReadbackFile": "../vehicle-after.json",
+            "lastVehicleReadbackSha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+            "nativeRouteOffEvidence": "../native-final-idle_0.xml",
+            "originalOnCleanupFailurePreserved": true,
+            "allNewCaptureRunsFinished": true
+          }
+        }
+      ]
+    }
+  ],
+  "independent_checks": [
+    {
+      "path": "verification/driving-on01-verification.json",
+      "errors_pointer": "/errors"
+    },
+    {
+      "path": "verification/driving-on01-recovery-verification.json",
+      "errors_pointer": "/errors"
+    },
+    {
+      "path": "verification/driving-off01-contrast-verification.json",
+      "errors_pointer": "/errors"
+    },
+    {
+      "path": "verification/flow01-verification.json",
+      "errors_pointer": "/errors"
+    },
+    {
+      "path": "verification/native01-verification.json",
+      "errors_pointer": "/errors"
+    },
+    {
+      "path": "verification/final-consistency.json",
+      "errors_pointer": "/errors"
+    }
+  ],
+  "omissions_by_reason": {
+    "local original-byte inventory; replaced by public manifest": 6
+  },
+  "not_selected_count": 19,
+  "files": [
+    {
+      "path": "driving-audio-01/before-route-check-notification.txt",
+      "source": "driving-audio-01/before-route-check-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/before-route-check-process.txt",
+      "source": "driving-audio-01/before-route-check-process.txt",
+      "source_sha256": "23f4590a1e2e2146346a469272d29218185cd2c82cdfc514ba1a8d157c68dd39",
+      "published_sha256": "23f4590a1e2e2146346a469272d29218185cd2c82cdfc514ba1a8d157c68dd39",
+      "sha256": "23f4590a1e2e2146346a469272d29218185cd2c82cdfc514ba1a8d157c68dd39",
+      "bytes": 336,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/before-route-check-service.txt",
+      "source": "driving-audio-01/before-route-check-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/before-route-check-snapshot.json",
+      "source": "driving-audio-01/before-route-check-snapshot.json",
+      "source_sha256": "1609968e7322c506a503f2841e1ab3ff8923964cf1ec9d35733f594a2fa542f6",
+      "published_sha256": "1609968e7322c506a503f2841e1ab3ff8923964cf1ec9d35733f594a2fa542f6",
+      "sha256": "1609968e7322c506a503f2841e1ab3ff8923964cf1ec9d35733f594a2fa542f6",
+      "bytes": 328,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/audio-result.json",
+      "source": "driving-audio-01/both-off/audio-result.json",
+      "source_sha256": "d38cba5c954c62a03e71c06845c0ec150090116c8e13626e29130e8bc4816da5",
+      "published_sha256": "d38cba5c954c62a03e71c06845c0ec150090116c8e13626e29130e8bc4816da5",
+      "sha256": "d38cba5c954c62a03e71c06845c0ec150090116c8e13626e29130e8bc4816da5",
+      "bytes": 4194,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/capture/audio.s16le.pcm",
+      "source": "driving-audio-01/both-off/capture/audio.s16le.pcm",
+      "source_sha256": "6f4960a29fc65ab2e72cd14def8cdf6597eeb01bc3bef15fb50a6d45327aea77",
+      "published_sha256": "6f4960a29fc65ab2e72cd14def8cdf6597eeb01bc3bef15fb50a6d45327aea77",
+      "sha256": "6f4960a29fc65ab2e72cd14def8cdf6597eeb01bc3bef15fb50a6d45327aea77",
+      "bytes": 618656,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/capture/audio.wav",
+      "source": "driving-audio-01/both-off/capture/audio.wav",
+      "source_sha256": "fca4c82056bed11234f02b58edfb04ea97d20d8972a0af6e56cebfa9aa4180c8",
+      "published_sha256": "fca4c82056bed11234f02b58edfb04ea97d20d8972a0af6e56cebfa9aa4180c8",
+      "sha256": "fca4c82056bed11234f02b58edfb04ea97d20d8972a0af6e56cebfa9aa4180c8",
+      "bytes": 618700,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/capture/metadata.json",
+      "source": "driving-audio-01/both-off/capture/metadata.json",
+      "source_sha256": "4faf9cf6c6f055e86fe31c310b4b4bdf1b541c8f248d27015b2698455b043031",
+      "published_sha256": "4faf9cf6c6f055e86fe31c310b4b4bdf1b541c8f248d27015b2698455b043031",
+      "sha256": "4faf9cf6c6f055e86fe31c310b4b4bdf1b541c8f248d27015b2698455b043031",
+      "bytes": 528502,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/capture/packet-analysis.json",
+      "source": "driving-audio-01/both-off/capture/packet-analysis.json",
+      "source_sha256": "20298dc5649ccec6d621610626656a218007afa2cddd826e19f29db85bbccd55",
+      "published_sha256": "20298dc5649ccec6d621610626656a218007afa2cddd826e19f29db85bbccd55",
+      "sha256": "20298dc5649ccec6d621610626656a218007afa2cddd826e19f29db85bbccd55",
+      "bytes": 845983,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/capture-process.json",
+      "source": "driving-audio-01/both-off/capture-process.json",
+      "source_sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "published_sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "bytes": 56,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup-runtime-notification.txt",
+      "source": "driving-audio-01/both-off/cleanup-runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup-runtime-process.txt",
+      "source": "driving-audio-01/both-off/cleanup-runtime-process.txt",
+      "source_sha256": "72de2b5effd6e239917a94b9ab2dd6207ac6b2b5b2ee079e5bcda21772e9bea3",
+      "published_sha256": "72de2b5effd6e239917a94b9ab2dd6207ac6b2b5b2ee079e5bcda21772e9bea3",
+      "sha256": "72de2b5effd6e239917a94b9ab2dd6207ac6b2b5b2ee079e5bcda21772e9bea3",
+      "bytes": 336,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup-runtime-service.txt",
+      "source": "driving-audio-01/both-off/cleanup-runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup-runtime-snapshot.json",
+      "source": "driving-audio-01/both-off/cleanup-runtime-snapshot.json",
+      "source_sha256": "595a32fbf8f9c76c0fdc1d8d73bda312cbf27381fea9ecdf5f8fab37ec933c2a",
+      "published_sha256": "595a32fbf8f9c76c0fdc1d8d73bda312cbf27381fea9ecdf5f8fab37ec933c2a",
+      "sha256": "595a32fbf8f9c76c0fdc1d8d73bda312cbf27381fea9ecdf5f8fab37ec933c2a",
+      "bytes": 325,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup.json",
+      "source": "driving-audio-01/both-off/cleanup.json",
+      "source_sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "published_sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "bytes": 71,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup.png",
+      "source": "driving-audio-01/both-off/cleanup.png",
+      "source_sha256": "3561c9fca96b78945d601b3ef2de339184c97bdadc5e1c83e272150825b28fd7",
+      "published_sha256": "3561c9fca96b78945d601b3ef2de339184c97bdadc5e1c83e272150825b28fd7",
+      "sha256": "3561c9fca96b78945d601b3ef2de339184c97bdadc5e1c83e272150825b28fd7",
+      "bytes": 624085,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup.xml",
+      "source": "driving-audio-01/both-off/cleanup.xml",
+      "source_sha256": "12612ad9299338209a108cd265aa766bda20128730e1f4f6478370ea8eca3763",
+      "published_sha256": "12612ad9299338209a108cd265aa766bda20128730e1f4f6478370ea8eca3763",
+      "sha256": "12612ad9299338209a108cd265aa766bda20128730e1f4f6478370ea8eca3763",
+      "bytes": 27002,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/environment-after.json",
+      "source": "driving-audio-01/both-off/environment-after.json",
+      "source_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "published_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "bytes": 158,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/environment.json",
+      "source": "driving-audio-01/both-off/environment.json",
+      "source_sha256": "1cf30cdf3e63695a493c2978ac0bd78c961883edd8eea24ff55825edcbb35310",
+      "published_sha256": "1cf30cdf3e63695a493c2978ac0bd78c961883edd8eea24ff55825edcbb35310",
+      "sha256": "1cf30cdf3e63695a493c2978ac0bd78c961883edd8eea24ff55825edcbb35310",
+      "bytes": 1425,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/events.jsonl",
+      "source": "driving-audio-01/both-off/events.jsonl",
+      "source_sha256": "2811bbfb2f8113eb9544d3b022383300e8fa2afc93d101345f96d3d3d74061c5",
+      "published_sha256": "2811bbfb2f8113eb9544d3b022383300e8fa2afc93d101345f96d3d3d74061c5",
+      "sha256": "2811bbfb2f8113eb9544d3b022383300e8fa2afc93d101345f96d3d3d74061c5",
+      "bytes": 3249,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/input-ledger.jsonl",
+      "source": "driving-audio-01/both-off/input-ledger.jsonl",
+      "source_sha256": "08fe4ad574c81a588894873cb68ba46ae1d2734c625c111f0a196261ebca9a90",
+      "published_sha256": "08fe4ad574c81a588894873cb68ba46ae1d2734c625c111f0a196261ebca9a90",
+      "sha256": "08fe4ad574c81a588894873cb68ba46ae1d2734c625c111f0a196261ebca9a90",
+      "bytes": 199950,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/live-log.jsonl",
+      "source": "driving-audio-01/both-off/live-log.jsonl",
+      "source_sha256": "a0298ab3055e7213054e4b9d3f0b7271e30eb28af32116e3af0cf27f170660ef",
+      "published_sha256": "a0298ab3055e7213054e4b9d3f0b7271e30eb28af32116e3af0cf27f170660ef",
+      "sha256": "a0298ab3055e7213054e4b9d3f0b7271e30eb28af32116e3af0cf27f170660ef",
+      "bytes": 2424225,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/motion.log",
+      "source": "driving-audio-01/both-off/motion.log",
+      "source_sha256": "46f6da66d60b2eb837e2c8ba47683138ded957270ada1a1dbe488a0661524997",
+      "published_sha256": "46f6da66d60b2eb837e2c8ba47683138ded957270ada1a1dbe488a0661524997",
+      "sha256": "46f6da66d60b2eb837e2c8ba47683138ded957270ada1a1dbe488a0661524997",
+      "bytes": 700719,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/oracle-comparisons.json",
+      "source": "driving-audio-01/both-off/oracle-comparisons.json",
+      "source_sha256": "f7b4b1199c796f464746dc9488956bab8f979f803a47dd3fbcd616808cbd38e5",
+      "published_sha256": "f7b4b1199c796f464746dc9488956bab8f979f803a47dd3fbcd616808cbd38e5",
+      "sha256": "f7b4b1199c796f464746dc9488956bab8f979f803a47dd3fbcd616808cbd38e5",
+      "bytes": 272789,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/oracle-result.json",
+      "source": "driving-audio-01/both-off/oracle-result.json",
+      "source_sha256": "ff126eddfcc29ed2a1eafe03bac7e27ba21a994cf2999c39804d9987bc75482d",
+      "published_sha256": "ff126eddfcc29ed2a1eafe03bac7e27ba21a994cf2999c39804d9987bc75482d",
+      "sha256": "ff126eddfcc29ed2a1eafe03bac7e27ba21a994cf2999c39804d9987bc75482d",
+      "bytes": 1750,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/over120.png",
+      "source": "driving-audio-01/both-off/over120.png",
+      "source_sha256": "fa2e94350ed2f8569ca62d9574835830b3aa592c26d62db40c6cd5be13b0689f",
+      "published_sha256": "fa2e94350ed2f8569ca62d9574835830b3aa592c26d62db40c6cd5be13b0689f",
+      "sha256": "fa2e94350ed2f8569ca62d9574835830b3aa592c26d62db40c6cd5be13b0689f",
+      "bytes": 279228,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/over120.xml",
+      "source": "driving-audio-01/both-off/over120.xml",
+      "source_sha256": "3572523a3f5cf73c265f43815fa283223324c5e0e5326766740872f9b79a3120",
+      "published_sha256": "3572523a3f5cf73c265f43815fa283223324c5e0e5326766740872f9b79a3120",
+      "sha256": "3572523a3f5cf73c265f43815fa283223324c5e0e5326766740872f9b79a3120",
+      "bytes": 3249,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/report.png",
+      "source": "driving-audio-01/both-off/report.png",
+      "source_sha256": "f9d43c30b73d805606fb024b5c42b53e85e3b94ce5023d53bb7aecb939381039",
+      "published_sha256": "f9d43c30b73d805606fb024b5c42b53e85e3b94ce5023d53bb7aecb939381039",
+      "sha256": "f9d43c30b73d805606fb024b5c42b53e85e3b94ce5023d53bb7aecb939381039",
+      "bytes": 629891,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/report.xml",
+      "source": "driving-audio-01/both-off/report.xml",
+      "source_sha256": "5ad12f7fddb41c48d0dac7140343f5c56ce6dbfbb5b1fdfcca7d43effa5460f0",
+      "published_sha256": "5ad12f7fddb41c48d0dac7140343f5c56ce6dbfbb5b1fdfcca7d43effa5460f0",
+      "sha256": "5ad12f7fddb41c48d0dac7140343f5c56ce6dbfbb5b1fdfcca7d43effa5460f0",
+      "bytes": 27075,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/result.json",
+      "source": "driving-audio-01/both-off/result.json",
+      "source_sha256": "cd4102a2de5468e07d0fb615f2cadad824afed732eced2717f2fcce004ccf701",
+      "published_sha256": "cd4102a2de5468e07d0fb615f2cadad824afed732eced2717f2fcce004ccf701",
+      "sha256": "cd4102a2de5468e07d0fb615f2cadad824afed732eced2717f2fcce004ccf701",
+      "bytes": 86,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-driving-confirmed_before.xml",
+      "source": "driving-audio-01/both-off/settings-driving-confirmed_before.xml",
+      "source_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "published_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-driving-confirmed_confirmed.xml",
+      "source": "driving-audio-01/both-off/settings-driving-confirmed_confirmed.xml",
+      "source_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "published_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-driving-confirmed_states.json",
+      "source": "driving-audio-01/both-off/settings-driving-confirmed_states.json",
+      "source_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "published_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "bytes": 326,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-original.json",
+      "source": "driving-audio-01/both-off/settings-original.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-original.xml",
+      "source": "driving-audio-01/both-off/settings-original.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-restored_after_chime_tap.xml",
+      "source": "driving-audio-01/both-off/settings-restored_after_chime_tap.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-restored_after_tts_tap.xml",
+      "source": "driving-audio-01/both-off/settings-restored_after_tts_tap.xml",
+      "source_sha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "published_sha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "sha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "bytes": 16606,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-restored_before.xml",
+      "source": "driving-audio-01/both-off/settings-restored_before.xml",
+      "source_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "published_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-restored_confirmed.xml",
+      "source": "driving-audio-01/both-off/settings-restored_confirmed.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-restored_states.json",
+      "source": "driving-audio-01/both-off/settings-restored_states.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-selection-muted_after_chime_tap.xml",
+      "source": "driving-audio-01/both-off/settings-selection-muted_after_chime_tap.xml",
+      "source_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "published_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-selection-muted_after_tts_tap.xml",
+      "source": "driving-audio-01/both-off/settings-selection-muted_after_tts_tap.xml",
+      "source_sha256": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+      "published_sha256": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+      "sha256": "318aa003dcc1328cec2f657808223c97ed4d5a23ac016aaf12bce638bdc98114",
+      "bytes": 16606,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-selection-muted_before.xml",
+      "source": "driving-audio-01/both-off/settings-selection-muted_before.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-selection-muted_confirmed.xml",
+      "source": "driving-audio-01/both-off/settings-selection-muted_confirmed.xml",
+      "source_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "published_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/settings-selection-muted_states.json",
+      "source": "driving-audio-01/both-off/settings-selection-muted_states.json",
+      "source_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "published_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "bytes": 326,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/start.png",
+      "source": "driving-audio-01/both-off/start.png",
+      "source_sha256": "f51f11f5bb1bcb48245e84b5c0d8e2e3481e08a3a5fcdb77980a4d681ddb9e89",
+      "published_sha256": "f51f11f5bb1bcb48245e84b5c0d8e2e3481e08a3a5fcdb77980a4d681ddb9e89",
+      "sha256": "f51f11f5bb1bcb48245e84b5c0d8e2e3481e08a3a5fcdb77980a4d681ddb9e89",
+      "bytes": 639610,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/start.xml",
+      "source": "driving-audio-01/both-off/start.xml",
+      "source_sha256": "e7c1525479571383e9a8fb59047e2f8338ae5b0cb9f8f8a1536defd8c9e5f354",
+      "published_sha256": "e7c1525479571383e9a8fb59047e2f8338ae5b0cb9f8f8a1536defd8c9e5f354",
+      "sha256": "e7c1525479571383e9a8fb59047e2f8338ae5b0cb9f8f8a1536defd8c9e5f354",
+      "bytes": 35907,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/trace.json",
+      "source": "driving-audio-01/both-off/trace.json",
+      "source_sha256": "8139185cf8674789d7cc3a4a74f6d52d3976d881fa5af07e8a94b712f0aa4f3e",
+      "published_sha256": "8139185cf8674789d7cc3a4a74f6d52d3976d881fa5af07e8a94b712f0aa4f3e",
+      "sha256": "8139185cf8674789d7cc3a4a74f6d52d3976d881fa5af07e8a94b712f0aa4f3e",
+      "bytes": 767541,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/vehicle-after.json",
+      "source": "driving-audio-01/both-off/vehicle-after.json",
+      "source_sha256": "53633269f37c780aae884af641e8bb052ee965b7c55af2f0fca98267ae2b02ac",
+      "published_sha256": "53633269f37c780aae884af641e8bb052ee965b7c55af2f0fca98267ae2b02ac",
+      "sha256": "53633269f37c780aae884af641e8bb052ee965b7c55af2f0fca98267ae2b02ac",
+      "bytes": 27537,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/vehicle-before.json",
+      "source": "driving-audio-01/both-off/vehicle-before.json",
+      "source_sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "published_sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "bytes": 27537,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/warn100.png",
+      "source": "driving-audio-01/both-off/warn100.png",
+      "source_sha256": "bde0c73de405ce25cfa87186497413a78a3b09fd82b58544a58a8b27dcb178d1",
+      "published_sha256": "bde0c73de405ce25cfa87186497413a78a3b09fd82b58544a58a8b27dcb178d1",
+      "sha256": "bde0c73de405ce25cfa87186497413a78a3b09fd82b58544a58a8b27dcb178d1",
+      "bytes": 278867,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-off/warn100.xml",
+      "source": "driving-audio-01/both-off/warn100.xml",
+      "source_sha256": "24c0a9b20ee15e84e4c1dbf687778069504323896571c271fd333c4a8e298495",
+      "published_sha256": "24c0a9b20ee15e84e4c1dbf687778069504323896571c271fd333c4a8e298495",
+      "sha256": "24c0a9b20ee15e84e4c1dbf687778069504323896571c271fd333c4a8e298495",
+      "bytes": 3251,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/audio-result.json",
+      "source": "driving-audio-01/both-on/audio-result.json",
+      "source_sha256": "9911e7be3c6280f0c5c5d3c69c0e48367aaee31e08184059676891fed354f91c",
+      "published_sha256": "9911e7be3c6280f0c5c5d3c69c0e48367aaee31e08184059676891fed354f91c",
+      "sha256": "9911e7be3c6280f0c5c5d3c69c0e48367aaee31e08184059676891fed354f91c",
+      "bytes": 4217,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/capture/audio.s16le.pcm",
+      "source": "driving-audio-01/both-on/capture/audio.s16le.pcm",
+      "source_sha256": "152c610963025dfe58468786b13a8c7605b849b545570447891bc7ed73d1c230",
+      "published_sha256": "152c610963025dfe58468786b13a8c7605b849b545570447891bc7ed73d1c230",
+      "sha256": "152c610963025dfe58468786b13a8c7605b849b545570447891bc7ed73d1c230",
+      "bytes": 3889880,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/capture/audio.wav",
+      "source": "driving-audio-01/both-on/capture/audio.wav",
+      "source_sha256": "23d8ea24c8fc44b0603c6d8f882e93d8003c3f24b1be40388f0e60a27861adc7",
+      "published_sha256": "23d8ea24c8fc44b0603c6d8f882e93d8003c3f24b1be40388f0e60a27861adc7",
+      "sha256": "23d8ea24c8fc44b0603c6d8f882e93d8003c3f24b1be40388f0e60a27861adc7",
+      "bytes": 3889924,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/capture/metadata.json",
+      "source": "driving-audio-01/both-on/capture/metadata.json",
+      "source_sha256": "aaace327569b9a33d8e99d02332ae4dfcb94615f3930ecb73696e50259b5290b",
+      "published_sha256": "aaace327569b9a33d8e99d02332ae4dfcb94615f3930ecb73696e50259b5290b",
+      "sha256": "aaace327569b9a33d8e99d02332ae4dfcb94615f3930ecb73696e50259b5290b",
+      "bytes": 523665,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/capture/packet-analysis.json",
+      "source": "driving-audio-01/both-on/capture/packet-analysis.json",
+      "source_sha256": "543f7a368f128fb5f66b9ccdb82b5bb1304681c021333f2cc0f2d18e3ae0e825",
+      "published_sha256": "543f7a368f128fb5f66b9ccdb82b5bb1304681c021333f2cc0f2d18e3ae0e825",
+      "sha256": "543f7a368f128fb5f66b9ccdb82b5bb1304681c021333f2cc0f2d18e3ae0e825",
+      "bytes": 843635,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/capture-process.json",
+      "source": "driving-audio-01/both-on/capture-process.json",
+      "source_sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "published_sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "bytes": 56,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup-runtime-notification.txt",
+      "source": "driving-audio-01/both-on/cleanup-runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup-runtime-process.txt",
+      "source": "driving-audio-01/both-on/cleanup-runtime-process.txt",
+      "source_sha256": "a2bbd8d3e5dc72755d565bf3df241608f99cedda1bc8423eade47634d25d37fe",
+      "published_sha256": "a2bbd8d3e5dc72755d565bf3df241608f99cedda1bc8423eade47634d25d37fe",
+      "sha256": "a2bbd8d3e5dc72755d565bf3df241608f99cedda1bc8423eade47634d25d37fe",
+      "bytes": 334,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup-runtime-service.txt",
+      "source": "driving-audio-01/both-on/cleanup-runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup-runtime-snapshot.json",
+      "source": "driving-audio-01/both-on/cleanup-runtime-snapshot.json",
+      "source_sha256": "1878b0e8910f27acd8597d1e8ab7590f13d83fda081a02aab9c8fea4bee0fd67",
+      "published_sha256": "1878b0e8910f27acd8597d1e8ab7590f13d83fda081a02aab9c8fea4bee0fd67",
+      "sha256": "1878b0e8910f27acd8597d1e8ab7590f13d83fda081a02aab9c8fea4bee0fd67",
+      "bytes": 325,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup.json",
+      "source": "driving-audio-01/both-on/cleanup.json",
+      "source_sha256": "67ead33f8328f86ebb8a59e0dc3a88651fb05389584d0332e8573b51382fa91e",
+      "published_sha256": "67ead33f8328f86ebb8a59e0dc3a88651fb05389584d0332e8573b51382fa91e",
+      "sha256": "67ead33f8328f86ebb8a59e0dc3a88651fb05389584d0332e8573b51382fa91e",
+      "bytes": 280,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup.png",
+      "source": "driving-audio-01/both-on/cleanup.png",
+      "source_sha256": "90fc5ad538621e41a1dbb39f37fdd8d7bd64321f2ac2b87de07f6a2f18197fb0",
+      "published_sha256": "90fc5ad538621e41a1dbb39f37fdd8d7bd64321f2ac2b87de07f6a2f18197fb0",
+      "sha256": "90fc5ad538621e41a1dbb39f37fdd8d7bd64321f2ac2b87de07f6a2f18197fb0",
+      "bytes": 623969,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup.xml",
+      "source": "driving-audio-01/both-on/cleanup.xml",
+      "source_sha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+      "published_sha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+      "sha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+      "bytes": 27002,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/continuous-silent.mp4",
+      "source": "driving-audio-01/both-on/continuous-silent.mp4",
+      "source_sha256": "12aacbd2778238783a0b151ef6b98b7d6323085141d46f3804bd4977bb8424bc",
+      "published_sha256": "12aacbd2778238783a0b151ef6b98b7d6323085141d46f3804bd4977bb8424bc",
+      "sha256": "12aacbd2778238783a0b151ef6b98b7d6323085141d46f3804bd4977bb8424bc",
+      "bytes": 34463362,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/environment-after.json",
+      "source": "driving-audio-01/both-on/environment-after.json",
+      "source_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "published_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "bytes": 158,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/environment.json",
+      "source": "driving-audio-01/both-on/environment.json",
+      "source_sha256": "acaa1e48b5d896ca65a574905b4f23ce70f63185e2f0b58382119a1a2b8136fa",
+      "published_sha256": "acaa1e48b5d896ca65a574905b4f23ce70f63185e2f0b58382119a1a2b8136fa",
+      "sha256": "acaa1e48b5d896ca65a574905b4f23ce70f63185e2f0b58382119a1a2b8136fa",
+      "bytes": 1422,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/events.jsonl",
+      "source": "driving-audio-01/both-on/events.jsonl",
+      "source_sha256": "bee2e02d52a97d3dce3dd6f62ffebed73a28ad006f3a04694c187b9046a99a5c",
+      "published_sha256": "bee2e02d52a97d3dce3dd6f62ffebed73a28ad006f3a04694c187b9046a99a5c",
+      "sha256": "bee2e02d52a97d3dce3dd6f62ffebed73a28ad006f3a04694c187b9046a99a5c",
+      "bytes": 3247,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/input-ledger.jsonl",
+      "source": "driving-audio-01/both-on/input-ledger.jsonl",
+      "source_sha256": "f6e5ec603c191fcaa7a52090e2c1a1ee7f5e1b47086e93196f6e0e7e7e0b625f",
+      "published_sha256": "f6e5ec603c191fcaa7a52090e2c1a1ee7f5e1b47086e93196f6e0e7e7e0b625f",
+      "sha256": "f6e5ec603c191fcaa7a52090e2c1a1ee7f5e1b47086e93196f6e0e7e7e0b625f",
+      "bytes": 210201,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/live-log.jsonl",
+      "source": "driving-audio-01/both-on/live-log.jsonl",
+      "source_sha256": "e222583ec1fad477c9ccaa8915c285df4a50c70b2d2dbe878557e1a16f619560",
+      "published_sha256": "e222583ec1fad477c9ccaa8915c285df4a50c70b2d2dbe878557e1a16f619560",
+      "sha256": "e222583ec1fad477c9ccaa8915c285df4a50c70b2d2dbe878557e1a16f619560",
+      "bytes": 2548687,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/motion.log",
+      "source": "driving-audio-01/both-on/motion.log",
+      "source_sha256": "28a0c3529894f0b0f6a029c6be32a41b72d6394473dbe960b8432362750978d1",
+      "published_sha256": "28a0c3529894f0b0f6a029c6be32a41b72d6394473dbe960b8432362750978d1",
+      "sha256": "28a0c3529894f0b0f6a029c6be32a41b72d6394473dbe960b8432362750978d1",
+      "bytes": 736305,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/oracle-comparisons.json",
+      "source": "driving-audio-01/both-on/oracle-comparisons.json",
+      "source_sha256": "165117605197c3eb9fd8f50c3d91163d708a4414cb1e01a2fbef6374d55ad690",
+      "published_sha256": "165117605197c3eb9fd8f50c3d91163d708a4414cb1e01a2fbef6374d55ad690",
+      "sha256": "165117605197c3eb9fd8f50c3d91163d708a4414cb1e01a2fbef6374d55ad690",
+      "bytes": 285361,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/oracle-result.json",
+      "source": "driving-audio-01/both-on/oracle-result.json",
+      "source_sha256": "814dae63ad6d84a1ce61920b4e20bba7527a6c2643df02bdf4eb177037ff1e86",
+      "published_sha256": "814dae63ad6d84a1ce61920b4e20bba7527a6c2643df02bdf4eb177037ff1e86",
+      "sha256": "814dae63ad6d84a1ce61920b4e20bba7527a6c2643df02bdf4eb177037ff1e86",
+      "bytes": 1780,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/over120.png",
+      "source": "driving-audio-01/both-on/over120.png",
+      "source_sha256": "28bdcbcea08704fdd7907954b966fb379221b9912155f0912209ca39b3b7ff9e",
+      "published_sha256": "28bdcbcea08704fdd7907954b966fb379221b9912155f0912209ca39b3b7ff9e",
+      "sha256": "28bdcbcea08704fdd7907954b966fb379221b9912155f0912209ca39b3b7ff9e",
+      "bytes": 279840,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/over120.xml",
+      "source": "driving-audio-01/both-on/over120.xml",
+      "source_sha256": "3572523a3f5cf73c265f43815fa283223324c5e0e5326766740872f9b79a3120",
+      "published_sha256": "3572523a3f5cf73c265f43815fa283223324c5e0e5326766740872f9b79a3120",
+      "sha256": "3572523a3f5cf73c265f43815fa283223324c5e0e5326766740872f9b79a3120",
+      "bytes": 3249,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/idle.png",
+      "source": "driving-audio-01/both-on/recovery-01/idle.png",
+      "source_sha256": "6747946a2dcdd9fa73b724830799c13f6add1dc50b4314f5e61385ebe6b65b62",
+      "published_sha256": "6747946a2dcdd9fa73b724830799c13f6add1dc50b4314f5e61385ebe6b65b62",
+      "sha256": "6747946a2dcdd9fa73b724830799c13f6add1dc50b4314f5e61385ebe6b65b62",
+      "bytes": 624472,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/idle.xml",
+      "source": "driving-audio-01/both-on/recovery-01/idle.xml",
+      "source_sha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+      "published_sha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+      "sha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+      "bytes": 27002,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/input-ledger.jsonl",
+      "source": "driving-audio-01/both-on/recovery-01/input-ledger.jsonl",
+      "source_sha256": "759e92781691564f88a99ebb05fe867f5e8de3e22119f54e06dcdd0083201d3b",
+      "published_sha256": "759e92781691564f88a99ebb05fe867f5e8de3e22119f54e06dcdd0083201d3b",
+      "sha256": "759e92781691564f88a99ebb05fe867f5e8de3e22119f54e06dcdd0083201d3b",
+      "bytes": 1041,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/recovery-confirmed.json",
+      "source": "driving-audio-01/both-on/recovery-01/recovery-confirmed.json",
+      "source_sha256": "571d1eda8297ab34f3ab7b8eb3e6c2b7b04d7f071edd75aac1602e9b731d286b",
+      "published_sha256": "571d1eda8297ab34f3ab7b8eb3e6c2b7b04d7f071edd75aac1602e9b731d286b",
+      "sha256": "571d1eda8297ab34f3ab7b8eb3e6c2b7b04d7f071edd75aac1602e9b731d286b",
+      "bytes": 1218,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/recovery.json",
+      "source": "driving-audio-01/both-on/recovery-01/recovery.json",
+      "source_sha256": "a60787ca67b1ee539bc85d9cd56a7a67cd2f6f7ed1a5e96bff3221dee2afe785",
+      "published_sha256": "a60787ca67b1ee539bc85d9cd56a7a67cd2f6f7ed1a5e96bff3221dee2afe785",
+      "sha256": "a60787ca67b1ee539bc85d9cd56a7a67cd2f6f7ed1a5e96bff3221dee2afe785",
+      "bytes": 739,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/runtime-notification.txt",
+      "source": "driving-audio-01/both-on/recovery-01/runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/runtime-process.txt",
+      "source": "driving-audio-01/both-on/recovery-01/runtime-process.txt",
+      "source_sha256": "0a9899f7b74a437447fcfe656307238ab65a313b696e16ffe87edf9626cd839b",
+      "published_sha256": "0a9899f7b74a437447fcfe656307238ab65a313b696e16ffe87edf9626cd839b",
+      "sha256": "0a9899f7b74a437447fcfe656307238ab65a313b696e16ffe87edf9626cd839b",
+      "bytes": 334,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/runtime-service.txt",
+      "source": "driving-audio-01/both-on/recovery-01/runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/runtime-snapshot.json",
+      "source": "driving-audio-01/both-on/recovery-01/runtime-snapshot.json",
+      "source_sha256": "a3220b7e152364c6110ea5ca199b25928e6c1c336f539126992d3fb73323cdf6",
+      "published_sha256": "a3220b7e152364c6110ea5ca199b25928e6c1c336f539126992d3fb73323cdf6",
+      "sha256": "a3220b7e152364c6110ea5ca199b25928e6c1c336f539126992d3fb73323cdf6",
+      "bytes": 317,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/settings.xml",
+      "source": "driving-audio-01/both-on/recovery-01/settings.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/vehicle.json",
+      "source": "driving-audio-01/both-on/recovery-01/vehicle.json",
+      "source_sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "published_sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "bytes": 27537,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/report.png",
+      "source": "driving-audio-01/both-on/report.png",
+      "source_sha256": "044c6dfbb4d72305d7e5bbdfaf215782f70ab0d301fdcdb6b2f6bfc72ef09c06",
+      "published_sha256": "044c6dfbb4d72305d7e5bbdfaf215782f70ab0d301fdcdb6b2f6bfc72ef09c06",
+      "sha256": "044c6dfbb4d72305d7e5bbdfaf215782f70ab0d301fdcdb6b2f6bfc72ef09c06",
+      "bytes": 629598,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/report.xml",
+      "source": "driving-audio-01/both-on/report.xml",
+      "source_sha256": "2fa51dcb4ecef7418d371fd3c425ab0399d2ace6f66086648ec0c9e749bbd3ac",
+      "published_sha256": "2fa51dcb4ecef7418d371fd3c425ab0399d2ace6f66086648ec0c9e749bbd3ac",
+      "sha256": "2fa51dcb4ecef7418d371fd3c425ab0399d2ace6f66086648ec0c9e749bbd3ac",
+      "bytes": 27075,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/result.json",
+      "source": "driving-audio-01/both-on/result.json",
+      "source_sha256": "a17e7cfe40c4d5f43691e75796010e43ffb0d3dcabca29f6b807ae698b05905f",
+      "published_sha256": "a17e7cfe40c4d5f43691e75796010e43ffb0d3dcabca29f6b807ae698b05905f",
+      "sha256": "a17e7cfe40c4d5f43691e75796010e43ffb0d3dcabca29f6b807ae698b05905f",
+      "bytes": 296,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-driving-confirmed_after_chime_tap.xml",
+      "source": "driving-audio-01/both-on/settings-driving-confirmed_after_chime_tap.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-driving-confirmed_after_tts_tap.xml",
+      "source": "driving-audio-01/both-on/settings-driving-confirmed_after_tts_tap.xml",
+      "source_sha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "published_sha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "sha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "bytes": 16606,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-driving-confirmed_before.xml",
+      "source": "driving-audio-01/both-on/settings-driving-confirmed_before.xml",
+      "source_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "published_sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-driving-confirmed_confirmed.xml",
+      "source": "driving-audio-01/both-on/settings-driving-confirmed_confirmed.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-driving-confirmed_states.json",
+      "source": "driving-audio-01/both-on/settings-driving-confirmed_states.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-original.json",
+      "source": "driving-audio-01/both-on/settings-original.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-original.xml",
+      "source": "driving-audio-01/both-on/settings-original.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-restored_before.xml",
+      "source": "driving-audio-01/both-on/settings-restored_before.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-restored_confirmed.xml",
+      "source": "driving-audio-01/both-on/settings-restored_confirmed.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-restored_states.json",
+      "source": "driving-audio-01/both-on/settings-restored_states.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-selection-muted_after_chime_tap.xml",
+      "source": "driving-audio-01/both-on/settings-selection-muted_after_chime_tap.xml",
+      "source_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "published_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-selection-muted_after_tts_tap.xml",
+      "source": "driving-audio-01/both-on/settings-selection-muted_after_tts_tap.xml",
+      "source_sha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "published_sha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "sha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "bytes": 16606,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-selection-muted_before.xml",
+      "source": "driving-audio-01/both-on/settings-selection-muted_before.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-selection-muted_confirmed.xml",
+      "source": "driving-audio-01/both-on/settings-selection-muted_confirmed.xml",
+      "source_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "published_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/settings-selection-muted_states.json",
+      "source": "driving-audio-01/both-on/settings-selection-muted_states.json",
+      "source_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "published_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "bytes": 326,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/start.png",
+      "source": "driving-audio-01/both-on/start.png",
+      "source_sha256": "79111246370c28b8ddbaed5503a71c8c974051daf5ab7397cbce72071edb8f37",
+      "published_sha256": "79111246370c28b8ddbaed5503a71c8c974051daf5ab7397cbce72071edb8f37",
+      "sha256": "79111246370c28b8ddbaed5503a71c8c974051daf5ab7397cbce72071edb8f37",
+      "bytes": 608991,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/start.xml",
+      "source": "driving-audio-01/both-on/start.xml",
+      "source_sha256": "bbc03b65dfcb6c3325095ded8baf973de2de528a5bff29c0de6ca6a6cf200aee",
+      "published_sha256": "bbc03b65dfcb6c3325095ded8baf973de2de528a5bff29c0de6ca6a6cf200aee",
+      "sha256": "bbc03b65dfcb6c3325095ded8baf973de2de528a5bff29c0de6ca6a6cf200aee",
+      "bytes": 33187,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/trace.json",
+      "source": "driving-audio-01/both-on/trace.json",
+      "source_sha256": "1f40caad1b2ea10968ff2952f4a7db6085e10463fade61310c74f3e4f27766f4",
+      "published_sha256": "1f40caad1b2ea10968ff2952f4a7db6085e10463fade61310c74f3e4f27766f4",
+      "sha256": "1f40caad1b2ea10968ff2952f4a7db6085e10463fade61310c74f3e4f27766f4",
+      "bytes": 806200,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/vehicle-after.json",
+      "source": "driving-audio-01/both-on/vehicle-after.json",
+      "source_sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "published_sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "sha256": "1f5fa0347ed249dca05a6e967163f60f0182fc946e85f769e8e29ea9f99551a4",
+      "bytes": 27537,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/vehicle-before.json",
+      "source": "driving-audio-01/both-on/vehicle-before.json",
+      "source_sha256": "23a84d54bb97272ac73567405ca21390e7f42342e3d4c512d64d2bdf5f5bdad5",
+      "published_sha256": "23a84d54bb97272ac73567405ca21390e7f42342e3d4c512d64d2bdf5f5bdad5",
+      "sha256": "23a84d54bb97272ac73567405ca21390e7f42342e3d4c512d64d2bdf5f5bdad5",
+      "bytes": 27537,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/video-audit.json",
+      "source": "driving-audio-01/both-on/video-audit.json",
+      "source_sha256": "012abc27ac07c7bdfd14957f4fef8a4be24a16efe85a1d1cab96bdcb37a1378b",
+      "published_sha256": "012abc27ac07c7bdfd14957f4fef8a4be24a16efe85a1d1cab96bdcb37a1378b",
+      "sha256": "012abc27ac07c7bdfd14957f4fef8a4be24a16efe85a1d1cab96bdcb37a1378b",
+      "bytes": 58180,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/video-decode-passthrough.json",
+      "source": "driving-audio-01/both-on/video-decode-passthrough.json",
+      "source_sha256": "1543b26a983dd52ab1191b8d798e1c14c0937283a0dba2e030015a53ac5ca250",
+      "published_sha256": "1543b26a983dd52ab1191b8d798e1c14c0937283a0dba2e030015a53ac5ca250",
+      "sha256": "1543b26a983dd52ab1191b8d798e1c14c0937283a0dba2e030015a53ac5ca250",
+      "bytes": 468,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/video.json",
+      "source": "driving-audio-01/both-on/video.json",
+      "source_sha256": "68cf19c68f2292fad8a7dad6bb388ee56fed7e633e256d500107705b5b0b3e69",
+      "published_sha256": "68cf19c68f2292fad8a7dad6bb388ee56fed7e633e256d500107705b5b0b3e69",
+      "sha256": "68cf19c68f2292fad8a7dad6bb388ee56fed7e633e256d500107705b5b0b3e69",
+      "bytes": 226,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/warn100.png",
+      "source": "driving-audio-01/both-on/warn100.png",
+      "source_sha256": "a9a8828472873247788dd3f806c126ff5c6a16092794a18ef4aa469d3e23b5e3",
+      "published_sha256": "a9a8828472873247788dd3f806c126ff5c6a16092794a18ef4aa469d3e23b5e3",
+      "sha256": "a9a8828472873247788dd3f806c126ff5c6a16092794a18ef4aa469d3e23b5e3",
+      "bytes": 278937,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/both-on/warn100.xml",
+      "source": "driving-audio-01/both-on/warn100.xml",
+      "source_sha256": "24c0a9b20ee15e84e4c1dbf687778069504323896571c271fd333c4a8e298495",
+      "published_sha256": "24c0a9b20ee15e84e4c1dbf687778069504323896571c271fd333c4a8e298495",
+      "sha256": "24c0a9b20ee15e84e4c1dbf687778069504323896571c271fd333c4a8e298495",
+      "bytes": 3251,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/continued-comparison.json",
+      "source": "driving-audio-01/continued-comparison.json",
+      "source_sha256": "33fe814509f36740311e5d590f2de79032beaa9a141efdb05c59665fc504b67f",
+      "published_sha256": "33fe814509f36740311e5d590f2de79032beaa9a141efdb05c59665fc504b67f",
+      "sha256": "33fe814509f36740311e5d590f2de79032beaa9a141efdb05c59665fc504b67f",
+      "bytes": 5088,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/harness-source.py",
+      "source": "driving-audio-01/harness-source.py",
+      "source_sha256": "98dc7d3dfe3d39135a9d22896e186305d4185cce65c4262b128c0bbe1706e1c3",
+      "published_sha256": "98dc7d3dfe3d39135a9d22896e186305d4185cce65c4262b128c0bbe1706e1c3",
+      "sha256": "98dc7d3dfe3d39135a9d22896e186305d4185cce65c4262b128c0bbe1706e1c3",
+      "bytes": 34623,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/input-ledger.jsonl",
+      "source": "driving-audio-01/input-ledger.jsonl",
+      "source_sha256": "fcd62c3705905834ac63634d7ef0e9029a47070208a6bbc7803ca534d18f8945",
+      "published_sha256": "fcd62c3705905834ac63634d7ef0e9029a47070208a6bbc7803ca534d18f8945",
+      "sha256": "fcd62c3705905834ac63634d7ef0e9029a47070208a6bbc7803ca534d18f8945",
+      "bytes": 408,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/native-route-off_0.xml",
+      "source": "driving-audio-01/native-route-off_0.xml",
+      "source_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "published_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "bytes": 6718,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/off-harness-source.py",
+      "source": "driving-audio-01/off-harness-source.py",
+      "source_sha256": "d61677ec16dbda220ab763f651bc35f5a31f48034fe10c2e7256c8ef89552e73",
+      "published_sha256": "d61677ec16dbda220ab763f651bc35f5a31f48034fe10c2e7256c8ef89552e73",
+      "sha256": "d61677ec16dbda220ab763f651bc35f5a31f48034fe10c2e7256c8ef89552e73",
+      "bytes": 34729,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/result.json",
+      "source": "driving-audio-01/result.json",
+      "source_sha256": "b4ce58c55bf1cf045fd4ea387e3fb796fe2a1019be4c439821cc90d55fe5c589",
+      "published_sha256": "b4ce58c55bf1cf045fd4ea387e3fb796fe2a1019be4c439821cc90d55fe5c589",
+      "sha256": "b4ce58c55bf1cf045fd4ea387e3fb796fe2a1019be4c439821cc90d55fe5c589",
+      "bytes": 410,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/returned-before-driving.xml",
+      "source": "driving-audio-01/returned-before-driving.xml",
+      "source_sha256": "46d8a68fce70669b1cb53f600826dc60c8257142fbf2a3e1e6a86d89e789384f",
+      "published_sha256": "46d8a68fce70669b1cb53f600826dc60c8257142fbf2a3e1e6a86d89e789384f",
+      "sha256": "46d8a68fce70669b1cb53f600826dc60c8257142fbf2a3e1e6a86d89e789384f",
+      "bytes": 25468,
+      "transformation": "none"
+    },
+    {
+      "path": "driving-audio-01/route-off-preflight.json",
+      "source": "driving-audio-01/route-off-preflight.json",
+      "source_sha256": "a9d569c9dae4f23bd499297a1de59f273610e84b6869ffc7f650c14cbe06b07e",
+      "published_sha256": "a9d569c9dae4f23bd499297a1de59f273610e84b6869ffc7f650c14cbe06b07e",
+      "sha256": "a9d569c9dae4f23bd499297a1de59f273610e84b6869ffc7f650c14cbe06b07e",
+      "bytes": 84,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A1-home.json",
+      "source": "flow-trace-01/A1-home.json",
+      "source_sha256": "c4aa29b0b4c94e7841be56dd04f6398d302e43f70f0950b191bd2e9fc42c0782",
+      "published_sha256": "c4aa29b0b4c94e7841be56dd04f6398d302e43f70f0950b191bd2e9fc42c0782",
+      "sha256": "c4aa29b0b4c94e7841be56dd04f6398d302e43f70f0950b191bd2e9fc42c0782",
+      "bytes": 27526,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A1-home.png",
+      "source": "flow-trace-01/A1-home.png",
+      "source_sha256": "9e4de6a4e76bbd93ab5c2070dd3a73a1ef4be272aa1892aee14b97bacf21f4b5",
+      "published_sha256": "9e4de6a4e76bbd93ab5c2070dd3a73a1ef4be272aa1892aee14b97bacf21f4b5",
+      "sha256": "9e4de6a4e76bbd93ab5c2070dd3a73a1ef4be272aa1892aee14b97bacf21f4b5",
+      "bytes": 618600,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A1-home.xml",
+      "source": "flow-trace-01/A1-home.xml",
+      "source_sha256": "27c4a2743506b11cd211a3b6b19e19a4295f6500c4ad553bb78d694e75327995",
+      "published_sha256": "27c4a2743506b11cd211a3b6b19e19a4295f6500c4ad553bb78d694e75327995",
+      "sha256": "27c4a2743506b11cd211a3b6b19e19a4295f6500c4ad553bb78d694e75327995",
+      "bytes": 26941,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A2-loaded.json",
+      "source": "flow-trace-01/A2-loaded.json",
+      "source_sha256": "f69f4d39cc0785299bd375a79cbd56bd19a206c2c0d45e58e6863cc993e5976e",
+      "published_sha256": "f69f4d39cc0785299bd375a79cbd56bd19a206c2c0d45e58e6863cc993e5976e",
+      "sha256": "f69f4d39cc0785299bd375a79cbd56bd19a206c2c0d45e58e6863cc993e5976e",
+      "bytes": 27526,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A2-loaded.png",
+      "source": "flow-trace-01/A2-loaded.png",
+      "source_sha256": "3dbb3c90389f7bf162e18940af4226f0a296c7e51224942a96f04401fd7315dc",
+      "published_sha256": "3dbb3c90389f7bf162e18940af4226f0a296c7e51224942a96f04401fd7315dc",
+      "sha256": "3dbb3c90389f7bf162e18940af4226f0a296c7e51224942a96f04401fd7315dc",
+      "bytes": 661325,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A2-loaded.xml",
+      "source": "flow-trace-01/A2-loaded.xml",
+      "source_sha256": "1054676512cbdfbe3d747ba000482eeb9a67de363287146fafa7b7c4bd7017bd",
+      "published_sha256": "1054676512cbdfbe3d747ba000482eeb9a67de363287146fafa7b7c4bd7017bd",
+      "sha256": "1054676512cbdfbe3d747ba000482eeb9a67de363287146fafa7b7c4bd7017bd",
+      "bytes": 37130,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A3-driving.json",
+      "source": "flow-trace-01/A3-driving.json",
+      "source_sha256": "d41c5191bb2c8cbbf13c1f518149d69f3b25135eb40c41e2bf6117fdba7a4f42",
+      "published_sha256": "d41c5191bb2c8cbbf13c1f518149d69f3b25135eb40c41e2bf6117fdba7a4f42",
+      "sha256": "d41c5191bb2c8cbbf13c1f518149d69f3b25135eb40c41e2bf6117fdba7a4f42",
+      "bytes": 27528,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A3-driving.png",
+      "source": "flow-trace-01/A3-driving.png",
+      "source_sha256": "640765e7806cb7545c2eb8f76c079b8d4b4bb27cf1ec1122dcc16f25fd046b95",
+      "published_sha256": "640765e7806cb7545c2eb8f76c079b8d4b4bb27cf1ec1122dcc16f25fd046b95",
+      "sha256": "640765e7806cb7545c2eb8f76c079b8d4b4bb27cf1ec1122dcc16f25fd046b95",
+      "bytes": 271672,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A3-driving.xml",
+      "source": "flow-trace-01/A3-driving.xml",
+      "source_sha256": "a1171c0b4553af55df7417a9c119ea726ccd164f97b08a2331936d8ccf0ec635",
+      "published_sha256": "a1171c0b4553af55df7417a9c119ea726ccd164f97b08a2331936d8ccf0ec635",
+      "sha256": "a1171c0b4553af55df7417a9c119ea726ccd164f97b08a2331936d8ccf0ec635",
+      "bytes": 3254,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A4-arrival.json",
+      "source": "flow-trace-01/A4-arrival.json",
+      "source_sha256": "0ecbc52e731116201b5d87427e54cb05e9e2e8f8efb918742c04e7f49f03afe8",
+      "published_sha256": "0ecbc52e731116201b5d87427e54cb05e9e2e8f8efb918742c04e7f49f03afe8",
+      "sha256": "0ecbc52e731116201b5d87427e54cb05e9e2e8f8efb918742c04e7f49f03afe8",
+      "bytes": 27525,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A4-arrival.png",
+      "source": "flow-trace-01/A4-arrival.png",
+      "source_sha256": "e2ff27e226a732de39a4f0ff3018bb26b86ec47301dd5680f27c181310deda57",
+      "published_sha256": "e2ff27e226a732de39a4f0ff3018bb26b86ec47301dd5680f27c181310deda57",
+      "sha256": "e2ff27e226a732de39a4f0ff3018bb26b86ec47301dd5680f27c181310deda57",
+      "bytes": 705602,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/A4-arrival.xml",
+      "source": "flow-trace-01/A4-arrival.xml",
+      "source_sha256": "95890de4a5cf6f8ad675aa27e31852dc3d34154ff740bd9b9c4069fed75d2c25",
+      "published_sha256": "95890de4a5cf6f8ad675aa27e31852dc3d34154ff740bd9b9c4069fed75d2c25",
+      "sha256": "95890de4a5cf6f8ad675aa27e31852dc3d34154ff740bd9b9c4069fed75d2c25",
+      "bytes": 26980,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/accepted-speed-pairs.json",
+      "source": "flow-trace-01/accepted-speed-pairs.json",
+      "source_sha256": "9a2f558ca1718d483783cd100e6517cd9ed764dea8380eea76c27e57b1303c20",
+      "published_sha256": "9a2f558ca1718d483783cd100e6517cd9ed764dea8380eea76c27e57b1303c20",
+      "sha256": "9a2f558ca1718d483783cd100e6517cd9ed764dea8380eea76c27e57b1303c20",
+      "bytes": 143487,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/analysis.json",
+      "source": "flow-trace-01/analysis.json",
+      "source_sha256": "90026e7d293a4a77a163963ee6beaa61178a2ebfada23e77b767075055ac7da8",
+      "published_sha256": "90026e7d293a4a77a163963ee6beaa61178a2ebfada23e77b767075055ac7da8",
+      "sha256": "90026e7d293a4a77a163963ee6beaa61178a2ebfada23e77b767075055ac7da8",
+      "bytes": 3653,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/arithmetic-checks.json",
+      "source": "flow-trace-01/arithmetic-checks.json",
+      "source_sha256": "0e357b0a219df14396275b9823f6a461e774110b50a698ed01d7eacf8cb8811a",
+      "published_sha256": "0e357b0a219df14396275b9823f6a461e774110b50a698ed01d7eacf8cb8811a",
+      "sha256": "0e357b0a219df14396275b9823f6a461e774110b50a698ed01d7eacf8cb8811a",
+      "bytes": 53344,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup-runtime-notification.txt",
+      "source": "flow-trace-01/cleanup-runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup-runtime-process.txt",
+      "source": "flow-trace-01/cleanup-runtime-process.txt",
+      "source_sha256": "57fb55ee22f3922ac41f8d00dac0a885ee2d52e880744957f196a5992df0c96a",
+      "published_sha256": "57fb55ee22f3922ac41f8d00dac0a885ee2d52e880744957f196a5992df0c96a",
+      "sha256": "57fb55ee22f3922ac41f8d00dac0a885ee2d52e880744957f196a5992df0c96a",
+      "bytes": 336,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup-runtime-service.txt",
+      "source": "flow-trace-01/cleanup-runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup-runtime-snapshot.json",
+      "source": "flow-trace-01/cleanup-runtime-snapshot.json",
+      "source_sha256": "90d242683a0c40e39f3eb2dafe7a68c41e0b04e3930b6602012a3fbafcf275e6",
+      "published_sha256": "90d242683a0c40e39f3eb2dafe7a68c41e0b04e3930b6602012a3fbafcf275e6",
+      "sha256": "90d242683a0c40e39f3eb2dafe7a68c41e0b04e3930b6602012a3fbafcf275e6",
+      "bytes": 325,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup.json",
+      "source": "flow-trace-01/cleanup.json",
+      "source_sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "published_sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "bytes": 71,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup.png",
+      "source": "flow-trace-01/cleanup.png",
+      "source_sha256": "3d1d617aa273bbb61e9c62b703cc200ab0f550a23b3c482c40bccd41ba0f0b8e",
+      "published_sha256": "3d1d617aa273bbb61e9c62b703cc200ab0f550a23b3c482c40bccd41ba0f0b8e",
+      "sha256": "3d1d617aa273bbb61e9c62b703cc200ab0f550a23b3c482c40bccd41ba0f0b8e",
+      "bytes": 623527,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/cleanup.xml",
+      "source": "flow-trace-01/cleanup.xml",
+      "source_sha256": "21119b06ba8e2fd395a27d251f94f925015057c66570462d2224e521a49dd3df",
+      "published_sha256": "21119b06ba8e2fd395a27d251f94f925015057c66570462d2224e521a49dd3df",
+      "sha256": "21119b06ba8e2fd395a27d251f94f925015057c66570462d2224e521a49dd3df",
+      "bytes": 27063,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/continuous-silent.mp4",
+      "source": "flow-trace-01/continuous-silent.mp4",
+      "source_sha256": "c52e324424fe6b2bfb3bd9aa0e7437dad20c028b8c4022b5a53162c84b20e6ed",
+      "published_sha256": "c52e324424fe6b2bfb3bd9aa0e7437dad20c028b8c4022b5a53162c84b20e6ed",
+      "sha256": "c52e324424fe6b2bfb3bd9aa0e7437dad20c028b8c4022b5a53162c84b20e6ed",
+      "bytes": 18622758,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/environment-after.json",
+      "source": "flow-trace-01/environment-after.json",
+      "source_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "published_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "bytes": 158,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/environment.json",
+      "source": "flow-trace-01/environment.json",
+      "source_sha256": "1dee28819edda78c4063e9b39b764a682f502369c57ea6ec0cab7c5c377303aa",
+      "published_sha256": "1dee28819edda78c4063e9b39b764a682f502369c57ea6ec0cab7c5c377303aa",
+      "sha256": "1dee28819edda78c4063e9b39b764a682f502369c57ea6ec0cab7c5c377303aa",
+      "bytes": 1066,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/harness-source.py",
+      "source": "flow-trace-01/harness-source.py",
+      "source_sha256": "5cc557e00a82a4fea9ded502cbfaa17fc999220c3b9980c9730454287719f389",
+      "published_sha256": "5cc557e00a82a4fea9ded502cbfaa17fc999220c3b9980c9730454287719f389",
+      "sha256": "5cc557e00a82a4fea9ded502cbfaa17fc999220c3b9980c9730454287719f389",
+      "bytes": 15217,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/input-ledger.jsonl",
+      "source": "flow-trace-01/input-ledger.jsonl",
+      "source_sha256": "4d49d97f0c49fa40e432fee36e5a07698cde9861d4b12041af2bb49aea8011d4",
+      "published_sha256": "4d49d97f0c49fa40e432fee36e5a07698cde9861d4b12041af2bb49aea8011d4",
+      "sha256": "4d49d97f0c49fa40e432fee36e5a07698cde9861d4b12041af2bb49aea8011d4",
+      "bytes": 23795,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/live-log.jsonl",
+      "source": "flow-trace-01/live-log.jsonl",
+      "source_sha256": "e95e87948403afae36a10531da7b51d670cc2c4a62fb6d4a9fcbf0eba7615c9d",
+      "published_sha256": "e95e87948403afae36a10531da7b51d670cc2c4a62fb6d4a9fcbf0eba7615c9d",
+      "sha256": "e95e87948403afae36a10531da7b51d670cc2c4a62fb6d4a9fcbf0eba7615c9d",
+      "bytes": 1922071,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/motion.log",
+      "source": "flow-trace-01/motion.log",
+      "source_sha256": "53343ec52754e4831dea742cac33aec153e815f9215ca20c27d3b6411ee1dbd9",
+      "published_sha256": "53343ec52754e4831dea742cac33aec153e815f9215ca20c27d3b6411ee1dbd9",
+      "sha256": "53343ec52754e4831dea742cac33aec153e815f9215ca20c27d3b6411ee1dbd9",
+      "bytes": 560804,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/preflight-runtime-notification.txt",
+      "source": "flow-trace-01/preflight-runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/preflight-runtime-process.txt",
+      "source": "flow-trace-01/preflight-runtime-process.txt",
+      "source_sha256": "4e8544606566786a1743e54d8d82a4959d2df11f905209703bb20c5b2e4b7b9e",
+      "published_sha256": "4e8544606566786a1743e54d8d82a4959d2df11f905209703bb20c5b2e4b7b9e",
+      "sha256": "4e8544606566786a1743e54d8d82a4959d2df11f905209703bb20c5b2e4b7b9e",
+      "bytes": 336,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/preflight-runtime-service.txt",
+      "source": "flow-trace-01/preflight-runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/preflight-runtime-snapshot.json",
+      "source": "flow-trace-01/preflight-runtime-snapshot.json",
+      "source_sha256": "5a0c8aeec40ffabd4ad8a372649ffc64eb362d411a31242d674ebcb0cbdeb0fa",
+      "published_sha256": "5a0c8aeec40ffabd4ad8a372649ffc64eb362d411a31242d674ebcb0cbdeb0fa",
+      "sha256": "5a0c8aeec40ffabd4ad8a372649ffc64eb362d411a31242d674ebcb0cbdeb0fa",
+      "bytes": 327,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/recent-cake-before-tap.xml",
+      "source": "flow-trace-01/recent-cake-before-tap.xml",
+      "source_sha256": "27c4a2743506b11cd211a3b6b19e19a4295f6500c4ad553bb78d694e75327995",
+      "published_sha256": "27c4a2743506b11cd211a3b6b19e19a4295f6500c4ad553bb78d694e75327995",
+      "sha256": "27c4a2743506b11cd211a3b6b19e19a4295f6500c4ad553bb78d694e75327995",
+      "bytes": 26941,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/result.json",
+      "source": "flow-trace-01/result.json",
+      "source_sha256": "680a7f4adbdd238d0a19e5632c28164f176694608028ef6dc6889fff19395b3d",
+      "published_sha256": "680a7f4adbdd238d0a19e5632c28164f176694608028ef6dc6889fff19395b3d",
+      "sha256": "680a7f4adbdd238d0a19e5632c28164f176694608028ef6dc6889fff19395b3d",
+      "bytes": 157,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/settings-original.json",
+      "source": "flow-trace-01/settings-original.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/settings-original.xml",
+      "source": "flow-trace-01/settings-original.xml",
+      "source_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "published_sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/settings-restored.xml",
+      "source": "flow-trace-01/settings-restored.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/trace.json",
+      "source": "flow-trace-01/trace.json",
+      "source_sha256": "4b913b9f05b41c6524b67a72d10a7554e67a3bf7f3b8f45a36f0014c7a78bd83",
+      "published_sha256": "4b913b9f05b41c6524b67a72d10a7554e67a3bf7f3b8f45a36f0014c7a78bd83",
+      "sha256": "4b913b9f05b41c6524b67a72d10a7554e67a3bf7f3b8f45a36f0014c7a78bd83",
+      "bytes": 691655,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/vehicle-after.json",
+      "source": "flow-trace-01/vehicle-after.json",
+      "source_sha256": "b28fe1a75ed2db831efb2ebaf7b25a7978e062a83aa7d4919604a9f46640ae53",
+      "published_sha256": "b28fe1a75ed2db831efb2ebaf7b25a7978e062a83aa7d4919604a9f46640ae53",
+      "sha256": "b28fe1a75ed2db831efb2ebaf7b25a7978e062a83aa7d4919604a9f46640ae53",
+      "bytes": 27519,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/vehicle-before.json",
+      "source": "flow-trace-01/vehicle-before.json",
+      "source_sha256": "53633269f37c780aae884af641e8bb052ee965b7c55af2f0fca98267ae2b02ac",
+      "published_sha256": "53633269f37c780aae884af641e8bb052ee965b7c55af2f0fca98267ae2b02ac",
+      "sha256": "53633269f37c780aae884af641e8bb052ee965b7c55af2f0fca98267ae2b02ac",
+      "bytes": 27537,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/video-audit.json",
+      "source": "flow-trace-01/video-audit.json",
+      "source_sha256": "465d37b9f930f32902b592041084d75736cb255a3a77733a19486979b489b200",
+      "published_sha256": "465d37b9f930f32902b592041084d75736cb255a3a77733a19486979b489b200",
+      "sha256": "465d37b9f930f32902b592041084d75736cb255a3a77733a19486979b489b200",
+      "bytes": 36442,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/video-decode-passthrough.json",
+      "source": "flow-trace-01/video-decode-passthrough.json",
+      "source_sha256": "35efea27d96cc06b09aa54593ae8492cc1cc4aef6675f4897da69ebfe46bfa43",
+      "published_sha256": "35efea27d96cc06b09aa54593ae8492cc1cc4aef6675f4897da69ebfe46bfa43",
+      "sha256": "35efea27d96cc06b09aa54593ae8492cc1cc4aef6675f4897da69ebfe46bfa43",
+      "bytes": 468,
+      "transformation": "none"
+    },
+    {
+      "path": "flow-trace-01/video.json",
+      "source": "flow-trace-01/video.json",
+      "source_sha256": "7e1a920eb69c1497e9a2e68a073ab269e34b924ea607cce2452a3c4f289ee9e5",
+      "published_sha256": "7e1a920eb69c1497e9a2e68a073ab269e34b924ea607cce2452a3c4f289ee9e5",
+      "sha256": "7e1a920eb69c1497e9a2e68a073ab269e34b924ea607cce2452a3c4f289ee9e5",
+      "bytes": 226,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/audio-result.json",
+      "source": "native-audio-probe-01/audio-result.json",
+      "source_sha256": "8d4c673bb9f4376595a8d68524821e36e7f9df7ef5b96f0c7b1a0b5b98e877c2",
+      "published_sha256": "8d4c673bb9f4376595a8d68524821e36e7f9df7ef5b96f0c7b1a0b5b98e877c2",
+      "sha256": "8d4c673bb9f4376595a8d68524821e36e7f9df7ef5b96f0c7b1a0b5b98e877c2",
+      "bytes": 1224,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/capture/audio.s16le.pcm",
+      "source": "native-audio-probe-01/capture/audio.s16le.pcm",
+      "source_sha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+      "published_sha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+      "sha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+      "bytes": 1736724,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/capture/audio.wav",
+      "source": "native-audio-probe-01/capture/audio.wav",
+      "source_sha256": "c11dce8879f0bd59a36efd614513e6234095e6f3378f606273800ec4e5f0d8e0",
+      "published_sha256": "c11dce8879f0bd59a36efd614513e6234095e6f3378f606273800ec4e5f0d8e0",
+      "sha256": "c11dce8879f0bd59a36efd614513e6234095e6f3378f606273800ec4e5f0d8e0",
+      "bytes": 1736768,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/capture/metadata.json",
+      "source": "native-audio-probe-01/capture/metadata.json",
+      "source_sha256": "e3e316701e896940c35d7ce534731886838693d20b7429e5427c631c84afa123",
+      "published_sha256": "e3e316701e896940c35d7ce534731886838693d20b7429e5427c631c84afa123",
+      "sha256": "e3e316701e896940c35d7ce534731886838693d20b7429e5427c631c84afa123",
+      "bytes": 532023,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/capture-process.json",
+      "source": "native-audio-probe-01/capture-process.json",
+      "source_sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "published_sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "sha256": "ff739d9fe944605d1aab280688f4c41f3156ae499a207e9dea6c46cd56537709",
+      "bytes": 56,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup-runtime-notification.txt",
+      "source": "native-audio-probe-01/cleanup-runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup-runtime-process.txt",
+      "source": "native-audio-probe-01/cleanup-runtime-process.txt",
+      "source_sha256": "835e757ab878d9d58b1736cde175e2973080ce80f8170db04436e7fa1fdf27a8",
+      "published_sha256": "835e757ab878d9d58b1736cde175e2973080ce80f8170db04436e7fa1fdf27a8",
+      "sha256": "835e757ab878d9d58b1736cde175e2973080ce80f8170db04436e7fa1fdf27a8",
+      "bytes": 333,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup-runtime-service.txt",
+      "source": "native-audio-probe-01/cleanup-runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup-runtime-snapshot.json",
+      "source": "native-audio-probe-01/cleanup-runtime-snapshot.json",
+      "source_sha256": "0db77c00604912649de8aca21c486e6a7dd9ed224f67d64f4b73f3a90ebcb4d0",
+      "published_sha256": "0db77c00604912649de8aca21c486e6a7dd9ed224f67d64f4b73f3a90ebcb4d0",
+      "sha256": "0db77c00604912649de8aca21c486e6a7dd9ed224f67d64f4b73f3a90ebcb4d0",
+      "bytes": 325,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup.json",
+      "source": "native-audio-probe-01/cleanup.json",
+      "source_sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "published_sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "sha256": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+      "bytes": 71,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup.png",
+      "source": "native-audio-probe-01/cleanup.png",
+      "source_sha256": "c4530f12b1bc08c3d45526cb775e4daebd1608c3d138057a7087f5ee8abd852d",
+      "published_sha256": "c4530f12b1bc08c3d45526cb775e4daebd1608c3d138057a7087f5ee8abd852d",
+      "sha256": "c4530f12b1bc08c3d45526cb775e4daebd1608c3d138057a7087f5ee8abd852d",
+      "bytes": 627925,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/cleanup.xml",
+      "source": "native-audio-probe-01/cleanup.xml",
+      "source_sha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "published_sha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "sha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "bytes": 27012,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/environment-after.json",
+      "source": "native-audio-probe-01/environment-after.json",
+      "source_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "published_sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "sha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "bytes": 158,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/environment.json",
+      "source": "native-audio-probe-01/environment.json",
+      "source_sha256": "3be31f1459e86157f891983692a3371f7cac119a219c9b2c5deed9c382c4085c",
+      "published_sha256": "3be31f1459e86157f891983692a3371f7cac119a219c9b2c5deed9c382c4085c",
+      "sha256": "3be31f1459e86157f891983692a3371f7cac119a219c9b2c5deed9c382c4085c",
+      "bytes": 538,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/events.jsonl",
+      "source": "native-audio-probe-01/events.jsonl",
+      "source_sha256": "2f8e459444499306709d1f38a9b11e46c98d3657ef800802c7f64fc10026b7f3",
+      "published_sha256": "2f8e459444499306709d1f38a9b11e46c98d3657ef800802c7f64fc10026b7f3",
+      "sha256": "2f8e459444499306709d1f38a9b11e46c98d3657ef800802c7f64fc10026b7f3",
+      "bytes": 2582,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/harness-source.py",
+      "source": "native-audio-probe-01/harness-source.py",
+      "source_sha256": "591a376c45a979359b891c17cff973b4f54349f861631137e322590766600177",
+      "published_sha256": "591a376c45a979359b891c17cff973b4f54349f861631137e322590766600177",
+      "sha256": "591a376c45a979359b891c17cff973b4f54349f861631137e322590766600177",
+      "bytes": 42160,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/input-ledger.jsonl",
+      "source": "native-audio-probe-01/input-ledger.jsonl",
+      "source_sha256": "d9d2b11ab84c14183829b41579947471d9c94bdcf6c1c2134143670a8e44403f",
+      "published_sha256": "d9d2b11ab84c14183829b41579947471d9c94bdcf6c1c2134143670a8e44403f",
+      "sha256": "d9d2b11ab84c14183829b41579947471d9c94bdcf6c1c2134143670a8e44403f",
+      "bytes": 3098,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native-cleanup-check.xml",
+      "source": "native-audio-probe-01/native-cleanup-check.xml",
+      "source_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "published_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "bytes": 6718,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native-final-idle_0.xml",
+      "source": "native-audio-probe-01/native-final-idle_0.xml",
+      "source_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "published_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "bytes": 6718,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native-initial-idle_0.xml",
+      "source": "native-audio-probe-01/native-initial-idle_0.xml",
+      "source_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "published_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "bytes": 6718,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native-route.png",
+      "source": "native-audio-probe-01/native-route.png",
+      "source_sha256": "500c56f45323b87fd95d1dc7cbfe5bbabf72f656aee5743de0234944c437fafa",
+      "published_sha256": "500c56f45323b87fd95d1dc7cbfe5bbabf72f656aee5743de0234944c437fafa",
+      "sha256": "500c56f45323b87fd95d1dc7cbfe5bbabf72f656aee5743de0234944c437fafa",
+      "bytes": 335825,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native-route.xml",
+      "source": "native-audio-probe-01/native-route.xml",
+      "source_sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "published_sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "bytes": 11251,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native_end_check.xml",
+      "source": "native-audio-probe-01/native_end_check.xml",
+      "source_sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "published_sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "bytes": 11251,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/native_ended_0.xml",
+      "source": "native-audio-probe-01/native_ended_0.xml",
+      "source_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "published_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "bytes": 6718,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_detail_0.xml",
+      "source": "native-audio-probe-01/navi_detail_0.xml",
+      "source_sha256": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+      "published_sha256": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+      "sha256": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+      "bytes": 8824,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_home_0.xml",
+      "source": "native-audio-probe-01/navi_home_0.xml",
+      "source_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "published_sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "bytes": 6718,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_results_0.xml",
+      "source": "native-audio-probe-01/navi_results_0.xml",
+      "source_sha256": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+      "published_sha256": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+      "sha256": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+      "bytes": 26027,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_route_0.xml",
+      "source": "native-audio-probe-01/navi_route_0.xml",
+      "source_sha256": "73f3427b145cc3d53145e51441f4db684ae39f7248794e1e134a123a11a0925f",
+      "published_sha256": "73f3427b145cc3d53145e51441f4db684ae39f7248794e1e134a123a11a0925f",
+      "sha256": "73f3427b145cc3d53145e51441f4db684ae39f7248794e1e134a123a11a0925f",
+      "bytes": 2206,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_route_1.xml",
+      "source": "native-audio-probe-01/navi_route_1.xml",
+      "source_sha256": "847588ac4abbe5606af82e077982f6be195dae776117eee98014e203ce7fe8c4",
+      "published_sha256": "847588ac4abbe5606af82e077982f6be195dae776117eee98014e203ce7fe8c4",
+      "sha256": "847588ac4abbe5606af82e077982f6be195dae776117eee98014e203ce7fe8c4",
+      "bytes": 12989,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_route_2.xml",
+      "source": "native-audio-probe-01/navi_route_2.xml",
+      "source_sha256": "847588ac4abbe5606af82e077982f6be195dae776117eee98014e203ce7fe8c4",
+      "published_sha256": "847588ac4abbe5606af82e077982f6be195dae776117eee98014e203ce7fe8c4",
+      "sha256": "847588ac4abbe5606af82e077982f6be195dae776117eee98014e203ce7fe8c4",
+      "bytes": 12989,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_route_3.xml",
+      "source": "native-audio-probe-01/navi_route_3.xml",
+      "source_sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "published_sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "sha256": "2eb2d91deaf9dac2aaa61296853162ba38b1466f592665fafa57afcfccf9aec3",
+      "bytes": 11251,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/navi_search_0.xml",
+      "source": "native-audio-probe-01/navi_search_0.xml",
+      "source_sha256": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+      "published_sha256": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+      "sha256": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+      "bytes": 13960,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/idle-final.png",
+      "source": "native-audio-probe-01/ownership-return/idle-final.png",
+      "source_sha256": "80718ecd60c1773a22872db280f585462f1ba4fa4ce2e62aba979aec599daaf0",
+      "published_sha256": "80718ecd60c1773a22872db280f585462f1ba4fa4ce2e62aba979aec599daaf0",
+      "sha256": "80718ecd60c1773a22872db280f585462f1ba4fa4ce2e62aba979aec599daaf0",
+      "bytes": 626985,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/idle-final.xml",
+      "source": "native-audio-probe-01/ownership-return/idle-final.xml",
+      "source_sha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "published_sha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "sha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "bytes": 27012,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/input-ledger.jsonl",
+      "source": "native-audio-probe-01/ownership-return/input-ledger.jsonl",
+      "source_sha256": "df29e72ad2e04d89c5fc7d6a9bddc3ed8a0ff3e22dcb31c35ef7303afd650035",
+      "published_sha256": "df29e72ad2e04d89c5fc7d6a9bddc3ed8a0ff3e22dcb31c35ef7303afd650035",
+      "sha256": "df29e72ad2e04d89c5fc7d6a9bddc3ed8a0ff3e22dcb31c35ef7303afd650035",
+      "bytes": 1047,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/ownership-return.json",
+      "source": "native-audio-probe-01/ownership-return/ownership-return.json",
+      "source_sha256": "645c848c7a214a946af22eb0f5fd1d502d41eb918d55701f8c8d2affe7ba57a3",
+      "published_sha256": "645c848c7a214a946af22eb0f5fd1d502d41eb918d55701f8c8d2affe7ba57a3",
+      "sha256": "645c848c7a214a946af22eb0f5fd1d502d41eb918d55701f8c8d2affe7ba57a3",
+      "bytes": 810,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/runtime-final-notification.txt",
+      "source": "native-audio-probe-01/ownership-return/runtime-final-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/runtime-final-process.txt",
+      "source": "native-audio-probe-01/ownership-return/runtime-final-process.txt",
+      "source_sha256": "832e6371b85a9c674e97c34f70f2a348474b4c2fcd58e2a7521ec39cb1817783",
+      "published_sha256": "832e6371b85a9c674e97c34f70f2a348474b4c2fcd58e2a7521ec39cb1817783",
+      "sha256": "832e6371b85a9c674e97c34f70f2a348474b4c2fcd58e2a7521ec39cb1817783",
+      "bytes": 334,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/runtime-final-service.txt",
+      "source": "native-audio-probe-01/ownership-return/runtime-final-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/runtime-final-snapshot.json",
+      "source": "native-audio-probe-01/ownership-return/runtime-final-snapshot.json",
+      "source_sha256": "deb34fce4f21c13b8e358ccaf9e106d8b927e21c3cba38063e0629e1e945d45f",
+      "published_sha256": "deb34fce4f21c13b8e358ccaf9e106d8b927e21c3cba38063e0629e1e945d45f",
+      "sha256": "deb34fce4f21c13b8e358ccaf9e106d8b927e21c3cba38063e0629e1e945d45f",
+      "bytes": 323,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/settings-final.xml",
+      "source": "native-audio-probe-01/ownership-return/settings-final.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/verification-error-02.json",
+      "source": "native-audio-probe-01/ownership-return/verification-error-02.json",
+      "source_sha256": "91534a50cca88b3971310a6f4b7f6d8ee05ccb45e50621004fce3b139a868f45",
+      "published_sha256": "91534a50cca88b3971310a6f4b7f6d8ee05ccb45e50621004fce3b139a868f45",
+      "sha256": "91534a50cca88b3971310a6f4b7f6d8ee05ccb45e50621004fce3b139a868f45",
+      "bytes": 167,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/verification-error.json",
+      "source": "native-audio-probe-01/ownership-return/verification-error.json",
+      "source_sha256": "72a1b9208aab0c4a85403f515cbade2978ccbe1196e6b38d4260cc0b37e69f65",
+      "published_sha256": "72a1b9208aab0c4a85403f515cbade2978ccbe1196e6b38d4260cc0b37e69f65",
+      "sha256": "72a1b9208aab0c4a85403f515cbade2978ccbe1196e6b38d4260cc0b37e69f65",
+      "bytes": 226,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/packet-analysis.json",
+      "source": "native-audio-probe-01/packet-analysis.json",
+      "source_sha256": "0149f8dd7b49bbfa433cc6752e1e60bdb977a82aadcf589556c6cfd53852c5b1",
+      "published_sha256": "0149f8dd7b49bbfa433cc6752e1e60bdb977a82aadcf589556c6cfd53852c5b1",
+      "sha256": "0149f8dd7b49bbfa433cc6752e1e60bdb977a82aadcf589556c6cfd53852c5b1",
+      "bytes": 704907,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/preflight-runtime-notification.txt",
+      "source": "native-audio-probe-01/preflight-runtime-notification.txt",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/preflight-runtime-process.txt",
+      "source": "native-audio-probe-01/preflight-runtime-process.txt",
+      "source_sha256": "8487df06c07d660311cddff99f6a62193db2d0c2bcd4893b098fc12983e48f0c",
+      "published_sha256": "8487df06c07d660311cddff99f6a62193db2d0c2bcd4893b098fc12983e48f0c",
+      "sha256": "8487df06c07d660311cddff99f6a62193db2d0c2bcd4893b098fc12983e48f0c",
+      "bytes": 336,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/preflight-runtime-service.txt",
+      "source": "native-audio-probe-01/preflight-runtime-service.txt",
+      "source_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "published_sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "bytes": 66,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/preflight-runtime-snapshot.json",
+      "source": "native-audio-probe-01/preflight-runtime-snapshot.json",
+      "source_sha256": "45e064a6ed0a05c45b088c7e713583cbb1d9e2bc8f26d47c7c7cec0233875a34",
+      "published_sha256": "45e064a6ed0a05c45b088c7e713583cbb1d9e2bc8f26d47c7c7cec0233875a34",
+      "sha256": "45e064a6ed0a05c45b088c7e713583cbb1d9e2bc8f26d47c7c7cec0233875a34",
+      "bytes": 327,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/result.json",
+      "source": "native-audio-probe-01/result.json",
+      "source_sha256": "245fbcf6edcc4ac84b939bdec50b1ac5f175254d98b78049a9bab0fef73230ed",
+      "published_sha256": "245fbcf6edcc4ac84b939bdec50b1ac5f175254d98b78049a9bab0fef73230ed",
+      "sha256": "245fbcf6edcc4ac84b939bdec50b1ac5f175254d98b78049a9bab0fef73230ed",
+      "bytes": 1267,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/route-window.json",
+      "source": "native-audio-probe-01/route-window.json",
+      "source_sha256": "631559ff0cf75908ae52cea8098fd0a0320bb198f0b8c5251e110411d29e94c8",
+      "published_sha256": "631559ff0cf75908ae52cea8098fd0a0320bb198f0b8c5251e110411d29e94c8",
+      "sha256": "631559ff0cf75908ae52cea8098fd0a0320bb198f0b8c5251e110411d29e94c8",
+      "bytes": 450,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-original.json",
+      "source": "native-audio-probe-01/settings-original.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-original.xml",
+      "source": "native-audio-probe-01/settings-original.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-restored_after_chime_tap.xml",
+      "source": "native-audio-probe-01/settings-restored_after_chime_tap.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-restored_after_tts_tap.xml",
+      "source": "native-audio-probe-01/settings-restored_after_tts_tap.xml",
+      "source_sha256": "c0f6c8f2f5cf011083354cf7b2c3020381fd1961b69aabf59b9f70148e8ead35",
+      "published_sha256": "c0f6c8f2f5cf011083354cf7b2c3020381fd1961b69aabf59b9f70148e8ead35",
+      "sha256": "c0f6c8f2f5cf011083354cf7b2c3020381fd1961b69aabf59b9f70148e8ead35",
+      "bytes": 16606,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-restored_before.xml",
+      "source": "native-audio-probe-01/settings-restored_before.xml",
+      "source_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "published_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-restored_confirmed.xml",
+      "source": "native-audio-probe-01/settings-restored_confirmed.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-restored_states.json",
+      "source": "native-audio-probe-01/settings-restored_states.json",
+      "source_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "published_sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "bytes": 324,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-vip-muted_after_chime_tap.xml",
+      "source": "native-audio-probe-01/settings-vip-muted_after_chime_tap.xml",
+      "source_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "published_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-vip-muted_after_tts_tap.xml",
+      "source": "native-audio-probe-01/settings-vip-muted_after_tts_tap.xml",
+      "source_sha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "published_sha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "sha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "bytes": 16606,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-vip-muted_before.xml",
+      "source": "native-audio-probe-01/settings-vip-muted_before.xml",
+      "source_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "published_sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "bytes": 16605,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-vip-muted_confirmed.xml",
+      "source": "native-audio-probe-01/settings-vip-muted_confirmed.xml",
+      "source_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "published_sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "bytes": 16607,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/settings-vip-muted_states.json",
+      "source": "native-audio-probe-01/settings-vip-muted_states.json",
+      "source_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "published_sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "sha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "bytes": 326,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/vehicle-after.json",
+      "source": "native-audio-probe-01/vehicle-after.json",
+      "source_sha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+      "published_sha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+      "sha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+      "bytes": 27519,
+      "transformation": "none"
+    },
+    {
+      "path": "native-audio-probe-01/vehicle-before.json",
+      "source": "native-audio-probe-01/vehicle-before.json",
+      "source_sha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+      "published_sha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+      "sha256": "27e383aa3ac9b783e4a628e307d2cd2f7b58fd8ce3b3593a4485a196e1775a6b",
+      "bytes": 27519,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/driving-on01-verification.json",
+      "source": "verification/driving-on01-verification.json",
+      "source_sha256": "7a9fc5c26518550db927209302871447328b683a4c1b683973f97cf5c88a6ce5",
+      "published_sha256": "7a9fc5c26518550db927209302871447328b683a4c1b683973f97cf5c88a6ce5",
+      "sha256": "7a9fc5c26518550db927209302871447328b683a4c1b683973f97cf5c88a6ce5",
+      "bytes": 8803,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/driving-on01-verification.md",
+      "source": "verification/driving-on01-verification.md",
+      "source_sha256": "39005fdcb1062f5abd0464f62e794ec3b16bac634a14c13793741f2dcab1be74",
+      "published_sha256": "39005fdcb1062f5abd0464f62e794ec3b16bac634a14c13793741f2dcab1be74",
+      "sha256": "39005fdcb1062f5abd0464f62e794ec3b16bac634a14c13793741f2dcab1be74",
+      "bytes": 2924,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/driving-on01-recovery-verification.json",
+      "source": "verification/driving-on01-recovery-verification.json",
+      "source_sha256": "02602a569c9f98cd399a6046ad74585c58e70423da8247481f88a4a5b272169e",
+      "published_sha256": "02602a569c9f98cd399a6046ad74585c58e70423da8247481f88a4a5b272169e",
+      "sha256": "02602a569c9f98cd399a6046ad74585c58e70423da8247481f88a4a5b272169e",
+      "bytes": 1979,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/driving-on01-recovery-verification.md",
+      "source": "verification/driving-on01-recovery-verification.md",
+      "source_sha256": "61eb3b139b0317c088fb450810f265521e799e8f09ae5eebcc64e9fe08648292",
+      "published_sha256": "61eb3b139b0317c088fb450810f265521e799e8f09ae5eebcc64e9fe08648292",
+      "sha256": "61eb3b139b0317c088fb450810f265521e799e8f09ae5eebcc64e9fe08648292",
+      "bytes": 1059,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/driving-off01-contrast-verification.json",
+      "source": "verification/driving-off01-contrast-verification.json",
+      "source_sha256": "e052d888c8b8b7e39238df2b3f1e134cdd35f95c7932260f164e8e31a9b29319",
+      "published_sha256": "e052d888c8b8b7e39238df2b3f1e134cdd35f95c7932260f164e8e31a9b29319",
+      "sha256": "e052d888c8b8b7e39238df2b3f1e134cdd35f95c7932260f164e8e31a9b29319",
+      "bytes": 5252,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/driving-off01-contrast-verification.md",
+      "source": "verification/driving-off01-contrast-verification.md",
+      "source_sha256": "4b01c2cc5e03d7e3c073de9c4af05fc202fbea5beddf62c5da7785d1d8d7ab1e",
+      "published_sha256": "4b01c2cc5e03d7e3c073de9c4af05fc202fbea5beddf62c5da7785d1d8d7ab1e",
+      "sha256": "4b01c2cc5e03d7e3c073de9c4af05fc202fbea5beddf62c5da7785d1d8d7ab1e",
+      "bytes": 1668,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/flow01-verification.json",
+      "source": "verification/flow01-verification.json",
+      "source_sha256": "119cbbefb8452aaf4947a7335c298cc3a2bf03839eadb900e0b50c174a09877c",
+      "published_sha256": "119cbbefb8452aaf4947a7335c298cc3a2bf03839eadb900e0b50c174a09877c",
+      "sha256": "119cbbefb8452aaf4947a7335c298cc3a2bf03839eadb900e0b50c174a09877c",
+      "bytes": 4204,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/flow01-verification.md",
+      "source": "verification/flow01-verification.md",
+      "source_sha256": "b44ddb0e6d3f35dc460f6235d7d4e23c1f91a2382ee08bb30fe88b5353c30065",
+      "published_sha256": "b44ddb0e6d3f35dc460f6235d7d4e23c1f91a2382ee08bb30fe88b5353c30065",
+      "sha256": "b44ddb0e6d3f35dc460f6235d7d4e23c1f91a2382ee08bb30fe88b5353c30065",
+      "bytes": 2048,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/native01-verification.json",
+      "source": "verification/native01-verification.json",
+      "source_sha256": "2c00369d47e000c2da0fc4c48abd3e3ccbaebe430fedf0a93ff0c8042f92d394",
+      "published_sha256": "2c00369d47e000c2da0fc4c48abd3e3ccbaebe430fedf0a93ff0c8042f92d394",
+      "sha256": "2c00369d47e000c2da0fc4c48abd3e3ccbaebe430fedf0a93ff0c8042f92d394",
+      "bytes": 3605,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/native01-verification.md",
+      "source": "verification/native01-verification.md",
+      "source_sha256": "0771f0910f6888597134a24ea48b27ef88a4e898ab3d12f2d1a98021d6e302dd",
+      "published_sha256": "0771f0910f6888597134a24ea48b27ef88a4e898ab3d12f2d1a98021d6e302dd",
+      "sha256": "0771f0910f6888597134a24ea48b27ef88a4e898ab3d12f2d1a98021d6e302dd",
+      "bytes": 1245,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/final-consistency.json",
+      "source": "verification/final-consistency.json",
+      "source_sha256": "661ed4a495317519e2aae3ce797532530c8d57b03885bb6864892ce5f63c35c0",
+      "published_sha256": "661ed4a495317519e2aae3ce797532530c8d57b03885bb6864892ce5f63c35c0",
+      "sha256": "661ed4a495317519e2aae3ce797532530c8d57b03885bb6864892ce5f63c35c0",
+      "bytes": 2879,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/media-review.json",
+      "source": "verification/media-review.json",
+      "source_sha256": "789fcb12ec41dd02e0dad7cdf9baefff7e050e747ccbf70fcdebd3b76583c1da",
+      "published_sha256": "789fcb12ec41dd02e0dad7cdf9baefff7e050e747ccbf70fcdebd3b76583c1da",
+      "sha256": "789fcb12ec41dd02e0dad7cdf9baefff7e050e747ccbf70fcdebd3b76583c1da",
+      "bytes": 12426,
+      "transformation": "none"
+    }
+  ]
+}

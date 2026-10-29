@@ -1,0 +1,32 @@
+{
+  "manualTesterRecoveryVerified": true,
+  "originalCleanupRemainsFalse": true,
+  "motionTraceProperty": "",
+  "settings": {
+    "tts": true,
+    "chime": true,
+    "demo_curve": true
+  },
+  "samePid": true,
+  "identity": {
+    "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+    "pid": "22692",
+    "product": "crp_avd_arm64",
+    "api": "34"
+  },
+  "idleUiObserved": true,
+  "parkSpeedZero": true,
+  "serviceAbsent": true,
+  "notificationCount": 0,
+  "unchangedVehicleDomains": {
+    "hvac": true,
+    "seat": true,
+    "body": true,
+    "controls": true
+  },
+  "action": "only shell-quoted restoration of original MotionTrace property; UI/settings/readback verification; no restart/reset",
+  "originalRecoveryParserVerdict": false,
+  "parserCorrection": "Original check required English VIP Seat, but actual saved idle XML uses Korean VIP 조수석. Confirmed using actual unique idle prompt plus preset picker/P/0 km/h/navigation idle. No device mutation or original evidence rewrite.",
+  "idleXmlSha256": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1",
+  "originalRecoverySha256": "a60787ca67b1ee539bc85d9cd56a7a67cd2f6f7ed1a5e96bff3221dee2afe785"
+}

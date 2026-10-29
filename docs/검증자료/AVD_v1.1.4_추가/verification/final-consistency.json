@@ -1,0 +1,95 @@
+{
+  "verdict": "FINAL_SAVED_RECORD_CONSISTENCY_VERIFIED",
+  "errors": [],
+  "checks": [
+    {
+      "name": "driving-audio-01 supplemental hashes",
+      "passed": true,
+      "detail": 127
+    },
+    {
+      "name": "flow-trace-01 supplemental hashes",
+      "passed": true,
+      "detail": 45
+    },
+    {
+      "name": "native-audio-probe-01 supplemental hashes",
+      "passed": true,
+      "detail": 66
+    },
+    {
+      "name": "ownership final identity/property/finished",
+      "passed": true
+    },
+    {
+      "name": "ownership saved idle UI",
+      "passed": true
+    },
+    {
+      "name": "ownership saved three settings",
+      "passed": true
+    },
+    {
+      "name": "ownership service/notification absent",
+      "passed": true
+    },
+    {
+      "name": "ownership referenced vehicle same bytes",
+      "passed": true
+    },
+    {
+      "name": "ownership resource cleanup recorded",
+      "passed": true
+    },
+    {
+      "name": "two original final-parser errors preserved",
+      "passed": true
+    },
+    {
+      "name": "driving-audio-01/both-on original video and both decode records",
+      "passed": true
+    },
+    {
+      "name": "flow-trace-01 original video and both decode records",
+      "passed": true
+    },
+    {
+      "name": "five independent reviews complete",
+      "passed": true
+    }
+  ],
+  "offline_check_counts": {
+    "primary_reviews": 136,
+    "final_supplemental_checks": 13,
+    "not_app_test_count": true
+  },
+  "reviews": [
+    {
+      "path": "verification/driving-on01-verification.json",
+      "sha256": "7a9fc5c26518550db927209302871447328b683a4c1b683973f97cf5c88a6ce5"
+    },
+    {
+      "path": "verification/driving-on01-recovery-verification.json",
+      "sha256": "02602a569c9f98cd399a6046ad74585c58e70423da8247481f88a4a5b272169e"
+    },
+    {
+      "path": "verification/driving-off01-contrast-verification.json",
+      "sha256": "e052d888c8b8b7e39238df2b3f1e134cdd35f95c7932260f164e8e31a9b29319"
+    },
+    {
+      "path": "verification/flow01-verification.json",
+      "sha256": "119cbbefb8452aaf4947a7335c298cc3a2bf03839eadb900e0b50c174a09877c"
+    },
+    {
+      "path": "verification/native01-verification.json",
+      "sha256": "2c00369d47e000c2da0fc4c48abd3e3ccbaebe430fedf0a93ff0c8042f92d394"
+    }
+  ],
+  "scope": "Only saved final manifests, resource-return records and supplementary decoder records; no AVD or repeated app tests.",
+  "limits": [
+    "Forward/helper termination and property values are recorded by tester JSON; no independent device queries were made.",
+    "Original ON cleanup false, original recovery UI-parser false, and two final parser errors remain preserved.",
+    "Native response is nonzero but full route window incomplete; no speech-source or contention validation.",
+    "Root owns actual media privacy inspection, separate from this evidence arithmetic/hash review."
+  ]
+}

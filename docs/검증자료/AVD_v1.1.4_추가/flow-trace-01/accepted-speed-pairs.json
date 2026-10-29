@@ -1,0 +1,5672 @@
+[
+  {
+    "from": {
+      "tMs": 15297500,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 0
+    },
+    "to": {
+      "tMs": 15297604,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 2
+    },
+    "dtSeconds": 0.104,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15297604,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 2
+    },
+    "to": {
+      "tMs": 15297803,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 3
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15297803,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 3
+    },
+    "to": {
+      "tMs": 15297901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 4
+    },
+    "dtSeconds": 0.098,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15297901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 4
+    },
+    "to": {
+      "tMs": 15298101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 5
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 5
+    },
+    "to": {
+      "tMs": 15298201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 6
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 6
+    },
+    "to": {
+      "tMs": 15298300,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 8
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298300,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 8
+    },
+    "to": {
+      "tMs": 15298401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 9
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 9
+    },
+    "to": {
+      "tMs": 15298505,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 10
+    },
+    "dtSeconds": 0.104,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298505,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 10
+    },
+    "to": {
+      "tMs": 15298700,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 11
+    },
+    "dtSeconds": 0.195,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298700,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 11
+    },
+    "to": {
+      "tMs": 15298801,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 12
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298801,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 12
+    },
+    "to": {
+      "tMs": 15298901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 13
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15298901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 13
+    },
+    "to": {
+      "tMs": 15299001,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 14
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15299001,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 14
+    },
+    "to": {
+      "tMs": 15299101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 15
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15299101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 15
+    },
+    "to": {
+      "tMs": 15299202,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 16
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15299202,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 16
+    },
+    "to": {
+      "tMs": 15299401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 18
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15299401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 18
+    },
+    "to": {
+      "tMs": 15299601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 19
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15299601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 19
+    },
+    "to": {
+      "tMs": 15299804,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 20
+    },
+    "dtSeconds": 0.203,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15299804,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 20
+    },
+    "to": {
+      "tMs": 15300001,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 21
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300001,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 21
+    },
+    "to": {
+      "tMs": 15300101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 22
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 22
+    },
+    "to": {
+      "tMs": 15300201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 23
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 23
+    },
+    "to": {
+      "tMs": 15300401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 25
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 25
+    },
+    "to": {
+      "tMs": 15300501,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 27
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300501,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 27
+    },
+    "to": {
+      "tMs": 15300604,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 28
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300604,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 28
+    },
+    "to": {
+      "tMs": 15300809,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 29
+    },
+    "dtSeconds": 0.205,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300809,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 29
+    },
+    "to": {
+      "tMs": 15300902,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 30
+    },
+    "dtSeconds": 0.093,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15300902,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 30
+    },
+    "to": {
+      "tMs": 15301109,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 31
+    },
+    "dtSeconds": 0.207,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15301109,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 31
+    },
+    "to": {
+      "tMs": 15301310,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 33
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15301310,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 33
+    },
+    "to": {
+      "tMs": 15301502,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 34
+    },
+    "dtSeconds": 0.192,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15301502,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 34
+    },
+    "to": {
+      "tMs": 15301701,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 35
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15301701,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 35
+    },
+    "to": {
+      "tMs": 15301903,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 36
+    },
+    "dtSeconds": 0.202,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15301903,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 36
+    },
+    "to": {
+      "tMs": 15302101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 37
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302101,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 37
+    },
+    "to": {
+      "tMs": 15302201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 38
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 38
+    },
+    "to": {
+      "tMs": 15302405,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 40
+    },
+    "dtSeconds": 0.204,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302405,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 40
+    },
+    "to": {
+      "tMs": 15302500,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 41
+    },
+    "dtSeconds": 0.095,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302500,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 41
+    },
+    "to": {
+      "tMs": 15302601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 42
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 42
+    },
+    "to": {
+      "tMs": 15302800,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 43
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302800,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 43
+    },
+    "to": {
+      "tMs": 15302901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 44
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15302901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 44
+    },
+    "to": {
+      "tMs": 15303002,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 45
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15303002,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 45
+    },
+    "to": {
+      "tMs": 15303201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 46
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15303201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 46
+    },
+    "to": {
+      "tMs": 15303400,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 48
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15303400,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 48
+    },
+    "to": {
+      "tMs": 15303603,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 50
+    },
+    "dtSeconds": 0.203,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15303603,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 50
+    },
+    "to": {
+      "tMs": 15303801,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 51
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15303801,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 51
+    },
+    "to": {
+      "tMs": 15303900,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 52
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15303900,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 52
+    },
+    "to": {
+      "tMs": 15304006,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 53
+    },
+    "dtSeconds": 0.106,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304006,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 53
+    },
+    "to": {
+      "tMs": 15304203,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 54
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304203,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 54
+    },
+    "to": {
+      "tMs": 15304302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 56
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 56
+    },
+    "to": {
+      "tMs": 15304500,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 57
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 0.0,
+    "expectedLongitudinalG": 0.0,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304500,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 57
+    },
+    "to": {
+      "tMs": 15304602,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 58
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.5555555820465088,
+    "rawAccelerationMps2": 5.446623353397145,
+    "previousEmaMps2": 0.0,
+    "emaMps2": 2.7233116766985725,
+    "expectedLongitudinalG": 0.2777005069721641,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304602,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 58
+    },
+    "to": {
+      "tMs": 15304800,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 59
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 2.7233116766985725,
+    "emaMps2": 1.3616558383492863,
+    "expectedLongitudinalG": 0.13885025348608204,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304800,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 59
+    },
+    "to": {
+      "tMs": 15304902,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 60
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 1.3616558383492863,
+    "emaMps2": 0.6808279191746431,
+    "expectedLongitudinalG": 0.06942512674304102,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15304902,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 60
+    },
+    "to": {
+      "tMs": 15305051,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 61
+    },
+    "dtSeconds": 0.149,
+    "deltaMps": 0.5555555820465088,
+    "rawAccelerationMps2": 3.728560953332274,
+    "previousEmaMps2": 0.6808279191746431,
+    "emaMps2": 2.2046944362534586,
+    "expectedLongitudinalG": 0.22481626613098854,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305051,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 61
+    },
+    "to": {
+      "tMs": 15305208,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 62
+    },
+    "dtSeconds": 0.157,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 2.2046944362534586,
+    "emaMps2": 1.1023472181267293,
+    "expectedLongitudinalG": 0.11240813306549427,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305208,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 62
+    },
+    "to": {
+      "tMs": 15305335,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 64
+    },
+    "dtSeconds": 0.127,
+    "deltaMps": -0.8333333730697632,
+    "rawAccelerationMps2": -6.561680102911521,
+    "previousEmaMps2": 1.1023472181267293,
+    "emaMps2": -2.729666442392396,
+    "expectedLongitudinalG": -0.2783485127329308,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305335,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 64
+    },
+    "to": {
+      "tMs": 15305500,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 65
+    },
+    "dtSeconds": 0.165,
+    "deltaMps": 0.8333333730697632,
+    "rawAccelerationMps2": 5.0505052913318975,
+    "previousEmaMps2": -2.729666442392396,
+    "emaMps2": 1.1604194244697508,
+    "expectedLongitudinalG": 0.11832985009863213,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305500,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 65
+    },
+    "to": {
+      "tMs": 15305603,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 66
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0.5555555820465088,
+    "rawAccelerationMps2": 5.393743515014648,
+    "previousEmaMps2": 1.1604194244697508,
+    "emaMps2": 3.2770814697421997,
+    "expectedLongitudinalG": 0.33416931059456595,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305603,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 66
+    },
+    "to": {
+      "tMs": 15305755,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 67
+    },
+    "dtSeconds": 0.152,
+    "deltaMps": -0.8333333730697632,
+    "rawAccelerationMps2": -5.482456401774758,
+    "previousEmaMps2": 3.2770814697421997,
+    "emaMps2": -1.1026874660162793,
+    "expectedLongitudinalG": -0.11244282869443484,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305755,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 67
+    },
+    "to": {
+      "tMs": 15305903,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 68
+    },
+    "dtSeconds": 0.148,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.1026874660162793,
+    "emaMps2": -0.5513437330081397,
+    "expectedLongitudinalG": -0.05622141434721742,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15305903,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 68
+    },
+    "to": {
+      "tMs": 15306075,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 69
+    },
+    "dtSeconds": 0.172,
+    "deltaMps": 1.388888955116272,
+    "rawAccelerationMps2": 8.074935785559722,
+    "previousEmaMps2": -0.5513437330081397,
+    "emaMps2": 3.7617960262757912,
+    "expectedLongitudinalG": 0.38359643979093694,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15306075,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 69
+    },
+    "to": {
+      "tMs": 15306176,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 70
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -2.222222328186035,
+    "rawAccelerationMps2": -22.002201269168662,
+    "previousEmaMps2": 3.7617960262757912,
+    "emaMps2": -9.120202621446435,
+    "expectedLongitudinalG": -0.9300018478732732,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15306176,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 70
+    },
+    "to": {
+      "tMs": 15306302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 72
+    },
+    "dtSeconds": 0.126,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -9.120202621446435,
+    "emaMps2": -4.560101310723217,
+    "expectedLongitudinalG": -0.4650009239366366,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15306302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 72
+    },
+    "to": {
+      "tMs": 15306504,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 73
+    },
+    "dtSeconds": 0.202,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -4.560101310723217,
+    "emaMps2": -2.2800506553616087,
+    "expectedLongitudinalG": -0.2325004619683183,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15306504,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 73
+    },
+    "to": {
+      "tMs": 15306606,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 75
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 2.777777910232544,
+    "rawAccelerationMps2": 27.233116766985727,
+    "previousEmaMps2": -2.2800506553616087,
+    "emaMps2": 12.476533055812059,
+    "expectedLongitudinalG": 1.272252303876661,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15306606,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 75
+    },
+    "to": {
+      "tMs": 15306800,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 76
+    },
+    "dtSeconds": 0.194,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 12.476533055812059,
+    "emaMps2": 6.238266527906029,
+    "expectedLongitudinalG": 0.6361261519383306,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15306800,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 76
+    },
+    "to": {
+      "tMs": 15307000,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 77
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 6.238266527906029,
+    "emaMps2": 3.1191332639530147,
+    "expectedLongitudinalG": 0.3180630759691653,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307000,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 77
+    },
+    "to": {
+      "tMs": 15307107,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 78
+    },
+    "dtSeconds": 0.107,
+    "deltaMps": -0.27777791023254395,
+    "rawAccelerationMps2": -2.596055235818168,
+    "previousEmaMps2": 3.1191332639530147,
+    "emaMps2": 0.2615390140674234,
+    "expectedLongitudinalG": 0.02666955729708141,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307107,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 78
+    },
+    "to": {
+      "tMs": 15307302,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 80
+    },
+    "dtSeconds": 0.195,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.2615390140674234,
+    "emaMps2": 0.1307695070337117,
+    "expectedLongitudinalG": 0.013334778648540706,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307302,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 80
+    },
+    "to": {
+      "tMs": 15307502,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 81
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": -2.2222222089767456,
+    "rawAccelerationMps2": -11.111111044883728,
+    "previousEmaMps2": 0.1307695070337117,
+    "emaMps2": -5.490170768925008,
+    "expectedLongitudinalG": -0.559841614509033,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307502,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 81
+    },
+    "to": {
+      "tMs": 15307602,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 82
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -5.490170768925008,
+    "emaMps2": -2.745085384462504,
+    "expectedLongitudinalG": -0.2799208072545165,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307602,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 82
+    },
+    "to": {
+      "tMs": 15307704,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 83
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 3.611111283302307,
+    "rawAccelerationMps2": 35.403051797081446,
+    "previousEmaMps2": -2.745085384462504,
+    "emaMps2": 16.32898320630947,
+    "expectedLongitudinalG": 1.6650928916918082,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307704,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 83
+    },
+    "to": {
+      "tMs": 15307901,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 84
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": -1.6666667461395264,
+    "rawAccelerationMps2": -8.460237290048356,
+    "previousEmaMps2": 16.32898320630947,
+    "emaMps2": 3.934372958130557,
+    "expectedLongitudinalG": 0.40119438933076607,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15307901,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 84
+    },
+    "to": {
+      "tMs": 15308002,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 85
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 3.934372958130557,
+    "emaMps2": 1.9671864790652784,
+    "expectedLongitudinalG": 0.20059719466538303,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308002,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 85
+    },
+    "to": {
+      "tMs": 15308129,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 86
+    },
+    "dtSeconds": 0.127,
+    "deltaMps": 2.222222328186035,
+    "rawAccelerationMps2": 17.497813607764055,
+    "previousEmaMps2": 1.9671864790652784,
+    "emaMps2": 9.732500043414667,
+    "expectedLongitudinalG": 0.9924388087078327,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308129,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 86
+    },
+    "to": {
+      "tMs": 15308301,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 88
+    },
+    "dtSeconds": 0.172,
+    "deltaMps": -4.44444465637207,
+    "rawAccelerationMps2": -25.83979451379111,
+    "previousEmaMps2": 9.732500043414667,
+    "emaMps2": -8.05364723518822,
+    "expectedLongitudinalG": -0.8212434659326295,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308301,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 88
+    },
+    "to": {
+      "tMs": 15308401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 89
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -8.05364723518822,
+    "emaMps2": -4.02682361759411,
+    "expectedLongitudinalG": -0.41062173296631477,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 89
+    },
+    "to": {
+      "tMs": 15308503,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 90
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 1.9444445371627808,
+    "rawAccelerationMps2": 19.06318173689001,
+    "previousEmaMps2": -4.02682361759411,
+    "emaMps2": 7.518179059647949,
+    "expectedLongitudinalG": 0.7666409079194169,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308503,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 90
+    },
+    "to": {
+      "tMs": 15308649,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 91
+    },
+    "dtSeconds": 0.146,
+    "deltaMps": 3.0555554628372192,
+    "rawAccelerationMps2": 20.92846207422753,
+    "previousEmaMps2": 7.518179059647949,
+    "emaMps2": 14.223320566937739,
+    "expectedLongitudinalG": 1.450375058448883,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308649,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 91
+    },
+    "to": {
+      "tMs": 15308801,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 92
+    },
+    "dtSeconds": 0.152,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 14.223320566937739,
+    "emaMps2": 7.111660283468869,
+    "expectedLongitudinalG": 0.7251875292244415,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308801,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 92
+    },
+    "to": {
+      "tMs": 15308903,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 93
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 7.111660283468869,
+    "emaMps2": 3.5558301417344347,
+    "expectedLongitudinalG": 0.36259376461222076,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15308903,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 93
+    },
+    "to": {
+      "tMs": 15309000,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 94
+    },
+    "dtSeconds": 0.097,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 3.5558301417344347,
+    "emaMps2": 1.7779150708672173,
+    "expectedLongitudinalG": 0.18129688230611038,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309000,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 94
+    },
+    "to": {
+      "tMs": 15309138,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 95
+    },
+    "dtSeconds": 0.138,
+    "deltaMps": -3.3333332538604736,
+    "rawAccelerationMps2": -24.154588796090387,
+    "previousEmaMps2": 1.7779150708672173,
+    "emaMps2": -11.188336862611585,
+    "expectedLongitudinalG": -1.1408928495063642,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309138,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 95
+    },
+    "to": {
+      "tMs": 15309304,
+      "mps": 5.555555820465088,
+      "sourceId": 1,
+      "traceIndex": 96
+    },
+    "dtSeconds": 0.166,
+    "deltaMps": 3.8888890743255615,
+    "rawAccelerationMps2": 23.427042616419044,
+    "previousEmaMps2": -11.188336862611585,
+    "emaMps2": 6.119352876903729,
+    "expectedLongitudinalG": 0.6240003341511862,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309304,
+      "mps": 5.555555820465088,
+      "sourceId": 1,
+      "traceIndex": 96
+    },
+    "to": {
+      "tMs": 15309403,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 98
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": -0.8333334922790527,
+    "rawAccelerationMps2": -8.417510023020734,
+    "previousEmaMps2": 6.119352876903729,
+    "emaMps2": -1.1490785730585023,
+    "expectedLongitudinalG": -0.11717340509332977,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309403,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 98
+    },
+    "to": {
+      "tMs": 15309502,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 99
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.1490785730585023,
+    "emaMps2": -0.5745392865292511,
+    "expectedLongitudinalG": -0.058586702546664884,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309502,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 99
+    },
+    "to": {
+      "tMs": 15309682,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 100
+    },
+    "dtSeconds": 0.18,
+    "deltaMps": 1.3888888359069824,
+    "rawAccelerationMps2": 7.716049088372125,
+    "previousEmaMps2": -0.5745392865292511,
+    "emaMps2": 3.570754900921437,
+    "expectedLongitudinalG": 0.3641156665039985,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309682,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 100
+    },
+    "to": {
+      "tMs": 15309801,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 102
+    },
+    "dtSeconds": 0.119,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 3.570754900921437,
+    "emaMps2": 1.7853774504607185,
+    "expectedLongitudinalG": 0.18205783325199926,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15309801,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 102
+    },
+    "to": {
+      "tMs": 15310002,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 103
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": -4.722222208976746,
+    "rawAccelerationMps2": -23.493642830730078,
+    "previousEmaMps2": 1.7853774504607185,
+    "emaMps2": -10.85413269013468,
+    "expectedLongitudinalG": -1.1068135081944068,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310002,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 103
+    },
+    "to": {
+      "tMs": 15310188,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 104
+    },
+    "dtSeconds": 0.186,
+    "deltaMps": 5.2777780294418335,
+    "rawAccelerationMps2": 28.375150695923836,
+    "previousEmaMps2": -10.85413269013468,
+    "emaMps2": 8.760509002894578,
+    "expectedLongitudinalG": 0.8933233064190705,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310188,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 104
+    },
+    "to": {
+      "tMs": 15310303,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 105
+    },
+    "dtSeconds": 0.115,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 8.760509002894578,
+    "emaMps2": 4.380254501447289,
+    "expectedLongitudinalG": 0.44666165320953527,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310303,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 105
+    },
+    "to": {
+      "tMs": 15310415,
+      "mps": 4.1666669845581055,
+      "sourceId": 1,
+      "traceIndex": 107
+    },
+    "dtSeconds": 0.112,
+    "deltaMps": -2.5,
+    "rawAccelerationMps2": -22.32142857142857,
+    "previousEmaMps2": 4.380254501447289,
+    "emaMps2": -8.97058703499064,
+    "expectedLongitudinalG": -0.9147453039509558,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310415,
+      "mps": 4.1666669845581055,
+      "sourceId": 1,
+      "traceIndex": 107
+    },
+    "to": {
+      "tMs": 15310593,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 108
+    },
+    "dtSeconds": 0.178,
+    "deltaMps": -3.055555820465088,
+    "rawAccelerationMps2": -17.166043935197123,
+    "previousEmaMps2": -8.97058703499064,
+    "emaMps2": -13.068315485093882,
+    "expectedLongitudinalG": -1.332597317646075,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310593,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 108
+    },
+    "to": {
+      "tMs": 15310700,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 109
+    },
+    "dtSeconds": 0.107,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -13.068315485093882,
+    "emaMps2": -6.534157742546941,
+    "expectedLongitudinalG": -0.6662986588230375,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310700,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 109
+    },
+    "to": {
+      "tMs": 15310901,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 110
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 6.111111164093018,
+    "rawAccelerationMps2": 30.403538129816006,
+    "previousEmaMps2": -6.534157742546941,
+    "emaMps2": 11.934690193634532,
+    "expectedLongitudinalG": 1.2169997087317823,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15310901,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 110
+    },
+    "to": {
+      "tMs": 15311009,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 111
+    },
+    "dtSeconds": 0.108,
+    "deltaMps": -3.3333332538604736,
+    "rawAccelerationMps2": -30.864196795004386,
+    "previousEmaMps2": 11.934690193634532,
+    "emaMps2": -9.464753300684926,
+    "expectedLongitudinalG": -0.965136239254478,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311009,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 111
+    },
+    "to": {
+      "tMs": 15311201,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 112
+    },
+    "dtSeconds": 0.192,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -9.464753300684926,
+    "emaMps2": -4.732376650342463,
+    "expectedLongitudinalG": -0.482568119627239,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311201,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 112
+    },
+    "to": {
+      "tMs": 15311342,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 114
+    },
+    "dtSeconds": 0.141,
+    "deltaMps": -3.0555557012557983,
+    "rawAccelerationMps2": -21.670607810324814,
+    "previousEmaMps2": -4.732376650342463,
+    "emaMps2": -13.201492230333638,
+    "expectedLongitudinalG": -1.3461775662773363,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311342,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 114
+    },
+    "to": {
+      "tMs": 15311504,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 115
+    },
+    "dtSeconds": 0.162,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -13.201492230333638,
+    "emaMps2": -6.600746115166819,
+    "expectedLongitudinalG": -0.6730887831386682,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311504,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 115
+    },
+    "to": {
+      "tMs": 15311600,
+      "mps": 3.6111111640930176,
+      "sourceId": 1,
+      "traceIndex": 116
+    },
+    "dtSeconds": 0.096,
+    "deltaMps": 2.7777777910232544,
+    "rawAccelerationMps2": 28.935185323158898,
+    "previousEmaMps2": -6.600746115166819,
+    "emaMps2": 11.167219603996038,
+    "expectedLongitudinalG": 1.138739488407972,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311600,
+      "mps": 3.6111111640930176,
+      "sourceId": 1,
+      "traceIndex": 116
+    },
+    "to": {
+      "tMs": 15311702,
+      "mps": 3.6111111640930176,
+      "sourceId": 1,
+      "traceIndex": 117
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 11.167219603996038,
+    "emaMps2": 5.583609801998019,
+    "expectedLongitudinalG": 0.569369744203986,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311702,
+      "mps": 3.6111111640930176,
+      "sourceId": 1,
+      "traceIndex": 117
+    },
+    "to": {
+      "tMs": 15311900,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 118
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 4.722222805023193,
+    "rawAccelerationMps2": 23.849610126379762,
+    "previousEmaMps2": 5.583609801998019,
+    "emaMps2": 14.71660996418889,
+    "expectedLongitudinalG": 1.500676578055594,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15311900,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 118
+    },
+    "to": {
+      "tMs": 15312005,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 119
+    },
+    "dtSeconds": 0.105,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 14.71660996418889,
+    "emaMps2": 7.358304982094445,
+    "expectedLongitudinalG": 0.750338289027797,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312005,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 119
+    },
+    "to": {
+      "tMs": 15312200,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 120
+    },
+    "dtSeconds": 0.195,
+    "deltaMps": -7.777778387069702,
+    "rawAccelerationMps2": -39.886043010613854,
+    "previousEmaMps2": 7.358304982094445,
+    "emaMps2": -16.263869014259704,
+    "expectedLongitudinalG": -1.6584530919589977,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312200,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 120
+    },
+    "to": {
+      "tMs": 15312300,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 121
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 8.333333730697632,
+    "rawAccelerationMps2": 83.33333730697632,
+    "previousEmaMps2": -16.263869014259704,
+    "emaMps2": 33.5347341463583,
+    "expectedLongitudinalG": 3.4195912106946107,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312300,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 121
+    },
+    "to": {
+      "tMs": 15312400,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 123
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 33.5347341463583,
+    "emaMps2": 16.76736707317915,
+    "expectedLongitudinalG": 1.7097956053473053,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312400,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 123
+    },
+    "to": {
+      "tMs": 15312500,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 124
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 16.76736707317915,
+    "emaMps2": 8.383683536589576,
+    "expectedLongitudinalG": 0.8548978026736527,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312500,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 124
+    },
+    "to": {
+      "tMs": 15312601,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 125
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 8.383683536589576,
+    "emaMps2": 4.191841768294788,
+    "expectedLongitudinalG": 0.42744890133682634,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312601,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 125
+    },
+    "to": {
+      "tMs": 15312771,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 126
+    },
+    "dtSeconds": 0.17,
+    "deltaMps": 0.5555553436279297,
+    "rawAccelerationMps2": 3.2679726095760566,
+    "previousEmaMps2": 4.191841768294788,
+    "emaMps2": 3.7299071889354223,
+    "expectedLongitudinalG": 0.3803446833460379,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312771,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 126
+    },
+    "to": {
+      "tMs": 15312872,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 128
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -9.166666865348816,
+    "rawAccelerationMps2": -90.75907787474074,
+    "previousEmaMps2": 3.7299071889354223,
+    "emaMps2": -43.514585342902656,
+    "expectedLongitudinalG": -4.437252817516956,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15312872,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 128
+    },
+    "to": {
+      "tMs": 15313000,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 129
+    },
+    "dtSeconds": 0.128,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -43.514585342902656,
+    "emaMps2": -21.757292671451328,
+    "expectedLongitudinalG": -2.218626408758478,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313000,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 129
+    },
+    "to": {
+      "tMs": 15313100,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 130
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -21.757292671451328,
+    "emaMps2": -10.878646335725664,
+    "expectedLongitudinalG": -1.109313204379239,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313100,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 130
+    },
+    "to": {
+      "tMs": 15313287,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 131
+    },
+    "dtSeconds": 0.187,
+    "deltaMps": 9.722222208976746,
+    "rawAccelerationMps2": 51.99049309613233,
+    "previousEmaMps2": -10.878646335725664,
+    "emaMps2": 20.555923380203335,
+    "expectedLongitudinalG": 2.09612083435254,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313287,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 131
+    },
+    "to": {
+      "tMs": 15313400,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 133
+    },
+    "dtSeconds": 0.113,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 20.555923380203335,
+    "emaMps2": 10.277961690101668,
+    "expectedLongitudinalG": 1.04806041717627,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313400,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 133
+    },
+    "to": {
+      "tMs": 15313602,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 134
+    },
+    "dtSeconds": 0.202,
+    "deltaMps": -7.222222089767456,
+    "rawAccelerationMps2": -35.75357470181909,
+    "previousEmaMps2": 10.277961690101668,
+    "emaMps2": -12.73780650585871,
+    "expectedLongitudinalG": -1.2988947811799862,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313602,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 134
+    },
+    "to": {
+      "tMs": 15313805,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 135
+    },
+    "dtSeconds": 0.203,
+    "deltaMps": 7.222222089767456,
+    "rawAccelerationMps2": 35.577448718066286,
+    "previousEmaMps2": -12.73780650585871,
+    "emaMps2": 11.419821106103788,
+    "expectedLongitudinalG": 1.164497673120157,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313805,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 135
+    },
+    "to": {
+      "tMs": 15313900,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 137
+    },
+    "dtSeconds": 0.095,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 11.419821106103788,
+    "emaMps2": 5.709910553051894,
+    "expectedLongitudinalG": 0.5822488365600785,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15313900,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 137
+    },
+    "to": {
+      "tMs": 15314001,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 138
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 5.709910553051894,
+    "emaMps2": 2.854955276525947,
+    "expectedLongitudinalG": 0.29112441828003927,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314001,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 138
+    },
+    "to": {
+      "tMs": 15314101,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 139
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": -7.5,
+    "rawAccelerationMps2": -75.0,
+    "previousEmaMps2": 2.854955276525947,
+    "emaMps2": -36.07252236173703,
+    "expectedLongitudinalG": -3.6783735895272116,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314101,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 139
+    },
+    "to": {
+      "tMs": 15314302,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 140
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -36.07252236173703,
+    "emaMps2": -18.036261180868514,
+    "expectedLongitudinalG": -1.8391867947636058,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314302,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 140
+    },
+    "to": {
+      "tMs": 15314403,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 142
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -18.036261180868514,
+    "emaMps2": -9.018130590434257,
+    "expectedLongitudinalG": -0.9195933973818029,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314403,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 142
+    },
+    "to": {
+      "tMs": 15314602,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 143
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -9.018130590434257,
+    "emaMps2": -4.509065295217129,
+    "expectedLongitudinalG": -0.45979669869090145,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314602,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 143
+    },
+    "to": {
+      "tMs": 15314701,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 144
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -4.509065295217129,
+    "emaMps2": -2.2545326476085643,
+    "expectedLongitudinalG": -0.22989834934545073,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314701,
+      "mps": 2.5,
+      "sourceId": 1,
+      "traceIndex": 144
+    },
+    "to": {
+      "tMs": 15314900,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 145
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -1.3958676975576123,
+    "previousEmaMps2": -2.2545326476085643,
+    "emaMps2": -1.8252001725830884,
+    "expectedLongitudinalG": -0.1861186207913088,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15314900,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 145
+    },
+    "to": {
+      "tMs": 15315002,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 146
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.8252001725830884,
+    "emaMps2": -0.9126000862915442,
+    "expectedLongitudinalG": -0.0930593103956544,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15315002,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 146
+    },
+    "to": {
+      "tMs": 15315205,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 147
+    },
+    "dtSeconds": 0.203,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.9126000862915442,
+    "emaMps2": -0.4563000431457721,
+    "expectedLongitudinalG": -0.0465296551978272,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15315205,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 147
+    },
+    "to": {
+      "tMs": 15315401,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 149
+    },
+    "dtSeconds": 0.196,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -1.4172336276696653,
+    "previousEmaMps2": -0.4563000431457721,
+    "emaMps2": -0.9367668354077188,
+    "expectedLongitudinalG": -0.09552363298452772,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15315401,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 149
+    },
+    "to": {
+      "tMs": 15315601,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 150
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.9367668354077188,
+    "emaMps2": -0.4683834177038594,
+    "expectedLongitudinalG": -0.04776181649226386,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15315601,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 150
+    },
+    "to": {
+      "tMs": 15315802,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 151
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.4683834177038594,
+    "emaMps2": -0.2341917088519297,
+    "expectedLongitudinalG": -0.02388090824613193,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15315802,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 151
+    },
+    "to": {
+      "tMs": 15315922,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 152
+    },
+    "dtSeconds": 0.12,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -2.3148149251937866,
+    "previousEmaMps2": -0.2341917088519297,
+    "emaMps2": -1.2745033170228581,
+    "expectedLongitudinalG": -0.1299631695862357,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15315922,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 152
+    },
+    "to": {
+      "tMs": 15316103,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 153
+    },
+    "dtSeconds": 0.181,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.2745033170228581,
+    "emaMps2": -0.6372516585114291,
+    "expectedLongitudinalG": -0.06498158479311784,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15316103,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 153
+    },
+    "to": {
+      "tMs": 15316300,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 154
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.6372516585114291,
+    "emaMps2": -0.31862582925571453,
+    "expectedLongitudinalG": -0.03249079239655892,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15316300,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 154
+    },
+    "to": {
+      "tMs": 15316500,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 156
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.31862582925571453,
+    "emaMps2": -0.15931291462785727,
+    "expectedLongitudinalG": -0.01624539619827946,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15316500,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 156
+    },
+    "to": {
+      "tMs": 15316640,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 157
+    },
+    "dtSeconds": 0.14,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -1.9841270787375311,
+    "previousEmaMps2": -0.15931291462785727,
+    "emaMps2": -1.0717199966826942,
+    "expectedLongitudinalG": -0.10928502563899949,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15316640,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 157
+    },
+    "to": {
+      "tMs": 15316800,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 158
+    },
+    "dtSeconds": 0.16,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.0717199966826942,
+    "emaMps2": -0.5358599983413471,
+    "expectedLongitudinalG": -0.05464251281949974,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15316800,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 158
+    },
+    "to": {
+      "tMs": 15317001,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 160
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.5358599983413471,
+    "emaMps2": -0.26792999917067356,
+    "expectedLongitudinalG": -0.02732125640974987,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317001,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 160
+    },
+    "to": {
+      "tMs": 15317101,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 161
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.26792999917067356,
+    "emaMps2": -0.13396499958533678,
+    "expectedLongitudinalG": -0.013660628204874936,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317101,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 161
+    },
+    "to": {
+      "tMs": 15317202,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 162
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.13396499958533678,
+    "emaMps2": -0.06698249979266839,
+    "expectedLongitudinalG": -0.006830314102437468,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317202,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 162
+    },
+    "to": {
+      "tMs": 15317379,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 164
+    },
+    "dtSeconds": 0.177,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -1.5693660509788385,
+    "previousEmaMps2": -0.06698249979266839,
+    "emaMps2": -0.8181742753857535,
+    "expectedLongitudinalG": -0.08343055736523211,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317379,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 164
+    },
+    "to": {
+      "tMs": 15317500,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 165
+    },
+    "dtSeconds": 0.121,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.8181742753857535,
+    "emaMps2": -0.40908713769287675,
+    "expectedLongitudinalG": -0.041715278682616055,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317500,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 165
+    },
+    "to": {
+      "tMs": 15317601,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 166
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.40908713769287675,
+    "emaMps2": -0.20454356884643837,
+    "expectedLongitudinalG": -0.020857639341308028,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317601,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 166
+    },
+    "to": {
+      "tMs": 15317701,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 167
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.20454356884643837,
+    "emaMps2": -0.10227178442321919,
+    "expectedLongitudinalG": -0.010428819670654014,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317701,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 167
+    },
+    "to": {
+      "tMs": 15317802,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 168
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.10227178442321919,
+    "emaMps2": -0.05113589221160959,
+    "expectedLongitudinalG": -0.005214409835327007,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317802,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 168
+    },
+    "to": {
+      "tMs": 15317905,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 169
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.05113589221160959,
+    "emaMps2": -0.025567946105804797,
+    "expectedLongitudinalG": -0.0026072049176635035,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15317905,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 169
+    },
+    "to": {
+      "tMs": 15318104,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 170
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.025567946105804797,
+    "emaMps2": -0.012783973052902398,
+    "expectedLongitudinalG": -0.0013036024588317517,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15318104,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 170
+    },
+    "to": {
+      "tMs": 15318287,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 171
+    },
+    "dtSeconds": 0.183,
+    "deltaMps": 8.888888835906982,
+    "rawAccelerationMps2": 48.57316303774307,
+    "previousEmaMps2": -0.012783973052902398,
+    "emaMps2": 24.280189532345084,
+    "expectedLongitudinalG": 2.4758902920309263,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15318287,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 171
+    },
+    "to": {
+      "tMs": 15318402,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 174
+    },
+    "dtSeconds": 0.115,
+    "deltaMps": -9.166666626930237,
+    "rawAccelerationMps2": -79.71014458200206,
+    "previousEmaMps2": 24.280189532345084,
+    "emaMps2": -27.714977524828488,
+    "expectedLongitudinalG": -2.82614119243865,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15318402,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 174
+    },
+    "to": {
+      "tMs": 15318601,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 175
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -27.714977524828488,
+    "emaMps2": -13.857488762414244,
+    "expectedLongitudinalG": -1.413070596219325,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15318601,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 175
+    },
+    "to": {
+      "tMs": 15318805,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 176
+    },
+    "dtSeconds": 0.204,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -13.857488762414244,
+    "emaMps2": -6.928744381207122,
+    "expectedLongitudinalG": -0.7065352981096625,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15318805,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 176
+    },
+    "to": {
+      "tMs": 15319000,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 177
+    },
+    "dtSeconds": 0.195,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -1.4245014924269455,
+    "previousEmaMps2": -6.928744381207122,
+    "emaMps2": -4.176622936817034,
+    "expectedLongitudinalG": -0.4258970124167819,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319000,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 177
+    },
+    "to": {
+      "tMs": 15319101,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 178
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -4.176622936817034,
+    "emaMps2": -2.088311468408517,
+    "expectedLongitudinalG": -0.21294850620839095,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319101,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 178
+    },
+    "to": {
+      "tMs": 15319203,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 179
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -2.088311468408517,
+    "emaMps2": -1.0441557342042584,
+    "expectedLongitudinalG": -0.10647425310419548,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319203,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 179
+    },
+    "to": {
+      "tMs": 15319403,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 181
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.0441557342042584,
+    "emaMps2": -0.5220778671021292,
+    "expectedLongitudinalG": -0.05323712655209774,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319403,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 181
+    },
+    "to": {
+      "tMs": 15319602,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 182
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.5220778671021292,
+    "emaMps2": -0.2610389335510646,
+    "expectedLongitudinalG": -0.02661856327604887,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319602,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 182
+    },
+    "to": {
+      "tMs": 15319706,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 183
+    },
+    "dtSeconds": 0.104,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -2.6709402983005233,
+    "previousEmaMps2": -0.2610389335510646,
+    "emaMps2": -1.465989615925794,
+    "expectedLongitudinalG": -0.14948933794168182,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319706,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 183
+    },
+    "to": {
+      "tMs": 15319903,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 184
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.465989615925794,
+    "emaMps2": -0.732994807962897,
+    "expectedLongitudinalG": -0.07474466897084091,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15319903,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 184
+    },
+    "to": {
+      "tMs": 15320100,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 185
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.732994807962897,
+    "emaMps2": -0.3664974039814485,
+    "expectedLongitudinalG": -0.037372334485420454,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15320100,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 185
+    },
+    "to": {
+      "tMs": 15320203,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 186
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.3664974039814485,
+    "emaMps2": -0.18324870199072424,
+    "expectedLongitudinalG": -0.018686167242710227,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15320203,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 186
+    },
+    "to": {
+      "tMs": 15320403,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 188
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.18324870199072424,
+    "emaMps2": -0.09162435099536212,
+    "expectedLongitudinalG": -0.009343083621355113,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15320403,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 188
+    },
+    "to": {
+      "tMs": 15320514,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 189
+    },
+    "dtSeconds": 0.111,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -2.5025026218311206,
+    "previousEmaMps2": -0.09162435099536212,
+    "emaMps2": -1.2970634864132413,
+    "expectedLongitudinalG": -0.1322636666357259,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15320514,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 189
+    },
+    "to": {
+      "tMs": 15320703,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 190
+    },
+    "dtSeconds": 0.189,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.2970634864132413,
+    "emaMps2": -0.6485317432066207,
+    "expectedLongitudinalG": -0.06613183331786295,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15320703,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 190
+    },
+    "to": {
+      "tMs": 15320901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 191
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.6485317432066207,
+    "emaMps2": -0.32426587160331033,
+    "expectedLongitudinalG": -0.03306591665893147,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15320901,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 191
+    },
+    "to": {
+      "tMs": 15321102,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 192
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.32426587160331033,
+    "emaMps2": -0.16213293580165516,
+    "expectedLongitudinalG": -0.016532958329465736,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15321102,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 192
+    },
+    "to": {
+      "tMs": 15321201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 193
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.16213293580165516,
+    "emaMps2": -0.08106646790082758,
+    "expectedLongitudinalG": -0.008266479164732868,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15321201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 193
+    },
+    "to": {
+      "tMs": 15321301,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 194
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.08106646790082758,
+    "emaMps2": -0.04053323395041379,
+    "expectedLongitudinalG": -0.004133239582366434,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15321301,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 194
+    },
+    "to": {
+      "tMs": 15321502,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 197
+    },
+    "dtSeconds": 0.201,
+    "deltaMps": 10,
+    "rawAccelerationMps2": 49.75124378109452,
+    "previousEmaMps2": -0.04053323395041379,
+    "emaMps2": 24.855355273572055,
+    "expectedLongitudinalG": 2.5345408751787875,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15321502,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 197
+    },
+    "to": {
+      "tMs": 15321701,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 198
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 24.855355273572055,
+    "emaMps2": 12.427677636786028,
+    "expectedLongitudinalG": 1.2672704375893937,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15321701,
+      "mps": 10,
+      "sourceId": 1,
+      "traceIndex": 198
+    },
+    "to": {
+      "tMs": 15321817,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 199
+    },
+    "dtSeconds": 0.116,
+    "deltaMps": -0.5555553436279297,
+    "rawAccelerationMps2": -4.789270203689049,
+    "previousEmaMps2": 12.427677636786028,
+    "emaMps2": 3.8192037165484893,
+    "expectedLongitudinalG": 0.3894503950430055,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15321817,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 199
+    },
+    "to": {
+      "tMs": 15322011,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 200
+    },
+    "dtSeconds": 0.194,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 3.8192037165484893,
+    "emaMps2": 1.9096018582742447,
+    "expectedLongitudinalG": 0.19472519752150275,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322011,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 200
+    },
+    "to": {
+      "tMs": 15322201,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 201
+    },
+    "dtSeconds": 0.19,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 1.9096018582742447,
+    "emaMps2": 0.9548009291371223,
+    "expectedLongitudinalG": 0.09736259876075137,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322201,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 201
+    },
+    "to": {
+      "tMs": 15322301,
+      "mps": 9.166666984558105,
+      "sourceId": 1,
+      "traceIndex": 202
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -2.7777767181396484,
+    "previousEmaMps2": 0.9548009291371223,
+    "emaMps2": -0.911487894501263,
+    "expectedLongitudinalG": -0.09294589839560534,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322301,
+      "mps": 9.166666984558105,
+      "sourceId": 1,
+      "traceIndex": 202
+    },
+    "to": {
+      "tMs": 15322402,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 204
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -2.7502739783560872,
+    "previousEmaMps2": -0.911487894501263,
+    "emaMps2": -1.830880936428675,
+    "expectedLongitudinalG": -0.18669789749085317,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322402,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 204
+    },
+    "to": {
+      "tMs": 15322601,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 205
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.830880936428675,
+    "emaMps2": -0.9154404682143376,
+    "expectedLongitudinalG": -0.09334894874542658,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322601,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 205
+    },
+    "to": {
+      "tMs": 15322748,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 206
+    },
+    "dtSeconds": 0.147,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.9154404682143376,
+    "emaMps2": -0.4577202341071688,
+    "expectedLongitudinalG": -0.04667447437271329,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322748,
+      "mps": 8.88888931274414,
+      "sourceId": 1,
+      "traceIndex": 206
+    },
+    "to": {
+      "tMs": 15322847,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 207
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": -0.5555553436279297,
+    "rawAccelerationMps2": -5.611670137655855,
+    "previousEmaMps2": -0.4577202341071688,
+    "emaMps2": -3.0346951858815117,
+    "expectedLongitudinalG": -0.3094527882489445,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15322847,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 207
+    },
+    "to": {
+      "tMs": 15323000,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 208
+    },
+    "dtSeconds": 0.153,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -3.0346951858815117,
+    "emaMps2": -1.5173475929407558,
+    "expectedLongitudinalG": -0.15472639412447226,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323000,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 208
+    },
+    "to": {
+      "tMs": 15323163,
+      "mps": 8.611111640930176,
+      "sourceId": 1,
+      "traceIndex": 209
+    },
+    "dtSeconds": 0.163,
+    "deltaMps": 0.27777767181396484,
+    "rawAccelerationMps2": 1.7041574957911954,
+    "previousEmaMps2": -1.5173475929407558,
+    "emaMps2": 0.09340495142521976,
+    "expectedLongitudinalG": 0.009524654334071245,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323163,
+      "mps": 8.611111640930176,
+      "sourceId": 1,
+      "traceIndex": 209
+    },
+    "to": {
+      "tMs": 15323301,
+      "mps": 8.611111640930176,
+      "sourceId": 1,
+      "traceIndex": 210
+    },
+    "dtSeconds": 0.138,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.09340495142521976,
+    "emaMps2": 0.04670247571260988,
+    "expectedLongitudinalG": 0.0047623271670356225,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323301,
+      "mps": 8.611111640930176,
+      "sourceId": 1,
+      "traceIndex": 210
+    },
+    "to": {
+      "tMs": 15323403,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 212
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": -0.8333334922790527,
+    "rawAccelerationMps2": -8.169936198814243,
+    "previousEmaMps2": 0.04670247571260988,
+    "emaMps2": -4.061616861550816,
+    "expectedLongitudinalG": -0.4141696564627897,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323403,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 212
+    },
+    "to": {
+      "tMs": 15323517,
+      "mps": 8.611111640930176,
+      "sourceId": 1,
+      "traceIndex": 213
+    },
+    "dtSeconds": 0.114,
+    "deltaMps": 0.8333334922790527,
+    "rawAccelerationMps2": 7.309942914728532,
+    "previousEmaMps2": -4.061616861550816,
+    "emaMps2": 1.624163026588858,
+    "expectedLongitudinalG": 0.16561853707319607,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323517,
+      "mps": 8.611111640930176,
+      "sourceId": 1,
+      "traceIndex": 213
+    },
+    "to": {
+      "tMs": 15323700,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 214
+    },
+    "dtSeconds": 0.183,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -1.5179107749396987,
+    "previousEmaMps2": 1.624163026588858,
+    "emaMps2": 0.05312612582457965,
+    "expectedLongitudinalG": 0.005417357183602928,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323700,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 214
+    },
+    "to": {
+      "tMs": 15323800,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 215
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.05312612582457965,
+    "emaMps2": 0.026563062912289825,
+    "expectedLongitudinalG": 0.002708678591801464,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323800,
+      "mps": 8.333333969116211,
+      "sourceId": 1,
+      "traceIndex": 215
+    },
+    "to": {
+      "tMs": 15323901,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 216
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -1.1111116409301758,
+    "rawAccelerationMps2": -11.001105355744315,
+    "previousEmaMps2": 0.026563062912289825,
+    "emaMps2": -5.487271146416012,
+    "expectedLongitudinalG": -0.5595459353006391,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15323901,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 216
+    },
+    "to": {
+      "tMs": 15324028,
+      "mps": 8.05555534362793,
+      "sourceId": 1,
+      "traceIndex": 217
+    },
+    "dtSeconds": 0.127,
+    "deltaMps": 0.8333330154418945,
+    "rawAccelerationMps2": 6.561677286944051,
+    "previousEmaMps2": -5.487271146416012,
+    "emaMps2": 0.5372030702640194,
+    "expectedLongitudinalG": 0.05477946804097417,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324028,
+      "mps": 8.05555534362793,
+      "sourceId": 1,
+      "traceIndex": 217
+    },
+    "to": {
+      "tMs": 15324203,
+      "mps": 8.05555534362793,
+      "sourceId": 1,
+      "traceIndex": 218
+    },
+    "dtSeconds": 0.175,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 0.5372030702640194,
+    "emaMps2": 0.2686015351320097,
+    "expectedLongitudinalG": 0.027389734020487087,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324203,
+      "mps": 8.05555534362793,
+      "sourceId": 1,
+      "traceIndex": 218
+    },
+    "to": {
+      "tMs": 15324380,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 219
+    },
+    "dtSeconds": 0.177,
+    "deltaMps": -1.3888883590698242,
+    "rawAccelerationMps2": -7.8468268874001375,
+    "previousEmaMps2": 0.2686015351320097,
+    "emaMps2": -3.7891126761340637,
+    "expectedLongitudinalG": -0.38638196286540905,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324380,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 219
+    },
+    "to": {
+      "tMs": 15324483,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 222
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 1.1111111640930176,
+    "rawAccelerationMps2": 10.787487030029297,
+    "previousEmaMps2": -3.7891126761340637,
+    "emaMps2": 3.4991871769476166,
+    "expectedLongitudinalG": 0.35681778965779515,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324483,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 222
+    },
+    "to": {
+      "tMs": 15324600,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 223
+    },
+    "dtSeconds": 0.117,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 3.4991871769476166,
+    "emaMps2": 1.7495935884738083,
+    "expectedLongitudinalG": 0.17840889482889757,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324600,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 223
+    },
+    "to": {
+      "tMs": 15324702,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 224
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 1.7495935884738083,
+    "emaMps2": 0.8747967942369042,
+    "expectedLongitudinalG": 0.08920444741444879,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324702,
+      "mps": 7.777778148651123,
+      "sourceId": 1,
+      "traceIndex": 224
+    },
+    "to": {
+      "tMs": 15324892,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 225
+    },
+    "dtSeconds": 0.19,
+    "deltaMps": -1.6666669845581055,
+    "rawAccelerationMps2": -8.77193149767424,
+    "previousEmaMps2": 0.8747967942369042,
+    "emaMps2": -3.948567351718668,
+    "expectedLongitudinalG": -0.40264181465828475,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15324892,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 225
+    },
+    "to": {
+      "tMs": 15325001,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 226
+    },
+    "dtSeconds": 0.109,
+    "deltaMps": 1.3888888359069824,
+    "rawAccelerationMps2": 12.742099411990665,
+    "previousEmaMps2": -3.948567351718668,
+    "emaMps2": 4.396766030135998,
+    "expectedLongitudinalG": 0.448345360560028,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325001,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 226
+    },
+    "to": {
+      "tMs": 15325201,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 227
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 4.396766030135998,
+    "emaMps2": 2.198383015067999,
+    "expectedLongitudinalG": 0.224172680280014,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325201,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 227
+    },
+    "to": {
+      "tMs": 15325301,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 228
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 2.198383015067999,
+    "emaMps2": 1.0991915075339995,
+    "expectedLongitudinalG": 0.112086340140007,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325301,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 228
+    },
+    "to": {
+      "tMs": 15325404,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 229
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 1.0991915075339995,
+    "emaMps2": 0.5495957537669998,
+    "expectedLongitudinalG": 0.0560431700700035,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325404,
+      "mps": 7.5,
+      "sourceId": 1,
+      "traceIndex": 229
+    },
+    "to": {
+      "tMs": 15325612,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 231
+    },
+    "dtSeconds": 0.208,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -1.3354695760286772,
+    "previousEmaMps2": 0.5495957537669998,
+    "emaMps2": -0.39293691113083873,
+    "expectedLongitudinalG": -0.04006841389575836,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325612,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 231
+    },
+    "to": {
+      "tMs": 15325801,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 232
+    },
+    "dtSeconds": 0.189,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.39293691113083873,
+    "emaMps2": -0.19646845556541936,
+    "expectedLongitudinalG": -0.02003420694787918,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325801,
+      "mps": 7.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 232
+    },
+    "to": {
+      "tMs": 15325901,
+      "mps": 6.94444465637207,
+      "sourceId": 1,
+      "traceIndex": 233
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -2.7777767181396484,
+    "previousEmaMps2": -0.19646845556541936,
+    "emaMps2": -1.487122586852534,
+    "expectedLongitudinalG": -0.15164430124992062,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15325901,
+      "mps": 6.94444465637207,
+      "sourceId": 1,
+      "traceIndex": 233
+    },
+    "to": {
+      "tMs": 15326109,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 234
+    },
+    "dtSeconds": 0.208,
+    "deltaMps": -1.9444446563720703,
+    "rawAccelerationMps2": -9.348291617173416,
+    "previousEmaMps2": -1.487122586852534,
+    "emaMps2": -5.417707102012975,
+    "expectedLongitudinalG": -0.5524523769088298,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326109,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 234
+    },
+    "to": {
+      "tMs": 15326233,
+      "mps": 6.94444465637207,
+      "sourceId": 1,
+      "traceIndex": 235
+    },
+    "dtSeconds": 0.124,
+    "deltaMps": 1.9444446563720703,
+    "rawAccelerationMps2": 15.681005293323148,
+    "previousEmaMps2": -5.417707102012975,
+    "emaMps2": 5.131649095655087,
+    "expectedLongitudinalG": 0.5232825782153016,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326233,
+      "mps": 6.94444465637207,
+      "sourceId": 1,
+      "traceIndex": 235
+    },
+    "to": {
+      "tMs": 15326382,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 236
+    },
+    "dtSeconds": 0.149,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -1.864279676603791,
+    "previousEmaMps2": 5.131649095655087,
+    "emaMps2": 1.633684709525648,
+    "expectedLongitudinalG": 0.16658947851974407,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326382,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 236
+    },
+    "to": {
+      "tMs": 15326501,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 238
+    },
+    "dtSeconds": 0.119,
+    "deltaMps": -2.222222328186035,
+    "rawAccelerationMps2": -18.674137211647356,
+    "previousEmaMps2": 1.633684709525648,
+    "emaMps2": -8.520226251060853,
+    "expectedLongitudinalG": -0.8688212846446904,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326501,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 238
+    },
+    "to": {
+      "tMs": 15326601,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 239
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -8.520226251060853,
+    "emaMps2": -4.2601131255304265,
+    "expectedLongitudinalG": -0.4344106423223452,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326601,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 239
+    },
+    "to": {
+      "tMs": 15326705,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 240
+    },
+    "dtSeconds": 0.104,
+    "deltaMps": 2.222222328186035,
+    "rawAccelerationMps2": 21.367522386404186,
+    "previousEmaMps2": -4.2601131255304265,
+    "emaMps2": 8.55370463043688,
+    "expectedLongitudinalG": 0.8722351292680864,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326705,
+      "mps": 6.6666669845581055,
+      "sourceId": 1,
+      "traceIndex": 240
+    },
+    "to": {
+      "tMs": 15326880,
+      "mps": 6.388888835906982,
+      "sourceId": 1,
+      "traceIndex": 241
+    },
+    "dtSeconds": 0.175,
+    "deltaMps": -0.27777814865112305,
+    "rawAccelerationMps2": -1.5873037065778461,
+    "previousEmaMps2": 8.55370463043688,
+    "emaMps2": 3.4832004619295165,
+    "expectedLongitudinalG": 0.3551875984081737,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15326880,
+      "mps": 6.388888835906982,
+      "sourceId": 1,
+      "traceIndex": 241
+    },
+    "to": {
+      "tMs": 15327000,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 242
+    },
+    "dtSeconds": 0.12,
+    "deltaMps": -2.499999761581421,
+    "rawAccelerationMps2": -20.83333134651184,
+    "previousEmaMps2": 3.4832004619295165,
+    "emaMps2": -8.675065442291162,
+    "expectedLongitudinalG": -0.8846104880148841,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327000,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 242
+    },
+    "to": {
+      "tMs": 15327200,
+      "mps": 6.388888835906982,
+      "sourceId": 1,
+      "traceIndex": 243
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 2.499999761581421,
+    "rawAccelerationMps2": 12.499998807907104,
+    "previousEmaMps2": -8.675065442291162,
+    "emaMps2": 1.9124666828079713,
+    "expectedLongitudinalG": 0.19501732832394053,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327200,
+      "mps": 6.388888835906982,
+      "sourceId": 1,
+      "traceIndex": 243
+    },
+    "to": {
+      "tMs": 15327302,
+      "mps": 6.388888835906982,
+      "sourceId": 1,
+      "traceIndex": 244
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 1.9124666828079713,
+    "emaMps2": 0.9562333414039856,
+    "expectedLongitudinalG": 0.09750866416197027,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327302,
+      "mps": 6.388888835906982,
+      "sourceId": 1,
+      "traceIndex": 244
+    },
+    "to": {
+      "tMs": 15327402,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 245
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -2.7777767181396484,
+    "previousEmaMps2": 0.9562333414039856,
+    "emaMps2": -0.9107716883678314,
+    "expectedLongitudinalG": -0.09287286569499589,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327402,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 245
+    },
+    "to": {
+      "tMs": 15327600,
+      "mps": 3.3333334922790527,
+      "sourceId": 1,
+      "traceIndex": 248
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": -2.777777671813965,
+    "rawAccelerationMps2": -14.029180160676589,
+    "previousEmaMps2": -0.9107716883678314,
+    "emaMps2": -7.46997592452221,
+    "expectedLongitudinalG": -0.7617255560790086,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327600,
+      "mps": 3.3333334922790527,
+      "sourceId": 1,
+      "traceIndex": 248
+    },
+    "to": {
+      "tMs": 15327700,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 249
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 2.777777671813965,
+    "rawAccelerationMps2": 27.77777671813965,
+    "previousEmaMps2": -7.46997592452221,
+    "emaMps2": 10.15390039680872,
+    "expectedLongitudinalG": 1.035409685958887,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327700,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 249
+    },
+    "to": {
+      "tMs": 15327801,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 250
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 10.15390039680872,
+    "emaMps2": 5.07695019840436,
+    "expectedLongitudinalG": 0.5177048429794435,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327801,
+      "mps": 6.111111164093018,
+      "sourceId": 1,
+      "traceIndex": 250
+    },
+    "to": {
+      "tMs": 15327904,
+      "mps": 5.833333492279053,
+      "sourceId": 1,
+      "traceIndex": 251
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -2.6968706001355813,
+    "previousEmaMps2": 5.07695019840436,
+    "emaMps2": 1.1900397991343892,
+    "expectedLongitudinalG": 0.12135028772663338,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15327904,
+      "mps": 5.833333492279053,
+      "sourceId": 1,
+      "traceIndex": 251
+    },
+    "to": {
+      "tMs": 15328003,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 252
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": -3.055555582046509,
+    "rawAccelerationMps2": -30.86419779844958,
+    "previousEmaMps2": 1.1900397991343892,
+    "emaMps2": -14.837078999657596,
+    "expectedLongitudinalG": -1.5129610009185193,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328003,
+      "mps": 2.777777910232544,
+      "sourceId": 1,
+      "traceIndex": 252
+    },
+    "to": {
+      "tMs": 15328182,
+      "mps": 5.833333492279053,
+      "sourceId": 1,
+      "traceIndex": 253
+    },
+    "dtSeconds": 0.179,
+    "deltaMps": 3.055555582046509,
+    "rawAccelerationMps2": 17.070142916460945,
+    "previousEmaMps2": -14.837078999657596,
+    "emaMps2": 1.1165319584016746,
+    "expectedLongitudinalG": 0.11385457402901854,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328182,
+      "mps": 5.833333492279053,
+      "sourceId": 1,
+      "traceIndex": 253
+    },
+    "to": {
+      "tMs": 15328303,
+      "mps": 5.833333492279053,
+      "sourceId": 1,
+      "traceIndex": 254
+    },
+    "dtSeconds": 0.121,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 1.1165319584016746,
+    "emaMps2": 0.5582659792008373,
+    "expectedLongitudinalG": 0.05692728701450927,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328303,
+      "mps": 5.833333492279053,
+      "sourceId": 1,
+      "traceIndex": 254
+    },
+    "to": {
+      "tMs": 15328486,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 256
+    },
+    "dtSeconds": 0.183,
+    "deltaMps": -3.6111111640930176,
+    "rawAccelerationMps2": -19.732847891218675,
+    "previousEmaMps2": 0.5582659792008373,
+    "emaMps2": -9.58729095600892,
+    "expectedLongitudinalG": -0.9776316026378957,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328486,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 256
+    },
+    "to": {
+      "tMs": 15328600,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 257
+    },
+    "dtSeconds": 0.114,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -9.58729095600892,
+    "emaMps2": -4.79364547800446,
+    "expectedLongitudinalG": -0.48881580131894786,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328600,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 257
+    },
+    "to": {
+      "tMs": 15328709,
+      "mps": 5.555555820465088,
+      "sourceId": 1,
+      "traceIndex": 258
+    },
+    "dtSeconds": 0.109,
+    "deltaMps": 3.3333334922790527,
+    "rawAccelerationMps2": 30.581041213569293,
+    "previousEmaMps2": -4.79364547800446,
+    "emaMps2": 12.893697867782416,
+    "expectedLongitudinalG": 1.3147912761016673,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328709,
+      "mps": 5.555555820465088,
+      "sourceId": 1,
+      "traceIndex": 258
+    },
+    "to": {
+      "tMs": 15328888,
+      "mps": 5.277778148651123,
+      "sourceId": 1,
+      "traceIndex": 259
+    },
+    "dtSeconds": 0.179,
+    "deltaMps": -0.27777767181396484,
+    "rawAccelerationMps2": -1.5518305687930998,
+    "previousEmaMps2": 12.893697867782416,
+    "emaMps2": 5.670933649494658,
+    "expectedLongitudinalG": 0.5782742985111795,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15328888,
+      "mps": 5.277778148651123,
+      "sourceId": 1,
+      "traceIndex": 259
+    },
+    "to": {
+      "tMs": 15329002,
+      "mps": 5.277778148651123,
+      "sourceId": 1,
+      "traceIndex": 260
+    },
+    "dtSeconds": 0.114,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 5.670933649494658,
+    "emaMps2": 2.835466824747329,
+    "expectedLongitudinalG": 0.28913714925558975,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15329002,
+      "mps": 5.277778148651123,
+      "sourceId": 1,
+      "traceIndex": 260
+    },
+    "to": {
+      "tMs": 15329207,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 261
+    },
+    "dtSeconds": 0.205,
+    "deltaMps": -3.6111114025115967,
+    "rawAccelerationMps2": -17.615177573227303,
+    "previousEmaMps2": 2.835466824747329,
+    "emaMps2": -7.389855374239987,
+    "expectedLongitudinalG": -0.7535555336674591,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15329207,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 261
+    },
+    "to": {
+      "tMs": 15329406,
+      "mps": 5.277778148651123,
+      "sourceId": 1,
+      "traceIndex": 262
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 3.6111114025115967,
+    "rawAccelerationMps2": 18.146288454832142,
+    "previousEmaMps2": -7.389855374239987,
+    "emaMps2": 5.378216540296077,
+    "expectedLongitudinalG": 0.5484254603045972,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15329406,
+      "mps": 5.277778148651123,
+      "sourceId": 1,
+      "traceIndex": 262
+    },
+    "to": {
+      "tMs": 15329526,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 264
+    },
+    "dtSeconds": 0.12,
+    "deltaMps": -4.1666669845581055,
+    "rawAccelerationMps2": -34.72222487131755,
+    "previousEmaMps2": 5.378216540296077,
+    "emaMps2": -14.672004165510737,
+    "expectedLongitudinalG": -1.4961280524450997,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15329526,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 264
+    },
+    "to": {
+      "tMs": 15329701,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 265
+    },
+    "dtSeconds": 0.175,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -14.672004165510737,
+    "emaMps2": -7.3360020827553685,
+    "expectedLongitudinalG": -0.7480640262225499,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15329701,
+      "mps": 1.1111111640930176,
+      "sourceId": 1,
+      "traceIndex": 265
+    },
+    "to": {
+      "tMs": 15329903,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 266
+    },
+    "dtSeconds": 0.202,
+    "deltaMps": 3.8888888359069824,
+    "rawAccelerationMps2": 19.251924930232587,
+    "previousEmaMps2": -7.3360020827553685,
+    "emaMps2": 5.95796142373861,
+    "expectedLongitudinalG": 0.6075429860083321,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15329903,
+      "mps": 5,
+      "sourceId": 1,
+      "traceIndex": 266
+    },
+    "to": {
+      "tMs": 15330043,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 267
+    },
+    "dtSeconds": 0.14,
+    "deltaMps": -4.444444417953491,
+    "rawAccelerationMps2": -31.74603155681065,
+    "previousEmaMps2": 5.95796142373861,
+    "emaMps2": -12.89403506653602,
+    "expectedLongitudinalG": -1.314825660805272,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330043,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 267
+    },
+    "to": {
+      "tMs": 15330201,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 268
+    },
+    "dtSeconds": 0.158,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -12.89403506653602,
+    "emaMps2": -6.44701753326801,
+    "expectedLongitudinalG": -0.657412830402636,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330201,
+      "mps": 0.5555555820465088,
+      "sourceId": 1,
+      "traceIndex": 268
+    },
+    "to": {
+      "tMs": 15330400,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 269
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 4.166666746139526,
+    "rawAccelerationMps2": 20.938023849947367,
+    "previousEmaMps2": -6.44701753326801,
+    "emaMps2": 7.2455031583396785,
+    "expectedLongitudinalG": 0.7388357041741755,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330400,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 269
+    },
+    "to": {
+      "tMs": 15330504,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 272
+    },
+    "dtSeconds": 0.104,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": 7.2455031583396785,
+    "emaMps2": 3.6227515791698393,
+    "expectedLongitudinalG": 0.3694178520870878,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330504,
+      "mps": 4.722222328186035,
+      "sourceId": 1,
+      "traceIndex": 272
+    },
+    "to": {
+      "tMs": 15330701,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 273
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": -4.722222328186035,
+    "rawAccelerationMps2": -23.970671716680382,
+    "previousEmaMps2": 3.6227515791698393,
+    "emaMps2": -10.173960068755271,
+    "expectedLongitudinalG": -1.0374552032299789,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330701,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 273
+    },
+    "to": {
+      "tMs": 15330801,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 274
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -10.173960068755271,
+    "emaMps2": -5.0869800343776355,
+    "expectedLongitudinalG": -0.5187276016149894,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330801,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 274
+    },
+    "to": {
+      "tMs": 15330901,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 275
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 4.44444465637207,
+    "rawAccelerationMps2": 44.4444465637207,
+    "previousEmaMps2": -5.0869800343776355,
+    "emaMps2": 19.678733264671536,
+    "expectedLongitudinalG": 2.006672336085364,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15330901,
+      "mps": 4.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 275
+    },
+    "to": {
+      "tMs": 15331074,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 276
+    },
+    "dtSeconds": 0.173,
+    "deltaMps": -4.44444465637207,
+    "rawAccelerationMps2": -25.69043153972295,
+    "previousEmaMps2": 19.678733264671536,
+    "emaMps2": -3.0058491375257077,
+    "expectedLongitudinalG": -0.30651130993006864,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15331074,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 276
+    },
+    "to": {
+      "tMs": 15331203,
+      "mps": 4.1666669845581055,
+      "sourceId": 1,
+      "traceIndex": 277
+    },
+    "dtSeconds": 0.129,
+    "deltaMps": 4.1666669845581055,
+    "rawAccelerationMps2": 32.2997440663419,
+    "previousEmaMps2": -3.0058491375257077,
+    "emaMps2": 14.646947464408097,
+    "expectedLongitudinalG": 1.4935729800092894,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15331203,
+      "mps": 4.1666669845581055,
+      "sourceId": 1,
+      "traceIndex": 277
+    },
+    "to": {
+      "tMs": 15331387,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 278
+    },
+    "dtSeconds": 0.184,
+    "deltaMps": -4.1666669845581055,
+    "rawAccelerationMps2": -22.644929263902746,
+    "previousEmaMps2": 14.646947464408097,
+    "emaMps2": -3.9989908997473247,
+    "expectedLongitudinalG": -0.407783585602354,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15331387,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 278
+    },
+    "to": {
+      "tMs": 15331617,
+      "mps": 4.1666669845581055,
+      "sourceId": 1,
+      "traceIndex": 280
+    },
+    "dtSeconds": 0.23,
+    "deltaMps": 4.1666669845581055,
+    "rawAccelerationMps2": 18.115943411122196,
+    "previousEmaMps2": -3.9989908997473247,
+    "emaMps2": 7.058476255687435,
+    "expectedLongitudinalG": 0.7197642676844219,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15331617,
+      "mps": 4.1666669845581055,
+      "sourceId": 1,
+      "traceIndex": 280
+    },
+    "to": {
+      "tMs": 15331718,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 282
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -0.27777791023254395,
+    "rawAccelerationMps2": -2.7502763389360787,
+    "previousEmaMps2": 7.058476255687435,
+    "emaMps2": 2.1540999583756784,
+    "expectedLongitudinalG": 0.21965706519307598,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15331718,
+      "mps": 3.8888890743255615,
+      "sourceId": 1,
+      "traceIndex": 282
+    },
+    "to": {
+      "tMs": 15331881,
+      "mps": 3.055555582046509,
+      "sourceId": 1,
+      "traceIndex": 283
+    },
+    "dtSeconds": 0.163,
+    "deltaMps": -0.8333334922790527,
+    "rawAccelerationMps2": -5.112475412754924,
+    "previousEmaMps2": 2.1540999583756784,
+    "emaMps2": -1.479187727189623,
+    "expectedLongitudinalG": -0.15083517074532313,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15331881,
+      "mps": 3.055555582046509,
+      "sourceId": 1,
+      "traceIndex": 283
+    },
+    "to": {
+      "tMs": 15332000,
+      "mps": 3.055555582046509,
+      "sourceId": 1,
+      "traceIndex": 284
+    },
+    "dtSeconds": 0.119,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.479187727189623,
+    "emaMps2": -0.7395938635948115,
+    "expectedLongitudinalG": -0.07541758537266156,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332000,
+      "mps": 3.055555582046509,
+      "sourceId": 1,
+      "traceIndex": 284
+    },
+    "to": {
+      "tMs": 15332101,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 285
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -0.8333332538604736,
+    "rawAccelerationMps2": -8.250824295648254,
+    "previousEmaMps2": -0.7395938635948115,
+    "emaMps2": -4.4952090796215325,
+    "expectedLongitudinalG": -0.45838375792156677,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332101,
+      "mps": 2.222222328186035,
+      "sourceId": 1,
+      "traceIndex": 285
+    },
+    "to": {
+      "tMs": 15332218,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 286
+    },
+    "dtSeconds": 0.117,
+    "deltaMps": -0.8333333730697632,
+    "rawAccelerationMps2": -7.1225074621347275,
+    "previousEmaMps2": -4.4952090796215325,
+    "emaMps2": -5.80885827087813,
+    "expectedLongitudinalG": -0.5923386957705363,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332218,
+      "mps": 1.388888955116272,
+      "sourceId": 1,
+      "traceIndex": 286
+    },
+    "to": {
+      "tMs": 15332394,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 287
+    },
+    "dtSeconds": 0.176,
+    "deltaMps": -1.1111111640930176,
+    "rawAccelerationMps2": -6.313131614164873,
+    "previousEmaMps2": -5.80885827087813,
+    "emaMps2": -6.060994942521502,
+    "expectedLongitudinalG": -0.6180494809666401,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332394,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 287
+    },
+    "to": {
+      "tMs": 15332501,
+      "mps": 3.6111111640930176,
+      "sourceId": 1,
+      "traceIndex": 289
+    },
+    "dtSeconds": 0.107,
+    "deltaMps": 3.333333373069763,
+    "rawAccelerationMps2": 31.152648346446387,
+    "previousEmaMps2": -6.060994942521502,
+    "emaMps2": 12.545826701962444,
+    "expectedLongitudinalG": 1.2793182893202515,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332501,
+      "mps": 3.6111111640930176,
+      "sourceId": 1,
+      "traceIndex": 289
+    },
+    "to": {
+      "tMs": 15332613,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 290
+    },
+    "dtSeconds": 0.112,
+    "deltaMps": -3.6111111640930176,
+    "rawAccelerationMps2": -32.24206396511623,
+    "previousEmaMps2": 12.545826701962444,
+    "emaMps2": -9.848118631576893,
+    "expectedLongitudinalG": -1.0042286235948967,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332613,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 290
+    },
+    "to": {
+      "tMs": 15332729,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 291
+    },
+    "dtSeconds": 0.116,
+    "deltaMps": 1.9444445371627808,
+    "rawAccelerationMps2": 16.762452906575696,
+    "previousEmaMps2": -9.848118631576893,
+    "emaMps2": 3.4571671374994013,
+    "expectedLongitudinalG": 0.3525329381082634,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332729,
+      "mps": 1.9444445371627808,
+      "sourceId": 1,
+      "traceIndex": 291
+    },
+    "to": {
+      "tMs": 15332900,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 292
+    },
+    "dtSeconds": 0.171,
+    "deltaMps": -0.2777777910232544,
+    "rawAccelerationMps2": -1.62443152645178,
+    "previousEmaMps2": 3.4571671374994013,
+    "emaMps2": 0.9163678055238107,
+    "expectedLongitudinalG": 0.09344351083436349,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15332900,
+      "mps": 1.6666667461395264,
+      "sourceId": 1,
+      "traceIndex": 292
+    },
+    "to": {
+      "tMs": 15333001,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 293
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -0.8333333730697632,
+    "rawAccelerationMps2": -8.25082547593825,
+    "previousEmaMps2": 0.9163678055238107,
+    "emaMps2": -3.6672288352072195,
+    "expectedLongitudinalG": -0.3739532699960965,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333001,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 293
+    },
+    "to": {
+      "tMs": 15333105,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 294
+    },
+    "dtSeconds": 0.104,
+    "deltaMps": 0.0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -3.6672288352072195,
+    "emaMps2": -1.8336144176036098,
+    "expectedLongitudinalG": -0.18697663499804826,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333105,
+      "mps": 0.8333333730697632,
+      "sourceId": 1,
+      "traceIndex": 294
+    },
+    "to": {
+      "tMs": 15333302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 295
+    },
+    "dtSeconds": 0.197,
+    "deltaMps": -0.8333333730697632,
+    "rawAccelerationMps2": -4.230118645024178,
+    "previousEmaMps2": -1.8336144176036098,
+    "emaMps2": -3.031866531313894,
+    "expectedLongitudinalG": -0.3091643457565932,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 295
+    },
+    "to": {
+      "tMs": 15333403,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 296
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -3.031866531313894,
+    "emaMps2": -1.515933265656947,
+    "expectedLongitudinalG": -0.1545821728782966,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333403,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 296
+    },
+    "to": {
+      "tMs": 15333601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 298
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.515933265656947,
+    "emaMps2": -0.7579666328284735,
+    "expectedLongitudinalG": -0.0772910864391483,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 298
+    },
+    "to": {
+      "tMs": 15333704,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 300
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.7579666328284735,
+    "emaMps2": -0.37898331641423677,
+    "expectedLongitudinalG": -0.03864554321957415,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333704,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 300
+    },
+    "to": {
+      "tMs": 15333900,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 301
+    },
+    "dtSeconds": 0.196,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.37898331641423677,
+    "emaMps2": -0.18949165820711839,
+    "expectedLongitudinalG": -0.019322771609787074,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15333900,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 301
+    },
+    "to": {
+      "tMs": 15334000,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 302
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.18949165820711839,
+    "emaMps2": -0.09474582910355919,
+    "expectedLongitudinalG": -0.009661385804893537,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15334000,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 302
+    },
+    "to": {
+      "tMs": 15334102,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 303
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.09474582910355919,
+    "emaMps2": -0.047372914551779596,
+    "expectedLongitudinalG": -0.0048306929024467685,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15334102,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 303
+    },
+    "to": {
+      "tMs": 15334302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 304
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.047372914551779596,
+    "emaMps2": -0.023686457275889798,
+    "expectedLongitudinalG": -0.0024153464512233843,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15334302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 304
+    },
+    "to": {
+      "tMs": 15334404,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 305
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.023686457275889798,
+    "emaMps2": -0.011843228637944899,
+    "expectedLongitudinalG": -0.0012076732256116921,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15334404,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 305
+    },
+    "to": {
+      "tMs": 15334608,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 307
+    },
+    "dtSeconds": 0.204,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.011843228637944899,
+    "emaMps2": -0.0059216143189724495,
+    "expectedLongitudinalG": -0.0006038366128058461,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15334608,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 307
+    },
+    "to": {
+      "tMs": 15334803,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 308
+    },
+    "dtSeconds": 0.195,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.0059216143189724495,
+    "emaMps2": -0.0029608071594862248,
+    "expectedLongitudinalG": -0.00030191830640292303,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15334803,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 308
+    },
+    "to": {
+      "tMs": 15335002,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 309
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.0029608071594862248,
+    "emaMps2": -0.0014804035797431124,
+    "expectedLongitudinalG": -0.00015095915320146152,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335002,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 309
+    },
+    "to": {
+      "tMs": 15335201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 310
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.0014804035797431124,
+    "emaMps2": -0.0007402017898715562,
+    "expectedLongitudinalG": -7.547957660073076e-05,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335201,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 310
+    },
+    "to": {
+      "tMs": 15335303,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 311
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.0007402017898715562,
+    "emaMps2": -0.0003701008949357781,
+    "expectedLongitudinalG": -3.773978830036538e-05,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335303,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 311
+    },
+    "to": {
+      "tMs": 15335501,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 313
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.0003701008949357781,
+    "emaMps2": -0.00018505044746788905,
+    "expectedLongitudinalG": -1.886989415018269e-05,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335501,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 313
+    },
+    "to": {
+      "tMs": 15335601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 314
+    },
+    "dtSeconds": 0.1,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -0.00018505044746788905,
+    "emaMps2": -9.252522373394452e-05,
+    "expectedLongitudinalG": -9.434947075091345e-06,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335601,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 314
+    },
+    "to": {
+      "tMs": 15335800,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 315
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -9.252522373394452e-05,
+    "emaMps2": -4.626261186697226e-05,
+    "expectedLongitudinalG": -4.717473537545672e-06,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335800,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 315
+    },
+    "to": {
+      "tMs": 15335903,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 316
+    },
+    "dtSeconds": 0.103,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -4.626261186697226e-05,
+    "emaMps2": -2.313130593348613e-05,
+    "expectedLongitudinalG": -2.358736768772836e-06,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15335903,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 316
+    },
+    "to": {
+      "tMs": 15336005,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 317
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -2.313130593348613e-05,
+    "emaMps2": -1.1565652966743066e-05,
+    "expectedLongitudinalG": -1.179368384386418e-06,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15336005,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 317
+    },
+    "to": {
+      "tMs": 15336102,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 318
+    },
+    "dtSeconds": 0.097,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.1565652966743066e-05,
+    "emaMps2": -5.782826483371533e-06,
+    "expectedLongitudinalG": -5.89684192193209e-07,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15336102,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 318
+    },
+    "to": {
+      "tMs": 15336302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 319
+    },
+    "dtSeconds": 0.2,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -5.782826483371533e-06,
+    "emaMps2": -2.8914132416857664e-06,
+    "expectedLongitudinalG": -2.948420960966045e-07,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15336302,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 319
+    },
+    "to": {
+      "tMs": 15336401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 320
+    },
+    "dtSeconds": 0.099,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -2.8914132416857664e-06,
+    "emaMps2": -1.4457066208428832e-06,
+    "expectedLongitudinalG": -1.4742104804830226e-07,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15336401,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 320
+    },
+    "to": {
+      "tMs": 15336503,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 321
+    },
+    "dtSeconds": 0.102,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -1.4457066208428832e-06,
+    "emaMps2": -7.228533104214416e-07,
+    "expectedLongitudinalG": -7.371052402415113e-08,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15336503,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 321
+    },
+    "to": {
+      "tMs": 15336702,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 323
+    },
+    "dtSeconds": 0.199,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -7.228533104214416e-07,
+    "emaMps2": -3.614266552107208e-07,
+    "expectedLongitudinalG": -3.6855262012075565e-08,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  {
+    "from": {
+      "tMs": 15336702,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 323
+    },
+    "to": {
+      "tMs": 15336900,
+      "mps": 0,
+      "sourceId": 1,
+      "traceIndex": 325
+    },
+    "dtSeconds": 0.198,
+    "deltaMps": 0,
+    "rawAccelerationMps2": 0.0,
+    "previousEmaMps2": -3.614266552107208e-07,
+    "emaMps2": -1.807133276053604e-07,
+    "expectedLongitudinalG": -1.8427631006037783e-08,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  }
+]

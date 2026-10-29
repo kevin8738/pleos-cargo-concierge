@@ -1,0 +1,134 @@
+{
+  "verdict": "NATIVE_SINGLE_PROBE_LIMITS_AND_CLEANUP_VERIFIED",
+  "errors": [],
+  "checks": [
+    {
+      "name": "original manifest hashes",
+      "passed": true,
+      "detail": 53
+    },
+    {
+      "name": "reviewed native harness hash",
+      "passed": true
+    },
+    {
+      "name": "same candidate and PID",
+      "passed": true
+    },
+    {
+      "name": "no injected progress/guard reported",
+      "passed": true
+    },
+    {
+      "name": "actual VIP audio OFF",
+      "passed": true
+    },
+    {
+      "name": "three switches restored",
+      "passed": true
+    },
+    {
+      "name": "raw clock arithmetic",
+      "passed": true
+    },
+    {
+      "name": "PCM capture and hash",
+      "passed": true
+    },
+    {
+      "name": "WAV bytes/format",
+      "passed": true
+    },
+    {
+      "name": "all packet bytes/stats",
+      "passed": true
+    },
+    {
+      "name": "packet timestamps monotonic and host-bounded",
+      "passed": true,
+      "detail": {
+        "lagMinSeconds": -0.0006430149078369141,
+        "lagMaxSeconds": 0.004736900329589844
+      }
+    },
+    {
+      "name": "baseline window independently recalculated",
+      "passed": true
+    },
+    {
+      "name": "response window independently recalculated",
+      "passed": true
+    },
+    {
+      "name": "route event windows exact",
+      "passed": true
+    },
+    {
+      "name": "coverage correctly false",
+      "passed": true,
+      "detail": {
+        "lastPacketHostEpoch": 1793296706.839498,
+        "routeEndHostEpoch": 1793296710.949174,
+        "missingTailSeconds": 4.109675884246826,
+        "routeRequestToEndedSeconds": 29.777283906936646,
+        "directActiveToEndedSeconds": 14.853882074356079
+      }
+    },
+    {
+      "name": "unestablished native output/contention preserved",
+      "passed": true
+    },
+    {
+      "name": "audio result copied verbatim to result",
+      "passed": true
+    },
+    {
+      "name": "native-initial-idle_0.xml idle observed",
+      "passed": true
+    },
+    {
+      "name": "native-final-idle_0.xml idle observed",
+      "passed": true
+    },
+    {
+      "name": "actual route UI observed",
+      "passed": true
+    },
+    {
+      "name": "final VIP Idle/P0 UI",
+      "passed": true
+    },
+    {
+      "name": "untouched vehicle domains exact",
+      "passed": true
+    },
+    {
+      "name": "final Console P0",
+      "passed": true
+    },
+    {
+      "name": "final guard service notification absent",
+      "passed": true
+    },
+    {
+      "name": "execution/cleanup true independent of unestablished output",
+      "passed": true
+    }
+  ],
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "counts": {
+    "checks": 25,
+    "manifestEntries": 53,
+    "streamAudioMetadataEntries": 3453
+  },
+  "response_peak_s16": 1842,
+  "response_rms_s16": 163.2952436120724,
+  "capture_last_packet_to_route_end_gap_seconds": 4.109675884246826,
+  "scope": "Nonzero mixed emulator PCM observed, but full route window not covered and spoken source/content not identified. Retain amplitudeContrastObserved=false/nativeSpeechContentVerified=false/nativeVipContentionVerified=false; no repeat run.",
+  "limits": [
+    "Not silence or zero samples; missing complete route tail prevents the specified whole-window contrast verdict.",
+    "Actual UI route active/end is observed; no native audio callback or intelligibility evidence.",
+    "Sparse PCM9.0454375s in40.010816s window; no physical speaker/vehicle effect or VIP/native contention."
+  ],
+  "result_sha256": "245fbcf6edcc4ac84b939bdec50b1ac5f175254d98b78049a9bab0fef73230ed"
+}

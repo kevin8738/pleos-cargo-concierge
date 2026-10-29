@@ -1,0 +1,19 @@
+{"event": "runtime_snapshot", "hostUnixNs": 1793296650954602000, "hostMonotonicNs": 46143321043541, "label": "preflight-runtime", "pid": "22692", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}
+{"event": "command_start", "hostUnixNs": 1793296650955796000, "hostMonotonicNs": 46143322237125, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296650997057000, "hostMonotonicNs": 46143363496916, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 46143322237125}
+{"event": "command_start", "hostUnixNs": 1793296661358947000, "hostMonotonicNs": 46153725155125, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296661408382000, "hostMonotonicNs": 46153774588833, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 46153725155125}
+{"event": "capture_started", "hostUnixNs": 1793296666680183000, "hostMonotonicNs": 46159046272333, "seconds": 40}
+{"event": "native_open_start", "hostUnixNs": 1793296669689126000, "hostMonotonicNs": 46162055150625}
+{"event": "native_search_open", "hostUnixNs": 1793296671950061000, "hostMonotonicNs": 46164316032250, "bounds": [981, 1092, 1167, 1130]}
+{"event": "native_public_destination", "hostUnixNs": 1793296678611175000, "hostMonotonicNs": 46170976996625, "bounds": [957, 259, 1077, 293]}
+{"event": "native_route_request", "hostUnixNs": 1793296681171890000, "hostMonotonicNs": 46173537654625}
+{"event": "native_destination_tap", "hostUnixNs": 1793296681172061000, "hostMonotonicNs": 46173537826083, "bounds": [1070, 1209, 1166, 1243]}
+{"event": "native_route_active", "hostUnixNs": 1793296696095292000, "hostMonotonicNs": 46188460722875, "deviceElapsedMs": 15442670}
+{"event": "native_route_end_request", "hostUnixNs": 1793296708523107000, "hostMonotonicNs": 46200888260000}
+{"event": "native_route_end_tap", "hostUnixNs": 1793296708523289000, "hostMonotonicNs": 46200888442041, "bounds": [1159, 1207, 1275, 1245]}
+{"event": "native_route_ended", "hostUnixNs": 1793296710948782000, "hostMonotonicNs": 46203313880291, "deviceElapsedMs": 15457530}
+{"event": "native_audio_observation_route_ended", "hostUnixNs": 1793296710949174000, "hostMonotonicNs": 46203314272375}
+{"event": "command_start", "hostUnixNs": 1793296723997421000, "hostMonotonicNs": 46216362228000, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296724040096000, "hostMonotonicNs": 46216404901458, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 46216362228000}
+{"event": "runtime_snapshot", "hostUnixNs": 1793296726601914000, "hostMonotonicNs": 46218966662541, "label": "cleanup-runtime", "pid": "22692", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}

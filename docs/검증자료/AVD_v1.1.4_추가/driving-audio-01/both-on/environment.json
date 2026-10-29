@@ -1,0 +1,39 @@
+{
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "pid": "22692",
+  "product": "crp_avd_arm64",
+  "api": "34",
+  "traceStartElapsedMs": 14282020,
+  "originalMotionTraceProperty": "",
+  "clockCalibration": {
+    "deviceMinusHostNs": 95468643,
+    "uncertaintyNs": 14766500,
+    "hostBeforeNs": 1793295535360543000,
+    "hostAfterNs": 1793295535390076000,
+    "deviceEpochNs": 1793295535470778143
+  },
+  "audioSettings": {
+    "tts": true,
+    "chime": true
+  },
+  "motionPath": "DEMO synthetic",
+  "policy": {
+    "limitG": 0.12,
+    "warnRatio": 0.8,
+    "chimeCooldownMs": 5000,
+    "coachCooldownMs": 8000,
+    "audibleCooldownMs": 8000,
+    "badgeHoldMs": 3000,
+    "maxVoiceCoachPerTrip": 3,
+    "maxAudiblePerTrip": 6,
+    "emergencyG": 0.6,
+    "minCoachSpeedMps": 4.166666666666667
+  },
+  "sourceHashes": {
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/engine/CargoStateMachine.kt": "621e7a12e9fa44d9d34382f36fcf61bb73abb9d8cfb89fb4f0dce218f65e3699",
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/model/CargoPreset.kt": "3255c2e2ef2539c0a8810ea2a70e808898715e4d45f63f6d850103a39b81cecb",
+    "app/core/src/main/kotlin/ai/vipseat/cargoconcierge/core/physics/GEstimator.kt": "3fb680db6cf398a26c49a28ca26a17f1b37789bf56464080793d1d5d7f09f7da"
+  },
+  "selectionAudio": "both OFF; switched while P0 before driving",
+  "continuousVideo": true
+}

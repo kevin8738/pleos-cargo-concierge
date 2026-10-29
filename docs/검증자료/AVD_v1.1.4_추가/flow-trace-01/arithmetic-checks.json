@@ -1,0 +1,2610 @@
+[
+  {
+    "index": 0,
+    "tMs": 15297500,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 1,
+    "tMs": 15297518,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 2,
+    "tMs": 15297604,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 3,
+    "tMs": 15297803,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 4,
+    "tMs": 15297901,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 5,
+    "tMs": 15298101,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 6,
+    "tMs": 15298201,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 7,
+    "tMs": 15298217,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 8,
+    "tMs": 15298300,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 9,
+    "tMs": 15298401,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 10,
+    "tMs": 15298505,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 11,
+    "tMs": 15298700,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 12,
+    "tMs": 15298801,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 13,
+    "tMs": 15298901,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 14,
+    "tMs": 15299001,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 15,
+    "tMs": 15299101,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 16,
+    "tMs": 15299202,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 17,
+    "tMs": 15299223,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 18,
+    "tMs": 15299401,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 19,
+    "tMs": 15299601,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 20,
+    "tMs": 15299804,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 21,
+    "tMs": 15300001,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 22,
+    "tMs": 15300101,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 23,
+    "tMs": 15300201,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 24,
+    "tMs": 15300228,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 25,
+    "tMs": 15300401,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 26,
+    "tMs": 15300401,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 27,
+    "tMs": 15300501,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 28,
+    "tMs": 15300604,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 29,
+    "tMs": 15300809,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 30,
+    "tMs": 15300902,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 31,
+    "tMs": 15301109,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 32,
+    "tMs": 15301236,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 33,
+    "tMs": 15301310,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 34,
+    "tMs": 15301502,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 35,
+    "tMs": 15301701,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 36,
+    "tMs": 15301903,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 37,
+    "tMs": 15302101,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 38,
+    "tMs": 15302201,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 39,
+    "tMs": 15302242,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 40,
+    "tMs": 15302405,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 41,
+    "tMs": 15302500,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 42,
+    "tMs": 15302601,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 43,
+    "tMs": 15302800,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 44,
+    "tMs": 15302901,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 45,
+    "tMs": 15303002,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 46,
+    "tMs": 15303201,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 47,
+    "tMs": 15303251,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 48,
+    "tMs": 15303400,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 49,
+    "tMs": 15303406,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 50,
+    "tMs": 15303603,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 51,
+    "tMs": 15303801,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 52,
+    "tMs": 15303900,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 53,
+    "tMs": 15304006,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 54,
+    "tMs": 15304203,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 55,
+    "tMs": 15304265,
+    "kind": "steering",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 56,
+    "tMs": 15304302,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 57,
+    "tMs": 15304500,
+    "kind": "speed",
+    "expectedTotalG": 0.0,
+    "actualTotalG": 0,
+    "issues": []
+  },
+  {
+    "index": 58,
+    "tMs": 15304602,
+    "kind": "speed",
+    "expectedTotalG": 0.2777005069721641,
+    "actualTotalG": 0.2777005069721641,
+    "issues": []
+  },
+  {
+    "index": 59,
+    "tMs": 15304800,
+    "kind": "speed",
+    "expectedTotalG": 0.13885025348608204,
+    "actualTotalG": 0.13885025348608204,
+    "issues": []
+  },
+  {
+    "index": 60,
+    "tMs": 15304902,
+    "kind": "speed",
+    "expectedTotalG": 0.06942512674304102,
+    "actualTotalG": 0.06942512674304102,
+    "issues": []
+  },
+  {
+    "index": 61,
+    "tMs": 15305051,
+    "kind": "speed",
+    "expectedTotalG": 0.22481626613098854,
+    "actualTotalG": 0.22481626613098854,
+    "issues": []
+  },
+  {
+    "index": 62,
+    "tMs": 15305208,
+    "kind": "speed",
+    "expectedTotalG": 0.11240813306549427,
+    "actualTotalG": 0.11240813306549427,
+    "issues": []
+  },
+  {
+    "index": 63,
+    "tMs": 15305275,
+    "kind": "steering",
+    "expectedTotalG": 0.11240813306549427,
+    "actualTotalG": 0.11240813306549427,
+    "issues": []
+  },
+  {
+    "index": 64,
+    "tMs": 15305335,
+    "kind": "speed",
+    "expectedTotalG": 0.2783485127329308,
+    "actualTotalG": 0.2783485127329308,
+    "issues": []
+  },
+  {
+    "index": 65,
+    "tMs": 15305500,
+    "kind": "speed",
+    "expectedTotalG": 0.11832985009863213,
+    "actualTotalG": 0.11832985009863213,
+    "issues": []
+  },
+  {
+    "index": 66,
+    "tMs": 15305603,
+    "kind": "speed",
+    "expectedTotalG": 0.33416931059456595,
+    "actualTotalG": 0.33416931059456595,
+    "issues": []
+  },
+  {
+    "index": 67,
+    "tMs": 15305755,
+    "kind": "speed",
+    "expectedTotalG": 0.11244282869443484,
+    "actualTotalG": 0.11244282869443484,
+    "issues": []
+  },
+  {
+    "index": 68,
+    "tMs": 15305903,
+    "kind": "speed",
+    "expectedTotalG": 0.05622141434721742,
+    "actualTotalG": 0.05622141434721742,
+    "issues": []
+  },
+  {
+    "index": 69,
+    "tMs": 15306075,
+    "kind": "speed",
+    "expectedTotalG": 0.38359643979093694,
+    "actualTotalG": 0.38359643979093694,
+    "issues": []
+  },
+  {
+    "index": 70,
+    "tMs": 15306176,
+    "kind": "speed",
+    "expectedTotalG": 0.9300018478732732,
+    "actualTotalG": 0.9300018478732732,
+    "issues": []
+  },
+  {
+    "index": 71,
+    "tMs": 15306279,
+    "kind": "steering",
+    "expectedTotalG": 0.9300018478732732,
+    "actualTotalG": 0.9300018478732732,
+    "issues": []
+  },
+  {
+    "index": 72,
+    "tMs": 15306302,
+    "kind": "speed",
+    "expectedTotalG": 0.4650009239366366,
+    "actualTotalG": 0.4650009239366366,
+    "issues": []
+  },
+  {
+    "index": 73,
+    "tMs": 15306504,
+    "kind": "speed",
+    "expectedTotalG": 0.2325004619683183,
+    "actualTotalG": 0.2325004619683183,
+    "issues": []
+  },
+  {
+    "index": 74,
+    "tMs": 15306504,
+    "kind": "steering",
+    "expectedTotalG": 0.2325004619683183,
+    "actualTotalG": 0.2325004619683183,
+    "issues": []
+  },
+  {
+    "index": 75,
+    "tMs": 15306606,
+    "kind": "speed",
+    "expectedTotalG": 1.272252303876661,
+    "actualTotalG": 1.272252303876661,
+    "issues": []
+  },
+  {
+    "index": 76,
+    "tMs": 15306800,
+    "kind": "speed",
+    "expectedTotalG": 0.6361261519383306,
+    "actualTotalG": 0.6361261519383306,
+    "issues": []
+  },
+  {
+    "index": 77,
+    "tMs": 15307000,
+    "kind": "speed",
+    "expectedTotalG": 0.3180630759691653,
+    "actualTotalG": 0.3180630759691653,
+    "issues": []
+  },
+  {
+    "index": 78,
+    "tMs": 15307107,
+    "kind": "speed",
+    "expectedTotalG": 0.02666955729708141,
+    "actualTotalG": 0.02666955729708141,
+    "issues": []
+  },
+  {
+    "index": 79,
+    "tMs": 15307285,
+    "kind": "steering",
+    "expectedTotalG": 0.02666955729708141,
+    "actualTotalG": 0.02666955729708141,
+    "issues": []
+  },
+  {
+    "index": 80,
+    "tMs": 15307302,
+    "kind": "speed",
+    "expectedTotalG": 0.013334778648540706,
+    "actualTotalG": 0.013334778648540706,
+    "issues": []
+  },
+  {
+    "index": 81,
+    "tMs": 15307502,
+    "kind": "speed",
+    "expectedTotalG": 0.559841614509033,
+    "actualTotalG": 0.559841614509033,
+    "issues": []
+  },
+  {
+    "index": 82,
+    "tMs": 15307602,
+    "kind": "speed",
+    "expectedTotalG": 0.2799208072545165,
+    "actualTotalG": 0.2799208072545165,
+    "issues": []
+  },
+  {
+    "index": 83,
+    "tMs": 15307704,
+    "kind": "speed",
+    "expectedTotalG": 1.6650928916918082,
+    "actualTotalG": 1.6650928916918082,
+    "issues": []
+  },
+  {
+    "index": 84,
+    "tMs": 15307901,
+    "kind": "speed",
+    "expectedTotalG": 0.40119438933076607,
+    "actualTotalG": 0.40119438933076607,
+    "issues": []
+  },
+  {
+    "index": 85,
+    "tMs": 15308002,
+    "kind": "speed",
+    "expectedTotalG": 0.20059719466538303,
+    "actualTotalG": 0.20059719466538303,
+    "issues": []
+  },
+  {
+    "index": 86,
+    "tMs": 15308129,
+    "kind": "speed",
+    "expectedTotalG": 0.9924388087078327,
+    "actualTotalG": 0.9924388087078327,
+    "issues": []
+  },
+  {
+    "index": 87,
+    "tMs": 15308296,
+    "kind": "steering",
+    "expectedTotalG": 0.9924388087078327,
+    "actualTotalG": 0.9924388087078327,
+    "issues": []
+  },
+  {
+    "index": 88,
+    "tMs": 15308301,
+    "kind": "speed",
+    "expectedTotalG": 0.8212434659326295,
+    "actualTotalG": 0.8212434659326295,
+    "issues": []
+  },
+  {
+    "index": 89,
+    "tMs": 15308401,
+    "kind": "speed",
+    "expectedTotalG": 0.41062173296631477,
+    "actualTotalG": 0.41062173296631477,
+    "issues": []
+  },
+  {
+    "index": 90,
+    "tMs": 15308503,
+    "kind": "speed",
+    "expectedTotalG": 0.7666409079194169,
+    "actualTotalG": 0.7666409079194169,
+    "issues": []
+  },
+  {
+    "index": 91,
+    "tMs": 15308649,
+    "kind": "speed",
+    "expectedTotalG": 1.450375058448883,
+    "actualTotalG": 1.450375058448883,
+    "issues": []
+  },
+  {
+    "index": 92,
+    "tMs": 15308801,
+    "kind": "speed",
+    "expectedTotalG": 0.7251875292244415,
+    "actualTotalG": 0.7251875292244415,
+    "issues": []
+  },
+  {
+    "index": 93,
+    "tMs": 15308903,
+    "kind": "speed",
+    "expectedTotalG": 0.36259376461222076,
+    "actualTotalG": 0.36259376461222076,
+    "issues": []
+  },
+  {
+    "index": 94,
+    "tMs": 15309000,
+    "kind": "speed",
+    "expectedTotalG": 0.18129688230611038,
+    "actualTotalG": 0.18129688230611038,
+    "issues": []
+  },
+  {
+    "index": 95,
+    "tMs": 15309138,
+    "kind": "speed",
+    "expectedTotalG": 1.1408928495063642,
+    "actualTotalG": 1.1408928495063642,
+    "issues": []
+  },
+  {
+    "index": 96,
+    "tMs": 15309304,
+    "kind": "speed",
+    "expectedTotalG": 0.6240003341511862,
+    "actualTotalG": 0.6240003341511862,
+    "issues": []
+  },
+  {
+    "index": 97,
+    "tMs": 15309304,
+    "kind": "steering",
+    "expectedTotalG": 0.6240003341511862,
+    "actualTotalG": 0.6240003341511862,
+    "issues": []
+  },
+  {
+    "index": 98,
+    "tMs": 15309403,
+    "kind": "speed",
+    "expectedTotalG": 0.11717340509332977,
+    "actualTotalG": 0.11717340509332977,
+    "issues": []
+  },
+  {
+    "index": 99,
+    "tMs": 15309502,
+    "kind": "speed",
+    "expectedTotalG": 0.058586702546664884,
+    "actualTotalG": 0.058586702546664884,
+    "issues": []
+  },
+  {
+    "index": 100,
+    "tMs": 15309682,
+    "kind": "speed",
+    "expectedTotalG": 0.3641156665039985,
+    "actualTotalG": 0.3641156665039985,
+    "issues": []
+  },
+  {
+    "index": 101,
+    "tMs": 15309720,
+    "kind": "steering",
+    "expectedTotalG": 0.3641156665039985,
+    "actualTotalG": 0.3641156665039985,
+    "issues": []
+  },
+  {
+    "index": 102,
+    "tMs": 15309801,
+    "kind": "speed",
+    "expectedTotalG": 0.18205783325199926,
+    "actualTotalG": 0.18205783325199926,
+    "issues": []
+  },
+  {
+    "index": 103,
+    "tMs": 15310002,
+    "kind": "speed",
+    "expectedTotalG": 1.1068135081944068,
+    "actualTotalG": 1.1068135081944068,
+    "issues": []
+  },
+  {
+    "index": 104,
+    "tMs": 15310188,
+    "kind": "speed",
+    "expectedTotalG": 0.8933233064190705,
+    "actualTotalG": 0.8933233064190705,
+    "issues": []
+  },
+  {
+    "index": 105,
+    "tMs": 15310303,
+    "kind": "speed",
+    "expectedTotalG": 0.44666165320953527,
+    "actualTotalG": 0.44666165320953527,
+    "issues": []
+  },
+  {
+    "index": 106,
+    "tMs": 15310309,
+    "kind": "steering",
+    "expectedTotalG": 0.44666165320953527,
+    "actualTotalG": 0.44666165320953527,
+    "issues": []
+  },
+  {
+    "index": 107,
+    "tMs": 15310415,
+    "kind": "speed",
+    "expectedTotalG": 0.9147453039509558,
+    "actualTotalG": 0.9147453039509558,
+    "issues": []
+  },
+  {
+    "index": 108,
+    "tMs": 15310593,
+    "kind": "speed",
+    "expectedTotalG": 1.332597317646075,
+    "actualTotalG": 1.332597317646075,
+    "issues": []
+  },
+  {
+    "index": 109,
+    "tMs": 15310700,
+    "kind": "speed",
+    "expectedTotalG": 0.6662986588230375,
+    "actualTotalG": 0.6662986588230375,
+    "issues": []
+  },
+  {
+    "index": 110,
+    "tMs": 15310901,
+    "kind": "speed",
+    "expectedTotalG": 1.2169997087317823,
+    "actualTotalG": 1.2169997087317823,
+    "issues": []
+  },
+  {
+    "index": 111,
+    "tMs": 15311009,
+    "kind": "speed",
+    "expectedTotalG": 0.965136239254478,
+    "actualTotalG": 0.965136239254478,
+    "issues": []
+  },
+  {
+    "index": 112,
+    "tMs": 15311201,
+    "kind": "speed",
+    "expectedTotalG": 0.482568119627239,
+    "actualTotalG": 0.482568119627239,
+    "issues": []
+  },
+  {
+    "index": 113,
+    "tMs": 15311315,
+    "kind": "steering",
+    "expectedTotalG": 0.482568119627239,
+    "actualTotalG": 0.482568119627239,
+    "issues": []
+  },
+  {
+    "index": 114,
+    "tMs": 15311342,
+    "kind": "speed",
+    "expectedTotalG": 1.3461775662773363,
+    "actualTotalG": 1.3461775662773363,
+    "issues": []
+  },
+  {
+    "index": 115,
+    "tMs": 15311504,
+    "kind": "speed",
+    "expectedTotalG": 0.6730887831386682,
+    "actualTotalG": 0.6730887831386682,
+    "issues": []
+  },
+  {
+    "index": 116,
+    "tMs": 15311600,
+    "kind": "speed",
+    "expectedTotalG": 1.138739488407972,
+    "actualTotalG": 1.138739488407972,
+    "issues": []
+  },
+  {
+    "index": 117,
+    "tMs": 15311702,
+    "kind": "speed",
+    "expectedTotalG": 0.569369744203986,
+    "actualTotalG": 0.569369744203986,
+    "issues": []
+  },
+  {
+    "index": 118,
+    "tMs": 15311900,
+    "kind": "speed",
+    "expectedTotalG": 1.500676578055594,
+    "actualTotalG": 1.500676578055594,
+    "issues": []
+  },
+  {
+    "index": 119,
+    "tMs": 15312005,
+    "kind": "speed",
+    "expectedTotalG": 0.750338289027797,
+    "actualTotalG": 0.750338289027797,
+    "issues": []
+  },
+  {
+    "index": 120,
+    "tMs": 15312200,
+    "kind": "speed",
+    "expectedTotalG": 1.6584530919589977,
+    "actualTotalG": 1.6584530919589977,
+    "issues": []
+  },
+  {
+    "index": 121,
+    "tMs": 15312300,
+    "kind": "speed",
+    "expectedTotalG": 3.4195912106946107,
+    "actualTotalG": 3.4195912106946107,
+    "issues": []
+  },
+  {
+    "index": 122,
+    "tMs": 15312318,
+    "kind": "steering",
+    "expectedTotalG": 3.4195912106946107,
+    "actualTotalG": 3.4195912106946107,
+    "issues": []
+  },
+  {
+    "index": 123,
+    "tMs": 15312400,
+    "kind": "speed",
+    "expectedTotalG": 1.7097956053473053,
+    "actualTotalG": 1.7097956053473053,
+    "issues": []
+  },
+  {
+    "index": 124,
+    "tMs": 15312500,
+    "kind": "speed",
+    "expectedTotalG": 0.8548978026736527,
+    "actualTotalG": 0.8548978026736527,
+    "issues": []
+  },
+  {
+    "index": 125,
+    "tMs": 15312601,
+    "kind": "speed",
+    "expectedTotalG": 0.42744890133682634,
+    "actualTotalG": 0.42744890133682634,
+    "issues": []
+  },
+  {
+    "index": 126,
+    "tMs": 15312771,
+    "kind": "speed",
+    "expectedTotalG": 0.3803446833460379,
+    "actualTotalG": 0.3803446833460379,
+    "issues": []
+  },
+  {
+    "index": 127,
+    "tMs": 15312801,
+    "kind": "steering",
+    "expectedTotalG": 0.3803446833460379,
+    "actualTotalG": 0.3803446833460379,
+    "issues": []
+  },
+  {
+    "index": 128,
+    "tMs": 15312872,
+    "kind": "speed",
+    "expectedTotalG": 4.437252817516956,
+    "actualTotalG": 4.437252817516956,
+    "issues": []
+  },
+  {
+    "index": 129,
+    "tMs": 15313000,
+    "kind": "speed",
+    "expectedTotalG": 2.218626408758478,
+    "actualTotalG": 2.218626408758478,
+    "issues": []
+  },
+  {
+    "index": 130,
+    "tMs": 15313100,
+    "kind": "speed",
+    "expectedTotalG": 1.109313204379239,
+    "actualTotalG": 1.109313204379239,
+    "issues": []
+  },
+  {
+    "index": 131,
+    "tMs": 15313287,
+    "kind": "speed",
+    "expectedTotalG": 2.09612083435254,
+    "actualTotalG": 2.09612083435254,
+    "issues": []
+  },
+  {
+    "index": 132,
+    "tMs": 15313326,
+    "kind": "steering",
+    "expectedTotalG": 2.09612083435254,
+    "actualTotalG": 2.09612083435254,
+    "issues": []
+  },
+  {
+    "index": 133,
+    "tMs": 15313400,
+    "kind": "speed",
+    "expectedTotalG": 1.04806041717627,
+    "actualTotalG": 1.04806041717627,
+    "issues": []
+  },
+  {
+    "index": 134,
+    "tMs": 15313602,
+    "kind": "speed",
+    "expectedTotalG": 1.2988947811799862,
+    "actualTotalG": 1.2988947811799862,
+    "issues": []
+  },
+  {
+    "index": 135,
+    "tMs": 15313805,
+    "kind": "speed",
+    "expectedTotalG": 1.164497673120157,
+    "actualTotalG": 1.164497673120157,
+    "issues": []
+  },
+  {
+    "index": 136,
+    "tMs": 15313807,
+    "kind": "steering",
+    "expectedTotalG": 1.1901732295724348,
+    "actualTotalG": 1.1901732295724348,
+    "issues": []
+  },
+  {
+    "index": 137,
+    "tMs": 15313900,
+    "kind": "speed",
+    "expectedTotalG": 0.6320373354195024,
+    "actualTotalG": 0.6320373354195024,
+    "issues": []
+  },
+  {
+    "index": 138,
+    "tMs": 15314001,
+    "kind": "speed",
+    "expectedTotalG": 0.38106549647994986,
+    "actualTotalG": 0.38106549647994986,
+    "issues": []
+  },
+  {
+    "index": 139,
+    "tMs": 15314101,
+    "kind": "speed",
+    "expectedTotalG": 3.678405690810188,
+    "actualTotalG": 3.678405690810188,
+    "issues": []
+  },
+  {
+    "index": 140,
+    "tMs": 15314302,
+    "kind": "speed",
+    "expectedTotalG": 1.8392509964891406,
+    "actualTotalG": 1.8392509964891406,
+    "issues": []
+  },
+  {
+    "index": 141,
+    "tMs": 15314350,
+    "kind": "steering",
+    "expectedTotalG": 1.8392509964891406,
+    "actualTotalG": 1.8392509964891406,
+    "issues": []
+  },
+  {
+    "index": 142,
+    "tMs": 15314403,
+    "kind": "speed",
+    "expectedTotalG": 0.9197217941104134,
+    "actualTotalG": 0.9197217941104134,
+    "issues": []
+  },
+  {
+    "index": 143,
+    "tMs": 15314602,
+    "kind": "speed",
+    "expectedTotalG": 0.4600534383965876,
+    "actualTotalG": 0.4600534383965876,
+    "issues": []
+  },
+  {
+    "index": 144,
+    "tMs": 15314701,
+    "kind": "speed",
+    "expectedTotalG": 0.23041139964253954,
+    "actualTotalG": 0.23041139964253954,
+    "issues": []
+  },
+  {
+    "index": 145,
+    "tMs": 15314900,
+    "kind": "speed",
+    "expectedTotalG": 0.18651427784684244,
+    "actualTotalG": 0.18651427784684244,
+    "issues": []
+  },
+  {
+    "index": 146,
+    "tMs": 15315002,
+    "kind": "speed",
+    "expectedTotalG": 0.09384812244677505,
+    "actualTotalG": 0.09384812244677505,
+    "issues": []
+  },
+  {
+    "index": 147,
+    "tMs": 15315205,
+    "kind": "speed",
+    "expectedTotalG": 0.04808787423351981,
+    "actualTotalG": 0.04808787423351981,
+    "issues": []
+  },
+  {
+    "index": 148,
+    "tMs": 15315353,
+    "kind": "steering",
+    "expectedTotalG": 0.04808787423351981,
+    "actualTotalG": 0.04808787423351981,
+    "issues": []
+  },
+  {
+    "index": 149,
+    "tMs": 15315401,
+    "kind": "speed",
+    "expectedTotalG": 0.09597493450012827,
+    "actualTotalG": 0.09597493450012826,
+    "issues": []
+  },
+  {
+    "index": 150,
+    "tMs": 15315601,
+    "kind": "speed",
+    "expectedTotalG": 0.04865814123434892,
+    "actualTotalG": 0.04865814123434892,
+    "issues": []
+  },
+  {
+    "index": 151,
+    "tMs": 15315802,
+    "kind": "speed",
+    "expectedTotalG": 0.025626575510616516,
+    "actualTotalG": 0.025626575510616516,
+    "issues": []
+  },
+  {
+    "index": 152,
+    "tMs": 15315922,
+    "kind": "speed",
+    "expectedTotalG": 0.13014251708151003,
+    "actualTotalG": 0.13014251708151,
+    "issues": []
+  },
+  {
+    "index": 153,
+    "tMs": 15316103,
+    "kind": "speed",
+    "expectedTotalG": 0.06533954136382987,
+    "actualTotalG": 0.06533954136382988,
+    "issues": []
+  },
+  {
+    "index": 154,
+    "tMs": 15316300,
+    "kind": "speed",
+    "expectedTotalG": 0.03320091706514689,
+    "actualTotalG": 0.03320091706514689,
+    "issues": []
+  },
+  {
+    "index": 155,
+    "tMs": 15316357,
+    "kind": "steering",
+    "expectedTotalG": 0.03320091706514689,
+    "actualTotalG": 0.03320091706514689,
+    "issues": []
+  },
+  {
+    "index": 156,
+    "tMs": 15316500,
+    "kind": "speed",
+    "expectedTotalG": 0.01762277506664441,
+    "actualTotalG": 0.01762277506664441,
+    "issues": []
+  },
+  {
+    "index": 157,
+    "tMs": 15316640,
+    "kind": "speed",
+    "expectedTotalG": 0.10938790426489488,
+    "actualTotalG": 0.10938790426489488,
+    "issues": []
+  },
+  {
+    "index": 158,
+    "tMs": 15316800,
+    "kind": "speed",
+    "expectedTotalG": 0.054847980617140545,
+    "actualTotalG": 0.054847980617140545,
+    "issues": []
+  },
+  {
+    "index": 159,
+    "tMs": 15316901,
+    "kind": "steering",
+    "expectedTotalG": 0.054847980617140545,
+    "actualTotalG": 0.054847980617140545,
+    "issues": []
+  },
+  {
+    "index": 160,
+    "tMs": 15317001,
+    "kind": "speed",
+    "expectedTotalG": 0.027729908444788086,
+    "actualTotalG": 0.027729908444788086,
+    "issues": []
+  },
+  {
+    "index": 161,
+    "tMs": 15317101,
+    "kind": "speed",
+    "expectedTotalG": 0.014460620093925979,
+    "actualTotalG": 0.01446062009392598,
+    "issues": []
+  },
+  {
+    "index": 162,
+    "tMs": 15317202,
+    "kind": "speed",
+    "expectedTotalG": 0.008315645572472852,
+    "actualTotalG": 0.008315645572472852,
+    "issues": []
+  },
+  {
+    "index": 163,
+    "tMs": 15317362,
+    "kind": "steering",
+    "expectedTotalG": 0.008315645572472852,
+    "actualTotalG": 0.008315645572472852,
+    "issues": []
+  },
+  {
+    "index": 164,
+    "tMs": 15317379,
+    "kind": "speed",
+    "expectedTotalG": 0.08348576273527222,
+    "actualTotalG": 0.08348576273527224,
+    "issues": []
+  },
+  {
+    "index": 165,
+    "tMs": 15317500,
+    "kind": "speed",
+    "expectedTotalG": 0.041825580124909265,
+    "actualTotalG": 0.041825580124909265,
+    "issues": []
+  },
+  {
+    "index": 166,
+    "tMs": 15317601,
+    "kind": "speed",
+    "expectedTotalG": 0.021077376404784434,
+    "actualTotalG": 0.021077376404784434,
+    "issues": []
+  },
+  {
+    "index": 167,
+    "tMs": 15317701,
+    "kind": "speed",
+    "expectedTotalG": 0.010861627729760548,
+    "actualTotalG": 0.010861627729760548,
+    "issues": []
+  },
+  {
+    "index": 168,
+    "tMs": 15317802,
+    "kind": "speed",
+    "expectedTotalG": 0.006033634654802875,
+    "actualTotalG": 0.006033634654802874,
+    "issues": []
+  },
+  {
+    "index": 169,
+    "tMs": 15317905,
+    "kind": "speed",
+    "expectedTotalG": 0.004001524047106544,
+    "actualTotalG": 0.004001524047106544,
+    "issues": []
+  },
+  {
+    "index": 170,
+    "tMs": 15318104,
+    "kind": "speed",
+    "expectedTotalG": 0.0033036429267636305,
+    "actualTotalG": 0.00330364292676363,
+    "issues": []
+  },
+  {
+    "index": 171,
+    "tMs": 15318287,
+    "kind": "speed",
+    "expectedTotalG": 2.488069577777439,
+    "actualTotalG": 2.488069577777439,
+    "issues": []
+  },
+  {
+    "index": 172,
+    "tMs": 15318288,
+    "kind": "steering",
+    "expectedTotalG": 2.4758902920309263,
+    "actualTotalG": 2.4758902920309263,
+    "issues": []
+  },
+  {
+    "index": 173,
+    "tMs": 15318367,
+    "kind": "steering",
+    "expectedTotalG": 2.4758902920309263,
+    "actualTotalG": 2.4758902920309263,
+    "issues": []
+  },
+  {
+    "index": 174,
+    "tMs": 15318402,
+    "kind": "speed",
+    "expectedTotalG": 2.82614119243865,
+    "actualTotalG": 2.82614119243865,
+    "issues": []
+  },
+  {
+    "index": 175,
+    "tMs": 15318601,
+    "kind": "speed",
+    "expectedTotalG": 1.413070596219325,
+    "actualTotalG": 1.413070596219325,
+    "issues": []
+  },
+  {
+    "index": 176,
+    "tMs": 15318805,
+    "kind": "speed",
+    "expectedTotalG": 0.7065352981096625,
+    "actualTotalG": 0.7065352981096625,
+    "issues": []
+  },
+  {
+    "index": 177,
+    "tMs": 15319000,
+    "kind": "speed",
+    "expectedTotalG": 0.4258970124167819,
+    "actualTotalG": 0.4258970124167819,
+    "issues": []
+  },
+  {
+    "index": 178,
+    "tMs": 15319101,
+    "kind": "speed",
+    "expectedTotalG": 0.21294850620839095,
+    "actualTotalG": 0.21294850620839095,
+    "issues": []
+  },
+  {
+    "index": 179,
+    "tMs": 15319203,
+    "kind": "speed",
+    "expectedTotalG": 0.10647425310419548,
+    "actualTotalG": 0.10647425310419548,
+    "issues": []
+  },
+  {
+    "index": 180,
+    "tMs": 15319373,
+    "kind": "steering",
+    "expectedTotalG": 0.10647425310419548,
+    "actualTotalG": 0.10647425310419548,
+    "issues": []
+  },
+  {
+    "index": 181,
+    "tMs": 15319403,
+    "kind": "speed",
+    "expectedTotalG": 0.05323712655209774,
+    "actualTotalG": 0.05323712655209774,
+    "issues": []
+  },
+  {
+    "index": 182,
+    "tMs": 15319602,
+    "kind": "speed",
+    "expectedTotalG": 0.02661856327604887,
+    "actualTotalG": 0.02661856327604887,
+    "issues": []
+  },
+  {
+    "index": 183,
+    "tMs": 15319706,
+    "kind": "speed",
+    "expectedTotalG": 0.14948933794168182,
+    "actualTotalG": 0.14948933794168182,
+    "issues": []
+  },
+  {
+    "index": 184,
+    "tMs": 15319903,
+    "kind": "speed",
+    "expectedTotalG": 0.07474466897084091,
+    "actualTotalG": 0.07474466897084091,
+    "issues": []
+  },
+  {
+    "index": 185,
+    "tMs": 15320100,
+    "kind": "speed",
+    "expectedTotalG": 0.037372334485420454,
+    "actualTotalG": 0.037372334485420454,
+    "issues": []
+  },
+  {
+    "index": 186,
+    "tMs": 15320203,
+    "kind": "speed",
+    "expectedTotalG": 0.018686167242710227,
+    "actualTotalG": 0.018686167242710227,
+    "issues": []
+  },
+  {
+    "index": 187,
+    "tMs": 15320383,
+    "kind": "steering",
+    "expectedTotalG": 0.018686167242710227,
+    "actualTotalG": 0.018686167242710227,
+    "issues": []
+  },
+  {
+    "index": 188,
+    "tMs": 15320403,
+    "kind": "speed",
+    "expectedTotalG": 0.009343083621355113,
+    "actualTotalG": 0.009343083621355113,
+    "issues": []
+  },
+  {
+    "index": 189,
+    "tMs": 15320514,
+    "kind": "speed",
+    "expectedTotalG": 0.1322636666357259,
+    "actualTotalG": 0.1322636666357259,
+    "issues": []
+  },
+  {
+    "index": 190,
+    "tMs": 15320703,
+    "kind": "speed",
+    "expectedTotalG": 0.06613183331786295,
+    "actualTotalG": 0.06613183331786295,
+    "issues": []
+  },
+  {
+    "index": 191,
+    "tMs": 15320901,
+    "kind": "speed",
+    "expectedTotalG": 0.03306591665893147,
+    "actualTotalG": 0.03306591665893147,
+    "issues": []
+  },
+  {
+    "index": 192,
+    "tMs": 15321102,
+    "kind": "speed",
+    "expectedTotalG": 0.016532958329465736,
+    "actualTotalG": 0.016532958329465736,
+    "issues": []
+  },
+  {
+    "index": 193,
+    "tMs": 15321201,
+    "kind": "speed",
+    "expectedTotalG": 0.008266479164732868,
+    "actualTotalG": 0.008266479164732868,
+    "issues": []
+  },
+  {
+    "index": 194,
+    "tMs": 15321301,
+    "kind": "speed",
+    "expectedTotalG": 0.004133239582366434,
+    "actualTotalG": 0.004133239582366434,
+    "issues": []
+  },
+  {
+    "index": 195,
+    "tMs": 15321302,
+    "kind": "steering",
+    "expectedTotalG": 0.004133239582366434,
+    "actualTotalG": 0.004133239582366434,
+    "issues": []
+  },
+  {
+    "index": 196,
+    "tMs": 15321387,
+    "kind": "steering",
+    "expectedTotalG": 0.004133239582366434,
+    "actualTotalG": 0.004133239582366434,
+    "issues": []
+  },
+  {
+    "index": 197,
+    "tMs": 15321502,
+    "kind": "speed",
+    "expectedTotalG": 2.5345408751787875,
+    "actualTotalG": 2.5345408751787875,
+    "issues": []
+  },
+  {
+    "index": 198,
+    "tMs": 15321701,
+    "kind": "speed",
+    "expectedTotalG": 1.2672704375893937,
+    "actualTotalG": 1.2672704375893937,
+    "issues": []
+  },
+  {
+    "index": 199,
+    "tMs": 15321817,
+    "kind": "speed",
+    "expectedTotalG": 0.3894503950430055,
+    "actualTotalG": 0.3894503950430055,
+    "issues": []
+  },
+  {
+    "index": 200,
+    "tMs": 15322011,
+    "kind": "speed",
+    "expectedTotalG": 0.19472519752150275,
+    "actualTotalG": 0.19472519752150275,
+    "issues": []
+  },
+  {
+    "index": 201,
+    "tMs": 15322201,
+    "kind": "speed",
+    "expectedTotalG": 0.09736259876075137,
+    "actualTotalG": 0.09736259876075137,
+    "issues": []
+  },
+  {
+    "index": 202,
+    "tMs": 15322301,
+    "kind": "speed",
+    "expectedTotalG": 0.09294589839560534,
+    "actualTotalG": 0.09294589839560534,
+    "issues": []
+  },
+  {
+    "index": 203,
+    "tMs": 15322390,
+    "kind": "steering",
+    "expectedTotalG": 0.09294589839560534,
+    "actualTotalG": 0.09294589839560534,
+    "issues": []
+  },
+  {
+    "index": 204,
+    "tMs": 15322402,
+    "kind": "speed",
+    "expectedTotalG": 0.18669789749085317,
+    "actualTotalG": 0.18669789749085317,
+    "issues": []
+  },
+  {
+    "index": 205,
+    "tMs": 15322601,
+    "kind": "speed",
+    "expectedTotalG": 0.09334894874542658,
+    "actualTotalG": 0.09334894874542658,
+    "issues": []
+  },
+  {
+    "index": 206,
+    "tMs": 15322748,
+    "kind": "speed",
+    "expectedTotalG": 0.04667447437271329,
+    "actualTotalG": 0.04667447437271329,
+    "issues": []
+  },
+  {
+    "index": 207,
+    "tMs": 15322847,
+    "kind": "speed",
+    "expectedTotalG": 0.3094527882489445,
+    "actualTotalG": 0.3094527882489445,
+    "issues": []
+  },
+  {
+    "index": 208,
+    "tMs": 15323000,
+    "kind": "speed",
+    "expectedTotalG": 0.15472639412447226,
+    "actualTotalG": 0.15472639412447226,
+    "issues": []
+  },
+  {
+    "index": 209,
+    "tMs": 15323163,
+    "kind": "speed",
+    "expectedTotalG": 0.009524654334071245,
+    "actualTotalG": 0.009524654334071245,
+    "issues": []
+  },
+  {
+    "index": 210,
+    "tMs": 15323301,
+    "kind": "speed",
+    "expectedTotalG": 0.0047623271670356225,
+    "actualTotalG": 0.0047623271670356225,
+    "issues": []
+  },
+  {
+    "index": 211,
+    "tMs": 15323395,
+    "kind": "steering",
+    "expectedTotalG": 0.0047623271670356225,
+    "actualTotalG": 0.0047623271670356225,
+    "issues": []
+  },
+  {
+    "index": 212,
+    "tMs": 15323403,
+    "kind": "speed",
+    "expectedTotalG": 0.4141696564627897,
+    "actualTotalG": 0.4141696564627897,
+    "issues": []
+  },
+  {
+    "index": 213,
+    "tMs": 15323517,
+    "kind": "speed",
+    "expectedTotalG": 0.16561853707319607,
+    "actualTotalG": 0.16561853707319607,
+    "issues": []
+  },
+  {
+    "index": 214,
+    "tMs": 15323700,
+    "kind": "speed",
+    "expectedTotalG": 0.005417357183602928,
+    "actualTotalG": 0.005417357183602928,
+    "issues": []
+  },
+  {
+    "index": 215,
+    "tMs": 15323800,
+    "kind": "speed",
+    "expectedTotalG": 0.002708678591801464,
+    "actualTotalG": 0.002708678591801464,
+    "issues": []
+  },
+  {
+    "index": 216,
+    "tMs": 15323901,
+    "kind": "speed",
+    "expectedTotalG": 0.5595459353006391,
+    "actualTotalG": 0.5595459353006391,
+    "issues": []
+  },
+  {
+    "index": 217,
+    "tMs": 15324028,
+    "kind": "speed",
+    "expectedTotalG": 0.05477946804097417,
+    "actualTotalG": 0.05477946804097417,
+    "issues": []
+  },
+  {
+    "index": 218,
+    "tMs": 15324203,
+    "kind": "speed",
+    "expectedTotalG": 0.027389734020487087,
+    "actualTotalG": 0.027389734020487087,
+    "issues": []
+  },
+  {
+    "index": 219,
+    "tMs": 15324380,
+    "kind": "speed",
+    "expectedTotalG": 0.38638196286540905,
+    "actualTotalG": 0.38638196286540905,
+    "issues": []
+  },
+  {
+    "index": 220,
+    "tMs": 15324398,
+    "kind": "steering",
+    "expectedTotalG": 0.38638196286540905,
+    "actualTotalG": 0.38638196286540905,
+    "issues": []
+  },
+  {
+    "index": 221,
+    "tMs": 15324402,
+    "kind": "steering",
+    "expectedTotalG": 0.38638196286540905,
+    "actualTotalG": 0.38638196286540905,
+    "issues": []
+  },
+  {
+    "index": 222,
+    "tMs": 15324483,
+    "kind": "speed",
+    "expectedTotalG": 0.35681778965779515,
+    "actualTotalG": 0.35681778965779515,
+    "issues": []
+  },
+  {
+    "index": 223,
+    "tMs": 15324600,
+    "kind": "speed",
+    "expectedTotalG": 0.17840889482889757,
+    "actualTotalG": 0.17840889482889757,
+    "issues": []
+  },
+  {
+    "index": 224,
+    "tMs": 15324702,
+    "kind": "speed",
+    "expectedTotalG": 0.08920444741444879,
+    "actualTotalG": 0.08920444741444879,
+    "issues": []
+  },
+  {
+    "index": 225,
+    "tMs": 15324892,
+    "kind": "speed",
+    "expectedTotalG": 0.40264181465828475,
+    "actualTotalG": 0.40264181465828475,
+    "issues": []
+  },
+  {
+    "index": 226,
+    "tMs": 15325001,
+    "kind": "speed",
+    "expectedTotalG": 0.448345360560028,
+    "actualTotalG": 0.448345360560028,
+    "issues": []
+  },
+  {
+    "index": 227,
+    "tMs": 15325201,
+    "kind": "speed",
+    "expectedTotalG": 0.224172680280014,
+    "actualTotalG": 0.224172680280014,
+    "issues": []
+  },
+  {
+    "index": 228,
+    "tMs": 15325301,
+    "kind": "speed",
+    "expectedTotalG": 0.112086340140007,
+    "actualTotalG": 0.112086340140007,
+    "issues": []
+  },
+  {
+    "index": 229,
+    "tMs": 15325404,
+    "kind": "speed",
+    "expectedTotalG": 0.0560431700700035,
+    "actualTotalG": 0.0560431700700035,
+    "issues": []
+  },
+  {
+    "index": 230,
+    "tMs": 15325405,
+    "kind": "steering",
+    "expectedTotalG": 0.0560431700700035,
+    "actualTotalG": 0.0560431700700035,
+    "issues": []
+  },
+  {
+    "index": 231,
+    "tMs": 15325612,
+    "kind": "speed",
+    "expectedTotalG": 0.04006841389575836,
+    "actualTotalG": 0.04006841389575836,
+    "issues": []
+  },
+  {
+    "index": 232,
+    "tMs": 15325801,
+    "kind": "speed",
+    "expectedTotalG": 0.02003420694787918,
+    "actualTotalG": 0.02003420694787918,
+    "issues": []
+  },
+  {
+    "index": 233,
+    "tMs": 15325901,
+    "kind": "speed",
+    "expectedTotalG": 0.15164430124992062,
+    "actualTotalG": 0.15164430124992062,
+    "issues": []
+  },
+  {
+    "index": 234,
+    "tMs": 15326109,
+    "kind": "speed",
+    "expectedTotalG": 0.5524523769088298,
+    "actualTotalG": 0.5524523769088298,
+    "issues": []
+  },
+  {
+    "index": 235,
+    "tMs": 15326233,
+    "kind": "speed",
+    "expectedTotalG": 0.5232825782153016,
+    "actualTotalG": 0.5232825782153016,
+    "issues": []
+  },
+  {
+    "index": 236,
+    "tMs": 15326382,
+    "kind": "speed",
+    "expectedTotalG": 0.16658947851974407,
+    "actualTotalG": 0.16658947851974407,
+    "issues": []
+  },
+  {
+    "index": 237,
+    "tMs": 15326412,
+    "kind": "steering",
+    "expectedTotalG": 0.16658947851974407,
+    "actualTotalG": 0.16658947851974407,
+    "issues": []
+  },
+  {
+    "index": 238,
+    "tMs": 15326501,
+    "kind": "speed",
+    "expectedTotalG": 0.8688212846446904,
+    "actualTotalG": 0.8688212846446904,
+    "issues": []
+  },
+  {
+    "index": 239,
+    "tMs": 15326601,
+    "kind": "speed",
+    "expectedTotalG": 0.4344106423223452,
+    "actualTotalG": 0.4344106423223452,
+    "issues": []
+  },
+  {
+    "index": 240,
+    "tMs": 15326705,
+    "kind": "speed",
+    "expectedTotalG": 0.8722351292680864,
+    "actualTotalG": 0.8722351292680864,
+    "issues": []
+  },
+  {
+    "index": 241,
+    "tMs": 15326880,
+    "kind": "speed",
+    "expectedTotalG": 0.3551875984081737,
+    "actualTotalG": 0.3551875984081737,
+    "issues": []
+  },
+  {
+    "index": 242,
+    "tMs": 15327000,
+    "kind": "speed",
+    "expectedTotalG": 0.8846104880148841,
+    "actualTotalG": 0.8846104880148841,
+    "issues": []
+  },
+  {
+    "index": 243,
+    "tMs": 15327200,
+    "kind": "speed",
+    "expectedTotalG": 0.19501732832394053,
+    "actualTotalG": 0.19501732832394053,
+    "issues": []
+  },
+  {
+    "index": 244,
+    "tMs": 15327302,
+    "kind": "speed",
+    "expectedTotalG": 0.09750866416197027,
+    "actualTotalG": 0.09750866416197027,
+    "issues": []
+  },
+  {
+    "index": 245,
+    "tMs": 15327402,
+    "kind": "speed",
+    "expectedTotalG": 0.09287286569499589,
+    "actualTotalG": 0.09287286569499589,
+    "issues": []
+  },
+  {
+    "index": 246,
+    "tMs": 15327410,
+    "kind": "steering",
+    "expectedTotalG": 0.09287286569499589,
+    "actualTotalG": 0.09287286569499589,
+    "issues": []
+  },
+  {
+    "index": 247,
+    "tMs": 15327418,
+    "kind": "steering",
+    "expectedTotalG": 0.09287286569499589,
+    "actualTotalG": 0.09287286569499589,
+    "issues": []
+  },
+  {
+    "index": 248,
+    "tMs": 15327600,
+    "kind": "speed",
+    "expectedTotalG": 0.7617255560790086,
+    "actualTotalG": 0.7617255560790086,
+    "issues": []
+  },
+  {
+    "index": 249,
+    "tMs": 15327700,
+    "kind": "speed",
+    "expectedTotalG": 1.035409685958887,
+    "actualTotalG": 1.035409685958887,
+    "issues": []
+  },
+  {
+    "index": 250,
+    "tMs": 15327801,
+    "kind": "speed",
+    "expectedTotalG": 0.5177048429794435,
+    "actualTotalG": 0.5177048429794435,
+    "issues": []
+  },
+  {
+    "index": 251,
+    "tMs": 15327904,
+    "kind": "speed",
+    "expectedTotalG": 0.12135028772663338,
+    "actualTotalG": 0.12135028772663338,
+    "issues": []
+  },
+  {
+    "index": 252,
+    "tMs": 15328003,
+    "kind": "speed",
+    "expectedTotalG": 1.5129610009185193,
+    "actualTotalG": 1.5129610009185193,
+    "issues": []
+  },
+  {
+    "index": 253,
+    "tMs": 15328182,
+    "kind": "speed",
+    "expectedTotalG": 0.11385457402901854,
+    "actualTotalG": 0.11385457402901854,
+    "issues": []
+  },
+  {
+    "index": 254,
+    "tMs": 15328303,
+    "kind": "speed",
+    "expectedTotalG": 0.05692728701450927,
+    "actualTotalG": 0.05692728701450927,
+    "issues": []
+  },
+  {
+    "index": 255,
+    "tMs": 15328422,
+    "kind": "steering",
+    "expectedTotalG": 0.05692728701450927,
+    "actualTotalG": 0.05692728701450927,
+    "issues": []
+  },
+  {
+    "index": 256,
+    "tMs": 15328486,
+    "kind": "speed",
+    "expectedTotalG": 0.9776316026378957,
+    "actualTotalG": 0.9776316026378957,
+    "issues": []
+  },
+  {
+    "index": 257,
+    "tMs": 15328600,
+    "kind": "speed",
+    "expectedTotalG": 0.48881580131894786,
+    "actualTotalG": 0.48881580131894786,
+    "issues": []
+  },
+  {
+    "index": 258,
+    "tMs": 15328709,
+    "kind": "speed",
+    "expectedTotalG": 1.3147912761016673,
+    "actualTotalG": 1.3147912761016673,
+    "issues": []
+  },
+  {
+    "index": 259,
+    "tMs": 15328888,
+    "kind": "speed",
+    "expectedTotalG": 0.5782742985111795,
+    "actualTotalG": 0.5782742985111795,
+    "issues": []
+  },
+  {
+    "index": 260,
+    "tMs": 15329002,
+    "kind": "speed",
+    "expectedTotalG": 0.28913714925558975,
+    "actualTotalG": 0.28913714925558975,
+    "issues": []
+  },
+  {
+    "index": 261,
+    "tMs": 15329207,
+    "kind": "speed",
+    "expectedTotalG": 0.7535555336674591,
+    "actualTotalG": 0.7535555336674591,
+    "issues": []
+  },
+  {
+    "index": 262,
+    "tMs": 15329406,
+    "kind": "speed",
+    "expectedTotalG": 0.5484254603045972,
+    "actualTotalG": 0.5484254603045972,
+    "issues": []
+  },
+  {
+    "index": 263,
+    "tMs": 15329427,
+    "kind": "steering",
+    "expectedTotalG": 0.5484254603045972,
+    "actualTotalG": 0.5484254603045972,
+    "issues": []
+  },
+  {
+    "index": 264,
+    "tMs": 15329526,
+    "kind": "speed",
+    "expectedTotalG": 1.4961280524450997,
+    "actualTotalG": 1.4961280524450997,
+    "issues": []
+  },
+  {
+    "index": 265,
+    "tMs": 15329701,
+    "kind": "speed",
+    "expectedTotalG": 0.7480640262225499,
+    "actualTotalG": 0.7480640262225499,
+    "issues": []
+  },
+  {
+    "index": 266,
+    "tMs": 15329903,
+    "kind": "speed",
+    "expectedTotalG": 0.6075429860083321,
+    "actualTotalG": 0.6075429860083321,
+    "issues": []
+  },
+  {
+    "index": 267,
+    "tMs": 15330043,
+    "kind": "speed",
+    "expectedTotalG": 1.314825660805272,
+    "actualTotalG": 1.314825660805272,
+    "issues": []
+  },
+  {
+    "index": 268,
+    "tMs": 15330201,
+    "kind": "speed",
+    "expectedTotalG": 0.657412830402636,
+    "actualTotalG": 0.657412830402636,
+    "issues": []
+  },
+  {
+    "index": 269,
+    "tMs": 15330400,
+    "kind": "speed",
+    "expectedTotalG": 0.7388357041741755,
+    "actualTotalG": 0.7388357041741755,
+    "issues": []
+  },
+  {
+    "index": 270,
+    "tMs": 15330432,
+    "kind": "steering",
+    "expectedTotalG": 0.7388357041741755,
+    "actualTotalG": 0.7388357041741755,
+    "issues": []
+  },
+  {
+    "index": 271,
+    "tMs": 15330504,
+    "kind": "steering",
+    "expectedTotalG": 0.7388357041741755,
+    "actualTotalG": 0.7388357041741755,
+    "issues": []
+  },
+  {
+    "index": 272,
+    "tMs": 15330504,
+    "kind": "speed",
+    "expectedTotalG": 0.3694178520870878,
+    "actualTotalG": 0.3694178520870878,
+    "issues": []
+  },
+  {
+    "index": 273,
+    "tMs": 15330701,
+    "kind": "speed",
+    "expectedTotalG": 1.0374552032299789,
+    "actualTotalG": 1.0374552032299789,
+    "issues": []
+  },
+  {
+    "index": 274,
+    "tMs": 15330801,
+    "kind": "speed",
+    "expectedTotalG": 0.5187276016149894,
+    "actualTotalG": 0.5187276016149894,
+    "issues": []
+  },
+  {
+    "index": 275,
+    "tMs": 15330901,
+    "kind": "speed",
+    "expectedTotalG": 2.006672336085364,
+    "actualTotalG": 2.006672336085364,
+    "issues": []
+  },
+  {
+    "index": 276,
+    "tMs": 15331074,
+    "kind": "speed",
+    "expectedTotalG": 0.30651130993006864,
+    "actualTotalG": 0.30651130993006864,
+    "issues": []
+  },
+  {
+    "index": 277,
+    "tMs": 15331203,
+    "kind": "speed",
+    "expectedTotalG": 1.4935729800092894,
+    "actualTotalG": 1.4935729800092894,
+    "issues": []
+  },
+  {
+    "index": 278,
+    "tMs": 15331387,
+    "kind": "speed",
+    "expectedTotalG": 0.407783585602354,
+    "actualTotalG": 0.407783585602354,
+    "issues": []
+  },
+  {
+    "index": 279,
+    "tMs": 15331445,
+    "kind": "steering",
+    "expectedTotalG": 0.407783585602354,
+    "actualTotalG": 0.407783585602354,
+    "issues": []
+  },
+  {
+    "index": 280,
+    "tMs": 15331617,
+    "kind": "speed",
+    "expectedTotalG": 0.7197642676844219,
+    "actualTotalG": 0.7197642676844219,
+    "issues": []
+  },
+  {
+    "index": 281,
+    "tMs": 15331638,
+    "kind": "speed",
+    "expectedTotalG": 0.7197642676844219,
+    "actualTotalG": 0.7197642676844219,
+    "issues": []
+  },
+  {
+    "index": 282,
+    "tMs": 15331718,
+    "kind": "speed",
+    "expectedTotalG": 0.21965706519307598,
+    "actualTotalG": 0.21965706519307598,
+    "issues": []
+  },
+  {
+    "index": 283,
+    "tMs": 15331881,
+    "kind": "speed",
+    "expectedTotalG": 0.15083517074532313,
+    "actualTotalG": 0.15083517074532313,
+    "issues": []
+  },
+  {
+    "index": 284,
+    "tMs": 15332000,
+    "kind": "speed",
+    "expectedTotalG": 0.07541758537266156,
+    "actualTotalG": 0.07541758537266156,
+    "issues": []
+  },
+  {
+    "index": 285,
+    "tMs": 15332101,
+    "kind": "speed",
+    "expectedTotalG": 0.45838375792156677,
+    "actualTotalG": 0.45838375792156677,
+    "issues": []
+  },
+  {
+    "index": 286,
+    "tMs": 15332218,
+    "kind": "speed",
+    "expectedTotalG": 0.5923386957705363,
+    "actualTotalG": 0.5923386957705363,
+    "issues": []
+  },
+  {
+    "index": 287,
+    "tMs": 15332394,
+    "kind": "speed",
+    "expectedTotalG": 0.6180494809666401,
+    "actualTotalG": 0.6180494809666401,
+    "issues": []
+  },
+  {
+    "index": 288,
+    "tMs": 15332473,
+    "kind": "steering",
+    "expectedTotalG": 0.6180494809666401,
+    "actualTotalG": 0.6180494809666401,
+    "issues": []
+  },
+  {
+    "index": 289,
+    "tMs": 15332501,
+    "kind": "speed",
+    "expectedTotalG": 1.2793182893202515,
+    "actualTotalG": 1.2793182893202515,
+    "issues": []
+  },
+  {
+    "index": 290,
+    "tMs": 15332613,
+    "kind": "speed",
+    "expectedTotalG": 1.0042286235948967,
+    "actualTotalG": 1.0042286235948967,
+    "issues": []
+  },
+  {
+    "index": 291,
+    "tMs": 15332729,
+    "kind": "speed",
+    "expectedTotalG": 0.3525329381082634,
+    "actualTotalG": 0.3525329381082634,
+    "issues": []
+  },
+  {
+    "index": 292,
+    "tMs": 15332900,
+    "kind": "speed",
+    "expectedTotalG": 0.09344351083436349,
+    "actualTotalG": 0.09344351083436349,
+    "issues": []
+  },
+  {
+    "index": 293,
+    "tMs": 15333001,
+    "kind": "speed",
+    "expectedTotalG": 0.3739532699960965,
+    "actualTotalG": 0.3739532699960965,
+    "issues": []
+  },
+  {
+    "index": 294,
+    "tMs": 15333105,
+    "kind": "speed",
+    "expectedTotalG": 0.18697663499804826,
+    "actualTotalG": 0.18697663499804826,
+    "issues": []
+  },
+  {
+    "index": 295,
+    "tMs": 15333302,
+    "kind": "speed",
+    "expectedTotalG": 0.3091643457565932,
+    "actualTotalG": 0.3091643457565932,
+    "issues": []
+  },
+  {
+    "index": 296,
+    "tMs": 15333403,
+    "kind": "speed",
+    "expectedTotalG": 0.1545821728782966,
+    "actualTotalG": 0.1545821728782966,
+    "issues": []
+  },
+  {
+    "index": 297,
+    "tMs": 15333482,
+    "kind": "steering",
+    "expectedTotalG": 0.1545821728782966,
+    "actualTotalG": 0.1545821728782966,
+    "issues": []
+  },
+  {
+    "index": 298,
+    "tMs": 15333601,
+    "kind": "speed",
+    "expectedTotalG": 0.0772910864391483,
+    "actualTotalG": 0.0772910864391483,
+    "issues": []
+  },
+  {
+    "index": 299,
+    "tMs": 15333601,
+    "kind": "steering",
+    "expectedTotalG": 0.0772910864391483,
+    "actualTotalG": 0.0772910864391483,
+    "issues": []
+  },
+  {
+    "index": 300,
+    "tMs": 15333704,
+    "kind": "speed",
+    "expectedTotalG": 0.03864554321957415,
+    "actualTotalG": 0.03864554321957415,
+    "issues": []
+  },
+  {
+    "index": 301,
+    "tMs": 15333900,
+    "kind": "speed",
+    "expectedTotalG": 0.019322771609787074,
+    "actualTotalG": 0.019322771609787074,
+    "issues": []
+  },
+  {
+    "index": 302,
+    "tMs": 15334000,
+    "kind": "speed",
+    "expectedTotalG": 0.009661385804893537,
+    "actualTotalG": 0.009661385804893537,
+    "issues": []
+  },
+  {
+    "index": 303,
+    "tMs": 15334102,
+    "kind": "speed",
+    "expectedTotalG": 0.0048306929024467685,
+    "actualTotalG": 0.0048306929024467685,
+    "issues": []
+  },
+  {
+    "index": 304,
+    "tMs": 15334302,
+    "kind": "speed",
+    "expectedTotalG": 0.0024153464512233843,
+    "actualTotalG": 0.0024153464512233843,
+    "issues": []
+  },
+  {
+    "index": 305,
+    "tMs": 15334404,
+    "kind": "speed",
+    "expectedTotalG": 0.0012076732256116921,
+    "actualTotalG": 0.0012076732256116921,
+    "issues": []
+  },
+  {
+    "index": 306,
+    "tMs": 15334488,
+    "kind": "steering",
+    "expectedTotalG": 0.0012076732256116921,
+    "actualTotalG": 0.0012076732256116921,
+    "issues": []
+  },
+  {
+    "index": 307,
+    "tMs": 15334608,
+    "kind": "speed",
+    "expectedTotalG": 0.0006038366128058461,
+    "actualTotalG": 0.0006038366128058461,
+    "issues": []
+  },
+  {
+    "index": 308,
+    "tMs": 15334803,
+    "kind": "speed",
+    "expectedTotalG": 0.00030191830640292303,
+    "actualTotalG": 0.00030191830640292303,
+    "issues": []
+  },
+  {
+    "index": 309,
+    "tMs": 15335002,
+    "kind": "speed",
+    "expectedTotalG": 0.00015095915320146152,
+    "actualTotalG": 0.00015095915320146152,
+    "issues": []
+  },
+  {
+    "index": 310,
+    "tMs": 15335201,
+    "kind": "speed",
+    "expectedTotalG": 7.547957660073076e-05,
+    "actualTotalG": 7.547957660073076e-05,
+    "issues": []
+  },
+  {
+    "index": 311,
+    "tMs": 15335303,
+    "kind": "speed",
+    "expectedTotalG": 3.773978830036538e-05,
+    "actualTotalG": 3.773978830036538e-05,
+    "issues": []
+  },
+  {
+    "index": 312,
+    "tMs": 15335497,
+    "kind": "steering",
+    "expectedTotalG": 3.773978830036538e-05,
+    "actualTotalG": 3.773978830036538e-05,
+    "issues": []
+  },
+  {
+    "index": 313,
+    "tMs": 15335501,
+    "kind": "speed",
+    "expectedTotalG": 1.886989415018269e-05,
+    "actualTotalG": 1.886989415018269e-05,
+    "issues": []
+  },
+  {
+    "index": 314,
+    "tMs": 15335601,
+    "kind": "speed",
+    "expectedTotalG": 9.434947075091345e-06,
+    "actualTotalG": 9.434947075091345e-06,
+    "issues": []
+  },
+  {
+    "index": 315,
+    "tMs": 15335800,
+    "kind": "speed",
+    "expectedTotalG": 4.717473537545672e-06,
+    "actualTotalG": 4.717473537545672e-06,
+    "issues": []
+  },
+  {
+    "index": 316,
+    "tMs": 15335903,
+    "kind": "speed",
+    "expectedTotalG": 2.358736768772836e-06,
+    "actualTotalG": 2.358736768772836e-06,
+    "issues": []
+  },
+  {
+    "index": 317,
+    "tMs": 15336005,
+    "kind": "speed",
+    "expectedTotalG": 1.179368384386418e-06,
+    "actualTotalG": 1.179368384386418e-06,
+    "issues": []
+  },
+  {
+    "index": 318,
+    "tMs": 15336102,
+    "kind": "speed",
+    "expectedTotalG": 5.89684192193209e-07,
+    "actualTotalG": 5.89684192193209e-07,
+    "issues": []
+  },
+  {
+    "index": 319,
+    "tMs": 15336302,
+    "kind": "speed",
+    "expectedTotalG": 2.948420960966045e-07,
+    "actualTotalG": 2.948420960966045e-07,
+    "issues": []
+  },
+  {
+    "index": 320,
+    "tMs": 15336401,
+    "kind": "speed",
+    "expectedTotalG": 1.4742104804830226e-07,
+    "actualTotalG": 1.4742104804830226e-07,
+    "issues": []
+  },
+  {
+    "index": 321,
+    "tMs": 15336503,
+    "kind": "speed",
+    "expectedTotalG": 7.371052402415113e-08,
+    "actualTotalG": 7.371052402415113e-08,
+    "issues": []
+  },
+  {
+    "index": 322,
+    "tMs": 15336503,
+    "kind": "steering",
+    "expectedTotalG": 7.371052402415113e-08,
+    "actualTotalG": 7.371052402415113e-08,
+    "issues": []
+  },
+  {
+    "index": 323,
+    "tMs": 15336702,
+    "kind": "speed",
+    "expectedTotalG": 3.6855262012075565e-08,
+    "actualTotalG": 3.6855262012075565e-08,
+    "issues": []
+  },
+  {
+    "index": 324,
+    "tMs": 15336703,
+    "kind": "steering",
+    "expectedTotalG": 3.6855262012075565e-08,
+    "actualTotalG": 3.6855262012075565e-08,
+    "issues": []
+  },
+  {
+    "index": 325,
+    "tMs": 15336900,
+    "kind": "speed",
+    "expectedTotalG": 1.8427631006037783e-08,
+    "actualTotalG": 1.8427631006037783e-08,
+    "issues": []
+  }
+]

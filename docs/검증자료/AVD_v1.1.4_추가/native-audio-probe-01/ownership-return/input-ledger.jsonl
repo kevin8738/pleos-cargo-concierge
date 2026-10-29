@@ -1,0 +1,5 @@
+{"event": "command_start", "hostUnixNs": 1793296837535621000, "hostMonotonicNs": 46329897888041, "command": "settings", "value": "on", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296837566307000, "hostMonotonicNs": 46329928572333, "command": "settings", "value": "on", "phase": "setup", "step": null, "startHostMonotonicNs": 46329897888041}
+{"event": "command_start", "hostUnixNs": 1793296839527558000, "hostMonotonicNs": 46331889779750, "command": "settings", "value": "off", "phase": "setup", "step": null}
+{"event": "command_done", "hostUnixNs": 1793296839555545000, "hostMonotonicNs": 46331917765583, "command": "settings", "value": "off", "phase": "setup", "step": null, "startHostMonotonicNs": 46331889779750}
+{"event": "runtime_snapshot", "hostUnixNs": 1793296841847497000, "hostMonotonicNs": 46334209666583, "label": "runtime-final", "pid": "22692", "isFrozen": false, "servicePresent": false, "foregroundService": false, "serviceTypeMask": null, "foregroundIdCorrect": false, "activeNotificationCount": 0}

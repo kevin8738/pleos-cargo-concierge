@@ -1,0 +1,5 @@
+{
+  "stage": "saved snapshot filename lookup",
+  "error": "runtime-final.json absent; helper saves runtime-final-snapshot.json",
+  "deviceMutationAfterError": false
+}

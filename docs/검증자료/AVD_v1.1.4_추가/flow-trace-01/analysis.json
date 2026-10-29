@@ -1,0 +1,134 @@
+{
+  "arithmeticVerified": true,
+  "issues": [],
+  "guardRows": 326,
+  "acceptedPairs": 270,
+  "sessions": [
+    15297239
+  ],
+  "maximum": {
+    "traceIndex": 128,
+    "row": {
+      "schema": 1,
+      "tMs": 15312872,
+      "event": "motion",
+      "raw": {
+        "kind": "speed",
+        "mps": 0.2777777910232544,
+        "sourceId": 1,
+        "provenance": "SYNTHETIC"
+      },
+      "uiMode": "DRIVING",
+      "previousGuarding": true,
+      "model": {
+        "wheelbaseM": 2.9000000953674316,
+        "steeringRatio": 15,
+        "smoothing": 0.5,
+        "gravityMps2": 9.80665,
+        "maxBrakeDecelMps2": 8
+      },
+      "snapshot": {
+        "gear": "DRIVE",
+        "speedMps": 0.2777777910232544,
+        "steeringDeg": 0,
+        "brakePressed": false,
+        "brakePercent": 0,
+        "speedProvenance": "SYNTHETIC",
+        "steeringProvenance": "SYNTHETIC",
+        "brakeProvenance": "SYNTHETIC",
+        "parkedStill": false
+      },
+      "state": "GUARDING",
+      "presetKind": "CAKE",
+      "limitG": 0.15,
+      "motionStatus": "FRESH",
+      "badge": "OVER",
+      "trip": {
+        "startedMs": 15297239,
+        "maxG": 4.437252817516956,
+        "gSamples": 75,
+        "freshLongitudinalSamples": 63,
+        "drivingSpeechCount": 2,
+        "drivingChimeCount": 0,
+        "coachingCount": 2,
+        "warnCount": 0,
+        "provenance": [
+          "SYNTHETIC"
+        ],
+        "quality": [
+          "HIGH_G_UNASSESSED",
+          "INITIAL_BASELINE"
+        ]
+      },
+      "estimate": {
+        "lateralG": 0,
+        "longitudinalG": -4.437252817516956,
+        "totalG": 4.437252817516956,
+        "speedMps": 0.2777777910232544,
+        "lateralAvailable": true,
+        "longitudinalAvailable": true,
+        "longitudinalFresh": true,
+        "hasData": true,
+        "quality": []
+      }
+    },
+    "independentExpectedTotalG": 4.437252817516956,
+    "arithmeticVerified": true
+  },
+  "maximumLongitudinalPair": {
+    "from": {
+      "tMs": 15312771,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 126
+    },
+    "to": {
+      "tMs": 15312872,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 128
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -9.166666865348816,
+    "rawAccelerationMps2": -90.75907787474074,
+    "previousEmaMps2": 3.7299071889354223,
+    "emaMps2": -43.514585342902656,
+    "expectedLongitudinalG": -4.437252817516956,
+    "formula": "(.5 * (v1_mps-v0_mps)/((t1_ms-t0_ms)/1000) + .5 * priorEMA) / 9.80665"
+  },
+  "report": {
+    "maxG": 4.437252817516956,
+    "durationMs": 32963,
+    "gSamples": 237,
+    "freshLongitudinalSamples": 199,
+    "drivingSpeechCount": 3,
+    "drivingChimeCount": 0,
+    "coachingCount": 3,
+    "warnCount": 0,
+    "audioSuppressionCounts": {
+      "COALESCED": 1,
+      "COOLDOWN": 1,
+      "EMERGENCY": 14,
+      "VOICE_LIMIT": 4,
+      "SIGNAL_UNAVAILABLE": 13
+    },
+    "provenance": [
+      "SYNTHETIC"
+    ],
+    "quality": [
+      "HIGH_G_UNASSESSED",
+      "INITIAL_BASELINE"
+    ],
+    "hasSyntheticInput": true,
+    "canCompare": false
+  },
+  "highGObserved": true,
+  "historical449CauseEstablished": false,
+  "physicalGAccuracyValidated": false,
+  "limits": [
+    "New Console synthetic replay only; historical run omitted raw MotionTrace and cannot be reconstructed.",
+    "Setters are requests, not accepted speed samples. Numeric dt uses actual MotionTrace tMs.",
+    "Steering freshness uses traced availability; unlogged resets are unresolved if arithmetic disagrees.",
+    "The independent pair calculation does not validate vehicle calibration, cargo forces or audible output."
+  ]
+}

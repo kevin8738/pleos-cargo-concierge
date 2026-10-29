@@ -1,0 +1,229 @@
+{
+  "verdict": "OFF_AND_CONTINUED_CONTRAST_VERIFIED",
+  "errors": [],
+  "checks": [
+    {
+      "name": "saved artifact hashes",
+      "passed": true,
+      "detail": 48
+    },
+    {
+      "name": "APK identity",
+      "passed": true
+    },
+    {
+      "name": "same PID",
+      "passed": true
+    },
+    {
+      "name": "core source hashes",
+      "passed": true
+    },
+    {
+      "name": "executed harness matches reviewed freeze",
+      "passed": true
+    },
+    {
+      "name": "clock offset arithmetic",
+      "passed": true
+    },
+    {
+      "name": "clock uncertainty arithmetic",
+      "passed": true
+    },
+    {
+      "name": "raw trace equality",
+      "passed": true
+    },
+    {
+      "name": "one guard session and one arrival",
+      "passed": true
+    },
+    {
+      "name": "independent motion math and trip counters",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "guardRows": 513,
+        "speedRows": 171,
+        "maxG": 0.12354462329191915,
+        "motionEvents": 417,
+        "fresh": 139
+      }
+    },
+    {
+      "name": "same stream arrival report",
+      "passed": true
+    },
+    {
+      "name": "synthetic noncomparability",
+      "passed": true
+    },
+    {
+      "name": "all retained input speed requests",
+      "passed": true,
+      "detail": 171
+    },
+    {
+      "name": "execution completed before cleanup",
+      "passed": true
+    },
+    {
+      "name": "capture successful/hash",
+      "passed": true
+    },
+    {
+      "name": "WAV format and bytes",
+      "passed": true
+    },
+    {
+      "name": "PCM indexing",
+      "passed": true
+    },
+    {
+      "name": "packet time monotonic",
+      "passed": true
+    },
+    {
+      "name": "packet lag recompute",
+      "passed": true
+    },
+    {
+      "name": "each audio window independently recomputed/nonempty",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "all windows inside capture",
+      "passed": true
+    },
+    {
+      "name": "admission clock 14940833",
+      "passed": true
+    },
+    {
+      "name": "admission clock 14950833",
+      "passed": true
+    },
+    {
+      "name": "admission clock 14958875",
+      "passed": true
+    },
+    {
+      "name": "OFF driving windows have no TTS callbacks",
+      "passed": true,
+      "detail": [
+        {
+          "tMs": 14950833,
+          "order": [],
+          "deviceEpochSeconds": []
+        },
+        {
+          "tMs": 14958875,
+          "order": [],
+          "deviceEpochSeconds": []
+        }
+      ]
+    },
+    {
+      "name": "same trip audio session",
+      "passed": true
+    },
+    {
+      "name": "observed admission spacing/counts",
+      "passed": true
+    },
+    {
+      "name": "three settings restored",
+      "passed": true
+    },
+    {
+      "name": "saved original vehicle fields restored",
+      "passed": true
+    },
+    {
+      "name": "final Idle/P0 trace",
+      "passed": true
+    },
+    {
+      "name": "service and notification absent",
+      "passed": true
+    },
+    {
+      "name": "OFF result and cleanup true",
+      "passed": true
+    },
+    {
+      "name": "OFF actual settings readback",
+      "passed": true
+    },
+    {
+      "name": "comparison input hashes",
+      "passed": true
+    },
+    {
+      "name": "admission sequence same",
+      "passed": true
+    },
+    {
+      "name": "contrast chime 14330256",
+      "passed": true
+    },
+    {
+      "name": "contrast speech 14340236",
+      "passed": true
+    },
+    {
+      "name": "contrast speech 14348267",
+      "passed": true
+    },
+    {
+      "name": "continued comparison failure/recovery scope retained",
+      "passed": true
+    }
+  ],
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "counts": {
+    "checks": 39,
+    "artifactEntries": 48,
+    "traceRows": 520,
+    "guardRows": 513,
+    "receivedSpeedRows": 171,
+    "streamAudioMetadataEntries": 3437
+  },
+  "contrasts": [
+    {
+      "kind": "chime",
+      "onPeak": 152,
+      "offPeak": 2,
+      "onRms": 12.794093744220703,
+      "offRms": 1.493771658440695,
+      "contrastObserved": true
+    },
+    {
+      "kind": "speech",
+      "onPeak": 1345,
+      "offPeak": 2,
+      "onRms": 195.85871878285866,
+      "offRms": 1.493988174763609,
+      "contrastObserved": true
+    },
+    {
+      "kind": "speech",
+      "onPeak": 1345,
+      "offPeak": 2,
+      "onRms": 196.39517575777424,
+      "offRms": 1.4935738523436475,
+      "contrastObserved": true
+    }
+  ],
+  "same_pid_on_off": true,
+  "maximum_g": 0.12354462329191915,
+  "field_scope": "Different synthetic ON and OFF guard sessions, same APK/process. ON original cleanup failed, exact property restored separately; OFF clean pass. This is not one successful two-case harness.",
+  "limits": [
+    "3386 ON and OFF count are streamAudio metadata response entries, not newly created .s16le files or v22 5090 post-split pieces.",
+    "Operational RMS/peak contrast and zero OFF callbacks; no intelligibility, native audio contention, physical speaker or protection efficacy.",
+    "Arrival report belongs to each guarded session, but arrival sound is outside captured driving windows."
+  ],
+  "continued_comparison_sha256": "33fe814509f36740311e5d590f2de79032beaa9a141efdb05c59665fc504b67f"
+}

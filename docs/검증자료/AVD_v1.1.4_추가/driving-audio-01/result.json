@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "reason": "case failed; queue stopped",
+  "cases": [
+    {
+      "passed": false,
+      "issues": [
+        "property cleanup: Command '['/opt/homebrew/share/android-commandlinetools/platform-tools/adb', '-s', 'emulator-5554', 'shell', 'setprop', 'log.tag.MotionTrace', '']' returned non-zero exit status 1."
+      ],
+      "oraclePassed": false,
+      "audioObserved": true
+    }
+  ]
+}

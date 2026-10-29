@@ -1,0 +1,169 @@
+{
+  "contrastEstablished": true,
+  "issues": [],
+  "originalOnExecutionPassed": false,
+  "originalOnCleanupVerified": false,
+  "separateManualRecoveryVerified": true,
+  "offExecutionPassed": true,
+  "offCleanupVerified": true,
+  "singleSuccessfulPairedRun": false,
+  "comparisons": [
+    {
+      "kind": "chime",
+      "on": {
+        "hostEpochWindow": [
+          1793295583.6275313,
+          1793295585.6275313
+        ],
+        "packetCount": 174,
+        "receivedPcmSeconds": 1.9705833333333334,
+        "rmsS16": 12.794093744220703,
+        "peakS16": 152
+      },
+      "onPre": {
+        "hostEpochWindow": [
+          1793295580.6275313,
+          1793295583.5275314
+        ],
+        "packetCount": 250,
+        "receivedPcmSeconds": 0.234375,
+        "rmsS16": 1.4505631090488043,
+        "peakS16": 2
+      },
+      "off": {
+        "hostEpochWindow": [
+          1793296194.2167344,
+          1793296196.2167344
+        ],
+        "packetCount": 174,
+        "receivedPcmSeconds": 0.163125,
+        "rmsS16": 1.493771658440695,
+        "peakS16": 2
+      },
+      "onLifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      },
+      "offLifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      },
+      "receivedSamplesInAllWindows": true,
+      "amplitudeContrastObserved": true,
+      "lifecycleObserved": true
+    },
+    {
+      "kind": "speech",
+      "on": {
+        "hostEpochWindow": [
+          1793295593.6085312,
+          1793295601.4085312
+        ],
+        "packetCount": 645,
+        "receivedPcmSeconds": 7.651666666666666,
+        "rmsS16": 195.85871878285866,
+        "peakS16": 1345
+      },
+      "onPre": {
+        "hostEpochWindow": [
+          1793295590.6085312,
+          1793295593.5085313
+        ],
+        "packetCount": 248,
+        "receivedPcmSeconds": 0.23252083333333334,
+        "rmsS16": 1.4811783945326866,
+        "peakS16": 2
+      },
+      "off": {
+        "hostEpochWindow": [
+          1793296204.2157342,
+          1793296212.0157342
+        ],
+        "packetCount": 667,
+        "receivedPcmSeconds": 0.6253125,
+        "rmsS16": 1.493988174763609,
+        "peakS16": 2
+      },
+      "onLifecycle": {
+        "TTS_START": 1,
+        "TTS_DONE": 1,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 1
+      },
+      "offLifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      },
+      "receivedSamplesInAllWindows": true,
+      "amplitudeContrastObserved": true,
+      "lifecycleObserved": true
+    },
+    {
+      "kind": "speech",
+      "on": {
+        "hostEpochWindow": [
+          1793295601.6395311,
+          1793295609.439531
+        ],
+        "packetCount": 647,
+        "receivedPcmSeconds": 7.609854166666667,
+        "rmsS16": 196.39517575777424,
+        "peakS16": 1345
+      },
+      "onPre": {
+        "hostEpochWindow": [
+          1793295598.6395311,
+          1793295601.5395312
+        ],
+        "packetCount": 235,
+        "receivedPcmSeconds": 2.7125,
+        "rmsS16": 0.12124545694372671,
+        "peakS16": 2
+      },
+      "off": {
+        "hostEpochWindow": [
+          1793296212.2577343,
+          1793296220.0577343
+        ],
+        "packetCount": 670,
+        "receivedPcmSeconds": 0.628125,
+        "rmsS16": 1.4935738523436475,
+        "peakS16": 2
+      },
+      "onLifecycle": {
+        "TTS_START": 1,
+        "TTS_DONE": 1,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 1
+      },
+      "offLifecycle": {
+        "TTS_START": 0,
+        "TTS_DONE": 0,
+        "TTS_ERROR": 0,
+        "TTS_STOP": 0
+      },
+      "receivedSamplesInAllWindows": true,
+      "amplitudeContrastObserved": true,
+      "lifecycleObserved": true
+    }
+  ],
+  "criterion": "RMS and peak greater than 3x both own pre-window and OFF response, with received samples in every compared window; operational signal contrast only",
+  "scope": "synthetic WARN chime and OVER TTS in emulator output; sparse concatenated PCM is not continuous wall-time audio; arrival playback/intelligibility/navigation contention/physical effect unverified",
+  "evidenceSha256": {
+    "result.json": "b4ce58c55bf1cf045fd4ea387e3fb796fe2a1019be4c439821cc90d55fe5c589",
+    "both-on/result.json": "a17e7cfe40c4d5f43691e75796010e43ffb0d3dcabca29f6b807ae698b05905f",
+    "both-on/cleanup.json": "67ead33f8328f86ebb8a59e0dc3a88651fb05389584d0332e8573b51382fa91e",
+    "both-on/audio-result.json": "9911e7be3c6280f0c5c5d3c69c0e48367aaee31e08184059676891fed354f91c",
+    "both-on/recovery-01/recovery-confirmed.json": "571d1eda8297ab34f3ab7b8eb3e6c2b7b04d7f071edd75aac1602e9b731d286b",
+    "both-off/result.json": "cd4102a2de5468e07d0fb615f2cadad824afed732eced2717f2fcce004ccf701",
+    "both-off/cleanup.json": "321fd69eeab5d445e5bfdc9057061d4bc84e095677e583a7d4f394436b38ddab",
+    "both-off/audio-result.json": "d38cba5c954c62a03e71c06845c0ec150090116c8e13626e29130e8bc4816da5",
+    "off-harness-source.py": "d61677ec16dbda220ab763f651bc35f5a31f48034fe10c2e7256c8ef89552e73"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "schema": "v23-root-media-review-1",
+  "reviewer": "root",
+  "review_complete": true,
+  "pending": null,
+  "files": [
+    {
+      "path": "driving-audio-01/both-on/start.png",
+      "source_sha256": "79111246370c28b8ddbaed5503a71c8c974051daf5ab7397cbce72071edb8f37",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-on/warn100.png",
+      "source_sha256": "a9a8828472873247788dd3f806c126ff5c6a16092794a18ef4aa469d3e23b5e3",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-on/over120.png",
+      "source_sha256": "28bdcbcea08704fdd7907954b966fb379221b9912155f0912209ca39b3b7ff9e",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-on/report.png",
+      "source_sha256": "044c6dfbb4d72305d7e5bbdfaf215782f70ab0d301fdcdb6b2f6bfc72ef09c06",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-on/cleanup.png",
+      "source_sha256": "90fc5ad538621e41a1dbb39f37fdd8d7bd64321f2ac2b87de07f6a2f18197fb0",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-on/recovery-01/idle.png",
+      "source_sha256": "6747946a2dcdd9fa73b724830799c13f6add1dc50b4314f5e61385ebe6b65b62",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-off/start.png",
+      "source_sha256": "f51f11f5bb1bcb48245e84b5c0d8e2e3481e08a3a5fcdb77980a4d681ddb9e89",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-off/warn100.png",
+      "source_sha256": "bde0c73de405ce25cfa87186497413a78a3b09fd82b58544a58a8b27dcb178d1",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-off/over120.png",
+      "source_sha256": "fa2e94350ed2f8569ca62d9574835830b3aa592c26d62db40c6cd5be13b0689f",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-off/report.png",
+      "source_sha256": "f9d43c30b73d805606fb024b5c42b53e85e3b94ce5023d53bb7aecb939381039",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-off/cleanup.png",
+      "source_sha256": "3561c9fca96b78945d601b3ef2de339184c97bdadc5e1c83e272150825b28fd7",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image: controlled AVD VIP screens, no names/contact/signature/credential visible. Synthetic badges/report kept as recorded."
+    },
+    {
+      "path": "driving-audio-01/both-on/continuous-silent.mp4",
+      "source_sha256": "12aacbd2778238783a0b151ef6b98b7d6323085141d46f3804bd4977bb8424bc",
+      "privacy_reviewed": true,
+      "inspection": "Controlled VIP-only screenrecord; start/WARN/OVER/report/cleanup screenshots directly reviewed, no personal input or account UI in executed harness. Full original-timebase decode and no-audio-stream verified in media-review/on-video-audit.json. Not a claim of frame-by-frame human video viewing."
+    },
+    {
+      "path": "driving-audio-01/both-on/capture/audio.s16le.pcm",
+      "source_sha256": "152c610963025dfe58468786b13a8c7605b849b545570447891bc7ed73d1c230",
+      "privacy_reviewed": true,
+      "inspection": "Root reviewed controlled TTS payload and auxiliary automated transcription in media-review/on-audio-transcription.json: generic coffee coaching, no identifying content. Transcription is not a human listening/intelligibility test and omits/misrecognizes numeric/repeated speech; not used for accuracy/count claims. WAV and raw PCM frames are identical."
+    },
+    {
+      "path": "driving-audio-01/both-on/capture/audio.wav",
+      "source_sha256": "23d8ea24c8fc44b0603c6d8f882e93d8003c3f24b1be40388f0e60a27861adc7",
+      "privacy_reviewed": true,
+      "inspection": "Root reviewed controlled TTS payload and auxiliary automated transcription in media-review/on-audio-transcription.json: generic coffee coaching, no identifying content. Transcription is not a human listening/intelligibility test and omits/misrecognizes numeric/repeated speech; not used for accuracy/count claims. WAV and raw PCM frames are identical."
+    },
+    {
+      "path": "driving-audio-01/both-off/capture/audio.s16le.pcm",
+      "source_sha256": "6f4960a29fc65ab2e72cd14def8cdf6597eeb01bc3bef15fb50a6d45327aea77",
+      "privacy_reviewed": true,
+      "inspection": "Root inspected every decoded PCM sample: absolute peak S16=2; received low-amplitude baseline only, no meaningful speech signal. Controlled OFF session has no TTS lifecycle. WAV and PCM frames identical; no human listening claim."
+    },
+    {
+      "path": "driving-audio-01/both-off/capture/audio.wav",
+      "source_sha256": "fca4c82056bed11234f02b58edfb04ea97d20d8972a0af6e56cebfa9aa4180c8",
+      "privacy_reviewed": true,
+      "inspection": "Root inspected every decoded PCM sample: absolute peak S16=2; received low-amplitude baseline only, no meaningful speech signal. Controlled OFF session has no TTS lifecycle. WAV and PCM frames identical; no human listening claim."
+    },
+    {
+      "path": "flow-trace-01/A1-home.png",
+      "source_sha256": "9e4de6a4e76bbd93ab5c2070dd3a73a1ef4be272aa1892aee14b97bacf21f4b5",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected full AVD screenshot; cake 18/22 setting readbacks, synthetic 4.44G/unassessed report and Idle preserved. No names/contact/signature/credentials visible."
+    },
+    {
+      "path": "flow-trace-01/A2-loaded.png",
+      "source_sha256": "3dbb3c90389f7bf162e18940af4226f0a296c7e51224942a96f04401fd7315dc",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected full AVD screenshot; cake 18/22 setting readbacks, synthetic 4.44G/unassessed report and Idle preserved. No names/contact/signature/credentials visible."
+    },
+    {
+      "path": "flow-trace-01/A3-driving.png",
+      "source_sha256": "640765e7806cb7545c2eb8f76c079b8d4b4bb27cf1ec1122dcc16f25fd046b95",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected full AVD screenshot; cake 18/22 setting readbacks, synthetic 4.44G/unassessed report and Idle preserved. No names/contact/signature/credentials visible."
+    },
+    {
+      "path": "flow-trace-01/A4-arrival.png",
+      "source_sha256": "e2ff27e226a732de39a4f0ff3018bb26b86ec47301dd5680f27c181310deda57",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected full AVD screenshot; cake 18/22 setting readbacks, synthetic 4.44G/unassessed report and Idle preserved. No names/contact/signature/credentials visible."
+    },
+    {
+      "path": "flow-trace-01/cleanup.png",
+      "source_sha256": "3d1d617aa273bbb61e9c62b703cc200ab0f550a23b3c482c40bccd41ba0f0b8e",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected full AVD screenshot; cake 18/22 setting readbacks, synthetic 4.44G/unassessed report and Idle preserved. No names/contact/signature/credentials visible."
+    },
+    {
+      "path": "flow-trace-01/continuous-silent.mp4",
+      "source_sha256": "c52e324424fe6b2bfb3bd9aa0e7437dad20c028b8c4022b5a53162c84b20e6ed",
+      "privacy_reviewed": true,
+      "inspection": "Controlled Console/AVD route only; A1–A4/cleanup images directly reviewed. Full original-timebase decoding exit0/stderr0 in media-review/flow-video-audit.json, source video-audit retained with original default-mux warnings. Silent video; no account UI or personal text entered; not frame-by-frame human video viewing."
+    },
+    {
+      "path": "driving-audio-01/returned-before-driving.png",
+      "source_sha256": "f56f6c99c5c2932b875a23a2f9a6e4cbd0bdccdd1788c66da06ff099736dad34",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image. Controlled AVD route/Idle screens, generic destination and no personal names/contact/signature/credentials visible."
+    },
+    {
+      "path": "native-audio-probe-01/native-route.png",
+      "source_sha256": "500c56f45323b87fd95d1dc7cbfe5bbabf72f656aee5743de0234944c437fafa",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image. Controlled AVD route/Idle screens, generic destination and no personal names/contact/signature/credentials visible."
+    },
+    {
+      "path": "native-audio-probe-01/cleanup.png",
+      "source_sha256": "c4530f12b1bc08c3d45526cb775e4daebd1608c3d138057a7087f5ee8abd852d",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image. Controlled AVD route/Idle screens, generic destination and no personal names/contact/signature/credentials visible."
+    },
+    {
+      "path": "native-audio-probe-01/ownership-return/idle-final.png",
+      "source_sha256": "80718ecd60c1773a22872db280f585462f1ba4fa4ce2e62aba979aec599daaf0",
+      "privacy_reviewed": true,
+      "inspection": "Root directly inspected the full screenshot with view_image. Controlled AVD route/Idle screens, generic destination and no personal names/contact/signature/credentials visible."
+    },
+    {
+      "path": "native-audio-probe-01/capture/audio.wav",
+      "source_sha256": "c11dce8879f0bd59a36efd614513e6234095e6f3378f606273800ec4e5f0d8e0",
+      "privacy_reviewed": true,
+      "inspection": "Root reviewed controlled native route UI and auxiliary automated transcription in media-review/native-audio-transcription.json: generic turn instruction, no identifying content. WAV and raw PCM frames match. Automated transcription is privacy review only, not human listening, native-source attribution, route-window coverage or VIP contention verification; original false verdicts retained."
+    },
+    {
+      "path": "native-audio-probe-01/capture/audio.s16le.pcm",
+      "source_sha256": "7f9fb845bd1442df1e8338eba0a0f3e1bdd9f0f36c18f420fc7759e0208cfe8f",
+      "privacy_reviewed": true,
+      "inspection": "Root reviewed controlled native route UI and auxiliary automated transcription in media-review/native-audio-transcription.json: generic turn instruction, no identifying content. WAV and raw PCM frames match. Automated transcription is privacy review only, not human listening, native-source attribution, route-window coverage or VIP contention verification; original false verdicts retained."
+    }
+  ],
+  "source_capture_complete": true,
+  "source_freeze_basis": "Audio owner reported final-artifact manifests frozen and AVD ownership returned; independent reviews completed for all three capture groups."
+}

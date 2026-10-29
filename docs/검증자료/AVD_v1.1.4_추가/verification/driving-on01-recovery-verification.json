@@ -1,0 +1,65 @@
+{
+  "verdict": "SEPARATE_RECOVERY_CONFIRMED_ORIGINAL_FAILURE_PRESERVED",
+  "errors": [],
+  "checks": [
+    {
+      "name": "recovery original manifest",
+      "passed": true
+    },
+    {
+      "name": "original recovery parser failure preserved",
+      "passed": true
+    },
+    {
+      "name": "only parser verdict corrected",
+      "passed": true
+    },
+    {
+      "name": "saved Korean idle XML",
+      "passed": true
+    },
+    {
+      "name": "identity preserved",
+      "passed": true
+    },
+    {
+      "name": "recorded MotionTrace value restored",
+      "passed": true
+    },
+    {
+      "name": "three switches true in XML",
+      "passed": true
+    },
+    {
+      "name": "vehicle original fields",
+      "passed": true
+    },
+    {
+      "name": "Park speed zero",
+      "passed": true
+    },
+    {
+      "name": "service notification absent raw",
+      "passed": true
+    },
+    {
+      "name": "original ON result and cleanup false",
+      "passed": true
+    },
+    {
+      "name": "recovery confirmed distinct",
+      "passed": true
+    }
+  ],
+  "source_hashes": {
+    "recovery-confirmed.json": "571d1eda8297ab34f3ab7b8eb3e6c2b7b04d7f071edd75aac1602e9b731d286b",
+    "recovery.json": "a60787ca67b1ee539bc85d9cd56a7a67cd2f6f7ed1a5e96bff3221dee2afe785",
+    "idle.xml": "c35121d61aa2f58809d06b38983e54388d42a47486852d877730a0922255e6e1"
+  },
+  "scope": "12 read-only saved-record checks, no device command or original mutation. Recovery-confirmed is a new post-manifest parser correction; original 10-entry manifest and original false verdict retained.",
+  "limits": [
+    "Property restored empty value is recorded directly in recovery JSON; no separate shell-output text file is available.",
+    "These are tester restoration/readback results after the failed ON cleanup, not a successful original cleanup and not automatic app recovery.",
+    "TTS/chime/demo-curve true and original vehicle fields were re-observed; no new audio replay in this recovery."
+  ]
+}

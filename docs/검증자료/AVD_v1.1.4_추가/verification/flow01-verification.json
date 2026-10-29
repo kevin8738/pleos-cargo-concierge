@@ -1,0 +1,170 @@
+{
+  "verdict": "NEW_FLOW_PAIR_AND_REPORT_VERIFIED",
+  "errors": [],
+  "checks": [
+    {
+      "name": "original artifact hashes",
+      "passed": true,
+      "detail": 42
+    },
+    {
+      "name": "reviewed harness",
+      "passed": true
+    },
+    {
+      "name": "fixed before after APK and PID",
+      "passed": true
+    },
+    {
+      "name": "current core source hashes",
+      "passed": true
+    },
+    {
+      "name": "clock raw arithmetic",
+      "passed": true
+    },
+    {
+      "name": "saved trace matches raw log",
+      "passed": true
+    },
+    {
+      "name": "single CAKE guard and arrival",
+      "passed": true
+    },
+    {
+      "name": "all speeds source1 synthetic no motion DEMO",
+      "passed": true
+    },
+    {
+      "name": "fixed arithmetic model",
+      "passed": true
+    },
+    {
+      "name": "independent all-row arithmetic and trip counters",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "sub50msRows": [
+          1,
+          281
+        ],
+        "nonincreasingRows": [],
+        "gapRows": [],
+        "acceptedPairs": 270,
+        "motionEvents": 237,
+        "freshSamples": 199
+      }
+    },
+    {
+      "name": "every accepted pair full precision",
+      "passed": true
+    },
+    {
+      "name": "maximum row and pair independently identified",
+      "passed": true
+    },
+    {
+      "name": "report maximum and counters",
+      "passed": true
+    },
+    {
+      "name": "report non-G counters carry through",
+      "passed": true
+    },
+    {
+      "name": "high G synthetic unassessed boundary",
+      "passed": true
+    },
+    {
+      "name": "61s expiry wait recorded",
+      "passed": true
+    },
+    {
+      "name": "no motion demo ledger",
+      "passed": true
+    },
+    {
+      "name": "A1-A4 Console request sequence preserved",
+      "passed": true
+    },
+    {
+      "name": "actual cabin setting snapshots",
+      "passed": true
+    },
+    {
+      "name": "report UI limitations and rounded maximum",
+      "passed": true
+    },
+    {
+      "name": "original Console fields restored",
+      "passed": true
+    },
+    {
+      "name": "final Console P0",
+      "passed": true
+    },
+    {
+      "name": "final Idle UI",
+      "passed": true
+    },
+    {
+      "name": "three original switches restored",
+      "passed": true
+    },
+    {
+      "name": "no guard service or notification",
+      "passed": true
+    },
+    {
+      "name": "results and cleanup consistent",
+      "passed": true
+    },
+    {
+      "name": "original silent video bytes/hash",
+      "passed": true
+    }
+  ],
+  "candidate_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "counts": {
+    "checks": 27,
+    "manifestEntries": 42,
+    "traceRows": 600,
+    "guardRows": 326,
+    "source1SpeedRows": 273,
+    "acceptedPairs": 270,
+    "sub50msRows": 2,
+    "nonincreasingRows": 0,
+    "motionEvents": 237,
+    "freshSamples": 199
+  },
+  "maximum_g": 4.437252817516956,
+  "maximum_pair": {
+    "from": {
+      "tMs": 15312771,
+      "mps": 9.44444465637207,
+      "sourceId": 1,
+      "traceIndex": 126
+    },
+    "to": {
+      "tMs": 15312872,
+      "mps": 0.2777777910232544,
+      "sourceId": 1,
+      "traceIndex": 128
+    },
+    "dtSeconds": 0.101,
+    "deltaMps": -9.166666865348816,
+    "rawAccelerationMps2": -90.75907787474074,
+    "previousEmaMps2": 3.7299071889354223,
+    "emaMps2": -43.514585342902656,
+    "expectedLongitudinalG": -4.437252817516956
+  },
+  "session": 15297239,
+  "limits": [
+    "New Console synthetic CAKE replay; historical 4.49G exact pair remains unknowable from old missing raw trace.",
+    "4.4372528175G (display4.44) comes from a source1 accepted speed decrease in101ms and EMA; this is algorithm consistency, not physical G accuracy or source/setter root cause.",
+    "Setters are requests; raw accepted sequence differs and is not inferred from request sleeps.",
+    "No audio attribution/contention or physical cargo/cooling efficacy claim.",
+    "Property restoration is enforced by saved harness readback assertion and cleanup, without standalone post-property stdout artifact."
+  ],
+  "analysis_sha256": "90026e7d293a4a77a163963ee6beaa61178a2ebfada23e77b767075055ac7da8"
+}

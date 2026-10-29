@@ -1,0 +1,17 @@
+{
+  "file": "continuous-silent.mp4",
+  "sha256": "c52e324424fe6b2bfb3bd9aa0e7437dad20c028b8c4022b5a53162c84b20e6ed",
+  "decodeExitCode": 0,
+  "stderr": [],
+  "outputOptions": [
+    "-fps_mode",
+    "passthrough",
+    "-enc_time_base",
+    "demux",
+    "-f",
+    "null"
+  ],
+  "priorAuditPreserved": "video-audit.json",
+  "originalVideoModified": false,
+  "purpose": "Decode while retaining demuxed frame time base; initial default null muxer reported duplicate DTS"
+}
