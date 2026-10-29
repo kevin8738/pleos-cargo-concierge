@@ -34,3 +34,8 @@ __pycache__/
 # Identity/signature-filled submission copies remain local
 /submission-private/
 /deliverables/
+
+# Local participant signature documents
+/제출 폴더/
+*_대표자서명.docx
+*_서명본.docx
