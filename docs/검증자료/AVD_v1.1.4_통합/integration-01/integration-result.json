@@ -1,0 +1,318 @@
+{
+  "executionCompleted": true,
+  "componentChecks": {
+    "sameSession": true,
+    "nativeRouteCallbacks": true,
+    "vipBackgroundAtObservedSamples": true,
+    "drivingAdmissionsBracketedByBackgroundSamples": true,
+    "liveRuntimeTicks": true,
+    "liveVipCallbacks": true,
+    "zeroCabinApplication": true,
+    "motionOracle": false,
+    "clockEndpointsConsistent": false,
+    "packetClockRelationship": true,
+    "lifecycleCaptureCoverage": true,
+    "vipTtsLifecycle": true,
+    "mixedPcmSignalInEachResponse": false,
+    "parkedArrivalAndReport": false,
+    "cleanup": true
+  },
+  "boundedObservationComplete": false,
+  "nativeSpeechAttributed": null,
+  "actualAcousticOverlap": null,
+  "audioFocusPriorityValidated": null,
+  "strictNativeVipContention": "UNVERIFIED",
+  "clock": {
+    "consistent": false,
+    "deviceMinusHostNs": 39473663.0,
+    "uncertaintyNs": 12284000,
+    "calibrationIntersectionNs": [
+      44100620,
+      34846706
+    ],
+    "start": {
+      "deviceMinusHostNs": 54962120,
+      "uncertaintyNs": 10861500,
+      "hostBeforeNs": 1793300905033992000,
+      "hostAfterNs": 1793300905055715000,
+      "deviceEpochNs": 1793300905099815620
+    },
+    "end": {
+      "deviceMinusHostNs": 22562706,
+      "uncertaintyNs": 12284000,
+      "hostBeforeNs": 1793301085485005000,
+      "hostAfterNs": 1793301085509573000,
+      "deviceEpochNs": 1793301085519851706
+    },
+    "assumption": "bounded stable offset between two measured endpoints; not continuous clock calibration"
+  },
+  "sameSessionRuntime": {
+    "requestId": 15,
+    "startedMs": 19613878
+  },
+  "motionTripStartedMs": [
+    19613878
+  ],
+  "admissions": [
+    {
+      "label": "driving-0",
+      "kind": "chime",
+      "badge": "WARN",
+      "tMs": 19695462,
+      "pre": {
+        "hostEpochWindow": [
+          1793300945.877242,
+          1793300948.7772422
+        ],
+        "packetCount": 258,
+        "sampleCount": 23218,
+        "receivedPcmSeconds": 0.24185416666666668,
+        "coveredWithReceivedSamples": true,
+        "rmsS16": 1.4508189162014296,
+        "peakS16": 2,
+        "maxInternalPacketGapSeconds": 0.014011144638061523
+      },
+      "response": {
+        "hostEpochWindow": [
+          1793300948.877242,
+          1793300950.9018102
+        ],
+        "packetCount": 178,
+        "sampleCount": 191688,
+        "receivedPcmSeconds": 1.99675,
+        "coveredWithReceivedSamples": true,
+        "rmsS16": 12.709546354960588,
+        "peakS16": 152,
+        "maxInternalPacketGapSeconds": 0.021203041076660156
+      },
+      "lifecycle": {
+        "singleStartThenDone": false,
+        "interruptedAfterStart": false,
+        "error": false,
+        "events": []
+      },
+      "ttsRequestCount": 0,
+      "requestAttributionUnambiguous": null
+    },
+    {
+      "label": "driving-1",
+      "kind": "speech",
+      "badge": "OVER",
+      "tMs": 19705450,
+      "pre": {
+        "hostEpochWindow": [
+          1793300955.8652422,
+          1793300958.7652423
+        ],
+        "packetCount": 258,
+        "sampleCount": 23218,
+        "receivedPcmSeconds": 0.24185416666666668,
+        "coveredWithReceivedSamples": true,
+        "rmsS16": 1.4770183662946132,
+        "peakS16": 2,
+        "maxInternalPacketGapSeconds": 0.01625990867614746
+      },
+      "response": {
+        "hostEpochWindow": [
+          1793300958.8652422,
+          1793300966.6898103
+        ],
+        "packetCount": 670,
+        "sampleCount": 740604,
+        "receivedPcmSeconds": 7.714625,
+        "coveredWithReceivedSamples": true,
+        "rmsS16": 195.0512416663304,
+        "peakS16": 1344,
+        "maxInternalPacketGapSeconds": 0.023058176040649414
+      },
+      "lifecycle": {
+        "singleStartThenDone": true,
+        "interruptedAfterStart": false,
+        "error": false,
+        "events": [
+          {
+            "message": "TTS_STOP",
+            "deviceEpochSeconds": 1793300958.921,
+            "hostReceivedUnixNs": 1793300958877978000
+          },
+          {
+            "message": "TTS_READY",
+            "deviceEpochSeconds": 1793300958.923,
+            "hostReceivedUnixNs": 1793300958878803000
+          },
+          {
+            "message": "TTS_START",
+            "deviceEpochSeconds": 1793300958.926,
+            "hostReceivedUnixNs": 1793300958882847000
+          },
+          {
+            "message": "TTS_DONE",
+            "deviceEpochSeconds": 1793300963.442,
+            "hostReceivedUnixNs": 1793300963397895000
+          }
+        ]
+      },
+      "ttsRequestCount": 1,
+      "requestAttributionUnambiguous": true
+    },
+    {
+      "label": "driving-2",
+      "kind": "speech",
+      "badge": "OVER",
+      "tMs": 19713482,
+      "pre": {
+        "hostEpochWindow": [
+          1793300963.897242,
+          1793300966.7972422
+        ],
+        "packetCount": 245,
+        "sampleCount": 262732,
+        "receivedPcmSeconds": 2.7367916666666665,
+        "coveredWithReceivedSamples": true,
+        "rmsS16": 0.1248143117849504,
+        "peakS16": 2,
+        "maxInternalPacketGapSeconds": 0.023020029067993164
+      },
+      "response": {
+        "hostEpochWindow": [
+          1793300966.897242,
+          1793300974.72181
+        ],
+        "packetCount": 672,
+        "sampleCount": 730286,
+        "receivedPcmSeconds": 7.607145833333333,
+        "coveredWithReceivedSamples": true,
+        "rmsS16": 196.43302526245031,
+        "peakS16": 1345,
+        "maxInternalPacketGapSeconds": 0.023787975311279297
+      },
+      "lifecycle": {
+        "singleStartThenDone": true,
+        "interruptedAfterStart": false,
+        "error": false,
+        "events": [
+          {
+            "message": "TTS_STOP",
+            "deviceEpochSeconds": 1793300966.951,
+            "hostReceivedUnixNs": 1793300966911930000
+          },
+          {
+            "message": "TTS_READY",
+            "deviceEpochSeconds": 1793300966.952,
+            "hostReceivedUnixNs": 1793300966912091000
+          },
+          {
+            "message": "TTS_START",
+            "deviceEpochSeconds": 1793300966.955,
+            "hostReceivedUnixNs": 1793300966912116000
+          },
+          {
+            "message": "TTS_DONE",
+            "deviceEpochSeconds": 1793300971.377,
+            "hostReceivedUnixNs": 1793300971333086000
+          }
+        ]
+      },
+      "ttsRequestCount": 1,
+      "requestAttributionUnambiguous": true
+    }
+  ],
+  "arrival": {
+    "label": "arrival",
+    "lifecycle": {
+      "singleStartThenDone": true,
+      "interruptedAfterStart": false,
+      "error": false,
+      "events": [
+        {
+          "message": "TTS_STOP",
+          "deviceEpochSeconds": 1793300997.623,
+          "hostReceivedUnixNs": 1793300997579339000
+        },
+        {
+          "message": "TTS_READY",
+          "deviceEpochSeconds": 1793300997.626,
+          "hostReceivedUnixNs": 1793300997582440000
+        },
+        {
+          "message": "TTS_START",
+          "deviceEpochSeconds": 1793300997.628,
+          "hostReceivedUnixNs": 1793300997583935000
+        },
+        {
+          "message": "TTS_DONE",
+          "deviceEpochSeconds": 1793300999.317,
+          "hostReceivedUnixNs": 1793300999273406000
+        }
+      ]
+    },
+    "ttsRequestCount": 1,
+    "pre": {
+      "hostEpochWindow": [
+        1793300994.5416021,
+        1793300997.4416022
+      ],
+      "packetCount": 242,
+      "sampleCount": 277942,
+      "receivedPcmSeconds": 2.8952291666666667,
+      "coveredWithReceivedSamples": true,
+      "rmsS16": 146.32730005821722,
+      "peakS16": 1449,
+      "maxInternalPacketGapSeconds": 0.02344799041748047
+    },
+    "response": {
+      "hostEpochWindow": [
+        1793300997.529318,
+        1793300999.2898102
+      ],
+      "packetCount": 145,
+      "sampleCount": 169412,
+      "receivedPcmSeconds": 1.7647083333333333,
+      "coveredWithReceivedSamples": true,
+      "rmsS16": 245.26702253640164,
+      "peakS16": 1480,
+      "maxInternalPacketGapSeconds": 0.023530960083007812
+    },
+    "tail": {
+      "hostEpochWindow": [
+        1793300999.2898102,
+        1793301002.2898102
+      ],
+      "packetCount": 246,
+      "sampleCount": 288672,
+      "receivedPcmSeconds": 3.007,
+      "coveredWithReceivedSamples": true,
+      "rmsS16": 12.30601051973678,
+      "peakS16": 272,
+      "maxInternalPacketGapSeconds": 0.024470806121826172
+    }
+  },
+  "routeWindow": {
+    "hostEpochWindow": [
+      1793300905.4455512,
+      1793300995.2561338
+    ],
+    "packetCount": 7864,
+    "sampleCount": 3180580,
+    "receivedPcmSeconds": 33.13104166666667,
+    "coveredWithReceivedSamples": true,
+    "rmsS16": 163.63072780837362,
+    "peakS16": 1842,
+    "maxInternalPacketGapSeconds": 0.0880270004272461
+  },
+  "packetCount": 15545,
+  "pcmDurationSeconds": 47.010729166666664,
+  "wallSeconds": 179.977896,
+  "executionErrors": [],
+  "limits": [
+    "DEMO source 0 SYNTHETIC input can wake the background process; no no-wakeup claim.",
+    "Visibility is sampled, never inferred continuous between dumpsys observations.",
+    "COFFEE applies zero cabin settings; no HVAC application/restoration efficacy claim.",
+    "FREE_DRIVE is real route termination; DestinationArrived is separately injected at P0.",
+    "VIP speech callbacks have no utterance ID; overlapping requests make attribution ambiguous.",
+    "PCM is mixed emulator output; native speech/content, actual overlap and focus priority remain unverified.",
+    "Sparse PCM/WAV concatenates received frames, not 180 seconds of continuous recorded sound.",
+    "The reused motion-only admission oracle excludes native-triggered proposals; extra native coaching can cause mismatch without proving an app defect.",
+    "No physical speaker, intelligibility, driver burden, cargo protection or G accuracy validation."
+  ]
+}

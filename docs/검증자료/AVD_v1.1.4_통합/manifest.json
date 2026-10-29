@@ -1,0 +1,1452 @@
+{
+  "schema": "v24-integration-publication-candidate-v1",
+  "originalOverall": false,
+  "originalFalseFields": [
+    "clockEndpointsConsistent",
+    "mixedPcmSignalInEachResponse",
+    "motionOracle",
+    "parkedArrivalAndReport"
+  ],
+  "candidateOnly": false,
+  "rootMediaReviewComplete": true,
+  "sourcePathsAreProjectRelative": true,
+  "sourceAbsoluteLocalPathsPublished": false,
+  "localHomePathsRedacted": true,
+  "sourceManifestSha256": {
+    "integration-01": "93dd86a7bfc6d1e98e72e7f601e9e030a076eed7073fe877364a31edceb10a90",
+    "integration-01-supplement": "6f22b91aec9ae9604c71c8764d532036b8bd333e48956421c5899852c36e98c4",
+    "integration-verification": "5890a79c4e9e9005e666bab4c841d896a79bca588da96b2257a9dd332e0613c4"
+  },
+  "files": [
+    {
+      "publishedPath": "integration-01/artifact-sha256.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/artifact-sha256.json",
+      "sourceSha256": "93dd86a7bfc6d1e98e72e7f601e9e030a076eed7073fe877364a31edceb10a90",
+      "publishedSha256": "93dd86a7bfc6d1e98e72e7f601e9e030a076eed7073fe877364a31edceb10a90",
+      "sourceBytes": 11737,
+      "publishedBytes": 11737,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/capture/audio.s16le.pcm",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/capture/audio.s16le.pcm",
+      "sourceSha256": "fc5897c21c65a490b080440494dbbdc544a56b23abdee63653d62e7ffb0ebb9a",
+      "publishedSha256": "fc5897c21c65a490b080440494dbbdc544a56b23abdee63653d62e7ffb0ebb9a",
+      "sourceBytes": 9026060,
+      "publishedBytes": 9026060,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/capture/audio.wav",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/capture/audio.wav",
+      "sourceSha256": "3bcf19e409ee8f6ec6cf87a8b65372fe01e755bcece14f0cb9c57bf8d828646f",
+      "publishedSha256": "3bcf19e409ee8f6ec6cf87a8b65372fe01e755bcece14f0cb9c57bf8d828646f",
+      "sourceBytes": 9026104,
+      "publishedBytes": 9026104,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/capture/metadata.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/capture/metadata.json",
+      "sourceSha256": "a3780519ef82311a10a8de7230332f0ea7ced375dd5f9348d0d27e0fec779c86",
+      "publishedSha256": "a3780519ef82311a10a8de7230332f0ea7ced375dd5f9348d0d27e0fec779c86",
+      "sourceBytes": 2409897,
+      "publishedBytes": 2409897,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/capture/packet-analysis.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/capture/packet-analysis.json",
+      "sourceSha256": "4899f1de1543e46f64a55b8b39a3e5c5c93070e9984ca1f13ca580459b01e84a",
+      "publishedSha256": "4899f1de1543e46f64a55b8b39a3e5c5c93070e9984ca1f13ca580459b01e84a",
+      "sourceBytes": 3660318,
+      "publishedBytes": 3660318,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/capture-process.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/capture-process.json",
+      "sourceSha256": "602878ba8eab2c0f3e00f1b2d249f1c3425515a8932fd2d0bae511aae704bc37",
+      "publishedSha256": "602878ba8eab2c0f3e00f1b2d249f1c3425515a8932fd2d0bae511aae704bc37",
+      "sourceBytes": 77,
+      "publishedBytes": 77,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup-idle-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup-idle-0.xml",
+      "sourceSha256": "b494e47aacdebdcf3b77d41df01b0f461b7eaab5924fb06ee0930088e922ce17",
+      "publishedSha256": "b494e47aacdebdcf3b77d41df01b0f461b7eaab5924fb06ee0930088e922ce17",
+      "sourceBytes": 27052,
+      "publishedBytes": 27052,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup-native-idle-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup-native-idle-0.xml",
+      "sourceSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "publishedSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sourceBytes": 6718,
+      "publishedBytes": 6718,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup-runtime-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup-runtime-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup-runtime-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup-runtime-process.txt",
+      "sourceSha256": "306592ad2cf6e13c4bf3a46df1f606552c14e42ab22a6cad615c1169832af23c",
+      "publishedSha256": "306592ad2cf6e13c4bf3a46df1f606552c14e42ab22a6cad615c1169832af23c",
+      "sourceBytes": 332,
+      "publishedBytes": 332,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup-runtime-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup-runtime-service.txt",
+      "sourceSha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "publishedSha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sourceBytes": 66,
+      "publishedBytes": 66,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup-runtime-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup-runtime-snapshot.json",
+      "sourceSha256": "a74dd07cf9fed7b59c88b75b39c93e975b215c5bd4dddfc4bddf187811d717e5",
+      "publishedSha256": "a74dd07cf9fed7b59c88b75b39c93e975b215c5bd4dddfc4bddf187811d717e5",
+      "sourceBytes": 325,
+      "publishedBytes": 325,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/cleanup.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/cleanup.json",
+      "sourceSha256": "52f20ba937982e56e597c831794a3240d6a763eb0cb7e0fb4e0038a29835b21c",
+      "publishedSha256": "52f20ba937982e56e597c831794a3240d6a763eb0cb7e0fb4e0038a29835b21c",
+      "sourceBytes": 211,
+      "publishedBytes": 211,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/clock-end.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/clock-end.json",
+      "sourceSha256": "56006f0af01965edd76b0771ea21a0617e6bed8c9747d21d3c2134d902e43570",
+      "publishedSha256": "56006f0af01965edd76b0771ea21a0617e6bed8c9747d21d3c2134d902e43570",
+      "sourceBytes": 182,
+      "publishedBytes": 182,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/coffee-choice-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/coffee-choice-0.xml",
+      "sourceSha256": "83e01322336a220bf2d096d9fbf75863508f67e1a48fdf06fc553e3161b2c8cf",
+      "publishedSha256": "83e01322336a220bf2d096d9fbf75863508f67e1a48fdf06fc553e3161b2c8cf",
+      "sourceBytes": 27054,
+      "publishedBytes": 27054,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/console-lease-source.py",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/console-lease-source.py",
+      "sourceSha256": "0c4de3eb0140aeb55078a33af967cb1bc631c9cc269d4c065d97ebbfaf600a14",
+      "publishedSha256": "0c4de3eb0140aeb55078a33af967cb1bc631c9cc269d4c065d97ebbfaf600a14",
+      "sourceBytes": 2745,
+      "publishedBytes": 2745,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/console-lease.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/console-lease.json",
+      "sourceSha256": "a53472ad0e0bc91e5f5d5342260633ae2153164fe3679db4b3b486df40e9be97",
+      "publishedSha256": "a53472ad0e0bc91e5f5d5342260633ae2153164fe3679db4b3b486df40e9be97",
+      "sourceBytes": 76,
+      "publishedBytes": 76,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/dependency-sha256.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/dependency-sha256.json",
+      "sourceSha256": "7d8ba6fb5ba187ec4d44721c0859b66d7afe41873621d423f4f74b9ce8f9cac0",
+      "publishedSha256": "7d8ba6fb5ba187ec4d44721c0859b66d7afe41873621d423f4f74b9ce8f9cac0",
+      "sourceBytes": 947,
+      "publishedBytes": 947,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/design.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/design.json",
+      "sourceSha256": "a9a04ba122c4e5009a7e5aa6b450d6a931214b5847608180db74f11da85651c7",
+      "publishedSha256": "a9a04ba122c4e5009a7e5aa6b450d6a931214b5847608180db74f11da85651c7",
+      "sourceBytes": 10121,
+      "publishedBytes": 10121,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/environment-after.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/environment-after.json",
+      "sourceSha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "publishedSha256": "3f7d84d6b37deee23760266e47f1680ead1bdd4e1c5a297a7d9c307b521973c2",
+      "sourceBytes": 158,
+      "publishedBytes": 158,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/environment.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/environment.json",
+      "sourceSha256": "c5cb643ea9d59d106d2903817c260dacc7d90c9ec8c10e5eb41fc3d212bd7723",
+      "publishedSha256": "c5cb643ea9d59d106d2903817c260dacc7d90c9ec8c10e5eb41fc3d212bd7723",
+      "sourceBytes": 2054,
+      "publishedBytes": 2054,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/events.jsonl",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/events.jsonl",
+      "sourceSha256": "0974c3c91a53f25129741a6dcccffc606b66c45986e4f1f38b226209c8f2c4d4",
+      "publishedSha256": "0974c3c91a53f25129741a6dcccffc606b66c45986e4f1f38b226209c8f2c4d4",
+      "sourceBytes": 3247,
+      "publishedBytes": 3247,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_0-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_0-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_0-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_0-process.txt",
+      "sourceSha256": "094c656581356baeebd1475f3cf76bf4ddd3e33d987bafc158776e0f22d8068a",
+      "publishedSha256": "094c656581356baeebd1475f3cf76bf4ddd3e33d987bafc158776e0f22d8068a",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_0-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_0-service.txt",
+      "sourceSha256": "c1236f4c1136a9782ea4606f16811149e069dc749b67878abcc804397474d149",
+      "publishedSha256": "c1236f4c1136a9782ea4606f16811149e069dc749b67878abcc804397474d149",
+      "sourceBytes": 1767,
+      "publishedBytes": 1767,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_0-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_0-snapshot.json",
+      "sourceSha256": "984e2120c399ca2f618b0248a381b29f27c50f10c3ff3427daa03ec74fe76041",
+      "publishedSha256": "984e2120c399ca2f618b0248a381b29f27c50f10c3ff3427daa03ec74fe76041",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_1-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_1-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_1-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_1-process.txt",
+      "sourceSha256": "19448598f24d112cd2da9eda9806098ca20b89f936dc67a6c5f06786747ecbec",
+      "publishedSha256": "19448598f24d112cd2da9eda9806098ca20b89f936dc67a6c5f06786747ecbec",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_1-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_1-service.txt",
+      "sourceSha256": "540b9551879a7fb5cad8e6cbaae45785e43f05bb6a62739d3ea6b1a7e36fa4f8",
+      "publishedSha256": "540b9551879a7fb5cad8e6cbaae45785e43f05bb6a62739d3ea6b1a7e36fa4f8",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_1-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_1-snapshot.json",
+      "sourceSha256": "e2854038cebb02a85a4e360a21a27198741f91d785c6531105ca7b63a25b7297",
+      "publishedSha256": "e2854038cebb02a85a4e360a21a27198741f91d785c6531105ca7b63a25b7297",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_10-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_10-notification.txt",
+      "sourceSha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "publishedSha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "sourceBytes": 3727,
+      "publishedBytes": 3727,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_10-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_10-process.txt",
+      "sourceSha256": "b1891866547115b1fd0ae5a62f4f614ba04073995338fb397af362846452d313",
+      "publishedSha256": "b1891866547115b1fd0ae5a62f4f614ba04073995338fb397af362846452d313",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_10-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_10-service.txt",
+      "sourceSha256": "5fcae98b4203bb466064009f7a452278048dfe4d463851f8e604fb83420d9437",
+      "publishedSha256": "5fcae98b4203bb466064009f7a452278048dfe4d463851f8e604fb83420d9437",
+      "sourceBytes": 1776,
+      "publishedBytes": 1776,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_10-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_10-snapshot.json",
+      "sourceSha256": "b0ac4c6738e2f463beb7e2b43ce58b7d0c618bc877eb5ce8e763186426018e8b",
+      "publishedSha256": "b0ac4c6738e2f463beb7e2b43ce58b7d0c618bc877eb5ce8e763186426018e8b",
+      "sourceBytes": 328,
+      "publishedBytes": 328,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_2-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_2-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_2-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_2-process.txt",
+      "sourceSha256": "6f0efdda174d5b0dca251042bffc610e54bfeda7dd2d937864456582f45a0ace",
+      "publishedSha256": "6f0efdda174d5b0dca251042bffc610e54bfeda7dd2d937864456582f45a0ace",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_2-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_2-service.txt",
+      "sourceSha256": "3579299b3bd0455ee97f43b2e23ef426bbd3161d721dd1b0a796df4c4cebc62d",
+      "publishedSha256": "3579299b3bd0455ee97f43b2e23ef426bbd3161d721dd1b0a796df4c4cebc62d",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_2-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_2-snapshot.json",
+      "sourceSha256": "d68dc7ec6a44bfb0bb95696388186fc38551cce99d1a190b727bf9789d67ac70",
+      "publishedSha256": "d68dc7ec6a44bfb0bb95696388186fc38551cce99d1a190b727bf9789d67ac70",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_3-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_3-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_3-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_3-process.txt",
+      "sourceSha256": "504655a81d5640b02a27cd1e7f1caba7b2599307ec20ba6b7ec91ca7a3e824b1",
+      "publishedSha256": "504655a81d5640b02a27cd1e7f1caba7b2599307ec20ba6b7ec91ca7a3e824b1",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_3-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_3-service.txt",
+      "sourceSha256": "d724448ca816dd12fb96c1c6623511398774db24291138a07bb9ac1e47614328",
+      "publishedSha256": "d724448ca816dd12fb96c1c6623511398774db24291138a07bb9ac1e47614328",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_3-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_3-snapshot.json",
+      "sourceSha256": "5c22459d114ccae51424ff64acdbb4a69a5441010dc894a36e01be36be59f86d",
+      "publishedSha256": "5c22459d114ccae51424ff64acdbb4a69a5441010dc894a36e01be36be59f86d",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_4-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_4-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_4-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_4-process.txt",
+      "sourceSha256": "1ea5e7d415671bd7a728708ce44da193b099fd078ce36481a4ce2457dc252852",
+      "publishedSha256": "1ea5e7d415671bd7a728708ce44da193b099fd078ce36481a4ce2457dc252852",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_4-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_4-service.txt",
+      "sourceSha256": "c8812bc37db9fe4ab889fe1d3085061aaa16b0017ae04aed7f2f20583e01d879",
+      "publishedSha256": "c8812bc37db9fe4ab889fe1d3085061aaa16b0017ae04aed7f2f20583e01d879",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_4-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_4-snapshot.json",
+      "sourceSha256": "e7b8d6fd5d8ba07ee87fcf2d348afcc2b645265064db7a3c14ee3b926fe6aa2d",
+      "publishedSha256": "e7b8d6fd5d8ba07ee87fcf2d348afcc2b645265064db7a3c14ee3b926fe6aa2d",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_5-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_5-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_5-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_5-process.txt",
+      "sourceSha256": "18bec1cfdb679e9e1aa8d1addff6042758cb5856daa9ce492d57f7d0e6c89e78",
+      "publishedSha256": "18bec1cfdb679e9e1aa8d1addff6042758cb5856daa9ce492d57f7d0e6c89e78",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_5-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_5-service.txt",
+      "sourceSha256": "7fcaff75a6ac5148cb01d07910f23c9ce814ec78cb71fb46232e483726023220",
+      "publishedSha256": "7fcaff75a6ac5148cb01d07910f23c9ce814ec78cb71fb46232e483726023220",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_5-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_5-snapshot.json",
+      "sourceSha256": "ab91785dbe0e6514f5530606a24200187f7d515dc87a999680d45f901e248f18",
+      "publishedSha256": "ab91785dbe0e6514f5530606a24200187f7d515dc87a999680d45f901e248f18",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_6-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_6-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_6-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_6-process.txt",
+      "sourceSha256": "4b72ac272f12d7dc275ec9b645569e5656a1ced519eabee82c3fd3031a2f2423",
+      "publishedSha256": "4b72ac272f12d7dc275ec9b645569e5656a1ced519eabee82c3fd3031a2f2423",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_6-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_6-service.txt",
+      "sourceSha256": "7702fab2d857d379a3de0b0148b23645e9cd30bc550acdb84b08b836ee8936e7",
+      "publishedSha256": "7702fab2d857d379a3de0b0148b23645e9cd30bc550acdb84b08b836ee8936e7",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_6-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_6-snapshot.json",
+      "sourceSha256": "ac30cb8f0ce9221d79b5566232c48e1da1ec4dd4ded86571b5fe896dc6135908",
+      "publishedSha256": "ac30cb8f0ce9221d79b5566232c48e1da1ec4dd4ded86571b5fe896dc6135908",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_7-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_7-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_7-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_7-process.txt",
+      "sourceSha256": "a0471411eefba86b9087e654847a7f1236a486df3dab194ea9fea7fca95cbee0",
+      "publishedSha256": "a0471411eefba86b9087e654847a7f1236a486df3dab194ea9fea7fca95cbee0",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_7-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_7-service.txt",
+      "sourceSha256": "7241795acff817fe478efbe9c30b1048659332bd33c5cd15594f0cac46cdb1f6",
+      "publishedSha256": "7241795acff817fe478efbe9c30b1048659332bd33c5cd15594f0cac46cdb1f6",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_7-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_7-snapshot.json",
+      "sourceSha256": "c52e20a363cfea7f9f237277f1954e9b8041efb8d5366fe79ed03f1e8450a031",
+      "publishedSha256": "c52e20a363cfea7f9f237277f1954e9b8041efb8d5366fe79ed03f1e8450a031",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_8-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_8-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_8-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_8-process.txt",
+      "sourceSha256": "f6d0b16bf58aafd6c40c845b767c06f7554b2b266b1500f974d1126b586ad6a1",
+      "publishedSha256": "f6d0b16bf58aafd6c40c845b767c06f7554b2b266b1500f974d1126b586ad6a1",
+      "sourceBytes": 482,
+      "publishedBytes": 482,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_8-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_8-service.txt",
+      "sourceSha256": "8c3efc4ce874b01348eba6da3152a3760b8b55f286f1185d7e97c0e892c6c9c7",
+      "publishedSha256": "8c3efc4ce874b01348eba6da3152a3760b8b55f286f1185d7e97c0e892c6c9c7",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_8-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_8-snapshot.json",
+      "sourceSha256": "6ee57160a2f7e8e81b265f43a6648f5e4eb87dfa0b4563bd6cc9c94f9cf871a6",
+      "publishedSha256": "6ee57160a2f7e8e81b265f43a6648f5e4eb87dfa0b4563bd6cc9c94f9cf871a6",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_9-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_9-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_9-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_9-process.txt",
+      "sourceSha256": "58ec3a9990bf8d032bdf9e788dd8a6368c81067d968f98ac0c683b4f77371ea9",
+      "publishedSha256": "58ec3a9990bf8d032bdf9e788dd8a6368c81067d968f98ac0c683b4f77371ea9",
+      "sourceBytes": 481,
+      "publishedBytes": 481,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_9-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_9-service.txt",
+      "sourceSha256": "f8075858ec13beb63aa00ac81f632e1cec5730fcf285890c090357cd8b34dd98",
+      "publishedSha256": "f8075858ec13beb63aa00ac81f632e1cec5730fcf285890c090357cd8b34dd98",
+      "sourceBytes": 1773,
+      "publishedBytes": 1773,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/guard-active_9-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/guard-active_9-snapshot.json",
+      "sourceSha256": "875ac7d56faf7155aebbe8765b53560efba21691525ab5f6f81ed3383123cb65",
+      "publishedSha256": "875ac7d56faf7155aebbe8765b53560efba21691525ab5f6f81ed3383123cb65",
+      "sourceBytes": 327,
+      "publishedBytes": 327,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/harness-source.py",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/harness-source.py",
+      "sourceSha256": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6",
+      "publishedSha256": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6",
+      "sourceBytes": 45310,
+      "publishedBytes": 45310,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/initial-idle-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/initial-idle-0.xml",
+      "sourceSha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "publishedSha256": "1c6b7468429760383e581cc3dd5feb9c24d4b3bca04a972e497b54bf0cb8b1d1",
+      "sourceBytes": 27012,
+      "publishedBytes": 27012,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/initial-idle-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/initial-idle-notification.txt",
+      "sourceSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "publishedSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "sourceBytes": 1,
+      "publishedBytes": 1,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/initial-idle-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/initial-idle-process.txt",
+      "sourceSha256": "9301766cad17036b193efa69e67698bbad4078a0763f6475ebc02c6788181099",
+      "publishedSha256": "9301766cad17036b193efa69e67698bbad4078a0763f6475ebc02c6788181099",
+      "sourceBytes": 337,
+      "publishedBytes": 337,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/initial-idle-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/initial-idle-service.txt",
+      "sourceSha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "publishedSha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0",
+      "sourceBytes": 66,
+      "publishedBytes": 66,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/initial-idle-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/initial-idle-snapshot.json",
+      "sourceSha256": "8d83f24ad19023ba44a115cb3158e071a29829eda1c4d049fe0f83bf6bb4f841",
+      "publishedSha256": "8d83f24ad19023ba44a115cb3158e071a29829eda1c4d049fe0f83bf6bb4f841",
+      "sourceBytes": 322,
+      "publishedBytes": 322,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/input-ledger.jsonl",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/input-ledger.jsonl",
+      "sourceSha256": "4ea20c498c639cc82d75c68945f0ac601a8795a90119ba401dac9cf25277adb6",
+      "publishedSha256": "4ea20c498c639cc82d75c68945f0ac601a8795a90119ba401dac9cf25277adb6",
+      "sourceBytes": 322083,
+      "publishedBytes": 322083,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/integration-result.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/integration-result.json",
+      "sourceSha256": "8c76b90d68c50f9c82b494795acc3f36727c6830c604a34e7d928a69e06f9f22",
+      "publishedSha256": "8c76b90d68c50f9c82b494795acc3f36727c6830c604a34e7d928a69e06f9f22",
+      "sourceBytes": 9722,
+      "publishedBytes": 9722,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/live-log.jsonl",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/live-log.jsonl",
+      "sourceSha256": "de9c3eca3cfcc9111a456d2dbb2e606858f34e1efbf17d19719f221b8e60c5e7",
+      "publishedSha256": "de9c3eca3cfcc9111a456d2dbb2e606858f34e1efbf17d19719f221b8e60c5e7",
+      "sourceBytes": 4272765,
+      "publishedBytes": 4272765,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/motion.log",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/motion.log",
+      "sourceSha256": "86fbbd4fde28141d20e122cc942e8f87f4ed0bd0716d3cc9178064dd4a8b047b",
+      "publishedSha256": "86fbbd4fde28141d20e122cc942e8f87f4ed0bd0716d3cc9178064dd4a8b047b",
+      "sourceBytes": 1228656,
+      "publishedBytes": 1228656,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-active-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-active-notification.txt",
+      "sourceSha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "publishedSha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "sourceBytes": 3727,
+      "publishedBytes": 3727,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-active-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-active-process.txt",
+      "sourceSha256": "7414ada0b8c9adbb239459613528716cda45291a8c71d9f142602d91078ea7e7",
+      "publishedSha256": "7414ada0b8c9adbb239459613528716cda45291a8c71d9f142602d91078ea7e7",
+      "sourceBytes": 441,
+      "publishedBytes": 441,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-active-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-active-service.txt",
+      "sourceSha256": "d5dc21f5fcfda7b31e30590498aecba6df56bf91abd916c50dd9dffd6c887145",
+      "publishedSha256": "d5dc21f5fcfda7b31e30590498aecba6df56bf91abd916c50dd9dffd6c887145",
+      "sourceBytes": 1776,
+      "publishedBytes": 1776,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-active-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-active-snapshot.json",
+      "sourceSha256": "710774d089f611515ebc21b49e535c380954351c693a4cfcdd026f5c8c5833b5",
+      "publishedSha256": "710774d089f611515ebc21b49e535c380954351c693a4cfcdd026f5c8c5833b5",
+      "sourceBytes": 326,
+      "publishedBytes": 326,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-detail-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-detail-0.xml",
+      "sourceSha256": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+      "publishedSha256": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+      "sourceBytes": 8824,
+      "publishedBytes": 8824,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-end-control-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-end-control-0.xml",
+      "sourceSha256": "b8ce0ef3b300933bb8fb816f9cb3ef04646bb6002b90020bb9ac4f59f8a105bb",
+      "publishedSha256": "b8ce0ef3b300933bb8fb816f9cb3ef04646bb6002b90020bb9ac4f59f8a105bb",
+      "sourceBytes": 11251,
+      "publishedBytes": 11251,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-ended-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-ended-0.xml",
+      "sourceSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "publishedSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sourceBytes": 6718,
+      "publishedBytes": 6718,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-home-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-home-0.xml",
+      "sourceSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "publishedSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sourceBytes": 6718,
+      "publishedBytes": 6718,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-original-idle-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-original-idle-0.xml",
+      "sourceSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "publishedSha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "sourceBytes": 6718,
+      "publishedBytes": 6718,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-results-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-results-0.xml",
+      "sourceSha256": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+      "publishedSha256": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+      "sourceBytes": 26027,
+      "publishedBytes": 26027,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-route-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-route-0.xml",
+      "sourceSha256": "ea9b049417757619feddf9f736fd5610cfd8678f52b9c49ec317d7827ccafa4f",
+      "publishedSha256": "ea9b049417757619feddf9f736fd5610cfd8678f52b9c49ec317d7827ccafa4f",
+      "sourceBytes": 12989,
+      "publishedBytes": 12989,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-route-1.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-route-1.xml",
+      "sourceSha256": "ea9b049417757619feddf9f736fd5610cfd8678f52b9c49ec317d7827ccafa4f",
+      "publishedSha256": "ea9b049417757619feddf9f736fd5610cfd8678f52b9c49ec317d7827ccafa4f",
+      "sourceBytes": 12989,
+      "publishedBytes": 12989,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-route-2.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-route-2.xml",
+      "sourceSha256": "6a1d8172d357ac41902c028069f9f4c3a1f2706455aa946e32707e3efed7a469",
+      "publishedSha256": "6a1d8172d357ac41902c028069f9f4c3a1f2706455aa946e32707e3efed7a469",
+      "sourceBytes": 11251,
+      "publishedBytes": 11251,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/native-search-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/native-search-0.xml",
+      "sourceSha256": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+      "publishedSha256": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+      "sourceBytes": 13960,
+      "publishedBytes": 13960,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/oracle-comparisons.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/oracle-comparisons.json",
+      "sourceSha256": "0b5e982c9176610d1cc215b9014c449f8e6ef25005ece83d9faf83a5def557a8",
+      "publishedSha256": "0b5e982c9176610d1cc215b9014c449f8e6ef25005ece83d9faf83a5def557a8",
+      "sourceBytes": 414996,
+      "publishedBytes": 414996,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/oracle-result.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/oracle-result.json",
+      "sourceSha256": "9019f034554e17ab9ab9375b3eedde42440a9339b68115a576caedb9b12ed90f",
+      "publishedSha256": "9019f034554e17ab9ab9375b3eedde42440a9339b68115a576caedb9b12ed90f",
+      "sourceBytes": 17534,
+      "publishedBytes": 17534,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/parked-before-arrival.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/parked-before-arrival.json",
+      "sourceSha256": "37068abd6b7b3ee1e77b4c9d7a5a553aa08245f01b6b31dd6d491c98d6365ff5",
+      "publishedSha256": "37068abd6b7b3ee1e77b4c9d7a5a553aa08245f01b6b31dd6d491c98d6365ff5",
+      "sourceBytes": 4057,
+      "publishedBytes": 4057,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/profile-finished-notification.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/profile-finished-notification.txt",
+      "sourceSha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "publishedSha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "sourceBytes": 3727,
+      "publishedBytes": 3727,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/profile-finished-process.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/profile-finished-process.txt",
+      "sourceSha256": "aa4d7ad85400c1fc7c2a8f34d1fb229aa404246057e755e9c23dac9dd5b4715b",
+      "publishedSha256": "aa4d7ad85400c1fc7c2a8f34d1fb229aa404246057e755e9c23dac9dd5b4715b",
+      "sourceBytes": 442,
+      "publishedBytes": 442,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/profile-finished-service.txt",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/profile-finished-service.txt",
+      "sourceSha256": "3c04811afda531d4df64eb8f2647af5ecf22d78229dbfcfa27a65e4ed38cbfba",
+      "publishedSha256": "3c04811afda531d4df64eb8f2647af5ecf22d78229dbfcfa27a65e4ed38cbfba",
+      "sourceBytes": 1779,
+      "publishedBytes": 1779,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/profile-finished-snapshot.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/profile-finished-snapshot.json",
+      "sourceSha256": "6a6978ebd4a29408f6170ee36d71564773fa461bc52e9c31cf55fefd556840e9",
+      "publishedSha256": "6a6978ebd4a29408f6170ee36d71564773fa461bc52e9c31cf55fefd556840e9",
+      "sourceBytes": 329,
+      "publishedBytes": 329,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/report.png",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/report.png",
+      "sourceSha256": "bb39c234cbb18cb6ecb56224b6bc384508c4102b577b0a343921ddc51b5a52d6",
+      "publishedSha256": "bb39c234cbb18cb6ecb56224b6bc384508c4102b577b0a343921ddc51b5a52d6",
+      "sourceBytes": 630396,
+      "publishedBytes": 630396,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/report.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/report.xml",
+      "sourceSha256": "58a0bb4de4d02f0b44ef966640d7b5c0e2813e917f09fbf32962bdf3e4f53ff3",
+      "publishedSha256": "58a0bb4de4d02f0b44ef966640d7b5c0e2813e917f09fbf32962bdf3e4f53ff3",
+      "sourceBytes": 27077,
+      "publishedBytes": 27077,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-driving-confirmed_after_chime_tap.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-driving-confirmed_after_chime_tap.xml",
+      "sourceSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "publishedSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sourceBytes": 16605,
+      "publishedBytes": 16605,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-driving-confirmed_after_tts_tap.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-driving-confirmed_after_tts_tap.xml",
+      "sourceSha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "publishedSha256": "c5e20bb27da835ffed8395bc2f71ba96511d06b5500d58ecf9b9346f4815e7e0",
+      "sourceBytes": 16606,
+      "publishedBytes": 16606,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-driving-confirmed_before.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-driving-confirmed_before.xml",
+      "sourceSha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "publishedSha256": "2ebef68c1cf4eb9e8d5a6c4d1f7870ea2c863716c50a917a5e04dcb3151b7175",
+      "sourceBytes": 16607,
+      "publishedBytes": 16607,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-driving-confirmed_confirmed.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-driving-confirmed_confirmed.xml",
+      "sourceSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "publishedSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sourceBytes": 16605,
+      "publishedBytes": 16605,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-driving-confirmed_states.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-driving-confirmed_states.json",
+      "sourceSha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "publishedSha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sourceBytes": 324,
+      "publishedBytes": 324,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-original.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-original.json",
+      "sourceSha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "publishedSha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sourceBytes": 324,
+      "publishedBytes": 324,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-original.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-original.xml",
+      "sourceSha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "publishedSha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sourceBytes": 16605,
+      "publishedBytes": 16605,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-restored_before.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-restored_before.xml",
+      "sourceSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "publishedSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sourceBytes": 16605,
+      "publishedBytes": 16605,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-restored_confirmed.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-restored_confirmed.xml",
+      "sourceSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "publishedSha256": "904c213f46d6b678dd63149b2d6b92bf2093d1cfcd3e876d3927e5e1e0223e07",
+      "sourceBytes": 16605,
+      "publishedBytes": 16605,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-restored_states.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-restored_states.json",
+      "sourceSha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "publishedSha256": "52c79ef3b11fd22640791597dcfe1939b7eb88539d57f65b4be8ae11010845bb",
+      "sourceBytes": 324,
+      "publishedBytes": 324,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-selection-muted_after_chime_tap.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-selection-muted_after_chime_tap.xml",
+      "sourceSha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "publishedSha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sourceBytes": 16607,
+      "publishedBytes": 16607,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-selection-muted_after_tts_tap.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-selection-muted_after_tts_tap.xml",
+      "sourceSha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "publishedSha256": "f444cea585e74d4a706cba0afd5904e946abb2a33c71777b48154e74a0c74703",
+      "sourceBytes": 16606,
+      "publishedBytes": 16606,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-selection-muted_before.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-selection-muted_before.xml",
+      "sourceSha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "publishedSha256": "d2e7e725ef81a5d597cae7399697caf73d36271a1b10460cca538dcab60e9d22",
+      "sourceBytes": 16605,
+      "publishedBytes": 16605,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-selection-muted_confirmed.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-selection-muted_confirmed.xml",
+      "sourceSha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "publishedSha256": "969d083f5f6317e5f3ccb4875c93eb583dcf1d945ad218314033247e72c79a0a",
+      "sourceBytes": 16607,
+      "publishedBytes": 16607,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/settings-selection-muted_states.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/settings-selection-muted_states.json",
+      "sourceSha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "publishedSha256": "8c449f77a1aa23396a14b53580f13d40a8cfef1afda1fa1614b6ebb30e714d46",
+      "sourceBytes": 326,
+      "publishedBytes": 326,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/trace.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/trace.json",
+      "sourceSha256": "ddd4476f72f1e7ca3687b1a3161970f3ff90caed37ea874e935e8e25b7856691",
+      "publishedSha256": "ddd4476f72f1e7ca3687b1a3161970f3ff90caed37ea874e935e8e25b7856691",
+      "sourceBytes": 1350768,
+      "publishedBytes": 1350768,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/vehicle-after.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/vehicle-after.json",
+      "sourceSha256": "557b36d3d4a8c1c9c79ac3bee4dbb9653c2ab40601cd7c6c47fd6748882c153a",
+      "publishedSha256": "557b36d3d4a8c1c9c79ac3bee4dbb9653c2ab40601cd7c6c47fd6748882c153a",
+      "sourceBytes": 27531,
+      "publishedBytes": 27531,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/vehicle-before.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/vehicle-before.json",
+      "sourceSha256": "30d5f6876a139ef9c90f81a45cf2eabd2980b853c08308406014aaed44a8d90c",
+      "publishedSha256": "30d5f6876a139ef9c90f81a45cf2eabd2980b853c08308406014aaed44a8d90c",
+      "sourceBytes": 27531,
+      "publishedBytes": 27531,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/vip-return-idle-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/vip-return-idle-0.xml",
+      "sourceSha256": "83e01322336a220bf2d096d9fbf75863508f67e1a48fdf06fc553e3161b2c8cf",
+      "publishedSha256": "83e01322336a220bf2d096d9fbf75863508f67e1a48fdf06fc553e3161b2c8cf",
+      "sourceBytes": 27054,
+      "publishedBytes": 27054,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01/vip-return-same-session-0.xml",
+      "sourcePath": ".omx/qa/submission-v24/integration-01/vip-return-same-session-0.xml",
+      "sourceSha256": "d501c7873ddf50b94989933ed23815770b0a3e09b7f46181257e65b505e2df97",
+      "publishedSha256": "d501c7873ddf50b94989933ed23815770b0a3e09b7f46181257e65b505e2df97",
+      "sourceBytes": 35514,
+      "publishedBytes": 35514,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01-supplement/README.md",
+      "sourcePath": ".omx/qa/submission-v24/integration-01-supplement/README.md",
+      "sourceSha256": "b3b9d371dbbfc3099a5e701af739bd2af6bc616451a759e0166dbe6dee6f1910",
+      "publishedSha256": "b3b9d371dbbfc3099a5e701af739bd2af6bc616451a759e0166dbe6dee6f1910",
+      "sourceBytes": 5152,
+      "publishedBytes": 5152,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01-supplement/artifact-sha256.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01-supplement/artifact-sha256.json",
+      "sourceSha256": "6f22b91aec9ae9604c71c8764d532036b8bd333e48956421c5899852c36e98c4",
+      "publishedSha256": "6f22b91aec9ae9604c71c8764d532036b8bd333e48956421c5899852c36e98c4",
+      "sourceBytes": 270,
+      "publishedBytes": 270,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01-supplement/handoff.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01-supplement/handoff.json",
+      "sourceSha256": "e96ef455b69094a21d1f2d5a458db6978619ef8f89e6cc6cf1f8f652aa38322b",
+      "publishedSha256": "e96ef455b69094a21d1f2d5a458db6978619ef8f89e6cc6cf1f8f652aa38322b",
+      "sourceBytes": 1100,
+      "publishedBytes": 1100,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-01-supplement/observation-summary.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-01-supplement/observation-summary.json",
+      "sourceSha256": "a44c8035c28d48cc56bdc2a32ce261f2de336dd93e1499cc578957659d69620a",
+      "publishedSha256": "a44c8035c28d48cc56bdc2a32ce261f2de336dd93e1499cc578957659d69620a",
+      "sourceBytes": 4111,
+      "publishedBytes": 4111,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-verification/README.md",
+      "sourcePath": ".omx/qa/submission-v24/integration-verification/README.md",
+      "sourceSha256": "90612916093f0d853e7ea96c2a59159b78797293b33dc0f0dc76ead005bf9d63",
+      "publishedSha256": "90612916093f0d853e7ea96c2a59159b78797293b33dc0f0dc76ead005bf9d63",
+      "sourceBytes": 6093,
+      "publishedBytes": 6093,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-verification/artifact-sha256.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-verification/artifact-sha256.json",
+      "sourceSha256": "5890a79c4e9e9005e666bab4c841d896a79bca588da96b2257a9dd332e0613c4",
+      "publishedSha256": "5890a79c4e9e9005e666bab4c841d896a79bca588da96b2257a9dd332e0613c4",
+      "sourceBytes": 368,
+      "publishedBytes": 368,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-verification/privacy-selection.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-verification/privacy-selection.json",
+      "sourceSha256": "49b37c283c01c4dd0a9505bf96464effee57cd18f5f14504c9759b414300acdc",
+      "publishedSha256": "49b37c283c01c4dd0a9505bf96464effee57cd18f5f14504c9759b414300acdc",
+      "sourceBytes": 4329,
+      "publishedBytes": 4329,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-verification/verification.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-verification/verification.json",
+      "sourceSha256": "67b50e4a1ba4d3b237f3eafe7d034df96c47ca65c1a99a9219e67360beabf6a0",
+      "publishedSha256": "67b50e4a1ba4d3b237f3eafe7d034df96c47ca65c1a99a9219e67360beabf6a0",
+      "sourceBytes": 14472,
+      "publishedBytes": 14472,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "integration-verification/verify_integration.py",
+      "sourcePath": ".omx/qa/submission-v24/integration-verification/verify_integration.py",
+      "sourceSha256": "669186b64d16700f49f94db980b42f5720562e05fcc9046cc16ccc1462bff2e5",
+      "publishedSha256": "ca3016c23b68669ff37384689c116cc1259afc435ca3b780b43f7af43349b508",
+      "sourceBytes": 22708,
+      "publishedBytes": 22711,
+      "transformations": [
+        "local-home-path-redacted"
+      ],
+      "byteIdentical": false
+    },
+    {
+      "publishedPath": "preparation/integration-contract.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-contract.json",
+      "sourceSha256": "a9a04ba122c4e5009a7e5aa6b450d6a931214b5847608180db74f11da85651c7",
+      "publishedSha256": "a9a04ba122c4e5009a7e5aa6b450d6a931214b5847608180db74f11da85651c7",
+      "sourceBytes": 10121,
+      "publishedBytes": 10121,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "preparation/integration-preparation.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-preparation.json",
+      "sourceSha256": "e388effaf0cc616c150e16e60e9359cc98084a229683d5c8340bcf83326d4c70",
+      "publishedSha256": "e388effaf0cc616c150e16e60e9359cc98084a229683d5c8340bcf83326d4c70",
+      "sourceBytes": 1999,
+      "publishedBytes": 1999,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "preparation/integration-static-review.json",
+      "sourcePath": ".omx/qa/submission-v24/integration-static-review.json",
+      "sourceSha256": "11cfeb2af79be4fff95d23d01ea1ab1219ce19d5bc698704ab01bca511091408",
+      "publishedSha256": "11cfeb2af79be4fff95d23d01ea1ab1219ce19d5bc698704ab01bca511091408",
+      "sourceBytes": 14195,
+      "publishedBytes": 14195,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "verification/root-media-privacy-review.json",
+      "sourcePath": ".omx/qa/submission-v24/media-privacy/root-review.json",
+      "sourceSha256": "fb0ba176f74da2b2c8e138be36d2256571a46f76e5867c0cb58fc185814d0b5e",
+      "publishedSha256": "fb0ba176f74da2b2c8e138be36d2256571a46f76e5867c0cb58fc185814d0b5e",
+      "sourceBytes": 1468,
+      "publishedBytes": 1468,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "reproduction/source-dependencies/driving_audio_probe.py",
+      "sourcePath": ".omx/qa/submission-v23/driving_audio_probe.py",
+      "sourceSha256": "591a376c45a979359b891c17cff973b4f54349f861631137e322590766600177",
+      "publishedSha256": "591a376c45a979359b891c17cff973b4f54349f861631137e322590766600177",
+      "sourceBytes": 42160,
+      "publishedBytes": 42160,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "reproduction/source-dependencies/known_boundary_probe.py",
+      "sourcePath": ".omx/qa/submission-v22/known_boundary_probe.py",
+      "sourceSha256": "5bba3f6a74d16c89a30ee4afbaf0479b23c010059fb7a5fc852705032a6c3b7e",
+      "publishedSha256": "5bba3f6a74d16c89a30ee4afbaf0479b23c010059fb7a5fc852705032a6c3b7e",
+      "sourceBytes": 34207,
+      "publishedBytes": 34207,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "reproduction/source-dependencies/runtime_avd_probe.py",
+      "sourcePath": ".omx/qa/submission-v22/runtime_avd_probe.py",
+      "sourceSha256": "08b6be9ed1287508c8bcee21906bfc556dc5ff78f41a8bed50a761dc29291ae6",
+      "publishedSha256": "08b6be9ed1287508c8bcee21906bfc556dc5ff78f41a8bed50a761dc29291ae6",
+      "sourceBytes": 28292,
+      "publishedBytes": 28292,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "reproduction/source-dependencies/known_answer_probe.py",
+      "sourcePath": ".omx/qa/submission-v22/known_answer_probe.py",
+      "sourceSha256": "20d23504aa7412c3e70c8ca0c8d64c201bc8a09103a058314597bafa9f33bcc2",
+      "publishedSha256": "20d23504aa7412c3e70c8ca0c8d64c201bc8a09103a058314597bafa9f33bcc2",
+      "sourceBytes": 29008,
+      "publishedBytes": 29008,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "reproduction/source-dependencies/run_matrix.py",
+      "sourcePath": ".omx/qa/audio-feasibility/run_matrix.py",
+      "sourceSha256": "c2e0cc183bb7d2a356047353da809b5fa0d17b4c8503564823f6375446a4519a",
+      "publishedSha256": "c2a05b2730f5469a258bc5504636584a48b219b170da38706228ea0bfddb7af4",
+      "sourceBytes": 16123,
+      "publishedBytes": 16119,
+      "transformations": [
+        "local-home-path-redacted"
+      ],
+      "byteIdentical": false
+    },
+    {
+      "publishedPath": "reproduction/source-dependencies/capture_emulator_audio.py",
+      "sourcePath": ".omx/qa/audio-feasibility/capture_emulator_audio.py",
+      "sourceSha256": "2068e35223a8dabc0e9c9c214748e7c56acfb4caff93f7aadedff571f92bcc96",
+      "publishedSha256": "2068e35223a8dabc0e9c9c214748e7c56acfb4caff93f7aadedff571f92bcc96",
+      "sourceBytes": 14280,
+      "publishedBytes": 14280,
+      "transformations": [],
+      "byteIdentical": true
+    },
+    {
+      "publishedPath": "README.md",
+      "sourcePath": null,
+      "sourceSha256": null,
+      "publishedSha256": "d68127c428b98acfbf61d7b77a918404b382df61170b664f19a062ea2a0e9ba0",
+      "sourceBytes": null,
+      "publishedBytes": 5665,
+      "transformations": [
+        "new publication explanation; final status wording; no source file"
+      ],
+      "byteIdentical": null
+    },
+    {
+      "publishedPath": "reproduction/README.md",
+      "sourcePath": null,
+      "sourceSha256": null,
+      "publishedSha256": "48616b8839d15806f28a045aa718224e2e16281732a92cbf43354e379c6ef8e0",
+      "sourceBytes": null,
+      "publishedBytes": 2291,
+      "transformations": [
+        "new publication explanation or offline integrity checker"
+      ],
+      "byteIdentical": null
+    },
+    {
+      "publishedPath": "reproduction/verify_bundle.py",
+      "sourcePath": null,
+      "sourceSha256": null,
+      "publishedSha256": "b15c175724d17a71fb465f93d1788d81cc6b0236da36427fe0e20880d5cd6555",
+      "sourceBytes": null,
+      "publishedBytes": 3515,
+      "transformations": [
+        "new publication explanation or offline integrity checker"
+      ],
+      "byteIdentical": null
+    }
+  ],
+  "limits": [
+    "Original overall false and four false fields unchanged.",
+    "47.010729 seconds of sparse PCM over 179.977896 seconds wall time; no continuous 180-second recording claim.",
+    "Native speech attribution, actual acoustic overlap and audio focus priority remain unverified.",
+    "57 offline consistency checks are not application tests or integration PASS.",
+    "No app/docs or submission copy, media edit, capture rerun, ADB or APK mutation performed."
+  ],
+  "status": "PUBLICATION_READY",
+  "preparedFromManifestSha256": "b524ef7f4f6e57ed67eb6fbfa84a6130cc92fbc76dc23e9ed212360be3450c68",
+  "preparedFromReadmeSha256": "e2eb0433d82b44a04d75184a9d1add014fe86f7010dedd36e30d68d836c90aec"
+}

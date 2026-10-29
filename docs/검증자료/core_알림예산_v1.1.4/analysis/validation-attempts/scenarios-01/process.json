@@ -1,0 +1,29 @@
+{
+  "command": [
+    "./gradlew",
+    "--offline",
+    "--no-configuration-cache",
+    "--no-daemon",
+    "-PincludePleos=false",
+    "--project-cache-dir",
+    "<PROJECT>/.omx/qa/submission-v24/alert-analysis/gradle-project-cache",
+    "-I",
+    "<PROJECT>/.omx/qa/submission-v24/alert-analysis/analysis.init.gradle",
+    "-Pv24RunId=reviewed-01",
+    "-Pv24AllowScenarios=true",
+    ":core:v24AlertRun"
+  ],
+  "cwd": "<PROJECT>/app",
+  "JAVA_HOME": "<JDK17_HOME>",
+  "started_utc": "2026-10-29T19:05:34.488270+00:00",
+  "scenario_execution_authorized": true,
+  "planned_cases": 54,
+  "attempt": 1,
+  "freeze_sha256": "8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4",
+  "exit_code": 0,
+  "finished_utc": "2026-10-29T19:05:40.848940+00:00",
+  "existing_reports_unchanged": true,
+  "existing_report_files": 84,
+  "app_state_unchanged": true,
+  "freeze_unchanged": true
+}

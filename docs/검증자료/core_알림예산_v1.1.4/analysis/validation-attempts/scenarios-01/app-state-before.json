@@ -1,0 +1,19 @@
+{
+  "head": {
+    "sha256": "4ce3121b2c635def18458a6fd51ff163c387fa31d132442f7c3a775439aeab39",
+    "bytes": 41,
+    "commit": "34701484846ddb0a1f6e2255110c2e5e9b9ecffa"
+  },
+  "status": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "index": {
+    "sha256": "7e01d5c5dbc9b9e30612e4bee40b4c11533d73d929593fec37c59aa19f9037c1",
+    "bytes": 189699
+  },
+  "diff_raw": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  }
+}

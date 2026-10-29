@@ -1,0 +1,17 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:compileKotlin FROM-CACHE
+> Task :core:compileJava NO-SOURCE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:processAlertAnalysisResources NO-SOURCE
+> Task :core:compileAlertAnalysisKotlin
+> Task :core:compileAlertAnalysisJava NO-SOURCE
+> Task :core:alertAnalysisClasses UP-TO-DATE
+
+> Task :core:v24AlertSelftest
+Self-tests PASS; scenario cases executed: 0; freeze=8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4
+
+BUILD SUCCESSFUL in 8s
+3 actionable tasks: 2 executed, 1 from cache

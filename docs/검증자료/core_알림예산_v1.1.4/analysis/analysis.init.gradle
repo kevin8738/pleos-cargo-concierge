@@ -1,0 +1,35 @@
+// External QA only. No app source or existing test-report output is modified.
+def lane = new File(gradle.startParameter.currentDir, '../.omx/qa/submission-v24/alert-analysis').canonicalFile
+if (!lane.isDirectory()) throw new GradleException('Run the wrapper from app/; QA lane not found')
+gradle.beforeProject { p ->
+    def label = p.path == ':' ? 'root' : p.path.substring(1).replace(':', '_')
+    p.layout.buildDirectory.set(new File(lane, "gradle-build/${label}"))
+}
+gradle.projectsEvaluated {
+    def core = gradle.rootProject.project(':core')
+    def analysis = core.sourceSets.create('alertAnalysis')
+    core.kotlin.sourceSets.getByName('alertAnalysis').kotlin.srcDir(new File(lane, 'src'))
+    analysis.compileClasspath += core.sourceSets.main.output
+    analysis.runtimeClasspath += core.sourceSets.main.output
+    core.configurations.getByName(analysis.implementationConfigurationName).extendsFrom(core.configurations.implementation)
+    core.configurations.getByName(analysis.runtimeOnlyConfigurationName).extendsFrom(core.configurations.runtimeOnly)
+    ['v24AlertSelftest': 'selftest', 'v24AlertRun': 'run'].each { taskName, mode ->
+        core.tasks.register(taskName, JavaExec) { t ->
+            t.group = 'verification'
+            t.description = "Isolated v24 synthetic request analysis: ${mode}"
+            t.dependsOn(core.tasks.named(analysis.classesTaskName))
+            t.classpath = analysis.runtimeClasspath
+            t.mainClass.set('v24.alerts.AlertAnalysisKt')
+            def runId = core.providers.gradleProperty('v24RunId').getOrElse('reviewed-01')
+            if (!(runId ==~ /[a-zA-Z0-9_-]+/)) throw new GradleException('Invalid v24RunId')
+            t.args(mode, lane.absolutePath, runId)
+            t.workingDir(lane)
+            t.doFirst {
+                if (!gradle.startParameter.offline) throw new GradleException('--offline is required')
+                if (mode == 'run' && core.providers.gradleProperty('v24AllowScenarios').getOrElse('false') != 'true') {
+                    throw new GradleException('Scenario execution needs root instruction and -Pv24AllowScenarios=true')
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,850 @@
+{
+  "schema": "v24-alert-publication-1",
+  "publication_status": "FINALIZED_PUBLICATION_READY",
+  "scope": "D assumptions / C deterministic calculations; no actual audio or field observations",
+  "cases": 54,
+  "freeze_sha256": "8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4",
+  "source_summary_sha256": "81da3fa0ae648ea68a6042198fcd3338193a02489d6f796c3dbd8e2a22f023bf",
+  "source_result_manifest_sha256": "09cf3e96030a36951aadd392ed0434db365f4c074cd580e765871be837442f86",
+  "independent_audit_sha256": "7a5b8195afad542bdd805c76ebd2e44be969a3469a56617de94cf1ebefd0b8f7",
+  "preparation_script_sha256": "ce890db6db9af5423f07696c5f1a8a2028f2bcc46625f78dff0d1ee1ee85fcdf",
+  "managed_files_excluding_this_manifest": 90,
+  "bundle_file_count_including_this_manifest": 91,
+  "selected_original_files": 141,
+  "event_archive": {
+    "path": "raw/events-reviewed-01.zip",
+    "sha256": "c63a5fd9e07f50bb7789803450d183ab64d46532f1abebb04769231ed39121dc",
+    "members": 54,
+    "member_manifest": "raw/events-member-manifest.json"
+  },
+  "privacy": {
+    "text_files_scanned": 88,
+    "event_members_scanned": 54,
+    "sensitive_pattern_matches": 0,
+    "credentials_opened": false,
+    "excluded": [
+      "build/cache",
+      "original host paths",
+      "original environment values",
+      "credentials"
+    ]
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "source": null,
+      "published_sha256": "9aa0861b3aa6b81aeeb67bc3ad01f9032d9ee312306f9208d1b057334d8fc025",
+      "published_bytes": 11337,
+      "transformation": "authored_summary_from_all_54_cases; preparation_status_finalized"
+    },
+    {
+      "path": "analysis/RUN.md",
+      "source": ".omx/qa/submission-v24/alert-analysis/RUN.md",
+      "source_sha256": "653f496156670e763187e7055d42953c313a6201dfdb1c62ed7ee91452f866bc",
+      "published_sha256": "653f496156670e763187e7055d42953c313a6201dfdb1c62ed7ee91452f866bc",
+      "source_bytes": 1923,
+      "published_bytes": 1923,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/analysis.init.gradle",
+      "source": ".omx/qa/submission-v24/alert-analysis/analysis.init.gradle",
+      "source_sha256": "56dcb2ba83ad4ccd8186e5630eef01dac5415001297976901e03e97d0efe0a8c",
+      "published_sha256": "56dcb2ba83ad4ccd8186e5630eef01dac5415001297976901e03e97d0efe0a8c",
+      "source_bytes": 2180,
+      "published_bytes": 2180,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/frozen-files.tsv",
+      "source": ".omx/qa/submission-v24/alert-analysis/frozen-files.tsv",
+      "source_sha256": "8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4",
+      "published_sha256": "8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4",
+      "source_bytes": 5064,
+      "published_bytes": 5064,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs.sha256",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs.sha256",
+      "source_sha256": "969d31e8a6c8e659593a30988517070eee5621ecf8cf98e8e23ca69785796ef5",
+      "published_sha256": "969d31e8a6c8e659593a30988517070eee5621ecf8cf98e8e23ca69785796ef5",
+      "source_bytes": 584,
+      "published_bytes": 584,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs/gentle_100ms.csv",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs/gentle_100ms.csv",
+      "source_sha256": "2b6602997ece90eb3eb48624012a7236694abb5919dd6b2fac623326ee9aaac6",
+      "published_sha256": "2b6602997ece90eb3eb48624012a7236694abb5919dd6b2fac623326ee9aaac6",
+      "source_bytes": 51577,
+      "published_bytes": 51577,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs/hard_brake_100ms.csv",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs/hard_brake_100ms.csv",
+      "source_sha256": "6af72baa072f36c05120dff5832fda316e94ec1d152f5b73321e9e027a8ef89c",
+      "published_sha256": "6af72baa072f36c05120dff5832fda316e94ec1d152f5b73321e9e027a8ef89c",
+      "source_bytes": 50903,
+      "published_bytes": 50903,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs/repeated_boundary_100ms.csv",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs/repeated_boundary_100ms.csv",
+      "source_sha256": "82638b76f7f2a90ae89c3c607ac3f4268a3b4a80cfca5002a57d83e519aaa6b8",
+      "published_sha256": "82638b76f7f2a90ae89c3c607ac3f4268a3b4a80cfca5002a57d83e519aaa6b8",
+      "source_bytes": 50795,
+      "published_bytes": 50795,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs/repeated_boundary_250ms.csv",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs/repeated_boundary_250ms.csv",
+      "source_sha256": "45b141f1eed72f65389f8889adb0604d1081e3ddefcf12307e707454ced34332",
+      "published_sha256": "45b141f1eed72f65389f8889adb0604d1081e3ddefcf12307e707454ced34332",
+      "source_bytes": 20369,
+      "published_bytes": 20369,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs/repeated_boundary_50ms.csv",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs/repeated_boundary_50ms.csv",
+      "source_sha256": "e3c680acdfd32150bfbae5d7f5e051fb0f6ba6c7360de7055ac3719a6192d653",
+      "published_sha256": "e3c680acdfd32150bfbae5d7f5e051fb0f6ba6c7360de7055ac3719a6192d653",
+      "source_bytes": 101512,
+      "published_bytes": 101512,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/inputs/sustained_over_100ms.csv",
+      "source": ".omx/qa/submission-v24/alert-analysis/inputs/sustained_over_100ms.csv",
+      "source_sha256": "457c457228ea7d4f4470c9174cc4d8e1d3b1c2a917a6c3691856c255c1b8dac9",
+      "published_sha256": "457c457228ea7d4f4470c9174cc4d8e1d3b1c2a917a6c3691856c255c1b8dac9",
+      "source_bytes": 52032,
+      "published_bytes": 52032,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/result-manifest.tsv",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/result-manifest.tsv",
+      "source_sha256": "09cf3e96030a36951aadd392ed0434db365f4c074cd580e765871be837442f86",
+      "published_sha256": "09cf3e96030a36951aadd392ed0434db365f4c074cd580e765871be837442f86",
+      "source_bytes": 12710,
+      "published_bytes": 12710,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/CAKE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/CAKE/summary.json",
+      "source_sha256": "a4c10083bd7c36af2b094b9eecbf42bd832bed926af05a1d9d65d740c9afda73",
+      "published_sha256": "a4c10083bd7c36af2b094b9eecbf42bd832bed926af05a1d9d65d740c9afda73",
+      "source_bytes": 1307,
+      "published_bytes": 1307,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/COFFEE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/COFFEE/summary.json",
+      "source_sha256": "69045757ed987217611edddcff98707027bb23664cafb3f09787b10d4a8a04fd",
+      "published_sha256": "69045757ed987217611edddcff98707027bb23664cafb3f09787b10d4a8a04fd",
+      "source_bytes": 1309,
+      "published_bytes": 1309,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/ELECTRONICS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/ELECTRONICS/summary.json",
+      "source_sha256": "8de01d9569321f90527cdf4f0c935d33112a4d03def9b20d8f8107be61748b0a",
+      "published_sha256": "8de01d9569321f90527cdf4f0c935d33112a4d03def9b20d8f8107be61748b0a",
+      "source_bytes": 1314,
+      "published_bytes": 1314,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/FLOWERS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/FLOWERS/summary.json",
+      "source_sha256": "b70bde7a85ce8eb62e7d83d1856d6d4cb858d66f1d2b3a4a2a81501fc5ec3f3b",
+      "published_sha256": "b70bde7a85ce8eb62e7d83d1856d6d4cb858d66f1d2b3a4a2a81501fc5ec3f3b",
+      "source_bytes": 1309,
+      "published_bytes": 1309,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/FRAGILE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/FRAGILE/summary.json",
+      "source_sha256": "9e82e1e533da1c748e79d8658e939e6f32f6ed15922e425498a2ddc64c0d5726",
+      "published_sha256": "9e82e1e533da1c748e79d8658e939e6f32f6ed15922e425498a2ddc64c0d5726",
+      "source_bytes": 1310,
+      "published_bytes": 1310,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/GENERAL/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/GENERAL/summary.json",
+      "source_sha256": "48e68f44613e9d2e84f7c008cd11d4effeddf144b38a2b3ca692daabc1de302f",
+      "published_sha256": "48e68f44613e9d2e84f7c008cd11d4effeddf144b38a2b3ca692daabc1de302f",
+      "source_bytes": 1309,
+      "published_bytes": 1309,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/GROCERIES/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/GROCERIES/summary.json",
+      "source_sha256": "3c03d3decc3b27513d15f4b61ecdbff78af406a3946762a2e46d1173a908aae3",
+      "published_sha256": "3c03d3decc3b27513d15f4b61ecdbff78af406a3946762a2e46d1173a908aae3",
+      "source_bytes": 1312,
+      "published_bytes": 1312,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/HOT_FOOD/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/HOT_FOOD/summary.json",
+      "source_sha256": "984b580a0df87e367775386e5f1ab5ded20213111c6ed91eb65bef257666c2c5",
+      "published_sha256": "984b580a0df87e367775386e5f1ab5ded20213111c6ed91eb65bef257666c2c5",
+      "source_bytes": 1311,
+      "published_bytes": 1311,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/gentle_100ms/PET/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/PET/summary.json",
+      "source_sha256": "159fe4a2fb8290b76c70ba80bd9a1e0c93ce829739ba7ce265b38f640cf46435",
+      "published_sha256": "159fe4a2fb8290b76c70ba80bd9a1e0c93ce829739ba7ce265b38f640cf46435",
+      "source_bytes": 1305,
+      "published_bytes": 1305,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/CAKE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/CAKE/summary.json",
+      "source_sha256": "4f689dd1a82ec2fb107849c413f7371d3034a9405385a3c20499b2dc9d36ed30",
+      "published_sha256": "4f689dd1a82ec2fb107849c413f7371d3034a9405385a3c20499b2dc9d36ed30",
+      "source_bytes": 1431,
+      "published_bytes": 1431,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/COFFEE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/COFFEE/summary.json",
+      "source_sha256": "0ae931c7f6e167a70f0eb0493478710767dd125a7c46343dba75bab11182994b",
+      "published_sha256": "0ae931c7f6e167a70f0eb0493478710767dd125a7c46343dba75bab11182994b",
+      "source_bytes": 1433,
+      "published_bytes": 1433,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/ELECTRONICS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/ELECTRONICS/summary.json",
+      "source_sha256": "42805b13ea0d3900b1d1cd8e22179066a7afea1d22b6e982401bc3476ff7477d",
+      "published_sha256": "42805b13ea0d3900b1d1cd8e22179066a7afea1d22b6e982401bc3476ff7477d",
+      "source_bytes": 1438,
+      "published_bytes": 1438,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/FLOWERS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/FLOWERS/summary.json",
+      "source_sha256": "60c5841c0755f516ffedf24280b13aa8d415eed6f04aed25d5b81bf6a82f7534",
+      "published_sha256": "60c5841c0755f516ffedf24280b13aa8d415eed6f04aed25d5b81bf6a82f7534",
+      "source_bytes": 1433,
+      "published_bytes": 1433,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/FRAGILE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/FRAGILE/summary.json",
+      "source_sha256": "011b75d84eb9be4bb9cb2b3b1fc48914064e8ebf579551e029487603971e566d",
+      "published_sha256": "011b75d84eb9be4bb9cb2b3b1fc48914064e8ebf579551e029487603971e566d",
+      "source_bytes": 1434,
+      "published_bytes": 1434,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/GENERAL/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/GENERAL/summary.json",
+      "source_sha256": "9fc9b952535f85e029fc81df5349e7d1cfc0f2c204548181eb4cedef95c384c9",
+      "published_sha256": "9fc9b952535f85e029fc81df5349e7d1cfc0f2c204548181eb4cedef95c384c9",
+      "source_bytes": 1433,
+      "published_bytes": 1433,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/GROCERIES/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/GROCERIES/summary.json",
+      "source_sha256": "72c0e90fe82770d52fd67b6db861f36082f2a5fbdce11f54aa786423f7a65b8a",
+      "published_sha256": "72c0e90fe82770d52fd67b6db861f36082f2a5fbdce11f54aa786423f7a65b8a",
+      "source_bytes": 1436,
+      "published_bytes": 1436,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/HOT_FOOD/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/HOT_FOOD/summary.json",
+      "source_sha256": "68184c2b892f00ddf4e9bb5d5dc6e7da3f9d5cd09b1ea79022d3a44840194aab",
+      "published_sha256": "68184c2b892f00ddf4e9bb5d5dc6e7da3f9d5cd09b1ea79022d3a44840194aab",
+      "source_bytes": 1435,
+      "published_bytes": 1435,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/hard_brake_100ms/PET/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/PET/summary.json",
+      "source_sha256": "1304387eef644b1528554d69620492ccd7cdd62c2a14b698bc9971b9c64756a4",
+      "published_sha256": "1304387eef644b1528554d69620492ccd7cdd62c2a14b698bc9971b9c64756a4",
+      "source_bytes": 1429,
+      "published_bytes": 1429,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/CAKE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/CAKE/summary.json",
+      "source_sha256": "c927d6193ed1fac17501f3e18a815226cdc66de0f8a016cb52179dd58f66c551",
+      "published_sha256": "c927d6193ed1fac17501f3e18a815226cdc66de0f8a016cb52179dd58f66c551",
+      "source_bytes": 1509,
+      "published_bytes": 1509,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/COFFEE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/COFFEE/summary.json",
+      "source_sha256": "116b8f0218bc613dc6b332957439956e562970c6127c76a9942580e573ed711b",
+      "published_sha256": "116b8f0218bc613dc6b332957439956e562970c6127c76a9942580e573ed711b",
+      "source_bytes": 1511,
+      "published_bytes": 1511,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/ELECTRONICS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/ELECTRONICS/summary.json",
+      "source_sha256": "5638ee74adf058b5128462ca97bd355df062a1b550d58ef9dcecbbaae50aca88",
+      "published_sha256": "5638ee74adf058b5128462ca97bd355df062a1b550d58ef9dcecbbaae50aca88",
+      "source_bytes": 1392,
+      "published_bytes": 1392,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/FLOWERS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/FLOWERS/summary.json",
+      "source_sha256": "5739b7e0b1d5eb07b2f1c5566511504a18ce0445965e89836305388b20cf571e",
+      "published_sha256": "5739b7e0b1d5eb07b2f1c5566511504a18ce0445965e89836305388b20cf571e",
+      "source_bytes": 1511,
+      "published_bytes": 1511,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/FRAGILE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/FRAGILE/summary.json",
+      "source_sha256": "eff77b015a359e27f9b89651f8b2097a34dc3ec7f9d81dab988de316b9bc1b4d",
+      "published_sha256": "eff77b015a359e27f9b89651f8b2097a34dc3ec7f9d81dab988de316b9bc1b4d",
+      "source_bytes": 1512,
+      "published_bytes": 1512,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/GENERAL/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/GENERAL/summary.json",
+      "source_sha256": "e3f4a9c9521aca3db71995627b9981f5aa6e895bfd87ae5f5f7ca1c9a2833e4d",
+      "published_sha256": "e3f4a9c9521aca3db71995627b9981f5aa6e895bfd87ae5f5f7ca1c9a2833e4d",
+      "source_bytes": 1511,
+      "published_bytes": 1511,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/GROCERIES/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/GROCERIES/summary.json",
+      "source_sha256": "bc20670c782da2879e7dcdd6838a1730ba1350d8e5fb754848e8ae7c30c94ac4",
+      "published_sha256": "bc20670c782da2879e7dcdd6838a1730ba1350d8e5fb754848e8ae7c30c94ac4",
+      "source_bytes": 1514,
+      "published_bytes": 1514,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/HOT_FOOD/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/HOT_FOOD/summary.json",
+      "source_sha256": "44a22a6b8474c345822722af1c09ed838d24ff5b865f4469ec6a636b7737f115",
+      "published_sha256": "44a22a6b8474c345822722af1c09ed838d24ff5b865f4469ec6a636b7737f115",
+      "source_bytes": 1513,
+      "published_bytes": 1513,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/PET/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/PET/summary.json",
+      "source_sha256": "65aac070060f8fbb5288f235e0220105985823d35fbf9234e2127ef230c78076",
+      "published_sha256": "65aac070060f8fbb5288f235e0220105985823d35fbf9234e2127ef230c78076",
+      "source_bytes": 1507,
+      "published_bytes": 1507,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/CAKE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/CAKE/summary.json",
+      "source_sha256": "e511b1e950478c9161ad47a98351f212e33f2c004020655ab76d99cff75825d8",
+      "published_sha256": "e511b1e950478c9161ad47a98351f212e33f2c004020655ab76d99cff75825d8",
+      "source_bytes": 1459,
+      "published_bytes": 1459,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/COFFEE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/COFFEE/summary.json",
+      "source_sha256": "54417c6b4934ac8af601e3f6acfe55da7b9046f030102ec905c10d44da82f018",
+      "published_sha256": "54417c6b4934ac8af601e3f6acfe55da7b9046f030102ec905c10d44da82f018",
+      "source_bytes": 1507,
+      "published_bytes": 1507,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/ELECTRONICS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/ELECTRONICS/summary.json",
+      "source_sha256": "b76277afb3852ba58176e1bf1e65c13e4706d109f199482c3d368fed1e3646fd",
+      "published_sha256": "b76277afb3852ba58176e1bf1e65c13e4706d109f199482c3d368fed1e3646fd",
+      "source_bytes": 1389,
+      "published_bytes": 1389,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/FLOWERS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/FLOWERS/summary.json",
+      "source_sha256": "829cddee06feeeda66eaebf8cd4d037149d44df424808b4a78ea0d9f34973462",
+      "published_sha256": "829cddee06feeeda66eaebf8cd4d037149d44df424808b4a78ea0d9f34973462",
+      "source_bytes": 1507,
+      "published_bytes": 1507,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/FRAGILE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/FRAGILE/summary.json",
+      "source_sha256": "e132f7598b7baab8084ac4a61974db58d9e1731bdd65fcd926b5c64c5170b3c0",
+      "published_sha256": "e132f7598b7baab8084ac4a61974db58d9e1731bdd65fcd926b5c64c5170b3c0",
+      "source_bytes": 1508,
+      "published_bytes": 1508,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/GENERAL/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/GENERAL/summary.json",
+      "source_sha256": "02429fa0b7a990c7b5d32faa3f0895731343ffb7c79bce5d5eef89798b8c976a",
+      "published_sha256": "02429fa0b7a990c7b5d32faa3f0895731343ffb7c79bce5d5eef89798b8c976a",
+      "source_bytes": 1507,
+      "published_bytes": 1507,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/GROCERIES/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/GROCERIES/summary.json",
+      "source_sha256": "f9811404fbe9f465b5f62b0509c923c258993a815e5ce3579c05c350fa4ea233",
+      "published_sha256": "f9811404fbe9f465b5f62b0509c923c258993a815e5ce3579c05c350fa4ea233",
+      "source_bytes": 1464,
+      "published_bytes": 1464,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/HOT_FOOD/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/HOT_FOOD/summary.json",
+      "source_sha256": "84d6a1744911e6806a52e2d2b1a7651a8644e8c197e7a72149da62b5aa33ed55",
+      "published_sha256": "84d6a1744911e6806a52e2d2b1a7651a8644e8c197e7a72149da62b5aa33ed55",
+      "source_bytes": 1509,
+      "published_bytes": 1509,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/PET/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/PET/summary.json",
+      "source_sha256": "b8c4714936657ee6c883c6f4f72ff01e2db9a9e8761e8157e34d55a0eb232803",
+      "published_sha256": "b8c4714936657ee6c883c6f4f72ff01e2db9a9e8761e8157e34d55a0eb232803",
+      "source_bytes": 1503,
+      "published_bytes": 1503,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/CAKE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/CAKE/summary.json",
+      "source_sha256": "b20f992a24de1c6a50aef6680e4b5b610e7171772c42b0b13b76b1457c33696e",
+      "published_sha256": "b20f992a24de1c6a50aef6680e4b5b610e7171772c42b0b13b76b1457c33696e",
+      "source_bytes": 1510,
+      "published_bytes": 1510,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/COFFEE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/COFFEE/summary.json",
+      "source_sha256": "d9df5f52aad94fc64e3eb09e3a8e58f2d8d5c4681fa96ddb5cc9e6b5ffdb9b0a",
+      "published_sha256": "d9df5f52aad94fc64e3eb09e3a8e58f2d8d5c4681fa96ddb5cc9e6b5ffdb9b0a",
+      "source_bytes": 1512,
+      "published_bytes": 1512,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/ELECTRONICS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/ELECTRONICS/summary.json",
+      "source_sha256": "5226c6a46330674b373660d796f92dee1c856c6a49257c6f784e34b51ec6cdcf",
+      "published_sha256": "5226c6a46330674b373660d796f92dee1c856c6a49257c6f784e34b51ec6cdcf",
+      "source_bytes": 1390,
+      "published_bytes": 1390,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/FLOWERS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/FLOWERS/summary.json",
+      "source_sha256": "df6b4244d02fb9078c7f730156377526d401c0bbc93855f449bce51ef994d9c1",
+      "published_sha256": "df6b4244d02fb9078c7f730156377526d401c0bbc93855f449bce51ef994d9c1",
+      "source_bytes": 1512,
+      "published_bytes": 1512,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/FRAGILE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/FRAGILE/summary.json",
+      "source_sha256": "d6cb549e6f0938befdffdfac1bd88920d47f6db1c08f805a0e76e775d7eeae30",
+      "published_sha256": "d6cb549e6f0938befdffdfac1bd88920d47f6db1c08f805a0e76e775d7eeae30",
+      "source_bytes": 1513,
+      "published_bytes": 1513,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/GENERAL/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/GENERAL/summary.json",
+      "source_sha256": "229e8a914c9b3d2e3108bc983849b101f59eb4a2f76131bbd0388e9ca2d30620",
+      "published_sha256": "229e8a914c9b3d2e3108bc983849b101f59eb4a2f76131bbd0388e9ca2d30620",
+      "source_bytes": 1512,
+      "published_bytes": 1512,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/GROCERIES/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/GROCERIES/summary.json",
+      "source_sha256": "7752e4efc67f485f830ca9ec2060d57cbd6a934074c072a7a7253d751ca5fec5",
+      "published_sha256": "7752e4efc67f485f830ca9ec2060d57cbd6a934074c072a7a7253d751ca5fec5",
+      "source_bytes": 1515,
+      "published_bytes": 1515,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/HOT_FOOD/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/HOT_FOOD/summary.json",
+      "source_sha256": "257b772df2cf2f9f878d79aab33210eb089bbae699ce012a3079c88ae96c5278",
+      "published_sha256": "257b772df2cf2f9f878d79aab33210eb089bbae699ce012a3079c88ae96c5278",
+      "source_bytes": 1514,
+      "published_bytes": 1514,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/PET/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/PET/summary.json",
+      "source_sha256": "afa5561d96b9c9cdc00a1a5233735e8db743728776ac62fe63cb0c9529175d1d",
+      "published_sha256": "afa5561d96b9c9cdc00a1a5233735e8db743728776ac62fe63cb0c9529175d1d",
+      "source_bytes": 1508,
+      "published_bytes": 1508,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/CAKE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/CAKE/summary.json",
+      "source_sha256": "8511af9ffc0728349b5a9ec9f64425180e3b468c11f1743a8174d5ee36c62046",
+      "published_sha256": "8511af9ffc0728349b5a9ec9f64425180e3b468c11f1743a8174d5ee36c62046",
+      "source_bytes": 1501,
+      "published_bytes": 1501,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/COFFEE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/COFFEE/summary.json",
+      "source_sha256": "84d47981e415ae48144338802a102c2a0b126b19fbb452d9927e2b3b2eeb6096",
+      "published_sha256": "84d47981e415ae48144338802a102c2a0b126b19fbb452d9927e2b3b2eeb6096",
+      "source_bytes": 1503,
+      "published_bytes": 1503,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/ELECTRONICS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/ELECTRONICS/summary.json",
+      "source_sha256": "65bdf7b8b80ddbf457367b46d280371739163a472c0fb9aeddc9536f7657f3b1",
+      "published_sha256": "65bdf7b8b80ddbf457367b46d280371739163a472c0fb9aeddc9536f7657f3b1",
+      "source_bytes": 1508,
+      "published_bytes": 1508,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/FLOWERS/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/FLOWERS/summary.json",
+      "source_sha256": "b67ac0673a286c0e2b507d250fe95c8f719de4ba827268f6fc594d81b02c65fa",
+      "published_sha256": "b67ac0673a286c0e2b507d250fe95c8f719de4ba827268f6fc594d81b02c65fa",
+      "source_bytes": 1503,
+      "published_bytes": 1503,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/FRAGILE/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/FRAGILE/summary.json",
+      "source_sha256": "0175934f1fd4f3f36ad97752366c900a3a9be9a8d71a36c59dcb2ae54ee6774a",
+      "published_sha256": "0175934f1fd4f3f36ad97752366c900a3a9be9a8d71a36c59dcb2ae54ee6774a",
+      "source_bytes": 1504,
+      "published_bytes": 1504,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/GENERAL/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/GENERAL/summary.json",
+      "source_sha256": "a9577f67aba3bc3d885f4f49f62ea269cca45374edc11bcbddface8033a6c2b9",
+      "published_sha256": "a9577f67aba3bc3d885f4f49f62ea269cca45374edc11bcbddface8033a6c2b9",
+      "source_bytes": 1503,
+      "published_bytes": 1503,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/GROCERIES/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/GROCERIES/summary.json",
+      "source_sha256": "e583a636adc8f3cf02a491ce14cb076b6743e29ce997869d08230e381c4bc1fb",
+      "published_sha256": "e583a636adc8f3cf02a491ce14cb076b6743e29ce997869d08230e381c4bc1fb",
+      "source_bytes": 1506,
+      "published_bytes": 1506,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/HOT_FOOD/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/HOT_FOOD/summary.json",
+      "source_sha256": "849f02639639afb69851eed73763a075777e3b6836e9e02777d9f5d751d367f7",
+      "published_sha256": "849f02639639afb69851eed73763a075777e3b6836e9e02777d9f5d751d367f7",
+      "source_bytes": 1505,
+      "published_bytes": 1505,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/scenarios/sustained_over_100ms/PET/summary.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/PET/summary.json",
+      "source_sha256": "c16a0c82780d2ec3ddc9eead1ba11523a7e260c7503a8aeb987509d19febf093",
+      "published_sha256": "c16a0c82780d2ec3ddc9eead1ba11523a7e260c7503a8aeb987509d19febf093",
+      "source_bytes": 1499,
+      "published_bytes": 1499,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/selftest.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/selftest.json",
+      "source_sha256": "5f44d459d1c57f3e023dc9bfcf3a6039c5d9612433fd5c7657f23ed7024e4325",
+      "published_sha256": "5f44d459d1c57f3e023dc9bfcf3a6039c5d9612433fd5c7657f23ed7024e4325",
+      "source_bytes": 419,
+      "published_bytes": 419,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/out/reviewed-01/summary.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/summary.jsonl",
+      "source_sha256": "81da3fa0ae648ea68a6042198fcd3338193a02489d6f796c3dbd8e2a22f023bf",
+      "published_sha256": "81da3fa0ae648ea68a6042198fcd3338193a02489d6f796c3dbd8e2a22f023bf",
+      "source_bytes": 78539,
+      "published_bytes": 78539,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/prepare_inputs.py",
+      "source": ".omx/qa/submission-v24/alert-analysis/prepare_inputs.py",
+      "source_sha256": "38799e0eedd7a17617d0130b7f1230f9e3cf945f419c68ea04b788ff25918e62",
+      "published_sha256": "38799e0eedd7a17617d0130b7f1230f9e3cf945f419c68ea04b788ff25918e62",
+      "source_bytes": 3730,
+      "published_bytes": 3730,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/root-static-review.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/root-static-review.json",
+      "source_sha256": "dc8bf91a491cc83036d40c6992c6eefc608d056db2ce7b1618ebd4f9f481c048",
+      "published_sha256": "dc8bf91a491cc83036d40c6992c6eefc608d056db2ce7b1618ebd4f9f481c048",
+      "source_bytes": 1124,
+      "published_bytes": 1124,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/spec.md",
+      "source": ".omx/qa/submission-v24/alert-analysis/spec.md",
+      "source_sha256": "e21f6e2be6c13cf2e3a1f9f1ffffa12407e35067aefb7fd1ccdf3e886bf7af66",
+      "published_sha256": "e21f6e2be6c13cf2e3a1f9f1ffffa12407e35067aefb7fd1ccdf3e886bf7af66",
+      "source_bytes": 8344,
+      "published_bytes": 8344,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/src/AlertAnalysis.kt",
+      "source": ".omx/qa/submission-v24/alert-analysis/src/AlertAnalysis.kt",
+      "source_sha256": "5387858a2b5468e4ff3c2b99a5ec0d33a4fdeecf39b8aab84da07c3483ab92fb",
+      "published_sha256": "5387858a2b5468e4ff3c2b99a5ec0d33a4fdeecf39b8aab84da07c3483ab92fb",
+      "source_bytes": 22541,
+      "published_bytes": 22541,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/compile-selftest-01/existing-reports-after.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/compile-selftest-01/existing-reports-after.json",
+      "source_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "published_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "source_bytes": 18821,
+      "published_bytes": 18821,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/compile-selftest-01/existing-reports-before.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/compile-selftest-01/existing-reports-before.json",
+      "source_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "published_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "source_bytes": 18821,
+      "published_bytes": 18821,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/compile-selftest-01/process.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/compile-selftest-01/process.json",
+      "source_sha256": "caf0c32b5c6b30c637d7e134e2643ea11554ab94abe15a7bf04c77a750f40aba",
+      "published_sha256": "b6849fdadc1a0702f5a49fbd58993e31fed14e514713891ee2e70738f4cfc5f8",
+      "source_bytes": 986,
+      "published_bytes": 799,
+      "transformation": "project_and_JDK_path_placeholders"
+    },
+    {
+      "path": "analysis/validation-attempts/compile-selftest-01/stderr.log",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/compile-selftest-01/stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "published_bytes": 0,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/compile-selftest-01/stdout.log",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/compile-selftest-01/stdout.log",
+      "source_sha256": "30423b750345702f0b519e14cf6fe431b1e6c306b1a6272af76933fcc442f059",
+      "published_sha256": "30423b750345702f0b519e14cf6fe431b1e6c306b1a6272af76933fcc442f059",
+      "source_bytes": 891,
+      "published_bytes": 891,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/app-state-after.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/app-state-after.json",
+      "source_sha256": "0c5338b42e93020c6e64e5dc96161405c7da2547533f6a56512daf1870267a5b",
+      "published_sha256": "0c5338b42e93020c6e64e5dc96161405c7da2547533f6a56512daf1870267a5b",
+      "source_bytes": 530,
+      "published_bytes": 530,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/app-state-before.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/app-state-before.json",
+      "source_sha256": "0c5338b42e93020c6e64e5dc96161405c7da2547533f6a56512daf1870267a5b",
+      "published_sha256": "0c5338b42e93020c6e64e5dc96161405c7da2547533f6a56512daf1870267a5b",
+      "source_bytes": 530,
+      "published_bytes": 530,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/existing-reports-after.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/existing-reports-after.json",
+      "source_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "published_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "source_bytes": 18821,
+      "published_bytes": 18821,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/existing-reports-before.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/existing-reports-before.json",
+      "source_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "published_sha256": "57088f966ab6d1f837358f5e9b59bbb3fc087ad3ae48248a95650c6d954e87ca",
+      "source_bytes": 18821,
+      "published_bytes": 18821,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/numeric-summary.md",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/numeric-summary.md",
+      "source_sha256": "3330e620770215f6de1031ffad434c94164019f43ed9ddb906f34b109c065e19",
+      "published_sha256": "3330e620770215f6de1031ffad434c94164019f43ed9ddb906f34b109c065e19",
+      "source_bytes": 6280,
+      "published_bytes": 6280,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/process.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/process.json",
+      "source_sha256": "e1b0cb31e0296372f98ed3bda475d9115fbaa37fd4c4e01790165666b9e40418",
+      "published_sha256": "76e08a01991bd2cbf9fbb077fd800790db1a9190993fba75ecae0988e4e9ba6a",
+      "source_bytes": 1075,
+      "published_bytes": 888,
+      "transformation": "project_and_JDK_path_placeholders"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/saved-output-integrity.json",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/saved-output-integrity.json",
+      "source_sha256": "c1c5da3f485cd2787a51d1e06aa0feb21c54a5ba27210b7f4155432a58159f70",
+      "published_sha256": "c1c5da3f485cd2787a51d1e06aa0feb21c54a5ba27210b7f4155432a58159f70",
+      "source_bytes": 556,
+      "published_bytes": 556,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/stderr.log",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "published_bytes": 0,
+      "transformation": "none"
+    },
+    {
+      "path": "analysis/validation-attempts/scenarios-01/stdout.log",
+      "source": ".omx/qa/submission-v24/alert-analysis/validation-attempts/scenarios-01/stdout.log",
+      "source_sha256": "feaccf730304548c81232fc865ec2eb5c6f79eac3534ed058b43ed44cb35e136",
+      "published_sha256": "feaccf730304548c81232fc865ec2eb5c6f79eac3534ed058b43ed44cb35e136",
+      "source_bytes": 856,
+      "published_bytes": 856,
+      "transformation": "none"
+    },
+    {
+      "path": "raw/events-member-manifest.json",
+      "source": null,
+      "published_sha256": "7dd7fa5460420a959cb81ae2f31d5a3c3499fb0be1c5a3092f53f6042a0cfc43",
+      "published_bytes": 26984,
+      "transformation": "lossless_archive_or_member_manifest"
+    },
+    {
+      "path": "raw/events-reviewed-01.zip",
+      "source": null,
+      "published_sha256": "c63a5fd9e07f50bb7789803450d183ab64d46532f1abebb04769231ed39121dc",
+      "published_bytes": 3665674,
+      "transformation": "lossless_archive_or_member_manifest"
+    },
+    {
+      "path": "verification/alert-independent-reviewed-01.json",
+      "source": ".omx/qa/submission-v24/alert-independent-reviewed-01.json",
+      "source_sha256": "7a5b8195afad542bdd805c76ebd2e44be969a3469a56617de94cf1ebefd0b8f7",
+      "published_sha256": "7a5b8195afad542bdd805c76ebd2e44be969a3469a56617de94cf1ebefd0b8f7",
+      "source_bytes": 18324,
+      "published_bytes": 18324,
+      "transformation": "none"
+    },
+    {
+      "path": "verification/verify_alert_analysis.py",
+      "source": ".omx/qa/submission-v24/verify_alert_analysis.py",
+      "source_sha256": "410c1a86a56bd828fb0dc7a122aae93ea7849d1a890178db28061fe5b3d0d0e6",
+      "published_sha256": "410c1a86a56bd828fb0dc7a122aae93ea7849d1a890178db28061fe5b3d0d0e6",
+      "source_bytes": 7997,
+      "published_bytes": 7997,
+      "transformation": "none"
+    }
+  ],
+  "finalization": {
+    "source_bundle": "bundle/",
+    "destination_bundle": "final-bundle/",
+    "manifest_paths_relative_to": "this_manifest_directory",
+    "source_manifest_sha256": "95e1bf28e90e7690d9e458a8c6ab4c9437406b70cffab3ae052900210c76dfd4",
+    "source_preparation_review_sha256": "b80f19abf34c0b00749a04b7e3dc4f9abacb7ac02072229350a84f381264feb4",
+    "finalization_script_sha256": "cdea6ee91c742ddb4c4c87c245748425a44847478ecacd3155280ff0e9aed9cc",
+    "change_scope": "README preparation-status sentence and publication-manifest metadata only",
+    "original_evidence_and_historical_pre_run_records_unchanged": true,
+    "publication_copy_performed": false,
+    "scenario_rerun": false
+  }
+}

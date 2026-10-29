@@ -1,0 +1,25 @@
+{
+  "command": [
+    "./gradlew",
+    "--offline",
+    "--no-configuration-cache",
+    "--no-daemon",
+    "-PincludePleos=false",
+    "--project-cache-dir",
+    "<PROJECT>/.omx/qa/submission-v24/alert-analysis/gradle-project-cache",
+    "-I",
+    "<PROJECT>/.omx/qa/submission-v24/alert-analysis/analysis.init.gradle",
+    "-Pv24RunId=reviewed-01",
+    ":core:v24AlertSelftest"
+  ],
+  "cwd": "<PROJECT>/app",
+  "JAVA_HOME": "<JDK17_HOME>",
+  "started_utc": "2026-10-29T19:03:29.732321+00:00",
+  "scenario_execution_authorized": false,
+  "freeze_sha256": "8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4",
+  "exit_code": 0,
+  "finished_utc": "2026-10-29T19:03:38.953209+00:00",
+  "existing_reports_unchanged": true,
+  "existing_report_files": 84,
+  "scenario_outputs_exist": false
+}

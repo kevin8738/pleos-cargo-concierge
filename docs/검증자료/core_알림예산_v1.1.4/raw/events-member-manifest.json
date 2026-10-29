@@ -1,0 +1,492 @@
+{
+  "format": "deterministic_lossless_zip",
+  "member_count": 54,
+  "members": [
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/CAKE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/CAKE/events.jsonl",
+      "source_sha256": "6dd1c919c9397b40efc947f96170174dbbf12934df1e25a1514c30004a1eca34",
+      "member_sha256": "6dd1c919c9397b40efc947f96170174dbbf12934df1e25a1514c30004a1eca34",
+      "source_bytes": 2053331,
+      "member_bytes": 2053331,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/COFFEE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/COFFEE/events.jsonl",
+      "source_sha256": "f7859d934dd16691656b1a42c0c5324891cd964f5de86f7af556d13aa12dbc3e",
+      "member_sha256": "f7859d934dd16691656b1a42c0c5324891cd964f5de86f7af556d13aa12dbc3e",
+      "source_bytes": 2053327,
+      "member_bytes": 2053327,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/ELECTRONICS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/ELECTRONICS/events.jsonl",
+      "source_sha256": "9f1ebc672681579b4547ede378e905b9c6153b30bfcc1e8eb59a299d7e80b23d",
+      "member_sha256": "9f1ebc672681579b4547ede378e905b9c6153b30bfcc1e8eb59a299d7e80b23d",
+      "source_bytes": 2053344,
+      "member_bytes": 2053344,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/FLOWERS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/FLOWERS/events.jsonl",
+      "source_sha256": "07c0eabd0d1c5785b7747d0022468786f342d6c48a9030fbfc9bf5669d62249f",
+      "member_sha256": "07c0eabd0d1c5785b7747d0022468786f342d6c48a9030fbfc9bf5669d62249f",
+      "source_bytes": 2053322,
+      "member_bytes": 2053322,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/FRAGILE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/FRAGILE/events.jsonl",
+      "source_sha256": "6cc9fa04fb5977c69c819fc2d8af0f402195bc193905fb583d602be37abee1e8",
+      "member_sha256": "6cc9fa04fb5977c69c819fc2d8af0f402195bc193905fb583d602be37abee1e8",
+      "source_bytes": 2053362,
+      "member_bytes": 2053362,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/GENERAL/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/GENERAL/events.jsonl",
+      "source_sha256": "2ab35160b7f1848920febdf4b93e1534eb455ff0d53ac2d1f49c80eb19f57ae0",
+      "member_sha256": "2ab35160b7f1848920febdf4b93e1534eb455ff0d53ac2d1f49c80eb19f57ae0",
+      "source_bytes": 2053336,
+      "member_bytes": 2053336,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/GROCERIES/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/GROCERIES/events.jsonl",
+      "source_sha256": "a419782e61ee7520a49c4287a8a04e91aa2d5ab7ec3c598e7a621e4a4b0eef9e",
+      "member_sha256": "a419782e61ee7520a49c4287a8a04e91aa2d5ab7ec3c598e7a621e4a4b0eef9e",
+      "source_bytes": 2053336,
+      "member_bytes": 2053336,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/HOT_FOOD/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/HOT_FOOD/events.jsonl",
+      "source_sha256": "213595f711408c9f725b34d50f4afc98333fc3be85811a4d37510a33877262dc",
+      "member_sha256": "213595f711408c9f725b34d50f4afc98333fc3be85811a4d37510a33877262dc",
+      "source_bytes": 2053349,
+      "member_bytes": 2053349,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/gentle_100ms/PET/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/gentle_100ms/PET/events.jsonl",
+      "source_sha256": "0ce869632263a8a239a19abcc679f0fc645b393cfabcbe09c2aef7d8fa6a37f9",
+      "member_sha256": "0ce869632263a8a239a19abcc679f0fc645b393cfabcbe09c2aef7d8fa6a37f9",
+      "source_bytes": 2053336,
+      "member_bytes": 2053336,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/CAKE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/CAKE/events.jsonl",
+      "source_sha256": "1963dd863aba7bc410db29b4929568ba5ada09b5fc8a8ec46cc67447d2410e92",
+      "member_sha256": "1963dd863aba7bc410db29b4929568ba5ada09b5fc8a8ec46cc67447d2410e92",
+      "source_bytes": 2031583,
+      "member_bytes": 2031583,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/COFFEE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/COFFEE/events.jsonl",
+      "source_sha256": "0c472f893bebfed0d7a0c58cc17400736b19ef70745831f4824e47cf0fcf3a5a",
+      "member_sha256": "0c472f893bebfed0d7a0c58cc17400736b19ef70745831f4824e47cf0fcf3a5a",
+      "source_bytes": 2031576,
+      "member_bytes": 2031576,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/ELECTRONICS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/ELECTRONICS/events.jsonl",
+      "source_sha256": "0486acc75c3e6bc29dc002fd36c5b1dcb8f57df8d116c6f1adbc5e841fd8cb4f",
+      "member_sha256": "0486acc75c3e6bc29dc002fd36c5b1dcb8f57df8d116c6f1adbc5e841fd8cb4f",
+      "source_bytes": 2031571,
+      "member_bytes": 2031571,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/FLOWERS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/FLOWERS/events.jsonl",
+      "source_sha256": "aec99aa17f2ef9dfcb037b061a4c10abe581b97b57a978f2d00e9916a76b1ed5",
+      "member_sha256": "aec99aa17f2ef9dfcb037b061a4c10abe581b97b57a978f2d00e9916a76b1ed5",
+      "source_bytes": 2031546,
+      "member_bytes": 2031546,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/FRAGILE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/FRAGILE/events.jsonl",
+      "source_sha256": "346a178ab539c7be629f7117e111d3f17d347284dee02ef814d48d49054e3867",
+      "member_sha256": "346a178ab539c7be629f7117e111d3f17d347284dee02ef814d48d49054e3867",
+      "source_bytes": 2031611,
+      "member_bytes": 2031611,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/GENERAL/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/GENERAL/events.jsonl",
+      "source_sha256": "103bd0dc57e4859c700fe0a17074cb9a87f46d8c1c8f1c48891d2542e8020d53",
+      "member_sha256": "103bd0dc57e4859c700fe0a17074cb9a87f46d8c1c8f1c48891d2542e8020d53",
+      "source_bytes": 2031560,
+      "member_bytes": 2031560,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/GROCERIES/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/GROCERIES/events.jsonl",
+      "source_sha256": "a0372f5dd2c55ab5dba4a98411cf6198301f90edd40e2d9eab3a53a7b93b6042",
+      "member_sha256": "a0372f5dd2c55ab5dba4a98411cf6198301f90edd40e2d9eab3a53a7b93b6042",
+      "source_bytes": 2031591,
+      "member_bytes": 2031591,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/HOT_FOOD/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/HOT_FOOD/events.jsonl",
+      "source_sha256": "92afa3169eb75c613918d77efbe78b9f20e9e6b637422cd713ac3e49875711d3",
+      "member_sha256": "92afa3169eb75c613918d77efbe78b9f20e9e6b637422cd713ac3e49875711d3",
+      "source_bytes": 2031598,
+      "member_bytes": 2031598,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/hard_brake_100ms/PET/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/hard_brake_100ms/PET/events.jsonl",
+      "source_sha256": "e5cfb9e5b7d656679679d4c0232029a084ccb8ba050f7143624ad586e5dbbb39",
+      "member_sha256": "e5cfb9e5b7d656679679d4c0232029a084ccb8ba050f7143624ad586e5dbbb39",
+      "source_bytes": 2031569,
+      "member_bytes": 2031569,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/CAKE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/CAKE/events.jsonl",
+      "source_sha256": "57b5a8b721a95fe8e42a73bacfc0612cad5880f7de4a921d5ae1bdfa662b5736",
+      "member_sha256": "57b5a8b721a95fe8e42a73bacfc0612cad5880f7de4a921d5ae1bdfa662b5736",
+      "source_bytes": 2032204,
+      "member_bytes": 2032204,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/COFFEE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/COFFEE/events.jsonl",
+      "source_sha256": "5cff6b59f5ca3489c3f84ca9506cef7e9118e168ab6be3d48d9f84c10556ab37",
+      "member_sha256": "5cff6b59f5ca3489c3f84ca9506cef7e9118e168ab6be3d48d9f84c10556ab37",
+      "source_bytes": 2032932,
+      "member_bytes": 2032932,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/ELECTRONICS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/ELECTRONICS/events.jsonl",
+      "source_sha256": "c941252d543745a09c4837466dc86627ea6bb9d6aad166a0422b98181f3c542e",
+      "member_sha256": "c941252d543745a09c4837466dc86627ea6bb9d6aad166a0422b98181f3c542e",
+      "source_bytes": 2020461,
+      "member_bytes": 2020461,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/FLOWERS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/FLOWERS/events.jsonl",
+      "source_sha256": "64e29e360b4d77a30882f2fc4b2c18c0854e7aa15e710f4ada03c656b21eab95",
+      "member_sha256": "64e29e360b4d77a30882f2fc4b2c18c0854e7aa15e710f4ada03c656b21eab95",
+      "source_bytes": 2030839,
+      "member_bytes": 2030839,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/FRAGILE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/FRAGILE/events.jsonl",
+      "source_sha256": "e84e2785289f6404d6cff29530c5501c9ab3511916dc8631a8d3820e5286e99f",
+      "member_sha256": "e84e2785289f6404d6cff29530c5501c9ab3511916dc8631a8d3820e5286e99f",
+      "source_bytes": 2032967,
+      "member_bytes": 2032967,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/GENERAL/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/GENERAL/events.jsonl",
+      "source_sha256": "8a11e8c3fa0d05856f726122e6e00d97f2f46f5ad288bb7d4304ec59e9e9ea85",
+      "member_sha256": "8a11e8c3fa0d05856f726122e6e00d97f2f46f5ad288bb7d4304ec59e9e9ea85",
+      "source_bytes": 2030853,
+      "member_bytes": 2030853,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/GROCERIES/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/GROCERIES/events.jsonl",
+      "source_sha256": "284c06a019639890dead440657cf7202a674171398946c764a111e8e52d93ae9",
+      "member_sha256": "284c06a019639890dead440657cf7202a674171398946c764a111e8e52d93ae9",
+      "source_bytes": 2032209,
+      "member_bytes": 2032209,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/HOT_FOOD/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/HOT_FOOD/events.jsonl",
+      "source_sha256": "93a637d1c0a8367a47f5f8859a9b945055397fadd0e23c5a2a71458dbba7ba19",
+      "member_sha256": "93a637d1c0a8367a47f5f8859a9b945055397fadd0e23c5a2a71458dbba7ba19",
+      "source_bytes": 2032954,
+      "member_bytes": 2032954,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_100ms/PET/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_100ms/PET/events.jsonl",
+      "source_sha256": "7ac8de33b67208d30733679bc2f306bceec3d31d7b204a3b520ab475bdbcd1e5",
+      "member_sha256": "7ac8de33b67208d30733679bc2f306bceec3d31d7b204a3b520ab475bdbcd1e5",
+      "source_bytes": 2030853,
+      "member_bytes": 2030853,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/CAKE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/CAKE/events.jsonl",
+      "source_sha256": "8f18e14bc5f6be4d91d68c6a01a466c7882f36e9c9495ac9278bda7dd7ba3e59",
+      "member_sha256": "8f18e14bc5f6be4d91d68c6a01a466c7882f36e9c9495ac9278bda7dd7ba3e59",
+      "source_bytes": 941194,
+      "member_bytes": 941194,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/COFFEE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/COFFEE/events.jsonl",
+      "source_sha256": "983fe89771ab6667964762a89f67cae07d55dd634fdccc5aa12664ae3c98f722",
+      "member_sha256": "983fe89771ab6667964762a89f67cae07d55dd634fdccc5aa12664ae3c98f722",
+      "source_bytes": 943232,
+      "member_bytes": 943232,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/ELECTRONICS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/ELECTRONICS/events.jsonl",
+      "source_sha256": "b7d76bc171db8da52623658e1e481f977f0aa64f938d89e189347615b928838d",
+      "member_sha256": "b7d76bc171db8da52623658e1e481f977f0aa64f938d89e189347615b928838d",
+      "source_bytes": 937853,
+      "member_bytes": 937853,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/FLOWERS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/FLOWERS/events.jsonl",
+      "source_sha256": "8f979099787966d2bec075ee87a95738df37520476accf2abcba5e58a36fae9f",
+      "member_sha256": "8f979099787966d2bec075ee87a95738df37520476accf2abcba5e58a36fae9f",
+      "source_bytes": 942495,
+      "member_bytes": 942495,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/FRAGILE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/FRAGILE/events.jsonl",
+      "source_sha256": "41103b1022b54bdc6b4388804b56acdbce8a7d87afbde91c677afd82afbd4f4a",
+      "member_sha256": "41103b1022b54bdc6b4388804b56acdbce8a7d87afbde91c677afd82afbd4f4a",
+      "source_bytes": 943267,
+      "member_bytes": 943267,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/GENERAL/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/GENERAL/events.jsonl",
+      "source_sha256": "7194f67d570644cda1e5a38fd5ed9d375e43b2ca3813eef6a8d9d0ecdad313a3",
+      "member_sha256": "7194f67d570644cda1e5a38fd5ed9d375e43b2ca3813eef6a8d9d0ecdad313a3",
+      "source_bytes": 942509,
+      "member_bytes": 942509,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/GROCERIES/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/GROCERIES/events.jsonl",
+      "source_sha256": "8a2ac1c9c83608b6f48844f7a8560d8f23de94b4e3903679eac0f26b2f360ae9",
+      "member_sha256": "8a2ac1c9c83608b6f48844f7a8560d8f23de94b4e3903679eac0f26b2f360ae9",
+      "source_bytes": 941208,
+      "member_bytes": 941208,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/HOT_FOOD/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/HOT_FOOD/events.jsonl",
+      "source_sha256": "9b87f0f274a9a2eebf9404bb0e2d78241aea37a143065ea1997cf86592ddf0ac",
+      "member_sha256": "9b87f0f274a9a2eebf9404bb0e2d78241aea37a143065ea1997cf86592ddf0ac",
+      "source_bytes": 943254,
+      "member_bytes": 943254,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_250ms/PET/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_250ms/PET/events.jsonl",
+      "source_sha256": "9ca45bbf34517c4a3a7d57bb6e3d955079c210232d9477dd6ffb52e6427d4d57",
+      "member_sha256": "9ca45bbf34517c4a3a7d57bb6e3d955079c210232d9477dd6ffb52e6427d4d57",
+      "source_bytes": 942509,
+      "member_bytes": 942509,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/CAKE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/CAKE/events.jsonl",
+      "source_sha256": "0867fff8dcc79f1a289d222cb1fe9b288ed46cce6314df8b91d7574d79a98212",
+      "member_sha256": "0867fff8dcc79f1a289d222cb1fe9b288ed46cce6314df8b91d7574d79a98212",
+      "source_bytes": 3761308,
+      "member_bytes": 3761308,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/COFFEE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/COFFEE/events.jsonl",
+      "source_sha256": "68865d55483668a24787c564f3506b87694a6b6890ec10fcee978c90311fad10",
+      "member_sha256": "68865d55483668a24787c564f3506b87694a6b6890ec10fcee978c90311fad10",
+      "source_bytes": 3763140,
+      "member_bytes": 3763140,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/ELECTRONICS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/ELECTRONICS/events.jsonl",
+      "source_sha256": "05a5aaff0e54bcc8bd8fd5c5d398918e437440b5f34a5de7fafd3adb65524398",
+      "member_sha256": "05a5aaff0e54bcc8bd8fd5c5d398918e437440b5f34a5de7fafd3adb65524398",
+      "source_bytes": 3738489,
+      "member_bytes": 3738489,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/FLOWERS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/FLOWERS/events.jsonl",
+      "source_sha256": "795b07b0bee368703db421b28dbe614cee929739157db74aa45fe28e3aa2d3b7",
+      "member_sha256": "795b07b0bee368703db421b28dbe614cee929739157db74aa45fe28e3aa2d3b7",
+      "source_bytes": 3758659,
+      "member_bytes": 3758659,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/FRAGILE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/FRAGILE/events.jsonl",
+      "source_sha256": "cfdf6891823477cf5910bf6c2220234fd8d799d8ba7c2f91d06ea50c4ddd46ba",
+      "member_sha256": "cfdf6891823477cf5910bf6c2220234fd8d799d8ba7c2f91d06ea50c4ddd46ba",
+      "source_bytes": 3763175,
+      "member_bytes": 3763175,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/GENERAL/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/GENERAL/events.jsonl",
+      "source_sha256": "55f45f622b73edaddb8cbbe302100cf1afc27627cfc269cc4c7e8ce81565257d",
+      "member_sha256": "55f45f622b73edaddb8cbbe302100cf1afc27627cfc269cc4c7e8ce81565257d",
+      "source_bytes": 3758673,
+      "member_bytes": 3758673,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/GROCERIES/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/GROCERIES/events.jsonl",
+      "source_sha256": "1f1f69997768dd40d49309f71efe481d88bd3e84da44a452c3a61bc87977bc0e",
+      "member_sha256": "1f1f69997768dd40d49309f71efe481d88bd3e84da44a452c3a61bc87977bc0e",
+      "source_bytes": 3761313,
+      "member_bytes": 3761313,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/HOT_FOOD/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/HOT_FOOD/events.jsonl",
+      "source_sha256": "a15c321830b7e9b6d8e0cb120dfa81db37b7cbc772f159a0bc16a3e51329e0c5",
+      "member_sha256": "a15c321830b7e9b6d8e0cb120dfa81db37b7cbc772f159a0bc16a3e51329e0c5",
+      "source_bytes": 3763162,
+      "member_bytes": 3763162,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/repeated_boundary_50ms/PET/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/repeated_boundary_50ms/PET/events.jsonl",
+      "source_sha256": "5dbd6c363cfb08586d13f186baad7c53a809130e5b202a333f844fbe20d9c2c9",
+      "member_sha256": "5dbd6c363cfb08586d13f186baad7c53a809130e5b202a333f844fbe20d9c2c9",
+      "source_bytes": 3758673,
+      "member_bytes": 3758673,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/CAKE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/CAKE/events.jsonl",
+      "source_sha256": "a21afafffb07bcc59d9b9337d4f55282d2767a83e3504dad5881abfab1e98703",
+      "member_sha256": "a21afafffb07bcc59d9b9337d4f55282d2767a83e3504dad5881abfab1e98703",
+      "source_bytes": 2069628,
+      "member_bytes": 2069628,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/COFFEE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/COFFEE/events.jsonl",
+      "source_sha256": "366ec8984a02822790d49f4e0c7f10cec58ce1333e17bcd99225330a315540c8",
+      "member_sha256": "366ec8984a02822790d49f4e0c7f10cec58ce1333e17bcd99225330a315540c8",
+      "source_bytes": 2069741,
+      "member_bytes": 2069741,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/ELECTRONICS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/ELECTRONICS/events.jsonl",
+      "source_sha256": "2b4a9481b118fa12dac0cde6d42703062c0b5c06f272b010a4a9df4bac423635",
+      "member_sha256": "2b4a9481b118fa12dac0cde6d42703062c0b5c06f272b010a4a9df4bac423635",
+      "source_bytes": 2069236,
+      "member_bytes": 2069236,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/FLOWERS/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/FLOWERS/events.jsonl",
+      "source_sha256": "efedb22de256ada6e292333f1f79a8a3047cb60595f897a53a38ae92ac5c6fc2",
+      "member_sha256": "efedb22de256ada6e292333f1f79a8a3047cb60595f897a53a38ae92ac5c6fc2",
+      "source_bytes": 2069382,
+      "member_bytes": 2069382,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/FRAGILE/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/FRAGILE/events.jsonl",
+      "source_sha256": "71a7075ebdfe56fa19a4d6aac5f5db6f6212f512efba2d6fb9b590c1aab5cd16",
+      "member_sha256": "71a7075ebdfe56fa19a4d6aac5f5db6f6212f512efba2d6fb9b590c1aab5cd16",
+      "source_bytes": 2069776,
+      "member_bytes": 2069776,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/GENERAL/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/GENERAL/events.jsonl",
+      "source_sha256": "6318c0647904ee28044bf4f8ad2dd039dd4906d8b6ffad181f5f21466b92a872",
+      "member_sha256": "6318c0647904ee28044bf4f8ad2dd039dd4906d8b6ffad181f5f21466b92a872",
+      "source_bytes": 2069396,
+      "member_bytes": 2069396,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/GROCERIES/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/GROCERIES/events.jsonl",
+      "source_sha256": "a7e4f16c2b76064726f46c38737c6a26980010b7f62c1a688039835ffd222158",
+      "member_sha256": "a7e4f16c2b76064726f46c38737c6a26980010b7f62c1a688039835ffd222158",
+      "source_bytes": 2069642,
+      "member_bytes": 2069642,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/HOT_FOOD/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/HOT_FOOD/events.jsonl",
+      "source_sha256": "ed3eb8195411bf6f8b0bb25a30e54adb7fea1956cd86894a55a027c22ca5f439",
+      "member_sha256": "ed3eb8195411bf6f8b0bb25a30e54adb7fea1956cd86894a55a027c22ca5f439",
+      "source_bytes": 2069763,
+      "member_bytes": 2069763,
+      "transformation": "none"
+    },
+    {
+      "member": "out/reviewed-01/scenarios/sustained_over_100ms/PET/events.jsonl",
+      "source": ".omx/qa/submission-v24/alert-analysis/out/reviewed-01/scenarios/sustained_over_100ms/PET/events.jsonl",
+      "source_sha256": "85e4c94e67ad53b3c51b6c4bee51af8f89768a635f20d8b8b51849fdf9733e9f",
+      "member_sha256": "85e4c94e67ad53b3c51b6c4bee51af8f89768a635f20d8b8b51849fdf9733e9f",
+      "source_bytes": 2069423,
+      "member_bytes": 2069423,
+      "transformation": "none"
+    }
+  ]
+}

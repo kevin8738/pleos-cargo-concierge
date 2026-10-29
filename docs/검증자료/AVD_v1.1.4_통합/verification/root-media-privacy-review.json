@@ -1,0 +1,27 @@
+{
+  "status": "PASS_WITH_STATED_SCOPE",
+  "reviewer": "root",
+  "files": [
+    {
+      "path": "integration-01/capture/audio.wav",
+      "sha256": "3bcf19e409ee8f6ec6cf87a8b65372fe01e755bcece14f0cb9c57bf8d828646f"
+    },
+    {
+      "path": "integration-01/capture/audio.s16le.pcm",
+      "sha256": "fc5897c21c65a490b080440494dbbdc544a56b23abdee63653d62e7ffb0ebb9a"
+    },
+    {
+      "path": "integration-01/report.png",
+      "sha256": "bb39c234cbb18cb6ecb56224b6bc384508c4102b577b0a343921ddc51b5a52d6"
+    }
+  ],
+  "image_review": "report.png directly viewed; synthetic app report and no observed personal content",
+  "audio_review": "Original emulator output only; ASR auxiliary privacy screening read. Recognized navigation and app prompts with no personal data observed. No human listening or speech/intelligibility validation claimed.",
+  "asr_record_sha256": "f90ec09e09edf49870122145b49458834f4a1af23915b9699e4a9294ff028f4e",
+  "xml_review": "Ten native XMLs examined: public POI search/route fixture to department store; 1588 business number and commercial addresses, not user contact/travel record.",
+  "notification_review": "Three equal-byte dumps contain only own-package foreground service notification fields.",
+  "limitations": [
+    "ASR can omit/mistranscribe speech; screening is not exhaustive privacy certification.",
+    "No native utterance attribution, overlap, clock correction, field validation or rewrite of original false judgment."
+  ]
+}

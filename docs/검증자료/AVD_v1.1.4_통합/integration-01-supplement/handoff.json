@@ -1,0 +1,41 @@
+{
+  "originalManifestSha256": "93dd86a7bfc6d1e98e72e7f601e9e030a076eed7073fe877364a31edceb10a90",
+  "originalArtifactHashesVerified": 118,
+  "originalArtifactsChanged": [],
+  "originalRunVerdictUnchanged": true,
+  "cleanupVerified": true,
+  "sameApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "samePidReadback": true,
+  "pid": "22692",
+  "originalLogPropertiesRestored": true,
+  "logPropertiesReadback": {
+    "MotionTrace": "",
+    "GuardRuntime": ""
+  },
+  "finalTraceIdleP0": true,
+  "idleUiObserved": true,
+  "consoleParkZero": true,
+  "vehicleOriginalDomainsEqual": {
+    "hvac": true,
+    "seat": true,
+    "body": true,
+    "controls": true
+  },
+  "servicePresent": false,
+  "activeNotificationCount": 0,
+  "ownBrowserClosed": true,
+  "ownForward8088Absent": true,
+  "privateTokenFilesRemaining": 0,
+  "recoveryRequired": false,
+  "originalSettingsFlags": {
+    "tts": true,
+    "chime": true,
+    "demo_curve": true
+  },
+  "restoredSettingsFlags": {
+    "tts": true,
+    "chime": true,
+    "demo_curve": true
+  },
+  "settingsOriginalValuesVerified": true
+}

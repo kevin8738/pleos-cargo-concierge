@@ -1,0 +1,110 @@
+{
+  "text_files_scanned": 115,
+  "text_pattern_matches": {},
+  "files_needing_explicit_media_or_dynamic_scope_selection": [
+    {
+      "path": "integration-01/capture/audio.s16le.pcm",
+      "sha256": "fc5897c21c65a490b080440494dbbdc544a56b23abdee63653d62e7ffb0ebb9a",
+      "disposition": "ROOT_AUDIO_CONTENT_PRIVACY_REVIEW_REQUIRED"
+    },
+    {
+      "path": "integration-01/capture/audio.wav",
+      "sha256": "3bcf19e409ee8f6ec6cf87a8b65372fe01e755bcece14f0cb9c57bf8d828646f",
+      "disposition": "ROOT_AUDIO_CONTENT_PRIVACY_REVIEW_REQUIRED"
+    },
+    {
+      "path": "integration-01/guard-active_10-notification.txt",
+      "sha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "disposition": "OWN_PACKAGE_NOTIFICATION_FIELD_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-active-notification.txt",
+      "sha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "disposition": "OWN_PACKAGE_NOTIFICATION_FIELD_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-detail-0.xml",
+      "sha256": "aa7aeb8100f0933bc57b74dea51a7f9a1d3a06a624a2f14230a494ce53fde7f7",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-end-control-0.xml",
+      "sha256": "b8ce0ef3b300933bb8fb816f9cb3ef04646bb6002b90020bb9ac4f59f8a105bb",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-ended-0.xml",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-home-0.xml",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-original-idle-0.xml",
+      "sha256": "6f0fa34df46067df0bba35de1268af76b3e3169afcff58f5d8bca2c2d2ff5f79",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-results-0.xml",
+      "sha256": "76b05df2c1f35510eabe92158ec54874af9e1db945d5946483b2a10a6ba9f5c7",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-route-0.xml",
+      "sha256": "ea9b049417757619feddf9f736fd5610cfd8678f52b9c49ec317d7827ccafa4f",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-route-1.xml",
+      "sha256": "ea9b049417757619feddf9f736fd5610cfd8678f52b9c49ec317d7827ccafa4f",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-route-2.xml",
+      "sha256": "6a1d8172d357ac41902c028069f9f4c3a1f2706455aa946e32707e3efed7a469",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/native-search-0.xml",
+      "sha256": "f6b0e22a08ef6db1a617f820ede131d8f964f6de24755cd6a1b4b70678077df6",
+      "disposition": "PUBLIC_DESTINATION_UI_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/profile-finished-notification.txt",
+      "sha256": "d24477c9ca16eb47f0115d89cb918407397777389e25a46ab22326f8ade809e2",
+      "disposition": "OWN_PACKAGE_NOTIFICATION_FIELD_SCOPE_REVIEW"
+    },
+    {
+      "path": "integration-01/report.png",
+      "sha256": "bb39c234cbb18cb6ecb56224b6bc384508c4102b577b0a343921ddc51b5a52d6",
+      "disposition": "DIRECTLY_VIEWED_NO_PRIVATE_CONTENT_OBSERVED"
+    }
+  ],
+  "preserve_even_on_false": [
+    "integration-result.json",
+    "oracle-result.json",
+    "oracle-comparisons.json",
+    "clock-end.json",
+    "environment.json",
+    "cleanup.json",
+    "motion.log",
+    "live-log.jsonl",
+    "input-ledger.jsonl",
+    "capture/metadata.json",
+    "artifact-sha256.json"
+  ],
+  "exclude_if_encountered": [
+    "authentication discovery/configuration files",
+    "raw token files",
+    "unfiltered global audio-focus/intent dumps",
+    "unrelated external private content"
+  ],
+  "limitations": [
+    "Text regex screening is not exhaustive privacy certification.",
+    "Only report.png was visually viewed by reviewer; PCM/WAV not listened to or transcribed.",
+    "Public route fixture does not establish permission to publish any unrelated user location."
+  ]
+}

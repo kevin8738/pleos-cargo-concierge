@@ -1,0 +1,72 @@
+{
+  "hostReceivedUnixNs": 1793300997449059000,
+  "hostReceivedMonotonicNs": 50489807309666,
+  "line": "         1793300997.493 22692 22692 D MotionTrace: {\"schema\":1,\"tMs\":19744026,\"event\":\"motion\",\"raw\":{\"kind\":\"speed\",\"mps\":0,\"sourceId\":0,\"provenance\":\"SYNTHETIC\"},\"uiMode\":\"PARKED\",\"previousGuarding\":true,\"model\":{\"wheelbaseM\":2.9000000953674316,\"steeringRatio\":15,\"smoothing\":0.5,\"gravityMps2\":9.80665,\"maxBrakeDecelMps2\":8},\"snapshot\":{\"gear\":\"PARK\",\"speedMps\":0,\"steeringDeg\":0,\"brakePressed\":false,\"brakePercent\":0,\"speedProvenance\":\"SYNTHETIC\",\"steeringProvenance\":\"SYNTHETIC\",\"brakeProvenance\":\"SYNTHETIC\",\"parkedStill\":true},\"state\":\"GUARDING\",\"presetKind\":\"COFFEE\",\"limitG\":0.12,\"motionStatus\":\"FRESH\",\"badge\":\"OK\",\"trip\":{\"startedMs\":19613878,\"maxG\":0.12354462329191918,\"gSamples\":462,\"freshLongitudinalSamples\":154,\"drivingSpeechCount\":2,\"drivingChimeCount\":1,\"coachingCount\":2,\"warnCount\":1,\"provenance\":[\"SYNTHETIC\"],\"quality\":[\"INITIAL_BASELINE\"]},\"estimate\":{\"lateralG\":0,\"longitudinalG\":-1.2248151464035085E-8,\"totalG\":1.2248151464035085E-8,\"speedMps\":0,\"lateralAvailable\":true,\"longitudinalAvailable\":true,\"longitudinalFresh\":true,\"hasData\":true,\"quality\":[]}}",
+  "deviceEpochSeconds": 1793300997.493,
+  "pid": 22692,
+  "tag": "MotionTrace",
+  "message": "{\"schema\":1,\"tMs\":19744026,\"event\":\"motion\",\"raw\":{\"kind\":\"speed\",\"mps\":0,\"sourceId\":0,\"provenance\":\"SYNTHETIC\"},\"uiMode\":\"PARKED\",\"previousGuarding\":true,\"model\":{\"wheelbaseM\":2.9000000953674316,\"steeringRatio\":15,\"smoothing\":0.5,\"gravityMps2\":9.80665,\"maxBrakeDecelMps2\":8},\"snapshot\":{\"gear\":\"PARK\",\"speedMps\":0,\"steeringDeg\":0,\"brakePressed\":false,\"brakePercent\":0,\"speedProvenance\":\"SYNTHETIC\",\"steeringProvenance\":\"SYNTHETIC\",\"brakeProvenance\":\"SYNTHETIC\",\"parkedStill\":true},\"state\":\"GUARDING\",\"presetKind\":\"COFFEE\",\"limitG\":0.12,\"motionStatus\":\"FRESH\",\"badge\":\"OK\",\"trip\":{\"startedMs\":19613878,\"maxG\":0.12354462329191918,\"gSamples\":462,\"freshLongitudinalSamples\":154,\"drivingSpeechCount\":2,\"drivingChimeCount\":1,\"coachingCount\":2,\"warnCount\":1,\"provenance\":[\"SYNTHETIC\"],\"quality\":[\"INITIAL_BASELINE\"]},\"estimate\":{\"lateralG\":0,\"longitudinalG\":-1.2248151464035085E-8,\"totalG\":1.2248151464035085E-8,\"speedMps\":0,\"lateralAvailable\":true,\"longitudinalAvailable\":true,\"longitudinalFresh\":true,\"hasData\":true,\"quality\":[]}}",
+  "data": {
+    "schema": 1,
+    "tMs": 19744026,
+    "event": "motion",
+    "raw": {
+      "kind": "speed",
+      "mps": 0,
+      "sourceId": 0,
+      "provenance": "SYNTHETIC"
+    },
+    "uiMode": "PARKED",
+    "previousGuarding": true,
+    "model": {
+      "wheelbaseM": 2.9000000953674316,
+      "steeringRatio": 15,
+      "smoothing": 0.5,
+      "gravityMps2": 9.80665,
+      "maxBrakeDecelMps2": 8
+    },
+    "snapshot": {
+      "gear": "PARK",
+      "speedMps": 0,
+      "steeringDeg": 0,
+      "brakePressed": false,
+      "brakePercent": 0,
+      "speedProvenance": "SYNTHETIC",
+      "steeringProvenance": "SYNTHETIC",
+      "brakeProvenance": "SYNTHETIC",
+      "parkedStill": true
+    },
+    "state": "GUARDING",
+    "presetKind": "COFFEE",
+    "limitG": 0.12,
+    "motionStatus": "FRESH",
+    "badge": "OK",
+    "trip": {
+      "startedMs": 19613878,
+      "maxG": 0.12354462329191918,
+      "gSamples": 462,
+      "freshLongitudinalSamples": 154,
+      "drivingSpeechCount": 2,
+      "drivingChimeCount": 1,
+      "coachingCount": 2,
+      "warnCount": 1,
+      "provenance": [
+        "SYNTHETIC"
+      ],
+      "quality": [
+        "INITIAL_BASELINE"
+      ]
+    },
+    "estimate": {
+      "lateralG": 0,
+      "longitudinalG": -1.2248151464035085e-08,
+      "totalG": 1.2248151464035085e-08,
+      "speedMps": 0,
+      "lateralAvailable": true,
+      "longitudinalAvailable": true,
+      "longitudinalFresh": true,
+      "hasData": true,
+      "quality": []
+    }
+  }
+}

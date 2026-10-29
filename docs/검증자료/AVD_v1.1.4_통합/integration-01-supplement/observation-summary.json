@@ -1,0 +1,122 @@
+{
+  "source": "original frozen integration-01; offline description only, no predicate repair or rerun",
+  "originalManifestSha256": "93dd86a7bfc6d1e98e72e7f601e9e030a076eed7073fe877364a31edceb10a90",
+  "originalVerdict": false,
+  "originalComponentChecks": {
+    "sameSession": true,
+    "nativeRouteCallbacks": true,
+    "vipBackgroundAtObservedSamples": true,
+    "drivingAdmissionsBracketedByBackgroundSamples": true,
+    "liveRuntimeTicks": true,
+    "liveVipCallbacks": true,
+    "zeroCabinApplication": true,
+    "motionOracle": false,
+    "clockEndpointsConsistent": false,
+    "packetClockRelationship": true,
+    "lifecycleCaptureCoverage": true,
+    "vipTtsLifecycle": true,
+    "mixedPcmSignalInEachResponse": false,
+    "parkedArrivalAndReport": false,
+    "cleanup": true
+  },
+  "executionErrors": [],
+  "cleanupVerified": true,
+  "capture": {
+    "singleRpc": true,
+    "requestedSeconds": 180,
+    "packetCount": 15545,
+    "pcmSeconds": 47.010729166666664,
+    "wallSeconds": 179.977896,
+    "pcmSha256": "fc5897c21c65a490b080440494dbbdc544a56b23abdee63653d62e7ffb0ebb9a",
+    "sparseFramesNotContinuousRecording": true
+  },
+  "observedReport": {
+    "maxG": 0.12354462329191918,
+    "durationMs": 79485,
+    "gSamples": 462,
+    "freshLongitudinalSamples": 154,
+    "drivingSpeechCount": 2,
+    "drivingChimeCount": 1,
+    "coachingCount": 2,
+    "warnCount": 1,
+    "audioSuppressionCounts": {
+      "COALESCED": 1
+    },
+    "provenance": [
+      "SYNTHETIC"
+    ],
+    "quality": [
+      "INITIAL_BASELINE"
+    ],
+    "hasSyntheticInput": true,
+    "canCompare": false
+  },
+  "actualParkedArrivalSnapshot": {
+    "gear": "PARK",
+    "speedMps": 0,
+    "steeringDeg": 0,
+    "brakePressed": false,
+    "brakePercent": 0,
+    "speedProvenance": "SYNTHETIC",
+    "steeringProvenance": "SYNTHETIC",
+    "brakeProvenance": "SYNTHETIC",
+    "parkedStill": true
+  },
+  "counterMismatch": {
+    "issueCounts": {
+      "trip motion/fresh counters mismatch": 302,
+      "arrival maximum/counters mismatch": 1
+    },
+    "receivedGuardKinds": {
+      "steering": 260,
+      "brake": 261,
+      "speed": 261
+    },
+    "firstMismatchGuardIndex": 480,
+    "precedingTripCount": 174,
+    "nextTripCount": 176,
+    "observedRowsBetween": 0,
+    "computedFromObservedMotionEvents": 461,
+    "reportMotionEvents": 462,
+    "receivedSpeedRequestsAndRows": 261,
+    "receivedDtSeconds": [
+      0.401,
+      0.603
+    ],
+    "numericEstimateMismatchIssues": 0,
+    "maximumComputedFromObservedRows": 0.12354462329191915,
+    "maximumReport": 0.12354462329191918,
+    "interpretation": "One steering MotionTrace is absent between the neighboring speed and brake rows; a steering DemoBridge/CargoVM log exists there. Missing log cause is not established. Do not invent that row or repair baseline/counts. Counter discrepancy is not 303 independent numerical failures."
+  },
+  "clockFailure": {
+    "startOffsetNs": 54962120,
+    "endOffsetNs": 22562706,
+    "pointDifferenceNs": -32399414,
+    "startIntervalNs": [
+      44100620,
+      65823620
+    ],
+    "endIntervalNs": [
+      10278706,
+      34846706
+    ],
+    "intervalGapNs": 9253914,
+    "interpretation": "No shared constant offset satisfies both endpoint intervals. Original time-window component values remain conditional on the failed clock model; strict common-axis validation is incomplete."
+  },
+  "arrivalContrast": {
+    "prePeak": 1449,
+    "preRms": 146.32730005821722,
+    "responsePeak": 1480,
+    "responseRms": 245.26702253640164,
+    "rmsRatio": 1.676153543725748,
+    "peakRatio": 1.0213940648723256,
+    "tailPcmSeconds": 3.007,
+    "originalThreefoldContrastSatisfied": false,
+    "interpretation": "Large mixed signal already exists after route termination/before arrival. Voice source is unidentified; do not call it native speech or infer contention. Arrival has one VIP START/DONE and actual response/tail samples, but isolated contrast was not established."
+  },
+  "nativeSpeechAttributed": null,
+  "actualAcousticOverlap": null,
+  "focusPriorityValidated": null,
+  "recoveryRequired": false,
+  "additionalRuntimeAttempts": 0
+}

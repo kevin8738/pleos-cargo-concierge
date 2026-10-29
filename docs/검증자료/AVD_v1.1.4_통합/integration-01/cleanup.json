@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "cleanupRequired": true,
+  "executionErrors": [],
+  "cleanupErrors": [],
+  "originalLogProperties": {
+    "MotionTrace": "",
+    "GuardRuntime": ""
+  },
+  "noCabinWritesIntended": true
+}

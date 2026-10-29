@@ -1,0 +1,290 @@
+{
+  "schema": "integration-static-review-v1",
+  "reviewer": "guard_runtime_review",
+  "created_at": "2026-10-29T18:51:25.928377+00:00",
+  "status": "STATIC_REVIEW_COMPLETE_NO_OPEN_BLOCKERS",
+  "harness_reviewed": true,
+  "harness_path": ".omx/qa/submission-v24/integration_harness.py",
+  "harness_sha256": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6",
+  "runtime_authorized_by_this_review": false,
+  "runtime_executed_by_reviewer": false,
+  "adb_avd_capture_build_executed": false,
+  "blocking_findings_assessed": true,
+  "sources_read": [
+    {
+      "path": ".omx/qa/submission-v24/plan.md",
+      "sha256": "ebcc0e951263b4aec6053a65cba8abe9350fe5fcf7feb7dd352e6775386b3f71"
+    },
+    {
+      "path": ".omx/qa/submission-v23/next-integration-feasibility.md",
+      "sha256": "e6f15c0162fcfe78f65ea4842618dc2b7ada990eae0bcb890478567d7518e801"
+    },
+    {
+      "path": ".omx/qa/audio-feasibility/README.md",
+      "sha256": "a2c3e60cbc5d71c0cc412fd3b2a237dd4a26b2a778cd90453b0c8f151a4454f0"
+    },
+    {
+      "path": ".omx/qa/submission-v23/feasibility-audio-flow.md",
+      "sha256": "fa3cd25f3710098ed89a30d1fe5296e5baf91ddcb8d1cd1f8259a9a9b9076b8c"
+    }
+  ],
+  "contract_note": "v24 plan과 새180초 feasibility가 현재 설계다. v23 40초/OFF 대조/ZIP 등의 이전 계획은 이미 완료된 과거 범위로 취급하며 새 실행 요구로 그대로 복제하지 않는다.",
+  "checks": [
+    {
+      "id": "ID-PREFLIGHT",
+      "requirement": "같은 승인 APK 전체 SHA·version/code·공식 AVD·PID·실제 Idle/P0·native route-off·원설정/차량 값을 검증한다. 실패 전제에서는 AVD를 정리 명목으로 변경하지 않고 cleanupRequired 경계를 둔다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        433,
+        471
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "NEW-ONE-RUN",
+      "requirement": "새 결과 경로가 이미 존재하면 거절한다. 실행 진입은 명시적으로 분리하고 import 단계에서 ADB/캡처/출력 덮어쓰기 없음. 자동 재시도·좋은 결과 선택·기존 v23 파일 변경 없음.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        733,
+        759
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "COFFEE-SESSION",
+      "requirement": "선택 음향 OFF에서 COFFEE를 사용자 경로로 시작하고 P0에서 주행 ON을 실제 UI로 재조회한다. 같은 requestId/startedMs/trip/PID를 끝까지 연결하며 캐빈 적용 없음·캐빈 원값 불변을 확인한다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        474,
+        492,
+        574,
+        585
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "ROUTE-POSITION",
+      "requirement": "검색·목적지 상세 준비는 캡처 전에 끝낸다. 기존 경로 off를 확인하고 실제 관측된 상세화면 목적지 버튼을 사용한다. 경로 요청·실제 활성 UI·ROUTE_DRIVE/TBT·종료 UI/FREE_DRIVE의 시각을 구분한다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        451,
+        454,
+        493,
+        500,
+        522,
+        565
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "DEADLINE-JOIN",
+      "requirement": "캡처 시작 기준 최대 180초의 monotonic deadline과 각 단계 제한이 있다. capture join은 고정 45초가 아니라 남은 전체 deadline+정리 여유로 계산한다. 연결 준비 시간이 수집 예산에 포함됨을 반영하며 실패/초과 시 입력 중단·본인 자식 종료·정리로 빠진다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        208,
+        228,
+        503,
+        517,
+        552,
+        592
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "MOTION-POLICY",
+      "requirement": "기존 정상 profile·source0/SYNTHETIC·실제 tMs·model을 유지하고 2Hz 생산자를 UI 조회가 막지 않는다. actual core/기존 독립 oracle에서 source/freshness/6·3·8 정책을 완화하지 않는다. 추가 native 요청·억제·STOP을 삭제하지 않는다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        33,
+        45,
+        149,
+        201,
+        381,
+        395
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "VISIBILITY",
+      "requirement": "native 전면과 VIP STOPPED/visible=false를 실제 관측하고 WARN/OVER 구간 중 반복 확인한다. 화면을 보려고 VIP를 복귀시키지 않는다. DEMO IPC 깨움·단속 표본 한계를 명시하며 자연 비전면 생존 증거와 분리한다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        530,
+        550,
+        359,
+        392
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "CLOCK",
+      "requirement": "host epoch/monotonic·device epoch/elapsed·PCM epoch microseconds의 단위와 변환이 명시된다. 시작·끝 offset/왕복 불확도를 남기고 drift·수신 지연·명령 시각을 실제 callback/admission 시각과 혼동하지 않는다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        230,
+        240,
+        308,
+        377
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "PCM-WINDOWS",
+      "requirement": "기준/각 response/도착 후행 창에 실제 validated frames>0을 요구한다. metadata first/last만으로 내부 coverage를 단정하지 않는다. 빈 창은 0으로 바꾸지 않고 희소 PCM의 sample duration과 wall duration을 분리하며 PCM/WAV 원 프레임과 해시를 대조한다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        243,
+        277,
+        295,
+        307,
+        378,
+        402
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "ARRIVAL-TAIL",
+      "requirement": "순정 안내 종료를 실제 목적지 도착으로 세지 않는다. 실제 수신 P0를 확인한 뒤 같은 세션에 합성 DestinationArrived를 한 번 전달한다. 단일 report·VIP START/DONE/ERROR/STOP와 DONE 후 최소 3초 실제 수신 표본을 연결한다. End/ack로 도착을 대체하지 않는다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        114,
+        120,
+        585,
+        605
+      ],
+      "source_lines_base_revision": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6"
+    },
+    {
+      "id": "CAUSAL-CLAIMS",
+      "requirement": "요청·SDK callback·혼합 PCM·native 발화 귀속·실제 겹침·focus/ducking·운전자 부담을 별도 필드로 판정한다. native 경로/TBT와 coverage만으로 발화·경합 PASS 금지. TTS 발화 ID 없음과 도착 TTS+SUCCESS 혼합 한계 유지.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        46,
+        55,
+        337,
+        358,
+        407,
+        413
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "CLEANUP",
+      "requirement": "try/finally는 설정·빈 MotionTrace 원값의 shell quoting·P0·Idle·native off·서비스/알림·캐빈 원값·같은 APK/PID를 재조회한다. 원 실패와 별도 복구를 분리 보존한다. 본인 helper/forward/token/capture/log child만 닫고 reset/재설치/기존 로그 삭제 없음.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        599,
+        688
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "SECRET-HYGIENE",
+      "requirement": "raw token은 보호된 임시 파일로만 전달하고 내용·Authorization·전체 인증 discovery/오류 details를 로그에 기록하지 않는다. 임시 권한·삭제와 subprocess stdout/stderr·명령 예외 메시지를 검토한다. host microphone/audio를 수집하지 않고 loopback emulator streamAudio만 사용한다.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        83,
+        87,
+        610,
+        683
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    },
+    {
+      "id": "RESULT-SCOPE",
+      "requirement": "같은 APK/세션·native route·VIP 비전면·motion oracle·수신 coverage·VIP 생명주기·도착 report·cleanup을 독립 판정한다. 미확인/실패는 보존하고 전체 경합 PASS로 합치지 않는다. 실차/보호/사용자 효과·캐빈 복원 주장 없음.",
+      "status": "STATIC_CHECKED_WITH_STATED_LIMITS",
+      "source_lines": [
+        385,
+        413
+      ],
+      "source_lines_base_revision": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072"
+    }
+  ],
+  "stop_condition": "Bounded static review complete. Exact SHA is eligible for root handoff consideration. No runtime authorized or performed by reviewer; preserve all actual attempt failures and unknowns.",
+  "limits": [
+    "Static review and 18 independent pure fixture checks are not AVD proof.",
+    "Only assigned review files changed.",
+    "No ADB, AVD, build, capture, HTTP or external contact performed.",
+    "Native speech attribution, actual acoustic overlap and focus priority remain UNVERIFIED."
+  ],
+  "reviewed_at": "2026-10-29T19:06:27.088915+00:00",
+  "source_lines_are_for_sha256": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6",
+  "independent_pure_checks": {
+    "checks": [
+      "signed PCM stereo peak",
+      "original PCM byte offsets",
+      "empty internal window rejected",
+      "out-of-range tail rejected",
+      "stop before start",
+      "interrupted speech",
+      "missing done",
+      "ambiguous starts",
+      "error",
+      "clock disagreement rejected",
+      "clock overlap accepted",
+      "fresh same-session Park accepted",
+      "pre-P-request Park rejected",
+      "stale Park rejected",
+      "other-session Park rejected",
+      "future-received Park rejected",
+      "already expired wait rejects true predicate",
+      "predicate crossing deadline rejected"
+    ],
+    "passed": 18,
+    "failed": 0,
+    "method": "AST-selected pure functions only; no module import, self_test writes, subprocess, ADB, HTTP, capture or runtime execution",
+    "function_bodies_reviewed": "packet_index/window_stats/callback_order/clock_model; no runtime function executed; current_parked and wait_for with deterministic fake monotonic time"
+  },
+  "writer_preparation": {
+    "self_test_checks": 20,
+    "reported_adb_calls": 0,
+    "reported_capture_calls": 0,
+    "reported_runtime_attempts": 0,
+    "dependency_hashes_matched": 8,
+    "contract_hash_matched": true,
+    "ast_files_parsed": [
+      "integration_harness.py",
+      "console_lease.py"
+    ]
+  },
+  "findings": [
+    {
+      "id": "PARK-WAIT-STALE",
+      "severity": "must_fix_before_single_attempt",
+      "status": "RESOLVED",
+      "lines": [
+        575,
+        582
+      ],
+      "issue": "wait_for returns any historic parkedStill guard immediately; freshness/session/speed are checked afterward, causing a false failure while a valid fresh Park event is still pending.",
+      "minimum_fix": "Place same-session, <=2 s age and speed zero predicates inside wait, requiring reception after the explicit Park request marker. Keep the 10 s deadline and fail-closed semantics.",
+      "false_pass": false,
+      "resolved_in_sha256": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6",
+      "resolution_lines": [
+        114,
+        120,
+        585,
+        595
+      ],
+      "resolution": "Wait predicate requires same session, reception after explicit Park request, nonfuture <=2-second age and PARK/zero. Old matching configuration samples do not terminate wait."
+    }
+  ],
+  "observed_limits": [
+    "Actual native TBT/caution-derived VIP admissions are outside the reused motion-only BoundaryOracle. Such a mismatch is preserved but alone does not establish product failure or G arithmetic failure; no delete/retry/policy relaxation.",
+    "Packet windows have nonempty valid samples plus overall before/after endpoints; sparse PCM is not continuous sound coverage and maximum internal gaps remain reported.",
+    "Request-count/callback timing supplies bounded VIP association only, not utterance-ID proof or native stream attribution.",
+    "Clock endpoint intersection assumes bounded stable offset between observations; it is not continuous clock drift measurement.",
+    "Visibility is intermittent dumpsys sampling. DEMO IPC can wake the app.",
+    "Static and pure checks do not prove actual AVD behavior or cleanup. Root retains runtime handoff authority."
+  ],
+  "open_blocking_findings": 0,
+  "prior_review_sha256": "f9546742524694ce2a17ca9d0f2e6d3ba7a8b0895df6995488b82736c3641072",
+  "additional_revision_review": [
+    "wait_for checks deadline before and after predicate; zero remaining time cannot succeed",
+    "capture_abort wrapped by recover preserves subsequent cleanup after shutdown error",
+    "native ROUTE_DRIVE/FREE_DRIVE corrected device timestamps must fall within respective command windows plus calibration uncertainty",
+    "VIP lifecycle requires an actual speech admission, excluding all(empty) success",
+    "motion-only oracle limitation is explicit in result LIMITS"
+  ]
+}

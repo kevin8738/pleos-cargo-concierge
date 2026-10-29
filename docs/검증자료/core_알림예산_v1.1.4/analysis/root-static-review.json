@@ -1,0 +1,24 @@
+{
+  "status": "STATIC_REVIEW_PASS_FOR_COMPILE_AND_SELFTEST",
+  "reviewer": "root",
+  "writer": "v23_publication_prepare",
+  "freeze_sha256": "8f1618ac519fc8d07852fe7d4562e91a15e08b2f86315251732ff0a72c9207c4",
+  "verified_files": 39,
+  "scenario_execution_authorized": false,
+  "reviewed": [
+    "actual CargoStateMachine/GEstimator reuse; no policy copy",
+    "default EMA0.5/Float promotion, source1 synthetic",
+    "four frozen120s profiles, six ledgers,54 independent cases",
+    "100ms base plus50/250ms single profile contrasts",
+    "all Gradle project output and cache isolated, offline, existing core:test not called",
+    "effect-counter reconciliation and 6/3/8 checks, no speaker claim",
+    "preserve failed results/unknown budget times; no overwrite",
+    "selftest certificate bound to freeze before scenario execution"
+  ],
+  "caveats": [
+    "Gradle sourceSet integration and selftest assumptions require first compilation/execution",
+    "speed-grid entries follow dispatched speed before same-time steering; all-event ledger retained",
+    "no field/listener/runtime output proven"
+  ],
+  "blockers": []
+}

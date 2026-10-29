@@ -1,0 +1,12 @@
+{
+  "scope": "writer-side saved-output integrity only; no engine rerun; independent root audit pending",
+  "case_count": 54,
+  "failed_cases": 0,
+  "manifest_files": 110,
+  "manifest_actual_hashes_match": true,
+  "frozen_files_match": true,
+  "same_limit_group_values_match": true,
+  "numeric_summary_sha256": "3330e620770215f6de1031ffad434c94164019f43ed9ddb906f34b109c065e19",
+  "summary_sha256": "81da3fa0ae648ea68a6042198fcd3338193a02489d6f796c3dbd8e2a22f023bf",
+  "manifest_sha256": "09cf3e96030a36951aadd392ed0434db365f4c074cd580e765871be837442f86"
+}

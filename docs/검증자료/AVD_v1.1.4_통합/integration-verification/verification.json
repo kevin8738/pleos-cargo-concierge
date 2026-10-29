@@ -1,0 +1,503 @@
+{
+  "schema": "v24-integration-independent-review-v1",
+  "source_run": "integration-01",
+  "source_manifest_sha256": "93dd86a7bfc6d1e98e72e7f601e9e030a076eed7073fe877364a31edceb10a90",
+  "harness_sha256": "ec0618aae37a977f50e5af16b542b668f25262e896da42f0435c5d84edde3df6",
+  "apk_sha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "reviewer": "guard_runtime_review",
+  "runtime_or_adb_executed": false,
+  "original_verdict": false,
+  "verification_error_count": 0,
+  "verification_errors": [],
+  "checks": [
+    {
+      "name": "frozen original manifest entries",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "all original artifact hashes match",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "executed harness is reviewed frozen source",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "frozen helper source hash",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "before after same approved APK PID and AVD",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "source hashes match current code",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original overall false retained",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "exact original false components preserved",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "execution errors empty independently recorded",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "trace JSON comes from retained live log",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "one COFFEE guard and arrival",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "one runtime request matches same trip",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "actual retained G arithmetic and freshness reproduce",
+      "verified": true,
+      "detail": {
+        "guardRows": 782,
+        "scalarComparisons": 3128,
+        "freshnessComparisons": 782
+      }
+    },
+    {
+      "name": "observed speed dt normal original bounds",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "max G matches observed arithmetic and report",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "known missing trace counter shape",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "one fewer steering trace than speed brake",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "all original 303 issues are preserved counter failures",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "report observed sample discrepancy not repaired",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "no parse/serialization failure falsely used to repair missing line",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "real route start and end callbacks retained",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "all directly observed background samples same stopped process",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "same profile runtime tick coverage",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "no extra native coach admitted in retained evidence",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "endpoint clock consistency genuinely false",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "all packets and byte offsets reproduce stored analysis",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "one capture exact raw packet byte frame counts",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "capture raw SHA and duration",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "capture ended by own single duration bound",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "WAV exactly wraps original stereo PCM",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic driving-0.pre",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic driving-0.response",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic driving-1.pre",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic driving-1.response",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic driving-2.pre",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic driving-2.response",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic arrival.pre",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic arrival.response",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic arrival.tail",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "original window arithmetic route",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "three driving contrasts pass arrival contrast fails",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "arrival is not silent or empty",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "actual received tail retained beyond requested end",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "three uninterrrupted device-clock TTS START DONE pairs",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "direct parked arrival and synthetic report observed independent of oracle",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "report UI explicitly synthetic and no actual drive assessment",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "all vehicle values unchanged except gear observation timestamp",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "all three original settings restored",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "readback stopped service and notification",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "final actual trace Idle P0",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "cleanup native and VIP idle UI",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "owned helper closure reported clean",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "cleanup succeeds without original error rewriting",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "no private token artifact remains",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "text privacy screening no matches",
+      "verified": true,
+      "detail": {
+        "files": 115,
+        "patterns": [
+          "home_path",
+          "email",
+          "mobile_phone",
+          "literal_credential"
+        ]
+      }
+    },
+    {
+      "name": "supplement original-source hashes preserved",
+      "verified": true,
+      "detail": null
+    },
+    {
+      "name": "supplement handoff links unchanged original run",
+      "verified": true,
+      "detail": null
+    }
+  ],
+  "counter_gap": {
+    "original_issue_count": 303,
+    "issue_types": {
+      "trip motion/fresh counters mismatch": 302,
+      "arrival maximum/counters mismatch": 1
+    },
+    "guard_rows": 782,
+    "trace_kinds": {
+      "steering": 260,
+      "brake": 261,
+      "speed": 261
+    },
+    "actual_counter_jumps": [
+      {
+        "guardRow": 480,
+        "tMs": 19693995,
+        "kind": "brake",
+        "previousGCount": 174,
+        "actualGCount": 176
+      }
+    ],
+    "observed_motion_events": 461,
+    "reported_motion_events": 462,
+    "observed_and_reported_fresh_longitudinal": 154,
+    "observed_g_arithmetic_errors": [],
+    "observed_maximum_g": 0.12354462329191915,
+    "reported_maximum_g": 0.12354462329191918,
+    "missing_row_cause": "UNDETERMINED; no synthetic row inserted",
+    "native_added_coaching_explanation_supported": false
+  },
+  "clock": {
+    "original_constant_offset_failed": true,
+    "start_offset_ns": 54962120,
+    "end_offset_ns": 22562706,
+    "endpoint_intervals_ns": [
+      [
+        44100620,
+        65823620
+      ],
+      [
+        10278706,
+        34846706
+      ]
+    ],
+    "interval_gap_ns": 9253914,
+    "host_epoch_minus_monotonic_range_seconds": 0.0336306095123291,
+    "device_epoch_minus_elapsed_range_seconds": 0.004000425338745117,
+    "interpretation": "Host wall-clock vs monotonic changed about 33 ms; compatible with observed offset change, system cause undetermined. No interpolated offset substituted. Raw callback order and PCM data are retained; fixed-offset cross-clock true fields remain conditional."
+  },
+  "route_background": {
+    "route_request_host_epoch": 1793300908.4455512,
+    "route_ended_observed_host_epoch": 1793300995.2561338,
+    "request_through_end_seconds": 86.81058263778687,
+    "direct_background_samples": 38,
+    "first_last_direct_sample_seconds": 75.38646697998047,
+    "positive_tbt_callbacks_whole_route": 27,
+    "positive_tbt_callbacks_between_direct_samples": 25,
+    "all_tbt_callbacks": 30,
+    "scope": "Host receipt window, not continuous visibility or native speech."
+  },
+  "audio": {
+    "packets": 15545,
+    "pcm_bytes": 9026060,
+    "pcm_seconds": 47.010729166666664,
+    "wall_seconds": 179.977896,
+    "window_contrasts": [
+      {
+        "label": "driving-0",
+        "prePeak": 2,
+        "responsePeak": 152,
+        "preRms": 1.4508189162014296,
+        "responseRms": 12.709546354960588,
+        "peakRatio": 76.0,
+        "rmsRatio": 8.760256854271683,
+        "operationalContrast": true
+      },
+      {
+        "label": "driving-1",
+        "prePeak": 2,
+        "responsePeak": 1344,
+        "preRms": 1.4770183662946132,
+        "responseRms": 195.0512416663304,
+        "peakRatio": 672.0,
+        "rmsRatio": 132.05742468568909,
+        "operationalContrast": true
+      },
+      {
+        "label": "driving-2",
+        "prePeak": 2,
+        "responsePeak": 1345,
+        "preRms": 0.1248143117849504,
+        "responseRms": 196.43302526245031,
+        "peakRatio": 672.5,
+        "rmsRatio": 1573.8020941131801,
+        "operationalContrast": true
+      },
+      {
+        "label": "arrival",
+        "prePeak": 1449,
+        "responsePeak": 1480,
+        "preRms": 146.32730005821722,
+        "responseRms": 245.26702253640164,
+        "peakRatio": 1.0213940648723256,
+        "rmsRatio": 1.676153543725748,
+        "operationalContrast": false
+      }
+    ],
+    "device_clock_tts_pairs": [
+      {
+        "deviceStartEpoch": 1793300958.926,
+        "deviceDoneEpoch": 1793300963.442,
+        "deviceDurationSeconds": 4.515999794006348,
+        "hostStartReceipt": 1793300958.882847,
+        "hostDoneReceipt": 1793300963.3978949,
+        "interrupted": false
+      },
+      {
+        "deviceStartEpoch": 1793300966.955,
+        "deviceDoneEpoch": 1793300971.377,
+        "deviceDurationSeconds": 4.422000169754028,
+        "hostStartReceipt": 1793300966.912116,
+        "hostDoneReceipt": 1793300971.333086,
+        "interrupted": false
+      },
+      {
+        "deviceStartEpoch": 1793300997.628,
+        "deviceDoneEpoch": 1793300999.317,
+        "deviceDurationSeconds": 1.688999891281128,
+        "hostStartReceipt": 1793300997.583935,
+        "hostDoneReceipt": 1793300999.273406,
+        "interrupted": false
+      }
+    ],
+    "arrival_tail": {
+      "hostEpochWindow": [
+        1793300999.2898102,
+        1793301002.2898102
+      ],
+      "packetCount": 246,
+      "sampleCount": 288672,
+      "receivedPcmSeconds": 3.007,
+      "coveredWithReceivedSamples": true,
+      "rmsS16": 12.30601051973678,
+      "peakS16": 272,
+      "maxInternalPacketGapSeconds": 0.024470806121826172
+    },
+    "native_speech_attributed": false,
+    "actual_overlap_validated": false,
+    "focus_priority_validated": false,
+    "human_listening_performed": false,
+    "limits": "Sparse mixed emulator PCM, no native utterance ID; fixed-offset clock assumption failed. Arrival contrast failure is not silence."
+  },
+  "cleanup": {
+    "readback_consistent": true,
+    "vehicle_changed_paths": [
+      "/gear/actual/timestamp_ms"
+    ],
+    "properties": "Original blanks restored by reviewed harness asserted getprop path with no errors; separate post-return raw getprop not in this initial manifest.",
+    "owned_helper": {
+      "ready": true,
+      "closed": true,
+      "ownForward": true,
+      "errors": []
+    },
+    "fresh_ownership_return_reviewed": false
+  },
+  "privacy": {
+    "scanned_text_files": 115,
+    "pattern_hits": {},
+    "report_png_sha256": "bb39c234cbb18cb6ecb56224b6bc384508c4102b577b0a343921ddc51b5a52d6",
+    "report_png_actually_viewed": true,
+    "report_png_private_content_observed": false,
+    "audio_content_review_complete": false,
+    "audio_publication_requires_root_privacy_review": true,
+    "raw_auth_or_global_focus_dump_in_manifest": false
+  },
+  "limits": [
+    "Overall original false and all four false predicates are preserved.",
+    "Observed G math pass does not verify the unrecorded steering trace or exact report event count.",
+    "Direct P0 arrival is separately observed; original parkedArrivalAndReport stays false because it conjoins failed oracle.",
+    "No AVD rerun, calibration repair, audio re-edit, synthetic row or policy change.",
+    "No physical vehicle accuracy, native voice contention, human listening, driver benefit or cargo efficacy claim."
+  ],
+  "supplement_review": {
+    "files": 3,
+    "manifest_sha256": "6f22b91aec9ae9604c71c8764d532036b8bd333e48956421c5899852c36e98c4",
+    "handoff_sha256": "e96ef455b69094a21d1f2d5a458db6978619ef8f89e6cc6cf1f8f652aa38322b",
+    "declarative_return_report_consistent": true,
+    "independent_fresh_adb_return_readback": false,
+    "scope": "Handoff declarations match saved cleanup and reviewed code assertions. No separate getprop/forward raw transcript in supplement and no ADB performed by reviewer."
+  },
+  "script_sha256": "669186b64d16700f49f94db980b42f5720562e05fcc9046cc16ccc1462bff2e5"
+}
