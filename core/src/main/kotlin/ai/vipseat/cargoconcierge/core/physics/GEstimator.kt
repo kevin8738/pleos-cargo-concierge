@@ -44,6 +44,7 @@ class GEstimator(
 ) {
     private var lastSpeed: Double? = null
     private var lastTimestampMs: Long? = null
+    private var lastSpeedSourceId: Int? = null
     private var emaLong = 0.0
     private var hasLongEstimate = false
 
@@ -60,11 +61,16 @@ class GEstimator(
         brakePressed: Boolean?,
         brakePercent: Double?,
         timestampMs: Long,
+        sourceId: Int? = null,
     ): GEstimate {
-        // Invalid / reordered / too-close samples must not move the derivative baseline.
+        // Invalid samples never move the baseline; ordering and same-source minimum dt are checked below.
         if (!speedMps.isFinite() || speedMps < 0.0) {
             return GEstimate(0.0, 0.0, lastSpeed ?: 0.0, lateralAvailable = false, longitudinalAvailable = false)
         }
+        // Fresh sources can disagree by a fixed offset. Their first sample starts a new dv/dt
+        // baseline and EMA; steering-based lateral G still uses the current speed below.
+        // Reordered samples must not reset an otherwise valid baseline, even across sources.
+        if (sourceId != lastSpeedSourceId && lastTimestampMs?.let { timestampMs > it } == true) reset()
         val speed = speedMps
         var aLong = 0.0
         val ls = lastSpeed
@@ -90,6 +96,7 @@ class GEstimator(
         }
         lastSpeed = speed
         lastTimestampMs = timestampMs
+        lastSpeedSourceId = sourceId
 
         val hasBrakeEstimate = brakePressed == true && brakePercent != null && brakePercent.isFinite() && brakePercent > 0.0
         if (hasBrakeEstimate) {
@@ -105,6 +112,7 @@ class GEstimator(
     fun reset() {
         lastSpeed = null
         lastTimestampMs = null
+        lastSpeedSourceId = null
         emaLong = 0.0
         hasLongEstimate = false
     }

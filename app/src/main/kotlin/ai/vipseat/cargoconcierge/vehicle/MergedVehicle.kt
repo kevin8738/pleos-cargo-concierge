@@ -15,8 +15,8 @@ import ai.vipseat.cargoconcierge.core.port.SpeedArbiter
 import ai.vipseat.cargoconcierge.core.port.VehiclePort
 import android.os.SystemClock
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onEach
 
@@ -52,13 +52,13 @@ class MergedVehicle(
                         (controlTarget as? RealMotionObserver)?.observeRealMotion(sig, now)
                     }
                 }
-            }.filter { sig ->
+            }.mapNotNull { sig ->
                 val now = SystemClock.elapsedRealtime()
                 when (sig) {
-                    is VehicleSignal.Speed -> synchronized(arbiter) { arbiter.accept(priority, now) }
-                    is VehicleSignal.SteeringAngle -> synchronized(steeringArbiter) { steeringArbiter.accept(priority, now) }
-                    is VehicleSignal.SourceStatus -> priority > 0 || sources.isEmpty()
-                    else -> true
+                    is VehicleSignal.Speed -> synchronized(arbiter) { arbiter.acceptSpeed(priority, sig, now) }
+                    is VehicleSignal.SteeringAngle -> sig.takeIf { synchronized(steeringArbiter) { steeringArbiter.accept(priority, now) } }
+                    is VehicleSignal.SourceStatus -> sig.takeIf { priority > 0 || sources.isEmpty() }
+                    else -> sig
                 }
             }.map { sig ->
                 if (sig is VehicleSignal.SourceStatus && priority > 0) synchronized(sourceStatuses) {

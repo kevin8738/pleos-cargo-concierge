@@ -33,8 +33,12 @@ enum class DrivingMode { NORMAL, ECO, SPORT, UNKNOWN }
 /** Normalised vehicle events. Every adapter (mock, AOSP, Pleos) emits exactly these. */
 sealed interface VehicleSignal {
     data class GearChanged(val gear: Gear) : VehicleSignal
-    /** Vehicle speed in m/s (never negative). */
-    data class Speed(val mps: Double) : VehicleSignal
+    /**
+     * Vehicle speed in m/s (never negative). [sourceId] identifies one stream within a merged
+     * vehicle port; null is the single-source adapter default. Different streams must not share
+     * a longitudinal derivative baseline, even when both samples are fresh.
+     */
+    data class Speed @JvmOverloads constructor(val mps: Double, val sourceId: Int? = null) : VehicleSignal
     /** Steering *wheel* angle in degrees (sign = direction; magnitude is what matters). */
     data class SteeringAngle(val degrees: Double) : VehicleSignal
     /** Brake pedal; [percent] is optional (0..100) and only some sources provide it. */

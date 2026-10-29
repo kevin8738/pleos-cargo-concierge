@@ -69,7 +69,7 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                         }
                     }
                     Spacer(Modifier.height(28.dp))
-                    SectionTitle("캐빈 적용 결과", icon = R.drawable.ic_thermo)
+                    SectionTitle("차량 설정 확인 결과", icon = R.drawable.ic_thermo)
                     val cabin = state.cabin
                     if (cabin == null) {
                         Text("적용 중…", style = MaterialTheme.typography.bodyLarge, color = MistDim)
@@ -80,6 +80,9 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                         )
                     } else {
                         FlowChips(cabin.outcomes)
+                        Spacer(Modifier.height(10.dp))
+                        Text("설정 후 조회 기록이에요. 출발 전 공조와 짐 상태를 확인해 주세요.", style = MaterialTheme.typography.bodyMedium, color = MistDim)
+                        Text("냉방 효과와 짐 온도는 측정하지 않아요.", style = MaterialTheme.typography.bodyMedium, color = MistDim)
                     }
                     if (ui.cabinRestorePending) {
                         Text(ui.cabinNotice ?: "복원 상태 확인 필요", style = MaterialTheme.typography.bodyMedium, color = MistDim)
@@ -110,7 +113,7 @@ fun LoadedScreen(ui: UiState, state: CargoState.Guarding, vm: CargoViewModel) {
                     val t = state.trip
                     StatRow("최대 추정 G", "${CargoStateMachine.formatG(t.maxG)}G", badgeColor(state.badge), icon = R.drawable.ic_speed)
                     StatRow("효과음 / 음성 요청", "${t.warnCount}회 / ${t.coachingCount}회", icon = R.drawable.ic_bell)
-                    StatRow("캐빈 평균 온도", t.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", icon = R.drawable.ic_thermo)
+                    StatRow("평균 설정 온도", t.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", icon = R.drawable.ic_thermo)
                     state.lastEstimate?.let { e ->
                         StatRow("마지막 추정 (횡 / 종)", "${CargoStateMachine.formatG(e.lateralG)} / ${CargoStateMachine.formatG(e.longitudinalG)} G", icon = R.drawable.ic_steering)
                     }
@@ -133,11 +136,10 @@ private fun ReclassifyRow(p: CargoPreset, vm: CargoViewModel) {
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun FlowChips(outcomes: List<FeatureOutcome>) {
-    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        outcomes.chunked(3).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) { row.forEach { OutcomeChip(it) } }
-        }
+    FlowRow(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        outcomes.forEach { OutcomeChip(it) }
     }
 }

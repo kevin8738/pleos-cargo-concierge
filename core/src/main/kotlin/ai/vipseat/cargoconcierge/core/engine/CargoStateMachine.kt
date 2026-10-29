@@ -429,7 +429,7 @@ class CargoStateMachine(
         val brakePercent = snapshot.brakePercent.takeIf { isFresh(brakeReceivedMs, nowMs) }
         // Only speed samples advance the longitudinal estimator; steering/brake just refresh lateral.
         val estimate = if (signal is VehicleSignal.Speed) {
-            gEstimator.update(speed, steering, brake, brakePercent, nowMs)
+            gEstimator.update(speed, steering, brake, brakePercent, nowMs, sourceId = signal.sourceId)
         } else {
             val prevLong = g.lastEstimate?.longitudinalG ?: 0.0
             val lat = steering?.let { gEstimator.lateralG(speed, it) } ?: 0.0

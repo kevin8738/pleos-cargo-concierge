@@ -1,11 +1,50 @@
 package ai.vipseat.cargoconcierge.core
 
+import ai.vipseat.cargoconcierge.core.model.VehicleSignal
 import ai.vipseat.cargoconcierge.core.port.SpeedArbiter
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class SpeedArbiterTest {
+    private val invalidSpeeds = listOf(Double.NaN, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY, -1.0)
+
+    @Test
+    fun `invalid higher priority samples are never forwarded and cannot suppress fresh fallback`() {
+        for (higherPriority in listOf(0, 1)) {
+            for (invalidSpeed in invalidSpeeds) {
+                val a = SpeedArbiter.forSources(realSources = 2)
+                assertNotNull(a.acceptSpeed(2, VehicleSignal.Speed(9.0), 0))
+                // Repeated bad updates must not keep claiming ownership of the speed stream.
+                val rejected = (1L..10L).map { second ->
+                    val invalid = a.acceptSpeed(higherPriority, VehicleSignal.Speed(invalidSpeed), second * 1_000)
+                    assertNotNull(a.acceptSpeed(2, VehicleSignal.Speed(9.0), second * 1_000 + 1))
+                    invalid
+                }
+                rejected.forEach { assertNull(it) }
+            }
+        }
+    }
+
+    @Test
+    fun `invalid updates neither shorten nor extend the last valid source hold window`() {
+        for ((priority, holdMs) in listOf(0 to SpeedArbiter.DEMO_HOLD_MS, 1 to SpeedArbiter.REAL_HOLD_MS)) {
+            for (invalidSpeed in invalidSpeeds) {
+                val a = SpeedArbiter.forSources(realSources = 2)
+                assertNotNull(a.acceptSpeed(priority, VehicleSignal.Speed(0.0), 0)) // Zero is valid.
+                for (step in 1L..4L) {
+                    a.acceptSpeed(priority, VehicleSignal.Speed(invalidSpeed), holdMs * step / 5)
+                }
+                assertNull(a.acceptSpeed(2, VehicleSignal.Speed(9.0), holdMs - 1))
+                assertNotNull(a.acceptSpeed(2, VehicleSignal.Speed(9.0), holdMs))
+                assertNull(a.acceptSpeed(priority, VehicleSignal.Speed(invalidSpeed), holdMs + 1))
+                assertNotNull(a.acceptSpeed(2, VehicleSignal.Speed(9.0), holdMs + 2))
+            }
+        }
+    }
+
     @Test
     fun `demo speed suppresses real sources for its hold window`() {
         val a = SpeedArbiter.forSources(realSources = 2) // 0 demo, 1 CarPropertyManager, 2 FusedLocation

@@ -50,7 +50,7 @@ fun ArrivalReportScreen(ui: UiState, state: CargoState.Arrived, vm: CargoViewMod
                         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                                 StatTile("최대 추정 G · 기준 ${CargoStateMachine.formatG(r.preset.limitG)}G", if (r.gSamples == 0) "—" else "${CargoStateMachine.formatG(r.maxG)}G", R.drawable.ic_speed, Modifier.weight(1f), if (r.gSamples == 0) MistDim else if (r.withinLimit) Leaf else Coral)
-                                StatTile("캐빈 평균 온도", r.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", R.drawable.ic_thermo, Modifier.weight(1f))
+                                StatTile("평균 설정 온도", r.avgTempC?.let { String.format(java.util.Locale.US, "%.1f℃", it) } ?: "—", R.drawable.ic_thermo, Modifier.weight(1f))
                                 StatTile("이동 시간", formatDuration(r.durationMs), R.drawable.ic_clock, Modifier.weight(1f))
                             }
                             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -65,6 +65,7 @@ fun ArrivalReportScreen(ui: UiState, state: CargoState.Arrived, vm: CargoViewMod
                         LineIcon(R.drawable.ic_restore, tint = Mint, size = 24.dp)
                         Text(ui.cabinNotice ?: "캐빈 복원 결과를 확인하고 있어요.", style = MaterialTheme.typography.bodyLarge, color = MistDim)
                     }
+                    Text("설정값 복원 결과예요. 실제 실내·짐 온도와 냉방 효과는 확인하지 않아요.", style = MaterialTheme.typography.bodyMedium, color = MistDim)
                     Spacer(Modifier.height(24.dp))
                     if (ui.cabinRestorePending) {
                         Text(ui.cabinNotice ?: "복원 상태 확인 필요", style = MaterialTheme.typography.bodyMedium, color = MistDim)

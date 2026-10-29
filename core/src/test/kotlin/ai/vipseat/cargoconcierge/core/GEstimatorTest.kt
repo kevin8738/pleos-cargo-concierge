@@ -3,12 +3,60 @@ package ai.vipseat.cargoconcierge.core
 import ai.vipseat.cargoconcierge.core.physics.GEstimator
 import ai.vipseat.cargoconcierge.core.physics.LocationSpeedEstimator
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class GEstimatorTest {
+
+    @Test
+    fun `both source directions discard offset and start the next derivative from the new source`() {
+        for ((firstSource, nextSource) in listOf(1 to 2, 2 to 1)) {
+            for (offset in listOf(-1.0, 1.0)) {
+                val e = GEstimator() // Production EMA alpha 0.5, even with a fresh 100 ms handoff.
+                e.update(9.0, null, false, null, 1_000, firstSource)
+                val first = e.update(9.0 + offset, null, false, null, 1_100, nextSource)
+                assertFalse(first.longitudinalAvailable)
+                assertEquals(0.0, first.longitudinalG, 0.0)
+                val next = e.update(10.0 + offset, null, false, null, 1_200, nextSource)
+                assertTrue(next.longitudinalAvailable)
+                assertEquals(0.5 * 1.0 / 0.1 / GEstimator.G, next.longitudinalG, 1e-9)
+            }
+        }
+    }
+
+    @Test
+    fun `reordered or invalid other source cannot reset the valid source baseline`() {
+        val e = GEstimator()
+        e.update(9.0, null, false, null, 1_000, 1)
+        e.update(100.0, null, false, null, 999, 2)
+        e.update(100.0, null, false, null, 1_000, 2)
+        e.update(Double.NaN, null, false, null, 1_050, 2)
+        val next = e.update(10.0, null, false, null, 1_100, 1)
+        assertEquals(0.5 * 1.0 / 0.1 / GEstimator.G, next.longitudinalG, 1e-9)
+    }
+
+    @Test
+    fun `a source change inside the minimum derivative interval still establishes its own baseline`() {
+        val e = GEstimator()
+        e.update(9.0, null, false, null, 1_000, 1)
+        val first = e.update(20.0, null, false, null, 1_010, 2)
+        assertEquals(20.0, first.speedMps, 0.0)
+        assertFalse(first.longitudinalAvailable)
+        val next = e.update(20.0, null, false, null, 1_110, 2)
+        assertEquals(0.0, next.longitudinalG, 0.0)
+    }
+
+    @Test
+    fun `independent brake percentage estimate remains available on a speed source handoff`() {
+        val e = GEstimator()
+        e.update(9.0, null, false, null, 1_000, 1)
+        val next = e.update(10.0, null, true, 50.0, 1_100, 2)
+        assertTrue(next.longitudinalAvailable)
+        assertEquals(-4.0 / GEstimator.G, next.longitudinalG, 1e-9)
+    }
 
     @Test
     fun `out of order speed cannot replace the derivative baseline`() {

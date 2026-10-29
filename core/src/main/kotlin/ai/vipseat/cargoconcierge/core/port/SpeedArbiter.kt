@@ -1,5 +1,7 @@
 package ai.vipseat.cargoconcierge.core.port
 
+import ai.vipseat.cargoconcierge.core.model.VehicleSignal
+
 /**
  * Several sources can report speed at once (demo bridge, CarPropertyManager, FusedLocation-derived).
  * Interleaving them would feed the G estimator fake dv/dt spikes (e.g. VHAL says 0 km/h between two
@@ -23,6 +25,13 @@ class SpeedArbiter(private val holdMs: LongArray) {
         }
         return true
     }
+
+    /**
+     * Invalid speeds never refresh a source's hold window. Retains each accepted stream's
+     * identity so a handoff cannot become a fake speed delta.
+     */
+    fun acceptSpeed(priority: Int, sample: VehicleSignal.Speed, nowMs: Long): VehicleSignal.Speed? =
+        if (sample.mps.isFinite() && sample.mps >= 0.0 && accept(priority, nowMs)) sample.copy(sourceId = priority) else null
 
     fun reset() { lastSeen.fill(NEVER) }
 

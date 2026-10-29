@@ -1,0 +1,50 @@
+{
+  "kind": "synthetic actual-core source handoff probe",
+  "physical_accuracy_claim": false,
+  "production_smoothing": 0.5,
+  "scenarios": [
+    {
+      "scenario": "same_source_constant_speed",
+      "first_priority": 2,
+      "second_priority": 2,
+      "first_speed_mps": 9.0,
+      "second_speed_mps": 9.0,
+      "interval_ms": 100,
+      "both_accepted": true,
+      "max_g": 0.0,
+      "badge": "OK",
+      "speech_count": 0,
+      "chime_count": 0,
+      "effects": "[]"
+    },
+    {
+      "scenario": "source_switch_same_speed",
+      "first_priority": 2,
+      "second_priority": 1,
+      "first_speed_mps": 9.0,
+      "second_speed_mps": 9.0,
+      "interval_ms": 100,
+      "both_accepted": true,
+      "max_g": 0.0,
+      "badge": "OK",
+      "speech_count": 0,
+      "chime_count": 0,
+      "effects": "[]"
+    },
+    {
+      "scenario": "source_switch_one_mps_offset",
+      "first_priority": 2,
+      "second_priority": 1,
+      "first_speed_mps": 9.0,
+      "second_speed_mps": 10.0,
+      "interval_ms": 100,
+      "both_accepted": true,
+      "max_g": 0.509858106489,
+      "badge": "OVER",
+      "speech_count": 1,
+      "chime_count": 0,
+      "effects": "[Speak(text=커피 기준 0.12G를 넘었어요. 가속을 조금만 부드럽게, priority=false), Log(message=주행 안내 억제: COALESCED (1 요청) · 허용 음성 1, 효과음 0)]"
+    }
+  ],
+  "assertions_passed": true
+}

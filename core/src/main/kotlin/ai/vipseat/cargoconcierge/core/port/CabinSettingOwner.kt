@@ -35,7 +35,7 @@ class CabinSettingOwner<T : Any>(
             relinquish()
             return unchanged("현재 값 변경 감지 · 이번 세션은 유지")
         }
-        if (matches(current, target)) return unchanged("이미 요청값 · 변경하지 않음")
+        if (matches(current, target)) return confirmed(FeatureStatus.UNCHANGED, "이미 요청값 · 변경하지 않음", current.toString())
         guard(false)?.let { return it }
         if (!fresh(readAt)) return failed("원래 값 확인이 오래됨 · 변경하지 않음")
         // Save BEFORE sending: an interrupted/timed-out callback can still have changed the car.
@@ -43,10 +43,11 @@ class CabinSettingOwner<T : Any>(
         expected = target
         val request = write(target)
         if (request.status != FeatureStatus.APPLIED) return request
-        return when (confirmReadback(current, target)) {
-            Readback.CONFIRMED -> applied("변경 요청 후 차량 값 확인")
-            Readback.UNAVAILABLE -> failed("변경 요청 응답 수신 · 차량 상태 확인 실패")
-            Readback.MISMATCH -> failed("변경 요청 응답 수신 · 차량 값 불일치")
+        val readback = confirmReadback(current, target)
+        return when (readback.status) {
+            ReadbackStatus.CONFIRMED -> confirmed(FeatureStatus.APPLIED, "변경 요청 후 차량 값 확인", requireNotNull(readback.value))
+            ReadbackStatus.UNAVAILABLE -> acceptedButUnconfirmed("변경 요청 응답 수신 · 차량 상태 확인 실패")
+            ReadbackStatus.MISMATCH -> acceptedButUnconfirmed("변경 요청 응답 수신 · 차량 값 불일치")
         }
     }
 
@@ -56,7 +57,7 @@ class CabinSettingOwner<T : Any>(
         val readAt = nowMs()
         if (matches(current, saved)) {
             clear()
-            return unchanged("원래 값 확인 · 복원 명령 없음")
+            return confirmed(FeatureStatus.UNCHANGED, "원래 값 확인 · 복원 명령 없음", current.toString())
         }
         val lastTarget = expected
         if (lastTarget == null || !matches(current, lastTarget)) {
@@ -67,36 +68,41 @@ class CabinSettingOwner<T : Any>(
         if (!fresh(readAt)) return failed("현재 값 확인이 오래됨 · 복원 보류, 재시도 가능")
         val request = write(saved)
         if (request.status != FeatureStatus.APPLIED) return request
-        return when (confirmReadback(current, saved)) {
-            Readback.CONFIRMED -> {
+        val readback = confirmReadback(current, saved)
+        return when (readback.status) {
+            ReadbackStatus.CONFIRMED -> {
                 clear()
-                applied("복원 요청 후 원래 차량 값 확인")
+                confirmed(FeatureStatus.APPLIED, "복원 요청 후 원래 차량 값 확인", requireNotNull(readback.value))
             }
-            Readback.UNAVAILABLE -> failed("복원 요청 응답 수신 · 차량 상태 확인 실패, 재시도 가능")
-            Readback.MISMATCH -> failed("복원 요청 응답 수신 · 차량 값 불일치, 재시도 가능")
+            ReadbackStatus.UNAVAILABLE -> acceptedButUnconfirmed("복원 요청 응답 수신 · 차량 상태 확인 실패, 재시도 가능")
+            ReadbackStatus.MISMATCH -> acceptedButUnconfirmed("복원 요청 응답 수신 · 차량 값 불일치, 재시도 가능")
         }
     }
 
-    private enum class Readback { CONFIRMED, UNAVAILABLE, MISMATCH }
+    private enum class ReadbackStatus { CONFIRMED, UNAVAILABLE, MISMATCH }
+    private data class Readback(val status: ReadbackStatus, val value: String? = null)
 
     /** An acknowledged write may lag behind its getter. Retry only the unchanged pre-write value.
      * The one-second budget includes reads; null or a third value stops immediately. No writes are
      * repeated, and cancellation from the caller propagates through the timeout and delay.
      */
     private suspend fun confirmReadback(previous: T, target: T): Readback = withTimeoutOrNull(1_000L) {
-        var observed = read() ?: return@withTimeoutOrNull Readback.UNAVAILABLE
+        var observed = read() ?: return@withTimeoutOrNull Readback(ReadbackStatus.UNAVAILABLE)
         while (!matches(observed, target)) {
-            if (!matches(observed, previous)) return@withTimeoutOrNull Readback.MISMATCH
+            if (!matches(observed, previous)) return@withTimeoutOrNull Readback(ReadbackStatus.MISMATCH)
             delay(100L)
-            observed = read() ?: return@withTimeoutOrNull Readback.UNAVAILABLE
+            observed = read() ?: return@withTimeoutOrNull Readback(ReadbackStatus.UNAVAILABLE)
         }
-        Readback.CONFIRMED
-    } ?: Readback.UNAVAILABLE
+        Readback(ReadbackStatus.CONFIRMED, observed.toString())
+    } ?: Readback(ReadbackStatus.UNAVAILABLE)
 
     private fun fresh(readAt: Long): Boolean = (nowMs() - readAt) in 0..maxReadAgeMs
     private fun clear() { original = null; expected = null }
     private fun relinquish() { clear(); relinquished = true }
     private fun unchanged(detail: String) = FeatureOutcome(feature, FeatureStatus.UNCHANGED, detail)
     private fun failed(detail: String) = FeatureOutcome(feature, FeatureStatus.FAILED, detail)
-    private fun applied(detail: String) = FeatureOutcome(feature, FeatureStatus.APPLIED, detail)
+    private fun acceptedButUnconfirmed(detail: String) =
+        FeatureOutcome(feature, FeatureStatus.FAILED, detail, FeatureConfirmation.REQUEST_ACCEPTED)
+    private fun confirmed(status: FeatureStatus, detail: String, value: String) =
+        FeatureOutcome(feature, status, detail, FeatureConfirmation.VALUE_CONFIRMED, confirmedValue = value)
 }

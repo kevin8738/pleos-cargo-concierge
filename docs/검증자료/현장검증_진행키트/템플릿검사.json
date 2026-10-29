@@ -1,6 +1,6 @@
 {
   "checked_on": "2026-10-29",
-  "status": "배포용 빈 템플릿 구조 검사 통과; 현장 데이터 없음",
+  "status": "템플릿 구조 검사 통과; 현장 데이터 없음",
   "csv_files": 8,
   "total_data_rows": 0,
   "csv_checks": [
@@ -84,6 +84,11 @@
       "exists": true
     },
     {
+      "file": "README.md",
+      "target": "템플릿검사.json",
+      "exists": true
+    },
+    {
       "file": "구매채널_인터뷰.md",
       "target": "../실측_사용자검증_실행표.md",
       "exists": true
@@ -96,7 +101,7 @@
   ],
   "source_protocol": {
     "path": "../실측_사용자검증_실행표.md",
-    "sha256": "f256ff076d279ec8657c9adb61f768037b0f4e6fa9756dfd7d9d291646629937"
+    "sha256": "8512c24cc70fa7dfb1c9286a3b768aa2b1ddafab24f87395393a11d31ab736ce"
   },
   "not_verified": [
     "실제 참가자 모집·동의·과업 수행",
@@ -104,6 +109,6 @@
     "운반 기회·4주 재사용·D30 결과",
     "구매자·채널 담당자 인터뷰 및 운영 수량"
   ],
-  "scope": "app/docs의 빈 서식 배포본; 실제 작성 자료는 별도 로컬 폴더에 보관",
+  "scope": "템플릿 구조와0행 확인; 실제 참여자·인터뷰·계측 결과 아님",
   "line_endings": "LF"
 }

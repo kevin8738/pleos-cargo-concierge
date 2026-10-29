@@ -29,6 +29,7 @@ import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
 import ai.vipseat.cargoconcierge.core.port.CabinCapabilities
 import ai.vipseat.cargoconcierge.core.port.CabinFeature
 import ai.vipseat.cargoconcierge.core.port.CabinSettingOwner
+import ai.vipseat.cargoconcierge.core.port.FeatureConfirmation
 import ai.vipseat.cargoconcierge.core.port.FeatureOutcome
 import ai.vipseat.cargoconcierge.core.port.FeatureStatus
 import ai.vipseat.cargoconcierge.core.port.RealMotionObserver
@@ -37,6 +38,7 @@ import android.content.Context
 import android.os.Build
 import android.os.SystemClock
 import android.util.Log
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -199,6 +201,8 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
             return decoded
         }
     }
+    // SDK get/registerHvacTemperature reports the SETPOINT. It is not an ambient/cargo sensor;
+    // UI and reports must label the legacy CabinTemperature signal as a setting value.
     private val tempListener = object : HvacTemperatureListener {
         override fun onHvacTemperatureUpdated(celsius: Float?) { celsius?.takeIf { it.isFinite() }?.let { emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }
         override fun onFailed(e: Exception) { fail("hvacTemp", e) }
@@ -364,7 +368,72 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
                 maxReadAgeMs = SIGNAL_FRESHNESS_MS,
             )
         }
-        return setting.apply(target).copy(feature = feature)
+        val result = setting.apply(target).copy(feature = feature)
+        return if (result.confirmation == FeatureConfirmation.VALUE_CONFIRMED) {
+            result.copy(hvacPowerAtCheck = readHvacPower(area))
+        } else result
+    }
+
+    /** Read only: the result describes this observation, not ongoing cooling or cargo temperature. */
+    private suspend fun readHvacPower(temperatureArea: SeatArea): Boolean? {
+        val generation = connectionGeneration
+        val started = SystemClock.elapsedRealtime()
+        val observed = try {
+            withTimeoutOrNull(SIGNAL_FRESHNESS_MS) {
+                val hvac = vehicle.getHVAC()
+                val powerArea = awaitValue<SeatArea?> { ok, err ->
+                    hvac.checkHvacPowerCapabilities({ cfg, areas ->
+                        ok(areas.firstOrNull { area ->
+                            cfg.accessType.readable() && temperatureArea.values.isNotEmpty() &&
+                                temperatureArea.values.all { area.covers(it) }
+                        })
+                    }, err)
+                } ?: return@withTimeoutOrNull null
+                awaitValue<Boolean?> { ok, err -> hvac.getHvacPowerState(powerArea, ok, err) }
+            }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Log.w(TAG, "power observation failed: ${PleosErrors.describe(e)}")
+            null
+        }
+        return observed.takeIf {
+            initialized && generation == connectionGeneration &&
+                SystemClock.elapsedRealtime() - started in 0..SIGNAL_FRESHNESS_MS
+        }
+    }
+
+    /** The verified AVD temperature setter disables DUAL/SYNC as a side effect. Only an explicit
+     * false observation permits a write; unsupported, ambiguous or stale observations fail closed.
+     */
+    private suspend fun readHvacDual(temperatureArea: SeatArea): Boolean? {
+        val generation = connectionGeneration
+        val started = SystemClock.elapsedRealtime()
+        val observed = try {
+            withTimeoutOrNull(SIGNAL_FRESHNESS_MS) {
+                val hvac = vehicle.getHVAC()
+                val dualArea = awaitValue<SeatArea?> { ok, err ->
+                    hvac.checkHvacDualCapabilities({ cfg, areas ->
+                        ok(areas.singleOrNull { area ->
+                            cfg.accessType.readable() && temperatureArea.values.isNotEmpty() &&
+                                temperatureArea.values.all { area.covers(it) }
+                        })
+                    }, err)
+                } ?: return@withTimeoutOrNull null
+                awaitValue<Boolean?> { ok, err -> hvac.getHvacDualState(dualArea, ok, err) }
+            }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Log.w(TAG, "synchronization read failed: ${PleosErrors.describe(e)}")
+            null
+        }
+        val result = observed.takeIf {
+            initialized && generation == connectionGeneration &&
+                SystemClock.elapsedRealtime() - started in 0..SIGNAL_FRESHNESS_MS
+        }
+        Log.i(TAG, "temperature synchronization readback: state=$result")
+        return result
     }
 
     private suspend fun applyFan(feature: CabinFeature, area: SeatArea?, target: Int): FeatureOutcome {
@@ -432,6 +501,15 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
                 if (occupied != false) return FeatureOutcome(feature, FeatureStatus.BLOCKED_BY_OCCUPANCY, "${spot.short} 비착좌 확인 불가 · 변경하지 않음")
             }
         }
+        if (feature == CabinFeature.TEMPERATURE || feature == CabinFeature.REAR_TEMPERATURE) {
+            val dual = readHvacDual(area)
+            if (dual != false) {
+                val reason = if (dual == true) "온도 동기화 켜짐" else "온도 동기화 확인 불가"
+                val action = if (restoring) "복원 보류, 차량 설정 확인 후 재시도" else "변경하지 않음"
+                return FeatureOutcome(feature, FeatureStatus.FAILED, "$reason · $action")
+            }
+        }
+        // Evaluate all freshness after the additional read, never with a pre-SYNC timestamp.
         val now = SystemClock.elapsedRealtime()
         val speed = realSpeed?.takeIf { now - it.receivedAtMs in 0..SIGNAL_FRESHNESS_MS }?.mps
             ?: locationSpeed.freshSpeedMps(SIGNAL_FRESHNESS_MS)
@@ -462,7 +540,9 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
     private fun SeatArea.key(): String = values.map { it.name }.sorted().joinToString(",")
 
     private fun logCabinResult(operation: String, result: CabinApplyResult) {
-        result.outcomes.forEach { Log.i(TAG, "$operation ${it.feature}: ${it.status} · ${it.detail}") }
+        result.outcomes.forEach {
+            Log.i(TAG, "$operation ${it.feature}: ${it.status} · ${it.detail} · confirmation=${it.confirmation} value=${it.confirmedValue} hvacPowerAtCheck=${it.hvacPowerAtCheck}")
+        }
     }
 
     // ------------------------------------------------------------------ helpers
@@ -472,7 +552,7 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
         val result = withTimeoutOrNull(CALL_TIMEOUT_MS) {
             suspendCancellableCoroutine<FeatureOutcome> { cont ->
                 try {
-                    call({ if (cont.isActive) cont.resume(FeatureOutcome(feature, FeatureStatus.APPLIED)) }) { e ->
+                    call({ if (cont.isActive) cont.resume(FeatureOutcome(feature, FeatureStatus.APPLIED, confirmation = FeatureConfirmation.REQUEST_ACCEPTED)) }) { e ->
                         if (cont.isActive) cont.resume(FeatureOutcome(feature, PleosErrors.classify(e), PleosErrors.describe(e)))
                     }
                 } catch (e: Exception) {
@@ -551,6 +631,9 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
 
     private fun ai.pleos.playground.vehicle.api.model.capability.AccessType.writable() =
         this == ai.pleos.playground.vehicle.api.model.capability.AccessType.WRITE || this == ai.pleos.playground.vehicle.api.model.capability.AccessType.READ_WRITE
+
+    private fun ai.pleos.playground.vehicle.api.model.capability.AccessType.readable() =
+        this == ai.pleos.playground.vehicle.api.model.capability.AccessType.READ || this == ai.pleos.playground.vehicle.api.model.capability.AccessType.READ_WRITE
 
     // SDK listeners/callbacks deliver nullable values (verified by the compiler against the AAR metadata).
     private fun VehicleGear?.toCore(): Gear = when (this) {

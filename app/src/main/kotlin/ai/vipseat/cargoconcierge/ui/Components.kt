@@ -3,6 +3,7 @@ package ai.vipseat.cargoconcierge.ui
 import ai.vipseat.cargoconcierge.R
 import ai.vipseat.cargoconcierge.core.engine.BadgeLevel
 import ai.vipseat.cargoconcierge.core.port.CabinFeature
+import ai.vipseat.cargoconcierge.core.port.FeatureConfirmation
 import ai.vipseat.cargoconcierge.core.port.FeatureOutcome
 import ai.vipseat.cargoconcierge.core.port.FeatureStatus
 import ai.vipseat.cargoconcierge.ui.theme.Amber
@@ -62,7 +63,7 @@ fun featureLabel(f: CabinFeature): String = when (f) {
 }
 
 fun statusLabel(s: FeatureStatus): String = when (s) {
-    FeatureStatus.APPLIED -> "적용됨"
+    FeatureStatus.APPLIED -> "설정 확인 필요"
     FeatureStatus.UNCHANGED -> "유지"
     FeatureStatus.UNSUPPORTED -> "차량 미지원"
     FeatureStatus.PERMISSION_DENIED -> "권한 없음"
@@ -112,7 +113,36 @@ fun Chip(text: String, color: Color = Mint, modifier: Modifier = Modifier, @Draw
 }
 
 @Composable
-fun OutcomeChip(o: FeatureOutcome) = Chip("${featureLabel(o.feature)} · ${statusLabel(o.status)}", statusColor(o.status), icon = statusIcon(o.status))
+fun OutcomeChip(o: FeatureOutcome) {
+    val confirmed = o.ok && o.confirmation == FeatureConfirmation.VALUE_CONFIRMED && o.confirmedValue != null
+    val temperature = o.feature == CabinFeature.TEMPERATURE || o.feature == CabinFeature.REAR_TEMPERATURE
+    val value = if (temperature) o.confirmedValue?.toFloatOrNull()?.takeIf { it.isFinite() }?.let {
+        String.format(java.util.Locale.US, "%.1f", it).removeSuffix(".0") + "℃ "
+    }.orEmpty() else ""
+    val label = when {
+        confirmed -> "${value}설정값 확인"
+        o.confirmation == FeatureConfirmation.REQUEST_ACCEPTED -> "요청 수락 · 값 미확인"
+        else -> statusLabel(o.status)
+    }
+    val unconfirmedRequest = !confirmed && (o.status == FeatureStatus.APPLIED || o.confirmation == FeatureConfirmation.REQUEST_ACCEPTED)
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Chip("${featureLabel(o.feature)} · $label", if (unconfirmedRequest) Amber else statusColor(o.status),
+            icon = if (unconfirmedRequest) R.drawable.ic_bell else statusIcon(o.status))
+        if (temperature && confirmed) {
+            Text(
+                when (o.hvacPowerAtCheck) {
+                    true -> "설정 후 조회 · 공조 전원 켜짐"
+                    false -> "설정 후 조회 · 공조 전원 꺼짐"
+                    null -> "설정 후 조회 · 공조 전원 미확인"
+                },
+                style = MaterialTheme.typography.bodyMedium,
+                color = if (o.hvacPowerAtCheck == true) MistDim else Amber,
+            )
+        } else if (!o.ok && o.detail.isNotBlank()) {
+            Text(o.detail, style = MaterialTheme.typography.bodyMedium, color = MistDim)
+        }
+    }
+}
 
 @Composable
 fun SectionTitle(text: String, @DrawableRes icon: Int? = null, trailing: (@Composable () -> Unit)? = null) {

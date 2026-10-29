@@ -21,7 +21,19 @@ enum class FeatureStatus {
     FAILED,
 }
 
-data class FeatureOutcome(val feature: CabinFeature, val status: FeatureStatus, val detail: String = "") {
+/** Request acknowledgement and an independently read matching setting are different evidence. */
+enum class FeatureConfirmation { NONE, REQUEST_ACCEPTED, VALUE_CONFIRMED }
+
+data class FeatureOutcome(
+    val feature: CabinFeature,
+    val status: FeatureStatus,
+    val detail: String = "",
+    val confirmation: FeatureConfirmation = FeatureConfirmation.NONE,
+    /** The value actually returned by the matching getter, never a copy of the requested target. */
+    val confirmedValue: String? = null,
+    /** Optional power observation after a temperature check. This is historical, not live state. */
+    val hvacPowerAtCheck: Boolean? = null,
+) {
     val ok: Boolean get() = status == FeatureStatus.APPLIED || status == FeatureStatus.UNCHANGED
 }
 
