@@ -1,12 +1,25 @@
-# APK (접수용 release 빌드, 2026-10-28)
+# 제출용 APK
 
-| 파일 | 플레이버 | 대상 | 크기 |
-|---|---|---|---|
-| `VIPSeat_CargoConcierge_release.apk` | `pleos` | 공식 Pleos 에뮬레이터 `Pleos_Connect_v2.1` / Pleos Connect 차량 (Pleos Vehicle 2.3.2 · NaviHelper 3.0.5 · FusedLocation 1.1.3 · TTS/STT 3.3.1 연동) | 47.7 MB |
-| `VIPSeat_CargoConcierge_mock_release.apk` | `mock` | 표준 AAOS 에뮬레이터(Automotive, API 34). 차량 신호는 CarPropertyManager + 데모 브리지 | 25.3 MB |
+[`VIPSeat_CargoConcierge_release.apk`](VIPSeat_CargoConcierge_release.apk)는 **Pleos SDK 연동 release 서명본**입니다. 공식 Pleos_Connect_v2.1 에뮬레이터에서 실행을 확인했습니다.
 
-- 패키지 `ai.vipseat.cargoconcierge` · versionName `1.0.0` · versionCode 2 · minSdk 28 / targetSdk 34 · 두 파일 모두 같은 release 키(RSA 2048, `keystore/release.jks`, 저장소에 포함하지 않음)로 서명 · `apksigner verify` 통과.
-- 파일명 규칙 `팀명_앱이름_release.apk` — 팀명 **VIPSeat**, 앱 이름 CargoConcierge(VIP 조수석).
-- 무결성: `SHA256SUMS.txt` (`shasum -a 256 -c SHA256SUMS.txt`).
-- 설치: `adb install -g apk/VIPSeat_CargoConcierge_release.apk` (`-g`: RECORD_AUDIO 등 런타임 권한 선부여). 이전에 debug 빌드가 설치돼 있으면 서명이 달라 `adb uninstall ai.vipseat.cargoconcierge` 먼저.
-- 같은 파일이 GitHub Release `v1.0.0`에도 첨부되어 있습니다(시연 영상 2종 포함).
+- 크기: 47,739,775 bytes
+- 패키지: `ai.vipseat.cargoconcierge`, versionCode 2, minSdk 28 / targetSdk 34
+- 서명 검증: `apksigner verify` 통과. 서명 키는 저장소에 포함하지 않습니다.
+- 파일명: 공모전의 `팀명_앱이름_release.apk` 규칙 적용
+- 동일 파일: [Release v1.0.0](https://github.com/kevin8738/pleos-cargo-concierge/releases/tag/v1.0.0)
+
+저장소 루트에서 설치합니다.
+
+```bash
+adb install -r -g apk/VIPSeat_CargoConcierge_release.apk
+adb shell am start -n ai.vipseat.cargoconcierge/.MainActivity
+```
+
+무결성 확인:
+
+```bash
+cd apk
+shasum -a 256 -c SHA256SUMS.txt
+```
+
+표준 AAOS 테스트용 mock APK는 소스에서 `./gradlew assembleMockDebug`로 생성할 수 있습니다. 제출 대상 파일은 이 폴더의 Pleos release APK입니다.

@@ -96,11 +96,11 @@ export const HDRI_PATH = 'polyhaven/hdris/dresden_station_night_2k.hdr';
  *  true = GLB 를 넣기만 하면 보인다(대신 없는 파일마다 콘솔에 404 1줄). build_manifest.py 를 다시 돌리면 탐색이 필요 없다 */
 export const PROBE_GENERATED = false;
 
-/** 이미지→3D 로 만들 예정인 생성 에셋 id (assets/glb/<id>.glb). 없으면 각자 대체물로 폴백 */
+/** 최종 차량과 현재 VIP 후보 에셋. 없는 품목은 VIP_ASSETS의 대체물로 폴백 */
 export const GENERATED_IDS = [
-  'ioniq5_2021', 'ioniq5_cabin', 'ioniq5_wheel20', 'ioniq5_t2', 'ioniq5_body', 'ioniq5_dashboard', 'ioniq5_steering', 'sedan_body', 'car_seat', 'steering_wheel', 'dashboard',
+  'ioniq5_2021', 'ioniq5_cabin', 'ioniq5_wheel20',
   'cake_box', 'tteokbokki_bag', 'bouquet', 'grocery_bag', 'coffee_carrier', 'pet_carrier',
-  'watermelon_net', 'laptop_box', 'pottery_vase', 'cake_slice_box',
+  'watermelon_net',
 ];
 
 /** 실제 크기 표 (m). 생성 GLB 는 보통 단위 정규화돼 나오므로, manifest 에 실측 치수(real_size_m)가 없거나
@@ -161,7 +161,7 @@ export const BODIES = {
   sedan_body: { label: '일반형 대형 세단', L: 4.99, W: 1.88, H: 1.46, floor: 0.33, cowlX: 1.1, seatX: -0.12, seatZ: 0.42, paint: 0x1f3566, paintName: 'Navy',
     seat: 0x1b1d23, trim: 0x1b1e24, carpet: 0x15171b, dash: 0x1a1c21 },
 };
-export const BODY_ORDER = ['ioniq5_2021', 'ioniq5_t2', 'ioniq5_body', 'sedan_body'];
+export const BODY_ORDER = ['ioniq5_2021'];
 
 /** 세단 치수 (차 로컬 +X = 앞, +Z = 조수석). 축거 2.9 m 는 물리와 같다 (프로시저럴 폴백용) */
 export const SEDAN = { L: 4.99, W: 1.88, H: 1.46, nose: 2.45, tail: -2.54, axle: 1.45, track: 0.81 };

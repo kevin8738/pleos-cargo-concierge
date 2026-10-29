@@ -24,3 +24,13 @@ keystore/
 keystore.properties
 __pycache__/
 *.pyc
+
+# Local credentials and agent state
+.env
+.env.*
+!.env.example
+.omx/
+
+# Identity/signature-filled submission copies remain local
+/submission-private/
+/deliverables/
