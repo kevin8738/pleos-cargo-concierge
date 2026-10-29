@@ -1,0 +1,1 @@
+session_id,participant_id,task_id,attempt_no,state_origin,prior_exposure,task_start,task_end,duration_s,action_count,help_requests,assisted,outcome,critical_misunderstanding,observed_behavior,participant_quote_deidentified,interpretation,help_given,evidence_path

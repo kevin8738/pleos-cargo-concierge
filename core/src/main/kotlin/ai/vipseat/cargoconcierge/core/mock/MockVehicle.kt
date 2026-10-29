@@ -70,8 +70,12 @@ class MockVehicle : VehiclePort {
     var restoreCount = 0; private set
     var connected = false; private set
 
-    override suspend fun connect() {
+    override suspend fun connect() = connect(emitInitialState = true)
+
+    /** A real-source demo bridge must not overwrite observed state with fake startup defaults. */
+    suspend fun connect(emitInitialState: Boolean) {
         connected = true
+        if (!emitInitialState) return
         emit(VehicleSignal.SourceStatus(true, "mock"))
         emit(VehicleSignal.GearChanged(gear))
         CargoSpot.SEATS.forEach { emit(VehicleSignal.SeatOccupancy(it, occupancy[it])) }

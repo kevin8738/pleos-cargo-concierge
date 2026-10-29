@@ -1,0 +1,1 @@
+measurement_id,sample_id,elapsed_s,axis_or_metric,reference_g,reference_uncertainty_g,app_g,input_age_s,input_valid,preset_limit_g,warning_boundary_g,reference_state,app_state,warning_class,over_class,uncertainty_or_exclusion_reason,evidence_path

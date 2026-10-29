@@ -1,0 +1,1 @@
+measurement_id,event_id,source,motion_state,trigger_crossing_s,request_s,audible_start_s,audible_end_s,audible_status,policy_counted,suppression_reason,overlap_event_ids,overlap_s,budget_exhausted_s,user_mute_s,evidence_path,notes

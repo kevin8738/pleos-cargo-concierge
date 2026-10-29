@@ -4,10 +4,16 @@ import ai.vipseat.cargoconcierge.core.port.CabinFeature
 import ai.vipseat.cargoconcierge.core.port.CabinSettingOwner
 import ai.vipseat.cargoconcierge.core.port.FeatureOutcome
 import ai.vipseat.cargoconcierge.core.port.FeatureStatus
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.awaitCancellation
+import kotlinx.coroutines.cancelAndJoin
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.*
 import org.junit.Test
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class CabinSettingOwnerTest {
     private class Setting {
         var value = 22
@@ -52,6 +58,136 @@ class CabinSettingOwnerTest {
         assertEquals(FeatureStatus.APPLIED, s.owner.restore().status)
         assertEquals(listOf(18, 20, 22), s.writes)
         assertFalse(s.owner.needsRestore)
+    }
+
+    @Test fun `delayed restore is confirmed by reads without resending the setter`() = runTest {
+        var value = 22
+        var restoreSentAt: Long? = null
+        val writes = mutableListOf<Int>()
+        val owner = CabinSettingOwner(
+            feature = CabinFeature.TEMPERATURE,
+            read = {
+                if (restoreSentAt?.let { testScheduler.currentTime - it >= 150 } == true) value = 22
+                value
+            },
+            write = { target ->
+                writes += target
+                if (target == 18) value = target else restoreSentAt = testScheduler.currentTime
+                FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.APPLIED)
+            },
+            guard = { null },
+            nowMs = { testScheduler.currentTime },
+        )
+        assertEquals(FeatureStatus.APPLIED, owner.apply(18).status)
+        assertEquals(FeatureStatus.APPLIED, owner.restore().status)
+        assertEquals(listOf(18, 22), writes)
+        assertTrue(testScheduler.currentTime in 150..1_000)
+        assertFalse(owner.needsRestore)
+    }
+
+    @Test fun `delayed apply is confirmed within the readback budget`() = runTest {
+        var sentAt: Long? = null
+        val writes = mutableListOf<Int>()
+        val owner = CabinSettingOwner(
+            feature = CabinFeature.TEMPERATURE,
+            read = { if (sentAt?.let { testScheduler.currentTime - it >= 150 } == true) 18 else 22 },
+            write = { target ->
+                writes += target
+                sentAt = testScheduler.currentTime
+                FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.APPLIED)
+            },
+            guard = { null },
+            nowMs = { testScheduler.currentTime },
+        )
+        assertEquals(FeatureStatus.APPLIED, owner.apply(18).status)
+        assertEquals(listOf(18), writes)
+        assertTrue(testScheduler.currentTime in 150..1_000)
+        assertTrue(owner.needsRestore)
+    }
+
+    @Test fun `old value never becomes applied after the one second budget`() = runTest {
+        val s = Setting().apply { echoes = false }
+        assertEquals(FeatureStatus.FAILED, s.owner.apply(18).status)
+        assertEquals(1_000L, testScheduler.currentTime)
+        assertEquals(listOf(18), s.writes)
+        assertTrue(s.owner.needsRestore)
+    }
+
+    @Test fun `null or third value after apply acknowledgement fails without retrying`() = runTest {
+        for (observed in listOf(null, 24)) {
+            val readings = mutableListOf<Int?>(22, observed)
+            val writes = mutableListOf<Int>()
+            val owner = CabinSettingOwner(
+                feature = CabinFeature.TEMPERATURE,
+                read = { readings.removeAt(0) },
+                write = { target -> writes += target; FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.APPLIED) },
+                guard = { null },
+            )
+            assertEquals(FeatureStatus.FAILED, owner.apply(18).status)
+            assertTrue(readings.isEmpty())
+            assertEquals(listOf(18), writes)
+            assertEquals(0L, testScheduler.currentTime)
+            assertTrue(owner.needsRestore)
+        }
+    }
+
+    @Test fun `null or third value after restore acknowledgement preserves failure`() = runTest {
+        for (observed in listOf(null, 24)) {
+            val readings = mutableListOf<Int?>(22, 18, 18, observed)
+            val writes = mutableListOf<Int>()
+            val owner = CabinSettingOwner(
+                feature = CabinFeature.TEMPERATURE,
+                read = { readings.removeAt(0) },
+                write = { target -> writes += target; FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.APPLIED) },
+                guard = { null },
+            )
+            assertEquals(FeatureStatus.APPLIED, owner.apply(18).status)
+            assertEquals(FeatureStatus.FAILED, owner.restore().status)
+            assertTrue(readings.isEmpty())
+            assertEquals(listOf(18, 22), writes)
+            assertEquals(0L, testScheduler.currentTime)
+            assertTrue(owner.needsRestore)
+        }
+    }
+
+    @Test fun `readback budget includes a stalled getter`() = runTest {
+        var reads = 0
+        var readCancelled = false
+        val writes = mutableListOf<Int>()
+        val owner = CabinSettingOwner(
+            feature = CabinFeature.TEMPERATURE,
+            read = {
+                if (++reads == 1) 22 else {
+                    try { delay(2_000); 18 } finally { readCancelled = true }
+                }
+            },
+            write = { target -> writes += target; FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.APPLIED) },
+            guard = { null },
+        )
+        assertEquals(FeatureStatus.FAILED, owner.apply(18).status)
+        assertEquals(1_000L, testScheduler.currentTime)
+        assertTrue(readCancelled)
+        assertEquals(listOf(18), writes)
+        assertTrue(owner.needsRestore)
+    }
+
+    @Test fun `caller cancellation during readback propagates without another command`() = runTest {
+        var reads = 0
+        var returnedResult = false
+        val writes = mutableListOf<Int>()
+        val owner = CabinSettingOwner(
+            feature = CabinFeature.TEMPERATURE,
+            read = { if (++reads == 1) 22 else awaitCancellation() },
+            write = { target -> writes += target; FeatureOutcome(CabinFeature.TEMPERATURE, FeatureStatus.APPLIED) },
+            guard = { null },
+        )
+        val job = launch { owner.apply(18); returnedResult = true }
+        testScheduler.runCurrent()
+        job.cancelAndJoin()
+        assertTrue(job.isCancelled)
+        assertFalse(returnedResult)
+        assertEquals(listOf(18), writes)
+        assertTrue(owner.needsRestore)
     }
 
     @Test fun `external value change survives restore and further apply in same session`() = runTest {

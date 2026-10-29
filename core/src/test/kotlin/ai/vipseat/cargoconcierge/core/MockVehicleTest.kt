@@ -6,10 +6,27 @@ import ai.vipseat.cargoconcierge.core.port.ApplyConsent
 import ai.vipseat.cargoconcierge.core.port.CabinFeature
 import ai.vipseat.cargoconcierge.core.port.FeatureStatus
 import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.CoroutineStart
+import ai.vipseat.cargoconcierge.core.model.VehicleSignal
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class MockVehicleTest {
+    @Test
+    fun `real-source injection connection emits no synthetic initial vacancy`() = runTest {
+        val v = MockVehicle()
+        val seen = mutableListOf<VehicleSignal>()
+        val job = launch(start = CoroutineStart.UNDISPATCHED) { v.signals.collect { seen += it } }
+        v.connect(emitInitialState = false)
+        testScheduler.runCurrent()
+        assertEquals(emptyList<VehicleSignal>(), seen)
+        v.setPassengerOccupied(true)
+        testScheduler.runCurrent()
+        assertEquals(listOf(VehicleSignal.SeatOccupancy(ai.vipseat.cargoconcierge.core.model.CargoSpot.FRONT_PASSENGER, true)), seen)
+        job.cancel()
+    }
+
 
     @Test
     fun `cake preset cools the passenger zone and restore brings it back`() = runTest {

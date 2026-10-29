@@ -37,7 +37,8 @@ dependencies {
     implementation(libs.androidx.core.ktx)
 
     // ai.pleos.playground artifacts (resolved from nexus-playground.pleos.ai)
-    implementation(libs.pleos.vehicle)
+    // The verified vacancy decoder depends on this exact client bytecode contract.
+    implementation(libs.pleos.vehicle) { version { strictly("2.3.2") } }
     implementation(libs.pleos.navihelper)
     implementation(libs.pleos.fusedlocation)
     implementation(libs.pleos.tts)

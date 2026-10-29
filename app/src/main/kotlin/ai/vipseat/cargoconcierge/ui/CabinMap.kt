@@ -165,13 +165,13 @@ private fun SpotCell(spot: CargoSpot, s: VehicleSnapshot, selected: CargoSpot, o
                     doorOpen -> "문 열림"
                     occ == false -> "비어 있음"
                     spot == CargoSpot.TRUNK -> when (s.doors[DoorId.TRUNK]) { true -> "열림"; false -> "닫힘"; null -> "—" }
-                    else -> "—"
+                    else -> "좌석 상태 미확인"
                 },
                 style = MaterialTheme.typography.bodyMedium,
                 color = when { occupied -> Leaf; doorOpen -> Mint; else -> MistDim },
             )
             Text(
-                if (isSel && occupied) "들고 타기 · 열선·통풍은 그대로" else capabilityNote(spot),
+                if (spot.hasSeat && occ == null) "차량 설정 변경 보류" else if (isSel && occupied) "들고 타기 · 열선·통풍은 그대로" else capabilityNote(spot),
                 style = MaterialTheme.typography.bodySmall, color = if (isSel && occupied) Champagne else MistDim, maxLines = 2,
             )
         }

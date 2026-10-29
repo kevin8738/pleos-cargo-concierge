@@ -1,0 +1,1 @@
+session_id,session_date,participant_id,vehicle_id,operator_id,reviewer_id,evidence_class,app_version,app_commit,apk_sha256,sdk_os,environment,consent_status,recording_scope,retention_rule,withdrawal_route,observation_start,observation_end,evidence_path,notes

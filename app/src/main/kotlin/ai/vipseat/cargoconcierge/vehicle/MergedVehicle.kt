@@ -78,7 +78,7 @@ class MergedVehicle(
 
     override suspend fun connect() {
         sources.forEach { runCatching { it.connect() } }
-        mock.connect()
+        mock.connect(emitInitialState = sources.isEmpty())
     }
 
     override suspend fun disconnect() {

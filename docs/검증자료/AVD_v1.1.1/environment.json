@@ -1,0 +1,18 @@
+{
+  "app": "1.1.1-pleos",
+  "versionCode": 4,
+  "vehicle_sdk": "2.3.2",
+  "vehicle_service": "2.3.22",
+  "vehicle_service_code": 74,
+  "product": "crp_avd_arm64",
+  "api": 34,
+  "display": "2560x1440",
+  "port_forward_verified": true,
+  "mock_vehicle_signal_injection": false,
+  "ui_actions": "adb preset/end/ack",
+  "apk": {
+    "bytes": 47772551,
+    "sha256": "48af46bf846c07e72016a81acd77a296f8371b24a31b759cbb80d26d0e573602"
+  },
+  "verification": "metadata and restore SDK getter order checked after second run"
+}

@@ -1,0 +1,63 @@
+10-29 03:32:25.422 22929 22929 I CargoVM : TTS: 케이크 VIP 모드, 조수석. 0.15G 가드를 시작할게요
+10-29 03:32:25.422 22929 22929 I CargoVM : 가드 시작: 케이크 (0.15G) · 조수석
+10-29 03:32:25.423 22929 22929 I CargoVM : 캐빈 적용 → 조수석
+10-29 03:32:25.433 22929 23196 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@98604e7 , propId HVAC_TEMPERATURE_SET
+10-29 03:32:25.433 22929 23196 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 03:32:25.434 22929 23196 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@98604e7 , propId HVAC_TEMPERATURE_SET
+10-29 03:32:25.434 22929 23196 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 03:32:25.439 22929 23196 I PleosVehicle: hvac zones: passenger temperature=ROW_1_RIGHT fan=ROW_1_LEFT, ROW_1_RIGHT direction=ROW_1_LEFT, ROW_1_RIGHT rearTemp=none
+10-29 03:32:25.446 22929 23833 I [Pleos][SDK]b: [binder:22929_8]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 22.0
+10-29 03:32:25.459 22929 23833 I [Pleos][SDK]b: [binder:22929_8]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 2
+10-29 03:32:25.462 22929 22976 I PleosVehicle: apply TEMPERATURE: BLOCKED_BY_OCCUPANCY · 조수석 비착좌 확인 불가 · 변경하지 않음
+10-29 03:32:25.462 22929 22976 I PleosVehicle: apply FAN: UNCHANGED · 운전석과 공유하는 존이라 유지
+10-29 03:32:25.462 22929 22976 I PleosVehicle: apply AIRFLOW: UNCHANGED · 운전석과 공유하는 존이라 유지
+10-29 03:32:25.462 22929 22976 I PleosVehicle: apply SEAT_HEATER: UNCHANGED · 이미 요청값 · 변경하지 않음
+10-29 03:32:25.462 22929 22976 I PleosVehicle: apply SEAT_VENT: UNCHANGED · 이미 요청값 · 변경하지 않음
+10-29 03:32:25.581 22929 22929 I CargoVM :   TEMPERATURE: BLOCKED_BY_OCCUPANCY (조수석 비착좌 확인 불가 · 변경하지 않음)
+10-29 03:32:25.582 22929 22929 I CargoVM :   FAN: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 03:32:25.582 22929 22929 I CargoVM :   AIRFLOW: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 03:32:25.582 22929 22929 I CargoVM :   SEAT_HEATER: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 03:32:25.582 22929 22929 I CargoVM :   SEAT_VENT: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 03:32:25.582 22929 22929 I CargoVM : 캐빈 적용: 0개 성공, 1개 미적용
+10-29 03:32:25.631 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:25.651 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:25.714 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:25.914 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.114 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.215 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.218 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.220 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.321 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.321 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.416 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.616 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.814 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:26.914 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.114 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.218 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.222 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.223 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.415 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.614 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.715 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:27.914 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.114 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.214 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.226 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.227 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.414 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.514 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.717 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:28.914 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.014 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.114 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.215 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.230 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.232 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.414 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.414 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.615 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.714 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:29.790 22929 22929 I CargoVM : 가드 종료
+10-29 03:32:29.791 22929 22929 I CargoVM : 복원할 앱 변경값이 없어요. 미적용 항목은 그대로예요.
+10-29 03:32:33.838 22929 23182 D [Pleos][SDK]a: [binder:22929_7]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1

@@ -1,5 +1,8 @@
 package ai.vipseat.cargoconcierge.core.port
 
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.withTimeoutOrNull
+
 /**
  * In-memory ownership of one physical cabin property, not a whole preset.
  *
@@ -40,9 +43,11 @@ class CabinSettingOwner<T : Any>(
         expected = target
         val request = write(target)
         if (request.status != FeatureStatus.APPLIED) return request
-        val observed = read() ?: return failed("변경 요청 응답 수신 · 차량 상태 확인 실패")
-        return if (matches(observed, target)) applied("변경 요청 후 차량 값 확인")
-        else failed("변경 요청 응답 수신 · 차량 값 불일치")
+        return when (confirmReadback(current, target)) {
+            Readback.CONFIRMED -> applied("변경 요청 후 차량 값 확인")
+            Readback.UNAVAILABLE -> failed("변경 요청 응답 수신 · 차량 상태 확인 실패")
+            Readback.MISMATCH -> failed("변경 요청 응답 수신 · 차량 값 불일치")
+        }
     }
 
     suspend fun restore(): FeatureOutcome {
@@ -62,12 +67,31 @@ class CabinSettingOwner<T : Any>(
         if (!fresh(readAt)) return failed("현재 값 확인이 오래됨 · 복원 보류, 재시도 가능")
         val request = write(saved)
         if (request.status != FeatureStatus.APPLIED) return request
-        val observed = read() ?: return failed("복원 요청 응답 수신 · 차량 상태 확인 실패, 재시도 가능")
-        return if (matches(observed, saved)) {
-            clear()
-            applied("복원 요청 후 원래 차량 값 확인")
-        } else failed("복원 요청 응답 수신 · 차량 값 불일치, 재시도 가능")
+        return when (confirmReadback(current, saved)) {
+            Readback.CONFIRMED -> {
+                clear()
+                applied("복원 요청 후 원래 차량 값 확인")
+            }
+            Readback.UNAVAILABLE -> failed("복원 요청 응답 수신 · 차량 상태 확인 실패, 재시도 가능")
+            Readback.MISMATCH -> failed("복원 요청 응답 수신 · 차량 값 불일치, 재시도 가능")
+        }
     }
+
+    private enum class Readback { CONFIRMED, UNAVAILABLE, MISMATCH }
+
+    /** An acknowledged write may lag behind its getter. Retry only the unchanged pre-write value.
+     * The one-second budget includes reads; null or a third value stops immediately. No writes are
+     * repeated, and cancellation from the caller propagates through the timeout and delay.
+     */
+    private suspend fun confirmReadback(previous: T, target: T): Readback = withTimeoutOrNull(1_000L) {
+        var observed = read() ?: return@withTimeoutOrNull Readback.UNAVAILABLE
+        while (!matches(observed, target)) {
+            if (!matches(observed, previous)) return@withTimeoutOrNull Readback.MISMATCH
+            delay(100L)
+            observed = read() ?: return@withTimeoutOrNull Readback.UNAVAILABLE
+        }
+        Readback.CONFIRMED
+    } ?: Readback.UNAVAILABLE
 
     private fun fresh(readAt: Long): Boolean = (nowMs() - readAt) in 0..maxReadAgeMs
     private fun clear() { original = null; expected = null }

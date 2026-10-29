@@ -34,6 +34,7 @@ import ai.vipseat.cargoconcierge.core.port.FeatureStatus
 import ai.vipseat.cargoconcierge.core.port.RealMotionObserver
 import ai.vipseat.cargoconcierge.core.port.VehiclePort
 import android.content.Context
+import android.os.Build
 import android.os.SystemClock
 import android.util.Log
 import kotlinx.coroutines.CoroutineScope
@@ -89,6 +90,11 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
     )
     private val status = linkedMapOf<String, String>()
     private val occupancy: MutableMap<CargoSpot, Boolean?> = java.util.Collections.synchronizedMap(HashMap())
+    private val occupancyLock = Any()
+    private val occupancyRevision = mutableMapOf<CargoSpot, Long>()
+    private val occupancyReceivedAt = mutableMapOf<CargoSpot, Long>()
+    @Volatile private var connectionGeneration = 0L
+    @Volatile private var occupancyMappingVerified = false
     @Volatile private var lastGear = Gear.UNKNOWN
     @Volatile private var lastGearAt = 0L
     /** A temperature zone that covers row 2 but no row-1 seat — only such a zone may be retuned for a rear VIP. */
@@ -138,10 +144,59 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
             override fun onFailed(e: Exception) { fail("door-$id", e) }
         }
     }
-    private val occupancyListeners = seatAreas.keys.associateWith { spot ->
-        object : SeatOccupancyListener {
-            override fun onSeatOccupancyUpdated(occupied: Boolean?) { occupancy[spot] = occupied; emit(VehicleSignal.SeatOccupancy(spot, occupied)) }
-            override fun onFailed(e: Exception) { fail("occupancy-${spot.name.lowercase()}", e) }
+    private var occupancyListeners: Map<CargoSpot, SeatOccupancyListener> = emptyMap()
+
+    private fun recordOccupancy(spot: CargoSpot, value: Boolean?, generation: Long) {
+        synchronized(occupancyLock) {
+            if (!initialized || generation != connectionGeneration) return
+            occupancyRevision[spot] = (occupancyRevision[spot] ?: 0) + 1
+            occupancy[spot] = value
+            occupancyReceivedAt[spot] = SystemClock.elapsedRealtime()
+            emit(VehicleSignal.SeatOccupancy(spot, value))
+        }
+    }
+
+    private fun beginOccupancyObservations() {
+        val generation = synchronized(occupancyLock) {
+            connectionGeneration += 1
+            occupancy.clear()
+            occupancyRevision.clear()
+            occupancyReceivedAt.clear()
+            connectionGeneration
+        }
+        val info = runCatching { app.packageManager.getPackageInfo("ai.pleos.playground.service.vehicle", 0) }.getOrNull()
+        occupancyMappingVerified = PleosSeatOccupancy.isVerified(info?.versionName, info?.longVersionCode, Build.PRODUCT, Build.VERSION.SDK_INT)
+        status["occupancyMapping"] = if (occupancyMappingVerified) "verified-vacancy-only" else "unverified-blocked"
+        occupancyListeners = seatAreas.keys.associateWith { spot ->
+            object : SeatOccupancyListener {
+                override fun onSeatOccupancyUpdated(occupied: Boolean?) {
+                    recordOccupancy(spot, PleosSeatOccupancy.decodeConfirmedVacancy(occupied, occupancyMappingVerified), generation)
+                }
+                override fun onFailed(e: Exception) {
+                    if (!initialized || generation != connectionGeneration) return
+                    recordOccupancy(spot, null, generation)
+                    fail("occupancy-${spot.name.lowercase()}", e)
+                }
+            }
+        }
+    }
+
+    /** A direct getter is required at the command boundary; a newer listener invalidates it. */
+    private suspend fun readConfirmedVacancy(spot: CargoSpot, area: SeatArea): Boolean? {
+        val generation = connectionGeneration
+        val revision = synchronized(occupancyLock) { occupancyRevision[spot] ?: 0 }
+        val started = SystemClock.elapsedRealtime()
+        val sdkValue = awaitValue<Boolean?> { ok, err -> vehicle.getSeat().getCurrentSeatOccupancy(area, ok, err) }
+        synchronized(occupancyLock) {
+            if (!initialized || generation != connectionGeneration) return null
+            if (revision != (occupancyRevision[spot] ?: 0)) return null
+            if (SystemClock.elapsedRealtime() - started !in 0..SIGNAL_FRESHNESS_MS) {
+                recordOccupancy(spot, null, generation)
+                return null
+            }
+            val decoded = PleosSeatOccupancy.decodeConfirmedVacancy(sdkValue, occupancyMappingVerified)
+            recordOccupancy(spot, decoded, generation)
+            return decoded
         }
     }
     private val tempListener = object : HvacTemperatureListener {
@@ -168,6 +223,8 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
         // before registering (the sample registers on user action, well after initialize()).
         delay(SERVICE_BIND_GRACE_MS)
 
+        beginOccupancyObservations()
+
         register("gear") { vehicle.getGear().registerGearSelection(gearListener) }
         register("steering") { vehicle.getSteeringWheel().registerSteeringWheelAngle(steeringListener) }
         register("brake") { vehicle.getBrake().registerBrakePedalStatus(brakeListener) }
@@ -181,9 +238,7 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
         doorAreas.forEach { (id, area) ->
             runCatching { vehicle.getDoor().getCurrentDoorPosition(area, { emit(VehicleSignal.Door(id, (it ?: 0) > 0)) }, { fail("door.get-$id", it) }) }
         }
-        seatAreas.forEach { (spot, area) ->
-            runCatching { vehicle.getSeat().getCurrentSeatOccupancy(area, { occupancy[spot] = it; emit(VehicleSignal.SeatOccupancy(spot, it)) }, { fail("occupancy.get-${spot.name.lowercase()}", it) }) }
-        }
+        seatAreas.forEach { (spot, area) -> readConfirmedVacancy(spot, area) }
         runCatching { vehicle.getHVAC().getHvacTemperature(passengerSeat, TemperatureUnit.CELSIUS, { t -> t?.takeIf { it.isFinite() }?.let { emit(VehicleSignal.CabinTemperature(CabinZone.FRONT_PASSENGER, it.toDouble())) } }, { fail("hvacTemp.get", it) }) }
 
         status["speed"] = locationSpeed.start()
@@ -192,7 +247,15 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
     }
 
     override suspend fun disconnect() = cabinMutex.withLock {
-        initialized = false
+        synchronized(occupancyLock) {
+            initialized = false
+            connectionGeneration += 1
+            occupancyMappingVerified = false
+            occupancy.clear()
+            occupancyRevision.clear()
+            occupancyReceivedAt.clear()
+            seatAreas.keys.forEach { emit(VehicleSignal.SeatOccupancy(it, null)) }
+        }
         motionPolling?.cancel()
         motionPolling = null
         lastGear = Gear.UNKNOWN
@@ -358,21 +421,30 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
     /** Re-read the real vehicle immediately before every write; demo/UI state is not authority. */
     private suspend fun commandGuard(feature: CabinFeature, area: SeatArea, restoring: Boolean): FeatureOutcome? {
         if (!initialized) return FeatureOutcome(feature, FeatureStatus.FAILED, "차량 연결 없음 · 명령 보류")
+        val generation = connectionGeneration
+        val coveredSeats = seatAreas.filter { (_, seat) -> seat.values.any { area.covers(it) } }
         val gear = awaitValue<VehicleGear?> { ok, err -> vehicle.getGear().getCurrentGearSelectionState(ok, err) }
         recordGear(gear)
         if (gear.toCore() != Gear.PARK) return FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "P 기어 확인 불가 · 명령 보류")
         if (!restoring) {
-            for ((spot, seatArea) in seatAreas.filter { (_, seat) -> seat.values.any { area.covers(it) } }) {
-                val occupied = awaitValue<Boolean?> { ok, err -> vehicle.getSeat().getCurrentSeatOccupancy(seatArea, ok, err) }
-                occupancy[spot] = occupied
+            for ((spot, seatArea) in coveredSeats) {
+                val occupied = readConfirmedVacancy(spot, seatArea)
                 if (occupied != false) return FeatureOutcome(feature, FeatureStatus.BLOCKED_BY_OCCUPANCY, "${spot.short} 비착좌 확인 불가 · 변경하지 않음")
             }
         }
         val now = SystemClock.elapsedRealtime()
         val speed = realSpeed?.takeIf { now - it.receivedAtMs in 0..SIGNAL_FRESHNESS_MS }?.mps
             ?: locationSpeed.freshSpeedMps(SIGNAL_FRESHNESS_MS)
+        val stillVacant = synchronized(occupancyLock) {
+            coveredSeats.isNotEmpty() && coveredSeats.keys.all {
+                occupancy[it] == false && occupancyReceivedAt[it]?.let { at ->
+                    now - at in 0..SIGNAL_FRESHNESS_MS
+                } == true
+            }
+        }
         return when {
-            !initialized -> FeatureOutcome(feature, FeatureStatus.FAILED, "차량 연결 끊김 · 명령 보류")
+            !initialized || generation != connectionGeneration -> FeatureOutcome(feature, FeatureStatus.FAILED, "차량 연결 끊김 · 명령 보류")
+            !restoring && !stillVacant -> FeatureOutcome(feature, FeatureStatus.BLOCKED_BY_OCCUPANCY, "최신 비착좌 확인 상실 · 변경하지 않음")
             lastGear != Gear.PARK || now - lastGearAt !in 0..SIGNAL_FRESHNESS_MS ->
                 FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "최신 P 기어 확인 불가 · 명령 보류")
             speed == null -> FeatureOutcome(feature, FeatureStatus.DRIVING_RESTRICTED, "최신 차속 확인 불가 · 명령 보류")
@@ -474,7 +546,7 @@ class PleosVehicle(context: Context) : VehiclePort, RealMotionObserver {
             }, err)
         }
         zonesResolved = true
-        Log.i(TAG, "hvac zones: passenger fan=${fanArea?.values?.joinToString()} direction=${dirArea?.values?.joinToString()} rearTemp=${rearTempArea?.values?.joinToString() ?: "none"}")
+        Log.i(TAG, "hvac zones: passenger temperature=${passengerTempArea?.values?.joinToString()} fan=${fanArea?.values?.joinToString()} direction=${dirArea?.values?.joinToString()} rearTemp=${rearTempArea?.values?.joinToString() ?: "none"}")
     }
 
     private fun ai.pleos.playground.vehicle.api.model.capability.AccessType.writable() =

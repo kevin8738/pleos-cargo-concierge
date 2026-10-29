@@ -1,0 +1,64 @@
+10-29 03:32:59.542 22929 22929 I CargoVM : TTS: 케이크 VIP 모드, 조수석. 0.15G 가드를 시작할게요
+10-29 03:32:59.542 22929 22929 I CargoVM : 가드 시작: 케이크 (0.15G) · 조수석
+10-29 03:32:59.542 22929 22929 I CargoVM : 캐빈 적용 → 조수석
+10-29 03:32:59.546 22929 28836 I [Pleos][SDK]b: [binder:22929_9]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 22.0
+10-29 03:32:59.549 22929 28836 I [Pleos][SDK]b: [binder:22929_9]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 1
+10-29 03:32:59.565 22929 23833 D [Pleos][SDK]a: [binder:22929_8]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 18.0
+10-29 03:32:59.581 22929 28836 D [Pleos][SDK]b: [binder:22929_9]onResult() called with: propKey = HVAC_TEMPERATURE_SET, areaId = 4, result = true
+10-29 03:32:59.590 22929 28836 I [Pleos][SDK]b: [binder:22929_9]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 18.0
+10-29 03:32:59.596 22929 22976 I PleosVehicle: apply TEMPERATURE: APPLIED · 변경 요청 후 차량 값 확인
+10-29 03:32:59.596 22929 22976 I PleosVehicle: apply FAN: UNCHANGED · 운전석과 공유하는 존이라 유지
+10-29 03:32:59.596 22929 22976 I PleosVehicle: apply AIRFLOW: UNCHANGED · 운전석과 공유하는 존이라 유지
+10-29 03:32:59.596 22929 22976 I PleosVehicle: apply SEAT_HEATER: UNCHANGED · 이미 요청값 · 변경하지 않음
+10-29 03:32:59.596 22929 22976 I PleosVehicle: apply SEAT_VENT: UNCHANGED · 이미 요청값 · 변경하지 않음
+10-29 03:32:59.638 22929 22929 I CargoVM :   TEMPERATURE: APPLIED (변경 요청 후 차량 값 확인)
+10-29 03:32:59.638 22929 22929 I CargoVM :   FAN: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 03:32:59.638 22929 22929 I CargoVM :   AIRFLOW: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 03:32:59.638 22929 22929 I CargoVM :   SEAT_HEATER: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 03:32:59.638 22929 22929 I CargoVM :   SEAT_VENT: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 03:32:59.638 22929 22929 I CargoVM : 캐빈 적용: 1개 성공, 0개 미적용
+10-29 03:32:59.638 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:59.716 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:32:59.914 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.115 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.315 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.408 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.410 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.515 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.515 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.714 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:00.913 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.022 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.115 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.214 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.414 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.414 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.415 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.614 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.714 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.814 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:01.917 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.115 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.314 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.422 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.426 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.514 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.717 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:02.914 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.014 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.116 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.314 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.414 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.429 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.433 22929 22929 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 03:33:03.571 22929 23833 D [Pleos][SDK]a: [binder:22929_8]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 2
+10-29 03:33:03.572 22929 22929 I CargoVM : TTS: 좌석 상태를 확인할 수 없어 VIP 모드를 종료해요. 정차 후 설정 복원 결과를 확인해 주세요
+10-29 03:33:03.572 22929 22929 I CargoVM : 조수석 비착좌 확인 상실 → 가드 종료, 조건부 복원
+10-29 03:33:03.578 22929 23833 I [Pleos][SDK]b: [binder:22929_8]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 18.0
+10-29 03:33:03.580 22929 23833 D [Pleos][SDK]b: [binder:22929_8]onResult() called with: propKey = HVAC_TEMPERATURE_SET, areaId = 4, result = true
+10-29 03:33:03.584 22929 23833 I [Pleos][SDK]b: [binder:22929_8]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 18.0
+10-29 03:33:03.584 22929 23833 D [Pleos][SDK]a: [binder:22929_8]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 22.0
+10-29 03:33:03.688 22929 23182 I [Pleos][SDK]b: [binder:22929_7]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 22.0
+10-29 03:33:03.688 22929 23196 I PleosVehicle: restore TEMPERATURE: APPLIED · 복원 요청 후 원래 차량 값 확인
+10-29 03:33:03.688 22929 22929 I CargoVM : 원복 TEMPERATURE: APPLIED 복원 요청 후 원래 차량 값 확인
+10-29 03:33:03.688 22929 22929 I CargoVM : 앱 변경값의 조건부 복원을 마쳤어요. 외부에서 바뀐 값은 유지해요.

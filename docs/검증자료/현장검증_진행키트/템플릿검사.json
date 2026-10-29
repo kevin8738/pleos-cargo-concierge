@@ -1,0 +1,109 @@
+{
+  "checked_on": "2026-10-29",
+  "status": "배포용 빈 템플릿 구조 검사 통과; 현장 데이터 없음",
+  "csv_files": 8,
+  "total_data_rows": 0,
+  "csv_checks": [
+    {
+      "file": "01_실행세션.csv",
+      "header_columns": 20,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "49af6250006d54f4673df43c0f20c9d8bb732f4fd6f387d0879f84d4499f73b5"
+    },
+    {
+      "file": "02_정차과업.csv",
+      "header_columns": 19,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "46b2a80d4010354967b9e7f727edd4d23794358c9b2a23c61bafb2d25e9066ed"
+    },
+    {
+      "file": "03_관찰일.csv",
+      "header_columns": 11,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "8106c04a6ab904c75211f2b6ed6a35491242cc81903af8a5e96204c4e593e74c"
+    },
+    {
+      "file": "04_운반기회.csv",
+      "header_columns": 18,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "be3d62115196d5b10625113f353ab504be9abcbafa1a4d144e018b9cc215f792"
+    },
+    {
+      "file": "05_인터뷰답변.csv",
+      "header_columns": 17,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "f546a0a0ee2762290ac39f593df14b90ad6c8bd01ac57a14ce041cdc972a9e40"
+    },
+    {
+      "file": "06_계측세션.csv",
+      "header_columns": 19,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "eb300c0a95dcdbb13c38ef520ea05ad6f0b276fc329f33a8fb54bec410c2398d"
+    },
+    {
+      "file": "07_G판정표본.csv",
+      "header_columns": 17,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "15149c0062c624920059aad6b0c263901e0a9c6ffebe7dd4102765bef658d579"
+    },
+    {
+      "file": "08_실제음향.csv",
+      "header_columns": 17,
+      "data_rows": 0,
+      "unique_nonempty_headers": true,
+      "sha256": "7048737941204950b5035f2b1ef4214b94997c8113ef240d1ef30cbdcd2ca9d9"
+    }
+  ],
+  "markdown_files": 4,
+  "local_links": [
+    {
+      "file": "README.md",
+      "target": "../실측_사용자검증_실행표.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "정차과업_진행대본.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "구매채널_인터뷰.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "기록규칙.md",
+      "exists": true
+    },
+    {
+      "file": "구매채널_인터뷰.md",
+      "target": "../실측_사용자검증_실행표.md",
+      "exists": true
+    },
+    {
+      "file": "정차과업_진행대본.md",
+      "target": "../실측_사용자검증_실행표.md",
+      "exists": true
+    }
+  ],
+  "source_protocol": {
+    "path": "../실측_사용자검증_실행표.md",
+    "sha256": "f256ff076d279ec8657c9adb61f768037b0f4e6fa9756dfd7d9d291646629937"
+  },
+  "not_verified": [
+    "실제 참가자 모집·동의·과업 수행",
+    "실차·시험대의 G·온도·음향 측정",
+    "운반 기회·4주 재사용·D30 결과",
+    "구매자·채널 담당자 인터뷰 및 운영 수량"
+  ],
+  "scope": "app/docs의 빈 서식 배포본; 실제 작성 자료는 별도 로컬 폴더에 보관",
+  "line_endings": "LF"
+}

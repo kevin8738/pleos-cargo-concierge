@@ -1,13 +1,16 @@
 # 제출용 APK
 
-[`VIPSeat_CargoConcierge_release.apk`](VIPSeat_CargoConcierge_release.apk)는 **Pleos SDK 연동 release 서명본**입니다. 공식 Pleos_Connect_v2.1 에뮬레이터에서 실행을 확인했습니다.
+[`VIPSeat_CargoConcierge_release.apk`](VIPSeat_CargoConcierge_release.apk)는 **Pleos SDK 연동 release 서명본 v1.1.1-pleos**입니다.
 
 - 크기: 47,772,551 bytes
-- 패키지: `ai.vipseat.cargoconcierge`, versionCode 3, versionName 1.1.0-pleos, minSdk 28 / targetSdk 34
-- 서명 검증: `apksigner verify` 통과. 서명 키는 저장소에 포함하지 않습니다.
+- SHA256: `48af46bf846c07e72016a81acd77a296f8371b24a31b759cbb80d26d0e573602`
+- 패키지: `ai.vipseat.cargoconcierge`, versionCode 4, minSdk 28 / targetSdk 34
+- 비착좌 확인 대상: Vehicle SDK 2.3.2 / VehicleService 2.3.22(versionCode 74) / crp_avd_arm64 API 34
+- 실제 제어 준비: 공식 Emulator Console 브라우저의 heartbeat 활성·공조 전원 ON. 실제 SDK의 P단·정차·비착좌와 원값을 확인해야 합니다.
 - 파일명: 공모전의 `팀명_앱이름_release.apk` 규칙 적용
-- 현재 제출본은 이 폴더의 v1.1.0입니다. 기존 Release v1.0.0의 APK·영상은 당시 이력입니다.
-- [변경·검증 기록](../docs/검증_v1.1.0.md): 코어 테스트 109개, lint 오류 0·경고 33. 실차 시험과 구분합니다.
+- release 빌드·`apksigner verify` 통과. 코어 121개·앱 2개 테스트 통과(실패·건너뜀 0), lint 오류 0·경고 33. 서명 키는 저장소에 포함하지 않습니다.
+- APK 버전·서명·빌드 검사 결과는 [v1.1.1 검증 기록](../docs/검증_v1.1.1.md), 정상 온도 왕복 등 4개 제어 사례는 [AVD 증거](../docs/검증자료/AVD_v1.1.1/README.md), 연속 무음 30.0초 화면은 [검증 영상](../docs/검증자료/AVD_v1.1.1/온도왕복_무음.mp4)을 확인하세요.
+- 기존 Release v1.0.0 APK·영상과 v1.1.0 화면은 당시 이력입니다. 실제 물건 보호·실차·사용자 검증은 별도로 남아 있습니다.
 
 저장소 루트에서 설치합니다.
 
@@ -23,4 +26,4 @@ cd apk
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-표준 AAOS 테스트용 mock APK는 소스에서 `./gradlew assembleMockDebug`로 생성할 수 있습니다. 제출 대상 파일은 이 폴더의 Pleos release APK입니다.
+데모 착좌 신호는 실제 제어 허용 근거가 아닙니다. 정확한 준비·버전 조건은 [실행 안내](../README.md#apk-실행)를 따릅니다. 표준 AAOS 테스트용 mock APK는 소스에서 `./gradlew assembleMockDebug`로 생성할 수 있습니다. 제출 대상은 이 폴더의 Pleos release APK입니다.

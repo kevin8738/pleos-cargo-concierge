@@ -315,6 +315,25 @@ class CargoStateMachine(
 
     private fun onOccupancy(prev: VehicleSnapshot, signal: VehicleSignal.SeatOccupancy, nowMs: Long, effects: MutableList<Effect>) {
         val spot = signal.seat
+        // Losing a confirmed empty seat must not leave cargo settings active. The adapter still
+        // guards restoration with real P/speed/current-value checks; this is not an occupancy claim.
+        if (signal.occupied == null && prev.occupancy[spot] == false) {
+            lastPresenceMs[spot] = nowMs
+            when (val s = state) {
+                is CargoState.Offering -> if (s.isAutomatic && s.spot == spot) {
+                    state = CargoState.Idle
+                    effects += Effect.Log("${spot.label} 상태 확인 불가 → 제안 닫힘")
+                }
+                is CargoState.Guarding -> if (s.spot == spot && !s.heldByPassenger && !s.preset.cabin.isEmpty) {
+                    state = CargoState.Idle
+                    effects += Effect.Speak("좌석 상태를 확인할 수 없어 VIP 모드를 종료해요. 정차 후 설정 복원 결과를 확인해 주세요")
+                    effects += Effect.RestoreCabin
+                    effects += Effect.Log("${spot.label} 비착좌 확인 상실 → 가드 종료, 조건부 복원")
+                }
+                else -> Unit
+            }
+            return
+        }
         val occupied = signal.occupied == true
         val wasOccupied = prev.occupied(spot)
         if (occupied || wasOccupied) lastPresenceMs[spot] = nowMs
