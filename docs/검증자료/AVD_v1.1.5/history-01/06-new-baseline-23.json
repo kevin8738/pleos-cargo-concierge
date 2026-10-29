@@ -1,0 +1,880 @@
+{
+  "pid": "13489",
+  "console": {
+    "gear": {
+      "bridge_ready": true,
+      "input_mode": "http-g29",
+      "actual_topic": "SDV_MOTION_GEAR_BASE_GEARBASE_ACTUAL_GEAR",
+      "supported_gears": [
+        "Park",
+        "Reverse",
+        "Neutral",
+        "Drive"
+      ],
+      "actual": {
+        "value": "Park",
+        "source": "web",
+        "timestamp_ms": 1793312032575,
+        "source_timestamp": 0,
+        "source_location": ""
+      }
+    },
+    "controls": {
+      "speed_kph": 0,
+      "accelerator_pct": 0,
+      "brake_pct": 0,
+      "steering_deg": 0,
+      "source": "web",
+      "timestamp_ms": 1793296600292,
+      "source_timestamp": 0,
+      "source_location": "",
+      "input_mode": "http-g29",
+      "emulator_active": true,
+      "input_active": false,
+      "dds_ready": {
+        "speed": true,
+        "accelerator": true,
+        "brake": true,
+        "brake_pressed": true,
+        "steering": true,
+        "all": true
+      },
+      "topics": {
+        "speed": "SDV_MOTION_DRIVING_INFO_DRIVINGINFO_ACTUAL_SPEED",
+        "accelerator": "SDV_MOTION_ACCELERATOR_BASE_ACCELERATORBASE_ACTUAL_PEDAL",
+        "brake": "SDV_MOTION_BRAKE_BASE_BRAKEBASE_ACTUAL_PEDAL",
+        "brake_pressed": "SDV_MOTION_BRAKE_BASE_BRAKEBASE_ACTUAL_PEDAL_PRESSED",
+        "steering": "SDV_MOTION_STEERING_WHEEL_BASE_STEERINGWHEELBASE_ACTUAL_ANGLE",
+        "desired_steering": "SDV_MOTION_STEERING_WHEEL_BASE_STEERINGWHEELBASE_DESIRED_ANGLE"
+      },
+      "limits": {
+        "speed_kph": [
+          0,
+          240
+        ],
+        "pedal_pct": [
+          0,
+          100
+        ],
+        "steering_deg": [
+          -540,
+          540
+        ]
+      }
+    },
+    "body": {
+      "domain_id": 30,
+      "hal_domain_id": 30,
+      "convenience_domain_id": 11,
+      "doors": {
+        "front_left": false,
+        "front_right": false,
+        "rear_left": false,
+        "rear_right": false
+      },
+      "door_locks": {
+        "front_left": true,
+        "front_right": true,
+        "rear_left": true,
+        "rear_right": true,
+        "all": true
+      },
+      "windows": {
+        "front_left": 0,
+        "front_right": 0,
+        "rear_left": 0,
+        "rear_right": 0
+      },
+      "closures": {
+        "frunk": false,
+        "frunk_position": 0.0,
+        "trunk": false,
+        "trunk_position": 0.0
+      },
+      "wipers": {
+        "front": {
+          "mode": "Off",
+          "washer": false
+        },
+        "rear": {
+          "mode": "Off",
+          "washer": false
+        }
+      },
+      "cabin_light": {
+        "on": false
+      },
+      "reading_lights": {
+        "front_left": false,
+        "front_right": false,
+        "rear_left": false,
+        "rear_right": false
+      },
+      "ambient_light": {
+        "mode": "On",
+        "color": "#ffffff",
+        "brightness_pct": 70
+      },
+      "source": "subscription",
+      "timestamp_ms": 1793311981157,
+      "input_mode": "http",
+      "emulator_active": true,
+      "dds_ready": {
+        "door_position": true,
+        "door_move_state": true,
+        "door_actual_position": true,
+        "door_actual_move_state": true,
+        "door_actual_opened": true,
+        "door_actual_locked": true,
+        "window_position": true,
+        "window_move_state": true,
+        "window_actual_position": true,
+        "window_actual_move_state": true,
+        "trunk_position": true,
+        "trunk_move_state": true,
+        "trunk_latch_state": true,
+        "trunk_actual_position": true,
+        "trunk_actual_move_state": true,
+        "trunk_actual_latch_state": true,
+        "trunk_actual_manual_mode_enabled": true,
+        "ambient_color": true,
+        "ambient_brightness": true,
+        "ambient_actual_mode": true,
+        "ambient_actual_color": true,
+        "ambient_actual_brightness": true,
+        "interior_lights_brightness": true,
+        "washer_activated": true,
+        "wiping_mode": true,
+        "wiping_actual_mode": true,
+        "wiping_actual_state": true,
+        "all": true
+      },
+      "topics": {
+        "door_position": "SDV_CONVENIENCE_DOOR_BASE_DOORBASE_ACTUAL_POSITION",
+        "door_actual_position": "SDV_CONVENIENCE_DOOR_DOOR_ACTUAL_POSITION",
+        "door_actual_opened": "SDV_CONVENIENCE_DOOR_DOOR_ACTUAL_OPENED",
+        "door_actual_locked": "SDV_CONVENIENCE_DOOR_DOOR_ACTUAL_LOCKED",
+        "desired_door_position": "SDV_CONVENIENCE_DOOR_DOOR_DESIRED_POSITION",
+        "desired_door_move_state": "SDV_CONVENIENCE_DOOR_DOOR_DESIRED_MOVE_STATE",
+        "desired_door_opened": "SDV_CONVENIENCE_DOOR_DOOR_DESIRED_OPENED",
+        "desired_door_locked": "SDV_CONVENIENCE_DOOR_DOOR_DESIRED_LOCKED",
+        "desired_door_base_position": "SDV_CONVENIENCE_DOOR_BASE_DOORBASE_DESIRED_POSITION",
+        "door_move_state": "SDV_CONVENIENCE_DOOR_BASE_DOORBASE_ACTUAL_MOVE_STATE",
+        "door_actual_move_state": "SDV_CONVENIENCE_DOOR_DOOR_ACTUAL_MOVE_STATE",
+        "desired_door_base_move_state": "SDV_CONVENIENCE_DOOR_BASE_DOORBASE_DESIRED_MOVE_STATE",
+        "window_position": "SDV_CONVENIENCE_WINDOW_BASE_WINDOWBASE_ACTUAL_POSITION",
+        "window_actual_position": "SDV_CONVENIENCE_WINDOW_WINDOW_ACTUAL_POSITION",
+        "desired_window_position": "SDV_CONVENIENCE_WINDOW_WINDOW_DESIRED_POSITION",
+        "window_move_state": "SDV_CONVENIENCE_WINDOW_BASE_WINDOWBASE_ACTUAL_MOVE_STATE",
+        "window_actual_move_state": "SDV_CONVENIENCE_WINDOW_WINDOW_ACTUAL_MOVE_STATE",
+        "desired_window_move_state": "SDV_CONVENIENCE_WINDOW_WINDOW_DESIRED_MOVE_STATE",
+        "desired_window_base_move_state": "SDV_CONVENIENCE_WINDOW_BASE_WINDOWBASE_DESIRED_MOVE_STATE",
+        "trunk_position": "SDV_CONVENIENCE_TRUNK_BASE_TRUNKBASE_ACTUAL_POSITION",
+        "trunk_actual_position": "SDV_CONVENIENCE_TRUNK_TRUNK_ACTUAL_POSITION",
+        "desired_trunk_position": "SDV_CONVENIENCE_TRUNK_TRUNK_DESIRED_POSITION",
+        "desired_trunk_base_position": "SDV_CONVENIENCE_TRUNK_BASE_TRUNKBASE_DESIRED_POSITION",
+        "trunk_move_state": "SDV_CONVENIENCE_TRUNK_BASE_TRUNKBASE_ACTUAL_MOVE_STATE",
+        "trunk_actual_move_state": "SDV_CONVENIENCE_TRUNK_TRUNK_ACTUAL_MOVE_STATE",
+        "desired_trunk_move_state": "SDV_CONVENIENCE_TRUNK_TRUNK_DESIRED_MOVE_STATE",
+        "desired_trunk_base_move_state": "SDV_CONVENIENCE_TRUNK_BASE_TRUNKBASE_DESIRED_MOVE_STATE",
+        "trunk_latch_state": "SDV_CONVENIENCE_TRUNK_BASE_TRUNKBASE_ACTUAL_LATCH_STATE",
+        "trunk_actual_latch_state": "SDV_CONVENIENCE_TRUNK_TRUNK_ACTUAL_LATCH_STATE",
+        "trunk_actual_manual_mode_enabled": "SDV_CONVENIENCE_TRUNK_TRUNK_ACTUAL_MANUAL_MODE_ENABLED",
+        "desired_trunk_latch_state": "SDV_CONVENIENCE_TRUNK_TRUNK_DESIRED_LATCH_STATE",
+        "desired_trunk_base_latch_state": "SDV_CONVENIENCE_TRUNK_BASE_TRUNKBASE_DESIRED_LATCH_STATE",
+        "ambient_color": "SDV_CONVENIENCE_AMBIENT_LIGHTS_BASE_AMBIENTLIGHTSBASE_ACTUAL_COLOR",
+        "ambient_mode": "SDV_CONVENIENCE_AMBIENT_LIGHTS_AMBIENTLIGHTS_ACTUAL_MODE",
+        "ambient_actual_color": "SDV_CONVENIENCE_AMBIENT_LIGHTS_AMBIENTLIGHTS_ACTUAL_COLOR",
+        "desired_ambient_base_color": "SDV_CONVENIENCE_AMBIENT_LIGHTS_BASE_AMBIENTLIGHTSBASE_DESIRED_COLOR",
+        "desired_ambient_actual_color": "SDV_CONVENIENCE_AMBIENT_LIGHTS_AMBIENTLIGHTS_DESIRED_COLOR",
+        "ambient_brightness": "SDV_CONVENIENCE_AMBIENT_LIGHTS_BASE_AMBIENTLIGHTSBASE_ACTUAL_BRIGHTNESS",
+        "ambient_actual_brightness": "SDV_CONVENIENCE_AMBIENT_LIGHTS_AMBIENTLIGHTS_ACTUAL_BRIGHTNESS",
+        "desired_ambient_base_brightness": "SDV_CONVENIENCE_AMBIENT_LIGHTS_BASE_AMBIENTLIGHTSBASE_DESIRED_BRIGHTNESS",
+        "desired_ambient_actual_mode": "SDV_CONVENIENCE_AMBIENT_LIGHTS_AMBIENTLIGHTS_DESIRED_MODE",
+        "desired_ambient_actual_brightness": "SDV_CONVENIENCE_AMBIENT_LIGHTS_AMBIENTLIGHTS_DESIRED_BRIGHTNESS",
+        "interior_lights_brightness": "SDV_CONVENIENCE_INTERIOR_LIGHTS_INTERIORLIGHTS_ACTUAL_BRIGHTNESS",
+        "desired_interior_lights_brightness": "SDV_CONVENIENCE_INTERIOR_LIGHTS_INTERIORLIGHTS_DESIRED_BRIGHTNESS",
+        "wiping_mode": "SDV_CONVENIENCE_WIPING_BASE_WIPINGBASE_ACTUAL_MODE",
+        "desired_wiping_mode": "SDV_CONVENIENCE_WIPING_BASE_WIPINGBASE_DESIRED_MODE",
+        "washer_activated": "SDV_CONVENIENCE_WASHER_BASE_WASHERBASE_ACTUAL_ACTIVATED",
+        "desired_wiping_wipe_command": "SDV_CONVENIENCE_WIPING_WIPING_DESIRED_WIPE_COMMAND"
+      }
+    },
+    "hvac": {
+      "domain_id": 23,
+      "selected_core_domain_id": 30,
+      "hal_domain_id": 30,
+      "dds_mode": "subscribe_hvac_base",
+      "supported_dds_modes": [
+        "subscribe_hvac",
+        "subscribe_hvac_base"
+      ],
+      "power_on": true,
+      "auto_on": false,
+      "ac_on": true,
+      "dual_on": false,
+      "sync_on": false,
+      "recirc_on": false,
+      "front_defroster_on": false,
+      "rear_defroster_on": false,
+      "fan_speed": 3,
+      "auto_blower_level": 1,
+      "driver": {
+        "temp_c": 22.0,
+        "seat_temp": 0,
+        "seat_mode": "Off",
+        "fan_direction": 1,
+        "fan_direction_label": "Face"
+      },
+      "passenger": {
+        "temp_c": 23.0,
+        "seat_temp": 0,
+        "seat_mode": "Off",
+        "fan_direction": 1,
+        "fan_direction_label": "Face"
+      },
+      "row2": {
+        "left_seat_temp": 0,
+        "right_seat_temp": 0
+      },
+      "dds": {
+        "input": "sdv_climate_hvac_base",
+        "activated": true,
+        "auto_activated": false,
+        "auto_blower_level": 1,
+        "air_conditioning_activated": true,
+        "sync_activated": false,
+        "air_source": "Outside",
+        "blower_level": 3,
+        "driver_air_distribution": "Face",
+        "passenger_air_distribution": "Face",
+        "front_defog_activated": false,
+        "rear_defog_activated": false
+      },
+      "source": "web",
+      "timestamp_ms": 1793312040040,
+      "input_mode": "http-dds-hvac",
+      "emulator_active": true,
+      "publisher_ready": {
+        "activated": true,
+        "auto_activated": true,
+        "auto_blower_level": true,
+        "air_conditioning": true,
+        "sync": true,
+        "air_source": true,
+        "blower_level": true,
+        "target_temperature": true,
+        "air_distribution": true,
+        "defog": true,
+        "seat_temperature": true,
+        "all": true,
+        "any": true
+      },
+      "subscription_ready": {
+        "activated": true,
+        "auto_activated": true,
+        "auto_blower_level": true,
+        "air_conditioning": true,
+        "sync": true,
+        "air_source": true,
+        "blower_level": true,
+        "target_temperature": true,
+        "air_distribution": true,
+        "defog": true,
+        "seat_temperature": true,
+        "all": true,
+        "any": true
+      },
+      "selected_core_publisher_ready": {
+        "activated": true,
+        "air_conditioning": true,
+        "sync": true,
+        "recirculation": true,
+        "fan_speed": true,
+        "temperature": true,
+        "air_distribution": true,
+        "defog": true,
+        "all": true,
+        "any": true
+      },
+      "selected_core_subscription_ready": {
+        "activated": true,
+        "air_conditioning": true,
+        "sync": true,
+        "recirculation": true,
+        "fan_speed": true,
+        "temperature": true,
+        "air_distribution": true,
+        "defog": true,
+        "all": true,
+        "any": true
+      },
+      "selected_core_topics": {
+        "actual_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_ACTIVATED",
+        "desired_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_ACTIVATED",
+        "actual_air_conditioning_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_AIR_CONDITIONING_ACTIVATED",
+        "desired_air_conditioning_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_AIR_CONDITIONING_ACTIVATED",
+        "actual_sync_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_SYNC_ACTIVATED",
+        "desired_sync_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_SYNC_ACTIVATED",
+        "actual_recirculation_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_RECIRCULATION_ACTIVATED",
+        "desired_recirculation_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_RECIRCULATION_ACTIVATED",
+        "actual_fan_speed": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_FAN_SPEED",
+        "desired_fan_speed": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_FAN_SPEED",
+        "actual_temperature": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_TEMPERATURE",
+        "desired_temperature": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_TEMPERATURE",
+        "actual_air_distribution_mode": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_AIR_DISTRIBUTION_MODE",
+        "desired_air_distribution_mode": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_AIR_DISTRIBUTION_MODE",
+        "actual_defog_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_DEFOG_ACTIVATED",
+        "desired_defog_activated": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_DEFOG_ACTIVATED"
+      },
+      "topics": {
+        "actual_activated": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_ACTIVATED",
+        "desired_activated": "SDV_CLIMATE_HVAC_HVAC_DESIRED_ACTIVATED",
+        "actual_auto_activated": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_AUTO_ACTIVATED",
+        "desired_auto_activated": "SDV_CLIMATE_HVAC_HVAC_DESIRED_AUTO_ACTIVATED",
+        "actual_auto_blower_level": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_AUTO_BLOWER_LEVEL",
+        "desired_auto_blower_level": "SDV_CLIMATE_HVAC_HVAC_DESIRED_AUTO_BLOWER_LEVEL",
+        "actual_air_conditioning_activated": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_AIR_CONDITIONING_ACTIVATED",
+        "desired_air_conditioning_activated": "SDV_CLIMATE_HVAC_HVAC_DESIRED_AIR_CONDITIONING_ACTIVATED",
+        "actual_sync_activated": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_SYNC_ACTIVATED",
+        "desired_sync_activated": "SDV_CLIMATE_HVAC_HVAC_DESIRED_SYNC_ACTIVATED",
+        "actual_air_source": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_AIR_SOURCE",
+        "desired_air_source": "SDV_CLIMATE_HVAC_HVAC_DESIRED_AIR_SOURCE",
+        "actual_blower_level": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_BLOWER_LEVEL",
+        "desired_blower_level": "SDV_CLIMATE_HVAC_HVAC_DESIRED_BLOWER_LEVEL",
+        "actual_target_temperature": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_TARGET_TEMPERATURE",
+        "desired_target_temperature": "SDV_CLIMATE_HVAC_HVAC_DESIRED_TARGET_TEMPERATURE",
+        "actual_air_distribution_mode": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_AIR_DISTRIBUTION_MODE",
+        "desired_air_distribution_mode": "SDV_CLIMATE_HVAC_HVAC_DESIRED_AIR_DISTRIBUTION_MODE",
+        "actual_defog_activated": "SDV_CLIMATE_HVAC_HVAC_ACTUAL_DEFOG_ACTIVATED",
+        "desired_defog_activated": "SDV_CLIMATE_HVAC_HVAC_DESIRED_DEFOG_ACTIVATED",
+        "actual_seat_temperature_level": "SDV_CONVENIENCE_SEAT_BASE_SEATBASE_ACTUAL_TEMPERATURE_LEVEL",
+        "desired_seat_temperature_level": "SDV_CONVENIENCE_SEAT_SEAT_DESIRED_TEMPERATURE_LEVEL",
+        "desired_seat_base_temperature_level": "SDV_CONVENIENCE_SEAT_BASE_SEATBASE_DESIRED_TEMPERATURE_LEVEL"
+      },
+      "areas": {
+        "hvac_row1": 4352,
+        "hvac_driver": 4353,
+        "hvac_passenger": 4431,
+        "hvac_rear": 4608,
+        "seat_driver": 4353,
+        "seat_passenger": 4431
+      },
+      "limits": {
+        "temperature_c": [
+          16,
+          30
+        ],
+        "fan_speed": [
+          0,
+          8
+        ],
+        "auto_blower_level": [
+          1,
+          3
+        ],
+        "seat_temp": [
+          -3,
+          3
+        ]
+      }
+    },
+    "driving_mode": {
+      "domain_id": 17,
+      "ad_mode_state": "ready",
+      "ad_mode_state_value": 1,
+      "target_speed_mps": 13.8889,
+      "source": "web-activation",
+      "timestamp_ms": 1793311981149,
+      "emulator_active": true,
+      "bridge_ready": true,
+      "topics": {
+        "ad_mode_state": "SDV_ADAS_AD_CONTROL_ADCONTROL_ACTUAL_AD_MODE_STATE",
+        "target_speed": "SDV_ADAS_AD_CONTROL_ADCONTROL_ACTUAL_TARGET_SPEED"
+      },
+      "types": {
+        "ad_mode_state": "sdv_adas_ad_control::VapiAdControlAdModeState",
+        "target_speed": "sdv_adas_ad_control::VapiAdControlTargetSpeed"
+      },
+      "qos": "multiwriter",
+      "car_properties": [
+        {
+          "name": "CRUISE_CONTROL_STATE",
+          "id": 289411089,
+          "hex_id": "0x11401011",
+          "kind": "system",
+          "area_id": 0
+        },
+        {
+          "name": "CRUISE_CONTROL_TARGET_SPEED",
+          "id": 291508243,
+          "hex_id": "0x11601013",
+          "kind": "system",
+          "area_id": 0
+        }
+      ]
+    },
+    "odometer": {
+      "domain_id": 30,
+      "traveled_distance_km": 0.0,
+      "usage_time_min": 0,
+      "remaining_range_m": 0.0,
+      "source": "web-activation",
+      "timestamp_ms": 1793311981149,
+      "emulator_active": true,
+      "bridge_ready": true,
+      "topics": {
+        "traveled_distance": "SDV_MOTION_DRIVING_INFO_DRIVINGINFO_ACTUAL_TRAVELED_DISTANCE",
+        "usage_time": "SDV_MOTION_DRIVING_INFO_DRIVINGINFO_ACTUAL_USAGE_TIME",
+        "remaining_range": "SDV_ENERGY_TRACTION_BATTERY_BASE_TRACTIONBATTERYBASE_ACTUAL_REMAINING_RANGE"
+      },
+      "types": {
+        "traveled_distance": "sdv_motion_driving_info::VapiDrivingInfoTraveledDistance",
+        "usage_time": "sdv_motion_driving_info::VapiDrivingInfoUsageTime",
+        "remaining_range": "sdv_energy_traction_battery_base::VapiTractionBatteryBaseRemainingRange"
+      },
+      "qos": "multiwriter",
+      "car_properties": [
+        {
+          "name": "PERF_ODOMETER",
+          "id": 291504644,
+          "hex_id": "0x11600204",
+          "kind": "system",
+          "area_id": 0
+        },
+        {
+          "name": "TRIP_DRIVING_DISTANCE",
+          "id": 560006225,
+          "hex_id": "0x21610451",
+          "kind": "vendor",
+          "area_id": 0
+        },
+        {
+          "name": "TRIP_DRIVING_TIME",
+          "id": 557909072,
+          "hex_id": "0x21410450",
+          "kind": "vendor",
+          "area_id": 0
+        },
+        {
+          "name": "RANGE_REMAINING",
+          "id": 291504904,
+          "hex_id": "0x11600308",
+          "kind": "system",
+          "area_id": 0
+        }
+      ]
+    },
+    "ev_battery": {
+      "bridge_ready": true,
+      "emulator_active": true,
+      "current_energy_kwh": 77.400002,
+      "state_of_charge": 100.0,
+      "maximum_capacity_kwh": 77.400002,
+      "charging_activated": false,
+      "charging_door_opened": false,
+      "ready_to_charge": true,
+      "maximum_current_a": 12.5,
+      "charge_limit_pct": 50.0,
+      "modes": {
+        "None": {
+          "maximum_current_a": 12.5,
+          "charge_limit_pct": 50.0
+        },
+        "Standard": {
+          "maximum_current_a": 12.5,
+          "charge_limit_pct": 50.0
+        },
+        "Quick": {
+          "maximum_current_a": 12.5,
+          "charge_limit_pct": 50.0
+        },
+        "V120": {
+          "maximum_current_a": 12.5,
+          "charge_limit_pct": 50.0
+        }
+      },
+      "timestamp_ms": 1793311981156,
+      "source": "desired"
+    },
+    "hvac_air_cleaner": {
+      "domain_id": 30,
+      "activated": false,
+      "source": "web-activation",
+      "timestamp_ms": 1793311981149,
+      "source_timestamp": 0,
+      "source_location": "",
+      "emulator_active": true,
+      "bridge_ready": true,
+      "desired_topic": "SDV_CLIMATE_HVAC_BASE_HVACBASE_DESIRED_AIR_PURIFICATION_ACTIVATED",
+      "actual_topic": "SDV_CLIMATE_HVAC_BASE_HVACBASE_ACTUAL_AIR_PURIFICATION_ACTIVATED",
+      "type": "sdv_climate_hvac_base::VapiHvacBaseAirPurificationActivated",
+      "qos": "multiwriter",
+      "car_property": {
+        "name": "HVAC_AIR_CLEANER",
+        "id": 622856202,
+        "hex_id": "0x2520080A",
+        "kind": "vendor",
+        "area_id": 117
+      }
+    },
+    "steering_wheel_heat": {
+      "domain_id": 30,
+      "level": 0,
+      "level_name": "Off",
+      "source": "web-activation",
+      "timestamp_ms": 1793311981149,
+      "source_timestamp": 0,
+      "source_location": "",
+      "emulator_active": true,
+      "bridge_ready": true,
+      "desired_topic": "SDV_MOTION_STEERING_WHEEL_BASE_STEERINGWHEELBASE_DESIRED_HANDLE_HEATING_LEVEL",
+      "actual_topic": "SDV_MOTION_STEERING_WHEEL_BASE_STEERINGWHEELBASE_ACTUAL_HANDLE_HEATING_LEVEL",
+      "type": "sdv_motion_steering_wheel_base::VapiSteeringWheelBaseHandleHeatingLevel",
+      "qos": "multiwriter",
+      "car_property": {
+        "name": "HVAC_STEERING_WHEEL_HEAT",
+        "id": 289408269,
+        "hex_id": "0x1140050D",
+        "kind": "system",
+        "area_id": 0
+      }
+    },
+    "tire_pressure": {
+      "domain_id": 30,
+      "pressure_kpa": {
+        "1114113": 200.0,
+        "1114191": 200.0,
+        "1179649": 200.0,
+        "1179727": 200.0
+      },
+      "readings": [
+        {
+          "area_id": 1114113,
+          "area": "Axle1Left",
+          "car_area_id": 1,
+          "pressure_kpa": 200.0,
+          "timestamp_ms": 1793311981149,
+          "source": "web-activation"
+        },
+        {
+          "area_id": 1114191,
+          "area": "Axle1Right",
+          "car_area_id": 2,
+          "pressure_kpa": 200.0,
+          "timestamp_ms": 1793311981149,
+          "source": "web-activation"
+        },
+        {
+          "area_id": 1179649,
+          "area": "Axle2Left",
+          "car_area_id": 4,
+          "pressure_kpa": 200.0,
+          "timestamp_ms": 1793311981149,
+          "source": "web-activation"
+        },
+        {
+          "area_id": 1179727,
+          "area": "Axle2Right",
+          "car_area_id": 8,
+          "pressure_kpa": 200.0,
+          "timestamp_ms": 1793311981149,
+          "source": "web-activation"
+        }
+      ],
+      "emulator_active": true,
+      "bridge_ready": true,
+      "actual_topic": "SDV_MISC_TIRE_BASE_TIREBASE_ACTUAL_PRESSURE",
+      "type": "sdv_misc_tire_base::VapiTireBasePressure",
+      "qos": "best-effort",
+      "unit": "kPa",
+      "car_property": {
+        "name": "TIRE_PRESSURE",
+        "id": 392168201,
+        "hex_id": "0x17600309",
+        "kind": "system",
+        "area_type": "wheel"
+      }
+    },
+    "availability": {
+      "available": true,
+      "attempted": true,
+      "strict_success": true,
+      "effective_success": true,
+      "source": "web-activation",
+      "timestamp_ms": 1793311981150,
+      "commands": 0,
+      "results": 0,
+      "successful_results": 0,
+      "failed_results": 0,
+      "failed_commands": 0,
+      "command_prefix": "dds-only",
+      "first_failure": "",
+      "transport": "dds",
+      "direct_vhal_write": false
+    },
+    "etcs": {
+      "bridge_ready": true,
+      "emulator_active": true,
+      "input_mode": "http",
+      "actual_topics": {
+        "activated": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_ACTIVATED",
+        "operational_state": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_OPERATIONAL_STATE",
+        "payment_type": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_PAYMENT_TYPE",
+        "current_balance": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_CURRENT_BALANCE",
+        "transaction": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_TRANSACTION",
+        "voice_guidance_enabled": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_VOICE_GUIDANCE_ENABLED",
+        "voice_guidance_volume": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_VOICE_GUIDANCE_VOLUME",
+        "terminal_info": "SDV_CONVENIENCE_ETCS_ETCS_ACTUAL_TERMINAL_INFO"
+      },
+      "desired_subscribers": {
+        "activated": true,
+        "voice_guidance_enabled": true,
+        "voice_guidance_volume": true
+      },
+      "supported_scenarios": [
+        "power-on",
+        "power-off",
+        "card-insert",
+        "card-remove",
+        "tollgate-entrance",
+        "tollgate-exit",
+        "tollgate-open",
+        "tollgate-failure"
+      ],
+      "activated": false,
+      "card_inserted": false,
+      "operational_state": "Unavailable",
+      "payment_type": "Prepaid",
+      "current_balance": 50000,
+      "voice_guidance_enabled": true,
+      "voice_guidance_volume": 0.5,
+      "terminal_info": {
+        "software_version": "ETCS-EMU-1.0",
+        "vehicle_model": "VehicleEmulator",
+        "serial_number": "EMU-ETCS-0001",
+        "issue_number": "EMU-ISSUE-01"
+      },
+      "last_scenario": "power-off",
+      "last_transaction": null
+    },
+    "glove_box": {
+      "domain_id": 11,
+      "opened": false,
+      "position": 0,
+      "source": "web-activation",
+      "timestamp_ms": 1793311981149,
+      "source_timestamp": 0,
+      "source_location": "",
+      "emulator_active": true,
+      "bridge_ready": true,
+      "desired_topic": "SDV_CONVENIENCE_GLOVE_BOX_GLOVEBOX_DESIRED_OPENED",
+      "actual_topic": "SDV_CONVENIENCE_GLOVE_BOX_GLOVEBOX_ACTUAL_OPENED",
+      "type": "sdv_convenience_glove_box::VapiGloveBoxOpened",
+      "qos": "multiwriter",
+      "car_property": {
+        "name": "GLOVE_BOX_DOOR_POS",
+        "id": 356518896,
+        "hex_id": "0x15400BF0",
+        "kind": "system",
+        "area_id": 4,
+        "area": "ROW_1_RIGHT"
+      }
+    },
+    "telltales": {
+      "bridge_ready": true,
+      "emulator_active": true,
+      "desired_topic": "SDV_SAFETY_TELLTALE_TELLTALE_DESIRED_TELLTALE_STATUS",
+      "actual_topic": "SDV_SAFETY_TELLTALE_TELLTALE_ACTUAL_TELLTALE_STATUS",
+      "types": [
+        "ParkingBrake",
+        "ElectronicParkingBrake",
+        "SeatBelt",
+        "DoorOpen",
+        "ABS",
+        "MDPS",
+        "TPMS",
+        "LowVoltBattery",
+        "ESC",
+        "ESCOff",
+        "Airbag",
+        "AFS",
+        "MasterWarning",
+        "AutoHold",
+        "AutoHighBeam",
+        "HeadlampLow",
+        "HeadlampHigh",
+        "PositionLamp",
+        "FrontFogLamp",
+        "RearFogLamp",
+        "EngineOilPressure",
+        "EngineTemperature",
+        "EmergencyCall",
+        "EVSystem",
+        "PowerDown",
+        "RBS",
+        "Immobilizer",
+        "Engine",
+        "LEDHeadlamp",
+        "Preheat",
+        "ParticleFilter",
+        "H2Sensor",
+        "H2Leak",
+        "PassengerAirbagOff",
+        "PassengerAirbagOn",
+        "TurnSignalLeft",
+        "TurnSignalRight"
+      ],
+      "states": [
+        "Off",
+        "On",
+        "Blink"
+      ],
+      "colors": [
+        "White",
+        "Green",
+        "Blue",
+        "Yellow",
+        "Red",
+        "Gray"
+      ],
+      "desired": {},
+      "actual": {}
+    },
+    "power_system": {
+      "bridge_ready": true,
+      "emulator_active": true,
+      "desired_topic": "SDV_ENERGY_POWER_SYSTEM_POWERSYSTEM_DESIRED_POWER_STATE",
+      "actual_topic": "SDV_ENERGY_POWER_SYSTEM_POWERSYSTEM_ACTUAL_POWER_STATE",
+      "states": [
+        "Off",
+        "StandBy",
+        "Ready",
+        "On",
+        "Driving"
+      ],
+      "desired": {},
+      "actual": {}
+    },
+    "notifications": {
+      "bridge_ready": true,
+      "emulator_active": true,
+      "actual_topic": "SDV_VEHICLE_NOTIFICATION_NOTIFICATION_ACTUAL_NOTIFICATION",
+      "min_id": 0,
+      "max_id": 286,
+      "actual": {}
+    },
+    "lights": {
+      "domain_id": 11,
+      "headlamp_mode": "Off",
+      "turn_signal_mode": "Off",
+      "high_beam_on": false,
+      "hazard_on": false,
+      "stop_light_on": false,
+      "escort_enabled": false,
+      "door_lights": {
+        "frunk": false,
+        "trunk": false
+      },
+      "web_active": true,
+      "input_active": false
+    },
+    "window_lock": {
+      "domain_id": 11,
+      "locked": {
+        "all": false,
+        "front_left": false,
+        "front_right": false,
+        "rear_left": false,
+        "rear_right": false
+      },
+      "web_active": true,
+      "actual_topic": "SDV_CONVENIENCE_WINDOW_WINDOW_ACTUAL_LOCKED",
+      "desired_topic": "SDV_CONVENIENCE_WINDOW_WINDOW_DESIRED_LOCKED"
+    },
+    "seat": {
+      "positions": {
+        "slide": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "recline": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "tilt": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "height": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "lumbar": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        }
+      },
+      "moves": {
+        "slide": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "recline": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "tilt": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "height": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        },
+        "lumbar": {
+          "driver": 0,
+          "passenger": 0,
+          "rear_left": 0,
+          "rear_right": 0
+        }
+      },
+      "occupied": {
+        "driver": false,
+        "passenger": false,
+        "rear_left": false,
+        "rear_right": false
+      },
+      "actuator": {
+        "tick_ms": 100,
+        "step_pct": 5,
+        "active_count": 0
+      },
+      "web_active": true
+    },
+    "browser": {
+      "active": true,
+      "clients": 1,
+      "timeout_ms": 3000
+    }
+  },
+  "hostMonotonicNs": 61534435707833
+}

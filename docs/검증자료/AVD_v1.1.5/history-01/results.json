@@ -1,0 +1,8 @@
+{
+  "restart_idle_no_restore": true,
+  "actual_prior_values_visible": true,
+  "repeated_view_no_observed_control": true,
+  "drive_closes_history": true,
+  "new_session_restores_23_prior_22_retained": true,
+  "later_restart_does_not_replay_prior_original": true
+}

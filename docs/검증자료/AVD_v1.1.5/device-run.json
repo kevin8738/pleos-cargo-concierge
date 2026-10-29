@@ -1,0 +1,19 @@
+{
+  "apk_sha256": "6a4a41ed2aa8f73fb0a7dd2b3bf499d3074a5d2ec9ecd21273763611097df287",
+  "stages": [
+    {
+      "name": "history-01",
+      "exit_code": 0
+    },
+    {
+      "name": "control-01",
+      "exit_code": 0
+    },
+    {
+      "name": "flow-01",
+      "exit_code": 0
+    }
+  ],
+  "completed": true,
+  "heartbeatExitCode": 0
+}

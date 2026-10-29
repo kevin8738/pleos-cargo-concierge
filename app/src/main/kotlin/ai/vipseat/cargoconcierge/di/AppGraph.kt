@@ -23,6 +23,7 @@ import android.app.Application
 /** Hand-rolled DI: one object graph per process, built lazily by [ai.vipseat.cargoconcierge.CargoApp]. */
 class AppGraph(private val app: Application) {
     val settings = SettingsStore(app)
+    val cabinHistory = ai.vipseat.cargoconcierge.platform.CabinHistoryStore(app).recorder
     /** VIPs the user named or picked before — shown first on the sheet, consulted first by the voice parser. */
     val recents = RecentVipStore(app)
     val mockVehicle = MockVehicle()

@@ -1,0 +1,15 @@
+{
+  "verified": false,
+  "cleanupRequired": true,
+  "executionErrors": [
+    "adapter exited before workflow complete: pcm"
+  ],
+  "cleanupErrors": [
+    "capture deadline/drain: capture supervision or receipt processing did not pass"
+  ],
+  "originalLogProperties": {
+    "MotionTrace": "",
+    "GuardRuntime": ""
+  },
+  "noCabinWritesIntended": true
+}

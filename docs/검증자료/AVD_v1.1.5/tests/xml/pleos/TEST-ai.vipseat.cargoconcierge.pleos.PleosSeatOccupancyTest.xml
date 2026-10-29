@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.pleos.PleosSeatOccupancyTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:58" hostname="LOCAL_AVD_TEST" time="0.002">
+  <properties/>
+  <testcase name="unverified service or image never grants vacancy" classname="ai.vipseat.cargoconcierge.pleos.PleosSeatOccupancyTest" time="0.002"/>
+  <testcase name="verified SDK true proves vacancy but false and null remain unknown" classname="ai.vipseat.cargoconcierge.pleos.PleosSeatOccupancyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.vehicle.MotionProvenanceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:58" hostname="LOCAL_AVD_TEST" time="0.001">
+  <properties/>
+  <testcase name="only verified AVD product and API pair is labelled synthetic" classname="ai.vipseat.cargoconcierge.vehicle.MotionProvenanceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

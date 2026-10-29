@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.004">
+  <properties/>
+  <testcase name="the legal minimum radius for a 30 km per h road is itself a 0_24 g curve at design speed" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.0"/>
+  <testcase name="recommended speeds follow from v = sqrt(limit g R) on that 30 m curve" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.001"/>
+  <testcase name="liquids 0_12 g lies between the transient and static spill thresholds of a 12 oz cup and a 1 cm-headspace soup tub" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.002"/>
+  <testcase name="fragile 0_12 g keeps at least a 2x margin under the tipping threshold of an 8 x 30 cm vase" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.001"/>
+  <testcase name="general, pet and flowers 0_20 g is the bus 'extremely uncomfortable' level and under the seated-passenger band" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.0"/>
+  <testcase name="every limit is meaningful - above a gentle lane change, below an urban intersection turn" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.0"/>
+  <testcase name="electronics 0_25 g stays under the sliding onset and under what belted passengers call balanced" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.0"/>
+  <testcase name="cake and groceries 0_15 g is half the sliding onset at mu 0_3 and the bus 'uncomfortable' level" classname="ai.vipseat.cargoconcierge.core.CargoLimitRationaleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

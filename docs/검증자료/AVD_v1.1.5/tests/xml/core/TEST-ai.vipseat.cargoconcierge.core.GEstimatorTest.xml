@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.GEstimatorTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.002">
+  <properties/>
+  <testcase name="invalid numerical input cannot poison later finite estimates" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="stale samples do not create spikes" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="out of order speed cannot replace the derivative baseline" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="recommended curve speed is rounded to 5 kph" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="no speed means no lateral g" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="duplicate and very fast samples do not replace the derivative baseline" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="longitudinal g comes from speed deltas and is smoothed" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="total g combines lateral and longitudinal" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="both source directions discard offset and start the next derivative from the new source" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="lateral g follows v2 times curvature with wheelbase 2_9 m and ratio 15" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="a source change inside the minimum derivative interval still establishes its own baseline" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="brake pedal percentage refines braking when larger than dv dt" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="independent brake percentage estimate remains available on a speed source handoff" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="reordered or invalid other source cannot reset the valid source baseline" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.0"/>
+  <testcase name="location speed estimator derives speed from consecutive fixes" classname="ai.vipseat.cargoconcierge.core.GEstimatorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

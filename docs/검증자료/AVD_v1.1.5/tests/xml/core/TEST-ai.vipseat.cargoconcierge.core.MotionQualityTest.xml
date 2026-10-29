@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.MotionQualityTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.004">
+  <properties/>
+  <testcase name="no data and synthetic no data do not claim comparison" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.001"/>
+  <testcase name="cached steering brake and too early speed do not inflate fresh differences" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="high G flag starts at policy point six and never changes raw maximum or audio gate" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="overflow keeps report indeterminate without inventing a valid difference" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="used synthetic steering and brake events also mark a mixed trip" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.001"/>
+  <testcase name="too early new source speed retains handoff information until valid difference" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="synthetic verdict still exposes high G assessment limit" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="synthetic input rejected as reordered does not become used provenance" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.001"/>
+  <testcase name="high G reason persists after later small values" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="speed only estimates retain raw values but defer report comparison" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="synthetic speed baseline persists through unknown inputs and overrides numeric comparison" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="received gap survives estimator reset and recovery" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="first baseline is information only once both axes have a new difference" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.001"/>
+  <testcase name="new trip resets quality and used provenance" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="invalid value and early reordered return remain visible in trip" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <testcase name="cached events while a new source establishes baseline remain informational" classname="ai.vipseat.cargoconcierge.core.MotionQualityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

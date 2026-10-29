@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.035">
+  <properties/>
+  <testcase name="late navigation arrival waits for renewed park and speed without speaking over stale data" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.001"/>
+  <testcase name="disconnect invalidates stored motion until new samples arrive" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.001"/>
+  <testcase name="no measurement report makes no within limit or cargo integrity claim" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="speed alone cannot refresh a cached P permission" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="stale speed cannot be combined with new steering to coach" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="inertial navi sport and waypoint candidates share one cooldown" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.001"/>
+  <testcase name="tick expires a displayed estimate without inventing a zero measurement" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="settings action re enables ignored automatic offers" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="cached parked values cannot open an offer start a preset or change spot" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="selection rejected while driving does not change preferred spot" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="emergency suppresses chime and navigation as well as inertial speech" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="start requires known P and a known stationary speed for tap and voice" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="replacing a parked preset restores before applying the new plan including voice spot changes" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="stale steering and brake do not contaminate a fresh speed sample" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="navigation speech cannot exceed the per trip speech budget" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.001"/>
+  <testcase name="unknown or disconnected vehicle cannot finish a navigation arrival" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <testcase name="thirty minute mixed event run retains combined counts and suppression reasons in report" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.03"/>
+  <testcase name="a speed baseline without steering is not a measured zero G" classname="ai.vipseat.cargoconcierge.core.CoachingPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

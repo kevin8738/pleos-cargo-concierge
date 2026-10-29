@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.MockVehicleTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.006">
+  <properties/>
+  <testcase name="hot food heater is gated by consent then by occupant classification" classname="ai.vipseat.cargoconcierge.core.MockVehicleTest" time="0.001"/>
+  <testcase name="every mock motion emission is synthetic including direct injection" classname="ai.vipseat.cargoconcierge.core.MockVehicleTest" time="0.002"/>
+  <testcase name="cake preset cools the passenger zone and restore brings it back" classname="ai.vipseat.cargoconcierge.core.MockVehicleTest" time="0.001"/>
+  <testcase name="unsupported and denied features are reported not thrown" classname="ai.vipseat.cargoconcierge.core.MockVehicleTest" time="0.001"/>
+  <testcase name="real-source injection connection emits no synthetic initial vacancy" classname="ai.vipseat.cargoconcierge.core.MockVehicleTest" time="0.001"/>
+  <testcase name="seat controls are refused while driving" classname="ai.vipseat.cargoconcierge.core.MockVehicleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

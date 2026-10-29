@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.SpeedArbiterTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.001">
+  <properties/>
+  <testcase name="invalid higher priority samples are never forwarded and cannot suppress fresh fallback" classname="ai.vipseat.cargoconcierge.core.SpeedArbiterTest" time="0.001"/>
+  <testcase name="car property speed outranks location-derived speed" classname="ai.vipseat.cargoconcierge.core.SpeedArbiterTest" time="0.0"/>
+  <testcase name="demo speed suppresses real sources for its hold window" classname="ai.vipseat.cargoconcierge.core.SpeedArbiterTest" time="0.0"/>
+  <testcase name="invalid updates neither shorten nor extend the last valid source hold window" classname="ai.vipseat.cargoconcierge.core.SpeedArbiterTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

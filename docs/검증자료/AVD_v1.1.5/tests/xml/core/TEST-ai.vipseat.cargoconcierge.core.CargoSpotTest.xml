@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.CargoSpotTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.037">
+  <properties/>
+  <testcase name="mock vehicle maps the plan onto the spot" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.006"/>
+  <testcase name="an occupied seat can still be chosen - the passenger holds the VIP and the heater stays off" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.009"/>
+  <testcase name="a rear door cycle offers the sheet for that rear seat" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.002"/>
+  <testcase name="voice phrases carry the spot" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.012"/>
+  <testcase name="someone sitting into the VIP's empty seat ends the session - another seat does not" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.003"/>
+  <testcase name="the arrival reminder names the spot" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.004"/>
+  <testcase name="moving the VIP while parked re-applies the cabin at the new spot - refused while driving" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.001"/>
+  <testcase name="occupancy suppresses only the offer for that seat" classname="ai.vipseat.cargoconcierge.core.CargoSpotTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,35 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_type": "video",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "codec_type": "data"
+    },
+    {
+      "codec_type": "data"
+    }
+  ],
+  "format": {
+    "duration": "78.689944",
+    "size": "52174992"
+  },
+  "sha256": "78ac37ade32bc2adb7e368beb45614190eb34c6af06c4672727259c5cd40350c",
+  "original_demux_timebase_decode": {
+    "exit_code": 0,
+    "stderr_bytes": 0,
+    "command": "ffmpeg -v error -copyts -i INPUT -map 0:v:0 -fps_mode passthrough -enc_time_base demux -f null -"
+  },
+  "first_default_null_muxer": {
+    "exit_code": 0,
+    "stderr_bytes": 18940,
+    "diagnostic": "duplicate DTS under default null-muxer timebase; original log retained"
+  },
+  "audio_streams": 0,
+  "displayed_max_simulated_g": "0.32",
+  "real_motion_accuracy": false
+}

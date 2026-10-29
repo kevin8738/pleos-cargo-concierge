@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.CabinHistoryTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.105">
+  <properties/>
+  <testcase name="same plan duplicate physical operations retain unfinished second request" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.067"/>
+  <testcase name="previous incomplete survives normal next session and restart" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.0"/>
+  <testcase name="unknown guard denied and already equal never fabricate a sent request or original" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.002"/>
+  <testcase name="loading historical data never initializes a new owner or restores archived original" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.007"/>
+  <testcase name="storage failure preserves last valid bytes and marks display incomplete" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.002"/>
+  <testcase name="late callbacks and reversed wall time cannot overwrite another operation or session" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.0"/>
+  <testcase name="throwing sink does not change writes restore or owner lifetime" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.002"/>
+  <testcase name="codec rejects corrupt unknown version nonfinite and malformed unit values" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.002"/>
+  <testcase name="cancelled manual retry stays incomplete without accepting old session results" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.004"/>
+  <testcase name="empty later sessions cannot replace the last retained observed reference" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.0"/>
+  <testcase name="row retention bound marks gaps without inventing evidence" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.003"/>
+  <testcase name="restore uncertainty preserves prior confirmed value and its own timestamp" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.0"/>
+  <testcase name="physical aliases share cycle first original while new cycles and areas stay distinct" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.004"/>
+  <testcase name="history details require fresh parked and unrestricted UI and cannot reopen themselves" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.0"/>
+  <testcase name="overflow is nonblocking and visible even before consumer gets CPU" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.001"/>
+  <testcase name="accepted null mismatch timeout and cancellation never invent readback" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.005"/>
+  <testcase name="owner records actual first original and precise getter without extra reads" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.002"/>
+  <testcase name="manual retry in a new scope records live owner restore and freezes old callbacks" classname="ai.vipseat.cargoconcierge.core.CabinHistoryTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -23,11 +23,14 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--out', type=Path, required=True)
 parser.add_argument('--serial', default='emulator-5554')
 parser.add_argument('--adb', default=shutil.which('adb'))
+parser.add_argument('--expected-apk-sha256', required=True, help='Exact SHA-256 of the reviewed APK under test')
 args = parser.parse_args()
 if not args.adb:
     parser.error('adb is required')
 if args.out.exists():
     parser.error('output directory must be new')
+if not re.fullmatch('[0-9a-f]{64}', args.expected_apk_sha256):
+    parser.error('expected APK SHA-256 must be 64 lowercase hex characters')
 
 PACKAGE = 'ai.vipseat.cargoconcierge'
 def adb(*parts):
@@ -91,17 +94,19 @@ assert 'versionName=2.3.22' in service and 'versionCode=74 ' in service
 forwards = adb('forward','--list').decode().splitlines()
 assert any(line.split() == [args.serial,'tcp:8088','tcp:8088'] for line in forwards), '8088 must forward to the selected emulator'
 package_info = adb('shell','dumpsys','package',PACKAGE).decode()
-assert 'versionName=1.1.4-pleos' in package_info and 'versionCode=7 ' in package_info
+assert 'versionName=1.1.5-pleos' in package_info and 'versionCode=8 ' in package_info
 apk_paths = adb('shell','pm','path',PACKAGE).decode().splitlines()
 assert len(apk_paths) == 1 and apk_paths[0].startswith('package:')
 installed_apk_sha256 = hashlib.sha256(adb('exec-out','cat',apk_paths[0][8:])).hexdigest()
+assert installed_apk_sha256 == args.expected_apk_sha256, 'Installed APK differs from the reviewed candidate'
 before = api('/vehicle/state')
 assert before['gear']['actual']['value'] == 'Park'
 assert all(before['controls'][key] == 0 for key in ('speed_kph','accelerator_pct','brake_pct','steering_deg'))
 assert before['availability']['available'] and before['hvac']['emulator_active'], 'Open official Console in browser'
+assert before['hvac']['passenger']['seat_temp'] == 0 and before['hvac']['passenger']['seat_mode'] == 'Off', 'CAKE requires an already-OFF seat fixture'
 args.out.mkdir(parents=True)
 (args.out/'tester-before.json').write_text(json.dumps(before,indent=2)+'\n')
-(args.out/'environment.json').write_text(json.dumps({'app':'1.1.4-pleos','versionCode':7,'apk_sha256':installed_apk_sha256,'vehicle_sdk':'2.3.2','vehicle_service':'2.3.22','vehicle_service_code':74,'product':'crp_avd_arm64','api':34,'serial':args.serial,'port_forward_verified':True},indent=2)+'\n')
+(args.out/'environment.json').write_text(json.dumps({'app':'1.1.5-pleos','versionCode':8,'apk_sha256':installed_apk_sha256,'vehicle_sdk':'2.3.2','vehicle_service':'2.3.22','vehicle_service_code':74,'product':'crp_avd_arm64','api':34,'serial':args.serial,'port_forward_verified':True},indent=2)+'\n')
 results = {}
 try:
     api('/vehicle/hvac?power=true&passenger_temp=22.0','PUT')
@@ -235,6 +240,7 @@ finally:
                                after['hvac']['power_on'] == before['hvac']['power_on'] and
                                after['hvac']['driver']['temp_c'] == before['hvac']['driver']['temp_c'] and
                                after['hvac']['dual_on'] == before['hvac']['dual_on'] and
+                               all(after['hvac'][key] == before['hvac'][key] for key in ('auto_on','ac_on','sync_on','recirc_on','front_defroster_on','rear_defroster_on','fan_speed','auto_blower_level','driver','passenger','row2')) and
                                after['gear']['actual']['value'] == before['gear']['actual']['value'] and
                                after['seat']['occupied']['passenger'] == before['seat']['occupied']['passenger'])
     except Exception as error:

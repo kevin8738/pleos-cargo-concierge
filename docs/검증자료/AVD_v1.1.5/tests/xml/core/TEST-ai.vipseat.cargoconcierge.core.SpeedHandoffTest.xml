@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.002">
+  <properties/>
+  <testcase name="fallback after the production hold window preserves identity and ignores either offset sign" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.001"/>
+  <testcase name="rejected lower priority sample does not break the accepted source baseline" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.0"/>
+  <testcase name="returning higher priority source cannot turn either offset sign into acceleration" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.0"/>
+  <testcase name="handoff retains available steering based lateral G" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.0"/>
+  <testcase name="same source acceleration still warns with production smoothing and decays normally" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.0"/>
+  <testcase name="handoff clears prior longitudinal smoothing without erasing trip or cabin state" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.0"/>
+  <testcase name="first speed has no longitudinal estimate and does not invent a successful driving sample" classname="ai.vipseat.cargoconcierge.core.SpeedHandoffTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

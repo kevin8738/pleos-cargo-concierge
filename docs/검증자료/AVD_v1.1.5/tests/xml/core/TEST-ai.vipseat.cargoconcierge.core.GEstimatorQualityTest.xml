@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.GEstimatorQualityTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.0">
+  <properties/>
+  <testcase name="only an accepted new time difference is fresh" classname="ai.vipseat.cargoconcierge.core.GEstimatorQualityTest" time="0.0"/>
+  <testcase name="overflow is not counted as a valid fresh difference" classname="ai.vipseat.cargoconcierge.core.GEstimatorQualityTest" time="0.0"/>
+  <testcase name="brake estimate on handoff is available but is not a new speed difference" classname="ai.vipseat.cargoconcierge.core.GEstimatorQualityTest" time="0.0"/>
+  <testcase name="invalid and genuinely reordered observations are distinct from duplicates" classname="ai.vipseat.cargoconcierge.core.GEstimatorQualityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

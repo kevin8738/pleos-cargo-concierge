@@ -1,0 +1,15 @@
+{
+  "apkSha256": "6a4a41ed2aa8f73fb0a7dd2b3bf499d3074a5d2ec9ecd21273763611097df287",
+  "version": "1.1.5-pleos",
+  "code": 8,
+  "controlExpected": 10,
+  "historyExpected": 6,
+  "flowExpected": 9,
+  "deviceRun": "NOT_RUN",
+  "files": {
+    "history_avd.py": "6cfbc1bc1a673b03b47b84a9379213a509d2f6a62a3391acaad644f952247b8c",
+    "heartbeat_lease.py": "45bf3a99fc7f2d2ef0f87ed21c47231207a9057c28d40398e7180cfe7b9950d5",
+    "flow_probe.py": "7305a3103b6b4c6d14591b6971772cbf7676dca099e0757a7e02c512544587d6"
+  },
+  "scope": "Complete current v26 delivery only; no fresh judges or additional improvement round."
+}

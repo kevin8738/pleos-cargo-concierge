@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.VacancyLossTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.001">
+  <properties/>
+  <testcase name="vacancy loss while moving still uses guarded restore effect without a new apply" classname="ai.vipseat.cargoconcierge.core.VacancyLossTest" time="0.0"/>
+  <testcase name="other seat unknown does not end selected seat session" classname="ai.vipseat.cargoconcierge.core.VacancyLossTest" time="0.001"/>
+  <testcase name="loss of selected seat vacancy ends session and requests guarded restoration" classname="ai.vipseat.cargoconcierge.core.VacancyLossTest" time="0.0"/>
+  <testcase name="vacancy loss preserves G coaching when no cabin settings were requested" classname="ai.vipseat.cargoconcierge.core.VacancyLossTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

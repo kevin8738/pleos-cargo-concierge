@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:58" hostname="LOCAL_AVD_TEST" time="0.023">
+  <properties/>
+  <testcase name="selected external disconnect clears its cache while control target stays connected" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.012"/>
+  <testcase name="connect accepts actual initial speed before the first connected status" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <testcase name="a disconnected source cannot reinsert late speed before connected status" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <testcase name="expired external reading is never refreshed by an own location fix" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <testcase name="own location speed never loops back into external command cache" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <testcase name="whole adapter disconnect rejects teardown and late speeds until explicit reconnect" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <testcase name="unrelated disconnect does not drop the selected healthy external reading" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.002"/>
+  <testcase name="own location does not suppress a fresh external observation even when target is first" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <testcase name="demo stationary input never replaces actual moving observation" classname="ai.vipseat.cargoconcierge.vehicle.RealMotionRoutingTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

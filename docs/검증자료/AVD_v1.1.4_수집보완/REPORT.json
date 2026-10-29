@@ -1,0 +1,89 @@
+{
+  "scope": "v26 single actual emulator observation of runtime06 app 1.1.4/code7; not 1.1.5 feature validation",
+  "attempts": 1,
+  "repeatCapture": false,
+  "overall": "FAIL",
+  "originalRunOverall": false,
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "api": "34",
+  "pid": "22692",
+  "captureMaximumSeconds": 180,
+  "pcmTerminalElapsedSeconds": 103.795579459,
+  "pcm": {
+    "boundedIntervalIntegrity": "FAIL",
+    "exceptionType": "ValueError",
+    "rpcStatus": "CANCELLED",
+    "ownDeadlineReached": false,
+    "rawReceivedBytesStored": true,
+    "rawWireRecords": 9138,
+    "decodedPacketCount": 9137,
+    "pcmBytes": 6232516,
+    "receivedPcmSeconds": 32.461020833333336,
+    "continuousRecording": false,
+    "receiptTiming": "PASS",
+    "cause": "ValueError retained; no expanded root-cause analysis or replacement run"
+  },
+  "logcat": {
+    "boundedIntervalIntegrity": "PASS",
+    "coreCollectorIntegrity": "FAIL",
+    "sourceExitCode": -15,
+    "receiptTiming": "PASS",
+    "rawReceivedBytesStored": true,
+    "completeLines": 2823,
+    "parseErrors": 0,
+    "partialTailBytes": 0
+  },
+  "syntheticArrivalRequestCount": 0,
+  "quietArrivalObservationCompleted": false,
+  "arrivalDoneTailCompleted": false,
+  "originalCleanupVerified": false,
+  "originalCleanupErrors": [
+    "capture deadline/drain: capture supervision or receipt processing did not pass"
+  ],
+  "restorationReadbackVerified": true,
+  "avdOwnershipReturnedToRoot": true,
+  "consoleLease": {
+    "method": "official Console API POST /browser/session?client=<own unique id>; 1-second heartbeat; closing=1 on teardown",
+    "consoleBrowserUsed": false,
+    "heartbeatOnly": true,
+    "closed": true,
+    "ownForward": true,
+    "errors": [],
+    "forwardCleanupEvidence": "helper normal closed/errors0 after conditional own-forward removal; separate final forward-list readback not recorded"
+  },
+  "unknown": [
+    "producer completeness without sequence",
+    "old missing steering cause",
+    "source generation/playback time",
+    "native actual destination arrival",
+    "native audio content/source attribution",
+    "actual VIP/native acoustic overlap/focus priority",
+    "physical speaker, user/vehicle effectiveness"
+  ],
+  "evidence": {
+    "integration-result.json": "2916a3125d95893bb4bb182e38dffb3e6aee5c8246aab65086cff46efc2a3572",
+    "cleanup.json": "b17b517111038ee7eed00d67a2a4b1d16ddaea2f6172911adbe5f6d05d28b7a9",
+    "pcm/summary.json": "0b8761bef12c801650fcbc17556de775a2bd2cc6d70351de8cfa7cca3cbded62",
+    "logcat/summary.json": "997720cb0465191369fcc547afee136e83f7bf7338d9e43670712aed56c6a868",
+    "capture-supervision.json": "01028fdcdbcbd0d72ecd957fac8aa35951a7599299252791ee8007abe5164787",
+    "input-ledger.jsonl": "7c5aa6c1624f5ff358f96b6e839cb0b157e1382cb1ea7ca65179190d2cb93710",
+    "artifact-sha256.json": "2e11d0efb4ccd27587d8dc564a2f7dfb58dd0bfb7ddde1f072f084223c3e58c5"
+  },
+  "publicDisclosure": "No automatic publication of PCM/WAV, private stderr, Console originals, intent/focus, or credentials",
+  "adapterFixtureCountSeparate": 30,
+  "app182TestsUnchanged": true,
+  "realVehicleOrParticipantRows": 0,
+  "startedProfilePhases": [
+    "configuration",
+    "baseline",
+    "acceleration",
+    "settle",
+    "ok60",
+    "below90",
+    "warn100",
+    "over120",
+    "recover60",
+    "straight",
+    "deceleration"
+  ]
+}

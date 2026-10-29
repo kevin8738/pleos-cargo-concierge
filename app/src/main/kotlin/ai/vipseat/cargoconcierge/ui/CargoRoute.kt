@@ -25,6 +25,7 @@ fun CargoRoute(vm: CargoViewModel) {
     Box(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(InkSoft, Ink)))) {
         when {
             !ui.interactive -> DrivingBadgeScreen(ui)
+            ui.showCabinHistory && ui.cabinHistoryAvailable -> CabinHistoryScreen(ui, onClose = { vm.showCabinHistory(false) })
             ui.showSettings -> SettingsScreen(ui, vm)
             else -> when (val s = ui.state) {
                 is CargoState.Idle -> HomeScreen(ui, vm)

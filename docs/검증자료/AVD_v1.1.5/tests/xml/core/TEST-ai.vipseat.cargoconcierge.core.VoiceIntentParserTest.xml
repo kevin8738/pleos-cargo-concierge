@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.005">
+  <properties/>
+  <testcase name="the spoken noun becomes the VIP name, category from the alias" classname="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" time="0.002"/>
+  <testcase name="longest alias wins and noise is tolerated" classname="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" time="0.001"/>
+  <testcase name="a VIP used before wins over category aliases" classname="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" time="0.0"/>
+  <testcase name="maps the contest phrases" classname="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" time="0.001"/>
+  <testcase name="unknown items with a loading verb register as 일반 짐" classname="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" time="0.001"/>
+  <testcase name="end and unknown intents" classname="ai.vipseat.cargoconcierge.core.VoiceIntentParserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

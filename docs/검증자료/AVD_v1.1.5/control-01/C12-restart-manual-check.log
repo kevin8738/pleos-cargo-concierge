@@ -1,0 +1,30 @@
+10-29 15:17:06.791 30035 30077 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = SEAT_OCCUPANCY, areaType = 3
+10-29 15:17:06.795 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1
+10-29 15:17:06.795 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1
+10-29 15:17:06.795 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 1, value = 1
+10-29 15:17:06.795 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1
+10-29 15:17:06.795 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1
+10-29 15:17:06.796 30035 30266 I [Pleos][SDK]b: [binder:30035_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 16 eventValue 1
+10-29 15:17:06.796 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@a0a2071
+10-29 15:17:06.796 30035 30061 D [Pleos][SDK]a: [binder:30035_1]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 1, value = 1
+10-29 15:17:06.797 30035 30266 I [Pleos][SDK]b: [binder:30035_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 32 eventValue 1
+10-29 15:17:06.797 30035 30266 D [Pleos][SDK]a: [binder:30035_5]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@4986e56
+10-29 15:17:06.797 30035 30061 D [Pleos][SDK]a: [binder:30035_1]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1
+10-29 15:17:06.797 30035 30061 D [Pleos][SDK]a: [binder:30035_1]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1
+10-29 15:17:06.797 30035 30061 D [Pleos][SDK]a: [binder:30035_1]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1
+10-29 15:17:06.797 30035 30061 D [Pleos][SDK]a: [binder:30035_1]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1
+10-29 15:17:06.797 30035 30279 I [Pleos][SDK]b: [binder:30035_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 64 eventValue 1
+10-29 15:17:06.797 30035 30279 D [Pleos][SDK]a: [binder:30035_6]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@3095ed7
+10-29 15:17:06.839 30035 30077 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = HVAC_TEMPERATURE_SET, areaType = 3
+10-29 15:17:06.839 30035 30279 D [Pleos][SDK]a: [binder:30035_6]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 1, value = 18.0
+10-29 15:17:06.840 30035 30279 D [Pleos][SDK]a: [binder:30035_6]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 18.0
+10-29 15:17:06.849 30035 30279 I [Pleos][SDK]b: [binder:30035_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 1
+10-29 15:17:06.849 30035 30279 I [Pleos][SDK]b: [binder:30035_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 16 eventValue 1
+10-29 15:17:06.850 30035 30279 I [Pleos][SDK]b: [binder:30035_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 32 eventValue 1
+10-29 15:17:06.853 30035 30279 I [Pleos][SDK]b: [binder:30035_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 64 eventValue 1
+10-29 15:17:06.854 30035 30279 I [Pleos][SDK]b: [binder:30035_6]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 18.0
+10-29 15:17:06.858 30035 30079 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@31713d6 , propId HVAC_TEMPERATURE_SET
+10-29 15:17:06.859 30035 30079 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:17:06.860 30035 30292 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@31713d6 , propId HVAC_TEMPERATURE_SET
+10-29 15:17:06.860 30035 30292 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:17:06.867 30035 30035 I CargoVM : 연결: AOSP CarPropertyManager + Pleos Vehicle SDK 2.3.2 + demo bridge / Pleos NaviHelper 3.0.5 + demo injector

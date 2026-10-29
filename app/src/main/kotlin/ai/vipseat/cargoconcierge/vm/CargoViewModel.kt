@@ -40,6 +40,9 @@ data class UiState(
     val mutedOfferCount: Int = 0,
     val cabinNotice: String? = null,
     val cabinRestorePending: Boolean = false,
+    val cabinHistory: ai.vipseat.cargoconcierge.core.history.CabinHistoryRecorder.View = ai.vipseat.cargoconcierge.core.history.CabinHistoryRecorder.View(),
+    val cabinHistoryAvailable: Boolean = false,
+    val showCabinHistory: Boolean = false,
 ) {
     /** The only question the UI asks: may it show more than the static badge? */
     val interactive: Boolean get() = uiMode == UiMode.PARKED && !uxRestricted
@@ -56,6 +59,7 @@ class CargoViewModel(graph: AppGraph) : ViewModel() {
     fun selectSpot(spot: CargoSpot) = session.selectSpot(spot)
     fun externalOffer(reason: String) = session.externalOffer(reason)
     fun acknowledgeReport() = session.acknowledgeReport()
+    fun showCabinHistory(show: Boolean) = session.showCabinHistory(show)
     fun retryRestore() = session.retryRestore()
     fun resetOfferSuppression() = session.resetOfferSuppression()
     fun continueWithSameVip() = session.continueWithSameVip()

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" tests="35" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.012">
+  <properties/>
+  <testcase name="a passenger sitting down keeps a rear-seat preset guarding" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="emergency braking is recorded but not coached by voice" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.002"/>
+  <testcase name="a passenger sitting down closes an open passenger-door offer" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="the chime fires on entering WARN, not on every sample while it lasts" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="curve coaching is silent while parked and when not guarding" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="speech is capped at three and further entries use only the remaining shared chime budget" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="a passenger sitting down ends a passenger-seat preset and restores the cabin" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="voice preset skips the sheet and speaks a confirmation" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="exceeding the limit raises OVER badge and speaks coaching once per cooldown" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="sharp curve ahead is coached with the preset speed" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="no automatic offer within 30 s after a passenger got out" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="ending a trip manually restores the cabin" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="ui mode is DRIVING whenever moving or in a driving gear" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="offer times out after 10 s and dismiss closes it" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="hard braking counts as longitudinal g" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="occupancy-blocked heater is explained by voice" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="no offer unless gear is P and speed is zero" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="sport mode is noticed once with a comfort suggestion" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="offer closes itself when the car starts moving" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="passenger door open then closed while parked offers presets for 10 s" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="navi destination arrival speaks reminder, restores cabin and builds the report" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="badge returns to OK after calm driving" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="trunk offers ignore the passenger-seat rules" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="full-lock parking manoeuvre at walking speed is recorded but not coached" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="three unanswered automatic offers mute that trigger until a preset is chosen" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="manual opens are never counted towards muting" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="external offer from a pickup-store geofence opens the sheet while parked only" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="driver door while still driving is not an arrival" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="gear P plus driver door open also counts as arrival" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <testcase name="no automatic offer while the passenger seat is occupied" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="trunk also triggers the offer" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="driver door does not trigger and door open edge alone does not trigger" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="navi arrival while still driving waits for P before restoring" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="selecting a preset starts guarding and asks the host to apply the cabin plan" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.0"/>
+  <testcase name="80 percent of the limit raises WARN badge with a soft chime, no speech" classname="ai.vipseat.cargoconcierge.core.CargoStateMachineTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -24,6 +24,8 @@ import ai.vipseat.cargoconcierge.core.model.DoorId
 import ai.vipseat.cargoconcierge.core.model.DrivingMode
 import ai.vipseat.cargoconcierge.core.model.Gear
 import ai.vipseat.cargoconcierge.core.model.VehicleSignal
+import ai.vipseat.cargoconcierge.core.history.CabinAddress
+import ai.vipseat.cargoconcierge.core.history.CabinProperty
 import ai.vipseat.cargoconcierge.core.port.ApplyConsent
 import ai.vipseat.cargoconcierge.core.port.CabinApplyResult
 import ai.vipseat.cargoconcierge.core.port.CabinCapabilities
@@ -385,9 +387,10 @@ class PleosVehicle(context: Context, locationAccessAvailable: () -> Boolean = { 
                 guard = { restoring -> commandGuard(feature, area, restoring) },
                 matches = { a, b -> kotlin.math.abs(a - b) < 0.1f },
                 maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+                historyAddress = CabinAddress(name, CabinProperty.TEMPERATURE, area.key()),
             )
         }
-        val result = setting.apply(target).copy(feature = feature)
+        val result = setting.apply(target, observedFeature = feature).copy(feature = feature)
         return if (result.confirmation == FeatureConfirmation.VALUE_CONFIRMED) {
             result.copy(hvacPowerAtCheck = readHvacPower(area))
         } else result
@@ -465,9 +468,10 @@ class PleosVehicle(context: Context, locationAccessAvailable: () -> Boolean = { 
                 write = { value -> outcome(feature) { ok, err -> vehicle.getHVAC().setHvacFanSpeed(zone, value, { _, _ -> ok() }, err) } },
                 guard = { restoring -> commandGuard(feature, zone, restoring) },
                 maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+                historyAddress = CabinAddress(name, CabinProperty.FAN_SPEED, zone.key()),
             )
         }
-        return setting.apply(target).copy(feature = feature)
+        return setting.apply(target, observedFeature = feature).copy(feature = feature)
     }
 
     private suspend fun applyDirection(area: SeatArea?, target: FanDirectionType): FeatureOutcome {
@@ -481,6 +485,7 @@ class PleosVehicle(context: Context, locationAccessAvailable: () -> Boolean = { 
                 write = { value -> outcome(feature) { ok, err -> vehicle.getHVAC().setHvacFanDirection(zone, value, { _, _ -> ok() }, err) } },
                 guard = { restoring -> commandGuard(feature, zone, restoring) },
                 maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+                historyAddress = CabinAddress(name, CabinProperty.FAN_DIRECTION, zone.key()),
             )
         }
         return setting.apply(target)
@@ -501,6 +506,7 @@ class PleosVehicle(context: Context, locationAccessAvailable: () -> Boolean = { 
                 } },
                 guard = { restoring -> commandGuard(feature, area, restoring) },
                 maxReadAgeMs = SIGNAL_FRESHNESS_MS,
+                historyAddress = CabinAddress(name, if (heater) CabinProperty.SEAT_HEATER else CabinProperty.SEAT_VENT, area.key()),
             )
         }
         return setting.apply(target)

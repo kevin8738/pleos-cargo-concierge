@@ -1,0 +1,12 @@
+{
+  "occupied_maps_unknown_and_blocks": true,
+  "sdk_readback_roundtrip_22_18_22": true,
+  "external_21_preserved": true,
+  "vacancy_loss_ends_and_restores": true,
+  "power_off_disclosed_without_turning_on": true,
+  "C8-dual-false_driver_and_sync_unchanged": true,
+  "C9-dual-true_driver_and_sync_unchanged": true,
+  "external_sync_respected_then_explicit_retry": true,
+  "drive_deferred_then_park_retry_restored": true,
+  "restart_discloses_unconfirmed_restore_no_automatic_write": true
+}

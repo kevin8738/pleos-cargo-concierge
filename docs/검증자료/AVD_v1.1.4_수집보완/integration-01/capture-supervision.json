@@ -1,0 +1,27 @@
+{
+  "workers": {
+    "logcat": {
+      "exitCode": 0,
+      "forcedSupervisorStop": false,
+      "reaped": true,
+      "errors": [],
+      "ownedProcessGroupAbsent": true,
+      "status": "PASS",
+      "stderrBytes": 0
+    },
+    "pcm": {
+      "exitCode": 3,
+      "forcedSupervisorStop": false,
+      "reaped": true,
+      "errors": [],
+      "ownedProcessGroupAbsent": true,
+      "status": "FAIL",
+      "stderrBytes": 0
+    }
+  },
+  "errors": [],
+  "processingError": null,
+  "privateTokenPresent": false,
+  "emergencyClose": false,
+  "singleRpcRequested": true
+}

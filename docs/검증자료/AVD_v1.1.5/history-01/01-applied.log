@@ -1,0 +1,319 @@
+--------- beginning of main
+10-29 15:13:02.929 11311 11311 I .cargoconcierge: Using CollectorTypeCC GC.
+10-29 15:13:02.934 11311 11311 E .cargoconcierge: Not starting debugger since process cannot load the jdwp agent.
+10-29 15:13:02.943 11311 11311 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 1010175; state: ENABLED
+10-29 15:13:02.943 11311 11311 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 1010175; state: ENABLED
+10-29 15:13:02.959 11311 11311 I .cargoconcierge: Failed to add image file: Failed to find OatDexFile for DexFile /data/app/~~0QbQIlIKySbnK97yprgTDg==/ai.vipseat.cargoconcierge-ZtM2nE03D4QVGtb70Arjqw==/base.apk (canonical path /data/app/~~0QbQIlIKySbnK97yprgTDg==/ai.vipseat.cargoconcierge-ZtM2nE03D4QVGtb70Arjqw==/base.apk) in OatFile /data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/oat/arm64/base.odex
+10-29 15:13:02.960 11311 11311 D nativeloader: Configuring clns-6 for other apk /data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/lib/arm64:/data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/10/ai.vipseat.cargoconcierge
+10-29 15:13:02.963 11311 11311 V GraphicsEnvironment: Currently set values for:
+10-29 15:13:02.963 11311 11311 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-29 15:13:02.963 11311 11311 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-29 15:13:02.963 11311 11311 V GraphicsEnvironment: ANGLE GameManagerService for ai.vipseat.cargoconcierge: false
+10-29 15:13:02.964 11311 11311 V GraphicsEnvironment: ai.vipseat.cargoconcierge is not listed in per-application setting
+10-29 15:13:02.964 11311 11311 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-29 15:13:03.005 11311 11350 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-29 15:13:03.006 11311 11350 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-29 15:13:03.006 11311 11350 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-29 15:13:03.010 11311 11311 I [GAAS][SDK]TextToSpeech: [main]initialize - HYBRID with listener
+10-29 15:13:03.010 11311 11311 I [GAAS][SDK]TtsServiceManager: [main]createTts HYBRID
+10-29 15:13:03.013 11311 11311 D [GAAS][SDK]StreamTts: [main]connectService with listener
+10-29 15:13:03.015 11311 11311 W AndroidTts: TTS init failed: -1
+10-29 15:13:03.015 11311 11311 D [CAAS][SDK]SpeechToText: [main]initialize with listener
+10-29 15:13:03.015 11311 11311 I [CAAS][SDK]SttServiceManager: [main]createStt HYBRID
+10-29 15:13:03.015 11311 11311 D [CAAS][SDK]ServerStt: [main]connectService with listener
+10-29 15:13:03.025 11311 11311 I AudioTrack: createTrack_l(0): AUDIO_OUTPUT_FLAG_FAST successful; frameCount 960 -> 1440
+10-29 15:13:03.034 11311 11311 D CarUxRManager: Context returns associated display ID -1
+10-29 15:13:03.034 11311 11311 D CarUxRManager: Display ID assigned to user is display 0
+10-29 15:13:03.040 11311 11311 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 1010175; state: DISABLED
+10-29 15:13:03.041 11311 11311 W OpenGLRenderer: Unknown dataspace 0
+10-29 15:13:03.042 11311 11354 W CarPropertyManager: Property: 0x1160030e is not supported
+10-29 15:13:03.043 11311 11354 I AospCarVehicle: subscriptions: speed=ok gear=ok steering=absent door=absent occupancy=absent hvacTemp=absent brakePct=absent
+10-29 15:13:03.044 11311 11354 D [Pleos][SDK]Vehicle: [DefaultDispatcher-worker-3]initialize
+10-29 15:13:03.044 11311 11354 D [Pleos][SDK]b: [DefaultDispatcher-worker-3]connectService
+10-29 15:13:03.044 11311 11354 D [Pleos][SDK]b: [DefaultDispatcher-worker-3]Service Connect Api called Intent { act=ai.pleos.playground.vehicle.VEHICLE_START cmp=ai.pleos.playground.service.vehicle/.VehicleService }
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate(boolean, kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: Common causes for lock verification issues are non-optimized dex code
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: and incorrect proguard optimizations.
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: Method boolean androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate$default(androidx.compose.runtime.snapshots.SnapshotStateList, boolean, kotlin.jvm.functions.Function1, int, java.lang.Object) failed lock verification and will run slower.
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: Method java.lang.Object androidx.compose.runtime.snapshots.SnapshotStateList.mutate(kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: Method void androidx.compose.runtime.snapshots.SnapshotStateList.update(boolean, kotlin.jvm.functions.Function1) failed lock verification and will run slower.
+10-29 15:13:03.091 11311 11311 W .cargoconcierge: Method void androidx.compose.runtime.snapshots.SnapshotStateList.update$default(androidx.compose.runtime.snapshots.SnapshotStateList, boolean, kotlin.jvm.functions.Function1, int, java.lang.Object) failed lock verification and will run slower.
+10-29 15:13:03.150 11311 11344 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+10-29 15:13:03.151 11311 11344 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-29 15:13:03.162 11311 11344 I Gralloc4: mapper 4.x is not supported
+10-29 15:13:03.166 11311 11344 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-29 15:13:03.246 11311 11311 D [GAAS][SDK]StreamTts: [main]onServiceConnected
+10-29 15:13:03.246 11311 11311 D [GAAS][SDK]StreamTts: [main]setMode HYBRID
+10-29 15:13:03.246 11311 11311 D [GAAS][SDK]StreamTts: [main]registerCallback
+10-29 15:13:03.246 11311 11311 I [GAAS][SDK]TextToSpeech: [main]updateLocale ko_KR
+10-29 15:13:03.246 11311 11311 I [GAAS][SDK]TextToSpeech: [main]addEventListener
+10-29 15:13:03.246 11311 11311 D [GAAS][SDK]StreamTts: [main]addEventListener
+10-29 15:13:03.246 11311 11311 I PleosSpeech: TTS_INITIALIZED
+10-29 15:13:03.246 11311 11311 D [CAAS][SDK]ServerStt: [main]onServiceConnected
+10-29 15:13:03.246 11311 11311 D [CAAS][SDK]ServerStt: [main]setMode HYBRID
+10-29 15:13:03.246 11311 11311 D [CAAS][SDK]ServerStt: [main]registerCallback
+10-29 15:13:03.246 11311 11311 I [CAAS][SDK]SpeechToText: [main]updateLocale ko
+10-29 15:13:03.246 11311 11354 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-3]setLocale ko_KR ai.vipseat.cargoconcierge
+10-29 15:13:03.246 11311 11353 D [CAAS][SDK]ServerStt: [DefaultDispatcher-worker-2]setLocale ko ai.vipseat.cargoconcierge
+10-29 15:13:03.246 11311 11311 I PleosVoiceInput: Pleos STT ready
+10-29 15:13:03.247 11311 11332 D [GAAS][SDK]TtsCallback: [binder:11311_2]onResponse UpdateCurrentVariant gleoAiCoral
+10-29 15:13:03.247 11311 11359 D [CAAS][SDK]SttCallback: [binder:11311_4]onUpdated UpdateCurrentVariant gleoAiCoral
+10-29 15:13:03.247 11311 11353 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-2]current variant gleoAiCoral
+10-29 15:13:03.247 11311 11353 D [CAAS][SDK]ServerStt: [DefaultDispatcher-worker-2]current variant gleoAiCoral
+10-29 15:13:03.247 11311 11311 I [Pleos][SDK]b: [main]ServiceConnected call
+10-29 15:13:03.282 11311 11311 D VRI[MainActivity]: Cancelling draw. cancelDueToPreDrawListener=false cancelDueToSync=true
+10-29 15:13:03.875 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.875 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$gearListener$1@8860bdd
+10-29 15:13:03.875 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.875 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = VENDOR_GEAR_SELECTION, areaType = 0
+10-29 15:13:03.886 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.886 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$steeringListener$1@aa4f1e4
+10-29 15:13:03.886 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.886 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = PERF_STEERING_ANGLE, areaType = 0
+10-29 15:13:03.887 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = VENDOR_GEAR_SELECTION, areaId = 0, value = 4
+10-29 15:13:03.888 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = VENDOR_GEAR_SELECTION, areaId = 0, value = 4
+10-29 15:13:03.889 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:03.890 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:03.890 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.890 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$brakeListener$1@88f5205
+10-29 15:13:03.890 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.890 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = BRAKE_PEDAL_STATUS, areaType = 0
+10-29 15:13:03.892 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = BRAKE_PEDAL_STATUS, areaId = 0, value = false
+10-29 15:13:03.893 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = BRAKE_PEDAL_STATUS, areaId = 0, value = false
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@1994f2d
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = DOOR_POS, areaType = 4
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 1
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@e349c62
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 1
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 2
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@9d8a1f3
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 2
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 3
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@7872eb0
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 3
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 4
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@e8b129
+10-29 15:13:03.906 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 4
+10-29 15:13:03.907 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 268435456, value = 0
+10-29 15:13:03.907 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 536870912, value = 0
+10-29 15:13:03.907 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 64, value = 0
+10-29 15:13:03.907 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 16, value = 0
+10-29 15:13:03.907 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 1, value = 0
+10-29 15:13:03.907 11311 11332 D [Pleos][SDK]a: [binder:11311_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 4, value = 0
+10-29 15:13:03.911 11311 11333 I [Pleos][SDK]b: [binder:11311_3]getProperty_onResult eventPropKey DOOR_POS eventAreaId 4 eventValue 0
+10-29 15:13:03.911 11311 11333 D [Pleos][SDK]a: [binder:11311_3]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 4, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@e349c62
+10-29 15:13:03.913 11311 11333 I [Pleos][SDK]b: [binder:11311_3]getProperty_onResult eventPropKey DOOR_POS eventAreaId 16 eventValue 0
+10-29 15:13:03.913 11311 11333 D [Pleos][SDK]a: [binder:11311_3]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 16, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@9d8a1f3
+10-29 15:13:03.913 11311 11333 I [Pleos][SDK]b: [binder:11311_3]getProperty_onResult eventPropKey DOOR_POS eventAreaId 64 eventValue 0
+10-29 15:13:03.913 11311 11333 D [Pleos][SDK]a: [binder:11311_3]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 64, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@7872eb0
+10-29 15:13:03.914 11311 11333 I [Pleos][SDK]b: [binder:11311_3]getProperty_onResult eventPropKey DOOR_POS eventAreaId 536870912 eventValue 0
+10-29 15:13:03.914 11311 11333 D [Pleos][SDK]a: [binder:11311_3]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 536870912, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@e8b129
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@72f2de7
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = SEAT_OCCUPANCY, areaType = 3
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 1
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@6bd1d94
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 1
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 2
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@200e03d
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 2
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 3
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@ae04032
+10-29 15:13:03.984 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 3
+10-29 15:13:03.986 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1
+10-29 15:13:03.986 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1
+10-29 15:13:03.986 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 1, value = 1
+10-29 15:13:03.986 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1
+10-29 15:13:03.986 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1
+10-29 15:13:03.987 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 16 eventValue 1
+10-29 15:13:03.987 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@6bd1d94
+10-29 15:13:03.987 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 32 eventValue 1
+10-29 15:13:03.987 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@200e03d
+10-29 15:13:03.987 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 64 eventValue 1
+10-29 15:13:03.987 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@ae04032
+10-29 15:13:03.992 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 1, value = 1
+10-29 15:13:03.992 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1
+10-29 15:13:03.992 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1
+10-29 15:13:03.992 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1
+10-29 15:13:03.992 11311 11533 D [Pleos][SDK]a: [binder:11311_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1
+10-29 15:13:04.027 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:04.027 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$tempListener$1@7403bc6
+10-29 15:13:04.027 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:04.027 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = HVAC_TEMPERATURE_SET, areaType = 3
+10-29 15:13:04.027 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 1, value = 22.0
+10-29 15:13:04.027 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 22.0
+10-29 15:13:04.033 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:04.033 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$drivingModeListener$1@1a3d077
+10-29 15:13:04.033 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]hasPropertyIdCount : 0
+10-29 15:13:04.033 11311 11354 D [Pleos][SDK]a: [DefaultDispatcher-worker-3]saveRequest() called with: propIdName = DRIVING_MODE, areaType = 0
+10-29 15:13:04.036 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:04.036 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey DOOR_POS eventAreaId 1 eventValue 0
+10-29 15:13:04.036 11311 11331 I [Pleos][SDK]b: [binder:11311_1]getProperty_onResult eventPropKey DOOR_POS eventAreaId 4 eventValue 0
+10-29 15:13:04.036 11311 11331 I [Pleos][SDK]b: [binder:11311_1]getProperty_onResult eventPropKey DOOR_POS eventAreaId 16 eventValue 0
+10-29 15:13:04.036 11311 11331 I [Pleos][SDK]b: [binder:11311_1]getProperty_onResult eventPropKey DOOR_POS eventAreaId 64 eventValue 0
+10-29 15:13:04.036 11311 11331 I [Pleos][SDK]b: [binder:11311_1]getProperty_onResult eventPropKey DOOR_POS eventAreaId 536870912 eventValue 0
+10-29 15:13:04.037 11311 11331 I [Pleos][SDK]b: [binder:11311_1]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 1
+10-29 15:13:04.038 11311 11331 I [Pleos][SDK]b: [binder:11311_1]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 16 eventValue 1
+10-29 15:13:04.040 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 32 eventValue 1
+10-29 15:13:04.040 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 64 eventValue 1
+10-29 15:13:04.041 11311 11354 D [Pleos][SDK]b: [DefaultDispatcher-worker-3]connectService
+10-29 15:13:04.041 11311 11354 D [Pleos][SDK]b: [DefaultDispatcher-worker-3]Service Connect Api called Intent { act=ai.pleos.playground.service.location.fused.FUSED_LOCATION_START cmp=ai.pleos.playground.service.location.fused/.FusedLocationService }
+10-29 15:13:04.042 11311 11354 I PleosLocationSpeed: location speed subscription active
+10-29 15:13:04.042 11311 11311 I [Pleos][SDK]b: [main]ServiceConnected call
+10-29 15:13:04.042 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 22.0
+10-29 15:13:04.043 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:04.044 11311 11354 D [NaviHelper][SDK]NaviHelper: [DefaultDispatcher-worker-3]initialize with callback
+10-29 15:13:04.044 11311 11354 D [NaviHelper][SDK]c: [DefaultDispatcher-worker-3]connectService
+10-29 15:13:04.044 11311 11354 D [NaviHelper][SDK]NaviHelper: [DefaultDispatcher-worker-3]addListener ai.vipseat.cargoconcierge.pleos.PleosNavi$listener$1@e73c567
+10-29 15:13:04.044 11311 11550 I [Pleos][SDK]b: [binder:11311_6]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:04.044 11311 11353 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_TEMPERATURE_SET
+10-29 15:13:04.044 11311 11353 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig request
+10-29 15:13:04.044 11311 11353 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:13:04.044 11311 11311 I [NaviHelper][SDK]c: [main]onServiceConnected
+10-29 15:13:04.045 11311 11311 I [NaviHelper][SDK]c: [main]getServiceVersion = 3.0.4
+10-29 15:13:04.045 11311 11311 D [NaviHelper][SDK]c: [main]registerCallbackV3
+10-29 15:13:04.045 11311 11311 I PleosNavi: NaviHelper ready
+10-29 15:13:04.045 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_TEMPERATURE_SET
+10-29 15:13:04.045 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:04.045 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:13:04.046 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_FAN_SPEED
+10-29 15:13:04.046 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:04.046 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_FAN_SPEED
+10-29 15:13:04.047 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_FAN_DIRECTION
+10-29 15:13:04.047 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:04.047 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_FAN_DIRECTION
+10-29 15:13:04.047 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.SeatImpl@18c9880 , propId HVAC_SEAT_TEMPERATURE
+10-29 15:13:04.047 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:04.047 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_SEAT_TEMPERATURE
+10-29 15:13:04.048 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.SeatImpl@18c9880 , propId HVAC_SEAT_VENTILATION
+10-29 15:13:04.048 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:04.048 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_SEAT_VENTILATION
+10-29 15:13:04.048 11311 11311 I CargoVM : 연결: AOSP CarPropertyManager + Pleos Vehicle SDK 2.3.2 + demo bridge / Pleos NaviHelper 3.0.5 + demo injector
+10-29 15:13:05.046 11311 11533 I [Pleos][SDK]b: [binder:11311_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:05.048 11311 11533 I [Pleos][SDK]b: [binder:11311_5]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:06.050 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:06.053 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:06.968 11311 11651 D [Pleos][SDK]a: [binder:11311_7]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:07.055 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:07.057 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:07.296 11311 11311 I PleosLocationSpeed: location speed subscription stopped
+10-29 15:13:07.297 11311 11311 I DemoBridge: preset=CAKE
+10-29 15:13:07.297 11311 11311 I DemoBridge: broadcast → preset=CAKE
+10-29 15:13:07.298 11311 11311 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 1010175; state: ENABLED
+10-29 15:13:07.300 11311 11311 D [Pleos][SDK]b: [main]connectService
+10-29 15:13:07.300 11311 11311 D [Pleos][SDK]b: [main]Service Connect Api called Intent { act=ai.pleos.playground.service.location.fused.FUSED_LOCATION_START cmp=ai.pleos.playground.service.location.fused/.FusedLocationService }
+10-29 15:13:07.300 11311 11311 I PleosLocationSpeed: location speed subscription active
+10-29 15:13:07.300 11311 11311 I CargoVM : 가드 서비스 준비: 요청 1
+10-29 15:13:07.301 11311 11311 I CargoVM : 캐빈 적용 → 조수석
+10-29 15:13:07.302 11311 11353 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_FAN_SPEED
+10-29 15:13:07.302 11311 11353 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig request
+10-29 15:13:07.302 11311 11353 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_FAN_SPEED
+10-29 15:13:07.303 11311 11311 I CargoVM : TTS: 케이크 VIP 모드, 조수석. 0.15G 가드를 시작할게요
+10-29 15:13:07.303 11311 11311 I [GAAS][SDK]TextToSpeech: [main]stop
+10-29 15:13:07.304 11311 11354 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-3]stop
+10-29 15:13:07.304 11311 11311 W TextToSpeech: stop failed: not bound to TTS engine
+10-29 15:13:07.304 11311 11311 I CargoVM : 가드 시작: 케이크 (0.15G) · 조수석
+10-29 15:13:07.304 11311 11311 I GuardRuntime: {"event":"ready","elapsedMs":30733837,"requestId":1,"startedMs":30733833,"visible":true,"ending":false,"guarding":true}
+10-29 15:13:07.304 11311 11354 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-3]doSpeak(ai.vipseat.cargoconcierge) text=케이크 VIP 모드, 조수석. 0.15G 가드를 시작할게요, isFinal=true
+10-29 15:13:07.304 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_FAN_DIRECTION
+10-29 15:13:07.304 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:07.304 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_FAN_DIRECTION
+10-29 15:13:07.305 11311 11550 D [GAAS][SDK]TtsCallback: [binder:11311_6]onResponse UpdateTtsStop 
+10-29 15:13:07.305 11311 11550 D [GAAS][SDK]TtsCallback: [binder:11311_6]onStop
+10-29 15:13:07.305 11311 11550 D [GAAS][SDK]TtsCallback: [binder:11311_6]onStop
+10-29 15:13:07.305 11311 11550 I PleosSpeech: TTS_STOP
+10-29 15:13:07.305 11311 11550 D [GAAS][SDK]TtsCallback: [binder:11311_6]onResponse UpdateTtsReady 
+10-29 15:13:07.305 11311 11550 D [GAAS][SDK]TtsCallback: [binder:11311_6]onReady
+10-29 15:13:07.305 11311 11550 D [GAAS][SDK]TtsCallback: [binder:11311_6]onReady
+10-29 15:13:07.305 11311 11550 I PleosSpeech: TTS_READY
+10-29 15:13:07.306 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_TEMPERATURE_SET
+10-29 15:13:07.306 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:07.306 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:13:07.306 11311 11311 I [Pleos][SDK]b: [main]ServiceConnected call
+10-29 15:13:07.308 11311 11651 D [GAAS][SDK]TtsCallback: [binder:11311_7]onResponse UpdateTtsStart 
+10-29 15:13:07.308 11311 11651 D [GAAS][SDK]TtsCallback: [binder:11311_7]onStart
+10-29 15:13:07.308 11311 11651 D [GAAS][SDK]TtsCallback: [binder:11311_7]onStart
+10-29 15:13:07.308 11311 11651 I PleosSpeech: TTS_START
+10-29 15:13:07.308 11311 11354 I [Pleos][SDK]b: [DefaultDispatcher-worker-3]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_TEMPERATURE_SET
+10-29 15:13:07.308 11311 11354 I [Pleos][SDK]b: [DefaultDispatcher-worker-3]getCapabilityConfig request
+10-29 15:13:07.308 11311 11354 I [Pleos][SDK]b: [DefaultDispatcher-worker-3]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:13:07.308 11311 11354 I PleosVehicle: hvac zones: passenger temperature=ROW_1_RIGHT fan=ROW_1_LEFT, ROW_1_RIGHT direction=ROW_1_LEFT, ROW_1_RIGHT rearTemp=none
+10-29 15:13:07.310 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 22.0
+10-29 15:13:07.312 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:07.313 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 1
+10-29 15:13:07.313 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_DUAL_ON
+10-29 15:13:07.314 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig request
+10-29 15:13:07.314 11311 11563 I [Pleos][SDK]b: [DefaultDispatcher-worker-4]getCapabilityConfig propId HVAC_DUAL_ON
+10-29 15:13:07.321 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey HVAC_DUAL_ON eventAreaId 5 eventValue false
+10-29 15:13:07.321 11311 11563 I PleosVehicle: temperature synchronization readback: state=false
+10-29 15:13:07.326 11311 11651 D [Pleos][SDK]b: [binder:11311_7]onResult() called with: propKey = HVAC_TEMPERATURE_SET, areaId = 4, result = true
+10-29 15:13:07.333 11311 11550 D [Pleos][SDK]a: [binder:11311_6]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 18.0
+10-29 15:13:07.334 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 18.0
+10-29 15:13:07.335 11311 11564 I [Pleos][SDK]b: [DefaultDispatcher-worker-5]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@f4603bd , propId HVAC_POWER_ON
+10-29 15:13:07.335 11311 11564 I [Pleos][SDK]b: [DefaultDispatcher-worker-5]getCapabilityConfig request
+10-29 15:13:07.335 11311 11564 I [Pleos][SDK]b: [DefaultDispatcher-worker-5]getCapabilityConfig propId HVAC_POWER_ON
+10-29 15:13:07.338 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey HVAC_POWER_ON eventAreaId 117 eventValue true
+10-29 15:13:07.339 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey HVAC_SEAT_TEMPERATURE eventAreaId 4 eventValue 0
+10-29 15:13:07.340 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey HVAC_SEAT_VENTILATION eventAreaId 4 eventValue 0
+10-29 15:13:07.340 11311 11563 I PleosVehicle: apply TEMPERATURE: APPLIED · 변경 요청 후 차량 값 확인 · confirmation=VALUE_CONFIRMED value=18.0 hvacPowerAtCheck=true
+10-29 15:13:07.340 11311 11563 I PleosVehicle: apply FAN: UNCHANGED · 운전석과 공유하는 존이라 유지 · confirmation=NONE value=null hvacPowerAtCheck=null
+10-29 15:13:07.340 11311 11563 I PleosVehicle: apply AIRFLOW: UNCHANGED · 운전석과 공유하는 존이라 유지 · confirmation=NONE value=null hvacPowerAtCheck=null
+10-29 15:13:07.340 11311 11563 I PleosVehicle: apply SEAT_HEATER: UNCHANGED · 이미 요청값 · 변경하지 않음 · confirmation=VALUE_CONFIRMED value=0 hvacPowerAtCheck=null
+10-29 15:13:07.340 11311 11563 I PleosVehicle: apply SEAT_VENT: UNCHANGED · 이미 요청값 · 변경하지 않음 · confirmation=VALUE_CONFIRMED value=0 hvacPowerAtCheck=null
+10-29 15:13:07.428 11311 11311 I CargoVM :   TEMPERATURE: APPLIED (변경 요청 후 차량 값 확인)
+10-29 15:13:07.428 11311 11311 I CargoVM :   FAN: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 15:13:07.428 11311 11311 I CargoVM :   AIRFLOW: UNCHANGED (운전석과 공유하는 존이라 유지)
+10-29 15:13:07.428 11311 11311 I CargoVM :   SEAT_HEATER: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 15:13:07.428 11311 11311 I CargoVM :   SEAT_VENT: UNCHANGED (이미 요청값 · 변경하지 않음)
+10-29 15:13:07.428 11311 11311 I CargoVM : 캐빈 적용: 1개 성공, 0개 미적용
+10-29 15:13:07.451 11311 11344 D EGL_emulation: app_time_stats: avg=379.75ms min=7.49ms max=3381.38ms count=11
+10-29 15:13:07.478 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:07.503 11311 11360 D AudioTrack: stop(191): called with 9360 frames delivered
+10-29 15:13:07.667 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:07.768 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:07.868 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.045 11311 12339 D ProfileInstaller: Installing profile for ai.vipseat.cargoconcierge
+10-29 15:13:08.059 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:08.060 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.061 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:08.061 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.068 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.168 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.368 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.567 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.668 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.768 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:08.967 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.063 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:09.064 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.065 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:09.065 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.075 11311 11344 D EGL_emulation: app_time_stats: avg=266.32ms min=1.90ms max=1400.48ms count=6
+10-29 15:13:09.169 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.268 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.468 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.568 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.769 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.968 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:09.969 11311 11651 D [Pleos][SDK]a: [binder:11311_7]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:09.969 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.067 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:10.068 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:10.068 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.068 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.168 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.191 11311 11344 D EGL_emulation: app_time_stats: avg=372.03ms min=116.15ms max=799.99ms count=3
+10-29 15:13:10.368 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.469 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.668 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.768 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:10.968 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:11.070 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:11.070 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:11.070 11311 11651 I [Pleos][SDK]b: [binder:11311_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:11.071 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:11.168 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0
+10-29 15:13:11.268 11311 11311 D CargoVM : G lat=0.000 lon=0.000 total=0.000 limit=0.15 badge=OK kph=0

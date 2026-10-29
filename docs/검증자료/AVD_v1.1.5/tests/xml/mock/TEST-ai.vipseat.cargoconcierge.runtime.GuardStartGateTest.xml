@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:58" hostname="LOCAL_AVD_TEST" time="0.012">
+  <properties/>
+  <testcase name="duplicate ready delivery cannot reset trip or apply twice" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.01"/>
+  <testcase name="active lease rejects a new start token without changing location choice" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <testcase name="unexpected loss invalidates requests without producing a restore effect" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <testcase name="hidden UI cannot create a pending start" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <testcase name="start failure cannot execute a preset or cabin effect" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <testcase name="normal end retains lease until explicit cabin completion" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <testcase name="end invalidates a late foreground promotion" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.001"/>
+  <testcase name="new process has neither a resumable preset nor service lease" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <testcase name="replaced request rejects old success and old failure" classname="ai.vipseat.cargoconcierge.runtime.GuardStartGateTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

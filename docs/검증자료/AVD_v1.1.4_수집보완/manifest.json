@@ -1,0 +1,62 @@
+{
+  "scope": "selected original evidence; failed single runtime06 observation",
+  "files": [
+    {
+      "path": "REPORT.json",
+      "bytes": 3386,
+      "sha256": "9f631135674e5173f347a18abf4f243e2d90f69689985fc6dc19c752f3c7ec18",
+      "source": ".omx/qa/submission-v26/capture/REPORT.json",
+      "transformation": "none"
+    },
+    {
+      "path": "handoff-01.json",
+      "bytes": 968,
+      "sha256": "bd85c236afa9096bc447ab8e1e84a8222a8e37b8730bb1536ac60f95fbc43be6",
+      "source": ".omx/qa/submission-v26/capture/handoff-01.json",
+      "transformation": "none"
+    },
+    {
+      "path": "integration-01/integration-result.json",
+      "bytes": 1527,
+      "sha256": "2916a3125d95893bb4bb182e38dffb3e6aee5c8246aab65086cff46efc2a3572",
+      "source": ".omx/qa/submission-v26/capture/integration-01/integration-result.json",
+      "transformation": "none"
+    },
+    {
+      "path": "integration-01/cleanup.json",
+      "bytes": 354,
+      "sha256": "b17b517111038ee7eed00d67a2a4b1d16ddaea2f6172911adbe5f6d05d28b7a9",
+      "source": ".omx/qa/submission-v26/capture/integration-01/cleanup.json",
+      "transformation": "none"
+    },
+    {
+      "path": "integration-01/pcm/summary.json",
+      "bytes": 3586,
+      "sha256": "0b8761bef12c801650fcbc17556de775a2bd2cc6d70351de8cfa7cca3cbded62",
+      "source": ".omx/qa/submission-v26/capture/integration-01/pcm/summary.json",
+      "transformation": "none"
+    },
+    {
+      "path": "integration-01/logcat/summary.json",
+      "bytes": 3383,
+      "sha256": "997720cb0465191369fcc547afee136e83f7bf7338d9e43670712aed56c6a868",
+      "source": ".omx/qa/submission-v26/capture/integration-01/logcat/summary.json",
+      "transformation": "none"
+    },
+    {
+      "path": "integration-01/capture-supervision.json",
+      "bytes": 569,
+      "sha256": "01028fdcdbcbd0d72ecd957fac8aa35951a7599299252791ee8007abe5164787",
+      "source": ".omx/qa/submission-v26/capture/integration-01/capture-supervision.json",
+      "transformation": "none"
+    },
+    {
+      "path": "integration-01/input-ledger.jsonl",
+      "bytes": 620874,
+      "sha256": "7c5aa6c1624f5ff358f96b6e839cb0b157e1382cb1ea7ca65179190d2cb93710",
+      "source": ".omx/qa/submission-v26/capture/integration-01/input-ledger.jsonl",
+      "transformation": "none"
+    }
+  ],
+  "privateAudioAndCredentialsExcluded": true
+}

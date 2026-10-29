@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:56" hostname="LOCAL_AVD_TEST" time="0.024">
+  <properties/>
+  <testcase name="guard is rechecked before restore and keeps pending state" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="apply permission failure does not write a restore over unchanged property" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="external value change survives restore and further apply in same session" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="readback budget includes a stalled getter" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="success restores first original after multiple app targets" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="acknowledged setter without matching state is not applied" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.002"/>
+  <testcase name="slow restore guard retains the original for a later fresh retry" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="matching original does not take ownership or issue a restore" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.003"/>
+  <testcase name="separate properties restore only their own successful changes" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="confirmed value records the matching getter rather than requested target" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.002"/>
+  <testcase name="null or third value after restore acknowledgement preserves failure" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="caller cancellation during readback propagates without another command" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.002"/>
+  <testcase name="rejected restore remains retryable" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="null or third value after apply acknowledgement fails without retrying" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.0"/>
+  <testcase name="slow guard expires earlier property read without a command" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <testcase name="original read failure at restore preserves retry obligation" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.0"/>
+  <testcase name="delayed apply is confirmed within the readback budget" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.002"/>
+  <testcase name="missing original prevents command and creates no restore obligation" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.0"/>
+  <testcase name="delayed restore is confirmed by reads without resending the setter" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.002"/>
+  <testcase name="old value never becomes applied after the one second budget" classname="ai.vipseat.cargoconcierge.core.CabinSettingOwnerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

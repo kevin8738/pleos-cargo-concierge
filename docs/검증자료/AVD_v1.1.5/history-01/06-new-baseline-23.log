@@ -1,0 +1,313 @@
+--------- beginning of main
+10-29 15:13:13.791 13489 13489 I .cargoconcierge: Using CollectorTypeCC GC.
+10-29 15:13:13.795 13489 13489 E .cargoconcierge: Not starting debugger since process cannot load the jdwp agent.
+10-29 15:13:13.809 13489 13489 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 1010175; state: ENABLED
+10-29 15:13:13.809 13489 13489 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 1010175; state: ENABLED
+10-29 15:13:13.816 13489 13489 D nativeloader: Configuring clns-6 for other apk /data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/lib/arm64:/data/app/~~zfldXme8Fl-eQquZxArDKg==/ai.vipseat.cargoconcierge-CGTW5C_cZcV5nBichZpIdA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/10/ai.vipseat.cargoconcierge
+10-29 15:13:13.824 13489 13489 V GraphicsEnvironment: Currently set values for:
+10-29 15:13:13.824 13489 13489 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-29 15:13:13.824 13489 13489 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-29 15:13:13.824 13489 13489 V GraphicsEnvironment: ANGLE GameManagerService for ai.vipseat.cargoconcierge: false
+10-29 15:13:13.824 13489 13489 V GraphicsEnvironment: ai.vipseat.cargoconcierge is not listed in per-application setting
+10-29 15:13:13.824 13489 13489 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-29 15:13:13.863 13489 13528 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-29 15:13:13.863 13489 13489 I [GAAS][SDK]TextToSpeech: [main]initialize - HYBRID with listener
+10-29 15:13:13.863 13489 13489 I [GAAS][SDK]TtsServiceManager: [main]createTts HYBRID
+10-29 15:13:13.863 13489 13528 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-29 15:13:13.864 13489 13489 D [GAAS][SDK]StreamTts: [main]connectService with listener
+10-29 15:13:13.864 13489 13489 W AndroidTts: TTS init failed: -1
+10-29 15:13:13.865 13489 13489 D [CAAS][SDK]SpeechToText: [main]initialize with listener
+10-29 15:13:13.865 13489 13489 I [CAAS][SDK]SttServiceManager: [main]createStt HYBRID
+10-29 15:13:13.865 13489 13489 D [CAAS][SDK]ServerStt: [main]connectService with listener
+10-29 15:13:13.865 13489 13528 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-29 15:13:13.870 13489 13489 I AudioTrack: createTrack_l(0): AUDIO_OUTPUT_FLAG_FAST successful; frameCount 960 -> 1440
+10-29 15:13:13.887 13489 13489 D CarUxRManager: Context returns associated display ID -1
+10-29 15:13:13.887 13489 13489 D CarUxRManager: Display ID assigned to user is display 0
+10-29 15:13:13.899 13489 13489 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 1010175; state: DISABLED
+10-29 15:13:13.899 13489 13530 W CarPropertyManager: Property: 0x1160030e is not supported
+10-29 15:13:13.900 13489 13489 W OpenGLRenderer: Unknown dataspace 0
+10-29 15:13:13.900 13489 13530 I AospCarVehicle: subscriptions: speed=ok gear=ok steering=absent door=absent occupancy=absent hvacTemp=absent brakePct=absent
+10-29 15:13:13.900 13489 13530 D [Pleos][SDK]Vehicle: [DefaultDispatcher-worker-1]initialize
+10-29 15:13:13.900 13489 13530 D [Pleos][SDK]b: [DefaultDispatcher-worker-1]connectService
+10-29 15:13:13.900 13489 13530 D [Pleos][SDK]b: [DefaultDispatcher-worker-1]Service Connect Api called Intent { act=ai.pleos.playground.vehicle.VEHICLE_START cmp=ai.pleos.playground.service.vehicle/.VehicleService }
+10-29 15:13:14.000 13489 13522 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+10-29 15:13:14.000 13489 13522 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-29 15:13:14.007 13489 13522 I Gralloc4: mapper 4.x is not supported
+10-29 15:13:14.011 13489 13522 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-29 15:13:14.073 13489 13489 D [CAAS][SDK]ServerStt: [main]onServiceConnected
+10-29 15:13:14.073 13489 13489 D [CAAS][SDK]ServerStt: [main]setMode HYBRID
+10-29 15:13:14.073 13489 13489 D [CAAS][SDK]ServerStt: [main]registerCallback
+10-29 15:13:14.073 13489 13489 I [CAAS][SDK]SpeechToText: [main]updateLocale ko
+10-29 15:13:14.073 13489 13489 I PleosVoiceInput: Pleos STT ready
+10-29 15:13:14.073 13489 13489 D [GAAS][SDK]StreamTts: [main]onServiceConnected
+10-29 15:13:14.073 13489 13489 D [GAAS][SDK]StreamTts: [main]setMode HYBRID
+10-29 15:13:14.073 13489 13530 D [CAAS][SDK]ServerStt: [DefaultDispatcher-worker-1]setLocale ko ai.vipseat.cargoconcierge
+10-29 15:13:14.073 13489 13489 D [GAAS][SDK]StreamTts: [main]registerCallback
+10-29 15:13:14.073 13489 13489 I [GAAS][SDK]TextToSpeech: [main]updateLocale ko_KR
+10-29 15:13:14.073 13489 13489 I [GAAS][SDK]TextToSpeech: [main]addEventListener
+10-29 15:13:14.073 13489 13489 D [GAAS][SDK]StreamTts: [main]addEventListener
+10-29 15:13:14.073 13489 13489 I PleosSpeech: TTS_INITIALIZED
+10-29 15:13:14.074 13489 13530 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-1]setLocale ko_KR ai.vipseat.cargoconcierge
+10-29 15:13:14.074 13489 13534 D [CAAS][SDK]SttCallback: [binder:13489_4]onUpdated UpdateCurrentVariant gleoAiCoral
+10-29 15:13:14.074 13489 13530 D [CAAS][SDK]ServerStt: [DefaultDispatcher-worker-1]current variant gleoAiCoral
+10-29 15:13:14.074 13489 13534 D [GAAS][SDK]TtsCallback: [binder:13489_4]onResponse UpdateCurrentVariant gleoAiCoral
+10-29 15:13:14.074 13489 13489 I [Pleos][SDK]b: [main]ServiceConnected call
+10-29 15:13:14.074 13489 13530 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-1]current variant gleoAiCoral
+10-29 15:13:14.107 13489 13489 D VRI[MainActivity]: Cancelling draw. cancelDueToPreDrawListener=false cancelDueToSync=true
+10-29 15:13:14.727 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.727 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$gearListener$1@efc5776
+10-29 15:13:14.727 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.727 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = VENDOR_GEAR_SELECTION, areaType = 0
+10-29 15:13:14.734 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = VENDOR_GEAR_SELECTION, areaId = 0, value = 4
+10-29 15:13:14.734 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = VENDOR_GEAR_SELECTION, areaId = 0, value = 4
+10-29 15:13:14.740 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.740 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$steeringListener$1@3b80981
+10-29 15:13:14.740 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.740 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = PERF_STEERING_ANGLE, areaType = 0
+10-29 15:13:14.742 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:14.744 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.744 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$brakeListener$1@f3bb7fe
+10-29 15:13:14.744 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.744 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = BRAKE_PEDAL_STATUS, areaType = 0
+10-29 15:13:14.746 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = BRAKE_PEDAL_STATUS, areaId = 0, value = false
+10-29 15:13:14.747 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = BRAKE_PEDAL_STATUS, areaId = 0, value = false
+10-29 15:13:14.763 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@6971386
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = DOOR_POS, areaType = 4
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 1
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@5ea5447
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 1
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 2
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@5db474
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 2
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 3
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@a995d9d
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 3
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 4
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@240e212
+10-29 15:13:14.764 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 4
+10-29 15:13:14.764 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 4 eventValue 0
+10-29 15:13:14.764 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 4, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@5ea5447
+10-29 15:13:14.765 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 16 eventValue 0
+10-29 15:13:14.765 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 16, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@5db474
+10-29 15:13:14.765 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 64 eventValue 0
+10-29 15:13:14.765 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 64, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@a995d9d
+10-29 15:13:14.765 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 268435456, value = 0
+10-29 15:13:14.765 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 536870912, value = 0
+10-29 15:13:14.765 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 64, value = 0
+10-29 15:13:14.765 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 16, value = 0
+10-29 15:13:14.765 13489 13534 D [Pleos][SDK]a: [binder:13489_4]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 1, value = 0
+10-29 15:13:14.765 13489 13510 D [Pleos][SDK]a: [binder:13489_2]onChangeEvent() called with: propIdName = DOOR_POS, areaId = 4, value = 0
+10-29 15:13:14.765 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 536870912 eventValue 0
+10-29 15:13:14.765 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = DOOR_POS, areaId = 536870912, value = 0, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$doorListeners$1$1@240e212
+10-29 15:13:14.841 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.841 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@de72e18
+10-29 15:13:14.841 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.841 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = SEAT_OCCUPANCY, areaType = 3
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 1
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@a0a2071
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 1
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 2
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@4986e56
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 2
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 3
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@3095ed7
+10-29 15:13:14.842 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 3
+10-29 15:13:14.843 13489 13716 D [Pleos][SDK]a: [binder:13489_6]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1
+10-29 15:13:14.844 13489 13716 D [Pleos][SDK]a: [binder:13489_6]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1
+10-29 15:13:14.844 13489 13716 D [Pleos][SDK]a: [binder:13489_6]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 1, value = 1
+10-29 15:13:14.844 13489 13716 D [Pleos][SDK]a: [binder:13489_6]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1
+10-29 15:13:14.844 13489 13716 D [Pleos][SDK]a: [binder:13489_6]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1
+10-29 15:13:14.845 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 1, value = 1
+10-29 15:13:14.845 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 4, value = 1
+10-29 15:13:14.845 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1
+10-29 15:13:14.846 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1
+10-29 15:13:14.846 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent() called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1
+10-29 15:13:14.847 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 16 eventValue 1
+10-29 15:13:14.847 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 16, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@a0a2071
+10-29 15:13:14.848 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 32 eventValue 1
+10-29 15:13:14.848 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 32, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@4986e56
+10-29 15:13:14.848 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 64 eventValue 1
+10-29 15:13:14.848 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent(single) called with: propIdName = SEAT_OCCUPANCY, areaId = 64, value = 1, listener = ai.vipseat.cargoconcierge.pleos.PleosVehicle$beginOccupancyObservations$1$1@3095ed7
+10-29 15:13:14.888 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.888 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$tempListener$1@b6d759b
+10-29 15:13:14.888 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.888 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = HVAC_TEMPERATURE_SET, areaType = 3
+10-29 15:13:14.889 13489 13510 D [Pleos][SDK]a: [binder:13489_2]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 1, value = 22.0
+10-29 15:13:14.889 13489 13510 D [Pleos][SDK]a: [binder:13489_2]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 18.0
+10-29 15:13:14.894 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.894 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]addListener: ai.vipseat.cargoconcierge.pleos.PleosVehicle$drivingModeListener$1@afba468
+10-29 15:13:14.894 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]hasPropertyIdCount : 0
+10-29 15:13:14.894 13489 13530 D [Pleos][SDK]a: [DefaultDispatcher-worker-1]saveRequest() called with: propIdName = DRIVING_MODE, areaType = 0
+10-29 15:13:14.896 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:14.897 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 1 eventValue 0
+10-29 15:13:14.897 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 4 eventValue 0
+10-29 15:13:14.897 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 16 eventValue 0
+10-29 15:13:14.898 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 64 eventValue 0
+10-29 15:13:14.898 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey DOOR_POS eventAreaId 536870912 eventValue 0
+10-29 15:13:14.898 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 4 eventValue 1
+10-29 15:13:14.899 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 16 eventValue 1
+10-29 15:13:14.900 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 32 eventValue 1
+10-29 15:13:14.900 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey SEAT_OCCUPANCY eventAreaId 64 eventValue 1
+10-29 15:13:14.901 13489 13530 D [Pleos][SDK]b: [DefaultDispatcher-worker-1]connectService
+10-29 15:13:14.901 13489 13530 D [Pleos][SDK]b: [DefaultDispatcher-worker-1]Service Connect Api called Intent { act=ai.pleos.playground.service.location.fused.FUSED_LOCATION_START cmp=ai.pleos.playground.service.location.fused/.FusedLocationService }
+10-29 15:13:14.902 13489 13530 I PleosLocationSpeed: location speed subscription active
+10-29 15:13:14.904 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey HVAC_TEMPERATURE_SET eventAreaId 4 eventValue 18.0
+10-29 15:13:14.904 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:14.905 13489 13489 I [Pleos][SDK]b: [main]ServiceConnected call
+10-29 15:13:14.906 13489 13530 D [NaviHelper][SDK]NaviHelper: [DefaultDispatcher-worker-1]initialize with callback
+10-29 15:13:14.906 13489 13530 D [NaviHelper][SDK]c: [DefaultDispatcher-worker-1]connectService
+10-29 15:13:14.907 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:14.907 13489 13530 D [NaviHelper][SDK]NaviHelper: [DefaultDispatcher-worker-1]addListener ai.vipseat.cargoconcierge.pleos.PleosNavi$listener$1@f94f798
+10-29 15:13:14.908 13489 13489 I [NaviHelper][SDK]c: [main]onServiceConnected
+10-29 15:13:14.908 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@31713d6 , propId HVAC_TEMPERATURE_SET
+10-29 15:13:14.908 13489 13489 I [NaviHelper][SDK]c: [main]getServiceVersion = 3.0.4
+10-29 15:13:14.908 13489 13489 D [NaviHelper][SDK]c: [main]registerCallbackV3
+10-29 15:13:14.908 13489 13489 I PleosNavi: NaviHelper ready
+10-29 15:13:14.908 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig request
+10-29 15:13:14.908 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:13:14.910 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@31713d6 , propId HVAC_TEMPERATURE_SET
+10-29 15:13:14.910 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig request
+10-29 15:13:14.910 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_TEMPERATURE_SET
+10-29 15:13:14.911 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@31713d6 , propId HVAC_FAN_SPEED
+10-29 15:13:14.911 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig request
+10-29 15:13:14.911 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_FAN_SPEED
+10-29 15:13:14.912 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.HVACImpl@31713d6 , propId HVAC_FAN_DIRECTION
+10-29 15:13:14.912 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig request
+10-29 15:13:14.912 13489 13531 I [Pleos][SDK]b: [DefaultDispatcher-worker-2]getCapabilityConfig propId HVAC_FAN_DIRECTION
+10-29 15:13:14.914 13489 13532 I [Pleos][SDK]b: [DefaultDispatcher-worker-3]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.SeatImpl@864562d , propId HVAC_SEAT_TEMPERATURE
+10-29 15:13:14.915 13489 13532 I [Pleos][SDK]b: [DefaultDispatcher-worker-3]getCapabilityConfig request
+10-29 15:13:14.915 13489 13532 I [Pleos][SDK]b: [DefaultDispatcher-worker-3]getCapabilityConfig propId HVAC_SEAT_TEMPERATURE
+10-29 15:13:14.916 13489 13530 I [Pleos][SDK]b: [DefaultDispatcher-worker-1]getCapabilityConfig instance ai.pleos.playground.vehicle.api.implement.SeatImpl@864562d , propId HVAC_SEAT_VENTILATION
+10-29 15:13:14.916 13489 13530 I [Pleos][SDK]b: [DefaultDispatcher-worker-1]getCapabilityConfig request
+10-29 15:13:14.916 13489 13530 I [Pleos][SDK]b: [DefaultDispatcher-worker-1]getCapabilityConfig propId HVAC_SEAT_VENTILATION
+10-29 15:13:14.917 13489 13489 I CargoVM : 연결: AOSP CarPropertyManager + Pleos Vehicle SDK 2.3.2 + demo bridge / Pleos NaviHelper 3.0.5 + demo injector
+10-29 15:13:15.909 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:15.911 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:16.268 13489 13510 D [Pleos][SDK]a: [binder:13489_2]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:16.914 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:16.915 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:17.919 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:17.920 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:18.922 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:18.923 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:19.368 13489 13519 D [Pleos][SDK]a: [binder:13489_3]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:19.372 13489 14633 D ProfileInstaller: Installing profile for ai.vipseat.cargoconcierge
+10-29 15:13:19.925 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:19.926 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:20.928 13489 13747 I [Pleos][SDK]b: [binder:13489_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:20.929 13489 13747 I [Pleos][SDK]b: [binder:13489_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:21.932 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:21.934 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:22.470 13489 13519 D [Pleos][SDK]a: [binder:13489_3]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:22.660 13489 13522 D EGL_emulation: app_time_stats: avg=780.68ms min=8.47ms max=7722.46ms count=11
+10-29 15:13:22.938 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:22.939 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:23.942 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:23.944 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:24.946 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:24.947 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:25.668 13489 13510 D [Pleos][SDK]a: [binder:13489_2]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:25.949 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:25.950 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:26.953 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:26.955 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:27.621 13489 13522 D EGL_emulation: app_time_stats: avg=4960.37ms min=4960.37ms max=4960.37ms count=1
+10-29 15:13:27.957 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:27.959 13489 13510 I [Pleos][SDK]b: [binder:13489_2]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:28.868 13489 16500 D [Pleos][SDK]a: [binder:13489_8]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:28.961 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:28.963 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:29.965 13489 13747 I [Pleos][SDK]b: [binder:13489_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:29.966 13489 13747 I [Pleos][SDK]b: [binder:13489_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:30.968 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:30.970 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:31.968 13489 13509 D [Pleos][SDK]a: [binder:13489_1]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:31.972 13489 13509 I [Pleos][SDK]b: [binder:13489_1]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:31.974 13489 13509 I [Pleos][SDK]b: [binder:13489_1]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:32.633 13489 13522 D EGL_emulation: app_time_stats: avg=5012.03ms min=5012.03ms max=5012.03ms count=1
+10-29 15:13:32.976 13489 13509 I [Pleos][SDK]b: [binder:13489_1]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:32.978 13489 13509 I [Pleos][SDK]b: [binder:13489_1]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:33.981 13489 13509 I [Pleos][SDK]b: [binder:13489_1]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:33.983 13489 13509 I [Pleos][SDK]b: [binder:13489_1]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:34.984 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:34.986 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:35.068 13489 16500 D [Pleos][SDK]a: [binder:13489_8]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:35.988 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:35.989 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:36.990 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:36.992 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:37.541 13489 13522 D EGL_emulation: app_time_stats: avg=4908.04ms min=4908.04ms max=4908.04ms count=1
+10-29 15:13:37.995 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:37.997 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:38.268 13489 16500 D [Pleos][SDK]a: [binder:13489_8]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:39.000 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:39.001 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:40.004 13489 13747 I [Pleos][SDK]b: [binder:13489_7]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:40.005 13489 13747 I [Pleos][SDK]b: [binder:13489_7]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:41.008 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:41.009 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:41.368 13489 16500 D [Pleos][SDK]a: [binder:13489_8]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:42.012 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:42.013 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:42.531 13489 13522 D EGL_emulation: app_time_stats: avg=4990.15ms min=4990.15ms max=4990.15ms count=1
+10-29 15:13:43.016 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:43.018 13489 16500 I [Pleos][SDK]b: [binder:13489_8]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:44.020 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:44.022 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:44.369 13489 19434 D [Pleos][SDK]a: [binder:13489_9]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:45.025 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:45.026 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:46.028 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:46.029 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:47.031 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:47.033 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:47.468 13489 13519 D [Pleos][SDK]a: [binder:13489_3]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:47.471 13489 13519 D [Pleos][SDK]a: [binder:13489_3]onChangeEvent() called with: propIdName = VENDOR_GEAR_SELECTION, areaId = 0, value = 8
+10-29 15:13:47.473 13489 13489 I [GAAS][SDK]TextToSpeech: [main]stop
+10-29 15:13:47.473 13489 13530 D [GAAS][SDK]StreamTts: [DefaultDispatcher-worker-1]stop
+10-29 15:13:47.473 13489 13489 W TextToSpeech: stop failed: not bound to TTS engine
+10-29 15:13:47.475 13489 13519 D [GAAS][SDK]TtsCallback: [binder:13489_3]onResponse UpdateTtsStop 
+10-29 15:13:47.475 13489 13519 D [GAAS][SDK]TtsCallback: [binder:13489_3]onStop
+10-29 15:13:47.475 13489 13519 D [GAAS][SDK]TtsCallback: [binder:13489_3]onStop
+10-29 15:13:47.475 13489 13519 I PleosSpeech: TTS_STOP
+10-29 15:13:47.503 13489 13522 D EGL_emulation: app_time_stats: avg=4971.98ms min=4971.98ms max=4971.98ms count=1
+10-29 15:13:48.037 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 8
+10-29 15:13:48.038 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:49.041 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 8
+10-29 15:13:49.042 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:50.045 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 8
+10-29 15:13:50.046 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:50.668 13489 19434 D [Pleos][SDK]a: [binder:13489_9]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:51.049 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 8
+10-29 15:13:51.050 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:52.053 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 8
+10-29 15:13:52.054 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:52.576 13489 19434 D [Pleos][SDK]a: [binder:13489_9]onChangeEvent() called with: propIdName = VENDOR_GEAR_SELECTION, areaId = 0, value = 4
+10-29 15:13:52.619 13489 13522 D EGL_emulation: app_time_stats: avg=5116.14ms min=5116.14ms max=5116.14ms count=1
+10-29 15:13:53.056 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:53.057 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:53.868 13489 13519 D [Pleos][SDK]a: [binder:13489_3]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:54.060 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:54.061 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:55.064 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:55.065 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:56.068 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:56.068 13489 13519 I [Pleos][SDK]b: [binder:13489_3]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:56.869 13489 22201 D [Pleos][SDK]a: [binder:13489_A]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:13:57.070 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:57.071 13489 19434 I [Pleos][SDK]b: [binder:13489_9]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:58.073 13489 22201 I [Pleos][SDK]b: [binder:13489_A]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:58.074 13489 22201 I [Pleos][SDK]b: [binder:13489_A]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:13:59.076 13489 22201 I [Pleos][SDK]b: [binder:13489_A]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:13:59.077 13489 22201 I [Pleos][SDK]b: [binder:13489_A]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:14:00.042 13489 22201 D [Pleos][SDK]a: [binder:13489_A]onChangeEvent() called with: propIdName = HVAC_TEMPERATURE_SET, areaId = 4, value = 23.0
+10-29 15:14:00.058 13489 13522 D EGL_emulation: app_time_stats: avg=7438.76ms min=7438.76ms max=7438.76ms count=1
+10-29 15:14:00.069 13489 13535 D [Pleos][SDK]a: [binder:13489_5]onChangeEvent() called with: propIdName = PERF_STEERING_ANGLE, areaId = 0, value = -0.0
+10-29 15:14:00.079 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:14:00.080 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:14:01.083 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:14:01.085 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0
+10-29 15:14:02.087 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey VENDOR_GEAR_SELECTION eventAreaId 0 eventValue 4
+10-29 15:14:02.088 13489 13535 I [Pleos][SDK]b: [binder:13489_5]getProperty_onResult eventPropKey PERF_STEERING_ANGLE eventAreaId 0 eventValue -0.0

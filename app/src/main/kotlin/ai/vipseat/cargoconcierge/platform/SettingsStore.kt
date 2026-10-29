@@ -21,7 +21,7 @@ class SettingsStore(context: Context) {
     private val _settings = MutableStateFlow(load())
     val settings: StateFlow<Settings> = _settings
 
-    /** Crash detection only: original settings are not persisted or automatically replayed. */
+    /** Crash marker only. Separate display history cannot supply originals for automatic replay. */
     val cabinSessionPending: Boolean get() = prefs.getBoolean("cabin_session_pending", false)
     fun setCabinSessionPending(pending: Boolean) {
         prefs.edit().putBoolean("cabin_session_pending", pending).apply()

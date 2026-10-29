@@ -48,6 +48,7 @@ fun HomeScreen(ui: UiState, vm: CargoViewModel) {
 fun Header(ui: UiState, vm: CargoViewModel) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         BrandMark(Modifier.weight(1f))
+        if (ui.cabinHistoryAvailable) IconPill(R.drawable.ic_restore, "이전 실행 기록 보기", onClick = { vm.showCabinHistory(true) })
         IconPill(R.drawable.ic_sliders, "설정", onClick = { vm.toggleSettings(true) })
     }
 }

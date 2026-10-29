@@ -73,6 +73,7 @@ class CargoSession(private val graph: AppGraph) {
     private val cabinMutex = Mutex()
     private val cabinGate = CabinCommandGate()
     private var restoreBlocked = false
+    private var historySessionId: String? = null
 
     init {
         val s = graph.settings.settings.value
@@ -90,9 +91,10 @@ class CargoSession(private val graph: AppGraph) {
                 sourceDescription = graph.sourceDescription,
             )
         }
+        scope.launch { graph.cabinHistory.view.collect { history -> _ui.update { it.copy(cabinHistory = history) } } }
         scope.launch { graph.settings.settings.collect { st -> _ui.update { it.copy(settings = st) } } }
         scope.launch { graph.recents.recents.collect { r -> _ui.update { it.copy(recent = r.map { v -> v.toPreset() }) } } }
-        scope.launch { graph.uxMonitor.requiresDistractionOptimization.collect { r -> _ui.update { it.copy(uxRestricted = r) } } }
+        scope.launch { graph.uxMonitor.requiresDistractionOptimization.collect { r -> _ui.update { it.copy(uxRestricted = r, showCabinHistory = it.showCabinHistory && !r) } } }
         scope.launch { graph.demoBridge.uiCommands.collect(::onUiCommand) }
         scope.launch { demoPlayer.progress.collect { p -> _ui.update { it.copy(demoRunning = p.running, demoCaption = p.caption, demoProgress = if (p.totalMs == 0L) 0f else p.elapsedMs.toFloat() / p.totalMs) } } }
     }
@@ -135,6 +137,7 @@ class CargoSession(private val graph: AppGraph) {
         locationLost = false
         refreshLocationAccess() // Only now can a frozen location choice use the FGS exemption.
         log("가드 서비스 준비: 요청 $id")
+        historySessionId = graph.cabinHistory.begin()
         reduce(request.payload)
         traceRuntime("ready")
         if (sm.state !is CargoState.Guarding) {
@@ -161,6 +164,7 @@ class CargoSession(private val graph: AppGraph) {
         if (!starts.requiresService) return
         val uncertainCabin = graph.settings.cabinSessionPending || cabinJobs.isNotEmpty()
         traceRuntime("lost")
+        historySessionId?.let { graph.cabinHistory.finish(it, normal = false) }
         starts.abandon()
         startTimeout?.cancel()
         finishJob?.cancel()
@@ -259,6 +263,7 @@ class CargoSession(private val graph: AppGraph) {
 
     private fun finishAfterCabinWork() {
         val id = starts.active?.id ?: return
+        val historyId = historySessionId
         if (!starts.ending || finishJob?.isActive == true) return
         finishJob = scope.launch {
             val drained = withTimeoutOrNull(15_000) {
@@ -272,6 +277,7 @@ class CargoSession(private val graph: AppGraph) {
                 graph.settings.setCabinSessionPending(true)
                 _ui.update { it.copy(cabinRestorePending = true, cabinNotice = "공조 응답을 확인하지 못했어요. 차량 설정을 직접 확인해 주세요.") }
             }
+            historyId?.let { graph.cabinHistory.finish(it, normal = drained && !graph.settings.cabinSessionPending) }
             traceRuntime("finished")
             if (starts.finished(id)) {
                 graph.setLocationAccessAllowed(false)
@@ -293,6 +299,11 @@ class CargoSession(private val graph: AppGraph) {
 
     // ------------------------------------------------------------------ user intents
 
+    fun showCabinHistory(show: Boolean) {
+        _ui.update { it.copy(showCabinHistory = ai.vipseat.cargoconcierge.core.history.cabinHistoryVisible(
+            show, it.interactive, sm.canControlCabin(now()))) }
+    }
+
     fun selectPreset(preset: CargoPreset) = dispatch(Action.SelectPreset(preset))
     fun dismissOffer() = dispatch(Action.DismissOffer)
     fun openOffer() = dispatch(Action.OpenOffer)
@@ -304,7 +315,11 @@ class CargoSession(private val graph: AppGraph) {
     fun retryRestore() {
         if (!_ui.value.interactive || !sm.canControlCabin(now())) return
         if (sm.state is CargoState.Guarding) dispatch(Action.EndTrip)
-        else handle(Effect.RestoreCabin, cabinGate.advance())
+        else {
+            // This explicit live-owner retry gets a fresh display scope; ended records stay frozen.
+            val retryHistoryId = graph.cabinHistory.begin()
+            handle(Effect.RestoreCabin, cabinGate.advance(), retryHistoryId)
+        }
     }
     fun resetOfferSuppression() = dispatch(Action.ResetOfferSuppression)
     fun continueWithSameVip() {
@@ -502,6 +517,8 @@ class CargoSession(private val graph: AppGraph) {
         _ui.update {
             it.copy(
                 state = state,
+                cabinHistoryAvailable = sm.canControlCabin(t),
+                showCabinHistory = ai.vipseat.cargoconcierge.core.history.cabinHistoryVisible(it.showCabinHistory, it.interactive, sm.canControlCabin(t)),
                 uiMode = sm.uiMode,
                 snapshot = sm.snapshot,
                 offerRemainingMs = (state as? CargoState.Offering)?.let { o -> (o.deadlineMs - t).coerceAtLeast(0) } ?: 0,
@@ -516,7 +533,11 @@ class CargoSession(private val graph: AppGraph) {
         updateRuntime()
     }
 
-    private fun handle(effect: Effect, cabinTicket: Long) {
+    private fun handle(effect: Effect, cabinTicket: Long, retryHistoryId: String? = null) {
+        // Frozen at dispatch: stale/cancelled work cannot tag observations as a later session.
+        val historyContext = if (effect is Effect.ApplyCabin || effect == Effect.RestoreCabin)
+            (retryHistoryId ?: historySessionId)?.let { graph.cabinHistory.context(it, (effect as? Effect.ApplyCabin)?.spot ?: sm.currentSpot) }
+        else null
         when (effect) {
             is Effect.Speak -> speak(effect.text, effect.priority)
             is Effect.Chime -> graph.chime.play(effect.kind)
@@ -547,7 +568,7 @@ class CargoSession(private val graph: AppGraph) {
                     _ui.update { it.copy(cabinNotice = "캐빈 설정 결과를 확인하고 있어요", cabinRestorePending = false) }
                     graph.settings.setCabinSessionPending(true)
                     log("캐빈 적용 → ${effect.spot.label}")
-                    val result = withContext(Dispatchers.IO) {
+                    val result = withContext(Dispatchers.IO + (historyContext ?: kotlin.coroutines.EmptyCoroutineContext)) {
                         runCatching { graph.vehicle.applyCabin(request.plan, consent, effect.spot) }
                             .onFailure { Log.w(TAG, "applyCabin failed", it) }
                             .getOrElse { CabinApplyResult(CabinApplyResult.unsupported(request.plan, "제어 응답 실패").outcomes.map { o -> o.copy(status = FeatureStatus.FAILED) }) }
@@ -561,23 +582,29 @@ class CargoSession(private val graph: AppGraph) {
                 }
             }
             Effect.RestoreCabin -> launchCabin {
-                cabinMutex.withLock {
-                    if (!cabinGate.isCurrent(cabinTicket)) return@withLock
-                    val result = withContext(Dispatchers.IO) {
-                        runCatching { graph.vehicle.restoreCabin() }
-                            .onFailure { Log.w(TAG, "restoreCabin failed", it) }.getOrNull()
+                var retryCompleted = false
+                try {
+                    cabinMutex.withLock {
+                        if (!cabinGate.isCurrent(cabinTicket)) return@withLock
+                        val result = withContext(Dispatchers.IO + (historyContext ?: kotlin.coroutines.EmptyCoroutineContext)) {
+                            runCatching { graph.vehicle.restoreCabin() }
+                                .onFailure { Log.w(TAG, "restoreCabin failed", it) }.getOrNull()
+                        }
+                        result?.outcomes?.forEach { o -> log("원복 ${o.feature}: ${o.status} ${o.detail}") }
+                        val failed = result == null || result.problems.isNotEmpty()
+                        restoreBlocked = failed
+                        val notice = if (failed) "복원하지 못한 항목이 있어요. P 정차 후 차량 설정을 확인해 주세요."
+                            else if (result!!.outcomes.isEmpty()) "복원할 앱 변경값이 없어요. 미적용 항목은 그대로예요."
+                            else "앱 변경값의 조건부 복원을 마쳤어요. 외부에서 바뀐 값은 유지해요."
+                        if (cabinGate.isCurrent(cabinTicket)) {
+                            retryCompleted = !failed
+                            graph.settings.setCabinSessionPending(failed)
+                            _ui.update { it.copy(cabinNotice = notice, cabinRestorePending = failed) }
+                        }
+                        log(notice)
                     }
-                    result?.outcomes?.forEach { o -> log("원복 ${o.feature}: ${o.status} ${o.detail}") }
-                    val failed = result == null || result.problems.isNotEmpty()
-                    restoreBlocked = failed
-                    val notice = if (failed) "복원하지 못한 항목이 있어요. P 정차 후 차량 설정을 확인해 주세요."
-                        else if (result!!.outcomes.isEmpty()) "복원할 앱 변경값이 없어요. 미적용 항목은 그대로예요."
-                        else "앱 변경값의 조건부 복원을 마쳤어요. 외부에서 바뀐 값은 유지해요."
-                    if (cabinGate.isCurrent(cabinTicket)) {
-                        graph.settings.setCabinSessionPending(failed)
-                        _ui.update { it.copy(cabinNotice = notice, cabinRestorePending = failed) }
-                    }
-                    log(notice)
+                } finally {
+                    retryHistoryId?.let { graph.cabinHistory.finish(it, normal = retryCompleted) }
                 }
             }
             is Effect.Log -> log(effect.message)

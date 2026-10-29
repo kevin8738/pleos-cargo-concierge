@@ -1,0 +1,118 @@
+{
+  "transport": {
+    "deadlineRequested": false,
+    "deadlineReached": false,
+    "closed": false,
+    "drained": false,
+    "forcedKill": false,
+    "reason": "rpc_error",
+    "errors": [
+      "ValueError"
+    ],
+    "iteratorTerminatedMonotonicNs": 61316007330125,
+    "ownCancelObservedAtTermination": false,
+    "exceptionType": "ValueError",
+    "rpcStatus": "CANCELLED"
+  },
+  "ingress": {
+    "schema": "observation-ingress-v1",
+    "absoluteStartMonotonicNs": 61212330896041,
+    "startStamp": {
+      "mono_before_ns": 61212330895583,
+      "epoch_before_ns": 1793311720106231000,
+      "mono_anchor_ns": 61212330896041,
+      "epoch_after_ns": 1793311720106231000,
+      "mono_after_ns": 61212330896125,
+      "domain": "v26-host-monotonic:46515b347d3149c0ad0695f5143621c3",
+      "resolution_ns": 1000
+    },
+    "clockDomain": "v26-host-monotonic:46515b347d3149c0ad0695f5143621c3",
+    "maxStampSpanNs": 5000000,
+    "lastMetadataWriteEndMonotonicNs": 61316007284250,
+    "lastStderrWriteEndMonotonicNs": null,
+    "counts": {
+      "records": 9138,
+      "lineRecords": 0,
+      "packetRecords": 9138,
+      "receivedBytes": 6433732,
+      "newlineCount": 0,
+      "partialLines": 0,
+      "parseErrors": 0,
+      "rejectedBytes": 0,
+      "stderrBytes": 0,
+      "stderrNewlines": 0,
+      "explicitLossCount": 0
+    },
+    "inputSha256": "a469249a00e85fb465d82b90a382fb905f5fe1eafd221e7f891cc41688a1e783",
+    "confirmedRawWriteSha256": "a469249a00e85fb465d82b90a382fb905f5fe1eafd221e7f891cc41688a1e783",
+    "reader": {
+      "state": "error",
+      "sourceExitCode": null,
+      "closed": false
+    },
+    "writers": {
+      "raw": {
+        "confirmedBytes": 6433732,
+        "writeAccountingExact": true,
+        "closeAttempted": true,
+        "closed": true
+      },
+      "records": {
+        "confirmedBytes": 7352864,
+        "writeAccountingExact": true,
+        "closeAttempted": true,
+        "closed": true
+      },
+      "stderr": {
+        "confirmedBytes": 0,
+        "writeAccountingExact": true,
+        "closeAttempted": true,
+        "closed": true
+      }
+    },
+    "errors": [
+      {
+        "stage": "reader",
+        "kind": "abnormal_termination"
+      }
+    ],
+    "sequenceContract": null,
+    "sequenceErrors": [],
+    "lastStderrStamp": null,
+    "claims": {
+      "collectorIntegrity": "FAIL",
+      "receiptTiming": "PASS",
+      "producerCompleteness": "UNKNOWN",
+      "sourceGenerationToReceipt": "UNKNOWN",
+      "acousticAttribution": "UNKNOWN",
+      "nativeDestinationArrival": "UNKNOWN"
+    },
+    "wallPairDiagnostic": {
+      "status": "SAMPLED_OFFSETS_INCOMPATIBLE",
+      "intersectionLowNs": 1793250507776981375,
+      "intersectionHighNs": 1793250507706833459,
+      "sourceClockBridge": "UNKNOWN"
+    },
+    "limits": [
+      "Receipt is not source generation or acoustic playback.",
+      "No sequence contract: silent source loss cannot be ruled out.",
+      "Raw and parsed share a single ingress path.",
+      "No transport deadline or actual capture adapter is implemented."
+    ]
+  },
+  "claims": {
+    "boundedIntervalIntegrity": "FAIL",
+    "producerCompleteness": "UNKNOWN",
+    "receiptTiming": "PASS",
+    "coreCollectorIntegrity": "FAIL",
+    "sourceGenerationToReceipt": "UNKNOWN",
+    "acousticAttribution": "UNKNOWN",
+    "nativeDestinationArrival": "UNKNOWN",
+    "receivedBytesStored": true
+  },
+  "packetCount": 9137,
+  "pcmBytes": 6232516,
+  "receivedPcmSeconds": 32.461020833333336,
+  "pcmSha256": "5c1d40b04ba4d6b04f318371e82d0199d5469fda33421b8509e7ff4c65684a4c",
+  "continuousRecording": false
+}

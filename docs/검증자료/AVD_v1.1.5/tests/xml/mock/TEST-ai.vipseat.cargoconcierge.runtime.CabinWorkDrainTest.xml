@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ai.vipseat.cargoconcierge.runtime.CabinWorkDrainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:47:58" hostname="LOCAL_AVD_TEST" time="0.053">
+  <properties/>
+  <testcase name="completed job drains even while its removal callback is queued" classname="ai.vipseat.cargoconcierge.runtime.CabinWorkDrainTest" time="0.051"/>
+  <testcase name="timeout leaves unfinished jobs registered for the caller to cancel and mark pending" classname="ai.vipseat.cargoconcierge.runtime.CabinWorkDrainTest" time="0.001"/>
+  <testcase name="job added while the first batch is suspended must also finish before drain returns" classname="ai.vipseat.cargoconcierge.runtime.CabinWorkDrainTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

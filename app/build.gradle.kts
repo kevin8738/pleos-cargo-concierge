@@ -22,8 +22,8 @@ android {
         applicationId = "ai.vipseat.cargoconcierge"
         minSdk = 28
         targetSdk = 34
-        versionCode = 7
-        versionName = "1.1.4"
+        versionCode = 8
+        versionName = "1.1.5"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("boolean", "PLEOS_MODULE_PRESENT", pleosEnabled.toString())
         // adb demo bridge (DemoBroadcastReceiver): enabled in every build of this contest prototype so judges can

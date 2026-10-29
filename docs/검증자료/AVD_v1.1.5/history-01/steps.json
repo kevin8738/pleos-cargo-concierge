@@ -1,0 +1,52 @@
+[
+  {
+    "event": "demo:preset",
+    "hostMonotonicNs": 61479583553416,
+    "hostUnixNs": 1793311987290143000
+  },
+  {
+    "event": "tap:이전 실행 기록 보기",
+    "hostMonotonicNs": 61494916445958,
+    "hostUnixNs": 1793312002623013000
+  },
+  {
+    "event": "tap:기록 닫기",
+    "hostMonotonicNs": 61499831494833,
+    "hostUnixNs": 1793312007538054000
+  },
+  {
+    "event": "tap:이전 실행 기록 보기",
+    "hostMonotonicNs": 61504894241208,
+    "hostUnixNs": 1793312012600793000
+  },
+  {
+    "event": "tap:기록 닫기",
+    "hostMonotonicNs": 61509786164375,
+    "hostUnixNs": 1793312017492709000
+  },
+  {
+    "event": "tap:이전 실행 기록 보기",
+    "hostMonotonicNs": 61514797079666,
+    "hostUnixNs": 1793312022503617000
+  },
+  {
+    "event": "demo:preset",
+    "hostMonotonicNs": 61536636820333,
+    "hostUnixNs": 1793312044343325000
+  },
+  {
+    "event": "demo:end",
+    "hostMonotonicNs": 61542927245583,
+    "hostUnixNs": 1793312050633741000
+  },
+  {
+    "event": "demo:ack",
+    "hostMonotonicNs": 61549204715416,
+    "hostUnixNs": 1793312056911201000
+  },
+  {
+    "event": "tap:이전 실행 기록 보기",
+    "hostMonotonicNs": 61552424488541,
+    "hostUnixNs": 1793312060130970000
+  }
+]

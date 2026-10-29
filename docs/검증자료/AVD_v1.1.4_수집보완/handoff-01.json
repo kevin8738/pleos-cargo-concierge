@@ -1,0 +1,27 @@
+{
+  "originalRunOverall": false,
+  "originalCleanupVerified": false,
+  "originalCleanupErrors": [
+    "capture deadline/drain: capture supervision or receipt processing did not pass"
+  ],
+  "restorationReadbackVerified": true,
+  "checks": {
+    "sameApkPidApi": true,
+    "idleParkZero": true,
+    "settingsOriginal": true,
+    "vehicleCabinControlsOriginal": true,
+    "serviceNotificationAbsent": true,
+    "ownedWorkersReapedAndGroupsAbsent": true,
+    "ownHeartbeatLeaseClosed": true,
+    "privateTokenAbsent": true,
+    "originalLogPropertyReadbackNoError": true,
+    "nativeIdleObserved": true
+  },
+  "manualRecoveryExecuted": false,
+  "avdOwnershipReturnedToRoot": true,
+  "installedApkSha256": "8971e207285f333c2c152f185e907ea1d38c01c04369473fc68c8f850f5e023c",
+  "pid": "22692",
+  "api": "34",
+  "scope": "runtime06 1.1.4 observation; original FAIL unchanged; transport nonzero is separate from resource/state readback",
+  "additionalCaptureOrRetry": false
+}

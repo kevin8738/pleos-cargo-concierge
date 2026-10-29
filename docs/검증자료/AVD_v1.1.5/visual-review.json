@@ -1,0 +1,53 @@
+{
+  "stage": "history-and-flow-ui",
+  "method": "root visual inspection of actual AVD screenshot; visual-verdict skill unavailable in session",
+  "status": "PASS_BOUNDED_LAYOUT",
+  "files": [
+    {
+      "path": ".omx/qa/submission-v26/history-01/03-open-after.png",
+      "sha256": "02e4088c016b100406e360ec0d52c008e59dab933c1e79c52bd8324c54458e1e"
+    },
+    {
+      "path": ".omx/qa/submission-v26/flow-01/A1-home.png",
+      "sha256": "278a50517451661f264a6924c424ef5db01f44f5fb1ba1970bf169a894dbd4f5"
+    },
+    {
+      "path": ".omx/qa/submission-v26/flow-01/A2-loaded.png",
+      "sha256": "e13d688fa5a9e18fdd4b3da8385312bd82b8e98baac565e5b0d745977bdeecc9"
+    },
+    {
+      "path": ".omx/qa/submission-v26/flow-01/A3-driving.png",
+      "sha256": "885a8b8953e53b0d6bdf59eb12ba1237183458a56e12909cd008de9a76e4edc3"
+    },
+    {
+      "path": ".omx/qa/submission-v26/flow-01/A4-arrival.png",
+      "sha256": "d6227e9b11891333a4770f9c34271634d3dd76b2cb0ba7f8b0438381877cf2d3"
+    },
+    {
+      "path": ".omx/qa/submission-v26/flow-01/A5-power-off.png",
+      "sha256": "4823c8ced7451160bbecb520be2d4e45bb68e32ec1935735de92730fe9354386"
+    },
+    {
+      "path": ".omx/qa/submission-v26/flow-01/A6-occupied-blocked.png",
+      "sha256": "0eb34f4fa85ba9a6041e4f367893e685705861137c4642d9e16a7ae970cc0434"
+    }
+  ],
+  "observed": [
+    "22.0 original / 18.0 request / 18.0 confirmed visibly separate",
+    "historical source/area/time and current-state uncertainty visible",
+    "close action visible; no restore/apply action",
+    "lower rows continue in scroll container; no title or first-row clipping",
+    "A1 home and history button visible",
+    "A2 confirmed setting18 and power-on disclosed",
+    "A3 static badge without interactive settings while Drive",
+    "A4 0.32G synthetic report explicitly not real driving evaluation and22 restored",
+    "A5 power-off disclosed",
+    "A6 vacancy unconfirmed temperature blocked; current22 unchanged"
+  ],
+  "notEstablished": [
+    "driver comprehension",
+    "readability in a real vehicle",
+    "all offscreen rows"
+  ],
+  "all_seven_screens_reviewed": true
+}

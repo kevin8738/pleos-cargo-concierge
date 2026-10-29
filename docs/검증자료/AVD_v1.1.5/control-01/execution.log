@@ -1,0 +1,14 @@
+C1-occupied-blocked 22.0
+C2-vacant-before 22.0
+C3-applied 18.0
+C4-restored 22.0
+C5-external-change 21.0
+C6-vacancy-lost 22.0
+C7-power-off-setting-only 18.0
+C8-dual-false 18.0
+C9-dual-true 24.0
+C9B-external-sync-restore-deferred 18.0
+C9C-sync-off-retry-restored 22.0
+C10-drive-restore-deferred 18.0
+C11-park-retry-restored 22.0
+C12-restart-manual-check 18.0

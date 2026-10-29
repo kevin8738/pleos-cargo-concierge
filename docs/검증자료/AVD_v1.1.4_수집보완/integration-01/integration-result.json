@@ -1,0 +1,24 @@
+{
+  "executionCompleted": false,
+  "boundedObservationComplete": false,
+  "executionErrors": [
+    "adapter exited before workflow complete: pcm"
+  ],
+  "analysisError": "FileNotFoundError",
+  "strictNativeVipContention": "UNVERIFIED",
+  "limits": [
+    "DEMO source 0 SYNTHETIC input can wake the background process; no no-wakeup claim.",
+    "Visibility is sampled, never inferred continuous between dumpsys observations.",
+    "COFFEE applies zero cabin settings; no HVAC application/restoration efficacy claim.",
+    "FREE_DRIVE is real route termination; DestinationArrived is separately injected at P0.",
+    "VIP speech callbacks have no utterance ID; overlapping requests make attribution ambiguous.",
+    "PCM is mixed emulator output; native speech/content, actual overlap and focus priority remain unverified.",
+    "Sparse PCM/WAV concatenates received frames, not 180 seconds of continuous recorded sound.",
+    "The reused motion-only admission oracle excludes native-triggered proposals; extra native coaching can cause mismatch without proving an app defect.",
+    "No physical speaker, intelligibility, driver burden, cargo protection or G accuracy validation.",
+    "Shared host monotonic receipts are not source generation or playback times.",
+    "Silent source loss has no producer sequence and remains UNKNOWN.",
+    "Legacy endpoint offset diagnostic is retained without modifying the v24 criterion.",
+    "Fixed arrival baseline is FREE_DRIVE receipt +7 to +10 s; dispatch is not native arrival."
+  ]
+}
