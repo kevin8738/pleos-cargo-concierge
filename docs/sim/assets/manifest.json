@@ -1,858 +1,857 @@
 {
- "generated": "2026-10-29",
- "items": [
-  {
-   "id": "cardboard_box_01",
-   "kind": "env",
-   "path": "dist/cardboard_box_01.glb",
-   "size_m": [
-    0.387,
-    0.342,
-    0.516
-   ],
-   "tris": 16952,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `cardboard_box_01` — Cardboard Box 01 by Rahul Chaudhary · 16952 tris · [0.39, 0.52, 0.34] m"
-  },
-  {
-   "id": "carrot_cake",
-   "kind": "env",
-   "path": "dist/carrot_cake.glb",
-   "size_m": [
-    0.225,
-    0.098,
-    0.225
-   ],
-   "tris": 13790,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `carrot_cake` — Carrot Cake by Greg Zaal, James Ray Cock · 13790 tris · [0.23, 0.23, 0.1] m"
-  },
-  {
-   "id": "ceramic_vase_01",
-   "kind": "env",
-   "path": "dist/ceramic_vase_01.glb",
-   "size_m": [
-    0.204,
-    0.4,
-    0.204
-   ],
-   "tris": 10296,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `ceramic_vase_01` — Ceramic Vase 01 by James Ray Cock · 2548 tris · [0.2, 0.21, 0.4] m"
-  },
-  {
-   "id": "classic_laptop",
-   "kind": "env",
-   "path": "dist/classic_laptop.glb",
-   "size_m": [
-    0.652,
-    0.543,
-    0.486
-   ],
-   "tris": 14450,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `classic_laptop` — Classic Laptop by Arrangemonk · 14450 tris · [0.65, 0.49, 0.54] m"
-  },
-  {
-   "id": "concrete_road_barrier",
-   "kind": "env",
-   "path": "dist/concrete_road_barrier.glb",
-   "size_m": [
-    1.545,
-    0.831,
-    0.639
-   ],
-   "tris": 60928,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `concrete_road_barrier` — Concrete Road Barrier by Amal Kumar · 80776 tris · [1.55, 0.64, 0.84] m"
-  },
-  {
-   "id": "croissant",
-   "kind": "env",
-   "path": "dist/croissant.glb",
-   "size_m": [
-    0.2,
-    0.062,
-    0.076
-   ],
-   "tris": 1990,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `croissant` — Croissant by Greg Zaal, Dario Barresi · 1990 tris · [0.2, 0.08, 0.06] m"
-  },
-  {
-   "id": "fire_hydrant",
-   "kind": "env",
-   "path": "dist/fire_hydrant.glb",
-   "size_m": [
-    0.875,
-    0.799,
-    0.318
-   ],
-   "tris": 86316,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `fire_hydrant` — Fire Hydrant by Gonçalo Felício · 86316 tris · [0.87, 0.32, 0.8] m"
-  },
-  {
-   "id": "hamburger_buns",
-   "kind": "env",
-   "path": "dist/hamburger_buns.glb",
-   "size_m": [
-    0.397,
-    0.063,
-    0.114
-   ],
-   "tris": 11588,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `hamburger_buns` — Hamburger Buns by Alexander Shulha · 11588 tris · [0.4, 0.11, 0.06] m"
-  },
-  {
-   "id": "korean_public_payphone_01",
-   "kind": "env",
-   "path": "dist/korean_public_payphone_01.glb",
-   "size_m": [
-    0.401,
-    0.74,
-    0.301
-   ],
-   "tris": 48132,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `korean_public_payphone_01` — Korean Public Payphone 01 by UM JOORIN · 48132 tris · [0.4, 0.3, 0.74] m"
-  },
-  {
-   "id": "modular_electricity_poles",
-   "kind": "env",
-   "path": "dist/modular_electricity_poles.glb",
-   "size_m": [
-    13.119,
-    7.0,
-    1.957
-   ],
-   "tris": 200610,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `modular_electricity_poles` — Modular Electricity Poles by James Ray Cock · 200610 tris · [13.12, 1.96, 7.0] m"
-  },
-  {
-   "id": "modular_factory_facade",
-   "kind": "env",
-   "path": "dist/modular_factory_facade.glb",
-   "size_m": [
-    53.33,
-    29.0,
-    5.356
-   ],
-   "tris": 175014,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `modular_factory_facade` — Modular Factory Facade by James Ray Cock · 175014 tris · [53.33, 5.36, 29.0] m"
-  },
-  {
-   "id": "modular_street_seating",
-   "kind": "env",
-   "path": "dist/modular_street_seating.glb",
-   "size_m": [
-    4.34,
-    0.95,
-    0.77
-   ],
-   "tris": 25156,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `modular_street_seating` — Modular Street Seating by Stuart Attenborrow · 25156 tris · [4.34, 0.77, 0.95] m"
-  },
-  {
-   "id": "modular_urban_apartments_facade",
-   "kind": "env",
-   "path": "dist/modular_urban_apartments_facade.glb",
-   "size_m": [
-    51.53,
-    17.0,
-    6.665
-   ],
-   "tris": 270045,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `modular_urban_apartments_facade` — Modular Urban Apartments Facade by James Ray Cock · 118215 tris · [51.53, 6.66, 17.0] m"
-  },
-  {
-   "id": "outdoor_table_chair_set_01",
-   "kind": "env",
-   "path": "dist/outdoor_table_chair_set_01.glb",
-   "size_m": [
-    0.742,
-    0.859,
-    1.717
-   ],
-   "tris": 9828,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `outdoor_table_chair_set_01` — Outdoor Table Chair Set 01 by James Ray Cock · 9828 tris · [0.78, 1.83, 0.86] m"
-  },
-  {
-   "id": "potted_plant_01",
-   "kind": "env",
-   "path": "dist/potted_plant_01.glb",
-   "size_m": [
-    0.587,
-    1.35,
-    0.634
-   ],
-   "tris": 176226,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `potted_plant_01` — Potted Plant 01 by Rico Cilliers · 96030 tris · [0.59, 0.64, 1.35] m"
-  },
-  {
-   "id": "standing_chalkboard_01",
-   "kind": "env",
-   "path": "dist/standing_chalkboard_01.glb",
-   "size_m": [
-    0.92,
-    1.509,
-    0.759
-   ],
-   "tris": 2372,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `standing_chalkboard_01` — Standing Chalkboard 01 by ParzivalCG · 2372 tris · [0.92, 0.76, 1.51] m"
-  },
-  {
-   "id": "strawberry_chocolate_cake",
-   "kind": "env",
-   "path": "dist/strawberry_chocolate_cake.glb",
-   "size_m": [
-    0.244,
-    0.079,
-    0.24
-   ],
-   "tris": 27054,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `strawberry_chocolate_cake` — Strawberry Chocolate Cake by Kuutti Siitonen · 27054 tris · [0.24, 0.24, 0.08] m"
-  },
-  {
-   "id": "street_lamp_01",
-   "kind": "env",
-   "path": "dist/street_lamp_01.glb",
-   "size_m": [
-    0.704,
-    3.871,
-    0.386
-   ],
-   "tris": 30610,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `street_lamp_01` — Street Lamp 01 by Josh Dean · 30610 tris · [0.7, 0.39, 3.87] m"
-  },
-  {
-   "id": "street_lamp_02",
-   "kind": "env",
-   "path": "dist/street_lamp_02.glb",
-   "size_m": [
-    0.386,
-    1.675,
-    0.807
-   ],
-   "tris": 20338,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `street_lamp_02` — Street Lamp 02 by Josh Dean · 20338 tris · [0.39, 0.81, 1.68] m"
-  },
-  {
-   "id": "trashbag",
-   "kind": "env",
-   "path": "dist/trashbag.glb",
-   "size_m": [
-    0.528,
-    0.575,
-    0.463
-   ],
-   "tris": 4482,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `trashbag` — Trashbag by Benny Weimer · 4482 tris · [0.53, 0.46, 0.57] m"
-  },
-  {
-   "id": "utility_box_01",
-   "kind": "env",
-   "path": "dist/utility_box_01.glb",
-   "size_m": [
-    0.52,
-    1.12,
-    0.432
-   ],
-   "tris": 4404,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `utility_box_01` — Utility Box 01 by James Ray Cock · 4404 tris · [0.52, 0.43, 1.12] m"
-  },
-  {
-   "id": "water_manhole_cover",
-   "kind": "env",
-   "path": "dist/water_manhole_cover.glb",
-   "size_m": [
-    0.691,
-    0.068,
-    0.691
-   ],
-   "tris": 6301,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `water_manhole_cover` — Water Manhole Cover by Raunox · 6301 tris · [0.69, 0.69, 0.07] m"
-  },
-  {
-   "id": "wicker_basket_01",
-   "kind": "env",
-   "path": "dist/wicker_basket_01.glb",
-   "size_m": [
-    0.383,
-    0.117,
-    0.295
-   ],
-   "tris": 22276,
-   "source": "Poly Haven",
-   "license": "CC0 1.0",
-   "note": "- model `wicker_basket_01` — Wicker Basket 01 by Kuutti Siitonen · 22276 tris · [0.38, 0.3, 0.12] m"
-  },
-  {
-   "id": "bouquet",
-   "kind": "generated",
-   "path": "dist/bouquet.glb",
-   "size_m": [
-    0.433,
-    0.55,
-    0.395
-   ],
-   "real_size_m": [
-    0.433,
-    0.55,
-    0.395
-   ],
-   "tris": 774830,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/bouquet.glb"
-  },
-  {
-   "id": "cake_box",
-   "kind": "generated",
-   "path": "dist/cake_box.glb",
-   "size_m": [
-    0.197,
-    0.15,
-    0.195
-   ],
-   "real_size_m": [
-    0.197,
-    0.15,
-    0.195
-   ],
-   "tris": 1152376,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/cake_box.glb"
-  },
-  {
-   "id": "coffee_carrier",
-   "kind": "generated",
-   "path": "dist/coffee_carrier.glb",
-   "size_m": [
-    0.239,
-    0.14,
-    0.236
-   ],
-   "real_size_m": [
-    0.239,
-    0.14,
-    0.236
-   ],
-   "tris": 1514258,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/coffee_carrier.glb"
-  },
-  {
-   "id": "grocery_bag",
-   "kind": "generated",
-   "path": "dist/grocery_bag.glb",
-   "size_m": [
-    0.262,
-    0.4,
-    0.202
-   ],
-   "real_size_m": [
-    0.262,
-    0.4,
-    0.202
-   ],
-   "tris": 727022,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/grocery_bag.glb"
-  },
-  {
-   "id": "ioniq5_2021",
-   "kind": "generated",
-   "path": "dist/ioniq5_2021.glb",
-   "size_m": [
-    4.635,
-    1.445,
-    2.154
-   ],
-   "real_size_m": [
-    4.635,
-    1.445,
-    2.154
-   ],
-   "tris": 213026,
-   "source": "Project-authored 2021 IONIQ 5 asset using official Hyundai launch photographs and dimensions; TRELLIS.2 shape reference for exterior",
-   "license": "Project-authored mesh; Hyundai vehicle design referenced, not an official CAD asset",
-   "note": "공식 2021 참조 기반 자체 제작 메시. 미터 단위 치수·원점·부품 피벗 보존. 세부 형상은 사진 기반 제작값이며 공식 CAD 아님.",
-   "forward": "+x",
-   "car_meta": {
-    "forward": "+x",
-    "coordinate_system": {
-     "forward": "+X",
-     "up": "+Y",
-     "passenger": "+Z"
-    },
-    "native_parts": {
-     "glass": true,
-     "lights": true,
-     "mirrors": true,
-     "wheels": false
-    },
-    "body_wheelless": true,
-    "body_size_m": [
-     4.635,
-     1.605,
-     1.89
-    ],
-    "size_m": [
-     4.635,
-     1.445,
-     2.154
-    ],
-    "roof_y": 1.555,
-    "floor_y": 0.47,
-    "cowl_x": 1.1,
-    "wheel_asset": {
-     "id": "ioniq5_wheel20",
-     "axis": "+z",
-     "radius": 0.36875,
-     "width": 0.255,
-     "includes_tire": true,
-     "centered_at_origin": true,
-     "both_faces_authored": true
-    },
-    "dimensions_m": {
-     "length": 4.635,
-     "width": 1.89,
-     "height": 1.605,
-     "wheelbase": 3.0
-    },
-    "bounds_m": [
-     [
-      -2.3175,
-      0.16,
-      -1.077
-     ],
-     [
-      2.3175,
-      1.605,
-      1.077
-     ]
-    ],
-    "source": {
-     "raw_path": "glb/_t2_ioniq5_official1536.glb",
-     "raw_sha256": "cf848fe6df3b913ac9ac9e52ce0688e7f84a8da9afd81aa9c486f78c353a83b1",
-     "reference_paths": [
-      "refs/ioniq5_official/front_three_quarter_studio.jpg",
-      "refs/ioniq5_official/side_studio.jpg",
-      "refs/ioniq5_official/front_studio.jpg",
-      "refs/ioniq5_official/rear_studio.jpg",
-      "refs/ioniq5_official/wheel_20inch_detail.jpg"
-     ],
-     "raw_contribution": "Bounded broad hood/roof curvature only; clean deterministic manufactured panels replace generated triangles."
-    },
-    "wheels": [
-     {
-      "center": [
-       1.4725,
-       0.36875,
-       -0.814
+  "generated": "2026-10-29",
+  "items": [
+    {
+      "id": "cardboard_box_01",
+      "kind": "env",
+      "path": "dist/cardboard_box_01.glb",
+      "size_m": [
+        0.387,
+        0.342,
+        0.516
       ],
-      "radius": 0.36875,
-      "asset": "ioniq5_wheel20",
-      "width": 0.255,
-      "name": "front_left"
-     },
-     {
-      "center": [
-       1.4725,
-       0.36875,
-       0.814
+      "tris": 16952,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `cardboard_box_01` — Cardboard Box 01 by Rahul Chaudhary · 16952 tris · [0.39, 0.52, 0.34] m"
+    },
+    {
+      "id": "carrot_cake",
+      "kind": "env",
+      "path": "dist/carrot_cake.glb",
+      "size_m": [
+        0.225,
+        0.098,
+        0.225
       ],
-      "radius": 0.36875,
-      "asset": "ioniq5_wheel20",
-      "width": 0.255,
-      "name": "front_right"
-     },
-     {
-      "center": [
-       -1.5275,
-       0.36875,
-       -0.8185
+      "tris": 13790,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `carrot_cake` — Carrot Cake by Greg Zaal, James Ray Cock · 13790 tris · [0.23, 0.23, 0.1] m"
+    },
+    {
+      "id": "ceramic_vase_01",
+      "kind": "env",
+      "path": "dist/ceramic_vase_01.glb",
+      "size_m": [
+        0.204,
+        0.4,
+        0.204
       ],
-      "radius": 0.36875,
-      "asset": "ioniq5_wheel20",
-      "width": 0.255,
-      "name": "rear_left"
-     },
-     {
-      "center": [
-       -1.5275,
-       0.36875,
-       0.8185
+      "tris": 10296,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `ceramic_vase_01` — Ceramic Vase 01 by James Ray Cock · 2548 tris · [0.2, 0.21, 0.4] m"
+    },
+    {
+      "id": "classic_laptop",
+      "kind": "env",
+      "path": "dist/classic_laptop.glb",
+      "size_m": [
+        0.652,
+        0.543,
+        0.486
       ],
-      "radius": 0.36875,
-      "asset": "ioniq5_wheel20",
-      "width": 0.255,
-      "name": "rear_right"
-     }
-    ],
-    "normals_exported": true,
-    "faces": 213026,
-    "model_type": "reference-constrained reconstruction, not official CAD"
-   },
-   "dist": "dist/ioniq5_2021.glb"
-  },
-  {
-   "id": "ioniq5_cabin",
-   "kind": "generated",
-   "path": "dist/ioniq5_cabin.glb",
-   "size_m": [
-    2.769,
-    1.052,
-    1.706
-   ],
-   "real_size_m": [
-    2.769,
-    1.052,
-    1.706
-   ],
-   "tris": 39444,
-   "source": "Project-authored 2021 IONIQ 5 asset using official Hyundai launch photographs and dimensions; TRELLIS.2 shape reference for exterior",
-   "license": "Project-authored mesh; Hyundai vehicle design referenced, not an official CAD asset",
-   "note": "공식 2021 참조 기반 자체 제작 메시. 미터 단위 치수·원점·부품 피벗 보존. 세부 형상은 사진 기반 제작값이며 공식 CAD 아님.",
-   "forward": "+x",
-   "car_meta": {
-    "id": "ioniq5_cabin",
-    "version": 3,
-    "coordinates": "+X forward, +Y up, +Z passenger; metres; no recentering",
-    "source": "Authored mesh from Hyundai 2021 IONIQ 5 official cabin photographs; not official CAD",
-    "references": [
-     "dashboard_front.jpg",
-     "cockpit_three_quarter.jpg",
-     "front_seats.jpg",
-     "cabin_wide.jpg"
-    ],
-    "floorY": 0.472,
-    "seatTop": 0.727,
-    "cargoPosition": [
-     0.07,
-     0.732,
-     0.4
-    ],
-    "displayDiagonalM": 0.31145144083789367,
-    "cargo": {
-     "position": [
-      0.07,
-      0.732,
-      0.4
-     ]
+      "tris": 14450,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `classic_laptop` — Classic Laptop by Arrangemonk · 14450 tris · [0.65, 0.49, 0.54] m"
     },
-    "frontSeatCenters": [
-     [
-      0,
-      0,
-      -0.4
-     ],
-     [
-      0,
-      0,
-      0.4
-     ]
+    {
+      "id": "concrete_road_barrier",
+      "kind": "env",
+      "path": "dist/concrete_road_barrier.glb",
+      "size_m": [
+        1.545,
+        0.831,
+        0.639
+      ],
+      "tris": 60928,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `concrete_road_barrier` — Concrete Road Barrier by Amal Kumar · 80776 tris · [1.55, 0.64, 0.84] m"
+    },
+    {
+      "id": "croissant",
+      "kind": "env",
+      "path": "dist/croissant.glb",
+      "size_m": [
+        0.2,
+        0.062,
+        0.076
+      ],
+      "tris": 1990,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `croissant` — Croissant by Greg Zaal, Dario Barresi · 1990 tris · [0.2, 0.08, 0.06] m"
+    },
+    {
+      "id": "fire_hydrant",
+      "kind": "env",
+      "path": "dist/fire_hydrant.glb",
+      "size_m": [
+        0.875,
+        0.799,
+        0.318
+      ],
+      "tris": 86316,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `fire_hydrant` — Fire Hydrant by Gonçalo Felício · 86316 tris · [0.87, 0.32, 0.8] m"
+    },
+    {
+      "id": "hamburger_buns",
+      "kind": "env",
+      "path": "dist/hamburger_buns.glb",
+      "size_m": [
+        0.397,
+        0.063,
+        0.114
+      ],
+      "tris": 11588,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `hamburger_buns` — Hamburger Buns by Alexander Shulha · 11588 tris · [0.4, 0.11, 0.06] m"
+    },
+    {
+      "id": "korean_public_payphone_01",
+      "kind": "env",
+      "path": "dist/korean_public_payphone_01.glb",
+      "size_m": [
+        0.401,
+        0.74,
+        0.301
+      ],
+      "tris": 48132,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `korean_public_payphone_01` — Korean Public Payphone 01 by UM JOORIN · 48132 tris · [0.4, 0.3, 0.74] m"
+    },
+    {
+      "id": "modular_electricity_poles",
+      "kind": "env",
+      "path": "dist/modular_electricity_poles.glb",
+      "size_m": [
+        13.119,
+        7.0,
+        1.957
+      ],
+      "tris": 200610,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `modular_electricity_poles` — Modular Electricity Poles by James Ray Cock · 200610 tris · [13.12, 1.96, 7.0] m"
+    },
+    {
+      "id": "modular_factory_facade",
+      "kind": "env",
+      "path": "dist/modular_factory_facade.glb",
+      "size_m": [
+        53.33,
+        29.0,
+        5.356
+      ],
+      "tris": 175014,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `modular_factory_facade` — Modular Factory Facade by James Ray Cock · 175014 tris · [53.33, 5.36, 29.0] m"
+    },
+    {
+      "id": "modular_street_seating",
+      "kind": "env",
+      "path": "dist/modular_street_seating.glb",
+      "size_m": [
+        4.34,
+        0.95,
+        0.77
+      ],
+      "tris": 25156,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `modular_street_seating` — Modular Street Seating by Stuart Attenborrow · 25156 tris · [4.34, 0.77, 0.95] m"
+    },
+    {
+      "id": "modular_urban_apartments_facade",
+      "kind": "env",
+      "path": "dist/modular_urban_apartments_facade.glb",
+      "size_m": [
+        51.53,
+        17.0,
+        6.665
+      ],
+      "tris": 270045,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `modular_urban_apartments_facade` — Modular Urban Apartments Facade by James Ray Cock · 118215 tris · [51.53, 6.66, 17.0] m"
+    },
+    {
+      "id": "outdoor_table_chair_set_01",
+      "kind": "env",
+      "path": "dist/outdoor_table_chair_set_01.glb",
+      "size_m": [
+        0.742,
+        0.859,
+        1.717
+      ],
+      "tris": 9828,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `outdoor_table_chair_set_01` — Outdoor Table Chair Set 01 by James Ray Cock · 9828 tris · [0.78, 1.83, 0.86] m"
+    },
+    {
+      "id": "potted_plant_01",
+      "kind": "env",
+      "path": "dist/potted_plant_01.glb",
+      "size_m": [
+        0.587,
+        1.35,
+        0.634
+      ],
+      "tris": 176226,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `potted_plant_01` — Potted Plant 01 by Rico Cilliers · 96030 tris · [0.59, 0.64, 1.35] m"
+    },
+    {
+      "id": "standing_chalkboard_01",
+      "kind": "env",
+      "path": "dist/standing_chalkboard_01.glb",
+      "size_m": [
+        0.92,
+        1.509,
+        0.759
+      ],
+      "tris": 2372,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `standing_chalkboard_01` — Standing Chalkboard 01 by ParzivalCG · 2372 tris · [0.92, 0.76, 1.51] m"
+    },
+    {
+      "id": "strawberry_chocolate_cake",
+      "kind": "env",
+      "path": "dist/strawberry_chocolate_cake.glb",
+      "size_m": [
+        0.244,
+        0.079,
+        0.24
+      ],
+      "tris": 27054,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `strawberry_chocolate_cake` — Strawberry Chocolate Cake by Kuutti Siitonen · 27054 tris · [0.24, 0.24, 0.08] m"
+    },
+    {
+      "id": "street_lamp_01",
+      "kind": "env",
+      "path": "dist/street_lamp_01.glb",
+      "size_m": [
+        0.704,
+        3.871,
+        0.386
+      ],
+      "tris": 30610,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `street_lamp_01` — Street Lamp 01 by Josh Dean · 30610 tris · [0.7, 0.39, 3.87] m"
+    },
+    {
+      "id": "street_lamp_02",
+      "kind": "env",
+      "path": "dist/street_lamp_02.glb",
+      "size_m": [
+        0.386,
+        1.675,
+        0.807
+      ],
+      "tris": 20338,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `street_lamp_02` — Street Lamp 02 by Josh Dean · 20338 tris · [0.39, 0.81, 1.68] m"
+    },
+    {
+      "id": "trashbag",
+      "kind": "env",
+      "path": "dist/trashbag.glb",
+      "size_m": [
+        0.528,
+        0.575,
+        0.463
+      ],
+      "tris": 4482,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `trashbag` — Trashbag by Benny Weimer · 4482 tris · [0.53, 0.46, 0.57] m"
+    },
+    {
+      "id": "utility_box_01",
+      "kind": "env",
+      "path": "dist/utility_box_01.glb",
+      "size_m": [
+        0.52,
+        1.12,
+        0.432
+      ],
+      "tris": 4404,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `utility_box_01` — Utility Box 01 by James Ray Cock · 4404 tris · [0.52, 0.43, 1.12] m"
+    },
+    {
+      "id": "water_manhole_cover",
+      "kind": "env",
+      "path": "dist/water_manhole_cover.glb",
+      "size_m": [
+        0.691,
+        0.068,
+        0.691
+      ],
+      "tris": 6301,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `water_manhole_cover` — Water Manhole Cover by Raunox · 6301 tris · [0.69, 0.69, 0.07] m"
+    },
+    {
+      "id": "wicker_basket_01",
+      "kind": "env",
+      "path": "dist/wicker_basket_01.glb",
+      "size_m": [
+        0.383,
+        0.117,
+        0.295
+      ],
+      "tris": 22276,
+      "source": "Poly Haven",
+      "license": "CC0 1.0",
+      "note": "- model `wicker_basket_01` — Wicker Basket 01 by Kuutti Siitonen · 22276 tris · [0.38, 0.3, 0.12] m"
+    },
+    {
+      "id": "bouquet",
+      "kind": "generated",
+      "path": "dist/bouquet.glb",
+      "size_m": [
+        0.433,
+        0.55,
+        0.395
+      ],
+      "real_size_m": [
+        0.433,
+        0.55,
+        0.395
+      ],
+      "tris": 774830,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/bouquet.glb"
+    },
+    {
+      "id": "cake_box",
+      "kind": "generated",
+      "path": "dist/cake_box.glb",
+      "size_m": [
+        0.197,
+        0.15,
+        0.195
+      ],
+      "real_size_m": [
+        0.197,
+        0.15,
+        0.195
+      ],
+      "tris": 1152376,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/cake_box.glb"
+    },
+    {
+      "id": "coffee_carrier",
+      "kind": "generated",
+      "path": "dist/coffee_carrier.glb",
+      "size_m": [
+        0.239,
+        0.14,
+        0.236
+      ],
+      "real_size_m": [
+        0.239,
+        0.14,
+        0.236
+      ],
+      "tris": 1514258,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/coffee_carrier.glb"
+    },
+    {
+      "id": "grocery_bag",
+      "kind": "generated",
+      "path": "dist/grocery_bag.glb",
+      "size_m": [
+        0.262,
+        0.4,
+        0.202
+      ],
+      "real_size_m": [
+        0.262,
+        0.4,
+        0.202
+      ],
+      "tris": 727022,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/grocery_bag.glb"
+    },
+    {
+      "id": "ioniq5_2021",
+      "kind": "generated",
+      "path": "dist/ioniq5_2021.glb",
+      "size_m": [
+        4.635,
+        1.445,
+        2.154
+      ],
+      "real_size_m": [
+        4.635,
+        1.445,
+        2.154
+      ],
+      "tris": 213026,
+      "source": "Project-authored 2021 IONIQ 5 asset using official Hyundai launch photographs and dimensions; TRELLIS.2 shape reference for exterior",
+      "license": "Project-authored mesh; Hyundai vehicle design referenced, not an official CAD asset",
+      "note": "공식 2021 참조 기반 자체 제작 메시. 미터 단위 치수·원점·부품 피벗 보존. 세부 형상은 사진 기반 제작값이며 공식 CAD 아님.",
+      "forward": "+x",
+      "car_meta": {
+        "forward": "+x",
+        "coordinate_system": {
+          "forward": "+X",
+          "up": "+Y",
+          "passenger": "+Z"
+        },
+        "native_parts": {
+          "glass": true,
+          "lights": true,
+          "mirrors": true,
+          "wheels": false
+        },
+        "body_wheelless": true,
+        "body_size_m": [
+          4.635,
+          1.605,
+          1.89
+        ],
+        "size_m": [
+          4.635,
+          1.445,
+          2.154
+        ],
+        "roof_y": 1.555,
+        "floor_y": 0.47,
+        "cowl_x": 1.1,
+        "wheel_asset": {
+          "id": "ioniq5_wheel20",
+          "axis": "+z",
+          "radius": 0.36875,
+          "width": 0.255,
+          "includes_tire": true,
+          "centered_at_origin": true,
+          "both_faces_authored": true
+        },
+        "dimensions_m": {
+          "length": 4.635,
+          "width": 1.89,
+          "height": 1.605,
+          "wheelbase": 3.0
+        },
+        "bounds_m": [
+          [
+            -2.3175,
+            0.16,
+            -1.077
+          ],
+          [
+            2.3175,
+            1.605,
+            1.077
+          ]
+        ],
+        "source": {
+          "raw_path": "glb/_t2_ioniq5_official1536.glb",
+          "raw_sha256": "cf848fe6df3b913ac9ac9e52ce0688e7f84a8da9afd81aa9c486f78c353a83b1",
+          "reference_paths": [
+            "refs/ioniq5_official/front_three_quarter_studio.jpg",
+            "refs/ioniq5_official/side_studio.jpg",
+            "refs/ioniq5_official/front_studio.jpg",
+            "refs/ioniq5_official/rear_studio.jpg",
+            "refs/ioniq5_official/wheel_20inch_detail.jpg"
+          ],
+          "raw_contribution": "Bounded broad hood/roof curvature only; clean deterministic manufactured panels replace generated triangles."
+        },
+        "wheels": [
+          {
+            "center": [
+              1.4725,
+              0.36875,
+              -0.814
+            ],
+            "radius": 0.36875,
+            "asset": "ioniq5_wheel20",
+            "width": 0.255,
+            "name": "front_left"
+          },
+          {
+            "center": [
+              1.4725,
+              0.36875,
+              0.814
+            ],
+            "radius": 0.36875,
+            "asset": "ioniq5_wheel20",
+            "width": 0.255,
+            "name": "front_right"
+          },
+          {
+            "center": [
+              -1.5275,
+              0.36875,
+              -0.8185
+            ],
+            "radius": 0.36875,
+            "asset": "ioniq5_wheel20",
+            "width": 0.255,
+            "name": "rear_left"
+          },
+          {
+            "center": [
+              -1.5275,
+              0.36875,
+              0.8185
+            ],
+            "radius": 0.36875,
+            "asset": "ioniq5_wheel20",
+            "width": 0.255,
+            "name": "rear_right"
+          }
+        ],
+        "normals_exported": true,
+        "faces": 213026,
+        "model_type": "reference-constrained reconstruction, not official CAD"
+      },
+      "dist": "dist/ioniq5_2021.glb"
+    },
+    {
+      "id": "ioniq5_cabin",
+      "kind": "generated",
+      "path": "dist/ioniq5_cabin.glb",
+      "size_m": [
+        2.769,
+        1.052,
+        1.706
+      ],
+      "real_size_m": [
+        2.769,
+        1.052,
+        1.706
+      ],
+      "tris": 39444,
+      "source": "Project-authored 2021 IONIQ 5 asset using official Hyundai launch photographs and dimensions; TRELLIS.2 shape reference for exterior",
+      "license": "Project-authored mesh; Hyundai vehicle design referenced, not an official CAD asset",
+      "note": "공식 2021 참조 기반 자체 제작 메시. 미터 단위 치수·원점·부품 피벗 보존. 세부 형상은 사진 기반 제작값이며 공식 CAD 아님.",
+      "forward": "+x",
+      "car_meta": {
+        "id": "ioniq5_cabin",
+        "coordinates": "+X forward, +Y up, +Z passenger; metres; no recentering",
+        "source": "Authored mesh from Hyundai 2021 IONIQ 5 official cabin photographs; not official CAD",
+        "references": [
+          "dashboard_front.jpg",
+          "cockpit_three_quarter.jpg",
+          "front_seats.jpg",
+          "cabin_wide.jpg"
+        ],
+        "floorY": 0.472,
+        "seatTop": 0.727,
+        "cargoPosition": [
+          0.07,
+          0.732,
+          0.4
+        ],
+        "displayDiagonalM": 0.31145144083789367,
+        "cargo": {
+          "position": [
+            0.07,
+            0.732,
+            0.4
+          ]
+        },
+        "frontSeatCenters": [
+          [
+            0,
+            0,
+            -0.4
+          ],
+          [
+            0,
+            0,
+            0.4
+          ]
+        ],
+        "display": {
+          "position": [
+            0.80889459052804,
+            1.1042243192894234,
+            0.015000000000000013
+          ],
+          "normal": [
+            -0.9963896745022904,
+            0.08489768280241602,
+            0.0
+          ],
+          "up": [
+            0.08489768280241602,
+            0.9963896745022904,
+            0.0
+          ],
+          "width": 0.291,
+          "height": 0.111,
+          "glassNode": "coaching_display_glass"
+        },
+        "instrumentDisplay": {
+          "center": [
+            0.80889459052804,
+            1.1042243192894234,
+            -0.33999999999999997
+          ],
+          "normal": [
+            -0.9963896745022904,
+            0.08489768280241602,
+            0.0
+          ],
+          "up": [
+            0.08489768280241602,
+            0.9963896745022904,
+            0.0
+          ],
+          "width": 0.291,
+          "height": 0.111,
+          "glassNode": "instrument_display_glass"
+        },
+        "steering": {
+          "center": [
+            0.552,
+            1.047,
+            -0.4
+          ],
+          "mountAngleZ": -0.28,
+          "spinNode": "steering_wheel",
+          "spinAxis": "local X"
+        },
+        "cabinView": {
+          "pos": [
+            -0.12,
+            1.3,
+            -0.38
+          ],
+          "look": [
+            0.61,
+            0.99,
+            0.19
+          ],
+          "fov": 77
+        },
+        "bounds": [
+          [
+            -1.5,
+            0.424,
+            -0.853
+          ],
+          [
+            1.268963,
+            1.476436,
+            0.853
+          ]
+        ],
+        "faces": 39444,
+        "meshCount": 211,
+        "designNotes": [
+          "Equal 0.291 x 0.111 m active displays, diagonal 0.31145 m (approximately 12.3 inches).",
+          "Floating white dual display; open flat footwell; separate movable island.",
+          "Curved dashboard molding, recessed vent leaves, stepped HVAC surround and open 65 mm cup wells.",
+          "Overlapping inner sills and front kick panels seal the lower cabin perimeter; the central footwell remains flat and open.",
+          "Authored sRGB swatches converted to glTF linear factors; approved leather normal map reused unchanged.",
+          "Gray two-spoke steering wheel with four-dot hub; no Hyundai badge invented.",
+          "Rounded light-gray relaxation seats with subtle piping, clean inserts and separate headrests.",
+          "Display surfaces are intentionally blank for runtime instrument/coaching canvases.",
+          "Body, window glass, exterior pillars and wheels are excluded from this asset."
+        ]
+      },
+      "dist": "dist/ioniq5_cabin.glb"
+    },
+    {
+      "id": "ioniq5_wheel20",
+      "kind": "generated",
+      "path": "dist/ioniq5_wheel20.glb",
+      "size_m": [
+        0.738,
+        0.738,
+        0.255
+      ],
+      "real_size_m": [
+        0.738,
+        0.738,
+        0.255
+      ],
+      "tris": 20592,
+      "source": "Project-authored 2021 IONIQ 5 asset using official Hyundai launch photographs and dimensions; TRELLIS.2 shape reference for exterior",
+      "license": "Project-authored mesh; Hyundai vehicle design referenced, not an official CAD asset",
+      "note": "공식 2021 참조 기반 자체 제작 메시. 미터 단위 치수·원점·부품 피벗 보존. 세부 형상은 사진 기반 제작값이며 공식 CAD 아님.",
+      "forward": "wheel_axis_+z",
+      "dist": "dist/ioniq5_wheel20.glb"
+    },
+    {
+      "id": "pet_carrier",
+      "kind": "generated",
+      "path": "dist/pet_carrier.glb",
+      "size_m": [
+        0.642,
+        0.42,
+        0.475
+      ],
+      "real_size_m": [
+        0.642,
+        0.42,
+        0.475
+      ],
+      "tris": 717964,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/pet_carrier.glb"
+    },
+    {
+      "id": "tteokbokki_bag",
+      "kind": "generated",
+      "path": "dist/tteokbokki_bag.glb",
+      "size_m": [
+        0.252,
+        0.3,
+        0.224
+      ],
+      "real_size_m": [
+        0.252,
+        0.3,
+        0.224
+      ],
+      "tris": 1032272,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/tteokbokki_bag.glb"
+    },
+    {
+      "id": "watermelon_net",
+      "kind": "generated",
+      "path": "dist/watermelon_net.glb",
+      "size_m": [
+        0.228,
+        0.28,
+        0.23
+      ],
+      "real_size_m": [
+        0.228,
+        0.28,
+        0.23
+      ],
+      "tris": 739466,
+      "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
+      "license": "project-owned",
+      "note": "",
+      "dist": "dist/watermelon_net.glb"
+    }
+  ],
+  "hdris": [
+    "polyhaven/hdris/dresden_station_night_2k.hdr"
+  ],
+  "textures": {
+    "asphalt_02": [
+      "asphalt_02_AO_2k.jpg",
+      "asphalt_02_Diffuse_2k.jpg",
+      "asphalt_02_Displacement_2k.jpg",
+      "asphalt_02_Rough_2k.jpg",
+      "asphalt_02_arm_2k.jpg",
+      "asphalt_02_nor_gl_2k.jpg"
     ],
-    "display": {
-     "position": [
-      0.80889459052804,
-      1.1042243192894234,
-      0.015000000000000013
-     ],
-     "normal": [
-      -0.9963896745022904,
-      0.08489768280241602,
-      0.0
-     ],
-     "up": [
-      0.08489768280241602,
-      0.9963896745022904,
-      0.0
-     ],
-     "width": 0.291,
-     "height": 0.111,
-     "glassNode": "coaching_display_glass"
-    },
-    "instrumentDisplay": {
-     "center": [
-      0.80889459052804,
-      1.1042243192894234,
-      -0.33999999999999997
-     ],
-     "normal": [
-      -0.9963896745022904,
-      0.08489768280241602,
-      0.0
-     ],
-     "up": [
-      0.08489768280241602,
-      0.9963896745022904,
-      0.0
-     ],
-     "width": 0.291,
-     "height": 0.111,
-     "glassNode": "instrument_display_glass"
-    },
-    "steering": {
-     "center": [
-      0.552,
-      1.047,
-      -0.4
-     ],
-     "mountAngleZ": -0.28,
-     "spinNode": "steering_wheel",
-     "spinAxis": "local X"
-    },
-    "cabinView": {
-     "pos": [
-      -0.12,
-      1.3,
-      -0.38
-     ],
-     "look": [
-      0.61,
-      0.99,
-      0.19
-     ],
-     "fov": 77
-    },
-    "bounds": [
-     [
-      -1.5,
-      0.424,
-      -0.853
-     ],
-     [
-      1.268963,
-      1.476436,
-      0.853
-     ]
+    "asphalt_04": [
+      "asphalt_04_AO_1k.jpg",
+      "asphalt_04_Diffuse_1k.jpg",
+      "asphalt_04_Displacement_1k.jpg",
+      "asphalt_04_Rough_1k.jpg",
+      "asphalt_04_arm_1k.jpg",
+      "asphalt_04_nor_gl_1k.jpg"
     ],
-    "faces": 39444,
-    "meshCount": 211,
-    "designNotes": [
-     "Equal 0.291 x 0.111 m active displays, diagonal 0.31145 m (approximately 12.3 inches).",
-     "Floating white dual display; open flat footwell; separate movable island.",
-     "Curved dashboard molding, recessed vent leaves, stepped HVAC surround and open 65 mm cup wells.",
-     "Overlapping inner sills and front kick panels seal the lower cabin perimeter; the central footwell remains flat and open.",
-     "Authored sRGB swatches converted to glTF linear factors; approved leather normal map reused unchanged.",
-     "Gray two-spoke steering wheel with four-dot hub; no Hyundai badge invented.",
-     "Rounded light-gray relaxation seats with subtle piping, clean inserts and separate headrests.",
-     "Display surfaces are intentionally blank for runtime instrument/coaching canvases.",
-     "Body, window glass, exterior pillars and wheels are excluded from this asset."
+    "brick_4": [
+      "brick_4_AO_1k.jpg",
+      "brick_4_Diffuse_1k.jpg",
+      "brick_4_Displacement_1k.jpg",
+      "brick_4_Rough_1k.jpg",
+      "brick_4_arm_1k.jpg",
+      "brick_4_nor_gl_1k.jpg"
+    ],
+    "brushed_concrete": [
+      "brushed_concrete_AO_1k.jpg",
+      "brushed_concrete_Diffuse_1k.jpg",
+      "brushed_concrete_Displacement_1k.jpg",
+      "brushed_concrete_Rough_1k.jpg",
+      "brushed_concrete_arm_1k.jpg",
+      "brushed_concrete_nor_gl_1k.jpg"
+    ],
+    "concrete_floor_02": [
+      "concrete_floor_02_AO_1k.jpg",
+      "concrete_floor_02_Diffuse_1k.jpg",
+      "concrete_floor_02_Displacement_1k.jpg",
+      "concrete_floor_02_Rough_1k.jpg",
+      "concrete_floor_02_arm_1k.jpg",
+      "concrete_floor_02_nor_gl_1k.jpg"
+    ],
+    "fabric_leather_01": [
+      "fabric_leather_01_AO_1k.jpg",
+      "fabric_leather_01_Diffuse_1k.jpg",
+      "fabric_leather_01_Displacement_1k.jpg",
+      "fabric_leather_01_Rough_1k.jpg",
+      "fabric_leather_01_arm_1k.jpg",
+      "fabric_leather_01_nor_gl_1k.jpg"
+    ],
+    "leather_white": [
+      "leather_white_AO_1k.jpg",
+      "leather_white_Diffuse_1k.jpg",
+      "leather_white_Displacement_1k.jpg",
+      "leather_white_Rough_1k.jpg",
+      "leather_white_arm_1k.jpg",
+      "leather_white_nor_gl_1k.jpg"
+    ],
+    "painted_metal_shutter": [
+      "painted_metal_shutter_AO_1k.jpg",
+      "painted_metal_shutter_Diffuse_1k.jpg",
+      "painted_metal_shutter_Displacement_1k.jpg",
+      "painted_metal_shutter_Rough_1k.jpg",
+      "painted_metal_shutter_arm_1k.jpg",
+      "painted_metal_shutter_nor_gl_1k.jpg"
+    ],
+    "rectangular_paving": [
+      "rectangular_paving_AO_1k.jpg",
+      "rectangular_paving_Diffuse_1k.jpg",
+      "rectangular_paving_Displacement_1k.jpg",
+      "rectangular_paving_Rough_1k.jpg",
+      "rectangular_paving_arm_1k.jpg",
+      "rectangular_paving_nor_gl_1k.jpg"
+    ],
+    "road_damaged_clean": [
+      "road_damaged_clean_AO_2k.jpg",
+      "road_damaged_clean_Diffuse_2k.jpg",
+      "road_damaged_clean_Displacement_2k.jpg",
+      "road_damaged_clean_Rough_2k.jpg",
+      "road_damaged_clean_arm_2k.jpg",
+      "road_damaged_clean_nor_gl_2k.jpg"
     ]
-   },
-   "dist": "dist/ioniq5_cabin.glb"
-  },
-  {
-   "id": "ioniq5_wheel20",
-   "kind": "generated",
-   "path": "dist/ioniq5_wheel20.glb",
-   "size_m": [
-    0.738,
-    0.738,
-    0.255
-   ],
-   "real_size_m": [
-    0.738,
-    0.738,
-    0.255
-   ],
-   "tris": 20592,
-   "source": "Project-authored 2021 IONIQ 5 asset using official Hyundai launch photographs and dimensions; TRELLIS.2 shape reference for exterior",
-   "license": "Project-authored mesh; Hyundai vehicle design referenced, not an official CAD asset",
-   "note": "공식 2021 참조 기반 자체 제작 메시. 미터 단위 치수·원점·부품 피벗 보존. 세부 형상은 사진 기반 제작값이며 공식 CAD 아님.",
-   "forward": "wheel_axis_+z",
-   "dist": "dist/ioniq5_wheel20.glb"
-  },
-  {
-   "id": "pet_carrier",
-   "kind": "generated",
-   "path": "dist/pet_carrier.glb",
-   "size_m": [
-    0.642,
-    0.42,
-    0.475
-   ],
-   "real_size_m": [
-    0.642,
-    0.42,
-    0.475
-   ],
-   "tris": 717964,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/pet_carrier.glb"
-  },
-  {
-   "id": "tteokbokki_bag",
-   "kind": "generated",
-   "path": "dist/tteokbokki_bag.glb",
-   "size_m": [
-    0.252,
-    0.3,
-    0.224
-   ],
-   "real_size_m": [
-    0.252,
-    0.3,
-    0.224
-   ],
-   "tris": 1032272,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/tteokbokki_bag.glb"
-  },
-  {
-   "id": "watermelon_net",
-   "kind": "generated",
-   "path": "dist/watermelon_net.glb",
-   "size_m": [
-    0.228,
-    0.28,
-    0.23
-   ],
-   "real_size_m": [
-    0.228,
-    0.28,
-    0.23
-   ],
-   "tris": 739466,
-   "source": "generated (Hunyuan3D-2 shape from our own reference photo + photo-projection / rule colouring)",
-   "license": "project-owned",
-   "note": "",
-   "dist": "dist/watermelon_net.glb"
   }
- ],
- "hdris": [
-  "polyhaven/hdris/dresden_station_night_2k.hdr"
- ],
- "textures": {
-  "asphalt_02": [
-   "asphalt_02_AO_2k.jpg",
-   "asphalt_02_Diffuse_2k.jpg",
-   "asphalt_02_Displacement_2k.jpg",
-   "asphalt_02_Rough_2k.jpg",
-   "asphalt_02_arm_2k.jpg",
-   "asphalt_02_nor_gl_2k.jpg"
-  ],
-  "asphalt_04": [
-   "asphalt_04_AO_1k.jpg",
-   "asphalt_04_Diffuse_1k.jpg",
-   "asphalt_04_Displacement_1k.jpg",
-   "asphalt_04_Rough_1k.jpg",
-   "asphalt_04_arm_1k.jpg",
-   "asphalt_04_nor_gl_1k.jpg"
-  ],
-  "brick_4": [
-   "brick_4_AO_1k.jpg",
-   "brick_4_Diffuse_1k.jpg",
-   "brick_4_Displacement_1k.jpg",
-   "brick_4_Rough_1k.jpg",
-   "brick_4_arm_1k.jpg",
-   "brick_4_nor_gl_1k.jpg"
-  ],
-  "brushed_concrete": [
-   "brushed_concrete_AO_1k.jpg",
-   "brushed_concrete_Diffuse_1k.jpg",
-   "brushed_concrete_Displacement_1k.jpg",
-   "brushed_concrete_Rough_1k.jpg",
-   "brushed_concrete_arm_1k.jpg",
-   "brushed_concrete_nor_gl_1k.jpg"
-  ],
-  "concrete_floor_02": [
-   "concrete_floor_02_AO_1k.jpg",
-   "concrete_floor_02_Diffuse_1k.jpg",
-   "concrete_floor_02_Displacement_1k.jpg",
-   "concrete_floor_02_Rough_1k.jpg",
-   "concrete_floor_02_arm_1k.jpg",
-   "concrete_floor_02_nor_gl_1k.jpg"
-  ],
-  "fabric_leather_01": [
-   "fabric_leather_01_AO_1k.jpg",
-   "fabric_leather_01_Diffuse_1k.jpg",
-   "fabric_leather_01_Displacement_1k.jpg",
-   "fabric_leather_01_Rough_1k.jpg",
-   "fabric_leather_01_arm_1k.jpg",
-   "fabric_leather_01_nor_gl_1k.jpg"
-  ],
-  "leather_white": [
-   "leather_white_AO_1k.jpg",
-   "leather_white_Diffuse_1k.jpg",
-   "leather_white_Displacement_1k.jpg",
-   "leather_white_Rough_1k.jpg",
-   "leather_white_arm_1k.jpg",
-   "leather_white_nor_gl_1k.jpg"
-  ],
-  "painted_metal_shutter": [
-   "painted_metal_shutter_AO_1k.jpg",
-   "painted_metal_shutter_Diffuse_1k.jpg",
-   "painted_metal_shutter_Displacement_1k.jpg",
-   "painted_metal_shutter_Rough_1k.jpg",
-   "painted_metal_shutter_arm_1k.jpg",
-   "painted_metal_shutter_nor_gl_1k.jpg"
-  ],
-  "rectangular_paving": [
-   "rectangular_paving_AO_1k.jpg",
-   "rectangular_paving_Diffuse_1k.jpg",
-   "rectangular_paving_Displacement_1k.jpg",
-   "rectangular_paving_Rough_1k.jpg",
-   "rectangular_paving_arm_1k.jpg",
-   "rectangular_paving_nor_gl_1k.jpg"
-  ],
-  "road_damaged_clean": [
-   "road_damaged_clean_AO_2k.jpg",
-   "road_damaged_clean_Diffuse_2k.jpg",
-   "road_damaged_clean_Displacement_2k.jpg",
-   "road_damaged_clean_Rough_2k.jpg",
-   "road_damaged_clean_arm_2k.jpg",
-   "road_damaged_clean_nor_gl_2k.jpg"
-  ]
- }
 }

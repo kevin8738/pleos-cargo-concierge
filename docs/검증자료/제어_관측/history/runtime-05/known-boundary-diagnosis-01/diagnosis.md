@@ -1,0 +1,13 @@
+# Known-boundary ANR diagnosis
+
+Actual app defect; serial observation queue stopped before PCM/FGS/native/force/task/location groups. Original `known-boundary-01` result and cleanup=false remain unchanged. No timeout increase or retry was used.
+
+Installed candidate: `14709ea8c5b7c16f8d91592d27d3d408e65fd513fd8246aea004c71f1903fe03`, version 별도 관측 APK. Original run PID12526.
+
+The acceleration/WARN/OVER/recovery/deceleration sequence completed. One arrival MotionTrace exists, so `navi=arrived` entered app dispatch. Its broadcast command did not finish within 6s. Subsequent cleanup end/ack/steer/settings broadcasts also timed out and UI dump had no XML. The numeric/badge/admission oracle reported no mismatch; overall result correctly failed for absent report UI, incomplete execution, cleanup failure and missing final Idle/P0 trace. Maximum expected G=0.12354462329191915; admitted speech2/chime1/coalesced1. These partial comparisons are not a complete PASS.
+
+System ActivityManager recorded an own-package broadcast ANR at device epoch1793290093.312. DropBox identifies PID12526, Frozen=false, Foreground=Yes. Its main thread was Runnable in JobSupport.join, called from CargoSession.finishAfterCabinWork line265, inside withTimeoutOrNull. The same call stack continues through SharedFlow.tryEmit, MockNavi.arrived, DemoBridge.handle and DemoBroadcastReceiver.onReceive. This supports main-event-loop starvation in the completed-job drain loop, not a slow ADB transport alone. The observed implementation loops while cabinJobs remains nonempty and schedules completion-set removal on the same main scope. Root owns diagnosis integration and the app fix.
+
+The original process was terminated by Android after the ANR. PID27821 subsequently started for queued broadcasts and became cached/frozen with no guard service. Its idle CPU snapshot is not evidence about the earlier hung main thread. `debuggerd -j` required root and was not escalated. The actual ANR stack was retrieved read-only from the own application's DropBox entry instead. `anr-main-thread.txt` and `anr-timeline-filtered.log` are focused excerpts; the original own ANR entry is retained.
+
+Recovery is a separate manual tester action authorized by root: force-stop only the test app/current user to clear queued receivers, manually launch the same APK, restore original audio flags and MotionTrace property, verify visible Idle/P0/no service or notification and unchanged cabin/seat/body/control values. Its outcome is recorded in recovery.json. It must not change the original failed cleanup classification. Root-owned heartbeat and Console forward are preserved.

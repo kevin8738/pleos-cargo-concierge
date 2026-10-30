@@ -1,0 +1,47 @@
+{
+  "sourceArchive": "_archive/submission/before_final_cleanup",
+  "entries": [
+    {
+      "path": "A1_home.png",
+      "sourcePath": "app/docs/screens/A1_home_v115.png",
+      "sourceSha256": "278a50517451661f264a6924c424ef5db01f44f5fb1ba1970bf169a894dbd4f5",
+      "sha256": "278a50517451661f264a6924c424ef5db01f44f5fb1ba1970bf169a894dbd4f5"
+    },
+    {
+      "path": "A2_loaded.png",
+      "sourcePath": "app/docs/screens/A2_loaded_v115.png",
+      "sourceSha256": "e13d688fa5a9e18fdd4b3da8385312bd82b8e98baac565e5b0d745977bdeecc9",
+      "sha256": "e13d688fa5a9e18fdd4b3da8385312bd82b8e98baac565e5b0d745977bdeecc9"
+    },
+    {
+      "path": "A3_driving.png",
+      "sourcePath": "app/docs/screens/A3_driving_v115.png",
+      "sourceSha256": "885a8b8953e53b0d6bdf59eb12ba1237183458a56e12909cd008de9a76e4edc3",
+      "sha256": "885a8b8953e53b0d6bdf59eb12ba1237183458a56e12909cd008de9a76e4edc3"
+    },
+    {
+      "path": "A4_arrival.png",
+      "sourcePath": "app/docs/screens/A4_arrival_v115.png",
+      "sourceSha256": "d6227e9b11891333a4770f9c34271634d3dd76b2cb0ba7f8b0438381877cf2d3",
+      "sha256": "d6227e9b11891333a4770f9c34271634d3dd76b2cb0ba7f8b0438381877cf2d3"
+    },
+    {
+      "path": "A5_power_off.png",
+      "sourcePath": "app/docs/screens/A5_power_off_v115.png",
+      "sourceSha256": "4823c8ced7451160bbecb520be2d4e45bb68e32ec1935735de92730fe9354386",
+      "sha256": "4823c8ced7451160bbecb520be2d4e45bb68e32ec1935735de92730fe9354386"
+    },
+    {
+      "path": "A6_occupied_blocked.png",
+      "sourcePath": "app/docs/검증자료/AVD_v1.1.5/flow-01/A6-occupied-blocked.png",
+      "sourceSha256": "0eb34f4fa85ba9a6041e4f367893e685705861137c4642d9e16a7ae970cc0434",
+      "sha256": "0eb34f4fa85ba9a6041e4f367893e685705861137c4642d9e16a7ae970cc0434"
+    },
+    {
+      "path": "H1_history.png",
+      "sourcePath": "app/docs/screens/H1_history_v115.png",
+      "sourceSha256": "02e4088c016b100406e360ec0d52c008e59dab933c1e79c52bd8324c54458e1e",
+      "sha256": "02e4088c016b100406e360ec0d52c008e59dab933c1e79c52bd8324c54458e1e"
+    }
+  ]
+}

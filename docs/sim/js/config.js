@@ -62,7 +62,7 @@ export const CATEGORIES = [
   { id: 'luggage', label: '일반 짐', limit: 0.20, noun: '짐' },
 ];
 
-/** 주행 모드 (v1.1). A: 가속 1.4(0.15 G 바로 아래)·제동 3.0·코너 0.40 G. B: 선택 분류 한계의 75 % 코너, 가감속 ≤ 1.0 m/s² */
+/** 주행 모드. A: 가속 1.4(0.15 G 바로 아래)·제동 3.0·코너 0.40 G. B: 선택 분류 한계의 75 % 코너, 가감속 ≤ 1.0 m/s² */
 export const MODES = {
   A: { auto: true, latG: 0.40, accel: 1.4, brake: 3.0, vmax: 60 / 3.6 },
   B: { auto: true, latFactor: 0.75, accelMax: 1.0, accelFactor: 0.7, budgetFactor: 0.78, vmax: 60 / 3.6 },
@@ -85,7 +85,7 @@ export const COLORS = { bg: '#0B0F14', mint: '#4FD1C5', champ: '#F2D18B', red: '
 export const FONT = '"Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// v2 "실사형 에셋" — 렌더링·에셋 상수. (위의 운전·한계 상수는 v1.1 과 한 글자도 다르지 않다)
+// 실사형 에셋 — 렌더링·에셋 상수.
 // ─────────────────────────────────────────────────────────────────────────────
 
 /** 에셋 경로 (index.html 기준 상대 경로). 저장소에서는 docs/sim/assets/ 로 함께 복사된다 */

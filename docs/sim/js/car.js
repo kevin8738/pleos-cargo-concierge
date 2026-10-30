@@ -329,7 +329,7 @@ export class CarModel {
     }
   }
 
-  /** v1.1 프로시저럴 3박스 세단 (폴백) */
+  /** 프로시저럴 3박스 세단 (폴백) */
   _bodyProc(M) {
     const g = this.group, mesh = (geo, mat) => g.add(new THREE.Mesh(geo, mat));
     box(4.5, 0.22, 1.76, M.paint, 0, 0.40, 0, g);

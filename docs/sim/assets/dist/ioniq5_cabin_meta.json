@@ -1,6 +1,5 @@
 {
   "id": "ioniq5_cabin",
-  "version": 3,
   "coordinates": "+X forward, +Y up, +Z passenger; metres; no recentering",
   "source": "Authored mesh from Hyundai 2021 IONIQ 5 official cabin photographs; not official CAD",
   "references": [

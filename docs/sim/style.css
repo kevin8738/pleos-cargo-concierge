@@ -84,7 +84,7 @@ dd.warn { color: var(--champ); } dd.bad { color: var(--red); font-weight: 700; }
 .card-inner th { color: var(--dim); font-weight: 400; } .card-inner table.cmp td:last-child { color: var(--mint); }
 .card-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
 
-/* v2: 로딩 오버레이 */
+/* 로딩 오버레이 */
 #loading { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; background: #04060b; }
 #loading .box { width: min(520px, 90vw); padding: 28px 30px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
 #loading h2 { margin: 0 0 8px; font-size: 18px; color: var(--champ); }
@@ -93,7 +93,7 @@ dd.warn { color: var(--champ); } dd.bad { color: var(--red); font-weight: 700; }
 #loading #load-bar { height: 100%; width: 0; background: var(--mint); transition: width 0.15s linear; }
 #loading .err { color: var(--red); white-space: pre-wrap; }
 
-/* v2.1: 좌우 동시 비교 */
+/* 좌우 동시 비교 */
 #split { position: fixed; inset: 0; pointer-events: none; display: none; }
 body.split #split { display: block; }
 body.split #panel-tele, body.split #display, body.split #foot { display: none !important; }

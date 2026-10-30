@@ -1,9 +1,0 @@
-{
-  "attempts": {
-    "stop_app": "ok",
-    "hvac": "ok",
-    "seat": "ok"
-  },
-  "verified": true,
-  "note": "operator cleanup is separate from app restoration assertions"
-}

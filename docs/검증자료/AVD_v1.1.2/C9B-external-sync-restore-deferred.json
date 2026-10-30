@@ -1,9 +1,0 @@
-{
-  "utc": "2026-10-29T12:05:16.249242+00:00",
-  "passenger_temperature_c": 18.0,
-  "driver_temperature_c": 18.0,
-  "console_passenger_occupied": false,
-  "hvac_power": true,
-  "hvac_dual": true,
-  "console_available": true
-}
